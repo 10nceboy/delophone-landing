@@ -4,39 +4,63 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Delophone-landing</title>
+    <title>Делофон - удобный телефон для работы</title>
     <link rel="stylesheet" href="./src/assets/css/style.scss" />
   </head>
   <body>
-      <header class="header">
-        <div class="container"> 
-          <div class="header__logo">
-            <a href="#">
-              <img alt="Делофон" src="./src/images/icons/logo.svg" />
-            </a>
+    <!-- Header -->
+
+    <header class="header">
+      <div class="container">
+        <div class="header_upside">
+          <div class="container-flex">
+            <div class="header__logo">
+              <a href="#">
+                <img alt="Делофон" src="./src/images/icons/logo.svg" />
+              </a>
+            </div>
+            <button class="header__burger">
+              <img
+                alt="Меню"
+                width="35px"
+                height="35px"
+                src="./src/images/icons/burger.svg"
+              />
+            </button>
+          </div>
+          <button class="button__login-button">
+            <img alt="Войти" src="./src/images/icons/user.svg" /> Войти
+          </button>
+          <div class="login__phone-number">8 (495) 286–01–11</div>
+          <button class="dropdown dropdown-black header__dropdown-city">
+            Москва
+            <img alt="Выбрать город" src="./src/images/icons/arrow-down.svg" />
+          </button>
+          <button class="button button_outlined header_start-button">
+            Начать бесплатно
+          </button>
         </div>
-        <button class="header__burger">
-          <img
-            alt="Меню"
-            width="35px"
-            height="35px"
-            src="./src/images/icons/burger.svg"
-          />
-        </button>
-        <button class="button__enter-button"> <img alt="Войти" src="./src/images/icons/user.svg"> Войти </button>
-        <div class="login__phone-number"> 8 (495) 286–01–11  </div>
-        <button class="dropdown__dropdown-city"> Москва </div>
-        <nav class="header__menu">
-          <ul>
-            <li>Для кого</li>
-            <li>Возможности</li>
-            <li>Способы связи</li>
-            <li>Технологии</li>
-            <li>Стоимость</li>
-            <li>FAQ</li>
-          </ul>
-        </nav>
-      </header>
-    </div>
+      </div>
+      <div class="overlay_gray">
+        <div class="container">
+          <nav class="header__menu">
+            <ul>
+              <li>Для кого</li>
+              <li>Возможности</li>
+              <li>Как подключить</li>
+              <li>Способы связи</li>
+              <li>Стоимость</li>
+              <li>FAQ</li>
+            </ul>
+          </nav>
+          <button
+            type="button"
+            class="button button button_outlined header_start-button_mobile"
+          >
+            Начать бесплатно
+          </button>
+        </div>
+      </div>
+    </header>
   </body>
 </html>
