@@ -1,0 +1,47 @@
+/* layout*/
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/*breakepoints*/
+
+@mixin wide-screen {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin destkop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+/*fonts*/
+
+@mixin font($weight, $size, $color) {
+  font-weight: $weight;
+  font-size: $size;
+  font-family: $family;
+  color: $color;
+}
