@@ -1,8 +1,5 @@
-import DOMPurify from 'dompurify';
+
 import Bowser from 'bowser';
-export const sanitizeHTML = (html) => {
-  return DOMPurify.sanitize(html);
-};
 
 export const getScrollbarWidth = () => {
   const outer = document.createElement('div');
@@ -44,7 +41,7 @@ export const isTouchDevice = () => {
   return 'ontouchstart' in window || navigator.maxTouchPoints || navigator.msMaxTouchPoints;
 };
 
-export const animateCollapseOpen = (el, callback = () => {}) => {
+export const animateCollapseOpen = (el, callback = () => { }) => {
   const width = getComputedStyle(el).width;
   el.style.width = width;
   el.style.position = 'absolute';

@@ -1,3 +1,2 @@
-import './src/assets/css/style.scss'
-
+import './src/js/components/burger'
 

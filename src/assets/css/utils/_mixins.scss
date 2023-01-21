@@ -20,7 +20,7 @@
 }
 
 @mixin destkop {
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     @content;
   }
 }
@@ -43,4 +43,19 @@
   font-weight: $weight;
   font-size: $size;
   color: $color;
+  font-family: $family;
+}
+
+/*visibility*/
+
+@mixin hidden {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+@mixin visible($transition) {
+  height: auto;
+  opacity: 1;
+  transition: $transition;
 }

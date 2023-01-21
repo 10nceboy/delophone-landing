@@ -5,37 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Делофон - удобный телефон для работы</title>
-    <link rel="stylesheet" href="./src/assets/css/style.scss" />
+    <link rel="stylesheet" href="./src/assets/css/index.scss" />
+    <script src="/src/js/components/burger.js"> </script>
   </head>
-  <body>
+  <body class="body">
     <!-- Header -->
 
     <header class="header">
       <div class="container">
         <div class="header_upside">
           <div class="container-flex">
-            <div class="header__logo">
+            <div class="header__logo_mobile">
               <a href="#">
-                <img alt="Делофон" src="./src/images/icons/logo.svg" />
+                <img alt="Делофон" src="./src/assets/images/icons/svg/logo.svg" />
               </a>
             </div>
+            <div class="header__logo">
+              <a href="#">
+                <img alt="Делофон" src="./src/assets/images/icons/svg/logo-large.svg" />
+              </a>
+            </div>
+            <button class="header__burger_opened"> <img alt ="Закрыть" width="35px" height="35px" src= './src/assets/images/icons/svg/close.svg'> </button> 
             <button class="header__burger">
               <img
                 alt="Меню"
                 width="35px"
                 height="35px"
-                src="./src/images/icons/burger.svg"
+                src="./src/assets/images/icons/svg/burger.svg"
               />
             </button>
           </div>
           <button class="button__login-button">
-            <img alt="Войти" src="./src/images/icons/user.svg" /> Войти
+            <img alt="Иконка входа" src="./src/assets/images/icons/svg/user.svg" /> Войти
           </button>
           <div class="login__phone-number">8 (495) 286–01–11</div>
-          <button class="dropdown dropdown-black header__dropdown-city">
+          <div class="dropdown"> 
+            <form class="dropdown__button dropdown__button_white header__dropdown">
             Москва
-            <img alt="Выбрать город" src="./src/images/icons/arrow-down.svg" />
-          </button>
+            </form>
+            <ul class="dropdown__menu header__dropdown_menu" >
+              <li> Москва </li>
+              <li> Санкт-Петербург </li>
+              <li> Сочи
+              </li>
+            </ul>
+        </div>
           <button class="button button_outlined header_start-button">
             Начать бесплатно
           </button>
@@ -53,14 +67,20 @@
               <li>FAQ</li>
             </ul>
           </nav>
-          <button
-            type="button"
-            class="button button button_outlined header_start-button_mobile"
-          >
-            Начать бесплатно
-          </button>
         </div>
+        </div>
+        <div class="container container-bottom" >   
+          <button
+          type="button"
+          class="button button_outlined header_start-button_mobile"
+        >
+          Начать бесплатно
+        </button>
+      </div>
+      
       </div>
     </header>
+
+
   </body>
 </html>
