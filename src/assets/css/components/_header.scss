@@ -16,6 +16,10 @@
     margin-right: $spacer * 8;
     display: none;
 
+    @include laptop {
+      display: block;
+    }
+
     a {
       display: block;
 
@@ -64,7 +68,7 @@
     background-color: $white;
 
     @include laptop {
-      @include hidden;
+      display: none;
     }
 
     &.active {
@@ -131,6 +135,14 @@
   @include laptop {
     margin-top: $spacer;
     order: 1;
+  }
+
+  &__drodown-button {
+    display: none;
+
+    @include laptop {
+      display: block;
+    }
   }
 
   &__menu {

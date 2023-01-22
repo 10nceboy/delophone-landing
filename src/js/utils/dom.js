@@ -1,4 +1,3 @@
-
 import Bowser from 'bowser';
 
 export const getScrollbarWidth = () => {
@@ -38,10 +37,14 @@ export const toggleOverflow = (flag) => {
 };
 
 export const isTouchDevice = () => {
-  return 'ontouchstart' in window || navigator.maxTouchPoints || navigator.msMaxTouchPoints;
+  return (
+    'ontouchstart' in window ||
+    navigator.maxTouchPoints ||
+    navigator.msMaxTouchPoints
+  );
 };
 
-export const animateCollapseOpen = (el, callback = () => { }) => {
+export const animateCollapseOpen = (el, callback = () => {}) => {
   const width = getComputedStyle(el).width;
   el.style.width = width;
   el.style.position = 'absolute';
@@ -76,27 +79,11 @@ export const checkOverflow = (el) => {
   if (!curOverflow || curOverflow === 'visible') {
     el.style.overflow = 'hidden';
   }
-  const isOverflowing = el.clientWidth < el.scrollWidth || el.clientHeight < el.scrollHeight;
+  const isOverflowing =
+    el.clientWidth < el.scrollWidth || el.clientHeight < el.scrollHeight;
   el.style.overflow = curOverflow;
   return isOverflowing;
 };
-
-export const setCaret = (el, pos) => {
-  if (!el) {
-    return;
-  }
-  const range = document.createRange();
-  const sel = window.getSelection();
-
-  range.setStart(el, pos);
-  range.collapse(true);
-
-  sel.removeAllRanges();
-  sel.addRange(range);
-};
-
-export const pauseAllAudios = () =>
-  document.querySelectorAll('audio').forEach((audioElement) => audioElement.pause());
 
 export const smoothScroll = (el, block = 'end', delay = 160) => {
   window.setTimeout(() => {

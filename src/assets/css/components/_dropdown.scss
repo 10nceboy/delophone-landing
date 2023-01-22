@@ -12,7 +12,6 @@ $dropdown-transition: 0.15s ease-in;
     @include font(400, 16px, $black);
     cursor: pointer;
     background: transparent;
-    @include hidden;
     @include flex-row;
     border: none;
 
@@ -96,6 +95,11 @@ $dropdown-transition: 0.15s ease-in;
   &_white {
     .dropdown__button {
       @include font(400, 16px, $white);
+
+      &::after {
+        content: url('/arrow-down.svg');
+        color: $white;
+      }
     }
   }
 
