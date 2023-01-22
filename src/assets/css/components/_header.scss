@@ -18,10 +18,11 @@
 
     a {
       display: block;
-    }
 
-    @include laptop {
-      display: block;
+      @include laptop {
+        width: 172px;
+        height: 32px;
+      }
     }
   }
 
@@ -31,6 +32,11 @@
 
     a {
       display: block;
+
+      img {
+        width: 111px;
+        height: 52px;
+      }
     }
 
     @include laptop {
@@ -111,6 +117,12 @@
           margin-top: 4 * $spacer;
         }
       }
+
+      &__login {
+        margin: 0 9 * $spacer 0 13 * $spacer;
+        order: 6;
+        @include visible;
+      }
     }
   }
 }
@@ -156,6 +168,7 @@
 .header_start-button {
   display: none;
   @include font(400, 16px, $blue);
+
   @include laptop {
     display: block;
     order: 6;

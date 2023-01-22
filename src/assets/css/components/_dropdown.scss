@@ -93,6 +93,12 @@ $dropdown-transition: 0.15s ease-in;
     }
   }
 
+  &_white {
+    .dropdown__button {
+      @include font(400, 16px, $white);
+    }
+  }
+
   &:hover {
     .dropdown {
       &__button {

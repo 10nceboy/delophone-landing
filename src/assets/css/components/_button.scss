@@ -4,7 +4,10 @@
 .button {
   border-radius: $btn-border-radius;
   transition: $btn-transition;
-  padding: 3 * $spacer 5 * $spacer;
+  padding: $spacer * 3 $spacer * 6;
+  box-shadow: none;
+  outline: none;
+
   cursor: pointer;
 
   &.button_outlined {
@@ -44,6 +47,30 @@
 
     &:disabled {
       background-color: $light-blue;
+    }
+  }
+
+  &.button_white {
+    border-color: transparent;
+    background-color: $white;
+    color: $black;
+    white-space: nowrap;
+    height: 54px;
+
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+
+    &:focus,
+    &.active {
+      background-color: $dark-blue;
+      color: $white;
+    }
+
+    &:disabled {
+      background-color: $light-blue;
+      color: $white;
     }
   }
 }

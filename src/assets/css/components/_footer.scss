@@ -1,0 +1,101 @@
+.footer {
+  background: $black;
+
+  padding: $spacer * 9 0 $spacer * 7;
+
+  .footer-upside {
+    @include flex-row;
+    padding-bottom: $spacer * 9;
+
+    &__logo {
+      @include laptop {
+        margin-right: $spacer * 8;
+      }
+
+      svg {
+        width: 111px;
+        height: 32px;
+
+        @include laptop {
+          width: 172px;
+          height: 32px;
+        }
+
+        & > * {
+          fill: $white !important;
+        }
+      }
+    }
+
+    &__dropdown {
+      margin-right: $spacer * 16;
+    }
+
+    &__menu {
+      ul {
+        @include flex-row;
+
+        li {
+          margin-right: $spacer * 5;
+          white-space: nowrap;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    &__login {
+      @include flex-row;
+      margin-left: $spacer * 9;
+      background: transparent;
+      order: 0;
+
+      .button__login-button {
+        margin-left: 0;
+      }
+    }
+
+    &__start-button {
+      margin-left: $spacer * 11;
+    }
+  }
+
+  .footer-contacts {
+    font-size: 14px;
+    background: $gray;
+    border-radius: $btn-border-radius;
+    padding: $spacer * 4;
+
+    @include laptop {
+      border-radius: none;
+      background: transparent;
+      padding-top: $spacer * 7;
+    }
+
+    ul {
+      @include flex-col;
+
+      @include laptop {
+        flex-direction: column;
+      }
+    }
+
+    &__address {
+      margin-left: auto;
+    }
+
+    &__address,
+    &__email,
+    &__phone {
+      margin-right: $spacer * 10;
+    }
+  }
+
+  .footer-case {
+    margin-top: $spacer * 4;
+    text-align: right;
+    font-size: 12px;
+  }
+}
