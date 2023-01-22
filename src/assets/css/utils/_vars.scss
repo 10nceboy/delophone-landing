@@ -1,0 +1,25 @@
+/*colors*/
+$orange: #f88c28;
+$black: #344351;
+$blue: #2b8feb;
+$gray: #5e6b77;
+$light-gray: #f6f7f8;
+$white: #ffffff;
+$green: #65d072;
+$light-blue: #8ec0ef;
+$dark-blue: #1971c2;
+$light-green: #abe1b2;
+$deep-blue: #1d7dd6;
+
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@100;200;300;400;500;600;700;800;900&display=swap');
+$family: 'Manrope';
+
+/*sizes*/
+$spacer: 5px;
+
+/*transitions*/
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+$bgcolor-transition: background-color 0.3s ease-out;
+$opacity-transition: opacity 0.3s ease-out;
