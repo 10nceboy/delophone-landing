@@ -1,0 +1,56 @@
+.button__login-button {
+  @include flex-row;
+  @include font(400, 16px, $black);
+  @include hidden;
+  cursor: pointer;
+  background-color: $white;
+  border: none;
+  margin-top: 8 * $spacer;
+
+  &:hover {
+    color: $dark-blue;
+
+    svg {
+      color: $dark-blue;
+    }
+  }
+
+  svg {
+    color: $blue;
+    margin-right: 2 * $spacer;
+    margin-left: 0;
+  }
+
+  @include laptop {
+    margin: 0 9 * $spacer 0 13 * $spacer;
+    order: 6;
+    @include visible;
+  }
+
+  &.active {
+    background-color: $light-gray;
+    @include visible($opacity-transition);
+
+    @include laptop {
+      background-color: $white;
+    }
+  }
+}
+
+.login__phone-number {
+  @include font(400, 16px, $black);
+  @include hidden;
+  margin-top: 3 * $spacer;
+
+  @include laptop {
+    @include visible(all 0);
+    order: 2;
+    margin-top: 0;
+    margin-left: auto;
+    display: block;
+  }
+
+  &.active {
+    @include visible($opacity-transition);
+  }
+}

@@ -1,0 +1,41 @@
+@import '../utils/';
+
+.container {
+  margin: 0 auto;
+  width: calc(100vw - 30px);
+
+  @include desktop {
+    width: calc(100vw - 330px);
+    max-width: 1440px;
+  }
+
+  @include wide-screen {
+    width: calc(100vw - 165px);
+    max-width: auto;
+  }
+
+  @include laptop {
+    width: calc(100vw - 330px);
+  }
+
+  @include tablet {
+    width: calc(100vw - 120px);
+  }
+
+  &.container-bottom {
+    margin-top: auto;
+    position: fixed;
+    bottom: $spacer * 4;
+    @include flex-row;
+    justify-content: center;
+    padding: 0 $spacer * 3;
+  }
+}
+
+.container-flex {
+  @include flex-row;
+}
+
+.overlay_gray {
+  background-color: $light-gray;
+}

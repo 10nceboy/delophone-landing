@@ -1,0 +1,57 @@
+@import '../base/typo';
+
+/* layout*/
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/*breakpoints*/
+@mixin wide-screen {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+/*fonts*/
+/* $family is coming from typo.scss */
+@mixin font($weight, $size, $color, $fam: $family) {
+  font: $weight $size $fam;
+  color: $color;
+}
+
+@mixin hidden {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+@mixin visible($transition: none) {
+  height: auto;
+  opacity: 1;
+  transition: $transition;
+}

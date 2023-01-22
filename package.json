@@ -6,9 +6,20 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "host": "vite --host"
   },
   "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "node-sass": "^8.0.0",
+    "prettier": "^2.8.3",
+    "sass": "^1.57.1",
     "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "bowser": "^2.11.0",
+    "vite-plugin-svg-icons": "^2.0.1"
   }
 }
