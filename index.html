@@ -6,26 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Делофон - удобный телефон для работы</title>
     <link rel="stylesheet" href="./src/assets/css/index.scss" />
-    <script src="/src/js/components/burger.js"> </script>
+    <script src="main.js" type="module"></script>
   </head>
   <body class="body">
-    <!-- Header -->
-
     <header class="header">
       <div class="container">
-        <div class="header_upside">
+        <div class="header__upside">
           <div class="container-flex">
             <div class="header__logo_mobile">
               <a href="#">
-                <img alt="Делофон" src="./src/assets/images/icons/svg/logo.svg" />
+                <img
+                  alt="Делофон"
+                  src="./src/assets/images/icons/svg/logo.svg"
+                />
               </a>
             </div>
             <div class="header__logo">
               <a href="#">
-                <img alt="Делофон" src="./src/assets/images/icons/svg/logo-large.svg" />
+                <img
+                  alt="Делофон"
+                  src="./src/assets/images/icons/svg/logo-large.svg"
+                />
               </a>
             </div>
-            <button class="header__burger_opened"> <img alt ="Закрыть" width="35px" height="35px" src= './src/assets/images/icons/svg/close.svg'> </button> 
+            <button class="header__burger_opened">
+              <img
+                alt="Закрыть"
+                width="35px"
+                height="35px"
+                src="./src/assets/images/icons/svg/close.svg"
+              />
+            </button>
             <button class="header__burger">
               <img
                 alt="Меню"
@@ -36,20 +47,50 @@
             </button>
           </div>
           <button class="button__login-button">
-            <img alt="Иконка входа" src="./src/assets/images/icons/svg/user.svg" /> Войти
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59644 19.4036 0 12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25Z"
+                fill="currentColor"
+              />
+              <path
+                d="M12.5 16.4062C15.1967 16.4062 17.3828 14.2201 17.3828 11.5234C17.3828 8.82673 15.1967 6.64062 12.5 6.64062C9.8033 6.64062 7.61719 8.82673 7.61719 11.5234C7.61719 14.2201 9.8033 16.4062 12.5 16.4062Z"
+                stroke="white"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M4.6875 21.875C5.42081 20.2294 6.53877 18.8475 7.91763 17.8823C9.29649 16.9171 10.8825 16.4063 12.5 16.4063C14.1175 16.4062 15.7035 16.9171 17.0824 17.8823C18.4612 18.8475 19.5792 20.2294 20.3125 21.875"
+                stroke="white"
+                stroke-linecap="square"
+                stroke-linejoin="bevel"
+              />
+            </svg>
+
+            Войти
           </button>
-          <div class="login__phone-number">8 (495) 286–01–11</div>
-          <div class="dropdown"> 
-            <form class="dropdown__button dropdown__button_white header__dropdown">
-            Москва
-            </form>
-            <ul class="dropdown__menu header__dropdown_menu" >
-              <li> Москва </li>
-              <li> Санкт-Петербург </li>
-              <li> Сочи
-              </li>
-            </ul>
-        </div>
+          <div class="login__phone-number">
+            <a class="link" href="tel:+8-(495)-286–01–11">8 (495) 286–01–11</a>
+          </div>
+          <div class="dropdown header__dropdown">
+            <button
+              class="dropdown__button dropdown__button_white header__dropdown"
+            >
+              Москва
+            </button>
+            <div class="dropdown__menu header__dropdown_menu">
+              <div class="dropdown__arrow"></div>
+              <ul class="dropdown__menu_list header__dropdown_menu">
+                <li>Москва</li>
+                <li>Санкт-Петербург</li>
+                <li>Сочи</li>
+              </ul>
+            </div>
+          </div>
           <button class="button button_outlined header_start-button">
             Начать бесплатно
           </button>
@@ -68,19 +109,15 @@
             </ul>
           </nav>
         </div>
-        </div>
-        <div class="container container-bottom" >   
-          <button
+      </div>
+      <div class="container container-bottom">
+        <button
           type="button"
           class="button button_outlined header_start-button_mobile"
         >
           Начать бесплатно
         </button>
       </div>
-      
-      </div>
     </header>
-
-
   </body>
 </html>

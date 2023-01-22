@@ -1,4 +1,10 @@
-@import 'components/buttons.scss';
-@import 'components/header.scss';
-@import 'components/dropdowns.scss';
-@import 'components/reset.scss';
+/* base */
+@import './base/reset';
+@import './base/layout';
+
+/* components */
+@import './components/button.scss';
+@import './components/header.scss';
+@import './components/dropdown.scss';
+@import './components/login';
+@import './components/link';

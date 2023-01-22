@@ -1,0 +1,120 @@
+@import '../utils/';
+@import '../base/typo';
+
+$dropdown-transition: 0.15s ease-in;
+
+.dropdown {
+  position: relative;
+  max-width: fit-content;
+  max-height: fit-content;
+
+  &__button {
+    @include font(400, 16px, $black);
+    cursor: pointer;
+    background: transparent;
+    @include hidden;
+    @include flex-row;
+    border: none;
+
+    &::after {
+      content: url('/arrow-down.svg');
+      display: flex;
+      margin-left: $spacer;
+      padding-top: $spacer;
+      transition: all $dropdown-transition;
+    }
+
+    &.active {
+      @include visible($opacity-transition);
+    }
+
+    @include laptop {
+      @include visible;
+    }
+  }
+
+  &__menu {
+    display: none;
+    @include hidden;
+    position: absolute;
+    z-index: 1;
+    overflow: visible;
+
+    &_list {
+      @include font(400, 14px, $gray);
+      @include flex-col;
+      gap: $spacer * 2;
+      padding: $spacer * 4 $spacer * 5;
+      background: $light-gray;
+      border-radius: $btn-border-radius;
+
+      @include desktop {
+        box-shadow: map-get($elevations, 1);
+      }
+
+      li {
+        white-space: nowrap;
+        user-select: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__arrow {
+    height: 15px;
+    margin: 0;
+    min-width: 100%;
+    background: transparent;
+    display: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: $light-gray;
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      top: 15px;
+      left: $spacer * 8;
+      z-index: 1;
+      overflow: visible;
+    }
+
+    @include desktop {
+      display: block;
+    }
+
+    @include tablet {
+      display: block;
+    }
+
+    @include wide-screen {
+      display: block;
+    }
+  }
+
+  &:hover {
+    .dropdown {
+      &__button {
+        color: $blue;
+
+        &::after {
+          transform: rotateX(180deg) translateY(-2px);
+          transition: transform $dropdown-transition;
+        }
+      }
+
+      &__menu {
+        display: block;
+        @include visible($dropdown-transition);
+        position: relative;
+        z-index: 0;
+
+        @include laptop {
+          position: absolute;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
