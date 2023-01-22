@@ -4,7 +4,95 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Delophone-landing</title>
+    <title>Делофон - удобный телефон для работы</title>
+    <link rel="stylesheet" href="./src/assets/css/index.scss" />
+    <script src="/src/js/components/burger.js"></script>
   </head>
-  <body></body>
+  <body class="body">
+    <header class="header">
+      <div class="container">
+        <div class="header_upside">
+          <div class="container-flex">
+            <div class="header__logo_mobile">
+              <a href="#">
+                <img
+                  alt="Делофон"
+                  src="./src/assets/images/icons/svg/logo.svg"
+                />
+              </a>
+            </div>
+            <div class="header__logo">
+              <a href="#">
+                <img
+                  alt="Делофон"
+                  src="./src/assets/images/icons/svg/logo-large.svg"
+                />
+              </a>
+            </div>
+            <button class="header__burger_opened">
+              <img
+                alt="Закрыть"
+                width="35px"
+                height="35px"
+                src="./src/assets/images/icons/svg/close.svg"
+              />
+            </button>
+            <button class="header__burger">
+              <img
+                alt="Меню"
+                width="35px"
+                height="35px"
+                src="./src/assets/images/icons/svg/burger.svg"
+              />
+            </button>
+          </div>
+          <button class="button__login-button">
+            <img
+              alt="Иконка входа"
+              src="./src/assets/images/icons/svg/user.svg"
+            />
+            Войти
+          </button>
+          <div class="login__phone-number">8 (495) 286–01–11</div>
+          <div class="dropdown">
+            <button
+              class="dropdown__button dropdown__button_white header__dropdown"
+            >
+              Москва
+            </button>
+            <ul class="dropdown__menu header__dropdown_menu">
+              <li>Москва</li>
+              <li>Санкт-Петербург</li>
+              <li>Сочи</li>
+            </ul>
+          </div>
+          <button class="button button_outlined header_start-button">
+            Начать бесплатно
+          </button>
+        </div>
+      </div>
+      <div class="overlay_gray">
+        <div class="container">
+          <nav class="header__menu">
+            <ul>
+              <li>Для кого</li>
+              <li>Возможности</li>
+              <li>Как подключить</li>
+              <li>Способы связи</li>
+              <li>Стоимость</li>
+              <li>FAQ</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="container container-bottom">
+        <button
+          type="button"
+          class="button button_outlined header_start-button_mobile"
+        >
+          Начать бесплатно
+        </button>
+      </div>
+    </header>
+  </body>
 </html>
