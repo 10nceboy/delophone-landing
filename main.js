@@ -1,2 +1,1 @@
-import './src/js/components/burger'
-
+import '~/js/components/burger';

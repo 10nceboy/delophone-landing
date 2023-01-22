@@ -1,34 +1,34 @@
-@import '../utils/mixins';
-@import '../utils/vars';
-@import '../utils/typo';
+@import '../utils/';
 
 .container {
   margin: 0 auto;
   width: calc(100vw - 30px);
 
-  @include destkop {
+  @include desktop {
     width: calc(100vw - 330px);
+    max-width: 1440px;
   }
 
   @include wide-screen {
     width: calc(100vw - 165px);
+    max-width: auto;
   }
 
   @include laptop {
     width: calc(100vw - 330px);
   }
 
-  @include laptop {
+  @include tablet {
     width: calc(100vw - 120px);
   }
 
   &.container-bottom {
     margin-top: auto;
     position: fixed;
-    bottom: 20px;
+    bottom: $spacer * 4;
     @include flex-row;
     justify-content: center;
-    padding: 0 15px;
+    padding: 0 $spacer * 3;
   }
 }
 

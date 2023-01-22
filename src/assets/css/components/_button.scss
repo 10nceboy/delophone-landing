@@ -1,11 +1,11 @@
 @import '../utils/mixins';
 @import '../utils/vars';
-@import '../utils/typo';
 
 .button {
-  border-radius: 5px;
+  border-radius: $btn-border-radius;
   transition: $btn-transition;
   padding: 3 * $spacer 5 * $spacer;
+  cursor: pointer;
 
   &.button_outlined {
     border: 1px solid $blue;

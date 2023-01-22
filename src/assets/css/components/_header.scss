@@ -1,0 +1,176 @@
+@import '../utils/index';
+
+.header {
+  margin-top: 4 * $spacer;
+
+  &__upside {
+    @include flex-col;
+
+    @include laptop {
+      @include flex-row;
+      margin: 8 * $spacer 0 3 * $spacer;
+    }
+  }
+
+  &__logo {
+    margin-right: $spacer * 8;
+    display: none;
+
+    a {
+      display: block;
+    }
+
+    @include laptop {
+      display: block;
+    }
+  }
+
+  &__logo_mobile {
+    display: block;
+    margin-right: auto;
+
+    a {
+      display: block;
+    }
+
+    @include laptop {
+      display: none;
+    }
+  }
+
+  &__burger {
+    border: none;
+    background-color: $white;
+    margin-left: auto;
+
+    @include laptop {
+      display: none;
+    }
+
+    &.header__burger_hidden {
+      display: none;
+    }
+  }
+
+  &__burger_opened {
+    width: 0;
+    @include hidden;
+    background-color: $white;
+
+    @include laptop {
+      @include hidden;
+    }
+
+    &.active {
+      @include visible($opacity-transition);
+      width: auto;
+      background-color: $light-gray;
+      border: none;
+
+      @include laptop {
+        @include hidden;
+      }
+    }
+  }
+
+  &__menu {
+    @include font(400, 16px, $gray);
+    @include hidden;
+    border: none;
+    white-space: nowrap;
+
+    &.active {
+      @include visible($opacity-transition);
+    }
+
+    ul {
+      li {
+        margin-top: 3 * $spacer;
+
+        @include desktop {
+          &:last-child {
+            text-align: right;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    @include laptop {
+      @include visible;
+      ul {
+        @include flex-row;
+      }
+
+      li {
+        margin: 4 * $spacer;
+        flex-grow: 1;
+
+        &:first-child {
+          margin-left: 0;
+          margin-top: 4 * $spacer;
+        }
+      }
+    }
+  }
+}
+
+.header__dropdown {
+  @include laptop {
+    margin-top: $spacer;
+    order: 1;
+  }
+
+  &__menu {
+    @include laptop {
+      margin-left: 0;
+
+      li {
+        &:hover {
+          color: $light-blue;
+
+          &.header_dropdown {
+            background-color: $light-gray;
+          }
+        }
+      }
+    }
+  }
+}
+
+.header_start-button_mobile {
+  @include hidden;
+  width: 100%;
+  @include font(400, 16px, $blue);
+
+  &.active {
+    @include visible($opacity-transition);
+    background-color: $light-gray;
+
+    @include laptop {
+      @include hidden;
+    }
+  }
+}
+
+.header_start-button {
+  display: none;
+  @include font(400, 16px, $blue);
+  @include laptop {
+    display: block;
+    order: 6;
+  }
+}
+
+.body {
+  &.overlay__gray {
+    background-color: $light-gray;
+
+    @include laptop {
+      background-color: $white;
+    }
+  }
+  &.lock {
+    overflow: hidden;
+  }
+}
