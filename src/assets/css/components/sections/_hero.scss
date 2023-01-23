@@ -8,6 +8,7 @@
 
   &__textblock {
     @include flex-col;
+    margin: 0 auto;
     @include laptop {
       width: 536px;
     }
@@ -28,6 +29,8 @@
   &__imageblock_mobile {
     display: block;
     margin-top: $spacer * 4;
+    margin-left: auto;
+    margin-right: auto;
     @include laptop {
       display: none;
     }
@@ -43,7 +46,7 @@
       background-color: $light-gray;
       border-radius: 0px $spacer 0 $spacer;
       padding: 16px $spacer * 4 $spacer * 3;
-      margin-top: 40px;
+      margin-top: $spacer * 8;
       white-space: nowrap;
       border-radius: 0px;
       height: 30px;
@@ -75,20 +78,19 @@
     @include laptop {
       margin-right: $spacer * 6;
       flex-grow: 1;
-      width: 350px;
+      width: $spacer * 70;
       padding: $spacer * 9 $spacer * 4 $spacer * 8 $spacer * 4;
       margin-top: 58px;
-      margin-bottom: 150px;
+      margin-bottom: 0px;
 
       &:first-child {
         margin-top: 58px;
-        margin-bottom: 150px;
       }
 
       &:last-child {
-        margin-bottom: 150px;
         margin-top: 58px;
         margin-right: 0;
+        margin-bottom: 0px;
       }
 
       h4 {

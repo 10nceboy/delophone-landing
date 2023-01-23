@@ -50,10 +50,10 @@ h5 {
   @include font(600, 22px, $orange);
   line-height: 31px;
   background-color: $light-gray;
-  border-radius: 60px;
+  border-radius: $spacer * 12;
   padding: 2px 7px;
   margin-left: -7px;
-  margin-bottom: 15px;
+  margin-bottom: $spacer * 3;
 
   @include laptop {
     @include font(600, 36px, $orange);
@@ -79,7 +79,7 @@ h5 {
 
   @include laptop {
     @include font(400, 20px, $gray);
-    line-height: 31px;
+    line-height: 24.8px;
   }
 }
 
@@ -89,6 +89,6 @@ h5 {
 
   @include laptop {
     @include font(400, 16px, $gray);
-    line-height: 31px;
+    line-height: 24.8px;
   }
 }
