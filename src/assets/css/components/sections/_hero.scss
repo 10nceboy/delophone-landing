@@ -1,0 +1,102 @@
+.hero {
+  @include flex-col;
+  margin-top: $spacer * 10;
+  @include laptop {
+    margin-top: 9 * $spacer;
+    height: 532px;
+  }
+
+  &__textblock {
+    @include flex-col;
+    @include laptop {
+      width: 536px;
+    }
+  }
+
+  &__imageblock {
+    display: none;
+    @include laptop {
+      display: block;
+      margin-left: auto;
+      width: 528px;
+    }
+    img {
+      height: 100%;
+    }
+  }
+
+  &__imageblock_mobile {
+    display: block;
+    margin-top: $spacer * 4;
+    @include laptop {
+      display: none;
+    }
+  }
+
+  &__label {
+    display: flex;
+    justify-content: center;
+    margin-top: $spacer * 2;
+
+    @include laptop {
+      margin-right: auto;
+      background-color: $light-gray;
+      border-radius: 0px $spacer 0 $spacer;
+      padding: 16px $spacer * 4 $spacer * 3;
+      margin-top: 40px;
+      white-space: nowrap;
+      border-radius: 0px;
+      height: 30px;
+      align-items: center;
+      @include font(400, 16px, $gray);
+      flex-shrink: 0;
+    }
+  }
+  &__card {
+    h4 {
+      margin-left: $spacer * 2;
+    }
+
+    .container-flex {
+      margin-bottom: $spacer * 3;
+    }
+
+    padding: $spacer * 5 $spacer * 4 $spacer * 4 $spacer * 4;
+    margin: 0 auto $spacer * 3;
+
+    &:first-child {
+      margin-top: $spacer * 5;
+    }
+
+    &:last-child {
+      margin-bottom: $spacer * 16;
+    }
+
+    @include laptop {
+      margin-right: $spacer * 6;
+      flex-grow: 1;
+      width: 350px;
+      padding: $spacer * 9 $spacer * 4 $spacer * 8 $spacer * 4;
+      margin-top: 58px;
+      margin-bottom: 150px;
+
+      &:first-child {
+        margin-top: 58px;
+        margin-bottom: 150px;
+      }
+
+      &:last-child {
+        margin-bottom: 150px;
+        margin-top: 58px;
+        margin-right: 0;
+      }
+
+      h4 {
+        margin-left: $spacer * 4;
+      }
+      .container-flex {
+        margin-bottom: $spacer * 4;
+      }
+    }
+  }
+}

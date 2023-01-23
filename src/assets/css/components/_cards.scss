@@ -1,0 +1,37 @@
+.card {
+  &__card_light-gray {
+    background-color: $light-gray;
+
+    &:hover {
+      border: $border-orange;
+    }
+    &:focus {
+      border: $border-orange;
+    }
+  }
+
+  &__card_white {
+    &__card_light-gray {
+      background-color: $white;
+
+      &:hover {
+        border: $border-orange;
+      }
+      &:focus {
+        border: $border-orange;
+      }
+    }
+  }
+
+  &__card_black {
+    background-color: $black;
+  }
+
+  &__card_round {
+    border-radius: 268px;
+  }
+
+  &__card_rectangle {
+    border-radius: 12px;
+  }
+}
