@@ -1,7 +1,7 @@
 .button__login-button {
-  @include flex-row;
   @include font(400, 16px, $black);
   @include hidden;
+  display: none;
   cursor: pointer;
   background-color: $white;
   border: none;
@@ -25,11 +25,13 @@
     margin: 0 9 * $spacer 0 13 * $spacer;
     order: 6;
     @include visible;
+    @include flex-row;
   }
 
   &.active {
     background-color: $light-gray;
     @include visible($opacity-transition);
+    @include flex-row;
 
     @include laptop {
       background-color: $white;
@@ -41,6 +43,7 @@
   @include font(400, 16px, $black);
   @include hidden;
   margin-top: 3 * $spacer;
+  display: none;
 
   @include laptop {
     @include visible(all 0);

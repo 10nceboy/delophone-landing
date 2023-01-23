@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.header_start-button_mobile'
   );
   const loginButton = document.querySelector('.button__login-button ');
+  const heroHidden = document.querySelector('hero');
 
   burgerButton.addEventListener('click', () => {
     menuOverlay.classList.toggle('overlay__gray');
@@ -22,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuOverlay.classList.toggle('overlay__gray', 'lock');
     changeButtonColor.classList.add('active');
     loginButton.classList.toggle('active');
-    toggleOverflow();
+    heroHidden.classList.toggle('hidden');
   });
 
   burgerCloseButton.addEventListener('click', () => {
@@ -34,6 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     dropdownButton.classList.toggle('active');
     changeButtonColor.classList.remove('active');
     loginButton.classList.toggle('active');
-    toggleOverflow();
+    heroHidden.classList.toggle('hid');
   });
 });

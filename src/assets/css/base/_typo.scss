@@ -1,3 +1,94 @@
-/*fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import '../utils/vars';
+@import '../utils/mixins';
+
 $family: 'Manrope';
+
+h1 {
+  @include font(600, 22px, $black);
+  line-height: 30px;
+  @include laptop {
+    @include font(600, 32px, $black);
+    line-height: 50px;
+  }
+}
+
+h2 {
+  @include font(600, 20px, $black);
+  line-height: 26px;
+  @include laptop {
+    @include font(600, 32px, $black);
+    line-height: 43px;
+  }
+}
+
+h3 {
+  @include font(600, 18px, $black);
+  line-height: 23px;
+  @include laptop {
+    @include font(600, 26px, $black);
+    line-height: 43px;
+  }
+}
+
+h4 {
+  @include font(500, 18px, $black);
+  line-height: 23px;
+  @include laptop {
+    @include font(500, 18px, $black);
+    line-height: 26px;
+  }
+}
+
+h5 {
+  @include font(500, 20px, $black);
+  line-height: 23px;
+}
+
+.accent_orange {
+  display: inline-block;
+  @include font(600, 22px, $orange);
+  line-height: 31px;
+  background-color: $light-gray;
+  border-radius: $spacer * 12;
+  padding: 2px 7px;
+  margin-left: -7px;
+  margin-bottom: $spacer * 3;
+
+  @include laptop {
+    @include font(600, 36px, $orange);
+    line-height: 50px;
+    padding: 2px 7px;
+    margin-left: -7px;
+  }
+}
+
+.accent_black {
+  @include font(600, 15px, $black);
+  line-height: 31px;
+
+  @include laptop {
+    @include font(600, 20px, $gray);
+    line-height: 31px;
+  }
+}
+
+.text_regular {
+  @include font(400, 15px, $gray);
+  line-height: 23px;
+
+  @include laptop {
+    @include font(400, 20px, $gray);
+    line-height: 24.8px;
+  }
+}
+
+.text_small {
+  @include font(400, 15px, $gray);
+  line-height: 23.25px;
+
+  @include laptop {
+    @include font(400, 16px, $gray);
+    line-height: 24.8px;
+  }
+}

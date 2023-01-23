@@ -142,6 +142,7 @@
   @include hidden;
   width: 100%;
   @include font(400, 16px, $blue);
+  display: none;
 
   &.active {
     @include visible($opacity-transition);
