@@ -1,0 +1,13 @@
+.link {
+  font-family: $family;
+  text-decoration: none;
+  color: $gray;
+
+  &_white {
+    color: $white;
+  }
+
+  &:hover {
+    color: $blue;
+  }
+}

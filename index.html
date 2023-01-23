@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Делофон - удобный телефон для работы</title>
     <link rel="stylesheet" href="./src/assets/css/index.scss" />
-    <script src="/src/js/components/burger.js"></script>
+    <script src="main.js" type="module"></script>
   </head>
   <body class="body">
     <header class="header">
       <div class="container">
-        <div class="header_upside">
-          <div class="container-flex">
+        <div class="header__upside">
+          <div class="container_flex">
             <div class="header__logo_mobile">
               <a href="#">
                 <img
                   alt="Делофон"
-                  src="./src/assets/images/icons/svg/logo.svg"
+                  src="./src/assets/images/icons/svg/logo-mobile.svg"
                 />
               </a>
             </div>
@@ -46,25 +46,48 @@
               />
             </button>
           </div>
-          <button class="button__login-button">
-            <img
-              alt="Иконка входа"
-              src="./src/assets/images/icons/svg/user.svg"
-            />
-            Войти
+          <button class="button login header__login">
+            <svg
+              class="login__icon"
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59644 19.4036 0 12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25Z"
+                fill="currentColor"
+              />
+              <path
+                d="M12.5 16.4062C15.1967 16.4062 17.3828 14.2201 17.3828 11.5234C17.3828 8.82673 15.1967 6.64062 12.5 6.64062C9.8033 6.64062 7.61719 8.82673 7.61719 11.5234C7.61719 14.2201 9.8033 16.4062 12.5 16.4062Z"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M4.6875 21.875C5.42081 20.2294 6.53877 18.8475 7.91763 17.8823C9.29649 16.9171 10.8825 16.4063 12.5 16.4063C14.1175 16.4062 15.7035 16.9171 17.0824 17.8823C18.4612 18.8475 19.5792 20.2294 20.3125 21.875"
+                stroke-linecap="square"
+                stroke-linejoin="bevel"
+              />
+            </svg>
+            <span class="login__text"> Войти </span>
           </button>
-          <div class="login__phone-number">8 (495) 286–01–11</div>
-          <div class="dropdown">
+          <div class="login__phone-number">
+            <a class="link" href="tel:+8-(495)-286–01–11">8 (495) 286–01–11</a>
+          </div>
+          <div class="dropdown header__dropdown">
             <button
-              class="dropdown__button dropdown__button_white header__dropdown"
+              class="dropdown__button dropdown__button_white header__dropdown-button"
             >
               Москва
             </button>
-            <ul class="dropdown__menu header__dropdown_menu">
-              <li>Москва</li>
-              <li>Санкт-Петербург</li>
-              <li>Сочи</li>
-            </ul>
+            <div class="dropdown__menu header__dropdown_menu">
+              <div class="dropdown__arrow"></div>
+              <ul class="dropdown__menu_list header__dropdown_menu">
+                <li>Москва</li>
+                <li>Санкт-Петербург</li>
+                <li>Сочи</li>
+              </ul>
+            </div>
           </div>
           <button class="button button_outlined header_start-button">
             Начать бесплатно
@@ -94,5 +117,379 @@
         </button>
       </div>
     </header>
+    <main>
+      <div class="container">
+        <section class="hero">
+          <div class="container_rotate">
+            <div class="hero__textblock">
+              <h1>
+                Первая виртуальная АТС <br />
+                <strong class="accent_orange"> без абонентской платы </strong>
+              </h1>
+              <div class="container_rotate">
+                <p class="text_regular">
+                  <b class="accent_black"> Настройте звонки в бизнесе: </b>
+                  c красивым номером, многоканальной линией и распределением
+                  звонков по сотрудникам с любыми устройствами
+                </p>
+              </div>
+              <div class="hero__imageblock_mobile">
+                <img
+                  alt="Довольные клиенты"
+                  src="/src/assets/images/sections/hero/hero-image-mobile.svg"
+                />/
+              </div>
+              <div class="container_rotate">
+                <button type="button" class="button button__start button_blue">
+                  Начать бесплатно
+                </button>
+                <div class="hero__label text_regular">
+                  1 номер, 3 сотрудника, 100 ₽ на балансе
+                </div>
+              </div>
+            </div>
+            <div class="hero__imageblock">
+              <img
+                alt="Довольные клиенты"
+                width="528px"
+                height="532px"
+                src="/src/assets/images/sections/hero/hero-image.svg"
+              />
+            </div>
+          </div>
+          <div class="container_rotate">
+            <div class="card card_light-gray card_rectangle hero__card">
+              <div class="container-flex-col">
+                <div class="container-flex">
+                  <svg
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M47.8941 20.9791C51.2114 20.9791 53.9005 18.3025 53.9005 15.0008C53.9005 11.699 51.2114 9.02246 47.8941 9.02246C44.5769 9.02246 41.8877 11.699 41.8877 15.0008C41.8877 18.3025 44.5769 20.9791 47.8941 20.9791Z"
+                      fill="white"
+                      stroke="#F88C28"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M43.4029 48.7094C46.1803 50.5149 49.9023 49.7375 51.7162 46.9731C53.5301 44.2088 52.7491 40.5042 49.9717 38.6987C47.1944 36.8933 43.4724 37.6707 41.6584 40.435C39.8445 43.1994 40.6255 46.904 43.4029 48.7094Z"
+                      fill="#F88C28"
+                      stroke="#F88C28"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M42.8641 18.4551L31.6821 25.6098"
+                      stroke="#F88C28"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M43.567 40.5941L33.0335 32.5231"
+                      stroke="#F88C28"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M19.4092 48.295C29.5763 48.295 37.8184 40.0529 37.8184 29.8858C37.8184 19.7186 29.5763 11.4766 19.4092 11.4766C9.24208 11.4766 1 19.7186 1 29.8858C1 40.0529 9.24208 48.295 19.4092 48.295Z"
+                      fill="white"
+                      stroke="#F88C28"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M16.0779 30.565C16.9096 32.2654 18.2879 33.6375 19.992 34.4614C20.1167 34.5205 20.2546 34.5461 20.3922 34.5357C20.5298 34.5253 20.6623 34.4792 20.7767 34.4021L23.2859 32.7288C23.3969 32.6548 23.5245 32.6097 23.6574 32.5975C23.7902 32.5853 23.924 32.6064 24.0466 32.659L28.7409 34.6708C28.9003 34.7385 29.0335 34.8563 29.1202 35.0063C29.2069 35.1562 29.2426 35.3303 29.2218 35.5024C29.0734 36.6634 28.5069 37.7305 27.6284 38.5039C26.7499 39.2774 25.6196 39.7041 24.4491 39.7041C20.834 39.7041 17.367 38.268 14.8107 35.7118C12.2545 33.1555 10.8184 29.6885 10.8184 26.0734C10.8184 24.9029 11.2451 23.7726 12.0185 22.8941C12.792 22.0156 13.8591 21.4491 15.0201 21.3007C15.1921 21.2799 15.3663 21.3155 15.5162 21.4023C15.6662 21.489 15.7839 21.6222 15.8517 21.7816L17.8653 26.48C17.9174 26.6015 17.9386 26.7341 17.9271 26.8658C17.9155 26.9975 17.8716 27.1243 17.7992 27.2349L16.1318 29.7827C16.0559 29.8973 16.011 30.0296 16.0016 30.1667C15.9921 30.3039 16.0184 30.4411 16.0779 30.565Z"
+                      fill="white"
+                      stroke="#F88C28"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <h4>Всегда свободный телефон</h4>
+                </div>
+                <div class="text_small">
+                  Подключите сотрудников к одному номеру и принимайте все звонки
+                  одновременно
+                </div>
+              </div>
+            </div>
+            <div class="card__card_light-gray card__card_rectangle hero__card">
+              <div class="container-flex-col">
+                <div class="container-flex">
+                  <svg
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="1.5"
+                      y="13.6113"
+                      width="44.7333"
+                      height="26.2222"
+                      rx="0.5"
+                      fill="white"
+                      stroke="#F88C28"
+                    />
+                    <rect
+                      x="21.0996"
+                      y="39.7441"
+                      width="5.53333"
+                      height="5.53333"
+                      fill="white"
+                      stroke="#F88C28"
+                    />
+                    <rect
+                      x="13.4775"
+                      y="45.1895"
+                      width="19.6889"
+                      height="3.35556"
+                      rx="0.5"
+                      fill="white"
+                      stroke="#F88C28"
+                    />
+                    <rect
+                      x="33.0781"
+                      y="28.8564"
+                      width="16.4222"
+                      height="21.8667"
+                      rx="0.5"
+                      fill="white"
+                      stroke="#F88C28"
+                    />
+                    <rect
+                      x="33.6665"
+                      y="47.9561"
+                      width="15.2444"
+                      height="2.17778"
+                      fill="#F88C28"
+                    />
+                    <rect
+                      x="40.2002"
+                      y="49.0439"
+                      width="2.17778"
+                      height="1.08889"
+                      rx="0.544444"
+                      fill="white"
+                    />
+                  </svg>
+
+                  <h4>Звонки с любых устройств</h4>
+                </div>
+                <div class="text_small">
+                  Звоните с компьютера, планшета, мобильного или стационарного
+                  телефона
+                </div>
+              </div>
+            </div>
+            <div class="card__card_light-gray card__card_rectangle hero__card">
+              <div class="container-flex-col">
+                <div class="container-flex">
+                  <svg
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22.7781 49.5562C34.8058 49.5562 44.5562 39.8058 44.5562 27.7781C44.5562 15.7504 34.8058 6 22.7781 6C10.7504 6 1 15.7504 1 27.7781C1 39.8058 10.7504 49.5562 22.7781 49.5562Z"
+                      fill="white"
+                      stroke="#F88C28"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12.0961 34.0881H13.6741V22.5739H12.0961L9.71143 23.8692V25.4524L12.0961 24.1411V34.0881Z"
+                      fill="#F88C28"
+                    />
+                    <path
+                      d="M23.1294 29.3864C24.4269 28.331 25.0581 27.5793 25.0581 26.0601C25.0581 23.9492 23.2872 22.334 20.9376 22.334C18.5179 22.334 16.7294 23.8692 16.7294 26.0441H18.325C18.3075 24.7808 19.4122 23.6933 20.9201 23.6933C22.3754 23.6933 23.4625 24.7168 23.4625 26.0441C23.4625 26.7797 23.1995 27.4354 22.2702 28.203L16.6768 32.7927L16.6593 34.0721H25.0581V32.7127H19.0615L23.1294 29.3864Z"
+                      fill="#F88C28"
+                    />
+                    <path
+                      d="M31.1793 26.9237L34.5809 23.9332V22.5739H27.1465V23.9332H32.6522L28.5492 27.3075L29.3031 28.4429C29.6889 28.251 30.1799 28.1391 30.6007 28.1391C32.1261 28.1391 33.1431 29.1146 33.1431 30.5378C33.1431 31.9451 32.1612 32.9206 30.6182 32.9526C29.496 32.9686 28.5141 32.3929 28.1459 31.3215L26.638 31.7213C27.1815 33.3204 28.7596 34.3119 30.6357 34.3119C32.9678 34.3119 34.7562 32.7447 34.7562 30.5378C34.7562 28.5229 33.3535 27.0196 31.1793 26.9237Z"
+                      fill="#F88C28"
+                    />
+                    <circle
+                      cx="39.1107"
+                      cy="44.1117"
+                      r="10.3891"
+                      fill="white"
+                      stroke="#F88C28"
+                    />
+                    <path
+                      d="M43.6588 41.3896L37.3068 46.8342L34.1309 44.112"
+                      stroke="#F88C28"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <h4>Сохраните прежний номер</h4>
+                </div>
+                <div class="text_small">
+                  Подключите телефонию к привычному для клиентов номеру телефона
+                  вашей компании
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-upside">
+          <div class="footer-upside__logo">
+            <a href="#">
+              <svg
+                width="172"
+                height="32"
+                viewBox="0 0 172 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_2126_22908)">
+                  <path
+                    d="M166.137 8.24316V16.8838H157.698V8.24316H151.834V30.7699H157.698V21.8332H166.137V30.7699H172.001V8.24316H166.137Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M140.071 8.32632C138.238 8.00957 136.356 8.1525 134.59 8.74263C132.011 9.61881 129.837 11.4189 128.476 13.8046C127.115 16.1903 126.661 18.9974 127.199 21.6983C127.738 24.3992 129.231 26.8079 131.4 28.4718C133.568 30.1357 136.262 30.9403 138.974 30.7342C141.687 30.5281 144.232 29.3256 146.131 27.3527C148.03 25.3798 149.152 22.7724 149.287 20.0204C149.422 17.2683 148.559 14.5613 146.862 12.4079C145.165 10.2545 142.75 8.80304 140.071 8.32632V8.32632ZM139.632 25.4689C138.086 25.829 136.462 25.5669 135.103 24.7378C133.745 23.9088 132.757 22.5776 132.348 21.025C131.939 19.4724 132.142 17.8197 132.913 16.4154C133.684 15.0111 134.963 13.9651 136.481 13.4978C137.56 13.1973 138.699 13.1973 139.778 13.4978C141.098 13.8491 142.265 14.6376 143.092 15.7377C143.919 16.8377 144.359 18.1863 144.342 19.5689C144.325 20.9514 143.853 22.2886 142.999 23.3677C142.146 24.4469 140.961 25.206 139.632 25.5244V25.4689Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M86.4477 7.15137V13.1832C87.8351 13.8674 88.9525 15.0078 89.6175 16.4182C90.2826 17.8286 90.456 19.4257 90.1094 20.9488C89.7628 22.4718 88.9166 23.8309 87.7092 24.8041C86.5017 25.7773 85.0042 26.3072 83.461 26.3072C81.9179 26.3072 80.4204 25.7773 79.2129 24.8041C78.0055 23.8309 77.1593 22.4718 76.8127 20.9488C76.4661 19.4257 76.6395 17.8286 77.3046 16.4182C77.9696 15.0078 79.087 13.8674 80.4744 13.1832V7.15137C77.5221 7.89038 74.939 9.69846 73.2126 12.2343C71.4862 14.7702 70.736 17.8585 71.1035 20.9163C71.471 23.974 72.9308 26.7898 75.2074 28.8321C77.484 30.8744 80.4199 32.002 83.461 32.002C86.5022 32.002 89.4381 30.8744 91.7147 28.8321C93.9913 26.7898 95.4511 23.974 95.8186 20.9163C96.1861 17.8585 95.4359 14.7702 93.7095 12.2343C91.9831 9.69846 89.4 7.89038 86.4477 7.15137Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M79.6705 20.047C79.7995 20.7575 80.1157 21.4195 80.5857 21.9628C81.0557 22.5061 81.662 22.9106 82.3404 23.1334C83.0188 23.3562 83.7441 23.3891 84.4395 23.2285C85.1348 23.0678 85.7743 22.7197 86.2903 22.221C86.8063 21.7223 87.1795 21.0916 87.3705 20.3956C87.5615 19.6996 87.5631 18.9642 87.3751 18.2673C87.1872 17.5705 86.8167 16.938 86.3029 16.437C85.7891 15.936 85.1511 15.5851 84.4564 15.4214V6.77148H82.6298V15.3844C81.644 15.6233 80.7865 16.2364 80.2341 17.0971C79.6818 17.9579 79.4768 19.0006 79.6614 20.01L79.6705 20.047Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M113.93 9.91764V8.24316H108.322V9.91764C107.838 9.99165 107.409 10.0749 106.897 10.1952C101.645 11.4811 97.855 15.0983 97.855 19.3539C97.855 23.9795 102.339 27.865 108.322 28.7994V30.7699H113.93V28.7994C119.912 27.8743 124.397 23.998 124.397 19.3539C124.397 14.7098 119.912 10.8613 113.93 9.91764ZM103.883 19.3539C103.883 17.1521 105.71 15.2741 108.349 14.4692V24.2478C105.701 23.4429 103.856 21.5557 103.856 19.3539H103.883ZM113.93 24.2478V14.4692C116.551 15.2741 118.396 17.1521 118.396 19.3539C118.396 21.5557 116.551 23.4429 113.93 24.2478Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M14.0563 0H0C0 2.44232 1.73534 3.793 3.98216 4.5331V25.8109C1.72621 26.4955 0 27.8832 0 30.7696H12.942C16.6684 30.7696 19.2623 30.307 20.7328 29.3634C23.0161 27.8925 23.5733 25.6629 23.5733 22.7025V8.49263C23.5733 2.77537 20.8424 0 14.0563 0ZM16.9607 21.8144C16.9607 24.155 15.5724 25.3299 12.7685 25.3299C11.9647 25.3299 10.9418 25.2836 9.90059 25.2651V5.41197C11.0605 5.45822 12.1017 5.41197 12.8507 5.41197C15.6577 5.41197 17.0581 6.64547 17.052 9.11246C17.052 11.6103 16.9607 19.4276 16.9607 21.8144Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M37.2084 8.37207C29.8561 8.37207 26.4858 14.3761 26.4858 19.8158C26.4858 26.523 30.605 30.7323 37.793 30.7323C40.4097 30.7919 43.0128 30.3331 45.4559 29.3816V24.8578C43.2761 25.5025 41.0135 25.8143 38.7428 25.7829C35.674 25.7829 32.9431 24.4692 32.7696 21.7031H46.4331C46.5815 20.8323 46.6549 19.9501 46.6523 19.0665C46.6523 13.7655 44.0585 8.37207 37.2084 8.37207ZM32.7513 17.1422C32.9249 15.3845 34.0483 12.7942 36.8248 12.7942C39.8571 12.7942 40.5513 15.514 40.5513 17.1422H32.7513Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M58.198 8.65012C55.458 9.39947 51.1196 11.9066 51.1196 16.7819V23.4891C51.1196 26.5512 50.4255 26.542 49.2381 27.7169C48.8541 28.0861 48.554 28.5355 48.3584 29.0339C48.1629 29.5323 48.0766 30.0678 48.1056 30.6033H54.0057C56.1886 30.6033 57.312 27.4209 57.312 23.5076V17.263C57.3105 16.2068 57.7208 15.1927 58.4537 14.4414C59.3312 13.6095 60.4614 13.1039 61.6595 13.0074H61.9335V30.5848H68.2538V8.38184H59.5771C59.1079 8.41098 58.6444 8.50115 58.198 8.65012V8.65012Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2126_22908">
+                    <rect width="172" height="32" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+          <div class="dropdown dropdown_white footer-upside__dropdown">
+            <div class="dropdown__button">Москва</div>
+            <div class="dropdown__menu">
+              <div class="dropdown__arrow"></div>
+              <ul class="dropdown__menu_list header__dropdown_menu">
+                <li>Москва</li>
+                <li>Санкт-Петербург</li>
+                <li>Сочи</li>
+              </ul>
+            </div>
+          </div>
+          <nav class="footer-upside__menu">
+            <ul>
+              <li><a href="/" class="link link_white">Стоимость</a></li>
+              <li><a href="/" class="link link_white">Возможности</a></li>
+              <li><a href="/" class="link link_white">Как подключить</a></li>
+            </ul>
+          </nav>
+          <div class="footer-upside__login">
+            <button class="login login_white">
+              <svg
+                class="login__icon"
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59644 19.4036 0 12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M12.5 16.4062C15.1967 16.4062 17.3828 14.2201 17.3828 11.5234C17.3828 8.82673 15.1967 6.64062 12.5 6.64062C9.8033 6.64062 7.61719 8.82673 7.61719 11.5234C7.61719 14.2201 9.8033 16.4062 12.5 16.4062Z"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M4.6875 21.875C5.42081 20.2294 6.53877 18.8475 7.91763 17.8823C9.29649 16.9171 10.8825 16.4063 12.5 16.4063C14.1175 16.4062 15.7035 16.9171 17.0824 17.8823C18.4612 18.8475 19.5792 20.2294 20.3125 21.875"
+                  stroke-linecap="square"
+                  stroke-linejoin="bevel"
+                />
+              </svg>
+              <span class="login__text"> Войти </span>
+            </button>
+          </div>
+          <button class="button button_white footer-upside__start-button">
+            Начать бесплатно
+          </button>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="container">
+        <div class="footer-contacts">
+          <address>
+            <ul>
+              <li class="footer-contacts__copy">
+                <a href="#" class="link link_white">
+                  &copy; ООО «Привет, Интернет», 2022 г.
+                </a>
+              </li>
+              <li class="footer-contacts__address">
+                <a
+                  class="link link_white"
+                  href="https://yandex.ru/maps/213/moscow/house/bumazhny_proyezd_14s1/Z04Ycw9nTEEFQFtvfXt4cH5mZw==/?indoorLevel=1&ll=37.587541%2C55.791253&z=17"
+                >
+                  г. Москва, проезд Бумажный, д. 14, стр. 1, офис 805
+                </a>
+              </li>
+              <li class="footer-contacts__email">
+                <a class="link link_white" href="mailto:help@delopfon">
+                  help@delofon.ru
+                </a>
+              </li>
+              <li class="footer-contacts__phone">
+                <a class="link link_white" href="tel:+8-(495)-286–01–11">
+                  8 (495) 286–01–11
+                </a>
+              </li>
+              <li>
+                <a class="link link_white" href="#">Документы</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer-case">
+          <a class="link link_dark-gray" href="https://out.agency/">
+            Сделано&nbsp;в&nbsp;Out.Agency
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

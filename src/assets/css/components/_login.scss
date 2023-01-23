@@ -1,0 +1,106 @@
+.login {
+  @include flex-row;
+  @include font(400, 16px, $black);
+  @include hidden;
+  display: none;
+  background: transparent;
+  background-color: $white;
+  border: none;
+
+  &:hover {
+    color: $dark-blue;
+
+    .login__icon {
+      color: $dark-blue;
+      path {
+        stroke: $white;
+      }
+    }
+  }
+
+  @include laptop {
+    order: 6;
+    @include visible;
+    @include flex-row;
+  }
+
+  &.active {
+    background-color: $light-gray;
+    @include visible($opacity-transition);
+    @include flex-row;
+
+    @include laptop {
+      background-color: $white;
+    }
+  }
+
+  &__icon {
+    color: $blue;
+    margin-right: $spacer * 2;
+
+    path {
+      stroke: $white;
+    }
+  }
+
+  &__phone-number {
+    @include font(400, 16px, $black);
+    @include hidden;
+    margin-top: 3 * $spacer;
+
+    @include laptop {
+      @include visible(all 0);
+      order: 2;
+      margin-top: 0;
+      margin-left: auto;
+      display: block;
+    }
+
+    &.active {
+      @include visible($opacity-transition);
+    }
+  }
+}
+
+.login_white {
+  @include flex-row;
+  @include font(400, 16px, $white);
+  @include hidden;
+  background: transparent;
+  border: none;
+  margin-top: 3 * $spacer;
+  display: none;
+
+  @include laptop {
+    @include visible;
+  }
+
+  &:hover {
+    color: $blue;
+
+    .login__icon {
+      color: $blue;
+      path {
+        stroke: $white;
+      }
+    }
+  }
+
+  &.active {
+    background-color: $light-gray;
+    @include visible($opacity-transition);
+
+    @include laptop {
+      background-color: $white;
+    }
+  }
+
+  .login__icon {
+    color: $white;
+    margin-right: $spacer * 2;
+
+    path {
+      stroke: $black;
+    }
+  }
+}

@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=/delophone-landing/",
     "preview": "vite preview",
     "host": "vite --host"
   },
   "devDependencies": {
+    "bowser": "^2.11.0",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
