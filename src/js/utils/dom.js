@@ -90,3 +90,8 @@ export const smoothScroll = (el, block = 'end', delay = 160) => {
     el.scrollIntoView({ behavior: 'smooth', block });
   }, delay);
 };
+
+
+const toggleElementsActive = (...elements ) => {
+   elements.forEach((el)=>el.classList.toggle('active'));
+}
