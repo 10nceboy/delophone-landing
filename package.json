@@ -10,6 +10,7 @@
     "host": "vite --host"
   },
   "devDependencies": {
+    "bowser": "^2.11.0",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -19,7 +20,6 @@
     "vite": "^4.0.0"
   },
   "dependencies": {
-    "bowser": "^2.11.0",
     "vite-plugin-svg-icons": "^2.0.1"
   }
 }

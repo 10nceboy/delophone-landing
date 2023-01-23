@@ -166,6 +166,7 @@
   @include hidden;
   width: 100%;
   @include font(400, 16px, $blue);
+  display: none;
 
   &.active {
     @include visible($opacity-transition);
@@ -184,18 +185,5 @@
   @include laptop {
     display: block;
     order: 6;
-  }
-}
-
-.body {
-  &.overlay__gray {
-    background-color: $light-gray;
-
-    @include laptop {
-      background-color: $white;
-    }
-  }
-  &.lock {
-    overflow: hidden;
   }
 }

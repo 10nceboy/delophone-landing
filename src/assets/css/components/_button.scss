@@ -34,7 +34,9 @@
 
   &.button_blue {
     background-color: $blue;
-    color: $white;
+    @include font(400, 16px, $white);
+    border-color: transparent;
+    line-height: 25px;
 
     &:hover {
       background-color: $deep-blue;
@@ -72,5 +74,20 @@
       background-color: $light-blue;
       color: $white;
     }
+  }
+}
+
+.button__start {
+  padding: $spacer * 3 $spacer * 14;
+  margin-top: $spacer * 4;
+
+  @include laptop {
+    padding: $spacer * 3 $spacer * 6;
+    white-space: nowrap;
+    flex-shrink: 2;
+    margin-right: auto;
+    margin-top: 40px;
+    border-radius: $btn-border-radius;
+    width: 200px;
   }
 }

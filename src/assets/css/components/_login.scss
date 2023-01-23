@@ -2,6 +2,7 @@
   @include flex-row;
   @include font(400, 16px, $black);
   @include hidden;
+  display: none;
   background: transparent;
   background-color: $white;
   border: none;
@@ -20,11 +21,14 @@
   @include laptop {
     order: 6;
     @include visible;
+    @include flex-row;
   }
 
   &.active {
     background-color: $light-gray;
     @include visible($opacity-transition);
+    @include flex-row;
+
     @include laptop {
       background-color: $white;
     }
@@ -64,6 +68,8 @@
   @include hidden;
   background: transparent;
   border: none;
+  margin-top: 3 * $spacer;
+  display: none;
 
   @include laptop {
     @include visible;

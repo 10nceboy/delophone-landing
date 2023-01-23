@@ -17,7 +17,7 @@
     }
   }
 
-  .footer-upside {
+  .footer__upside {
     @include laptop {
       @include flex-row;
       padding-bottom: $spacer * 9;

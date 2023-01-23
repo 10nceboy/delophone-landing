@@ -1,5 +1,18 @@
 @import '../utils/';
 
+.body {
+  &.overlay_gray {
+    background-color: $light-gray;
+
+    @include laptop {
+      background-color: $white;
+    }
+  }
+  &.lock {
+    overflow: hidden;
+  }
+}
+
 .container {
   margin: 0 auto;
   width: calc(100vw - 30px);
@@ -16,6 +29,7 @@
 
   @include laptop {
     width: calc(100vw - 330px);
+    max-width: 1110px;
   }
 
   @include tablet {
@@ -36,6 +50,19 @@
   }
 }
 
+.container_flex-col {
+  @include flex-col;
+}
+
 .overlay_gray {
   background-color: $light-gray;
+}
+
+.container_rotate {
+  @include flex-col;
+  justify-content: center;
+
+  @include laptop {
+    @include flex-row;
+  }
 }

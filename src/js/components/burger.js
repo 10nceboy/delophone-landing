@@ -11,22 +11,23 @@ document.addEventListener('DOMContentLoaded', () => {
     '.header_start-button_mobile'
   );
   const loginButton = document.querySelector('.button__login-button ');
+  const heroHidden = document.querySelector('hero');
 
   burgerButton.addEventListener('click', () => {
-    menuOverlay.classList.toggle('overlay__gray');
+    menuOverlay.classList.toggle('overlay_gray');
     headerMenu.classList.add('active');
     burgerButton.classList.toggle('header__burger_hidden');
     burgerCloseButton.classList.toggle('active');
     loginPhoneNumber.classList.toggle('active');
     dropdownButton.classList.toggle('active');
-    menuOverlay.classList.toggle('overlay__gray', 'lock');
+    menuOverlay.classList.toggle('overlay_gray', 'lock');
     changeButtonColor.classList.add('active');
     loginButton.classList.toggle('active');
-    toggleOverflow();
+    heroHidden.classList.toggle('hidden');
   });
 
   burgerCloseButton.addEventListener('click', () => {
-    menuOverlay.classList.toggle('overlay__gray');
+    menuOverlay.classList.toggle('overlay_gray');
     headerMenu.classList.remove('active');
     burgerButton.classList.remove('header__burger_hidden');
     burgerCloseButton.classList.remove('active');
@@ -34,6 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     dropdownButton.classList.toggle('active');
     changeButtonColor.classList.remove('active');
     loginButton.classList.toggle('active');
-    toggleOverflow();
+    heroHidden.classList.toggle('hid');
   });
 });
