@@ -39,14 +39,14 @@ h4 {
   @include font(500, 18px, $black);
   line-height: 23px;
   @include laptop {
-    @include font(500, 18px, $black);
+    @include font(500, 20px, $black);
     line-height: 26px;
   }
 }
 
 h5 {
-  @include font(500, 20px, $black);
-  line-height: 23px;
+  @include font(500, 18px, $black);
+  line-height: 23.4px;
 }
 
 .accent_orange {
@@ -79,7 +79,7 @@ h5 {
 
 .text_regular {
   @include font(400, 15px, $gray);
-  line-height: 23px;
+  line-height: 23.25px;
 
   @include laptop {
     @include font(400, 20px, $gray);
@@ -95,4 +95,15 @@ h5 {
     @include font(400, 16px, $gray);
     line-height: 24.8px;
   }
+}
+
+.text_caption {
+  @include laptop {
+    @include font(400, 14px, $gray);
+    line-height: 21px;
+  }
+}
+
+.text_orange {
+  color: $orange;
 }

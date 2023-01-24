@@ -2,8 +2,8 @@
   @include flex-col;
   margin-top: $spacer * 10;
   @include laptop {
-    margin-top: 9 * $spacer;
-    height: 532px;
+    margin-top: $spacer * 9;
+    margin-bottom: $spacer * 30;
   }
 
   &__textblock {

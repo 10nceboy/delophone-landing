@@ -1,5 +1,5 @@
 .card {
-  &__card_light-gray {
+  &_light-gray {
     background-color: $light-gray;
 
     &:hover {
@@ -10,28 +10,55 @@
     }
   }
 
-  &__card_white {
-    &__card_light-gray {
-      background-color: $white;
+  &_white {
+    background-color: $white;
 
-      &:hover {
-        border: $border-orange;
+    &:hover {
+      border: $border-orange;
+    }
+    &:focus {
+      border: $border-orange;
+    }
+  }
+
+  &_black {
+    background-color: $black;
+  }
+
+  &_round {
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: auto;
+    margin-bottom: $spacer * 2;
+    width: 239px;
+    height: 75px;
+
+    @include laptop {
+      border-radius: 268px;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      display: flex;
+      flex-shrink: 0;
+      width: 210px;
+      height: 210px;
+      margin-right: $spacer * 3;
+
+      &:nth-child(5) {
+        margin-right: 0;
       }
-      &:focus {
-        border: $border-orange;
+
+      &:nth-child(1) {
+        margin-top: -15px;
       }
     }
   }
 
-  &__card_black {
-    background-color: $black;
-  }
-
-  &__card_round {
-    border-radius: 268px;
-  }
-
-  &__card_rectangle {
+  &_rectangle {
     border-radius: 12px;
   }
 }

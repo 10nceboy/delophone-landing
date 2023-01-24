@@ -58,11 +58,30 @@
   background-color: $light-gray;
 }
 
-.container_rotate {
+.container_adaptive {
   @include flex-col;
   justify-content: center;
 
   @include laptop {
     @include flex-row;
+  }
+
+  &-reverse {
+    @include flex-row;
+    @include laptop {
+      @include flex-col;
+      align-items: flex-start;
+    }
+  }
+}
+
+.container_grid {
+  @include laptop {
+    display: grid;
+    grid-template-columns: repeat(3, 78px);
+    grid-template-rows: repeat(2, 37px);
+    grid-row-gap: 10px;
+    margin-right: 30px;
+    margin-left: 22px;
   }
 }
