@@ -58,11 +58,19 @@
   background-color: $light-gray;
 }
 
-.container_rotate {
+.container_adaptive {
   @include flex-col;
   justify-content: center;
+  align-items: center;
 
   @include laptop {
     @include flex-row;
+  }
+
+  &-reverse {
+    @include flex-row;
+    @include laptop {
+      @include flex-col;
+    }
   }
 }
