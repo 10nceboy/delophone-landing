@@ -37,6 +37,7 @@ $family: 'Manrope';
   }
 }
 
+
 /*fonts*/
 /* $family is coming from typo.scss */
 @mixin font($weight, $size, $color, $fam: $family) {
@@ -54,4 +55,9 @@ $family: 'Manrope';
   height: auto;
   opacity: 1;
   transition: $transition;
+}
+
+@mixin center {
+  @include flex-row;
+  justify-content: center;
 }

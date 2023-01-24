@@ -1,0 +1,45 @@
+.collapse {
+  overflow: hidden;
+  transition: height 0.15s ease-in;
+
+  &__activator {
+    cursor: pointer;
+  }
+
+  &__content {
+    transition: height 0.15s ease-in;
+  }
+
+  &_closed {
+    height: 25px;
+
+    .collapse__content {
+      display: none;
+      height: 0;
+    }
+  }
+
+  &_before-open {
+    height: auto;
+
+    .collapse__content {
+      display: none;
+      height: 0;
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      height: auto;
+    }
+  }
+
+  // &_animating {
+  //   pointer-events: none;
+  // }
+
+  &_active {
+    .collapse__content {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

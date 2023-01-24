@@ -53,7 +53,6 @@ export const animateCollapseOpen = (el, callback = () => {}) => {
   const height = getComputedStyle(el).height;
   const heightNum = parseInt(height);
   el.style.width = null;
-  el.style.width = null;
   el.style.position = null;
   el.style.visibility = null;
   el.style.height = 0;
