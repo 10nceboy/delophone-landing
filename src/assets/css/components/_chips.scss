@@ -1,0 +1,8 @@
+.chip_light-gray {
+  @include laptop {
+    background-color: $light-gray;
+    border-radius: $btn-border-radius;
+    border: 1px solid $dim-gray;
+  }
+  background-color: $white;
+}

@@ -1,0 +1,88 @@
+.pay-minutes {
+  margin-top: $spacer * 12;
+  background-color: $white;
+  border-radius: 12px;
+
+  @include laptop {
+    margin-top: $spacer * 20;
+    background-color: $light-gray;
+    padding: $spacer * 10;
+    border-radius: 12px;
+
+    &__header {
+      max-width: 235px;
+      margin-right: auto;
+    }
+
+    &__card-up {
+      padding: $spacer * 6 38px $spacer * 4 $spacer * 6;
+    }
+
+    &__card-down {
+      padding: $spacer * 4 $spacer * 6;
+      display: flex;
+      justify-content: stretch;
+
+      &_container {
+        margin-right: 30px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__card-header {
+      margin-bottom: $spacer * 3;
+
+      @include laptop {
+        margin-bottom: $spacer * 4;
+      }
+    }
+  }
+
+  &__chip-container {
+    height: 51px;
+  }
+
+  &__chip {
+    padding: $spacer * 3;
+    @include font(600, 14px, $black);
+    line-height: 21px;
+    margin-right: $spacer;
+
+    &:last-child {
+      margin-right: 0;
+      font-weight: 400;
+    }
+
+    &:nth-child(3) {
+      font-weight: 400;
+    }
+  }
+
+  &__card-textblock {
+    margin-left: $spacer * 2;
+  }
+
+  &__tooltip-top-content {
+    display: none;
+  }
+
+  &__tooltip-top-activator {
+    margin-left: $spacer;
+  }
+
+  &__tooltip-bot-content {
+    display: none;
+  }
+
+  &__tooltip-bot-activator {
+    position: absolute;
+    left: 225px;
+    top: -19px;
+  }
+
+  &__tooltip-bot {
+    position: relative;
+  }
+}

@@ -31,7 +31,7 @@ h3 {
   line-height: 23px;
   @include laptop {
     @include font(600, 26px, $black);
-    line-height: 43px;
+    line-height: 34px;
   }
 }
 
@@ -106,4 +106,18 @@ h5 {
 
 .text_orange {
   color: $orange;
+}
+
+.text_white {
+  color: $white;
+}
+
+.text_semibold {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24.8px;
+}
+
+.text_light-gray {
+  color: $light-gray;
 }
