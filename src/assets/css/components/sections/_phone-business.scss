@@ -24,19 +24,21 @@
   }
 
   &__cardblock_right {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
+    max-width: 100%;
+    @include laptop {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+    }
   }
-
   &__card-userblock {
     display: flex;
     flex-direction: column;
-    min-height: 111px;
+    min-height: 100px;
     min-width: 290px;
     flex-grow: 1;
-    margin-bottom: 30px;
+    margin-bottom: $spacer * 6;
     justify-content: center;
     align-items: center;
     align-self: center;
@@ -46,6 +48,7 @@
       height: 100px;
       align-items: center;
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
 
       h4 {
@@ -66,7 +69,6 @@
     @include laptop {
       height: 124px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       h4,
       p {
@@ -76,24 +78,39 @@
   }
 
   &__card-number {
-    @include font(500, 18px, $orange);
     display: flex;
     border: 1px solid $black;
     border-radius: 4px;
-    margin-right: $spacer * 3;
-    margin-bottom: $spacer * 2;
-    padding: $spacer * 2;
-    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    margin-left: 15px;
+
+    &:first-child {
+      width: 60px;
+      margin-left: 0;
+    }
+
+    &:last-child {
+      width: 43px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-left: 0px;
+    }
+
     &:nth-child(4) {
-      margin-left: -5px;
+      width: 78px;
+      margin-left: 0;
     }
 
-    &:nth-child(3n) {
-      margin-right: $spacer * 6;
-    }
-
-    svg {
-      height: 18px;
+    @include laptop {
+      @include font(500, 24px, $orange);
+      min-height: 37px;
+      svg {
+        height: 18px;
+      }
     }
   }
 
@@ -102,11 +119,13 @@
     flex-direction: column;
 
     @include laptop {
+      position: relative;
       flex-direction: row;
       display: flex;
       flex-grow: 1;
       align-items: center;
-      margin-top: 80px;
+      margin-top: 90px;
+      z-index: 3;
 
       h5 {
         text-align: center;
@@ -135,6 +154,18 @@
       top: -75px;
       left: -3px;
       display: block;
+    }
+  }
+}
+
+.graphic_bottom {
+  @include laptop {
+    &::before {
+      content: url('/public/v1.svg');
+      position: absolute;
+      display: block;
+      left: 23%;
+      top: auto;
     }
   }
 }
