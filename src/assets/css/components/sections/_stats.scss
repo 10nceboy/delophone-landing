@@ -1,0 +1,18 @@
+.stats {
+  margin: $spacer * 8 0 $spacer * 16;
+  gap: $spacer * 4;
+
+  @include laptop {
+    margin-top: $spacer * 14 0;
+    gap: $spacer * 7;
+  }
+
+  &__header {
+    margin-bottom: $spacer;
+  }
+
+  &__caption {
+    color: $gray;
+    line-height: 23px;
+  }
+}

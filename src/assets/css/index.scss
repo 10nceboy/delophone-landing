@@ -13,6 +13,12 @@
 @import './components/footer';
 @import './components/sections/phone-business';
 
+@import './components/sections/features';
+@import './components/sections/stats';
+
+@import './components/list';
+@import './components/list-item';
+
 main {
   min-height: 100vh;
 }

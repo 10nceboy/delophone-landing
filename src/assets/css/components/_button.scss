@@ -5,6 +5,7 @@
   border-radius: $btn-border-radius;
   transition: $btn-transition;
   padding: $spacer * 3 $spacer * 6;
+  white-space: nowrap;
   box-shadow: none;
   outline: none;
 
