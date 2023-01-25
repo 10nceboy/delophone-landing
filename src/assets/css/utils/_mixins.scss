@@ -12,6 +12,12 @@ $family: 'Manrope';
   flex-direction: column;
 }
 
+@mixin flex-row-start {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
 /*breakpoints*/
 @mixin wide-screen {
   @media screen and (min-width: 1400px) {
