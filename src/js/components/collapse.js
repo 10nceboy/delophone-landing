@@ -1,3 +1,5 @@
+import { smoothScroll } from '../utils/dom';
+
 document.addEventListener('DOMContentLoaded', () => {
   const collapsibles = document.querySelectorAll('.collapse');
 
@@ -5,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const content = collapse.querySelector('.collapse__content');
     let opened = false;
     let animating = false;
-    const paddingBottom = 20;
-    const collapseH = 25;
+    const collapseH = parseInt(getComputedStyle(collapse).height) + 25;
 
     collapse.addEventListener('click', () => {
       if (animating) {
@@ -18,11 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
         collapse.classList.add('collapse_before-open');
         requestAnimationFrame(() => {
           const contentHeight = parseInt(getComputedStyle(content).height);
-          collapse.style.height = `${
-            contentHeight + collapseH + paddingBottom
-          }px`;
+          collapse.style.height = `${contentHeight + collapseH}px`;
           requestAnimationFrame(() => {
             collapse.classList.add('collapse_active');
+            smoothScroll(collapse, 'start', 0);
           });
           collapse.addEventListener('transitionend', () => {
             animating = false;
@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       opened = !opened;
     });
+
     content.addEventListener('click', (event) => event.stopPropagation());
   });
 });
