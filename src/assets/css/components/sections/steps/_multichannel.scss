@@ -2,7 +2,6 @@
   border-radius: $border12;
 
   &__image {
-    max-width: 320px;
     align-self: center;
 
     @include laptop {
