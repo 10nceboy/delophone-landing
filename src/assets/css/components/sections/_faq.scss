@@ -1,0 +1,57 @@
+.faq {
+  background-color: $light-gray;
+  padding: $spacer * 16 0;
+
+  @include laptop {
+    padding-bottom: 150px;
+  }
+
+  &__cards {
+    margin-top: $spacer * 5;
+  }
+
+
+
+  
+  &__card {
+    margin-bottom: $spacer * 3;
+    padding: $spacer * 4;
+    background: white;
+    border-radius: 12px;
+
+    &:hover {
+      outline: 1px $blue solid;
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__arrow {
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+
+    @include laptop {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__question {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: $spacer * 2;
+  }
+
+  &__answer {
+    @include font(400, 14px, $gray);
+    line-height: 21px;
+
+    @include laptop {
+      @include font(400, 16px, $gray);
+      line-height: 24.8px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+$collapse-transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+.collapse {
+  overflow: hidden;
+  transition: height $collapse-transition;
+  height: 25px;
+
+  &__activator {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__arrow {
+    transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &_closed {
+    .collapse__content {
+      display: none;
+    }
+  }
+
+  &_before-open {
+    .collapse__content {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &_active {
+    height: auto;
+
+    .collapse__content {
+      opacity: 1;
+      visibility: visible;
+    }
+    .collapse__arrow {
+      transform: rotateX(180deg) translateY(-2px);
+    }
+  }
+}

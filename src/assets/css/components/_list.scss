@@ -1,0 +1,22 @@
+.list {
+  &_horisontal {
+    @include flex-row;
+  }
+
+  &_vertical {
+    @include flex-col;
+  }
+
+  &_grid-2x2 {
+    @include flex-col;
+
+    @include laptop {
+      display: grid;
+      grid-template-columns: 160px 160px;
+      grid-template-rows: 25px 25px;
+      column-gap: $spacer * 7;
+      row-gap: $spacer * 2;
+      white-space: nowrap;
+    }
+  }
+}

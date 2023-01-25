@@ -9,6 +9,8 @@ $green: #65d072;
 $light-blue: #8ec0ef;
 $dark-blue: #1971c2;
 $light-green: #abe1b2;
+$dark-green: #59c165;
+$darker-green: #48ba56;
 $deep-blue: #1d7dd6;
 $dim-gray: #efefef;
 
@@ -34,3 +36,7 @@ $elevations: (
 /*borders*/
 $border-orange: 1px solid $orange;
 $border12: 12px;
+
+/**z-index **/
+$zindex-modal: 100;
+$zindex-modal-dialog: 100;

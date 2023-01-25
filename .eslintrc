@@ -1,0 +1,11 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": false,
+    "es6": true,
+    "sourceType": "module"
+  },
+  "extends": ["prettier", "plugin:prettier/recommended"],
+  "plugins": []
+}

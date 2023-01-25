@@ -14,15 +14,16 @@
   }
 
   &__checklist {
-    @include laptop;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: $spacer $spacer * 5;
-    @include font(400, 16px, $gray);
-    line-height: 24.8px;
-    margin-top: $spacer * 2;
-    svg {
-      margin-right: 13px;
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr) !important;
+      grid-gap: $spacer $spacer * 5;
+      @include font(400, 16px, $gray);
+      line-height: 24.8px;
+      margin-top: $spacer * 2;
+
+      svg {
+        margin-right: 13px;
+      }
     }
   }
 }
@@ -34,9 +35,4 @@
   &__header-text {
     margin-left: $spacer * 3;
   }
-}
-
-.step-downside {
-  background-color: $black;
-  border-radius: 0px 0px 12px 12px;
 }

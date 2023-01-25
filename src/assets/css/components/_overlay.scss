@@ -1,0 +1,15 @@
+.overlay {
+  @include fullscreen;
+  display: none;
+  background-color: $black;
+  opacity: 0.5;
+
+  &__gray {
+    background-color: $light-gray;
+  }
+
+  &_active {
+    display: block;
+    z-index: $zindex-modal - 1;
+  }
+}

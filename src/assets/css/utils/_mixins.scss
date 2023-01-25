@@ -61,3 +61,18 @@ $family: 'Manrope';
   opacity: 1;
   transition: $transition;
 }
+
+@mixin center {
+  @include flex-row;
+  justify-content: center;
+}
+
+@mixin fullscreen() {
+  height: 100%;
+  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
