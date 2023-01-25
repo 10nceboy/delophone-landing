@@ -7,6 +7,14 @@
     color: $white;
   }
 
+  &_blue {
+    color: $blue;
+
+    &:hover {
+      color: $deep-blue !important;
+    }
+  }
+
   &:hover {
     color: $blue;
   }

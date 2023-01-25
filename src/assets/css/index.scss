@@ -27,6 +27,4 @@
 @import './components/modal';
 @import './components/overlay';
 
-main {
-  min-height: 100vh;
-}
+@import './components/sections/steps/calcualtor';
