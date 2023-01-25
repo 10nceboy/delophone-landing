@@ -20,7 +20,6 @@ $dropdown-transition: 0.15s ease-in;
       display: flex;
       margin-left: $spacer;
       padding-top: $spacer;
-      transition: all $dropdown-transition;
     }
 
     &.active {
@@ -55,6 +54,10 @@ $dropdown-transition: 0.15s ease-in;
         white-space: nowrap;
         user-select: none;
         cursor: pointer;
+
+        &:hover {
+          color: $blue;
+        }
       }
     }
   }
@@ -97,20 +100,17 @@ $dropdown-transition: 0.15s ease-in;
       @include font(400, 16px, $white);
 
       &::after {
-        content: url('/arrow-down.svg');
+        content: url('/arrow-down-white.svg');
         color: $white;
       }
     }
   }
 
-  &:hover {
+  &.active {
     .dropdown {
       &__button {
-        color: $blue;
-
         &::after {
           transform: rotateX(180deg) translateY(-2px);
-          transition: transform $dropdown-transition;
         }
       }
 
