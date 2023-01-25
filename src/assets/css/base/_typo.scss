@@ -119,3 +119,19 @@ h5 {
 .text_light-gray {
   color: $light-gray;
 }
+
+.text_mobile {
+  display: block;
+
+  @include laptop {
+    display: none;
+  }
+}
+
+.text_visible {
+  display: none;
+
+  @include laptop {
+    display: block;
+  }
+}

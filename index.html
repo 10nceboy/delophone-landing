@@ -754,8 +754,12 @@
         </section>
         <section class="pay-minutes">
           <div class="container_adaptive">
+            <div class="pay-minutes__header-mobile">
+              Платите только <br />
+              за подключение и минуты
+            </div>
             <div class="pay-minutes__header">
-              <h3>Платите только за подключение и минуты</h3>
+              Платите только за подключение и минуты
             </div>
             <div class="pay-minutes__content">
               <div class="pay-minutes__card-top card_white card_rounded-top">
@@ -770,13 +774,16 @@
                   <div class="chip_light-gray pay-minutes__chip">
                     1 номер на выбор
                   </div>
+                  <div class="chip_light-gray pay-minutes__chip-mobile">
+                    3 сотрудника и 1 номер на выбор
+                  </div>
                   <div class="chip_light-gray pay-minutes__chip">
                     Исходящие 1.4 ₽ / мин
                   </div>
                   <div class="container_flex"></div>
                   <div class="chip_light-gray pay-minutes__chip">
                     <div class="container_flex">
-                      Входящие 0 ₽ / мин
+                      <div class="chip-text">Входящие 0 ₽ / мин</div>
                       <div class="tooltip pay-minutes__tooltip-top">
                         <div
                           class="tooltip__activator pay-minutes__tooltip-top-activator"
@@ -828,8 +835,11 @@
                   <div
                     class="container_adaptive-reverse pay-minutes__card-textblock"
                   >
-                    <div class="text_caption text_light-gray">
+                    <div class="text_caption text_light-gray text_visible">
                       Ещё номер телефона:
+                    </div>
+                    <div class="text_caption text_light-gray text_mobile">
+                      сотрудник:&nbsp;
                     </div>
                     <div class="text_semibold text_white">990 ₽ разово</div>
                   </div>
@@ -855,8 +865,11 @@
                   <div
                     class="container_adaptive-reverse pay-minutes__card-textblock"
                   >
-                    <div class="text_caption text_light-gray">
+                    <div class="text_caption text_light-gray text_visible">
                       Ещё сотрудник:
+                    </div>
+                    <div class="text_caption text_light-gray text_mobile">
+                      номер телефона:&nbsp;
                     </div>
                     <div class="text_semibold text_white">990 ₽ разово</div>
                   </div>
@@ -864,9 +877,7 @@
                 <div
                   class="container_flex-start pay-minutes__card-bottom_container"
                 >
-                  <div
-                    class="container_adaptive-reverse pay-minutes__card-textblock"
-                  >
+                  <div class="container_flex-col pay-minutes__card-textblock">
                     <div class="text_caption text_light-gray">
                       Оплата только за подключение,
                     </div>
