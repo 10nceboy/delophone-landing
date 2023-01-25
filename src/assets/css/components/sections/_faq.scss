@@ -1,16 +1,27 @@
 .faq {
   background-color: $light-gray;
-  padding-top: 80px;
+  padding: $spacer * 16 0;
+
+  @include laptop {
+    padding-bottom: 150px;
+  }
 
   &__cards {
     margin-top: $spacer * 5;
   }
 
+
+
+  
   &__card {
     margin-bottom: $spacer * 3;
     padding: $spacer * 4;
     background: white;
     border-radius: 12px;
+
+    &:hover {
+      outline: 1px $blue solid;
+    }
 
     :last-child {
       margin-bottom: 0;

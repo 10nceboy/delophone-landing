@@ -9,6 +9,7 @@
     <script src="main.js" type="module"></script>
   </head>
   <body class="body">
+    <div class="overlay"></div>
     <header class="header">
       <div class="container">
         <div class="header__upside">
@@ -90,7 +91,7 @@
           </button>
         </div>
       </div>
-      <div class="overlay_gray">
+      <div class="" style="display: none">
         <div class="container">
           <nav class="header__menu">
             <ul>
@@ -113,7 +114,88 @@
         </button>
       </div>
     </header>
+
     <main>
+      <div class="container">
+        <div class="whatsapp__button modal__activator" data-modal="whatsapp">
+          <svg
+            width="120"
+            height="120"
+            viewBox="0 0 120 120"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g filter="url(#filter0_d_2126_19615)">
+              <circle cx="60" cy="60" r="40" fill="currentColor" />
+            </g>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M68.6495 62.9373C67.8 62.4289 66.6931 61.8639 65.6943 62.2748C64.9272 62.5881 64.438 63.7847 63.9386 64.3959C63.6812 64.7092 63.3775 64.7605 62.9862 64.6013C60.1031 63.456 57.8995 61.5404 56.3086 58.8955C56.0409 58.4846 56.0872 58.161 56.4116 57.781C56.8904 57.216 57.4927 56.5741 57.6266 55.814C57.7553 55.0539 57.4001 54.1654 57.0861 53.4875C56.6845 52.6247 56.2314 51.387 55.3664 50.8991C54.5684 50.4471 53.5181 50.6988 52.8025 51.2791C51.5771 52.2755 50.9799 53.8367 51.0005 55.3878C51.0005 55.8294 51.0623 56.2659 51.1653 56.6922C51.4124 57.7142 51.8861 58.6695 52.4215 59.5734C52.8231 60.2564 53.2607 60.9189 53.7292 61.5609C55.2686 63.6512 57.189 65.4642 59.408 66.82C60.515 67.498 61.7093 68.0936 62.9501 68.4994C64.3351 68.9565 65.5707 69.4341 67.0741 69.1465C68.6444 68.8486 70.1889 67.8831 70.8119 66.3732C70.9972 65.9264 71.0899 65.4282 70.987 64.9557C70.7759 63.9799 69.4527 63.3996 68.6598 62.9322L68.6495 62.9373Z"
+              fill="white"
+            />
+            <path
+              d="M44.1587 69.1292L44.2122 68.929L44.1084 68.7496C42.4496 65.882 41.5 62.5526 41.5 59C41.5 48.2304 50.2304 39.5 61 39.5C71.7696 39.5 80.5 48.2304 80.5 59C80.5 69.7696 71.7696 78.5 61 78.5C57.4474 78.5 54.118 77.5504 51.2504 75.8916L51.071 75.7878L50.8708 75.8413L41.7067 78.2933L44.1587 69.1292Z"
+              stroke="white"
+            />
+            <defs>
+              <filter
+                id="filter0_d_2126_19615"
+                x="0"
+                y="0"
+                width="120"
+                height="120"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset />
+                <feGaussianBlur stdDeviation="10" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0.133333 0 0 0 0 0.133333 0 0 0 0 0.133333 0 0 0 0.2 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_2126_19615"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect1_dropShadow_2126_19615"
+                  result="shape"
+                />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+        <div class="modal" data-modal="whatsapp">
+          <div class="modal__dialog whatsapp__dialog">
+            <div class="whatsapp__dialog-body">
+              <h3 class="whatsapp__title">Задайте ваш вопрос в WhatsApp</h3>
+              <figure class="whatsapp__qrcode">
+                <img
+                  src="/src/assets/images/sections/qr.svg"
+                  width="180px"
+                  height="180x"
+                />
+              </figure>
+              <figcaption class="whatsapp__caption">
+                Отсканируйте QR-код, чтобы открыть WhatsApp в телефоне, либо
+                нажмите кнопку ниже, чтобы открыть чат здесь.
+              </figcaption>
+              <button class="button button_green">Открыть WhatsApp</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="container">
         <section class="hero">
           <div class="container_adaptive">
@@ -338,392 +420,611 @@
         </section>
       </div>
       <div class="container">
-        <section class="phone-business">
-          <div class="container_adaptive">
-            <div class="phone-business__textblock">
-              <h2>
-                Телефон для <span class="text_orange"> всего </span> бизнеса
-              </h2>
-              <p class="text_regular">
-                Делофон — это облачная телефония для бизнеса.
-              </p>
-              <p class="text_regular">
-                Подключайте любые номера и сотрудников с разными устройствами,
-                настройте фирменное приветствие и автоматически распределяйте
-                звонки в единой сети.
-              </p>
-            </div>
-            <div class="phone-business__cardblock_right">
-              <div
-                class="card_light-gray card_rectangle phone-business__card-userblock"
-              >
-                <h4>Ваши клиенты</h4>
-                <svg
-                  width="208"
-                  height="60"
-                  viewBox="0 0 208 60"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g filter="url(#filter0_d_2126_20766)">
-                    <circle
-                      cx="34"
-                      cy="34"
-                      r="23.5"
-                      fill="white"
-                      stroke="#344351"
-                    />
-                    <ellipse cx="34" cy="28" rx="5.6" ry="6" fill="#F88C28" />
-                    <path
-                      d="M43.0782 45.1996H24.9218C24.2586 45.1996 23.7823 44.5674 24.0226 43.9492C25.3328 40.5786 28.5759 35.5996 34 35.5996C39.4241 35.5996 42.6671 40.5786 43.9774 43.9492C44.2177 44.5674 43.7414 45.1996 43.0782 45.1996Z"
-                      fill="#F88C28"
-                      stroke="#F88C28"
-                    />
-                  </g>
-                  <g filter="url(#filter1_d_2126_20766)">
-                    <circle
-                      cx="69"
-                      cy="34"
-                      r="23.5"
-                      fill="white"
-                      stroke="#344351"
-                    />
-                    <ellipse cx="69" cy="28" rx="5.6" ry="6" fill="#F88C28" />
-                    <path
-                      d="M78.0782 45.1996H59.9218C59.2586 45.1996 58.7823 44.5674 59.0226 43.9492C60.3328 40.5786 63.5759 35.5996 69 35.5996C74.4241 35.5996 77.6671 40.5786 78.9774 43.9492C79.2177 44.5674 78.7414 45.1996 78.0782 45.1996Z"
-                      fill="#F88C28"
-                      stroke="#F88C28"
-                    />
-                  </g>
-                  <g filter="url(#filter2_d_2126_20766)">
-                    <circle
-                      cx="104"
-                      cy="34"
-                      r="23.5"
-                      fill="white"
-                      stroke="#344351"
-                    />
-                    <ellipse cx="104" cy="28" rx="5.6" ry="6" fill="#F88C28" />
-                    <path
-                      d="M113.078 45.1996H94.9218C94.2586 45.1996 93.7823 44.5674 94.0226 43.9492C95.3328 40.5786 98.5759 35.5996 104 35.5996C109.424 35.5996 112.667 40.5786 113.977 43.9492C114.218 44.5674 113.741 45.1996 113.078 45.1996Z"
-                      fill="#F88C28"
-                      stroke="#F88C28"
-                    />
-                  </g>
-                  <g filter="url(#filter3_d_2126_20766)">
-                    <circle
-                      cx="139"
-                      cy="34"
-                      r="23.5"
-                      fill="white"
-                      stroke="#344351"
-                    />
-                    <ellipse cx="139" cy="28" rx="5.6" ry="6" fill="#F88C28" />
-                    <path
-                      d="M148.078 45.1996H129.922C129.259 45.1996 128.782 44.5674 129.023 43.9492C130.333 40.5786 133.576 35.5996 139 35.5996C144.424 35.5996 147.667 40.5786 148.977 43.9492C149.218 44.5674 148.741 45.1996 148.078 45.1996Z"
-                      fill="#F88C28"
-                      stroke="#F88C28"
-                    />
-                  </g>
-                  <g filter="url(#filter4_d_2126_20766)">
-                    <circle
-                      cx="174"
-                      cy="34"
-                      r="23.5"
-                      fill="white"
-                      stroke="#344351"
-                    />
-                    <ellipse cx="174" cy="28" rx="5.6" ry="6" fill="#F88C28" />
-                    <path
-                      d="M183.078 45.1996H164.922C164.259 45.1996 163.782 44.5674 164.023 43.9492C165.333 40.5786 168.576 35.5996 174 35.5996C179.424 35.5996 182.667 40.5786 183.977 43.9492C184.218 44.5674 183.741 45.1996 183.078 45.1996Z"
-                      fill="#F88C28"
-                      stroke="#F88C28"
-                    />
-                  </g>
-                  <defs>
-                    <filter
-                      id="filter0_d_2126_20766"
-                      x="0"
-                      y="0"
-                      width="68"
-                      height="68"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha"
-                      />
-                      <feOffset />
-                      <feGaussianBlur stdDeviation="5" />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0.27375 0 0 0 0 0.382789 0 0 0 0 0.47625 0 0 0 0.14 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="BackgroundImageFix"
-                        result="effect1_dropShadow_2126_20766"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="effect1_dropShadow_2126_20766"
-                        result="shape"
-                      />
-                    </filter>
-                    <filter
-                      id="filter1_d_2126_20766"
-                      x="35"
-                      y="0"
-                      width="68"
-                      height="68"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha"
-                      />
-                      <feOffset />
-                      <feGaussianBlur stdDeviation="5" />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0.27375 0 0 0 0 0.382789 0 0 0 0 0.47625 0 0 0 0.14 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="BackgroundImageFix"
-                        result="effect1_dropShadow_2126_20766"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="effect1_dropShadow_2126_20766"
-                        result="shape"
-                      />
-                    </filter>
-                    <filter
-                      id="filter2_d_2126_20766"
-                      x="70"
-                      y="0"
-                      width="68"
-                      height="68"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha"
-                      />
-                      <feOffset />
-                      <feGaussianBlur stdDeviation="5" />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0.27375 0 0 0 0 0.382789 0 0 0 0 0.47625 0 0 0 0.14 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="BackgroundImageFix"
-                        result="effect1_dropShadow_2126_20766"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="effect1_dropShadow_2126_20766"
-                        result="shape"
-                      />
-                    </filter>
-                    <filter
-                      id="filter3_d_2126_20766"
-                      x="105"
-                      y="0"
-                      width="68"
-                      height="68"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha"
-                      />
-                      <feOffset />
-                      <feGaussianBlur stdDeviation="5" />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0.27375 0 0 0 0 0.382789 0 0 0 0 0.47625 0 0 0 0.14 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="BackgroundImageFix"
-                        result="effect1_dropShadow_2126_20766"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="effect1_dropShadow_2126_20766"
-                        result="shape"
-                      />
-                    </filter>
-                    <filter
-                      id="filter4_d_2126_20766"
-                      x="140"
-                      y="0"
-                      width="68"
-                      height="68"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha"
-                      />
-                      <feOffset />
-                      <feGaussianBlur stdDeviation="5" />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0.27375 0 0 0 0 0.382789 0 0 0 0 0.47625 0 0 0 0.14 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="BackgroundImageFix"
-                        result="effect1_dropShadow_2126_20766"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="effect1_dropShadow_2126_20766"
-                        result="shape"
-                      />
-                    </filter>
-                  </defs>
-                </svg>
-              </div>
-              <div
-                class="card_light-gray card_rectangle phone-business__card-numbersblock"
-              >
-                <div class="container_flex-col">
-                  <h4>Ваши номера</h4>
-                  <p class="text_caption">С интерактивным меню</p>
+        <div class="container">
+          <section class="phone-business">
+            <div class="container">
+              <div class="container_adaptive">
+                <div class="phone-business__textblock">
+                  <h2>
+                    Телефон для <span class="text_orange"> всего </span> бизнеса
+                  </h2>
+                  <p class="text_regular">
+                    Делофон — это облачная телефония для бизнеса.
+                  </p>
+                  <p class="text_regular">
+                    Подключайте любые номера и сотрудников с разными
+                    устройствами, настройте фирменное приветствие
+                    и автоматически распределяйте звонки в единой сети.
+                  </p>
                 </div>
-                <div class="container_grid">
-                  <div class="phone-business__card-number card_white">495</div>
-                  <div class="phone-business__card-number card_white">812</div>
-                  <div class="phone-business__card-number card_white">499</div>
-
-                  <div class="phone-business__card-number card_white">
-                    8&nbsp;800
-                  </div>
-                  <div class="phone-business__card-number card_white">9XX</div>
-                  <div class="phone-business__card-number card_white">
+                <div class="graphic__bottom_mobile"></div>
+                <div class="phone-business__cardblock_right">
+                  <div
+                    class="card_light-gray card_rectangle phone-business__card-userblock"
+                  >
+                    <h4>Ваши клиенты</h4>
                     <svg
-                      width="27"
-                      height="5"
-                      viewBox="0 0 27 5"
+                      width="208"
+                      height="60"
+                      viewBox="0 0 208 60"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="2.5" cy="2.5" r="2.5" fill="#F88C28" />
-                      <circle cx="13.5" cy="2.5" r="2.5" fill="#F88C28" />
-                      <circle cx="24.5" cy="2.5" r="2.5" fill="#F88C28" />
+                      <g filter="url(#filter0_d_2126_20766)">
+                        <circle
+                          cx="34"
+                          cy="34"
+                          r="23.5"
+                          fill="white"
+                          stroke="#344351"
+                        />
+                        <ellipse
+                          cx="34"
+                          cy="28"
+                          rx="5.6"
+                          ry="6"
+                          fill="#F88C28"
+                        />
+                        <path
+                          d="M43.0782 45.1996H24.9218C24.2586 45.1996 23.7823 44.5674 24.0226 43.9492C25.3328 40.5786 28.5759 35.5996 34 35.5996C39.4241 35.5996 42.6671 40.5786 43.9774 43.9492C44.2177 44.5674 43.7414 45.1996 43.0782 45.1996Z"
+                          fill="#F88C28"
+                          stroke="#F88C28"
+                        />
+                      </g>
+                      <g filter="url(#filter1_d_2126_20766)">
+                        <circle
+                          cx="69"
+                          cy="34"
+                          r="23.5"
+                          fill="white"
+                          stroke="#344351"
+                        />
+                        <ellipse
+                          cx="69"
+                          cy="28"
+                          rx="5.6"
+                          ry="6"
+                          fill="#F88C28"
+                        />
+                        <path
+                          d="M78.0782 45.1996H59.9218C59.2586 45.1996 58.7823 44.5674 59.0226 43.9492C60.3328 40.5786 63.5759 35.5996 69 35.5996C74.4241 35.5996 77.6671 40.5786 78.9774 43.9492C79.2177 44.5674 78.7414 45.1996 78.0782 45.1996Z"
+                          fill="#F88C28"
+                          stroke="#F88C28"
+                        />
+                      </g>
+                      <g filter="url(#filter2_d_2126_20766)">
+                        <circle
+                          cx="104"
+                          cy="34"
+                          r="23.5"
+                          fill="white"
+                          stroke="#344351"
+                        />
+                        <ellipse
+                          cx="104"
+                          cy="28"
+                          rx="5.6"
+                          ry="6"
+                          fill="#F88C28"
+                        />
+                        <path
+                          d="M113.078 45.1996H94.9218C94.2586 45.1996 93.7823 44.5674 94.0226 43.9492C95.3328 40.5786 98.5759 35.5996 104 35.5996C109.424 35.5996 112.667 40.5786 113.977 43.9492C114.218 44.5674 113.741 45.1996 113.078 45.1996Z"
+                          fill="#F88C28"
+                          stroke="#F88C28"
+                        />
+                      </g>
+                      <g filter="url(#filter3_d_2126_20766)">
+                        <circle
+                          cx="139"
+                          cy="34"
+                          r="23.5"
+                          fill="white"
+                          stroke="#344351"
+                        />
+                        <ellipse
+                          cx="139"
+                          cy="28"
+                          rx="5.6"
+                          ry="6"
+                          fill="#F88C28"
+                        />
+                        <path
+                          d="M148.078 45.1996H129.922C129.259 45.1996 128.782 44.5674 129.023 43.9492C130.333 40.5786 133.576 35.5996 139 35.5996C144.424 35.5996 147.667 40.5786 148.977 43.9492C149.218 44.5674 148.741 45.1996 148.078 45.1996Z"
+                          fill="#F88C28"
+                          stroke="#F88C28"
+                        />
+                      </g>
+                      <g filter="url(#filter4_d_2126_20766)">
+                        <circle
+                          cx="174"
+                          cy="34"
+                          r="23.5"
+                          fill="white"
+                          stroke="#344351"
+                        />
+                        <ellipse
+                          cx="174"
+                          cy="28"
+                          rx="5.6"
+                          ry="6"
+                          fill="#F88C28"
+                        />
+                        <path
+                          d="M183.078 45.1996H164.922C164.259 45.1996 163.782 44.5674 164.023 43.9492C165.333 40.5786 168.576 35.5996 174 35.5996C179.424 35.5996 182.667 40.5786 183.977 43.9492C184.218 44.5674 183.741 45.1996 183.078 45.1996Z"
+                          fill="#F88C28"
+                          stroke="#F88C28"
+                        />
+                      </g>
+                      <defs>
+                        <filter
+                          id="filter0_d_2126_20766"
+                          x="0"
+                          y="0"
+                          width="68"
+                          height="68"
+                          filterUnits="userSpaceOnUse"
+                          color-interpolation-filters="sRGB"
+                        >
+                          <feFlood
+                            flood-opacity="0"
+                            result="BackgroundImageFix"
+                          />
+                          <feColorMatrix
+                            in="SourceAlpha"
+                            type="matrix"
+                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                            result="hardAlpha"
+                          />
+                          <feOffset />
+                          <feGaussianBlur stdDeviation="5" />
+                          <feColorMatrix
+                            type="matrix"
+                            values="0 0 0 0 0.27375 0 0 0 0 0.382789 0 0 0 0 0.47625 0 0 0 0.14 0"
+                          />
+                          <feBlend
+                            mode="normal"
+                            in2="BackgroundImageFix"
+                            result="effect1_dropShadow_2126_20766"
+                          />
+                          <feBlend
+                            mode="normal"
+                            in="SourceGraphic"
+                            in2="effect1_dropShadow_2126_20766"
+                            result="shape"
+                          />
+                        </filter>
+                        <filter
+                          id="filter1_d_2126_20766"
+                          x="35"
+                          y="0"
+                          width="68"
+                          height="68"
+                          filterUnits="userSpaceOnUse"
+                          color-interpolation-filters="sRGB"
+                        >
+                          <feFlood
+                            flood-opacity="0"
+                            result="BackgroundImageFix"
+                          />
+                          <feColorMatrix
+                            in="SourceAlpha"
+                            type="matrix"
+                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                            result="hardAlpha"
+                          />
+                          <feOffset />
+                          <feGaussianBlur stdDeviation="5" />
+                          <feColorMatrix
+                            type="matrix"
+                            values="0 0 0 0 0.27375 0 0 0 0 0.382789 0 0 0 0 0.47625 0 0 0 0.14 0"
+                          />
+                          <feBlend
+                            mode="normal"
+                            in2="BackgroundImageFix"
+                            result="effect1_dropShadow_2126_20766"
+                          />
+                          <feBlend
+                            mode="normal"
+                            in="SourceGraphic"
+                            in2="effect1_dropShadow_2126_20766"
+                            result="shape"
+                          />
+                        </filter>
+                        <filter
+                          id="filter2_d_2126_20766"
+                          x="70"
+                          y="0"
+                          width="68"
+                          height="68"
+                          filterUnits="userSpaceOnUse"
+                          color-interpolation-filters="sRGB"
+                        >
+                          <feFlood
+                            flood-opacity="0"
+                            result="BackgroundImageFix"
+                          />
+                          <feColorMatrix
+                            in="SourceAlpha"
+                            type="matrix"
+                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                            result="hardAlpha"
+                          />
+                          <feOffset />
+                          <feGaussianBlur stdDeviation="5" />
+                          <feColorMatrix
+                            type="matrix"
+                            values="0 0 0 0 0.27375 0 0 0 0 0.382789 0 0 0 0 0.47625 0 0 0 0.14 0"
+                          />
+                          <feBlend
+                            mode="normal"
+                            in2="BackgroundImageFix"
+                            result="effect1_dropShadow_2126_20766"
+                          />
+                          <feBlend
+                            mode="normal"
+                            in="SourceGraphic"
+                            in2="effect1_dropShadow_2126_20766"
+                            result="shape"
+                          />
+                        </filter>
+                        <filter
+                          id="filter3_d_2126_20766"
+                          x="105"
+                          y="0"
+                          width="68"
+                          height="68"
+                          filterUnits="userSpaceOnUse"
+                          color-interpolation-filters="sRGB"
+                        >
+                          <feFlood
+                            flood-opacity="0"
+                            result="BackgroundImageFix"
+                          />
+                          <feColorMatrix
+                            in="SourceAlpha"
+                            type="matrix"
+                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                            result="hardAlpha"
+                          />
+                          <feOffset />
+                          <feGaussianBlur stdDeviation="5" />
+                          <feColorMatrix
+                            type="matrix"
+                            values="0 0 0 0 0.27375 0 0 0 0 0.382789 0 0 0 0 0.47625 0 0 0 0.14 0"
+                          />
+                          <feBlend
+                            mode="normal"
+                            in2="BackgroundImageFix"
+                            result="effect1_dropShadow_2126_20766"
+                          />
+                          <feBlend
+                            mode="normal"
+                            in="SourceGraphic"
+                            in2="effect1_dropShadow_2126_20766"
+                            result="shape"
+                          />
+                        </filter>
+                        <filter
+                          id="filter4_d_2126_20766"
+                          x="140"
+                          y="0"
+                          width="68"
+                          height="68"
+                          filterUnits="userSpaceOnUse"
+                          color-interpolation-filters="sRGB"
+                        >
+                          <feFlood
+                            flood-opacity="0"
+                            result="BackgroundImageFix"
+                          />
+                          <feColorMatrix
+                            in="SourceAlpha"
+                            type="matrix"
+                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                            result="hardAlpha"
+                          />
+                          <feOffset />
+                          <feGaussianBlur stdDeviation="5" />
+                          <feColorMatrix
+                            type="matrix"
+                            values="0 0 0 0 0.27375 0 0 0 0 0.382789 0 0 0 0 0.47625 0 0 0 0.14 0"
+                          />
+                          <feBlend
+                            mode="normal"
+                            in2="BackgroundImageFix"
+                            result="effect1_dropShadow_2126_20766"
+                          />
+                          <feBlend
+                            mode="normal"
+                            in="SourceGraphic"
+                            in2="effect1_dropShadow_2126_20766"
+                            result="shape"
+                          />
+                        </filter>
+                      </defs>
                     </svg>
+                  </div>
+                  <div class="graphic__mobile"></div>
+                  <div
+                    class="card_light-gray card_rectangle phone-business__card-numbersblock"
+                  >
+                    <div>
+                      <h4>Ваши номера</h4>
+                      <p class="text_caption">С интерактивным меню</p>
+                    </div>
+
+                    <div class="phone-business__card-numbers">
+                      <div class="phone-business__card-number card_white">
+                        495
+                      </div>
+                      <div class="phone-business__card-number card_white">
+                        812
+                      </div>
+                      <div class="phone-business__card-number card_white">
+                        499
+                      </div>
+
+                      <div class="phone-business__card-number card_white">
+                        8&nbsp;800
+                      </div>
+                      <div class="phone-business__card-number card_white">
+                        9XX
+                      </div>
+                      <div class="phone-business__card-number card_white">
+                        <svg
+                          width="27"
+                          height="5"
+                          viewBox="0 0 27 5"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="2.5" cy="2.5" r="2.5" fill="#F88C28" />
+                          <circle cx="13.5" cy="2.5" r="2.5" fill="#F88C28" />
+                          <circle cx="24.5" cy="2.5" r="2.5" fill="#F88C28" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="graphic"></div>
+              </div>
+              <div class="graphic_bottom"></div>
+              <div class="phone-business__cardblock_bottom">
+                <div class="card_light-gray card_round">
+                  <div class="card_round_header">Руководитель</div>
+                  <div class="text_caption card__round_text">
+                    C разу 3 устройства
+                  </div>
+                  <div class="text_caption card__round_text-mobile">
+                    C разу 3 устройства
+                  </div>
+                </div>
+
+                <div class="card_light-gray card_round">
+                  <div class="card_round_header">Менеджер в офисе</div>
+                  <div class="text_caption card__round_text">
+                    Стационарный <br />
+                    IP-телефон
+                  </div>
+                  <div class="text_caption card__round_text-mobile">
+                    Стационарный IP-телефон
+                  </div>
+                </div>
+
+                <div class="card_light-gray card_round">
+                  <div class="card_round_header">Работник в поездке</div>
+                  <div class="text_caption card__round_text">
+                    Мобильник <br />
+                    с SIM-картой
+                  </div>
+                  <div class="text_caption card__round_text-mobile">
+                    Мобильник с SIM-картой
+                  </div>
+                </div>
+                <div class="card_light-gray card_round">
+                  <div class="card_round_header">Сотрудник из дома</div>
+                  <div class="text_caption card__round_text">
+                    Компьютер с <br /> гарнитурой
+                  </div>
+                  <div class="text_caption card__round_text-mobile">
+                    Компьютер с гарнитурой
+                  </div>
+                </div>
+                <div class="card_light-gray card_round">
+                  <div class="container_flex-col">
+                    <div class="card_round_header">Переадресация</div>
+                    <div class="text_caption card__round_text">
+                      На любые внешние номера
+                    </div>
+                    <div class="text_caption card__round_text-mobile">
+                      На любые внешние номера
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="graphic"></div>
-          </div>
-          <div class="graphic_bottom"></div>
-          <div class="phone-business__cardblock_bottom">
-            <div class="container_flex-col">
-              <div class="card_light-gray card_round">
-                <h5>Руководитель</h5>
-                <p>Сразу 3 устройства</p>
+          </section>
+          <section class="pay-minutes">
+            <div class="container_adaptive">
+              <div class="pay-minutes__header_mobile">
+                Платите только <br />
+                за подключение и минуты
               </div>
-            </div>
+              <div class="pay-minutes__header">
+                Платите только за подключение и минуты
+              </div>
+              <div class="pay-minutes__content">
+                <div class="pay-minutes__card-top card_white card_rounded-top">
+                  <div class="pay-minutes__card-header">
+                    <h4>Виртуальная АТС за 1 990 ₽</h4>
+                  </div>
 
-            <div class="card_light-gray card_round">
-              <div class="container_flex-col">
-                <h5>Менеджер в офисе</h5>
-                <p>
-                  Стационарный <br />
-                  IP-телефон
-                </p>
-              </div>
-            </div>
-
-            <div class="card_light-gray card_round">
-              <div class="container_flex-col">
-                <h5>Работник в поездке</h5>
-                <p>
-                  Мобильник <br />
-                  с SIM-картой
-                </p>
-              </div>
-            </div>
-            <div class="card_light-gray card_round">
-              <div class="container_flex-col">
-                <h5>Сотрудник из дома</h5>
-                <p>
-                  Компьютер <br />
-                  с гарнитурой
-                </p>
-              </div>
-            </div>
-            <div class="card_light-gray card_round">
-              <div class="container_flex-col">
-                <h5>Переадресация</h5>
-                <p>
-                  На любые <br />
-                  внешние номера
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="card_light-gray card__pay">
-            <h3>Платите только за подключение и минуты</h3>
-            <div class="card_white">
-              <h4>Виртуальная АТС за 1 990 ₽</h4>
-              <div class="container_adaptive">
-                <div class="card_light-gray">3 сотрудника</div>
-                <div class="card_light-gray">1 номер на выбор</div>
-                <div class="card_light-gray">Исходящие 1.4 ₽ / мин</div>
-                <div class="card_light-gray">
-                  Входящие 0 ₽ / мин
-                  <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 15 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div class="container_adaptive pay-minutes__chip-container">
+                    <div class="chip_light-gray pay-minutes__chip">
+                      3 сотрудника
+                    </div>
+                    <div class="chip_light-gray pay-minutes__chip">
+                      1 номер на выбор
+                    </div>
+                    <div class="chip_light-gray pay-minutes__chip_mobile">
+                      3 сотрудника и 1 номер на выбор
+                    </div>
+                    <div class="chip_light-gray pay-minutes__chip">
+                      Исходящие 1.4 ₽ / мин
+                    </div>
+                    <div class="container_flex"></div>
+                    <div class="chip_light-gray pay-minutes__chip">
+                      <div class="container_flex">
+                        <div class="chip-text">Входящие 0 ₽ / мин</div>
+                        <div class="tooltip pay-minutes__tooltip-top">
+                          <div
+                            class="tooltip__activator pay-minutes__tooltip-top-activator"
+                          >
+                            <svg
+                              width="15"
+                              height="15"
+                              viewBox="0 0 15 15"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <circle
+                                cx="7.5"
+                                cy="7.5"
+                                r="7"
+                                stroke="#F88C28"
+                              />
+                              <path
+                                d="M6.7517 9.45316V9.40153C6.75737 8.85373 6.81406 8.41778 6.92177 8.09369C7.02948 7.7696 7.18254 7.50717 7.38095 7.30641C7.57936 7.10564 7.81746 6.92065 8.09524 6.75143C8.26247 6.64818 8.4127 6.52629 8.54592 6.38576C8.67914 6.24235 8.78401 6.07744 8.86054 5.89101C8.93991 5.70459 8.97959 5.49809 8.97959 5.27151C8.97959 4.99044 8.9144 4.74665 8.78401 4.54015C8.65363 4.33365 8.47931 4.17447 8.26105 4.06262C8.0428 3.95076 7.80045 3.89484 7.53401 3.89484C7.30159 3.89484 7.07766 3.94359 6.86224 4.04111C6.64683 4.13862 6.46684 4.29207 6.32228 4.50143C6.17772 4.7108 6.0941 4.9847 6.07143 5.32314H5C5.02268 4.83556 5.14739 4.41826 5.37415 4.07122C5.60374 3.72419 5.90561 3.45889 6.27976 3.27533C6.65675 3.09178 7.07483 3 7.53401 3C8.03288 3 8.46655 3.10038 8.83503 3.30115C9.20635 3.50191 9.49263 3.77725 9.69388 4.12715C9.89796 4.47706 10 4.87572 10 5.32314C10 5.63862 9.95181 5.924 9.85544 6.17925C9.7619 6.43451 9.62585 6.66252 9.44728 6.86329C9.27154 7.06405 9.05896 7.24187 8.80952 7.39675C8.56009 7.55449 8.36026 7.72084 8.21003 7.89579C8.05981 8.06788 7.95068 8.27294 7.88265 8.51099C7.81463 8.74904 7.77778 9.04589 7.77211 9.40153V9.45316H6.7517ZM7.29592 12C7.08617 12 6.90618 11.924 6.75595 11.772C6.60573 11.62 6.53061 11.4379 6.53061 11.2256C6.53061 11.0134 6.60573 10.8313 6.75595 10.6793C6.90618 10.5272 7.08617 10.4512 7.29592 10.4512C7.50567 10.4512 7.68566 10.5272 7.83588 10.6793C7.98611 10.8313 8.06122 11.0134 8.06122 11.2256C8.06122 11.3662 8.02579 11.4952 7.95493 11.6128C7.8869 11.7304 7.79478 11.825 7.67857 11.8967C7.56519 11.9656 7.43764 12 7.29592 12Z"
+                                fill="#F88C28"
+                              />
+                            </svg>
+                          </div>
+                          <div
+                            class="tooltip__content pay-minutes__tooltip-top-content"
+                          >
+                            На номерах 8-800 входящие оплачиваются из расчета
+                            1.8 ₽/ мин.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="pay-minutes__card-bottom card_black card_rounded-bot"
+                >
+                  <div
+                    class="container_flex-start pay-minutes__card-bottom_container"
                   >
-                    <circle cx="7.5" cy="7.5" r="7" stroke="#F88C28" />
-                  </svg>
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="14" cy="14" r="13.5" stroke="#F88C28" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.5005 8.5C14.5005 8.22386 14.2766 8 14.0005 8C13.7244 8 13.5005 8.22386 13.5005 8.5V13.5005H8.5C8.22386 13.5005 8 13.7243 8 14.0005C8 14.2766 8.22386 14.5005 8.5 14.5005H13.5005V19.5005C13.5005 19.7767 13.7244 20.0005 14.0005 20.0005C14.2766 20.0005 14.5005 19.7767 14.5005 19.5005V14.5005H19.5005C19.7767 14.5005 20.0005 14.2766 20.0005 14.0005C20.0005 13.7243 19.7767 13.5005 19.5005 13.5005H14.5005V8.5Z"
+                        fill="#F88C28"
+                      />
+                    </svg>
+                    <div
+                      class="container_adaptive-reverse pay-minutes__card-textblock"
+                    >
+                      <div class="text_caption text_light-gray text_visible">
+                        Ещё номер телефона:
+                      </div>
+                      <div class="text_caption text_light-gray text_mobile">
+                        сотрудник:&nbsp;
+                      </div>
+                      <div class="text_semibold text_white">990 ₽ разово</div>
+                    </div>
+                  </div>
+                  <div
+                    class="container_flex-start pay-minutes__card-bottom_container"
+                  >
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="14" cy="14" r="13.5" stroke="#F88C28" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.5005 8.5C14.5005 8.22386 14.2766 8 14.0005 8C13.7244 8 13.5005 8.22386 13.5005 8.5V13.5005H8.5C8.22386 13.5005 8 13.7243 8 14.0005C8 14.2766 8.22386 14.5005 8.5 14.5005H13.5005V19.5005C13.5005 19.7767 13.7244 20.0005 14.0005 20.0005C14.2766 20.0005 14.5005 19.7767 14.5005 19.5005V14.5005H19.5005C19.7767 14.5005 20.0005 14.2766 20.0005 14.0005C20.0005 13.7243 19.7767 13.5005 19.5005 13.5005H14.5005V8.5Z"
+                        fill="#F88C28"
+                      />
+                    </svg>
+                    <div
+                      class="container_adaptive-reverse pay-minutes__card-textblock"
+                    >
+                      <div class="text_caption text_light-gray text_visible">
+                        Ещё сотрудник:
+                      </div>
+                      <div class="text_caption text_light-gray text_mobile">
+                        номер телефона:&nbsp;
+                      </div>
+                      <div class="text_semibold text_white">990 ₽ разово</div>
+                    </div>
+                  </div>
+                  <div
+                    class="container_flex-start pay-minutes__card-bottom_container"
+                  >
+                    <div class="container_flex-col pay-minutes__card-textblock">
+                      <div class="text_caption text_light-gray">
+                        Оплата только за подключение,
+                      </div>
+                      <div class="container_flex">
+                        <div class="text_semibold text_white">
+                          без ежемесячных платежей
+                        </div>
+                        <div class="tooltip pay-minutes__tooltip-bot">
+                          <div
+                            class="tooltip__activator pay-minutes__tooltip-bot-activator"
+                          >
+                            <svg
+                              width="15"
+                              height="15"
+                              viewBox="0 0 15 15"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <circle
+                                cx="7.5"
+                                cy="7.5"
+                                r="7"
+                                stroke="#F88C28"
+                              />
+                              <path
+                                d="M6.7517 9.45316V9.40153C6.75737 8.85373 6.81406 8.41778 6.92177 8.09369C7.02948 7.7696 7.18254 7.50717 7.38095 7.30641C7.57936 7.10564 7.81746 6.92065 8.09524 6.75143C8.26247 6.64818 8.4127 6.52629 8.54592 6.38576C8.67914 6.24235 8.78401 6.07744 8.86054 5.89101C8.93991 5.70459 8.97959 5.49809 8.97959 5.27151C8.97959 4.99044 8.9144 4.74665 8.78401 4.54015C8.65363 4.33365 8.47931 4.17447 8.26105 4.06262C8.0428 3.95076 7.80045 3.89484 7.53401 3.89484C7.30159 3.89484 7.07766 3.94359 6.86224 4.04111C6.64683 4.13862 6.46684 4.29207 6.32228 4.50143C6.17772 4.7108 6.0941 4.9847 6.07143 5.32314H5C5.02268 4.83556 5.14739 4.41826 5.37415 4.07122C5.60374 3.72419 5.90561 3.45889 6.27976 3.27533C6.65675 3.09178 7.07483 3 7.53401 3C8.03288 3 8.46655 3.10038 8.83503 3.30115C9.20635 3.50191 9.49263 3.77725 9.69388 4.12715C9.89796 4.47706 10 4.87572 10 5.32314C10 5.63862 9.95181 5.924 9.85544 6.17925C9.7619 6.43451 9.62585 6.66252 9.44728 6.86329C9.27154 7.06405 9.05896 7.24187 8.80952 7.39675C8.56009 7.55449 8.36026 7.72084 8.21003 7.89579C8.05981 8.06788 7.95068 8.27294 7.88265 8.51099C7.81463 8.74904 7.77778 9.04589 7.77211 9.40153V9.45316H6.7517ZM7.29592 12C7.08617 12 6.90618 11.924 6.75595 11.772C6.60573 11.62 6.53061 11.4379 6.53061 11.2256C6.53061 11.0134 6.60573 10.8313 6.75595 10.6793C6.90618 10.5272 7.08617 10.4512 7.29592 10.4512C7.50567 10.4512 7.68566 10.5272 7.83588 10.6793C7.98611 10.8313 8.06122 11.0134 8.06122 11.2256C8.06122 11.3662 8.02579 11.4952 7.95493 11.6128C7.8869 11.7304 7.79478 11.825 7.67857 11.8967C7.56519 11.9656 7.43764 12 7.29592 12Z"
+                                fill="#F88C28"
+                              />
+                            </svg>
+                          </div>
+                          <div
+                            class="tooltip__content pay-minutes__tooltip-bot-content"
+                          >
+                            Некоторые номера мы подключаем через партнёров, за
+                            них мы вынуждены взымать абонентскую плату (190 ₽ /
+                            месяц). Абонплата за партнёрские номера и SIM-карты
+                            — единственные возможные ежемесячные платежи в
+                            Делофоне.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="card_black">
-              <div class="container_adaptive">
-                <div class="container_adaptive"></div>
-              </div>
-            </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
 
       <div class="container">
@@ -910,7 +1211,9 @@
               </div>
             </div>
           </section>
-          <div class="features__bottom container_adaptive">
+          <div
+            class="features__bottom container_adaptive card card_rounded-bot"
+          >
             <div class="features__gift">
               <svg
                 width="60"

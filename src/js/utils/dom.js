@@ -23,16 +23,10 @@ export const toggleOverflow = (flag) => {
     document.body.style.paddingRight = `${paddingRight}px`;
     document.body.style.overflow = 'hidden';
     document.querySelector('html').style.overflow = 'hidden';
-    document.querySelector('.page-wrapper').style.marginTop = '53px';
-    document.querySelector('.the-header').style.position = 'fixed';
   } else {
     document.body.style.paddingRight = '';
     document.body.style.overflowY = '';
-
     document.querySelector('html').style.overflow = '';
-    document.querySelector('.page-wrapper').style.marginTop = '';
-    document.querySelector('.the-header').style.position = '';
-    document.querySelector('.page-wrapper').style.pointerEvents = '';
   }
 };
 
@@ -90,7 +84,6 @@ export const smoothScroll = (el, block = 'end', delay = 160) => {
   }, delay);
 };
 
-
-const toggleElementsActive = (...elements ) => {
-   elements.forEach((el)=>el.classList.toggle('active'));
-}
+const toggleElementsActive = (...elements) => {
+  elements.forEach((el) => el.classList.toggle('active'));
+};

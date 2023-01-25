@@ -76,6 +76,25 @@
       color: $white;
     }
   }
+
+  &.button_green {
+    background-color: $green;
+    @include font(400, 16px, $white);
+    border-color: transparent;
+    line-height: 25px;
+
+    &:hover {
+      background-color: $dark-green;
+    }
+
+    &.active {
+      background-color: $darker-green;
+    }
+
+    &:disabled {
+      background-color: $light-green;
+    }
+  }
 }
 
 .button__start {
