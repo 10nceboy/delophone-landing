@@ -5,18 +5,14 @@
   overflow-x: hidden;
   z-index: $zindex-modal;
   opacity: 0;
+  transition: opacity 0.2s ease;
 
-  &_before-activate {
+  &_visible {
     display: flex;
   }
 
   &_active {
     opacity: 1;
-    display: flex;
-  }
-
-  &_after-hide {
-    display: block;
   }
 
   &__dialog {

@@ -3,11 +3,19 @@ import { toggleOverflow } from '../utils/dom';
 const overlay = document.querySelector('.overlay');
 
 const hideModal = (modal) => {
-  modal?.classList.remove('modal__active');
+  modal?.classList.remove('modal_active');
+  overlay.classList.remove('overlay_active');
+  modal?.classList.remove('modal_visible');
+  toggleOverflow(false);
 };
 
 const showModal = (modal) => {
-  modal?.classList.add('modal_active');
+  overlay.classList.add('overlay_active');
+  modal?.classList.add('modal_visible');
+  window.setTimeout(() => {
+    modal.classList.add('modal_active');
+  }, 100);
+  toggleOverflow(true);
 };
 
 document.querySelectorAll('.modal__activator').forEach((activator) => {
@@ -17,19 +25,21 @@ document.querySelectorAll('.modal__activator').forEach((activator) => {
   if (modal) {
     activator.addEventListener('click', () => {
       showModal(modal);
-      overlay.classList.add('overlay_active');
-      toggleOverflow(true);
-    });
-
-    overlay.addEventListener('click', () => {
-      hideModal(modal);
     });
   }
 });
 
 document.querySelectorAll('.modal').forEach((modal) => {
-  modal.addEventListener('click', () => {
-    if (e.target !== e.currentTarget) {
+  modal.addEventListener('mouseup', (event) => {
+    if (event.target !== event.currentTarget) {
+      return;
+    }
+    if (modal.classList.contains('modal_active')) {
+      hideModal(modal);
+    }
+  });
+  modal.addEventListener('click', (event) => {
+    if (event.target !== event.currentTarget) {
       return;
     }
     if (modal.classList.contains('modal_active')) {
