@@ -1,5 +1,3 @@
-import Bowser from 'bowser';
-
 export const getScrollbarWidth = () => {
   const outer = document.createElement('div');
   outer.style.visibility = 'hidden';
@@ -16,10 +14,8 @@ export const getViewportWidth = () =>
   Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 
 export const toggleOverflow = (flag) => {
-  const browser = Bowser.getParser(window.navigator.userAgent);
   if (flag) {
     const paddingRight = getScrollbarWidth();
-
     document.body.style.paddingRight = `${paddingRight}px`;
     document.body.style.overflow = 'hidden';
     document.querySelector('html').style.overflow = 'hidden';
@@ -38,52 +34,8 @@ export const isTouchDevice = () => {
   );
 };
 
-export const animateCollapseOpen = (el, callback = () => {}) => {
-  const width = getComputedStyle(el).width;
-  el.style.width = width;
-  el.style.position = 'absolute';
-  el.style.visibility = 'hidden';
-  el.style.height = 'auto';
-  const height = getComputedStyle(el).height;
-  const heightNum = parseInt(height);
-  el.style.width = null;
-  el.style.position = null;
-  el.style.visibility = null;
-  el.style.height = 0;
-  getComputedStyle(el).height;
-
-  requestAnimationFrame(() => {
-    el.style.height = `${heightNum}px`;
-    callback();
-  });
-};
-
-export const animateCollapseClose = (el) => {
-  const height = getComputedStyle(el).height;
-  el.style.height = height;
-  requestAnimationFrame(() => {
-    el.style.height = 0;
-    callback();
-  });
-};
-
-export const checkOverflow = (el) => {
-  const curOverflow = el.style.overflow;
-  if (!curOverflow || curOverflow === 'visible') {
-    el.style.overflow = 'hidden';
-  }
-  const isOverflowing =
-    el.clientWidth < el.scrollWidth || el.clientHeight < el.scrollHeight;
-  el.style.overflow = curOverflow;
-  return isOverflowing;
-};
-
 export const smoothScroll = (el, block = 'end', delay = 160) => {
   window.setTimeout(() => {
     el.scrollIntoView({ behavior: 'smooth', block });
   }, delay);
-};
-
-const toggleElementsActive = (...elements) => {
-  elements.forEach((el) => el.classList.toggle('active'));
 };
