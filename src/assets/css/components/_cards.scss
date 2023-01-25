@@ -24,6 +24,9 @@
     margin-bottom: $spacer * 2;
     padding: $spacer * 3;
     @include flex-col;
+    @include laptop {
+      padding: 0;
+    }
 
     &_header {
       @include font(500, 16px, $black);
