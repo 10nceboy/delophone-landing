@@ -219,7 +219,7 @@
   }
 }
 
-.graphic_bottom {
+.graphic__bottom {
   display: none;
   @include laptop {
     display: block;
@@ -232,7 +232,7 @@
     }
   }
 
-  &-mobile {
+  &_mobile {
     @include laptop {
       display: none;
     }

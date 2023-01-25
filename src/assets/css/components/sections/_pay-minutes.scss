@@ -23,7 +23,7 @@
       line-height: 33.8px;
     }
 
-    &-mobile {
+    &_mobile {
       display: block;
       margin-bottom: $spacer * 5;
       @include font(600, 20px, $black);
@@ -81,9 +81,6 @@
         }
       }
     }
-    &-mobile {
-      display: flex;
-    }
   }
 
   &__card-header {
@@ -139,7 +136,7 @@
       font-weight: 400;
     }
 
-    &-mobile {
+    &_mobile {
       @include font(600, 14px, $black);
       margin-bottom: $spacer * 2;
       padding: $spacer * 2;
