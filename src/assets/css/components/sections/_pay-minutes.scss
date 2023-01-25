@@ -14,16 +14,17 @@
       margin-right: auto;
     }
 
-    &__card-up {
+    &__card-top {
       padding: $spacer * 6 38px $spacer * 4 $spacer * 6;
     }
 
-    &__card-down {
+    &__card-bottom {
       padding: $spacer * 4 $spacer * 6;
       display: flex;
       justify-content: stretch;
+
       &_container {
-        margin-right: 30px;
+        margin-right: $spacer * 6;
         &:last-child {
           margin-right: 0;
         }
@@ -76,12 +77,8 @@
   }
 
   &__tooltip-bot-activator {
-    position: absolute;
-    left: 225px;
-    top: -19px;
-  }
-
-  &__tooltip-bot {
-    position: relative;
+    justify-self: flex-end;
+    margin-left: $spacer;
+    margin-top: $spacer;
   }
 }

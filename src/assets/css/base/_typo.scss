@@ -98,10 +98,8 @@ h5 {
 }
 
 .text_caption {
-  @include laptop {
-    @include font(400, 14px, $gray);
-    line-height: 21px;
-  }
+  @include font(400, 14px, $gray);
+  line-height: 21px;
 }
 
 .text_orange {
