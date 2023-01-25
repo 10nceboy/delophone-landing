@@ -2,9 +2,6 @@
   &_light-gray {
     background-color: $light-gray;
 
-    &:hover {
-      border: $border-orange;
-    }
     &:focus {
       border: $border-orange;
     }
@@ -13,9 +10,6 @@
   &_white {
     background-color: $white;
 
-    &:hover {
-      border: $border-orange;
-    }
     &:focus {
       border: $border-orange;
     }
@@ -27,14 +21,22 @@
 
   &_round {
     border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-left: auto;
     margin-bottom: $spacer * 2;
-    width: 239px;
-    height: 75px;
+    padding: $spacer * 3;
+    @include flex-col;
+    @include laptop {
+      padding: 0;
+    }
+
+    &_header {
+      @include font(500, 16px, $black);
+      line-height: 21px;
+
+      @include laptop {
+        margin-bottom: $spacer;
+        @include font(500, 18px, 23.4px);
+      }
+    }
 
     @include laptop {
       border-radius: 268px;
@@ -51,14 +53,35 @@
       &:nth-child(5) {
         margin-right: 0;
       }
-
-      &:nth-child(1) {
-        margin-top: -15px;
-      }
     }
   }
 
   &_rectangle {
     border-radius: 12px;
+  }
+
+  &_rounded-bot {
+    border-radius: 0px 0px 12px 12px;
+  }
+
+  &_rounded-top {
+    border-radius: 12px 12px 0px 0px;
+  }
+}
+
+.card__round_text {
+  display: none;
+  @include laptop {
+    display: block;
+  }
+}
+
+.card__round_text-mobile {
+  display: block;
+  @include font(400, 16px, $gray);
+  line-height: 21px;
+  margin-top: 3px;
+  @include laptop {
+    display: none;
   }
 }

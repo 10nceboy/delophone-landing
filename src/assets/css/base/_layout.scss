@@ -50,6 +50,10 @@
   }
 }
 
+.container_flex-start {
+  @include flex-row-start;
+}
+
 .container_flex-col {
   @include flex-col;
 }
@@ -72,16 +76,5 @@
       @include flex-col;
       align-items: flex-start;
     }
-  }
-}
-
-.container_grid {
-  @include laptop {
-    display: grid;
-    grid-template-columns: repeat(3, 78px);
-    grid-template-rows: repeat(2, 37px);
-    grid-row-gap: 10px;
-    margin-right: 30px;
-    margin-left: 22px;
   }
 }
