@@ -1,45 +1,42 @@
+$collapse-transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
 .collapse {
   overflow: hidden;
-  transition: height 0.15s ease-in;
+  transition: height $collapse-transition;
+  height: 25px;
 
   &__activator {
     cursor: pointer;
+    user-select: none;
   }
 
-  &__content {
-    transition: height 0.15s ease-in;
+  &__arrow {
+    transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &_closed {
-    height: 25px;
-
     .collapse__content {
       display: none;
-      height: 0;
     }
   }
 
   &_before-open {
-    height: auto;
-
     .collapse__content {
-      display: none;
-      height: 0;
       display: block;
       opacity: 0;
       visibility: hidden;
-      height: auto;
     }
   }
 
-  // &_animating {
-  //   pointer-events: none;
-  // }
-
   &_active {
+    height: auto;
+
     .collapse__content {
       opacity: 1;
       visibility: visible;
+    }
+    .collapse__arrow {
+      transform: rotateX(180deg) translateY(-2px);
     }
   }
 }

@@ -3,29 +3,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   collapsibles.forEach((collapse) => {
     const content = collapse.querySelector('.collapse__content');
-    const activator = collapse.querySelector('.collapse__activator');
     let opened = false;
     let animating = false;
+    const paddingBottom = 20;
+    const collapseH = 25;
 
     collapse.addEventListener('click', () => {
+      if (animating) {
+        return;
+      }
+      animating = true;
       if (!opened) {
         collapse.style.height = '';
         collapse.classList.add('collapse_before-open');
-        const collapseHeight = parseInt(getComputedStyle(collapse).height);
-
         requestAnimationFrame(() => {
-          collapse.style.height = collapseHeight + 'px';
+          const contentHeight = parseInt(getComputedStyle(content).height);
+          collapse.style.height = `${
+            contentHeight + collapseH + paddingBottom
+          }px`;
           requestAnimationFrame(() => {
             collapse.classList.add('collapse_active');
           });
+          collapse.addEventListener('transitionend', () => {
+            animating = false;
+          });
         });
       } else {
+        collapse.style.height = '';
         collapse.classList.remove('collapse_active');
-        collapse.style.height = '25px';
       }
       opened = !opened;
     });
-
-    content.addEventListener('transitionstart', () => {});
+    content.addEventListener('click', (event) => event.stopPropagation());
   });
 });
