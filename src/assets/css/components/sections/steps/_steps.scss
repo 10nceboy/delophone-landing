@@ -1,0 +1,42 @@
+@import 'multichannel';
+
+.steps {
+  background-color: $light-gray;
+
+  &__header {
+    margin: 0 auto;
+    margin-bottom: $spacer * 5;
+
+    @include laptop {
+      margin-right: auto;
+      margin-bottom: $spacer * 11;
+    }
+  }
+
+  &__checklist {
+    @include laptop;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $spacer $spacer * 5;
+    @include font(400, 16px, $gray);
+    line-height: 24.8px;
+    margin-top: $spacer * 2;
+    svg {
+      margin-right: 13px;
+    }
+  }
+}
+
+.step-upside {
+  background-color: $white;
+  border-radius: 12px 12px 0px 0px;
+
+  &__header-text {
+    margin-left: $spacer * 3;
+  }
+}
+
+.step-downside {
+  background-color: $black;
+  border-radius: 0px 0px 12px 12px;
+}

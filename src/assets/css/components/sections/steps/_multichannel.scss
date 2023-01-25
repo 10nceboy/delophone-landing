@@ -1,0 +1,19 @@
+.multichannel {
+  border-radius: $border12;
+
+  &__header {
+    @include flex-row;
+  }
+
+  &__upside {
+    @include laptop {
+      display: flex;
+      padding: $spacer * 10 89px $spacer * 10 $spacer * 10;
+    }
+  }
+
+  &__textblock {
+    @include font(400, 16px, $gray);
+    line-height: 24.8px;
+  }
+}
