@@ -74,14 +74,13 @@
         &:last-child {
           margin-right: 0;
         }
-      }
 
-      svg {
-        width: 28px;
-        height: 28px;
+        svg {
+          width: 28px;
+          height: 28px;
+        }
       }
     }
-
     &-mobile {
       display: flex;
     }
@@ -165,9 +164,7 @@
   }
 
   &__tooltip-top-activator {
-    @include laptop {
-      margin-left: $spacer;
-    }
+    margin-left: $spacer;
   }
 
   &__tooltip-bot-content {
