@@ -2,6 +2,11 @@
 
 .steps {
   background-color: $light-gray;
+  padding-top: 0px;
+
+  @include laptop {
+    padding-top: 150px;
+  }
 
   &__header {
     margin: 0 auto;
@@ -14,12 +19,19 @@
   }
 
   &__checklist {
+    @include font(400, 15px, $gray);
+    line-height: 23.25px;
+    display: block;
+
     @include laptop {
       grid-template-columns: repeat(2, 1fr) !important;
       grid-gap: $spacer $spacer * 5;
       @include font(400, 16px, $gray);
       line-height: 24.8px;
       margin-top: $spacer * 2;
+      li {
+        margin-bottom: $spacer;
+      }
 
       svg {
         margin-right: 13px;

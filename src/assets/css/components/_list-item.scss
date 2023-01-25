@@ -15,10 +15,36 @@
       display: block;
       margin-right: $spacer * 2;
     }
+
+    &_checked_mobile {
+      &::before {
+        content: url('/public/check.svg');
+        display: block;
+        margin-right: $spacer * 2;
+        @include laptop {
+          display: none;
+        }
+      }
+    }
   }
 
   :first-child,
   :last-child {
     margin: 0;
+  }
+
+  &_mobile {
+    display: block;
+
+    @include laptop {
+      display: none;
+    }
+  }
+
+  &_destkop {
+    display: none;
+    @include laptop {
+      display: block;
+    }
   }
 }
