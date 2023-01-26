@@ -65,6 +65,8 @@
 .container_adaptive {
   @include flex-col;
   justify-content: center;
+  align-items: center;
+  max-width: 100%;
 
   @include laptop {
     @include flex-row;
