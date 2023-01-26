@@ -27,24 +27,19 @@
     @include laptop {
       grid-template-columns: repeat(2, 1fr) !important;
       @include font(400, 16px, $gray);
-      grid-column-gap: 5px !important;
+      grid-column-gap: $spacer !important;
+
       line-height: 24.8px;
       margin-top: $spacer * 2;
-      li {
-        margin-bottom: $spacer;
-      }
 
       svg {
-        margin-right: 13px;
+        margin-right: 12px;
       }
     }
   }
 }
 
 .step-upside {
-  background-color: $white;
-  border-radius: 12px 12px 0px 0px;
-
   &__header-text {
     margin-left: $spacer * 3;
   }
