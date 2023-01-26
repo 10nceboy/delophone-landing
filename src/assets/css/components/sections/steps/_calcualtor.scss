@@ -1,8 +1,10 @@
 .calculator {
   padding: $spacer * 9 $spacer * 10;
+  background: $white;
 
   &__table {
     @include laptop {
+      margin-top: $spacer * 5;
       background: $white;
       border: 1px solid $dim-gray;
       padding: $spacer * 6;
@@ -48,12 +50,14 @@
 
   &__col {
     @include flex-row;
+    align-items: center;
     margin-bottom: $spacer * 5;
 
     &_left {
       @include laptop {
         margin-right: $spacer * 4;
         min-width: 350px;
+        max-width: 350px;
 
         h4 {
           white-space: nowrap;
@@ -66,6 +70,17 @@
         flex-grow: 1;
         margin-left: 20px;
         border-bottom: 1px dotted $gray2;
+      }
+    }
+
+    &_auto-width {
+      margin-right: 0;
+
+      max-width: 250px;
+
+      @include laptop {
+        max-width: 100%;
+        width: auto;
       }
     }
 
@@ -88,6 +103,12 @@
     }
 
     &::before {
+      display: none;
+
+      @include laptop {
+        display: block;
+      }
+
       content: '';
       width: 100%;
       flex-basis: 100%;
@@ -142,10 +163,52 @@
     }
   }
 
-  &__footer {
-    padding: $spacer * 4 $spacer * 6;
-    background: $light-gray;
-    border: 1px solid $gray;
-    border-top: 0;
+  &__summary {
+    &_mobile {
+      @include laptop {
+        display: none;
+      }
+    }
+
+    @include laptop {
+      padding: $spacer * 4 $spacer * 6;
+      background: $light-gray;
+      border: 1px solid $light-gray;
+      border-top: 0;
+    }
+  }
+
+  &__in-out {
+    @include flex-col;
+    width: 100%;
+
+    svg {
+      display: none;
+
+      @include laptop {
+        display: block;
+      }
+    }
+
+    @include laptop {
+      margin-top: $spacer * 6;
+      margin-bottom: $spacer * 10;
+      @include flex-row;
+    }
+
+    .container__flex {
+      @include flex-row;
+      margin-right: 70px;
+      max-width: 300px;
+      gap: $spacer * 4;
+    }
+  }
+
+  &__link {
+    margin-top: $spacer * 2;
+
+    @include laptop {
+      margin-left: auto;
+    }
   }
 }

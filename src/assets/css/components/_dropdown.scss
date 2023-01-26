@@ -36,15 +36,9 @@ $dropdown-transition: 0.15s ease-in;
     }
 
     &_inline {
-      font-size: inherit;
+      font-size: 20px;
       color: $gray;
       padding: 0;
-      display: inline;
-
-      &::after {
-        content: '';
-        display: none;
-      }
     }
   }
 

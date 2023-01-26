@@ -2,6 +2,11 @@
   font-family: $family;
   text-decoration: none;
   color: $gray;
+  cursor: pointer;
+
+  &:hover {
+    color: $blue;
+  }
 
   &_white {
     color: $white;
@@ -15,7 +20,12 @@
     }
   }
 
-  &:hover {
-    color: $blue;
+  &_with-arrow {
+    display: inline-flex;
+
+    ::after {
+      display: block;
+      content: '→';
+    }
   }
 }
