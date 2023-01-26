@@ -22,14 +22,21 @@
   }
 
   &__card {
+    @include flex-col;
+    justify-content: space-between;
     background: $light-gray;
     box-sizing: border-box;
-    width: 290px;
+    width: 250px;
     padding: $spacer * 3;
     margin-bottom: $spacer * 3;
+    position: relative;
 
     &:last-child {
       margin-bottom: 0;
+      height: 132px;
+      @include laptop {
+        height: auto;
+      }
     }
 
     @include laptop {
@@ -42,22 +49,42 @@
   }
 
   &__info {
-    position: absolute;
-    right: $spacer * 10;
-    top: auto;
+    margin-left: auto;
     font-size: 12px;
-    max-width: 100px;
     color: $gray;
     line-height: 16px;
+    text-align: right;
 
     @include laptop {
       right: $spacer * 4;
       top: $spacer * 4;
-      max-width: auto;
+      max-width: none;
     }
   }
 
   &__title {
-    margin-top: $spacer * 2;
+    @include font(500, 16px, $black);
+    line-height: 21px;
+    max-width: 210px;
+
+    @include laptop {
+      max-width: 100%;
+      @include font(500, 18px, $black);
+      line-height: 26px;
+    }
+  }
+
+  &__top {
+    display: flex;
+  }
+
+  &_image {
+    position: absolute;
+    top: $spacer * 5;
+
+    @include laptop {
+      position: absolute;
+      top: $spacer * 8;
+    }
   }
 }
