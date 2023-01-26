@@ -6,8 +6,8 @@
       background: $white;
       border: 1px solid $dim-gray;
       padding: $spacer * 6;
-      border-radius: 12px;
       @include flex-col;
+      border-bottom: none;
     }
   }
 
@@ -16,11 +16,6 @@
 
     &:last-child {
       margin-bottom: 0;
-    }
-
-    &_gray {
-      padding: $spacer * 4 0;
-      background: $light-gray;
     }
   }
 
@@ -145,5 +140,12 @@
       color: $orange;
       font-weight: 600;
     }
+  }
+
+  &__footer {
+    padding: $spacer * 4 $spacer * 6;
+    background: $light-gray;
+    border: 1px solid $gray;
+    border-top: 0;
   }
 }

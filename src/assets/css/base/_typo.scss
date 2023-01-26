@@ -11,6 +11,7 @@ body {
 h1 {
   @include font(600, 22px, $black);
   line-height: 30px;
+
   @include laptop {
     @include font(600, 32px, $black);
     line-height: 50px;
@@ -20,6 +21,7 @@ h1 {
 h2 {
   @include font(600, 20px, $black);
   line-height: 26px;
+
   @include laptop {
     @include font(600, 32px, $black);
     line-height: 43px;
@@ -29,6 +31,7 @@ h2 {
 h3 {
   @include font(600, 18px, $black);
   line-height: 23px;
+
   @include laptop {
     @include font(600, 26px, $black);
     line-height: 34px;
@@ -38,6 +41,7 @@ h3 {
 h4 {
   @include font(500, 18px, $black);
   line-height: 23px;
+
   @include laptop {
     @include font(500, 20px, $black);
     line-height: 26px;
