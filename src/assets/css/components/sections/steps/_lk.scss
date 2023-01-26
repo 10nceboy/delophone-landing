@@ -1,0 +1,82 @@
+.lk {
+  &__card {
+    padding: $spacer * 4;
+    @include flex-col;
+
+    @include laptop {
+      @include flex-row;
+
+      padding: $spacer * 6 $spacer * 10;
+    }
+
+    &_bottom {
+      display: flex;
+      color: $white;
+
+      .lk__text {
+        color: $white;
+      }
+
+      h4 {
+        color: $white;
+      }
+    }
+  }
+
+  &__tabs {
+    margin-top: $spacer * 5;
+
+    @include flex-col;
+
+    &_mobile {
+      margin-top: $spacer * 5;
+
+      @include laptop {
+        display: none;
+      }
+    }
+  }
+
+  &__tabs-items {
+    @include laptop {
+      img {
+        width: 1000px;
+      }
+      margin-top: $spacer * 5;
+    }
+  }
+
+  &__buttons {
+    height: 53px;
+  }
+
+  &__button {
+    flex-grow: 1;
+  }
+
+  &__support {
+    @include flex-col;
+    margin-right: 33px;
+
+    @include laptop {
+      &__text {
+        margin-bottom: $spacer * 2;
+      }
+    }
+  }
+
+  &__whatsapp {
+    @include flex-col;
+
+    @include laptop {
+      margin-left: auto;
+      @include flex-row;
+    }
+  }
+
+  &__answer-time {
+    color: $white;
+    max-width: 115px;
+    margin-left: $spacer * 6;
+  }
+}

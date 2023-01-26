@@ -95,6 +95,14 @@
       background-color: $light-green;
     }
   }
+
+  &_with-icon {
+    @include flex-row;
+  }
+
+  &__icon {
+    margin-right: $spacer * 2;
+  }
 }
 
 .button__start {

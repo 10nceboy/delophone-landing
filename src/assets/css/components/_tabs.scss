@@ -1,0 +1,43 @@
+.tabs {
+  &__activators {
+    @include flex-row;
+    width: 100%;
+    gap: $spacer * 5;
+  }
+
+  &__activator {
+    background: $white;
+    outline: 1px solid $blue;
+    color: $gray;
+    box-shadow: none;
+    border: none;
+
+    &:hover {
+      outline: 2px $deep-blue solid;
+    }
+
+    &_active {
+      background: $blue;
+      color: $white;
+
+      &:hover {
+        background-color: $deep-blue;
+      }
+    }
+  }
+
+  &__item {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.15s ease-in;
+
+    &_visible {
+      display: block;
+    }
+
+    &_active {
+      opacity: 1;
+      display: block;
+    }
+  }
+}
