@@ -1,5 +1,5 @@
 .addemploye {
-  margin-top: 80px;
+  margin-top: $spacer * 16;
 
   &__card {
     display: none;
@@ -27,14 +27,14 @@
     @include laptop {
       display: block;
     }
-  }
 
-  &__image_mobile {
-    align-self: center;
-    display: block;
+    &__mobile {
+      align-self: center;
+      display: block;
 
-    @include laptop {
-      display: none;
+      @include laptop {
+        display: none;
+      }
     }
   }
 }

@@ -1,0 +1,63 @@
+.connection-methods {
+  @include flex-col;
+  width: 100%;
+
+  &__content {
+    width: 100%;
+  }
+
+  &__cards {
+    @include flex-col;
+    width: 290px;
+    margin-top: $spacer * 3;
+
+    @include laptop {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: $spacer * 6;
+      margin-top: $spacer * 5;
+    }
+  }
+
+  &__card {
+    background: $light-gray;
+    box-sizing: border-box;
+    width: 290px;
+    padding: $spacer * 3;
+    margin-bottom: $spacer * 3;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include laptop {
+      padding: $spacer * 4;
+      position: relative;
+      height: 136px;
+      width: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    right: $spacer * 10;
+    top: auto;
+    font-size: 12px;
+    max-width: 100px;
+    color: $gray;
+    line-height: 16px;
+
+    @include laptop {
+      right: $spacer * 4;
+      top: $spacer * 4;
+      max-width: auto;
+    }
+  }
+
+  &__title {
+    margin-top: $spacer * 2;
+  }
+}

@@ -6,6 +6,11 @@
   left: calc(100% + 10px);
 
   &__button {
+    display: none;
+
+    @include laptop {
+      display: block;
+    }
     color: $green;
     cursor: pointer;
     width: 80px;
