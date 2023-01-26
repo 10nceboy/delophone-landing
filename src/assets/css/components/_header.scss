@@ -134,6 +134,10 @@
       display: block;
     }
 
+    .header__dropdown {
+      opacity: 1;
+    }
+
     .dropdown__menu_list {
       padding: $spacer * 2 0 0 $spacer * 3;
     }
@@ -162,17 +166,13 @@
     }
 
     .header__dropdown-button {
+      @include visible($opacity-transition);
       padding: 0;
-    }
-
-    .header__menu ul {
-      margin-top: $spacer * 3;
     }
   }
 }
 
 .header__dropdown {
-  display: none;
   height: 0;
   opacity: 0;
 
@@ -184,9 +184,12 @@
 
   &-button {
     display: none;
+    height: 0;
+    opacity: 0;
 
     @include laptop {
       display: block;
+      opacity: 1;
     }
   }
 

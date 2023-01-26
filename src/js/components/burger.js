@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const changeButtonColor = document.querySelector(
     '.header_start-button_mobile'
   );
+  const dropdowns = document.querySelector('.header__dropdown');
 
 
   burgerButton.addEventListener('click', () => {
@@ -19,6 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
     burgerButton.classList.remove('header__burger_hidden');
     changeButtonColor.classList.remove('active');
     document.querySelector('.header').classList.remove('header_active');
+    dropdowns.classList.remove('active');
     toggleOverflow(false);
   });
-});
+
+
+
+
