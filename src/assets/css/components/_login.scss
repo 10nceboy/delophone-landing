@@ -55,10 +55,6 @@
       margin-left: auto;
       display: block;
     }
-
-    &.active {
-      @include visible($opacity-transition);
-    }
   }
 }
 

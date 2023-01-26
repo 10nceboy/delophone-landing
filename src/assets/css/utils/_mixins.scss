@@ -43,6 +43,12 @@ $family: 'Manrope';
   }
 }
 
+@mixin tablet {
+  @media (min-width: 375px) {
+    @content;
+  }
+}
+
 /*fonts*/
 /* $family is coming from typo.scss */
 @mixin font($weight, $size, $color, $fam: $family) {
