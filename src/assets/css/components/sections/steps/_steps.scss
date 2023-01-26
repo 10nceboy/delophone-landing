@@ -1,4 +1,5 @@
 @import 'multichannel';
+@import 'addemploye';
 
 .steps {
   background-color: $light-gray;
@@ -25,8 +26,8 @@
 
     @include laptop {
       grid-template-columns: repeat(2, 1fr) !important;
-      grid-gap: $spacer $spacer * 5;
       @include font(400, 16px, $gray);
+      grid-column-gap: 5px !important;
       line-height: 24.8px;
       margin-top: $spacer * 2;
       li {

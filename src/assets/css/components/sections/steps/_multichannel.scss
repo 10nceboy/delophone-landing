@@ -2,10 +2,18 @@
   border-radius: $border12;
 
   &__image {
-    align-self: center;
-
+    display: none;
     @include laptop {
-      max-width: auto;
+      margin-left: auto;
+      display: block;
+    }
+  }
+
+  &__image_mobile {
+    display: block;
+    align-self: center;
+    @include laptop {
+      display: none;
     }
   }
 
@@ -29,7 +37,7 @@
     @include laptop {
       display: flex;
       flex-direction: row;
-      padding: $spacer * 10 89px $spacer * 10 $spacer * 10;
+      padding: $spacer * 10;
       align-items: initial;
     }
   }
