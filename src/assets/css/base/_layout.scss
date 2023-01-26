@@ -78,3 +78,11 @@
     }
   }
 }
+
+.mobile-hidden {
+  display: none !important;
+
+  @include laptop {
+    display: flex !important;
+  }
+}

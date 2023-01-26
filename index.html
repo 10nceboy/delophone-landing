@@ -1976,8 +1976,8 @@
         </div>
       </section>
 
-      <div class="container">
-        <section class="steps calculator">
+      <section class="steps" id="calculator">
+        <div class="container calculator">
           <div class="card card_white card_rounded-top">
             <div
               class="step-upside_header multichannel__header calculator__header"
@@ -2031,9 +2031,19 @@
                           100 ₽ на балансе
                         </div>
                       </div>
+                      <div class="calculator__start">
+                        3 сотрудника + 1 номер телефона + 100 ₽ на балансе
+                      </div>
+                      <h4
+                        class="calculator__price calculator__price_orange calculator__price_align-right"
+                      >
+                        1 990 ₽ разово
+                      </h4>
                     </div>
                   </div>
-                  <div class="calculator__col calculator__col_right">
+                  <div
+                    class="calculator__col calculator__col_right mobile-hidden"
+                  >
                     <h4 class="calculator__price">1 990 ₽ разово</h4>
                   </div>
                 </div>
@@ -2060,7 +2070,7 @@
                       <button class="calculator__increment">+</button>
                     </div>
                     <h4 class="calculator__price calculator__price_disabled">
-                      Не выбрано
+                      <span class="calculator__price-fixed"> Не выбрано </span>
                     </h4>
                   </div>
                 </div>
@@ -2072,24 +2082,21 @@
                     <h4>3. Ещё номера телефонов</h4>
                   </div>
                 </div>
-                <div class="calculator__row">
+                <div class="calculator__row calculator__row_flex-start">
                   <div class="calculator__col calculator__col_left">
-                    <div>
-                      <span class="text_regular">Городские без абонплаты(</span>
-                      <span class="dropdown dropdown_inline">
-                        <button
-                          class="dropdown__button dropdown__button_inline"
-                        >
-                          список
-                        </button>
-                      </span>
-                      <span class="text_regular"> ) </span>
+                    <div class="calculator__dropdown">
+                      <span
+                        >Городские&nbsp;без абонплаты(<span
+                          class="dropdown dropdown_inline"
+                          >список</span
+                        >)</span
+                      >
                     </div>
                   </div>
                   <div class="calculator__col calculator__col_right">
                     <div
                       class="calculator__multiplier"
-                      data-price="1990"
+                      data-price="990"
                       data-monthly-price="0"
                     >
                       <button class="calculator__decrement">-</button>
@@ -2101,40 +2108,39 @@
                       <button class="calculator__increment">+</button>
                     </div>
                     <h4 class="calculator__price calculator__price_disabled">
-                      Не выбрано
+                      <span class="calculator__price-fixed"> Не выбрано </span>
                     </h4>
                   </div>
                 </div>
-                <div class="calculator__row">
+                <div class="calculator__row calculator__row_flex-start">
                   <div class="calculator__col calculator__col_left">
-                    <div>
-                      <span class="text_regular">Городские c абонплатой (</span>
-                      <span class="dropdown dropdown_inline">
-                        <button
-                          class="dropdown__button dropdown__button_inline"
-                        >
-                          список
-                        </button>
-                      </span>
-                      <span class="text_regular">)</span>
+                    <div class="calculator__dropdown">
+                      <span
+                        >Городские c абонплатой&nbsp;(<span
+                          class="dropdown dropdown_inline"
+                          >список</span
+                        >)</span
+                      >
                     </div>
                   </div>
                   <div class="calculator__col calculator__col_right">
                     <div
                       class="calculator__multiplier"
-                      data-price="1990"
-                      data-monthly-price="0"
+                      data-price="990"
+                      data-monthly-price="190"
                     >
-                      <button class="calculator__increment">+</button>
+                      <button class="calculator__decrement">-</button>
+
                       <input
                         class="calculator__input"
                         type="number"
                         value="0"
                       />
-                      <button class="calculator__decrement">-</button>
+                      <button class="calculator__increment">+</button>
                     </div>
                     <h4 class="calculator__price calculator__price_disabled">
-                      Не выбрано
+                      <span class="calculator__price-fixed"> Не выбрано </span>
+                      <span class="calculator__price-per-month"></span>
                     </h4>
                   </div>
                 </div>
@@ -2146,8 +2152,8 @@
                   <div class="calculator__col calculator__col_right">
                     <div
                       class="calculator__multiplier"
-                      data-price="1990"
-                      data-monthly-price="0"
+                      data-price="990"
+                      data-monthly-price="190"
                     >
                       <button class="calculator__decrement">-</button>
                       <input
@@ -2158,7 +2164,8 @@
                       <button class="calculator__increment">+</button>
                     </div>
                     <h4 class="calculator__price calculator__price_disabled">
-                      Не выбрано
+                      <span class="calculator__price-fixed"> Не выбрано </span>
+                      <span class="calculator__price-per-month"></span>
                     </h4>
                   </div>
                 </div>
@@ -2169,8 +2176,8 @@
                   <div class="calculator__col calculator__col_right">
                     <div
                       class="calculator__multiplier"
-                      data-price="1990"
-                      data-monthly-price="0"
+                      data-price="990"
+                      data-monthly-price="190"
                     >
                       <button class="calculator__decrement">-</button>
                       <input
@@ -2181,19 +2188,28 @@
                       <button class="calculator__increment">+</button>
                     </div>
                     <h4 class="calculator__price calculator__price_disabled">
-                      Не выбрано
+                      <span class="calculator__price-fixed"> Не выбрано </span>
+                      <span class="calculator__price-per-month"></span>
+                      <span
+                        class="tooltip"
+                        data-tooltip="Некоторые номера мы подключаем через партнёров, за них мы вынуждены взымать абонентскую плату (190 ₽ / месяц).  
+                      Абонплата за партнёрские номера и SIM-карты — единственные возможные ежемесячные платежи в Делофоне."
+                      >
+                      </span>
                     </h4>
                   </div>
                 </div>
               </section>
 
               <section class="calculator__section">
-                <div class="caluclator__row">
+                <div class="calculator__row calculator__row_offset-bottom">
                   <div class="calculator__col">
                     <h4>4. Способы связи</h4>
                   </div>
                 </div>
-                <div class="calculator__row">
+                <div
+                  class="calculator__row calculator__row_offset-bottom mobile-hidden"
+                >
                   <div class="calculator__col calculator__col_left">
                     <span class="text_regular">
                       Свой IP-телефон, Приложение для ПК, Приложение для
@@ -2210,7 +2226,7 @@
                     <h4
                       class="calculator__price calculator__price_disabled calculator__price_single"
                     >
-                      Не выбрано
+                      Бесплатно
                     </h4>
                   </div>
                 </div>
@@ -2222,7 +2238,7 @@
                   <div class="calculator__col calculator__col_right">
                     <div
                       class="calculator__multiplier"
-                      data-price="1990"
+                      data-price="3990"
                       data-monthly-price="0"
                     >
                       <button class="calculator__decrement">-</button>
@@ -2234,20 +2250,24 @@
                       <button class="calculator__increment">+</button>
                     </div>
                     <h4 class="calculator__price calculator__price_disabled">
-                      Не выбрано
+                      <span class="calculator__price-fixed"> Не выбрано </span>
+                      <span class="calculator__price-per-month"></span>
                     </h4>
                   </div>
                 </div>
 
                 <div class="calculator__row">
                   <div class="calculator__col calculator__col_left">
-                    <p class="text_regular">SIM-карта (FMC)</p>
+                    <span>
+                      <p class="text_regular">SIM-карта (FMC)</p>
+                      <div class="tooltip"></div>
+                    </span>
                   </div>
                   <div class="calculator__col calculator__col_right">
                     <div
                       class="calculator__multiplier"
-                      data-price="1990"
-                      data-monthly-price="0"
+                      data-price="990"
+                      data-monthly-price="190"
                     >
                       <button class="calculator__decrement">-</button>
                       <input
@@ -2258,25 +2278,30 @@
                       <button class="calculator__increment">+</button>
                     </div>
                     <h4 class="calculator__price calculator__price_disabled">
-                      Не выбрано
+                      <span class="calculator__price-fixed"> Не выбрано </span>
+                      <span class="calculator__price-per-month"></span>
                     </h4>
                   </div>
                 </div>
               </section>
             </div>
 
-            <section class="card card_rounded-bottom calculator__summary">
+            <section class="card_rounded-bot calculator__summary mobile-hidden">
               <div class="calculator__row">
-                <div class="calculator__col">
-                  <h4>Итого</h4>
+                <h4>Итого</h4>
+                <div class="calculator__price">
+                  <span class="calculator__sum" data-value="1190">1 990</span>
+                  <span class="calculator__sum-per-month" data-value="0"
+                    >0</span
+                  >
                 </div>
-                <div class="calculator__price">1 990 ₽ разово, 0 ₽/мес</div>
               </div>
             </section>
-            <div class="card card_black calculator__summary_mobile">
-              <div class="calculator__sum">1990</div>
-              <div class="calculator__sum_per-month">0</div>
-            </div>
+            <section class="card card_black calculator__summary_mobile">
+              <h4>Итого</h4>
+              <div class="calculator__sum" data-value="1190">1990</div>
+              <div class="calculator__sum-per-month" data-value="0">0</div>
+            </section>
           </div>
           <div class="calculator__in-out">
             <div class="container__flex">
@@ -2398,8 +2423,8 @@
               Начать бесплатно
             </button>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
       <section class="faq">
         <div class="container">

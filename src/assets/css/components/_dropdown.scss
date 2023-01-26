@@ -9,8 +9,21 @@ $dropdown-transition: 0.15s ease-in;
   max-height: fit-content;
 
   &_inline {
-    display: inline-flex;
-    align-items: start;
+    display: inline;
+    font-size: 14px;
+
+    @include laptop {
+      font-size: 20px;
+    }
+
+    &::after {
+      display: none;
+
+      @include laptop {
+        content: url('/arrow-down.svg');
+        display: inline;
+      }
+    }
   }
 
   &__button {
@@ -22,6 +35,12 @@ $dropdown-transition: 0.15s ease-in;
 
     &::after {
       content: url('/arrow-down.svg');
+
+      @include laptop {
+        transform: scale(1);
+      }
+
+      transform: scale(0.7);
       display: flex;
       margin-left: $spacer;
       padding-top: $spacer;
@@ -36,9 +55,14 @@ $dropdown-transition: 0.15s ease-in;
     }
 
     &_inline {
-      font-size: 20px;
+      font-size: 14px;
+
+      @include laptop {
+        font-size: 20px;
+      }
       color: $gray;
       padding: 0;
+      margin: 0px -2px;
     }
   }
 
