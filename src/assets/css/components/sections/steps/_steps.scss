@@ -1,0 +1,46 @@
+@import 'multichannel';
+@import 'addemploye';
+
+.steps {
+  background-color: $light-gray;
+  padding-top: 0px;
+
+  @include laptop {
+    padding-top: 150px;
+  }
+
+  &__header {
+    margin: 0 auto;
+    margin-bottom: $spacer * 5;
+
+    @include laptop {
+      margin-right: auto;
+      margin-bottom: $spacer * 11;
+    }
+  }
+
+  &__checklist {
+    @include font(400, 15px, $gray);
+    line-height: 23.25px;
+    display: block;
+
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr) !important;
+      @include font(400, 16px, $gray);
+      grid-column-gap: $spacer !important;
+
+      line-height: 24.8px;
+      margin-top: $spacer * 2;
+
+      svg {
+        margin-right: 12px;
+      }
+    }
+  }
+}
+
+.step-upside {
+  &__header-text {
+    margin-left: $spacer * 3;
+  }
+}

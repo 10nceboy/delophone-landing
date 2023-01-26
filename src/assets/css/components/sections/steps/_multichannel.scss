@@ -1,0 +1,127 @@
+.multichannel {
+  border-radius: $border12;
+
+  &__image {
+    display: none;
+    @include laptop {
+      margin-left: auto;
+      display: block;
+    }
+  }
+
+  &__image_mobile {
+    display: block;
+    align-self: center;
+    @include laptop {
+      display: none;
+    }
+  }
+
+  &__list-item {
+    margin-bottom: $spacer !important;
+    margin-top: 0px !important;
+
+    @include laptop {
+      margin: 0px;
+    }
+  }
+
+  &__header {
+    @include flex-row;
+  }
+
+  &__upside {
+    @include flex-col;
+    padding: $spacer * 4;
+
+    @include laptop {
+      display: flex;
+      flex-direction: row;
+      padding: $spacer * 10;
+      align-items: initial;
+    }
+  }
+
+  &__textblock {
+    @include font(400, 16px, $gray);
+    line-height: 24.8px;
+    margin-bottom: $spacer * 2;
+    margin-top: $spacer * 5;
+  }
+
+  &__buttonblock {
+    @include flex-col;
+    justify-content: center;
+    align-items: initial;
+    margin-top: $spacer * 2;
+    margin-left: $spacer * 4;
+
+    @include laptop {
+      @include flex-row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-text {
+      margin-top: $spacer * 2;
+
+      @include laptop {
+        margin-left: $spacer * 5;
+      }
+    }
+  }
+
+  &__downside {
+    padding: $spacer * 4;
+    display: block;
+
+    @include laptop {
+      display: flex;
+      padding: $spacer * 6 $spacer * 10;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    &-text {
+      @include font(400, 14px, $light-gray);
+      line-height: 21px;
+      margin-top: $spacer * 2;
+      margin-bottom: $spacer * 4;
+
+      @include laptop {
+        @include font(400, 16px, $light-gray);
+        line-height: 24.8px;
+      }
+    }
+  }
+}
+
+.multichannel__button {
+  display: none;
+
+  @include laptop {
+    display: block;
+  }
+
+  &-up {
+    padding: 15px;
+  }
+}
+
+.multichannel__button_mobile {
+  display: block;
+  padding: $spacer * 3 $spacer * 2;
+
+  text-align: center;
+  @include laptop {
+    display: none;
+  }
+}
+
+.multichannel__downside-header {
+  @include laptop {
+    font-size: 20px;
+  }
+
+  font-size: 16px;
+}
