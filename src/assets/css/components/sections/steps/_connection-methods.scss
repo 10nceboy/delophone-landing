@@ -80,11 +80,11 @@
 
   &_image {
     position: absolute;
-    top: 25px;
+    top: $spacer * 5;
 
     @include laptop {
       position: absolute;
-      top: 40px;
+      top: $spacer * 8;
     }
   }
 }
