@@ -1,6 +1,13 @@
 .addemploye {
   margin-top: $spacer * 16;
 
+  &__content {
+    @include laptop {
+      padding: $spacer * 10;
+      margin-bottom: 80px;
+    }
+  }
+
   &__card {
     display: none;
     @include laptop {

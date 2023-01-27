@@ -2,13 +2,19 @@
   @include flex-col;
   width: 100%;
 
+  &__main {
+    @include laptop {
+      padding: 50px;
+    }
+  }
+
   &__content {
     width: 100%;
   }
 
   &__cards {
     @include flex-col;
-    width: 290px;
+    width: 100%;
     margin-top: $spacer * 3;
 
     @include laptop {
@@ -26,10 +32,11 @@
     justify-content: space-between;
     background: $light-gray;
     box-sizing: border-box;
-    width: 250px;
+    width: 100%;
     padding: $spacer * 3;
     margin-bottom: $spacer * 3;
     position: relative;
+    min-height: 111px;
 
     &:last-child {
       margin-bottom: 0;

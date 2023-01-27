@@ -24,6 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleOverflow(false);
   });
 
-
+});
 
 

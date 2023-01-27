@@ -58,7 +58,11 @@
   @include flex-col;
 }
 
-.overlay_gray {
+.container_flex-center {
+  @include flex-center;
+}
+
+.background_gray {
   background-color: $light-gray;
 }
 
