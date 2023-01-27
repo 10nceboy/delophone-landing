@@ -18,6 +18,12 @@ $family: 'Manrope';
   align-items: flex-start;
 }
 
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*breakpoints*/
 @mixin wide-screen {
   @media screen and (min-width: 1400px) {
@@ -39,6 +45,12 @@ $family: 'Manrope';
 
 @mixin tablet {
   @media (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 375px) {
     @content;
   }
 }

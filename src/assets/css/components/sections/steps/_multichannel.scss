@@ -1,6 +1,14 @@
 .multichannel {
   border-radius: $border12;
 
+  &__checklist {
+    row-gap: 10px;
+  }
+
+  &__content {
+    align-self: center;
+  }
+
   &__image {
     display: none;
     @include laptop {
@@ -37,7 +45,7 @@
     @include laptop {
       display: flex;
       flex-direction: row;
-      padding: $spacer * 10;
+      padding: 8px $spacer * 10;
       align-items: initial;
     }
   }
@@ -54,19 +62,20 @@
     justify-content: center;
     align-items: initial;
     margin-top: $spacer * 2;
-    margin-left: $spacer * 4;
 
     @include laptop {
       @include flex-row;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
+      gap: 25px;
+      margin-top: 35px;
     }
 
     &-text {
       margin-top: $spacer * 2;
 
       @include laptop {
-        margin-left: $spacer * 5;
+        margin-top: 0px;
       }
     }
   }
@@ -104,7 +113,7 @@
   }
 
   &-up {
-    padding: 15px;
+    padding: 15px 30px;
   }
 }
 

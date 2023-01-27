@@ -11,14 +11,14 @@
 
   &_checked {
     &::before {
-      content: url('/public/check.svg');
+      content: url('/check.svg');
       display: block;
       margin-right: $spacer * 2;
     }
 
     &_checked_mobile {
       &::before {
-        content: url('/public/check.svg');
+        content: url('/check.svg');
         display: block;
         margin-right: $spacer * 2;
         @include laptop {
