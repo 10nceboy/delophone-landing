@@ -194,7 +194,7 @@
     display: block;
     position: relative;
     &:after {
-      content: url('/public/Vector233.svg');
+      content: url('/Vector233.svg');
       position: absolute;
       width: 53px;
       height: 143px;
@@ -207,7 +207,7 @@
   &__mobile {
     display: block;
     &::after {
-      content: url('/public/graphic_mobile.svg');
+      content: url('/graphic_mobile.svg');
       position: absolute;
       top: 1748px;
       right: 90px;
@@ -227,7 +227,7 @@
   @include laptop {
     display: block;
     &::before {
-      content: url('/public/v1.svg');
+      content: url('/v1.svg');
       position: absolute;
       display: block;
       left: 75px;
@@ -239,7 +239,7 @@
   &_mobile {
     display: block;
     &::before {
-      content: url('/public/graphic-mobile-bot.svg');
+      content: url('/graphic-mobile-bot.svg');
       position: absolute;
       display: block;
       z-index: -1;
