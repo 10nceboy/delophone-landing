@@ -1,19 +1,19 @@
 import { cities } from '../constants/city';
-// import { watchData } from '../utils/watch';
+import { phones, addresses } from '../constants/contacts';
+
+import { watchValue } from '../utils/watch';
 
 const citiesDropdowns = document.querySelectorAll('.city');
 
 citiesDropdowns.forEach((dropdown) => {
-  cities.forEach((city) => {
-    const li = document.createElement('li');
-    li.innerText = city;
-    li.dataset.value = city;
-    dropdown.appendChild(li);
+  watchValue(dropdown, (el) => {
+    const { value } = el.dataset;
+    if (cities.includes(value));
+    document.querySelectorAll('.phone-number').forEach((number) => {
+      number.textContent = phones[value];
+    });
+    document.querySelectorAll('.address').forEach((address) => {
+      address.textContent = addresses[value];
+    });
   });
 });
-
-// watchData(document.querySelector('.'), 'value', (el) => {
-//   citiesDropdowns.forEach((dropdown) => {
-//     dropdown.querySelector('.dropdown__button').textContent = el.dataset.value;
-//   });
-// });

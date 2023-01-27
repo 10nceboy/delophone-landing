@@ -10,10 +10,15 @@
     padding: $spacer * 9 $spacer * 10;
   }
 
+  @include tablet {
+    max-width: 1110px;
+    padding: $spacer * 9 $spacer * 10;
+  }
+
   &__table {
     background: $white;
 
-    @include laptop {
+    @include tablet {
       margin-top: $spacer * 5;
       border: 1px solid $dim-gray;
       padding: $spacer * 6;
@@ -276,10 +281,13 @@
     font-size: 20px;
     border: none;
     box-shadow: none;
+    user-select: none;
 
-    &:hover {
+    &:hover,
+    :active {
+      background: transparent;
+      border: none;
       color: $orange;
-      font-weight: 600;
     }
   }
 

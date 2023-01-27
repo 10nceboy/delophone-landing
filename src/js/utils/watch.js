@@ -1,12 +1,12 @@
-export const watchData = (el, field, callback) => {
+export const watchValue = (el, callback) => {
   const observer = new MutationObserver(function (mutations) {
-    console.log(mutations);
     mutations.forEach(function (mutation) {
-      if (mutation.attributeName === `data-${field}`) {
-        callback(mutation);
+      if (mutation.attributeName === `data-value`) {
+        callback(el);
       }
     });
   });
+
   observer.observe(el, {
     attributes: true,
     childList: false,

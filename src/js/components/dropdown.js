@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     dropdown.addEventListener('change', ({ detail }) => {
       setDropdownValue(dropdown, detail.value);
-      dropdown.classList.remove('.active');
+      dropdown.classList.remove('_active');
     });
   });
 });

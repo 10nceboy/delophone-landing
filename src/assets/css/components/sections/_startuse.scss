@@ -16,6 +16,7 @@
     flex-shrink: 0;
     max-height: 55px;
     order: 2;
+    line-height: normal;
 
     @include laptop {
       display: block;

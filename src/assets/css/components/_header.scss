@@ -3,6 +3,12 @@
 .header {
   margin-top: 2 * $spacer;
 
+  &__dropdown {
+    @include tablet {
+      opacity: 1 !important;
+    }
+  }
+
   &__upside {
     @include flex-col;
 

@@ -101,10 +101,10 @@
             </svg>
             <span class="login__text"> Войти </span>
           </button>
-          <div class="login__phone-number">
+          <div class="login__phone-number phone-number">
             <a class="link" href="tel:+8-(495)-286–01–11">8 (495) 286–01–11</a>
           </div>
-          <div class="dropdown header__dropdown">
+          <div class="dropdown header__dropdown city" data-value="Москва">
             <button
               type="button"
               class="header__dropdown-button dropdown__button dropdown__button_white"
@@ -113,7 +113,14 @@
             </button>
             <div class="dropdown__menu header__dropdown_menu">
               <div class="dropdown__arrow"></div>
-              <ul class="dropdown__menu_list header__dropdown_menu city"></ul>
+              <ul
+                class="dropdown__menu_list header__dropdown_menu"
+                data-value="Москва"
+              >
+                <li data-value="Москва">Москва</li>
+                <li data-value="Санкт-Петербург">Санкт-Петербург</li>
+                <li data-value="Сочи">Сочи</li>
+              </ul>
             </div>
           </div>
           <button class="button button_outlined header_start-button">
@@ -125,12 +132,12 @@
         <div class="container">
           <nav class="header__menu">
             <ul>
-              <li>Для кого</li>
-              <li>Возможности</li>
-              <li>Как подключить</li>
-              <li>Способы связи</li>
-              <li>Стоимость</li>
-              <li>FAQ</li>
+              <li><a class="link link__gray">Для кого</a></li>
+              <li><a class="link link__gray">Возможности</a></li>
+              <li><a class="link link__gray">Как подключить</a></li>
+              <li><a class="link link__gray">Способы связи</a></li>
+              <li><a class="link link__gray">Стоимость</a></li>
+              <li><a class="link link__gray">FAQ</a></li>
             </ul>
           </nav>
         </div>
@@ -3402,7 +3409,10 @@
                 <p>
                   Да, для SIM-карт предусмотрены дополнительные интернет-пакеты,
                   с помощью которых на смартфоне помимо телефонии будет доступен
-                  и интернет. <a href="/">Посмотреть интернет-пакеты →</a>
+                  и интернет.
+                  <a href="/" class="link link_blue"
+                    >Посмотреть интернет-пакеты→</a
+                  >
                 </p>
               </div>
             </article>
@@ -3492,11 +3502,23 @@
               </svg>
             </a>
           </div>
-          <div class="dropdown dropdown_white footer-upside__dropdown">
-            <div class="dropdown__button">Москва</div>
+          <div
+            class="dropdown dropdown_white footer-upside__dropdown city"
+            data-value="Москва"
+          >
+            <button
+              type="button"
+              class="header__dropdown-button dropdown__button"
+            >
+              Москва
+            </button>
             <div class="dropdown__menu">
               <div class="dropdown__arrow"></div>
-              <ul class="dropdown__menu_list header__dropdown_menu сity"></ul>
+              <ul class="dropdown__menu_list header__dropdown_menu сity">
+                <li data-value="Москва">Москва</li>
+                <li data-value="Санкт-Петербург">Санкт-Петербург</li>
+                <li data-value="Сочи">Сочи</li>
+              </ul>
             </div>
           </div>
           <nav class="footer-upside__menu">
@@ -3550,7 +3572,7 @@
               </li>
               <li class="footer-contacts__address">
                 <a
-                  class="link link_white"
+                  class="link link_white address"
                   href="https://yandex.ru/maps/213/moscow/house/bumazhny_proyezd_14s1/Z04Ycw9nTEEFQFtvfXt4cH5mZw==/?indoorLevel=1&ll=37.587541%2C55.791253&z=17"
                 >
                   г. Москва, проезд Бумажный, д. 14, стр. 1, офис 805
@@ -3562,7 +3584,10 @@
                 </a>
               </li>
               <li class="footer-contacts__phone">
-                <a class="link link_white" href="tel:+8-(495)-286–01–11">
+                <a
+                  class="link link_white phone-number"
+                  href="tel:+8-(495)-286–01–11"
+                >
                   8 (495) 286–01–11
                 </a>
               </li>
