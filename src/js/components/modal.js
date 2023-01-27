@@ -4,15 +4,15 @@ const overlay = document.querySelector('.overlay');
 
 const hideModal = (modal) => {
   modal?.classList.remove('modal_active');
-  overlay.classList.remove('overlay_active');
+  overlay?.classList.remove('overlay_active');
   modal?.classList.remove('modal_visible');
   toggleOverflow(false);
 };
 
 const showModal = (modal) => {
-  overlay.classList.add('overlay_active');
+  overlay?.classList.add('overlay_active');
   modal?.classList.add('modal_visible');
-  window.setTimeout(() => {
+  setTimeout(() => {
     modal.classList.add('modal_active');
   }, 100);
   toggleOverflow(true);
@@ -21,7 +21,6 @@ const showModal = (modal) => {
 document.querySelectorAll('.modal__activator').forEach((activator) => {
   const modalId = activator.dataset.modal;
   const modal = document.querySelector(`.modal[data-modal="${modalId}"]`);
-
   if (modal) {
     activator.addEventListener('click', () => {
       showModal(modal);

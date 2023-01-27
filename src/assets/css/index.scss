@@ -15,7 +15,7 @@
 @import './components/sections/pay-minutes';
 @import './components/chips';
 @import './components/sections/steps/steps';
-
+@import './components/sections/startuse';
 @import './components/sections/features';
 @import './components/sections/stats';
 @import './components/sections/faq';
@@ -26,7 +26,7 @@
 @import './components/whatsapp';
 @import './components/modal';
 @import './components/overlay';
+@import './components/tabs';
 
-main {
-  min-height: 100vh;
-}
+@import './components/sections/steps/calcualtor';
+@import './components/sections/steps/lk';

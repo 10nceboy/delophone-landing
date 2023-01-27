@@ -2,12 +2,21 @@
   font-family: $family;
   text-decoration: none;
   color: $gray;
+  cursor: pointer;
+
+  &:hover {
+    color: $blue;
+  }
 
   &_white {
     color: $white;
   }
 
-  &:hover {
+  &_blue {
     color: $blue;
+
+    &:hover {
+      color: $deep-blue !important;
+    }
   }
 }

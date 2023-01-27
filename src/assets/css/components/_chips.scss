@@ -1,8 +1,24 @@
-.chip_light-gray {
-  @include laptop {
-    background-color: $light-gray;
-    border-radius: $btn-border-radius;
-    border: 1px solid $dim-gray;
+.chip {
+  padding: $spacer * 3;
+  border-radius: $btn-border-radius;
+
+  &_light-gray {
+    @include laptop {
+      background-color: $light-gray;
+      border: 1px solid $dim-gray;
+    }
+    background-color: $white;
   }
-  background-color: $white;
+
+  &_white {
+    background: $white;
+  }
+
+  &_bold {
+    font-weight: 600;
+  }
+
+  &_rounded-pill {
+    border-radius: 41px;
+  }
 }

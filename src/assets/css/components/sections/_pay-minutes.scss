@@ -99,11 +99,13 @@
   }
 
   &__chip {
-    padding: $spacer * 2;
+    padding: $spacer * 2 0;
+    border-radius: $btn-border-radius;
     margin-bottom: $spacer * 2;
     text-align: center;
     @include font(500, 14px, $black);
     line-height: 21px;
+    width: 100%;
 
     @include laptop {
       padding: $spacer * 3;
@@ -184,8 +186,6 @@
   }
 }
 .chip-text {
-  margin-left: $spacer * 10;
-
   @include laptop {
     margin-left: 0px;
   }

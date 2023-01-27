@@ -29,6 +29,7 @@
       grid-template-columns: repeat(2, 1fr) !important;
       @include font(400, 16px, $gray);
       grid-column-gap: $spacer !important;
+      display: grid;
 
       line-height: 24.8px;
       margin-top: $spacer * 2;

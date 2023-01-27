@@ -58,13 +58,19 @@
   @include flex-col;
 }
 
-.overlay_gray {
+.container_flex-center {
+  @include flex-center;
+}
+
+.background_gray {
   background-color: $light-gray;
 }
 
 .container_adaptive {
   @include flex-col;
   justify-content: center;
+  align-items: center;
+  max-width: 100%;
 
   @include laptop {
     @include flex-row;
@@ -76,5 +82,13 @@
       @include flex-col;
       align-items: flex-start;
     }
+  }
+}
+
+.mobile-hidden {
+  display: none !important;
+
+  @include laptop {
+    display: flex !important;
   }
 }

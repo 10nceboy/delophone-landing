@@ -5,11 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Делофон - удобный телефон для работы</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      property="og:title"
+      content="Делофон - Первая виртуальная сеть без абонентской платы"
+    />
+    <meta property="og:site_name" content="Делофон" />
+    <meta property="og:url" content=https://delofon.ru/>
+    <meta
+      property="og:description"
+      content="Делофон - Первая виртуальная АТС без абонентской платы. Настройте звонки в бизнесе: скрасивым номером, многоканальной линией и распределением звонков по сотрудникам с любыми устройствами."
+    />
+    <meta property="og:type" content="product" />
+    <meta property="og:image" content=/og-cover.png>
+    <meta
+      property="og:title"
+      content="Делофон - Первая виртуальная сеть без абонентской платы"
+    />
+    <meta property="og:site_name" content="Делофон" />
+    <meta property="og:url" content=https://delofon.ru/>
+    <meta
+      property="og:description"
+      content="Делфон - Первая виртуальная АТС без абонентской платы. Настройте звонки в бизнесе: с красивым номером, многоканальной линией и распределением звонков по сотрудникам с любыми устройствами."
+    />
+    <meta property="og:type" content="product" />
+    <meta property="og:image" content=/cover.png>
     <link rel="stylesheet" href="./src/assets/css/index.scss" />
     <script src="main.js" type="module"></script>
   </head>
   <body class="body">
-    <div class="overlay"></div>
     <header class="header">
       <div class="container">
         <div class="header__upside">
@@ -77,7 +106,8 @@
           </div>
           <div class="dropdown header__dropdown">
             <button
-              class="dropdown__button dropdown__button_white header__dropdown-button"
+              type="button"
+              class="header__dropdown-button dropdown__button dropdown__button_white"
             >
               Москва
             </button>
@@ -91,7 +121,7 @@
           </button>
         </div>
       </div>
-      <div class="" style="display: none">
+      <div class="background_gray">
         <div class="container">
           <nav class="header__menu">
             <ul>
@@ -105,6 +135,7 @@
           </nav>
         </div>
       </div>
+
       <div class="container container-bottom">
         <button
           type="button"
@@ -447,8 +478,8 @@
                     <h4>Ваши клиенты</h4>
                     <svg
                       width="208"
-                      height="60"
-                      viewBox="0 0 208 60"
+                      height="68"
+                      viewBox="0 0 208 68"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -1782,7 +1813,7 @@
         </section>
       </div>
 
-      <section class="steps">
+      <section class="steps" id="steps">
         <div class="container">
           <div class="steps__header">
             <h2>Настройте технологичную телефонию за 5 шагов</h2>
@@ -1822,7 +1853,9 @@
                   Звонки не пропадут, даже если телефон занят. Звонящий услышит
                   музыку ожидания или ваше уведомление, а не короткие гудки.
                 </div>
-                <ul class="list_grid-2x2 steps__checklist">
+                <ul
+                  class="list_grid-2x2 steps__checklist multichannel__checklist"
+                >
                   <li
                     class="multichannel__list-item list-item list-item_checked"
                   >
@@ -1849,8 +1882,8 @@
                     Выбрать номер телефона
                   </button>
                   <div class="text_caption multichannel__buttonblock-text">
-                    Номера сохраняются за вами, если вы совершаете хотя бы 1
-                    звонок в год
+                    Номера сохраняются за вами, если <br />
+                    вы совершаете хотя бы 1 звонок в год
                   </div>
                 </div>
               </div>
@@ -1858,7 +1891,7 @@
               <div class="multichannel__image">
                 <img
                   alt="Мультиканальный обзвон"
-                  src="/public/multichannel-image.svg"
+                  src="/multichannel-image.svg"
                 />
               </div>
               <div class="multichannel__image_mobile">
@@ -1887,9 +1920,12 @@
             </div>
           </section>
         </div>
+
         <div class="container">
-          <section class="addemploye">
-            <div class="card_white card_rounded-top multichannel__upside">
+          <section class="addemploye" id="addemploye">
+            <div
+              class="card_white card_rounded-top multichannel__upside addemploye__content"
+            >
               <div class="multichannel__content">
                 <div class="step-upside__header multichannel__header">
                   <div class="step-upside__header-image">
@@ -1960,10 +1996,7 @@
                 />
               </div>
               <div class="addemploye__image_mobile">
-                <img
-                  alt="Мульиканальный обзвон"
-                  src="/public/employe-mobile.svg"
-                />
+                <img alt="Мульиканальный обзвон" src="/employe-mobile.svg" />
               </div>
               <div
                 class="card_light-gray card_rectangle text_caption addemploye__card_mobile"
@@ -1974,9 +2007,12 @@
             </div>
           </section>
         </div>
+
         <div class="container">
-          <section class="connection-methods">
-            <div class="card_white card_rounded-top multichannel__upside">
+          <section class="connection-methods" id="connection-methods">
+            <div
+              class="card_white card_rounded-top multichannel__upside connection-methods__main"
+            >
               <div class="connection-methods">
                 <div class="step-upside__header multichannel__header">
                   <div class="step-upside__header-image">
@@ -2257,7 +2293,9 @@
                       SIM-карта с телефонией
                     </h4>
                   </div>
-                  <div class="card card__light-gray connection-methods__card">
+                  <div
+                    class="card card_rectangle card__light-gray connection-methods__card"
+                  >
                     <div class="connection-methods__top">
                       <svg
                         width="60"
@@ -2422,9 +2460,676 @@
         </div>
       </section>
 
+      <section class="steps" id="lk">
+        <div class="container lk">
+          <div class="card card_white card_rounded-top lk__card">
+            <div class="step-upside_header multichannel__header">
+              <div class="step-upside__header-image">
+                <svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.9998 35.0769C27.4311 35.0769 35.0767 27.4313 35.0767 18C35.0767 8.56869 27.4311 0.923096 17.9998 0.923096C8.56845 0.923096 0.922852 8.56869 0.922852 18C0.922852 27.4313 8.56845 35.0769 17.9998 35.0769Z"
+                    fill="white"
+                    stroke="#F88C28"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M19.53 23.9999V21.6821H13.9307V20.519L17.935 12.0369H19.3057L15.3014 20.519H19.53V17.0298H20.7596V20.519H22.0639V21.6821H20.7596V23.9999H19.53Z"
+                    fill="#F88C28"
+                    stroke="#F88C28"
+                    stroke-width="0.5"
+                  />
+                </svg>
+              </div>
+              <div class="step-upside__header-text">
+                <h3>Настройте телефонию в личном кабинете</h3>
+              </div>
+            </div>
+            <div class="lk__tabs tabs mobile-hidden">
+              <div class="tabs__activators lk__buttons">
+                <button
+                  data-tab="journal"
+                  class="button tabs__activator tabs__activator_active lk__button"
+                >
+                  Журнал звонков
+                </button>
+                <button
+                  data-tab="settings"
+                  class="button tabs__activator lk__button"
+                >
+                  Настройки звонков
+                </button>
+                <button
+                  data-tab="numbers"
+                  class="button tabs__activator lk__button"
+                >
+                  Номера телефонов
+                </button>
+              </div>
+              <div class="tabs__items lk__tabs-items">
+                <div
+                  class="tabs__item tabs__item_active"
+                  data-tab="journal"
+                  aria-hidden="true"
+                >
+                  <img
+                    src="./src/assets/images/sections/lk/journal.svg"
+                    alt="Журнал звонков"
+                  />
+                </div>
+                <div class="tabs__item" data-tab="settings" aria-hidden="true">
+                  <img
+                    src="./src/assets/images/sections/lk/settings.svg"
+                    alt="Настройки звонков"
+                  />
+                </div>
+                <div class="tabs__item" data-tab="numbers" aria-hidden="true">
+                  <img
+                    src="./src/assets/images/sections/lk/numbers.svg"
+                    alt="Номера телефонов"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="lk__tabs_mobile">
+              <ul class="list list_vertical">
+                <li>
+                  <div class="collapse collapse_closed">
+                    <div role="button" class="collapse__activator">
+                      Журнал звонков
+                    </div>
+                    <figure class="collapse__content">
+                      <img
+                        src="./src/assets/images/sections/lk/journal-mobile.svg"
+                        alt="Журнал звонков"
+                        width="250px"
+                        height="272px"
+                      />
+                    </figure>
+                  </div>
+                </li>
+                <li>
+                  <div class="collapse collapse_closed">
+                    <div role="button" class="collapse__activator">
+                      Настройки звонков
+                    </div>
+                    <figure class="collapse__content">
+                      <img
+                        src="./src/assets/images/sections/lk/settings-mobile.svg"
+                        alt="Журнал звонков"
+                        width="250px"
+                        height="272px"
+                      />
+                    </figure>
+                  </div>
+                </li>
+                <li>
+                  <div class="collapse collapse_closed">
+                    <div role="button" class="collapse__activator">
+                      Номера телефонов
+                    </div>
+                    <figure class="collapse__content">
+                      <img
+                        src="./src/assets/images/sections/lk/numbers-mobile.svg"
+                        alt="Журнал звонков"
+                        width="250px"
+                        height="272px"
+                      />
+                    </figure>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="card card_black card_rounded-bot lk__card lk__card_bottom"
+          >
+            <div class="lk__support">
+              <h4>Человеческая поддержка 24/7</h4>
+              <div class="text_small lk__text">
+                Ответим на любой вопрос и поможем настроить телефонию под любые
+                задачи
+              </div>
+            </div>
+            <div class="lk__whatsapp">
+              <button
+                class="button button_with-icon button_blue lk__whatsapp-button"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="button__icon"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M16.5897 14.3622C16.08 14.0571 15.4159 13.7182 14.8166 13.9647C14.3563 14.1527 14.0628 14.8706 13.7632 15.2373C13.6087 15.4253 13.4265 15.4561 13.1917 15.3606C11.4618 14.6734 10.1397 13.524 9.18518 11.9371C9.02455 11.6906 9.05233 11.4964 9.24695 11.2684C9.53423 10.9294 9.89561 10.5443 9.97593 10.0882C10.0532 9.63215 9.84007 9.09904 9.65164 8.69229C9.41069 8.1746 9.13882 7.43199 8.61985 7.13925C8.14104 6.86808 7.51087 7.01907 7.08149 7.36728C6.34629 7.96508 5.98795 8.90185 6.00031 9.83246C6.00031 10.0975 6.0374 10.3594 6.09918 10.6151C6.24746 11.2283 6.53164 11.8015 6.8529 12.3438C7.09385 12.7537 7.35644 13.1512 7.63754 13.5364C8.56118 14.7905 9.71342 15.8783 11.0448 16.6918C11.709 17.0986 12.4256 17.456 13.1701 17.6994C14.001 17.9737 14.7424 18.2603 15.6444 18.0877C16.5866 17.909 17.5133 17.3297 17.8871 16.4237C17.9983 16.1556 18.054 15.8567 17.9922 15.5732C17.8655 14.9878 17.0716 14.6395 16.5959 14.3591L16.5897 14.3622Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M2.0884 18.1292L2.14196 17.929L2.03819 17.7496C1.06001 16.0587 0.5 14.0955 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C9.90452 23.5 7.94135 22.94 6.25036 21.9618L6.07097 21.858L5.87076 21.9116L0.706667 23.2933L2.0884 18.1292Z"
+                    stroke="white"
+                  />
+                </svg>
+                Написать в WhatsApp
+              </button>
+              <div class="text_caption lk__answer-time">
+                Среднее&nbsp;время ответа&nbsp;—&nbsp;5&nbsp;минут
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="steps" id="calculator">
+        <div class="container calculator">
+          <div class="card card_white card_rounded-top">
+            <div
+              class="step-upside_header multichannel__header calculator__header"
+            >
+              <div class="step-upside__header-image">
+                <svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.9998 35.0769C27.4311 35.0769 35.0767 27.4313 35.0767 18C35.0767 8.56869 27.4311 0.923096 17.9998 0.923096C8.56845 0.923096 0.922852 8.56869 0.922852 18C0.922852 27.4313 8.56845 35.0769 17.9998 35.0769Z"
+                    fill="white"
+                    stroke="#F88C28"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.8992 24.2492C17.2789 24.2492 16.7057 24.1218 16.1795 23.867C15.6534 23.6123 15.2047 23.2606 14.8337 22.8119C14.4626 22.3633 14.1967 21.8483 14.0361 21.2667L15.2075 20.951C15.3127 21.383 15.5038 21.7569 15.7807 22.0726C16.0577 22.3827 16.3817 22.6236 16.7527 22.7953C17.1294 22.967 17.5226 23.0529 17.9324 23.0529C18.4641 23.0529 18.9404 22.9255 19.3614 22.6707C19.7878 22.4104 20.1257 22.067 20.3749 21.6406C20.6241 21.2141 20.7487 20.7461 20.7487 20.2366C20.7487 19.7104 20.6186 19.2369 20.3583 18.8159C20.098 18.3895 19.7546 18.0516 19.3281 17.8024C18.9017 17.5532 18.4364 17.4286 17.9324 17.4286C17.3675 17.4286 16.8801 17.5532 16.4703 17.8024C16.0604 18.0461 15.7337 18.3535 15.49 18.7246L14.3767 18.2593L14.7423 12.0369H21.1309V13.2083H15.2823L15.8887 12.635L15.5647 17.9436L15.2574 17.5366C15.6007 17.1433 16.0161 16.8359 16.5035 16.6144C16.9909 16.3929 17.5032 16.2821 18.0404 16.2821C18.7771 16.2821 19.4417 16.4593 20.0343 16.8138C20.6269 17.1627 21.0977 17.6363 21.4466 18.2344C21.7955 18.8326 21.97 19.4999 21.97 20.2366C21.97 20.9676 21.7844 21.6378 21.4134 22.247C21.0423 22.8507 20.5494 23.3353 19.9346 23.7009C19.3198 24.0664 18.6414 24.2492 17.8992 24.2492Z"
+                    fill="#F88C28"
+                    stroke="#F88C28"
+                    stroke-width="0.5"
+                  />
+                </svg>
+              </div>
+
+              <div class="step-upside__header-text">
+                <h3>Начните использовать Делофон</h3>
+              </div>
+            </div>
+            <div
+              class="card card_rounded-top card_light-gray calculator__table"
+            >
+              <section class="calculator__section">
+                <div class="calculator__row calculator__row_full-height">
+                  <div
+                    class="calculator__col calculator__col_left calculator__col_auto-width"
+                  >
+                    <div class="calculator__head">
+                      <h4>1. Стартовый пакет подключения</h4>
+                      <div class="calculator__chips container_flex">
+                        <div class="chip chip_bold chip_white">
+                          3 сотрудника
+                        </div>
+                        <div class="chip chip_white chip_bold">
+                          1 номер телефона
+                        </div>
+                        <div class="chip chip_white chip_bold">
+                          100 ₽ на балансе
+                        </div>
+                      </div>
+                      <div class="calculator__start">
+                        3 сотрудника + 1 номер телефона + 100 ₽ на балансе
+                      </div>
+                      <h4
+                        class="calculator__price calculator__price_orange calculator__price_align-right"
+                      >
+                        1 990 ₽ разово
+                      </h4>
+                    </div>
+                  </div>
+                  <div
+                    class="calculator__col calculator__col_right mobile-hidden"
+                  >
+                    <h4 class="calculator__price">1 990 ₽ разово</h4>
+                  </div>
+                </div>
+              </section>
+
+              <section class="calculator__section">
+                <div class="calculator__row">
+                  <div class="calculator__col calculator__col_left">
+                    <h4>2. Ещё сотрудники</h4>
+                  </div>
+                  <div class="calculator__col calculator__col_right">
+                    <div
+                      class="calculator__multiplier"
+                      class="calculator__multiplier"
+                      data-price="1990"
+                      data-monthly-price="0"
+                    >
+                      <button class="calculator__decrement">-</button>
+                      <input
+                        class="calculator__input"
+                        type="number"
+                        value="0"
+                      />
+                      <button class="calculator__increment">+</button>
+                    </div>
+                    <h4 class="calculator__price calculator__price_disabled">
+                      <span class="calculator__price-fixed"> Не выбрано </span>
+                    </h4>
+                  </div>
+                </div>
+              </section>
+
+              <section class="calculator__section">
+                <div class="calculator__row">
+                  <div class="calculator__col">
+                    <h4>3. Ещё номера телефонов</h4>
+                  </div>
+                </div>
+                <div class="calculator__row calculator__row_flex-start">
+                  <div class="calculator__col calculator__col_left">
+                    <div class="calculator__dropdown">
+                      <span
+                        >Городские&nbsp;без абонплаты(<span
+                          class="dropdown dropdown_inline"
+                          >список</span
+                        >)</span
+                      >
+                    </div>
+                  </div>
+                  <div class="calculator__col calculator__col_right">
+                    <div
+                      class="calculator__multiplier"
+                      data-price="990"
+                      data-monthly-price="0"
+                    >
+                      <button class="calculator__decrement">-</button>
+                      <input
+                        class="calculator__input"
+                        type="number"
+                        value="0"
+                      />
+                      <button class="calculator__increment">+</button>
+                    </div>
+                    <h4 class="calculator__price calculator__price_disabled">
+                      <span class="calculator__price-fixed"> Не выбрано </span>
+                    </h4>
+                  </div>
+                </div>
+                <div class="calculator__row calculator__row_flex-start">
+                  <div class="calculator__col calculator__col_left">
+                    <div class="calculator__dropdown">
+                      <span
+                        >Городские c абонплатой&nbsp;(<span
+                          class="dropdown dropdown_inline"
+                          >список</span
+                        >)</span
+                      >
+                    </div>
+                  </div>
+                  <div class="calculator__col calculator__col_right">
+                    <div
+                      class="calculator__multiplier"
+                      data-price="990"
+                      data-monthly-price="190"
+                    >
+                      <button class="calculator__decrement">-</button>
+
+                      <input
+                        class="calculator__input"
+                        type="number"
+                        value="0"
+                      />
+                      <button class="calculator__increment">+</button>
+                    </div>
+                    <h4 class="calculator__price calculator__price_disabled">
+                      <span class="calculator__price-fixed"> Не выбрано </span>
+                      <span class="calculator__price-per-month"></span>
+                    </h4>
+                  </div>
+                </div>
+
+                <div class="calculator__row">
+                  <div class="calculator__col calculator__col_left">
+                    <span class="text_regular">Мобильные</span>
+                  </div>
+                  <div class="calculator__col calculator__col_right">
+                    <div
+                      class="calculator__multiplier"
+                      data-price="990"
+                      data-monthly-price="190"
+                    >
+                      <button class="calculator__decrement">-</button>
+                      <input
+                        class="calculator__input"
+                        type="number"
+                        value="0"
+                      />
+                      <button class="calculator__increment">+</button>
+                    </div>
+                    <h4 class="calculator__price calculator__price_disabled">
+                      <span class="calculator__price-fixed"> Не выбрано </span>
+                      <span class="calculator__price-per-month"></span>
+                    </h4>
+                  </div>
+                </div>
+                <div class="calculator__row">
+                  <div class="calculator__col calculator__col_left">
+                    <p class="text_regular">Номера 8-800</p>
+                  </div>
+                  <div class="calculator__col calculator__col_right">
+                    <div
+                      class="calculator__multiplier"
+                      data-price="990"
+                      data-monthly-price="190"
+                    >
+                      <button class="calculator__decrement">-</button>
+                      <input
+                        class="calculator__input"
+                        type="number"
+                        value="0"
+                      />
+                      <button class="calculator__increment">+</button>
+                    </div>
+                    <h4 class="calculator__price calculator__price_disabled">
+                      <span class="calculator__price-fixed"> Не выбрано </span>
+                      <span class="calculator__price-per-month"></span>
+                      <span
+                        class="tooltip"
+                        data-tooltip="Некоторые номера мы подключаем через партнёров, за них мы вынуждены взымать абонентскую плату (190 ₽ / месяц).  
+                      Абонплата за партнёрские номера и SIM-карты — единственные возможные ежемесячные платежи в Делофоне."
+                      >
+                      </span>
+                    </h4>
+                  </div>
+                </div>
+              </section>
+
+              <section class="calculator__section">
+                <div class="calculator__row calculator__row_offset-bottom">
+                  <div class="calculator__col">
+                    <h4>4. Способы связи</h4>
+                  </div>
+                </div>
+                <div
+                  class="calculator__row calculator__row_offset-bottom mobile-hidden"
+                >
+                  <div class="calculator__col calculator__col_left">
+                    <span class="text_regular">
+                      Свой IP-телефон, Приложение для ПК, Приложение для
+                      смартфона, API-интеграция
+                    </span>
+                    <div
+                      class="tooltip"
+                      aria-controls=""
+                      data-tooltip-conten="Возможность звонить напрямую из вашей CRM или любой другой внутренней бизнес-системы"
+                    ></div>
+                  </div>
+
+                  <div class="calculator__col calculator__col_right">
+                    <h4
+                      class="calculator__price calculator__price_disabled calculator__price_single"
+                    >
+                      Бесплатно
+                    </h4>
+                  </div>
+                </div>
+
+                <div class="calculator__row">
+                  <div class="calculator__col calculator__col_left">
+                    <p class="text_regular">IP-телефон Делофон</p>
+                  </div>
+                  <div class="calculator__col calculator__col_right">
+                    <div
+                      class="calculator__multiplier"
+                      data-price="3990"
+                      data-monthly-price="0"
+                    >
+                      <button class="calculator__decrement">-</button>
+                      <input
+                        class="calculator__input"
+                        type="number"
+                        value="0"
+                      />
+                      <button class="calculator__increment">+</button>
+                    </div>
+                    <h4 class="calculator__price calculator__price_disabled">
+                      <span class="calculator__price-fixed"> Не выбрано </span>
+                      <span class="calculator__price-per-month"></span>
+                    </h4>
+                  </div>
+                </div>
+
+                <div class="calculator__row">
+                  <div class="calculator__col calculator__col_left">
+                    <span>
+                      <p class="text_regular">SIM-карта (FMC)</p>
+                      <div class="tooltip"></div>
+                    </span>
+                  </div>
+                  <div class="calculator__col calculator__col_right">
+                    <div
+                      class="calculator__multiplier"
+                      data-price="990"
+                      data-monthly-price="190"
+                    >
+                      <button class="calculator__decrement">-</button>
+                      <input
+                        class="calculator__input"
+                        type="number"
+                        value="0"
+                      />
+                      <button class="calculator__increment">+</button>
+                    </div>
+                    <h4 class="calculator__price calculator__price_disabled">
+                      <span class="calculator__price-fixed"> Не выбрано </span>
+                      <span class="calculator__price-per-month"></span>
+                    </h4>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <section class="card_rounded-bot calculator__summary mobile-hidden">
+              <div class="calculator__row calculator__row_full-width">
+                <h4>Итого</h4>
+                <div class="calculator__price">
+                  <span class="calculator__sum" data-value="1190">1 990</span>
+                  <span class="calculator__sum-per-month" data-value="0"
+                    >0</span
+                  >
+                </div>
+              </div>
+            </section>
+            <section class="card card_black calculator__summary_mobile">
+              <h4>Итого</h4>
+              <div class="calculator__sum" data-value="1190">1990</div>
+              <div class="calculator__sum-per-month" data-value="0">0</div>
+            </section>
+          </div>
+          <div class="calculator__in-out">
+            <div class="container__flex">
+              <svg
+                width="50"
+                height="50"
+                viewBox="0 0 50 50"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="25" cy="25" r="25" fill="#F6F7F8" />
+                <circle
+                  cx="25"
+                  cy="25"
+                  r="14.5"
+                  fill="white"
+                  stroke="#F88C28"
+                />
+                <path
+                  d="M19 22V31H28"
+                  stroke="#F88C28"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M19 31L31 19"
+                  stroke="#F88C28"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h5>Входящие 0 ₽</h5>
+            </div>
+            <div class="container__flex">
+              <svg
+                width="50"
+                height="50"
+                viewBox="0 0 50 50"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="25" cy="25" r="25" fill="#F6F7F8" />
+                <circle
+                  cx="25"
+                  cy="25"
+                  r="14.5"
+                  fill="white"
+                  stroke="#F88C28"
+                />
+                <path
+                  d="M31 28V19H22"
+                  stroke="#F88C28"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M31 19L19 31"
+                  stroke="#F88C28"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h5>Исходящие 1.4 ₽/мин</h5>
+            </div>
+            <a class="link link_blue calculator__link">Посмотреть все цены →</a>
+          </div>
+        </div>
+        <div class="container">
+          <div
+            class="features__bottom container_adaptive card card_rounded-bot"
+          >
+            <div class="features__gift">
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+                class=""
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="30" cy="30" r="29.5" stroke="white" />
+                <path
+                  d="M45.8125 22.125H14.1875C13.3936 22.125 12.75 22.7686 12.75 23.5625V29.3125C12.75 30.1064 13.3936 30.75 14.1875 30.75H45.8125C46.6064 30.75 47.25 30.1064 47.25 29.3125V23.5625C47.25 22.7686 46.6064 22.125 45.8125 22.125Z"
+                  fill="white"
+                />
+                <path
+                  d="M44.375 31.75V44.6875C44.375 45.0687 44.2236 45.4344 43.954 45.704C43.6844 45.9736 43.3187 46.125 42.9375 46.125H17.0625C16.6813 46.125 16.3156 45.9736 16.046 45.704C15.7765 45.4344 15.625 45.0687 15.625 44.6875V31.75"
+                  fill="white"
+                />
+                <path
+                  d="M39.1317 20.0916C37.0988 22.1245 31 22.1245 31 22.1245C31 22.1245 31 16.0257 33.0329 13.9928C33.8418 13.1848 34.9385 12.7311 36.0818 12.7314C37.2251 12.7318 38.3215 13.1861 39.13 13.9945C39.9384 14.803 40.3928 15.8994 40.3931 17.0427C40.3934 18.186 39.9397 19.2827 39.1317 20.0916V20.0916Z"
+                  stroke="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M20.8678 20.0916C22.9007 22.1245 28.9995 22.1245 28.9995 22.1245C28.9995 22.1245 28.9995 16.0257 26.9666 13.9928C26.1577 13.1848 25.061 12.7311 23.9177 12.7314C22.7744 12.7318 21.678 13.1861 20.8695 13.9945C20.0611 14.803 19.6068 15.8994 19.6064 17.0427C19.6061 18.186 20.0598 19.2827 20.8678 20.0916V20.0916Z"
+                  stroke="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M30 13V47"
+                  stroke="#344351"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h4>Протестируйте АТС сразу&nbsp;после&nbsp;регистрации</h4>
+            </div>
+            <ul class="list list_grid-2x2">
+              <li class="list-item list-item_checked">Все функции АТС</li>
+              <li class="list-item list-item_checked">100 ₽ на балансе</li>
+              <li class="list-item list-item_checked">3 сотрудника</li>
+              <li class="list-item list-item_checked">1 телефонный номер</li>
+            </ul>
+            <button type="button" class="button button_blue features__button">
+              Начать бесплатно
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="startuse">
+        <div class="container">
+          <div class="container_adaptive">
+            <div class="startuse__textblock">
+              <div class="startuse__header">
+                <h2>Начните использовать сразу после регистрации</h2>
+              </div>
+              <div class="text_regular startuse__text">
+                Получите доступ ко всем возможностям виртуальной АТС
+              </div>
+
+              <ul class="list">
+                <li class="list-item list-item_checked text_small">
+                  Без навязчивых звонков после регистрации
+                </li>
+                <li class="list-item list-item_checked text_small">
+                  Настройте самостоятельно или с нашим менеджером
+                </li>
+                <li class="list-item list-item_checked text_small">
+                  3 сотрудника, 1 номер, 100 ₽ на балансе
+                </li>
+                <li class="list-item list-item_checked text_small">
+                  Протестируйте АТС сразу после регистрации
+                </li>
+              </ul>
+              <button
+                type="button"
+                class="button button_blue button__start startuse__button"
+              >
+                Начать бесплатно
+              </button>
+            </div>
+            <div class="startuse__image">
+              <img alt="Шаги для использования" src="/stepuse.svg" />
+            </div>
+            <div class="startuse__image_mobile">
+              <img alt="Шаги для использования" src="/stepsuse.mobile.svg" />
+            </div>
+            <button
+              type="button"
+              class="button button_blue button__start startuse__button_mobile"
+            >
+              Начать бесплатно
+            </button>
+          </div>
+        </div>
+      </section>
       <section class="faq">
         <div class="container">
-          <h1>Остались вопросы</h1>
+          <h1>Остались вопросы ?</h1>
           <div class="faq__cards">
             <article class="card_white faq__card collapse collapse_closed">
               <h4 class="faq__question collapse__activator">
