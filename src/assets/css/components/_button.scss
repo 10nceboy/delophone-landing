@@ -98,10 +98,17 @@
 
   &_with-icon {
     @include flex-row;
+    padding: $spacer * 3 $spacer * 3;
   }
 
   &__icon {
     margin-right: $spacer * 2;
+    flex-grow: 1;
+
+    @include laptop {
+      min-width: 25px;
+      min-height: 25px;
+    }
   }
 }
 

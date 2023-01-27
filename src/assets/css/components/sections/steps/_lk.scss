@@ -4,8 +4,6 @@
     @include flex-col;
 
     @include laptop {
-      @include flex-row;
-
       padding: $spacer * 6 $spacer * 10;
     }
 
@@ -14,11 +12,21 @@
       color: $white;
 
       .lk__text {
-        color: $white;
+        color: $light-gray !important;
+        margin-top: $spacer * 2;
+
+        @include laptop {
+          margin-top: $spacer;
+          white-space: nowrap;
+        }
       }
 
       h4 {
         color: $white;
+      }
+
+      @include laptop {
+        @include flex-row;
       }
     }
   }
@@ -40,7 +48,7 @@
   &__tabs-items {
     @include laptop {
       img {
-        width: 1000px;
+        width: 1010px;
       }
       margin-top: $spacer * 5;
     }
@@ -57,9 +65,11 @@
   &__support {
     @include flex-col;
     margin-right: 33px;
+    color: $white;
 
     @include laptop {
       &__text {
+        color: $light-gray !important;
         margin-bottom: $spacer * 2;
       }
     }
@@ -74,9 +84,17 @@
     }
   }
 
+  &__whatsapp-button {
+    width: 100%;
+
+    @include laptop {
+      width: 239px;
+    }
+  }
+
   &__answer-time {
-    color: $white;
+    color: $light-gray;
     max-width: 115px;
-    margin-left: $spacer * 6;
+    margin-left: $spacer * 4;
   }
 }
