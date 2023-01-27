@@ -1,12 +1,27 @@
 .list-item {
   display: flex;
   font-size: 15px;
-  margin: $spacer * 2 0;
+  margin: 2.5px 0;
   line-height: 23px;
+
+  &:last-child {
+    margin-bottom: 0;
+    @include laptop {
+      margin: $spacer * 2 0;
+    }
+  }
+
+  &:first-child {
+    margin-top: 0;
+    @include laptop {
+      margin: $spacer * 2 0;
+    }
+  }
 
   @include laptop {
     font-size: 16px;
     align-items: center;
+    margin: $spacer * 2 0;
   }
 
   &_checked {

@@ -91,6 +91,16 @@ h5 {
   }
 }
 
+.text_regular_14 {
+  @include font(400, 14px, $gray);
+  line-height: 21px;
+
+  @include laptop {
+    @include font(400, 14px, $gray);
+    line-height: 21px;
+  }
+}
+
 .text_small {
   @include font(400, 15px, $gray);
   line-height: 23.25px;
