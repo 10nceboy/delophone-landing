@@ -1,0 +1,45 @@
+.cases-bottom {
+  margin-top: $spacer * 12;
+
+  @include laptop {
+    margin-top: $spacer * 14;
+  }
+
+  &__textblock-header {
+    margin-bottom: $spacer;
+
+    @include laptop {
+      margin-bottom: $spacer * 2;
+    }
+  }
+}
+
+.casess-bottom__card {
+  padding: $spacer * 4;
+
+  @include laptop {
+    padding: $spacer * 10;
+  }
+}
+
+.cases-bottom__textblock {
+  max-width: 100%;
+  margin-bottom: $spacer * 4;
+
+  @include laptop {
+    min-width: 307px;
+    margin-bottom: 0px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    &:first-child {
+      margin-right: 37px;
+    }
+  }
+}
+
+.cases-bottom__textblock-text {
+  width: 100%;
+}

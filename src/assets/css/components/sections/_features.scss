@@ -94,13 +94,21 @@
     color: $white;
     background: $black;
     padding: $spacer * 4;
+    align-items: flex-start;
+    box-sizing: border-box;
 
     @include laptop {
-      padding: $spacer * 10;
+      padding: $spacer * 6 $spacer * 10;
+      align-items: center;
+      box-sizing: initial;
     }
 
     h4 {
       color: $white;
+      font-size: 16px;
+      @include laptop {
+        font-size: 20px;
+      }
     }
   }
 
@@ -108,30 +116,46 @@
     margin-right: 12px;
     margin-bottom: $spacer * 3;
     @include flex-row;
+    height: 42px;
 
     @include laptop {
       margin-right: $spacer * 4;
       margin-bottom: 0;
+      height: auto;
     }
 
     svg {
-      margin-right: $spacer * 3;
+      margin-right: 12px;
+      max-height: 40px;
 
       @include laptop {
         margin-right: $spacer * 5;
+        max-height: none;
       }
     }
   }
 
   &__button {
     margin-top: $spacer * 4;
-
+    font-size: 15px;
     width: 100%;
     align-self: center;
+    padding: 15px 50px;
+    height: 55px;
 
     @include laptop {
       margin: 0 0 0 $spacer * 12;
       width: 220px;
+      font-size: 16px;
+      padding: 15px 30px;
+      height: auto;
     }
+  }
+}
+
+.gift__list {
+  margin-left: $spacer;
+  @include laptop {
+    margin-left: 0px;
   }
 }
