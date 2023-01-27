@@ -3,8 +3,6 @@ import { phones, addresses } from '../constants/contacts';
 
 import { watchValue } from '../utils/watch';
 
-const citiesDropdowns = document.querySelectorAll('.city');
-
 citiesDropdowns.forEach((dropdown) => {
   watchValue(dropdown, (el) => {
     const { value } = el.dataset;
