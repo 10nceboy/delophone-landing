@@ -7,3 +7,4 @@ import '~/js/components/calculator';
 import '~/js/components/tabs';
 import '~/js/components/carousel';
 import '~/js/components/tooltip';
+import '~/js/components/hero';
