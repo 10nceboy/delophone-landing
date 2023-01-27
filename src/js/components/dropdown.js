@@ -29,12 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('click', (evt) => {
       let targetEl = evt.target;
-      do {
-        if (targetEl == dropdown) {
-          return;
-        }
-        targetEl = targetEl.parentNode;
-      } while (targetEl);
+
       dropdown.classList.remove('.active');
     });
 

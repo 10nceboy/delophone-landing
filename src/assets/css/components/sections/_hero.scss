@@ -45,6 +45,7 @@
 
     @include laptop {
       margin-right: auto;
+      min-width: 300px;
       background-color: $light-gray;
       border-radius: 0px $spacer 0 $spacer;
       padding: 16px $spacer * 4 $spacer * 3;
