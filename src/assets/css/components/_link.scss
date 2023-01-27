@@ -19,13 +19,4 @@
       color: $deep-blue !important;
     }
   }
-
-  &_with-arrow {
-    display: inline-flex;
-
-    ::after {
-      display: block;
-      content: '→';
-    }
-  }
 }

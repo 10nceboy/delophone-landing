@@ -90,34 +90,34 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const updatePrices = (inputValue, input, price, monthlyPrice) => {
-    const priceParentDiv =
+    const priceParenEl =
       input?.parentElement?.parentElement.querySelector('.calculator__price');
 
-    const priceDiv = priceParentDiv?.querySelector('.calculator__price-fixed');
-    const monthlyPriceDiv = priceParentDiv.querySelector(
+    const priceEl = priceParenEl?.querySelector('.calculator__price-fixed');
+    const monthlyPriceEL = priceParenEl.querySelector(
       '.calculator__price-per-month'
     );
-    const tooltip = priceParentDiv.querySelector('.tooltip');
+    const tooltip = priceParenEl.querySelector('.tooltip');
 
     if (inputValue > 0) {
-      priceDiv.textContent = `${price * inputValue} ₽ разово${
-        monthlyPriceDiv ? ',' : ''
+      priceEl.textContent = `${price * inputValue} ₽ разово${
+        monthlyPriceEL ? ',' : ''
       }`;
-      priceDiv.classList.remove('calculator__price_disabled');
-      if (monthlyPriceDiv && monthlyPrice) {
-        monthlyPriceDiv.textContent = `${monthlyPrice} ₽ / месяц.`;
+      priceParenEl.classList.remove('calculator__price_disabled');
+      if (monthlyPriceEL && monthlyPrice) {
+        monthlyPriceEL.textContent = `${monthlyPrice} ₽ / месяц.`;
       }
       if (tooltip) {
         tooltip.style.display = 'block';
       }
     } else {
-      priceDiv.textContent = 'Не выбрано';
-      priceDiv.classList.add('calculator__price_disabled');
+      priceEl.textContent = 'Не выбрано';
+      priceParenEl.classList.add('calculator__price_disabled');
       if (tooltip) {
         tooltip.style.display = 'none';
       }
-      if (monthlyPriceDiv && monthlyPrice) {
-        monthlyPriceDiv.textContent = '';
+      if (monthlyPriceEL && monthlyPrice) {
+        monthlyPriceEL.textContent = '';
       }
     }
   };

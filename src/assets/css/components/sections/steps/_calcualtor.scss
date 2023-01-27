@@ -88,6 +88,10 @@
       height: auto;
     }
 
+    &_full-width {
+      width: 100%;
+    }
+
     &_offset-bottom {
       @include laptop {
         margin-bottom: $spacer * 8;
@@ -181,7 +185,7 @@
 
     &_disabled {
       font-weight: 500;
-      color: $gray;
+      color: $gray !important;
     }
 
     &_align-right {
