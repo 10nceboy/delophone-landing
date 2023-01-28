@@ -4,6 +4,9 @@
   background: $white;
   padding: $spacer * 4;
   border-radius: $border-radius-xl;
+  position: relative;
+  transform-style: preserve-3d;
+  z-index: 2;
 
   @include tablet {
     max-width: 1110px;
@@ -459,5 +462,19 @@
   color: $orange;
   @include tablet {
     color: $black;
+  }
+}
+
+.arc {
+  height: 0;
+  z-index: 1;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: url('/public/arc-step-5.svg');
+    top: -165px;
+    right: -$spacer * 15;
+    z-index: -1;
   }
 }

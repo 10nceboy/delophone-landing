@@ -2,6 +2,8 @@
   &__card {
     padding: $spacer * 4;
     @include flex-col;
+    position: relative;
+    z-index: 2;
 
     @include laptop {
       padding: $spacer * 6 $spacer * 10;
