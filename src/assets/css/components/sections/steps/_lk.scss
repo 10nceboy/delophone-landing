@@ -115,8 +115,25 @@
     margin-bottom: $spacer * 3;
     overflow: visible;
 
+    &_active {
+      padding-bottom: $spacer * 3;
+      border-bottom: 1px solid $dim-gray;
+
+      .collapse__activator {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+
     .collapse__activator {
       min-height: 25px;
+      padding-bottom: $spacer * 3;
+      border-bottom: 1px solid $dim-gray;
+
+      @include laptop {
+        border: none;
+        padding-bottom: none;
+      }
     }
   }
 }
