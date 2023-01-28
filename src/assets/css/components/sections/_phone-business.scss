@@ -75,28 +75,25 @@
       height: 124px;
       display: flex;
       align-items: center;
+      justify-content: space-around;
 
       h4,
       p {
-        margin-left: $spacer * 6;
+        text-align: left;
       }
 
+      p {
+        margin-bottom: 0px;
+      }
       padding: 0;
     }
   }
 
   &__card-numbers {
     @include flex-row;
-    justify-content: space-around;
 
-    @include tablet {
-      display: grid;
-      grid-template-columns: repeat(3, 78px);
-      grid-template-rows: repeat(2, 37px);
-      grid-row-gap: 10px;
-      margin-right: 30px;
-      margin-left: 22px;
-      padding: 0;
+    @include laptop {
+      display: block;
     }
   }
 
@@ -107,6 +104,7 @@
     align-items: center;
     @include font(500, 16px, $orange);
     padding: $spacer;
+    flex: 1;
     min-height: 24px;
     letter-spacing: -1px;
 
@@ -115,19 +113,16 @@
     }
 
     @include tablet {
-      padding: 0;
+      padding: 0 $spacer;
       justify-content: center;
       @include font(500, 24px, $orange);
       min-height: 37px;
-      width: 60px;
-      margin-left: 15px;
 
       svg {
         height: 18px;
       }
 
       &:first-child {
-        width: 60px;
         margin-left: 0;
       }
 
@@ -137,7 +132,6 @@
 
       &:nth-child(2),
       &:nth-child(3) {
-        margin-left: 0px;
         display: flex;
       }
 
@@ -258,4 +252,21 @@
   @include tablet {
     display: none;
   }
+}
+
+.phone-bussines__numbers_up {
+  @include tablet {
+    @include flex-row;
+    gap: $spacer * 3;
+    margin-bottom: $spacer * 2;
+    align-self: flex-end;
+    margin-left: 20px;
+  }
+}
+
+.phone-business_numbers_down {
+  @include flex-row;
+  gap: $spacer * 3;
+  align-self: flex-end;
+  margin-left: 20px;
 }
