@@ -13,7 +13,8 @@
   &__card {
     margin-bottom: $spacer * 3;
     padding: $spacer * 4;
-    padding-bottom: 0;
+    box-sizing: border-box;
+
     background: white;
     border-radius: $border-radius-xl;
 
@@ -23,6 +24,10 @@
 
     :last-child {
       margin-bottom: 0;
+    }
+
+    @include laptop {
+      padding: $spacer * 10;
     }
   }
 
@@ -40,10 +45,13 @@
   &__question {
     display: flex;
     align-items: flex-start;
-    margin-bottom: $spacer * 2;
   }
 
   &__answer {
+    p {
+      margin-top: $spacer * 2;
+    }
+
     @include font(400, 14px, $gray);
     line-height: 21px;
 

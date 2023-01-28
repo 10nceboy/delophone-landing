@@ -39,10 +39,11 @@
   }
 
   &_blue {
+    max-height: 55px;
+
     background-color: $blue;
     @include font(400, 16px, $white);
     border-color: transparent;
-    line-height: 25px;
 
     &:hover {
       background-color: $deep-blue;

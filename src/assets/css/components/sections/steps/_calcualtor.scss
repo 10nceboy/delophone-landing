@@ -5,7 +5,7 @@
   padding: $spacer * 4;
   border-radius: $border-radius-xl;
 
-  @include laptop {
+  @include tablet {
     max-width: 1110px;
     padding: $spacer * 9 $spacer * 10;
   }
@@ -32,7 +32,7 @@
     margin-bottom: $spacer * 4;
     border-bottom: 1px solid #cdd6df;
 
-    @include laptop {
+    @include tablet {
       border-bottom: none;
       margin-bottom: $spacer * 7;
     }
@@ -53,7 +53,7 @@
 
     @include flex-col;
 
-    @include laptop {
+    @include tablet {
       display: block;
       min-width: 481px;
       max-width: none;
@@ -65,7 +65,7 @@
   &__chips {
     display: none;
 
-    @include laptop {
+    @include tablet {
       display: flex;
       margin-top: $spacer * 3;
       gap: $spacer * 2;
@@ -74,7 +74,7 @@
   }
 
   &__start {
-    @include laptop {
+    @include tablet {
       display: none;
     }
   }
@@ -84,7 +84,7 @@
     align-items: baseline;
     justify-content: space-between;
 
-    @include laptop {
+    @include tablet {
       margin-bottom: $spacer * 3;
       color: $gray;
       height: 36px;
@@ -108,7 +108,7 @@
     }
 
     &_offset-bottom {
-      @include laptop {
+      @include tablet {
         height: 62px;
         align-items: flex-end;
       }
@@ -117,7 +117,7 @@
     &_flex-start {
       align-items: flex-start;
 
-      @include laptop {
+      @include tablet {
         align-items: center;
       }
     }
@@ -138,7 +138,7 @@
         min-width: 142px;
       }
 
-      @include laptop {
+      @include tablet {
         margin-right: $spacer * 4;
         min-width: 365px;
         max-width: 365px;
@@ -150,7 +150,7 @@
       }
 
       &::after {
-        @include laptop {
+        @include tablet {
           content: '';
           margin-top: -1px;
           flex-grow: 1;
@@ -164,7 +164,7 @@
       margin-right: 0;
       max-width: 250px;
 
-      @include laptop {
+      @include tablet {
         max-width: 100%;
         width: auto;
       }
@@ -174,7 +174,7 @@
       @include flex-col;
       position: relative;
 
-      @include laptop {
+      @include tablet {
         @include flex-row;
         width: fit-content;
         flex-grow: 1;
@@ -226,12 +226,12 @@
       align-self: flex-end;
       min-width: 0px !important;
 
-      @include laptop {
+      @include tablet {
         display: none;
       }
     }
 
-    @include laptop {
+    @include tablet {
       font-size: inherit;
       line-height: inherit;
       color: $gray;
@@ -246,7 +246,7 @@
       max-width: 144px;
       min-width: 144px;
 
-      @include laptop {
+      @include tablet {
         display: block;
       }
 
@@ -266,7 +266,7 @@
   }
 
   &__ip-tel {
-    @include laptop {
+    @include tablet {
       align-items: flex-end;
       min-width: 485px;
 
@@ -283,7 +283,7 @@
     margin-bottom: $spacer;
     width: 78px;
 
-    @include laptop {
+    @include tablet {
       margin-right: $spacer * 4;
       margin-bottom: 0;
       padding: 2px 10px;
@@ -298,7 +298,7 @@
     color: $gray;
     display: inline;
 
-    @include laptop {
+    @include tablet {
       font-size: 20px;
       white-space: nowrap;
     }
@@ -344,12 +344,12 @@
       }
       @include font(400, 14px, $white);
       padding: 20px 15px;
-      @include laptop {
+      @include tablet {
         display: none;
       }
     }
 
-    @include laptop {
+    @include tablet {
       padding: $spacer * 4 $spacer * 6;
       background: $light-gray;
       border: 1px solid $light-gray;
@@ -368,11 +368,15 @@
 
   &__sum {
     display: inline;
-    color: $black;
+    color: $white;
 
     &::after {
       display: inline;
       content: ' ₽  разово,';
+    }
+
+    @include tablet {
+      color: $black;
     }
   }
 
@@ -402,12 +406,12 @@
     svg {
       display: none;
 
-      @include laptop {
+      @include tablet {
         display: block;
       }
     }
 
-    @include laptop {
+    @include tablet {
       margin-top: $spacer * 6;
       margin-bottom: $spacer * 10;
       @include flex-row;
@@ -429,7 +433,7 @@
   &__link {
     margin-top: $spacer * 2;
 
-    @include laptop {
+    @include tablet {
       margin-left: auto;
       margin-top: 0;
     }
@@ -439,7 +443,7 @@
     @include font(400, 14px, $orange);
     margin-left: $spacer;
 
-    @include laptop {
+    @include tablet {
       @include font(400, 16px, $gray);
     }
   }
@@ -452,5 +456,8 @@
 }
 
 .calculator__price-fixed {
-  color: $black;
+  color: $orange;
+  @include tablet {
+    color: $black;
+  }
 }
