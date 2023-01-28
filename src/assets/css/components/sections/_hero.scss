@@ -74,6 +74,12 @@
     height: 33.3%;
     width: 100%;
 
+    &:first-child {
+      margin-top: $spacer * 9;
+      @include laptop {
+      }
+    }
+
     h4 {
       margin-left: $spacer * 2;
     }
