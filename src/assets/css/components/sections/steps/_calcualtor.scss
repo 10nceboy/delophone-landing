@@ -3,8 +3,7 @@
   box-sizing: border-box;
   background: $white;
   padding: $spacer * 4;
-  border-radius: 12px;
-
+  border-radius: $border-radius-xl;
   @include laptop {
     max-width: 1110px;
     padding: $spacer * 9 $spacer * 10;
@@ -46,7 +45,7 @@
     box-sizing: border-box;
 
     background: $light-gray;
-    border-radius: $btn-border-radius;
+    border-radius: $border-radius-xs;
     max-width: 250px;
     padding: $spacer * 3;
     margin-top: $spacer * 4;
@@ -274,7 +273,7 @@
 
   &__multiplier {
     @include flex-row;
-    border-radius: $btn-border-radius;
+    border-radius: $border-radius-xs;
     border: 1px solid $dim-gray;
     margin-bottom: $spacer;
     width: 78px;

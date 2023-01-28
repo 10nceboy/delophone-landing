@@ -10,14 +10,11 @@
     margin-top: $spacer * 5;
   }
 
-
-
-  
   &__card {
     margin-bottom: $spacer * 3;
     padding: $spacer * 4;
     background: white;
-    border-radius: 12px;
+    border-radius: $border-radius-xl;
 
     &:hover {
       outline: 1px $blue solid;

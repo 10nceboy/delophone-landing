@@ -86,3 +86,9 @@
     display: flex !important;
   }
 }
+
+.mobile-only {
+  @include laptop {
+    display: none;
+  }
+}

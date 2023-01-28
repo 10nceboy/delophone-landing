@@ -1,6 +1,6 @@
 .chip {
   padding: $spacer * 3;
-  border-radius: $btn-border-radius;
+  border-radius: $border-radius-xs;
 
   &_light-gray {
     @include laptop {
