@@ -22,7 +22,7 @@
   }
 
   &_round {
-    border-radius: 12px;
+    border-radius: $border-radius-xl;
     margin-bottom: $spacer * 2;
     padding: $spacer * 3;
     @include flex-col;
@@ -59,15 +59,15 @@
   }
 
   &_rectangle {
-    border-radius: 12px;
+    border-radius: $border-radius-xl;
   }
 
   &_rounded-bot {
-    border-radius: 0px 0px 12px 12px;
+    border-radius: 0px 0px $border-radius-xl $border-radius-xl;
   }
 
   &_rounded-top {
-    border-radius: 12px 12px 0px 0px;
+    border: $border-radius-xl $border-radius-xl 0px 0px;
   }
 }
 

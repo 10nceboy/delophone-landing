@@ -21,9 +21,9 @@ $spacer: 5px;
 /*transitions*/
 $btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
   border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-$btn-border-radius: 5px;
-
 $opacity-transition: opacity 0.3s ease-out;
+$collapse-transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+$dropdown-transition: 0.15s ease-in;
 
 /**elevations **/
 $elevations: (
@@ -36,8 +36,10 @@ $elevations: (
 
 /*borders*/
 $border-orange: 1px solid $orange;
-$border12: 12px;
+$border-radius-xl: 12px;
+$border-radius-xs: 5px;
 
 /**z-index **/
 $zindex-modal: 100;
 $zindex-modal-dialog: 100;
+$z-index-hidden: -1;

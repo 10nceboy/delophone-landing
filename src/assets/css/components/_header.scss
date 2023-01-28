@@ -222,6 +222,7 @@
   &.active {
     @include visible($opacity-transition);
     background-color: $light-gray;
+    display: block;
 
     @include laptop {
       @include hidden;

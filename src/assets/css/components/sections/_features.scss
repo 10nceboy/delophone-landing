@@ -1,8 +1,7 @@
 .features {
   margin-top: 40px;
   background: $light-gray;
-  border-radius: 12px;
-
+  border-radius: $border-radius-xl;
   &__block {
     padding: $spacer * 4;
 
