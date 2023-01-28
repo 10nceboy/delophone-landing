@@ -80,11 +80,11 @@
     }
 
     @include tablet {
-      padding: 0;
+      padding: $spacer * 6;
       height: 124px;
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      min-width: 475px;
 
       h4,
       p {
@@ -94,7 +94,6 @@
       p {
         margin-bottom: 0px;
       }
-      padding: 0;
     }
   }
 
@@ -160,12 +159,12 @@
       position: relative;
       z-index: $z-index-hidden;
       top: -30px;
-      left: 20px;
+      left: 0px;
 
       @include tablet {
         content: url('/public/v1.svg');
-        top: 0;
-        left: 0;
+        top: 18px;
+        left: 0px;
       }
     }
 
@@ -177,6 +176,7 @@
       margin-top: 0;
       text-align: center;
       width: 100%;
+      margin-top: -10px;
 
       h5 {
         text-align: center;
@@ -197,6 +197,10 @@
       @include flex-row;
     }
     flex-grow: 1;
+  }
+
+  &__your-numbers {
+    flex: 1 1;
   }
 }
 
@@ -261,16 +265,15 @@
     gap: $spacer * 3;
     margin-bottom: $spacer * 2;
     align-self: flex-end;
-    margin-left: 20px;
   }
 
   div {
     &:nth-child(2) {
       display: none;
-    }
 
-    @include tablet {
-      display: block;
+      @include tablet {
+        display: block;
+      }
     }
   }
 }
@@ -280,7 +283,5 @@
 
   @include tablet {
     gap: $spacer * 3;
-    align-self: flex-end;
-    margin-left: 20px;
   }
 }
