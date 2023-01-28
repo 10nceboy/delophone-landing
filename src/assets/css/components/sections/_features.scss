@@ -6,8 +6,11 @@
   &__block {
     padding: $spacer * 4;
 
-    @include laptop {
+    @include tablet {
       display: flex;
+    }
+
+    @include laptop {
       padding: $spacer * 10;
     }
   }

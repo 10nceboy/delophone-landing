@@ -34,8 +34,21 @@ export const isTouchDevice = () => {
   );
 };
 
-export const smoothScroll = (el, block = 'end', delay = 160) => {
-  window.setTimeout(() => {
-    el.scrollIntoView({ behavior: 'smooth', block });
-  }, delay);
+export const scrollToElement = (element) => {
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.8
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        observer.disconnect();
+      }
+    });
+  }, options);
+
+  observer.observe(element);
 };

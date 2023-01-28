@@ -1,4 +1,6 @@
 .card {
+  box-sizing: border-box;
+
   &_light-gray {
     background-color: $light-gray;
 

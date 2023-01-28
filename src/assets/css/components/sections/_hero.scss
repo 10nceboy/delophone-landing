@@ -44,7 +44,6 @@
     margin-top: $spacer * 2;
 
     @include laptop {
-      margin-right: auto;
       min-width: 300px;
       background-color: $light-gray;
       border-radius: 0px $spacer 0 $spacer;
@@ -57,7 +56,26 @@
       flex-shrink: 0;
     }
   }
+
+  &__card-container {
+    max-height: 100%;
+    margin-top: 45px;
+
+    @include laptop {
+      align-items: flex-start;
+      @include flex-col;
+
+      max-height: 230px;
+      max-width: 290px;
+    }
+  }
+
   &__card {
+    padding: $spacer * 5 $spacer * 4 $spacer * 4 $spacer * 4;
+    margin: 0 0 15px 0;
+    height: 33.3%;
+    width: 100%;
+
     h4 {
       margin-left: $spacer * 2;
     }
@@ -66,41 +84,26 @@
       margin-bottom: $spacer * 3;
     }
 
-    padding: $spacer * 5 $spacer * 4 $spacer * 4 $spacer * 4;
-    margin: 0 auto $spacer * 3;
-
-    &:first-child {
-      margin-top: $spacer * 5;
-    }
-
-    &:last-child {
-      margin-bottom: $spacer * 16;
-    }
-
     @include laptop {
       margin-right: $spacer * 6;
+      max-width: 100%;
       flex-grow: 1;
-      width: $spacer * 70;
       padding: $spacer * 9 $spacer * 4 $spacer * 8 $spacer * 4;
       margin-top: 58px;
       margin-bottom: 0px;
-
-      &:first-child {
-        margin-top: 58px;
-      }
-
-      &:last-child {
-        margin-top: 58px;
-        margin-right: 0;
-        margin-bottom: 0px;
-      }
+      max-height: 230px;
 
       h4 {
         margin-left: $spacer * 4;
       }
-      .container-flex {
-        margin-bottom: $spacer * 4;
+
+      &:last-child {
+        margin-right: 0px;
       }
     }
+  }
+
+  &__text {
+    margin-top: $spacer * 3;
   }
 }

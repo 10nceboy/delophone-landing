@@ -17,13 +17,7 @@
   margin: 0 auto;
   width: calc(100vw - 30px);
 
-  @include desktop {
-    width: calc(100vw - 330px);
-    max-width: 1110px;
-  }
-
   @include wide-screen {
-    width: calc(100vw - 165px);
     max-width: auto;
   }
 
@@ -33,7 +27,7 @@
   }
 
   @include tablet {
-    width: calc(100vw - 120px);
+    width: calc(100vw - 40px);
   }
 
   &.container-bottom {
