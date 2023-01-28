@@ -1,9 +1,10 @@
 .cases {
   @include flex-col;
-  padding: 80px 0;
+  padding: 60px 0;
 
   @include laptop {
     @include flex-row;
+    padding: 80px 0;
   }
 
   &__card {

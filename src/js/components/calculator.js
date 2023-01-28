@@ -1,4 +1,4 @@
-import { debounce } from '../utils/common';
+import { debounce, formatNumber } from '../utils/common';
 
 document.addEventListener('DOMContentLoaded', () => {
   const sumDivs = document.querySelectorAll('.calculator__sum');
@@ -6,46 +6,32 @@ document.addEventListener('DOMContentLoaded', () => {
     '.calculator__sum-per-month'
   );
 
-  let commonPrice = 1990;
+  let commonPrice = 1900;
   let commonMonthlyPrice = 0;
-
-  const getSum = () => {
-    return commonPrice;
-  };
 
   const setSum = (value) => {
     commonPrice = parseInt(value, 10);
     sumDivs.forEach((sumDiv) => {
-      sumDiv.textContent = commonPrice;
+      sumDiv.textContent = formatNumber(commonPrice);
     });
-  };
-
-  const getSumPerMonth = () => {
-    return commonMonthlyPrice;
   };
 
   const setSumPerMonth = (value) => {
     commonMonthlyPrice = parseInt(value, 10);
-
     sumPerMonthDivs.forEach(
-      (sumPerMonthDiv) => (sumPerMonthDiv.textContent = commonMonthlyPrice)
+      (sumPerMonthDiv) =>
+        (sumPerMonthDiv.textContent = formatNumber(commonMonthlyPrice))
     );
   };
 
-  const addSums = (sum, perMonth, multiplier = 1) => {
-    setSum(getSum() + sum * multiplier);
-    setSumPerMonth(getSumPerMonth() + perMonth * multiplier);
+  const calcSums = (sum, perMonth) => {
+    setSum(commonPrice + sum);
+    setSumPerMonth(commonMonthlyPrice + perMonth);
   };
 
-  const subSums = (sum, perMonth, multiplier = 1) => {
-    setSum(getSum() - sum * (multiplier == 0 ? 1 : multiplier));
-    setSumPerMonth(
-      getSumPerMonth() - perMonth * (multiplier == 0 ? 1 : multiplier)
-    );
-  };
-
-  const getInputValue = (input) => {
-    return parseInt(input.value, 10);
+  const getInputValue = ({ value }) => {
+    if (value.trim() === '') return 0;
+    return parseInt(value, 10);
   };
 
   const setInputValue = (input, value) => {
@@ -64,8 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     input.prevValue = value;
-    setInputValue(input, getInputValue(input) - 1);
-    input.dispatchEvent(new Event('change'));
+    setInputValue(input, value - 1);
   };
 
   const allowedKeys = [
@@ -100,12 +85,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const tooltip = priceParenEl.querySelector('.tooltip');
 
     if (inputValue > 0) {
-      priceEl.textContent = `${price * inputValue} ₽ разово${
+      const formattedPrice = formatNumber(price * inputValue);
+      const formattedmonthlyPrice = formatNumber(monthlyPrice * inputValue);
+
+      priceEl.textContent = `${formattedPrice}₽ разово${
         monthlyPriceEL ? ',' : ''
       }`;
       priceParenEl.classList.remove('calculator__price_disabled');
       if (monthlyPriceEL && monthlyPrice) {
-        monthlyPriceEL.textContent = `${monthlyPrice} ₽ / месяц.`;
+        monthlyPriceEL.textContent = `${formattedmonthlyPrice} ₽ / месяц.`;
       }
       if (tooltip) {
         tooltip.style.display = 'block';
@@ -125,11 +113,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const onChange = function (input, price, monthlyPrice) {
     const inputValue = getInputValue(input);
     const prevValue = parseInt(input.prevValue, 10);
-    if (inputValue > prevValue) {
-      addSums(price, monthlyPrice, inputValue);
-    } else {
-      subSums(price, monthlyPrice, inputValue);
-    }
+    const diff = inputValue === 0 ? -prevValue : inputValue - prevValue;
+    calcSums(
+      parseInt(price, 10) * diff,
+      parseInt(monthlyPrice) * diff,
+      inputValue * diff
+    );
+
+    input.prevValue = inputValue;
+
     updatePrices(inputValue, input, price, monthlyPrice);
   };
 
@@ -140,26 +132,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const price = multiplier.dataset.price;
     const monthlyPrice = multiplier.dataset.monthlyPrice;
 
-    const handleInputChange = (event) => {
-      if (event.target.value === '') {
-        event.target.value = 0;
-      }
+    const handleInputChange = () => {
       onChangeDebounced(input, price, monthlyPrice);
     };
 
     multiplier
       .querySelector('.calculator__increment')
-      .addEventListener('mousedown', () => increment(input));
+      .addEventListener('click', () => increment(input));
     multiplier
       .querySelector('.calculator__decrement')
-      .addEventListener('mousedown', () => decrement(input));
+      .addEventListener('click', () => decrement(input));
 
     input.addEventListener('focus', () => {
       const inputValue = getInputValue(input);
       input.prevValue = inputValue;
-      if (inputValue === 0) {
-        input.value = '';
-      }
     });
 
     input.addEventListener('blur', () => {
@@ -172,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
       handleInputChange(event);
     });
 
-    input.addEventListener('change', (event) => {
+    input.addEventListener('change', () => {
       handleInputChange(event);
     });
 

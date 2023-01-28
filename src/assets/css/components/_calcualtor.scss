@@ -306,7 +306,8 @@
     outline: none;
     border: none;
     text-align: center;
-    appearance: none;
+
+    -webkit-appearance: none;
     -moz-appearance: textfield;
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {

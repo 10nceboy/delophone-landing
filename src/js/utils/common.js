@@ -7,3 +7,6 @@ export const debounce = (func, timeout = 150) => {
     }, timeout);
   };
 };
+
+export const formatNumber = (n, separator = ' ') =>
+  n.toLocaleString('en').replace(/,/g, separator);

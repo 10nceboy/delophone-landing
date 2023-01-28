@@ -1,10 +1,4 @@
 .cases-bottom {
-  margin-top: $spacer * 12;
-
-  @include laptop {
-    margin-top: $spacer * 14;
-  }
-
   &__textblock-header {
     margin-bottom: $spacer;
 

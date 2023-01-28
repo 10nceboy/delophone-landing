@@ -102,16 +102,21 @@
     padding: $spacer * 2 0;
     border-radius: $btn-border-radius;
     margin-bottom: $spacer * 2;
+    display: flex;
     text-align: center;
+    display: flex;
+    justify-content: center;
     @include font(500, 14px, $black);
     line-height: 21px;
     width: 100%;
 
     @include laptop {
+      display: block;
       padding: $spacer * 3;
       @include font(600, 14px, $black);
       line-height: 21px;
       margin-right: $spacer;
+      width: auto;
     }
 
     &:nth-child(2) {

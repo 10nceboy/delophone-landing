@@ -69,6 +69,7 @@
 
   @include laptop {
     @include visible;
+    display: flex;
   }
 
   &:hover {

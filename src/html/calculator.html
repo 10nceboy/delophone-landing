@@ -54,7 +54,9 @@
               </div>
             </div>
             <div class="calculator__col calculator__col_right mobile-hidden">
-              <h4 class="calculator__price">1 990 ₽ разово</h4>
+              <h4 class="calculator__price calculator__price_shifted">
+                1 990 ₽ разово
+              </h4>
             </div>
           </div>
         </section>
@@ -76,7 +78,7 @@
                 <button class="calculator__increment">+</button>
               </div>
               <h4 class="calculator__price calculator__price_disabled">
-                <span class="calculator__price-fixed"> Не выбрано </span>
+                <span class="calculator__price-fixed">Не выбрано </span>
               </h4>
             </div>
           </div>
@@ -110,7 +112,7 @@
                 <button class="calculator__increment">+</button>
               </div>
               <h4 class="calculator__price calculator__price_disabled">
-                <span class="calculator__price-fixed"> Не выбрано </span>
+                <span class="calculator__price-fixed">Не выбрано</span>
               </h4>
             </div>
           </div>
@@ -137,8 +139,14 @@
                 <button class="calculator__increment">+</button>
               </div>
               <h4 class="calculator__price calculator__price_disabled">
-                <span class="calculator__price-fixed"> Не выбрано </span>
+                <span class="calculator__price-fixed">Не выбрано </span>
                 <span class="calculator__price-per-month"></span>
+                <span
+                  class="tooltip"
+                  data-tooltip="Некоторые номера мы подключаем через партнёров, за них мы вынуждены взымать абонентскую плату (190 ₽ / месяц).  
+              Абонплата за партнёрские номера и SIM-карты — единственные возможные ежемесячные платежи в Делофоне."
+                >
+                </span>
               </h4>
             </div>
           </div>
@@ -158,8 +166,14 @@
                 <button class="calculator__increment">+</button>
               </div>
               <h4 class="calculator__price calculator__price_disabled">
-                <span class="calculator__price-fixed"> Не выбрано </span>
+                <span class="calculator__price-fixed">Не выбрано </span>
                 <span class="calculator__price-per-month"></span>
+                <span
+                  class="tooltip"
+                  data-tooltip="Некоторые номера мы подключаем через партнёров, за них мы вынуждены взымать абонентскую плату (190 ₽ / месяц).  
+              Абонплата за партнёрские номера и SIM-карты — единственные возможные ежемесячные платежи в Делофоне."
+                >
+                </span>
               </h4>
             </div>
           </div>
@@ -178,7 +192,7 @@
                 <button class="calculator__increment">+</button>
               </div>
               <h4 class="calculator__price calculator__price_disabled">
-                <span class="calculator__price-fixed"> Не выбрано </span>
+                <span class="calculator__price-fixed">Не выбрано </span>
                 <span class="calculator__price-per-month"></span>
                 <span
                   class="tooltip"
@@ -192,7 +206,7 @@
         </section>
 
         <section class="calculator__section">
-          <div class="calculator__row calculator__row_offset-bottom">
+          <div class="calculator__row">
             <div class="calculator__col">
               <h4>4. Способы связи</h4>
             </div>
@@ -200,15 +214,17 @@
           <div
             class="calculator__row calculator__row_offset-bottom mobile-hidden"
           >
-            <div class="calculator__col calculator__col_left">
-              <span class="text_regular">
+            <div
+              class="calculator__col calculator__col_left calculator__ip-tel"
+            >
+              <div class="text_regular">
                 Свой IP-телефон, Приложение для ПК, Приложение для смартфона,
                 API-интеграция
-              </span>
+              </div>
               <div
                 class="tooltip"
                 aria-controls=""
-                data-tooltip-conten="Возможность звонить напрямую из вашей CRM или любой другой внутренней бизнес-системы"
+                data-tooltip="Возможность звонить напрямую из вашей CRM или любой другой внутренней бизнес-системы"
               ></div>
             </div>
 
@@ -224,6 +240,12 @@
           <div class="calculator__row">
             <div class="calculator__col calculator__col_left">
               <p class="text_regular">IP-телефон Делофон</p>
+              <span
+                class="tooltip"
+                data-tooltip="Некоторые номера мы подключаем через партнёров, за них мы вынуждены взымать абонентскую плату (190 ₽ / месяц).  
+          Абонплата за партнёрские номера и SIM-карты — единственные возможные ежемесячные платежи в Делофоне."
+              >
+              </span>
             </div>
             <div class="calculator__col calculator__col_right">
               <div
@@ -236,7 +258,7 @@
                 <button class="calculator__increment">+</button>
               </div>
               <h4 class="calculator__price calculator__price_disabled">
-                <span class="calculator__price-fixed"> Не выбрано </span>
+                <span class="calculator__price-fixed">Не выбрано </span>
                 <span class="calculator__price-per-month"></span>
               </h4>
             </div>
@@ -244,9 +266,12 @@
 
           <div class="calculator__row">
             <div class="calculator__col calculator__col_left">
-              <span>
-                <p class="text_regular">SIM-карта (FMC)</p>
-                <div class="tooltip"></div>
+              <p class="text_regular">SIM-карта (FMC)</p>
+              <span
+                class="tooltip"
+                data-tooltip="Некоторые номера мы подключаем через партнёров, за них мы вынуждены взымать абонентскую плату (190 ₽ / месяц).  
+            Абонплата за партнёрские номера и SIM-карты — единственные возможные ежемесячные платежи в Делофоне."
+              >
               </span>
             </div>
             <div class="calculator__col calculator__col_right">
@@ -260,7 +285,7 @@
                 <button class="calculator__increment">+</button>
               </div>
               <h4 class="calculator__price calculator__price_disabled">
-                <span class="calculator__price-fixed"> Не выбрано </span>
+                <span class="calculator__price-fixed">Не выбрано </span>
                 <span class="calculator__price-per-month"></span>
               </h4>
             </div>
@@ -269,11 +294,17 @@
       </div>
 
       <section class="card_rounded-bot calculator__summary mobile-hidden">
-        <div class="calculator__row">
+        <div class="calculator__row calculator__row_full-width">
           <h4>Итого</h4>
           <div class="calculator__price">
             <span class="calculator__sum" data-value="1190">1 990</span>
             <span class="calculator__sum-per-month" data-value="0">0</span>
+            <span
+              class="tooltip"
+              data-tooltip="Некоторые номера мы подключаем через партнёров, за них мы вынуждены взымать абонентскую плату (190 ₽ / месяц).  
+      Абонплата за партнёрские номера и SIM-карты — единственные возможные ежемесячные платежи в Делофоне."
+            >
+            </span>
           </div>
         </div>
       </section>
@@ -334,11 +365,10 @@
         </svg>
         <h5>Исходящие 1.4 ₽/мин</h5>
       </div>
-      <a class="link link_blue link_with-arrow calculator__link"
-        >Посмотреть все цены</a
-      >
+      <a class="link link_blue calculator__link">Посмотреть все цены →</a>
     </div>
-
+  </div>
+  <div class="container">
     <div class="features__bottom container_adaptive card card_rounded-bot">
       <div class="features__gift">
         <svg
@@ -350,10 +380,432 @@
           xmlns="http://www.w3.org/2000/svg"
         >
           <circle cx="30" cy="30" r="29.5" stroke="white" />
-          <path
-            d="M45.8125 22.125H14.1875C13.3936 22.125 12.75 22.7686 12.75 23.5625V29.3125C12.75 30.1064 13.3936 30.75 14.1875 30.75H45.8125C46.6064 30.75 47.25 30.1064 47.25 29.3125V23.5625C47.25 22.7686 46.6064 22.125 45.8125 22.125Z"
-            fill="white"
-          />
+          <path<section class="steps" id="calculator">
+            <div class="container calculator">
+              <div class="card card_white card_rounded-top">
+                <div class="step-upside_header multichannel__header calculator__header">
+                  <div class="step-upside__header-image">
+                    <svg
+                      width="36"
+                      height="36"
+                      viewBox="0 0 36 36"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.9998 35.0769C27.4311 35.0769 35.0767 27.4313 35.0767 18C35.0767 8.56869 27.4311 0.923096 17.9998 0.923096C8.56845 0.923096 0.922852 8.56869 0.922852 18C0.922852 27.4313 8.56845 35.0769 17.9998 35.0769Z"
+                        fill="white"
+                        stroke="#F88C28"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M17.8992 24.2492C17.2789 24.2492 16.7057 24.1218 16.1795 23.867C15.6534 23.6123 15.2047 23.2606 14.8337 22.8119C14.4626 22.3633 14.1967 21.8483 14.0361 21.2667L15.2075 20.951C15.3127 21.383 15.5038 21.7569 15.7807 22.0726C16.0577 22.3827 16.3817 22.6236 16.7527 22.7953C17.1294 22.967 17.5226 23.0529 17.9324 23.0529C18.4641 23.0529 18.9404 22.9255 19.3614 22.6707C19.7878 22.4104 20.1257 22.067 20.3749 21.6406C20.6241 21.2141 20.7487 20.7461 20.7487 20.2366C20.7487 19.7104 20.6186 19.2369 20.3583 18.8159C20.098 18.3895 19.7546 18.0516 19.3281 17.8024C18.9017 17.5532 18.4364 17.4286 17.9324 17.4286C17.3675 17.4286 16.8801 17.5532 16.4703 17.8024C16.0604 18.0461 15.7337 18.3535 15.49 18.7246L14.3767 18.2593L14.7423 12.0369H21.1309V13.2083H15.2823L15.8887 12.635L15.5647 17.9436L15.2574 17.5366C15.6007 17.1433 16.0161 16.8359 16.5035 16.6144C16.9909 16.3929 17.5032 16.2821 18.0404 16.2821C18.7771 16.2821 19.4417 16.4593 20.0343 16.8138C20.6269 17.1627 21.0977 17.6363 21.4466 18.2344C21.7955 18.8326 21.97 19.4999 21.97 20.2366C21.97 20.9676 21.7844 21.6378 21.4134 22.247C21.0423 22.8507 20.5494 23.3353 19.9346 23.7009C19.3198 24.0664 18.6414 24.2492 17.8992 24.2492Z"
+                        fill="#F88C28"
+                        stroke="#F88C28"
+                        stroke-width="0.5"
+                      />
+                    </svg>
+                  </div>
+          
+                  <div class="step-upside__header-text">
+                    <h3>Начните использовать Делофон</h3>
+                  </div>
+                </div>
+                <div class="card card_rounded-top card_light-gray calculator__table">
+                  <section class="calculator__section">
+                    <div class="calculator__row calculator__row_full-height">
+                      <div
+                        class="calculator__col calculator__col_left calculator__col_auto-width"
+                      >
+                        <div class="calculator__head">
+                          <h4>1. Стартовый пакет подключения</h4>
+                          <div class="calculator__chips container_flex">
+                            <div class="chip chip_bold chip_white">3 сотрудника</div>
+                            <div class="chip chip_white chip_bold">1 номер телефона</div>
+                            <div class="chip chip_white chip_bold">100 ₽ на балансе</div>
+                          </div>
+                          <div class="calculator__start">
+                            3 сотрудника + 1 номер телефона + 100 ₽ на балансе
+                          </div>
+                          <h4
+                            class="calculator__price calculator__price_orange calculator__price_align-right"
+                          >
+                            1 990 ₽ разово
+                          </h4>
+                        </div>
+                      </div>
+                      <div class="calculator__col calculator__col_right mobile-hidden">
+                        <h4 class="calculator__price calculator__price_shifted">
+                          1 990 ₽ разово
+                        </h4>
+                      </div>
+                    </div>
+                  </section>
+          
+                  <section class="calculator__section">
+                    <div class="calculator__row">
+                      <div class="calculator__col calculator__col_left">
+                        <h4>2. Ещё сотрудники</h4>
+                      </div>
+                      <div class="calculator__col calculator__col_right">
+                        <div
+                          class="calculator__multiplier"
+                          class="calculator__multiplier"
+                          data-price="1990"
+                          data-monthly-price="0"
+                        >
+                          <button class="calculator__decrement">-</button>
+                          <input class="calculator__input" type="number" value="0" />
+                          <button class="calculator__increment">+</button>
+                        </div>
+                        <h4 class="calculator__price calculator__price_disabled">
+                          <span class="calculator__price-fixed">Не выбрано </span>
+                        </h4>
+                      </div>
+                    </div>
+                  </section>
+          
+                  <section class="calculator__section">
+                    <div class="calculator__row">
+                      <div class="calculator__col">
+                        <h4>3. Ещё номера телефонов</h4>
+                      </div>
+                    </div>
+                    <div class="calculator__row calculator__row_flex-start">
+                      <div class="calculator__col calculator__col_left">
+                        <div class="calculator__dropdown">
+                          <span
+                            >Городские&nbsp;без абонплаты(<span
+                              class="dropdown dropdown_inline"
+                              >список</span
+                            >)</span
+                          >
+                        </div>
+                      </div>
+                      <div class="calculator__col calculator__col_right">
+                        <div
+                          class="calculator__multiplier"
+                          data-price="990"
+                          data-monthly-price="0"
+                        >
+                          <button class="calculator__decrement">-</button>
+                          <input class="calculator__input" type="number" value="0" />
+                          <button class="calculator__increment">+</button>
+                        </div>
+                        <h4 class="calculator__price calculator__price_disabled">
+                          <span class="calculator__price-fixed">Не выбрано</span>
+                        </h4>
+                      </div>
+                    </div>
+                    <div class="calculator__row calculator__row_flex-start">
+                      <div class="calculator__col calculator__col_left">
+                        <div class="calculator__dropdown">
+                          <span
+                            >Городские c абонплатой&nbsp;(<span
+                              class="dropdown dropdown_inline"
+                              >список</span
+                            >)</span
+                          >
+                        </div>
+                      </div>
+                      <div class="calculator__col calculator__col_right">
+                        <div
+                          class="calculator__multiplier"
+                          data-price="990"
+                          data-monthly-price="190"
+                        >
+                          <button class="calculator__decrement">-</button>
+          
+                          <input class="calculator__input" type="number" value="0" />
+                          <button class="calculator__increment">+</button>
+                        </div>
+                        <h4 class="calculator__price calculator__price_disabled">
+                          <span class="calculator__price-fixed">Не выбрано </span>
+                          <span class="calculator__price-per-month"></span>
+                          <span
+                            class="tooltip"
+                            data-tooltip="Некоторые номера мы подключаем через партнёров, за них мы вынуждены взымать абонентскую плату (190 ₽ / месяц).  
+                        Абонплата за партнёрские номера и SIM-карты — единственные возможные ежемесячные платежи в Делофоне."
+                          >
+                          </span>
+                        </h4>
+                      </div>
+                    </div>
+          
+                    <div class="calculator__row">
+                      <div class="calculator__col calculator__col_left">
+                        <span class="text_regular">Мобильные</span>
+                      </div>
+                      <div class="calculator__col calculator__col_right">
+                        <div
+                          class="calculator__multiplier"
+                          data-price="990"
+                          data-monthly-price="190"
+                        >
+                          <button class="calculator__decrement">-</button>
+                          <input class="calculator__input" type="number" value="0" />
+                          <button class="calculator__increment">+</button>
+                        </div>
+                        <h4 class="calculator__price calculator__price_disabled">
+                          <span class="calculator__price-fixed">Не выбрано </span>
+                          <span class="calculator__price-per-month"></span>
+                          <span
+                            class="tooltip"
+                            data-tooltip="Некоторые номера мы подключаем через партнёров, за них мы вынуждены взымать абонентскую плату (190 ₽ / месяц).  
+                        Абонплата за партнёрские номера и SIM-карты — единственные возможные ежемесячные платежи в Делофоне."
+                          >
+                          </span>
+                        </h4>
+                      </div>
+                    </div>
+                    <div class="calculator__row">
+                      <div class="calculator__col calculator__col_left">
+                        <p class="text_regular">Номера 8-800</p>
+                      </div>
+                      <div class="calculator__col calculator__col_right">
+                        <div
+                          class="calculator__multiplier"
+                          data-price="990"
+                          data-monthly-price="190"
+                        >
+                          <button class="calculator__decrement">-</button>
+                          <input class="calculator__input" type="number" value="0" />
+                          <button class="calculator__increment">+</button>
+                        </div>
+                        <h4 class="calculator__price calculator__price_disabled">
+                          <span class="calculator__price-fixed">Не выбрано </span>
+                          <span class="calculator__price-per-month"></span>
+                          <span
+                            class="tooltip"
+                            data-tooltip="Некоторые номера мы подключаем через партнёров, за них мы вынуждены взымать абонентскую плату (190 ₽ / месяц).  
+                          Абонплата за партнёрские номера и SIM-карты — единственные возможные ежемесячные платежи в Делофоне."
+                          >
+                          </span>
+                        </h4>
+                      </div>
+                    </div>
+                  </section>
+          
+                  <section class="calculator__section">
+                    <div class="calculator__row">
+                      <div class="calculator__col">
+                        <h4>4. Способы связи</h4>
+                      </div>
+                    </div>
+                    <div
+                      class="calculator__row calculator__row_offset-bottom mobile-hidden"
+                    >
+                      <div
+                        class="calculator__col calculator__col_left calculator__ip-tel"
+                      >
+                        <div class="text_regular">
+                          Свой IP-телефон, Приложение для ПК, Приложение для смартфона,
+                          API-интеграция
+                        </div>
+                        <div
+                          class="tooltip"
+                          aria-controls=""
+                          data-tooltip="Возможность звонить напрямую из вашей CRM или любой другой внутренней бизнес-системы"
+                        ></div>
+                      </div>
+          
+                      <div class="calculator__col calculator__col_right">
+                        <h4
+                          class="calculator__price calculator__price_disabled calculator__price_single"
+                        >
+                          Бесплатно
+                        </h4>
+                      </div>
+                    </div>
+          
+                    <div class="calculator__row">
+                      <div class="calculator__col calculator__col_left">
+                        <p class="text_regular">IP-телефон Делофон</p>
+                        <span
+                          class="tooltip"
+                          data-tooltip="Некоторые номера мы подключаем через партнёров, за них мы вынуждены взымать абонентскую плату (190 ₽ / месяц).  
+                    Абонплата за партнёрские номера и SIM-карты — единственные возможные ежемесячные платежи в Делофоне."
+                        >
+                        </span>
+                      </div>
+                      <div class="calculator__col calculator__col_right">
+                        <div
+                          class="calculator__multiplier"
+                          data-price="3990"
+                          data-monthly-price="0"
+                        >
+                          <button class="calculator__decrement">-</button>
+                          <input class="calculator__input" type="number" value="0" />
+                          <button class="calculator__increment">+</button>
+                        </div>
+                        <h4 class="calculator__price calculator__price_disabled">
+                          <span class="calculator__price-fixed">Не выбрано </span>
+                          <span class="calculator__price-per-month"></span>
+                        </h4>
+                      </div>
+                    </div>
+          
+                    <div class="calculator__row">
+                      <div class="calculator__col calculator__col_left">
+                        <p class="text_regular">SIM-карта (FMC)</p>
+                        <span
+                          class="tooltip"
+                          data-tooltip="Некоторые номера мы подключаем через партнёров, за них мы вынуждены взымать абонентскую плату (190 ₽ / месяц).  
+                      Абонплата за партнёрские номера и SIM-карты — единственные возможные ежемесячные платежи в Делофоне."
+                        >
+                        </span>
+                      </div>
+                      <div class="calculator__col calculator__col_right">
+                        <div
+                          class="calculator__multiplier"
+                          data-price="990"
+                          data-monthly-price="190"
+                        >
+                          <button class="calculator__decrement">-</button>
+                          <input class="calculator__input" type="number" value="0" />
+                          <button class="calculator__increment">+</button>
+                        </div>
+                        <h4 class="calculator__price calculator__price_disabled">
+                          <span class="calculator__price-fixed">Не выбрано </span>
+                          <span class="calculator__price-per-month"></span>
+                        </h4>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+          
+                <section class="card_rounded-bot calculator__summary mobile-hidden">
+                  <div class="calculator__row calculator__row_full-width">
+                    <h4>Итого</h4>
+                    <div class="calculator__price">
+                      <span class="calculator__sum" data-value="1190">1 990</span>
+                      <span class="calculator__sum-per-month" data-value="0">0</span>
+                      <span
+                        class="tooltip"
+                        data-tooltip="Некоторые номера мы подключаем через партнёров, за них мы вынуждены взымать абонентскую плату (190 ₽ / месяц).  
+                Абонплата за партнёрские номера и SIM-карты — единственные возможные ежемесячные платежи в Делофоне."
+                      >
+                      </span>
+                    </div>
+                  </div>
+                </section>
+                <section class="card card_black calculator__summary_mobile">
+                  <h4>Итого</h4>
+                  <div class="calculator__sum" data-value="1190">1990</div>
+                  <div class="calculator__sum-per-month" data-value="0">0</div>
+                </section>
+              </div>
+              <div class="calculator__in-out">
+                <div class="container__flex">
+                  <svg
+                    width="50"
+                    height="50"
+                    viewBox="0 0 50 50"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="25" cy="25" r="25" fill="#F6F7F8" />
+                    <circle cx="25" cy="25" r="14.5" fill="white" stroke="#F88C28" />
+                    <path
+                      d="M19 22V31H28"
+                      stroke="#F88C28"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M19 31L31 19"
+                      stroke="#F88C28"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <h5>Входящие 0 ₽</h5>
+                </div>
+                <div class="container__flex">
+                  <svg
+                    width="50"
+                    height="50"
+                    viewBox="0 0 50 50"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="25" cy="25" r="25" fill="#F6F7F8" />
+                    <circle cx="25" cy="25" r="14.5" fill="white" stroke="#F88C28" />
+                    <path
+                      d="M31 28V19H22"
+                      stroke="#F88C28"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M31 19L19 31"
+                      stroke="#F88C28"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <h5>Исходящие 1.4 ₽/мин</h5>
+                </div>
+                <a class="link link_blue calculator__link">Посмотреть все цены →</a>
+              </div>
+            </div>
+            <div class="container">
+              <div class="features__bottom container_adaptive card card_rounded-bot">
+                <div class="features__gift">
+                  <svg
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    class=""
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="30" cy="30" r="29.5" stroke="white" />
+                    <path
+                      d="M45.8125 22.125H14.1875C13.3936 22.125 12.75 22.7686 12.75 23.5625V29.3125C12.75 30.1064 13.3936 30.75 14.1875 30.75H45.8125C46.6064 30.75 47.25 30.1064 47.25 29.3125V23.5625C47.25 22.7686 46.6064 22.125 45.8125 22.125Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M44.375 31.75V44.6875C44.375 45.0687 44.2236 45.4344 43.954 45.704C43.6844 45.9736 43.3187 46.125 42.9375 46.125H17.0625C16.6813 46.125 16.3156 45.9736 16.046 45.704C15.7765 45.4344 15.625 45.0687 15.625 44.6875V31.75"
+                      fill="white"
+                    />
+                    <path
+                      d="M39.1317 20.0916C37.0988 22.1245 31 22.1245 31 22.1245C31 22.1245 31 16.0257 33.0329 13.9928C33.8418 13.1848 34.9385 12.7311 36.0818 12.7314C37.2251 12.7318 38.3215 13.1861 39.13 13.9945C39.9384 14.803 40.3928 15.8994 40.3931 17.0427C40.3934 18.186 39.9397 19.2827 39.1317 20.0916V20.0916Z"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M20.8678 20.0916C22.9007 22.1245 28.9995 22.1245 28.9995 22.1245C28.9995 22.1245 28.9995 16.0257 26.9666 13.9928C26.1577 13.1848 25.061 12.7311 23.9177 12.7314C22.7744 12.7318 21.678 13.1861 20.8695 13.9945C20.0611 14.803 19.6068 15.8994 19.6064 17.0427C19.6061 18.186 20.0598 19.2827 20.8678 20.0916V20.0916Z"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M30 13V47"
+                      stroke="#344351"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <h4>Протестируйте АТС сразу&nbsp;после&nbsp;регистрации</h4>
+                </div>
+                <ul class="gift__list list list_grid-2x2">
+                  <li class="gift__list list-item list-item_checked">Все функции АТС</li>
+                  <li class="gift__list list-item list-item_checked">100 ₽ на балансе</li>
+                  <li class="gift__list list-item list-item_checked">3 сотрудника</li>
+                  <li class="gift__list list-item list-item_checked">
+                    1 телефонный номер
+                  </li>
+                </ul>
+                <button type="button" class="button button_blue features__button">
+                  Начать бесплатно
+                </button>
+              </div>
+            </div>
+          </section>
+          
           <path
             d="M44.375 31.75V44.6875C44.375 45.0687 44.2236 45.4344 43.954 45.704C43.6844 45.9736 43.3187 46.125 42.9375 46.125H17.0625C16.6813 46.125 16.3156 45.9736 16.046 45.704C15.7765 45.4344 15.625 45.0687 15.625 44.6875V31.75"
             fill="white"
@@ -379,11 +831,13 @@
         </svg>
         <h4>Протестируйте АТС сразу&nbsp;после&nbsp;регистрации</h4>
       </div>
-      <ul class="list list_grid-2x2">
-        <li class="list-item list-item_checked">Все функции АТС</li>
-        <li class="list-item list-item_checked">100 ₽ на балансе</li>
-        <li class="list-item list-item_checked">3 сотрудника</li>
-        <li class="list-item list-item_checked">1 телефонный номер</li>
+      <ul class="gift__list list list_grid-2x2">
+        <li class="gift__list list-item list-item_checked">Все функции АТС</li>
+        <li class="gift__list list-item list-item_checked">100 ₽ на балансе</li>
+        <li class="gift__list list-item list-item_checked">3 сотрудника</li>
+        <li class="gift__list list-item list-item_checked">
+          1 телефонный номер
+        </li>
       </ul>
       <button type="button" class="button button_blue features__button">
         Начать бесплатно

@@ -1,13 +1,5 @@
 .whatsapp {
-  height: 0;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  left: calc(100% + 10px);
-
   &__button {
-    display: none;
-
     @include laptop {
       display: block;
     }

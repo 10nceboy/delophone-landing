@@ -1,20 +1,23 @@
 .phone-business {
   &__textblock {
     display: block;
-    margin-right: auto;
-    margin-left: auto;
     margin-bottom: auto;
 
     h2 {
       margin-bottom: $spacer;
     }
 
+    &_text {
+      @include tablet {
+        line-height: 31px;
+      }
+    }
     p {
       margin-bottom: $spacer;
       margin-top: $spacer;
     }
 
-    @include laptop {
+    @include tablet {
       h2 {
         margin-bottom: $spacer * 4;
       }
@@ -27,7 +30,7 @@
   &__cardblock_right {
     max-width: 100%;
 
-    @include laptop {
+    @include tablet {
       position: relative;
       z-index: 2;
       display: flex;
@@ -39,13 +42,11 @@
     position: relative;
     z-index: 1;
     @include flex-col;
-    min-height: 111px;
-    margin-top: $spacer * 5;
     margin-bottom: $spacer * 6;
     justify-content: center;
     align-items: center;
 
-    @include laptop {
+    @include tablet {
       width: 475px;
       height: 100px;
       @include flex-row;
@@ -53,17 +54,7 @@
       max-width: auto;
       margin-left: auto;
       margin-right: 0;
-    }
-
-    h4 {
-      margin-left: $spacer * 6;
-      margin-top: 0px;
-    }
-
-    svg {
-      width: 260px;
-      height: 80px;
-      margin-right: $spacer * 3;
+      padding: 20px 30px;
     }
   }
 
@@ -79,7 +70,7 @@
       margin-bottom: $spacer * 2;
     }
 
-    @include laptop {
+    @include tablet {
       padding: 0;
       height: 124px;
       display: flex;
@@ -98,7 +89,7 @@
     @include flex-row;
     justify-content: space-around;
 
-    @include laptop {
+    @include tablet {
       display: grid;
       grid-template-columns: repeat(3, 78px);
       grid-template-rows: repeat(2, 37px);
@@ -123,7 +114,7 @@
       display: none;
     }
 
-    @include laptop {
+    @include tablet {
       padding: 0;
       justify-content: center;
       @include font(500, 24px, $orange);
@@ -162,7 +153,7 @@
     max-width: 239px;
     margin-left: auto;
 
-    @include laptop {
+    @include tablet {
       margin-left: 0;
       flex-direction: row;
       display: flex;
@@ -177,7 +168,7 @@
         margin-bottom: $spacer * 2;
       }
       p {
-        @include laptop {
+        @include tablet {
           @include font(400, 16px, $gray);
           line-height: 20.8px;
           text-align: center;
@@ -190,7 +181,7 @@
 .graphic {
   display: none;
 
-  @include laptop {
+  @include tablet {
     display: block;
     position: relative;
     &:after {
@@ -214,7 +205,7 @@
       z-index: -1;
     }
 
-    @include laptop {
+    @include tablet {
       display: none;
     }
   }
@@ -224,7 +215,7 @@
   display: none;
   position: relative;
 
-  @include laptop {
+  @include tablet {
     display: block;
     &::before {
       content: url('/v1.svg');
@@ -247,8 +238,24 @@
       left: 20px;
     }
 
-    @include laptop {
+    @include tablet {
       display: none;
     }
+  }
+}
+
+.usersblock__image {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.usersblock__image_mobile {
+  display: block;
+
+  @include tablet {
+    display: none;
   }
 }

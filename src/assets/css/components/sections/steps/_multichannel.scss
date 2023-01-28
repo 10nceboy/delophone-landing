@@ -100,6 +100,7 @@
       @include laptop {
         @include font(400, 16px, $light-gray);
         line-height: 24.8px;
+        margin-bottom: 0px;
       }
     }
   }

@@ -1,10 +1,10 @@
 $family: 'Manrope';
 
 /* layout*/
-@mixin flex-row {
+@mixin flex-row($align: center) {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: $align;
 }
 
 @mixin flex-col {
@@ -38,19 +38,19 @@ $family: 'Manrope';
 }
 
 @mixin laptop {
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 968px) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (min-width: 576px) {
+  @media (min-width: 960px) {
     @content;
   }
 }
 
 @mixin smartphone {
-  @media (min-width: 375px) {
+  @media (min-width: 480px) {
     @content;
   }
 }
