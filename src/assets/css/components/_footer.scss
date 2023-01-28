@@ -53,7 +53,7 @@
 
       @include laptop {
         white-space: nowrap;
-        margin-left: -30px;
+        margin-left: -$spacer * 6;
       }
     }
 
