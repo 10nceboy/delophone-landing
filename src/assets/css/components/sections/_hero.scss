@@ -29,9 +29,7 @@
 
   &__imageblock_mobile {
     display: block;
-    margin-top: $spacer * 4;
-    margin-left: auto;
-    margin-right: auto;
+    margin: $spacer * 4 auto 0;
 
     @include laptop {
       display: none;
@@ -44,9 +42,9 @@
     margin-top: $spacer * 2;
 
     @include laptop {
-      min-width: 300px;
+      min-width: 320px;
       background-color: $light-gray;
-      border-radius: 0px $spacer 0 $spacer;
+      border-radius: 0px $border-radius-xs 0 $border-radius-xs;
       padding: 16px $spacer * 4 $spacer * 3;
       margin-top: $spacer * 8;
       white-space: nowrap;
@@ -71,8 +69,9 @@
   }
 
   &__card {
-    padding: $spacer * 5 $spacer * 4 $spacer * 4 $spacer * 4;
-    margin: 0 0 15px 0;
+    padding: $spacer * 4;
+    padding-top: $spacer * 5;
+    margin: 0 0 $spacer * 3 0;
     height: 33.3%;
     width: 100%;
 
@@ -88,7 +87,7 @@
       margin-right: $spacer * 6;
       max-width: 100%;
       flex-grow: 1;
-      padding: $spacer * 9 $spacer * 4 $spacer * 8 $spacer * 4;
+      padding: $spacer * 9 $spacer * 4 $spacer * 8;
       margin-top: 58px;
       margin-bottom: 0px;
       max-height: 230px;

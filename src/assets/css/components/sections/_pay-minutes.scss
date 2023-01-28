@@ -1,14 +1,13 @@
 .pay-minutes {
   margin-top: $spacer * 12;
   background-color: $white;
-  border-radius: 12px;
+  border-radius: $border-radius-xl;
   margin-bottom: $spacer * 12;
 
   @include laptop {
     margin-top: $spacer * 20;
     background-color: $light-gray;
     padding: $spacer * 10;
-    border-radius: 12px;
   }
 
   &__header {
@@ -100,7 +99,7 @@
 
   &__chip {
     padding: $spacer * 2 0;
-    border-radius: $btn-border-radius;
+    border-radius: $border-radius-xs;
     margin-bottom: $spacer * 2;
     display: flex;
     text-align: center;

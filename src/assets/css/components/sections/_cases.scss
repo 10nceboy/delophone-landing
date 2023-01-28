@@ -9,7 +9,7 @@
 
   &__card {
     background: $white;
-    border-radius: 12px;
+    border-radius: $border-radius-xl;
     width: 100%;
     padding: $spacer * 4;
     box-sizing: border-box;
@@ -63,7 +63,7 @@
 
     @include tablet {
       padding: $spacer $spacer * 3;
-      border-radius: $btn-border-radius;
+      border-radius: $border-radius-xs;
       background: $white;
       margin-right: $spacer * 3;
 

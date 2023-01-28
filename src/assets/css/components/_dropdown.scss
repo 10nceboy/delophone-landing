@@ -79,7 +79,7 @@ $dropdown-transition: 0.15s ease-in;
       gap: $spacer * 2;
       padding: $spacer * 4 $spacer * 5;
       background: $light-gray;
-      border-radius: $btn-border-radius;
+      border-radius: $border-radius-xs;
 
       @include desktop {
         box-shadow: map-get($elevations, 1);
