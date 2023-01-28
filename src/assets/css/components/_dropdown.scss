@@ -7,11 +7,14 @@
   max-height: fit-content;
 
   &_inline {
-    display: inline;
+    display: inline-flex;
+    align-items: flex-end;
     font-size: 14px;
+    text-decoration: underline;
 
     @include laptop {
       font-size: 20px;
+      text-decoration: none;
     }
 
     &::after {
@@ -19,7 +22,9 @@
 
       @include laptop {
         content: url('/arrow-down.svg');
-        display: inline;
+        display: inline-block;
+        transform: translateY(3px);
+        margin: 2px 0;
       }
     }
   }

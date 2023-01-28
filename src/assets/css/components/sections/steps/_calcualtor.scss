@@ -4,6 +4,7 @@
   background: $white;
   padding: $spacer * 4;
   border-radius: $border-radius-xl;
+
   @include laptop {
     max-width: 1110px;
     padding: $spacer * 9 $spacer * 10;
@@ -205,6 +206,10 @@
       .tooltip {
         display: none;
       }
+
+      .calculator__price-fixed {
+        color: $gray;
+      }
     }
 
     &_shifted {
@@ -363,6 +368,7 @@
 
   &__sum {
     display: inline;
+    color: $black;
 
     &::after {
       display: inline;
@@ -443,4 +449,8 @@
     margin-bottom: $spacer * 2;
     @include font(400, 14px, $black);
   }
+}
+
+.calculator__price-fixed {
+  color: $black;
 }

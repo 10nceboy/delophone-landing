@@ -1,6 +1,12 @@
 .tooltip {
   &__activator {
     cursor: pointer;
+    margin-left: $spacer;
+
+    svg {
+      max-width: 15px;
+      max-height: 15px;
+    }
 
     &:hover {
       svg {

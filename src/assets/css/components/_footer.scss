@@ -92,7 +92,7 @@
         @include flex-row;
         background: transparent;
         order: 0;
-        margin-right: -$spacer * 10;
+        margin-right: 0;
 
         .button__login-button {
           margin-left: 0;
