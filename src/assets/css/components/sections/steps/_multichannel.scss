@@ -1,5 +1,6 @@
 .multichannel {
   border-radius: $border-radius-xl;
+  z-index: 2;
 
   &__checklist {
     row-gap: 10px;
@@ -36,11 +37,13 @@
 
   &__header {
     @include flex-row;
+    position: relative;
   }
 
   &__upside {
     @include flex-col;
     padding: $spacer * 4;
+    position: relative;
 
     @include laptop {
       display: flex;

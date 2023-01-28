@@ -18,6 +18,23 @@
       margin-right: auto;
       margin-bottom: $spacer * 11;
     }
+
+    &_with-arc {
+      position: relative;
+      overflow: visible;
+      z-index: 1;
+
+      &::after {
+        display: none;
+        @include tablet {
+          display: block;
+          position: absolute;
+          content: url('/public/arc-step-1.svg');
+          left: 388px;
+          top: calc(100% - 28px);
+        }
+      }
+    }
   }
 
   &__checklist {

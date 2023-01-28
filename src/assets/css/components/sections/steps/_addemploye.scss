@@ -1,11 +1,7 @@
 .addemploye {
-  margin-top: $spacer * 16;
-
-  &__content {
-    @include laptop {
-      padding: $spacer * 10;
-      margin-bottom: 80px;
-    }
+  @include tablet {
+    margin-top: $spacer * 16;
+    margin-bottom: $spacer * 16;
   }
 
   &__card {
@@ -42,6 +38,32 @@
       @include laptop {
         display: none;
       }
+    }
+  }
+
+  &__content {
+    @include laptop {
+      padding: $spacer * 10;
+      box-sizing: border-box;
+      max-height: 372px;
+    }
+
+    &::before {
+      position: absolute;
+      content: url('/public/circe-steps.svg');
+      top: -246px;
+      transform: translateX(calc(-150% + 12px));
+      max-width: 312px;
+      user-select: none;
+    }
+
+    &::after {
+      position: absolute;
+      content: url('/public/circe-steps.svg');
+      top: -246px;
+      transform: translateX(calc(-150% + 12px));
+      max-width: 312px;
+      user-select: none;
     }
   }
 }
