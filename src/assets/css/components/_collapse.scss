@@ -26,6 +26,12 @@
   &__arrow {
     width: 25px;
     height: 25px;
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+
     margin-left: auto;
 
     @include laptop {
