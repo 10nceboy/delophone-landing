@@ -1,4 +1,10 @@
 .phone-business {
+  margin-top: $spacer * 16;
+
+  @include tablet {
+    margin-top: 0px;
+  }
+
   &__textblock {
     display: block;
     margin-bottom: auto;
@@ -28,7 +34,8 @@
   }
 
   &__cardblock_right {
-    max-width: 100%;
+    min-width: 290px;
+    width: 100%;
 
     @include tablet {
       position: relative;
@@ -45,6 +52,7 @@
     margin-bottom: $spacer * 6;
     justify-content: center;
     align-items: center;
+    margin-top: $spacer * 5;
 
     @include tablet {
       width: 475px;
@@ -55,6 +63,7 @@
       margin-left: auto;
       margin-right: 0;
       padding: 20px 30px;
+      margin-top: 0;
     }
   }
 
@@ -71,11 +80,11 @@
     }
 
     @include tablet {
-      padding: 0;
+      padding: $spacer * 6;
       height: 124px;
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      min-width: 475px;
 
       h4,
       p {
@@ -85,7 +94,6 @@
       p {
         margin-bottom: 0px;
       }
-      padding: 0;
     }
   }
 
@@ -107,10 +115,7 @@
     flex: 1;
     min-height: 24px;
     letter-spacing: -1px;
-
-    &:nth-child(2) {
-      display: none;
-    }
+    height: 100%;
 
     @include tablet {
       padding: 0 $spacer;
@@ -143,19 +148,35 @@
   }
 
   &__cardblock_bottom {
+    position: relative;
     margin-top: $spacer * 5;
-    max-width: 239px;
+    max-width: 100%;
     margin-left: auto;
+    display: flex;
+
+    &::before {
+      content: url('/public/graphic-mobile-bot.svg');
+      position: relative;
+      z-index: $z-index-hidden;
+      top: -30px;
+      left: 0px;
+
+      @include tablet {
+        content: url('/public/v1.svg');
+        top: 18px;
+        left: 0px;
+      }
+    }
 
     @include tablet {
       margin-left: 0;
-      flex-direction: row;
-      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      margin-top: 90px;
+      margin-top: 0;
       text-align: center;
       width: 100%;
+      margin-top: -10px;
 
       h5 {
         text-align: center;
@@ -169,6 +190,17 @@
         }
       }
     }
+  }
+
+  &__cards {
+    @include tablet {
+      @include flex-row;
+    }
+    flex-grow: 1;
+  }
+
+  &__your-numbers {
+    flex: 1 1;
   }
 }
 
@@ -186,21 +218,6 @@
       z-index: 1;
       top: -75px;
       left: -3px;
-    }
-  }
-
-  &__mobile {
-    display: block;
-    &::after {
-      content: url('/graphic_mobile.svg');
-      position: absolute;
-      top: 1748px;
-      right: 90px;
-      z-index: $z-index-hidden;
-    }
-
-    @include tablet {
-      display: none;
     }
   }
 }
@@ -221,20 +238,8 @@
     }
   }
 
-  &_mobile {
-    display: block;
-    &::before {
-      content: url('/graphic-mobile-bot.svg');
-      position: absolute;
-      display: block;
-      z-index: $z-index-hidden;
-      top: 1900px;
-      left: 20px;
-    }
-
-    @include tablet {
-      display: none;
-    }
+  @include tablet {
+    display: none;
   }
 }
 
@@ -255,18 +260,28 @@
 }
 
 .phone-bussines__numbers_up {
+  @include flex-row;
   @include tablet {
-    @include flex-row;
     gap: $spacer * 3;
     margin-bottom: $spacer * 2;
     align-self: flex-end;
-    margin-left: 20px;
+  }
+
+  div {
+    &:nth-child(2) {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+    }
   }
 }
 
 .phone-business_numbers_down {
   @include flex-row;
-  gap: $spacer * 3;
-  align-self: flex-end;
-  margin-left: 20px;
+
+  @include tablet {
+    gap: $spacer * 3;
+  }
 }

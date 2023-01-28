@@ -20,7 +20,11 @@
     box-sizing: border-box;
     max-height: 112px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+
+    @include laptop {
+      align-items: center;
+    }
   }
 
   &__arrow {

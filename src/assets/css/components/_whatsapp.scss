@@ -1,17 +1,32 @@
 .whatsapp {
   &__button {
-    @include laptop {
-      display: block;
-    }
     color: $green;
     cursor: pointer;
-    width: 80px;
-    height: 80px;
-    right: 5vw;
-    bottom: 80px;
     position: fixed;
+    height: 40px;
+    width: 40px;
     z-index: 10;
     transform: $btn-transition;
+    display: none;
+
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    top: $spacer * 2;
+    right: $spacer * 15;
+
+    @include laptop {
+      height: 40px;
+      width: 40px;
+      svg {
+        width: 80px;
+        height: 80px;
+      }
+
+      bottom: 80px;
+    }
 
     &:hover {
       color: $dark-green;
