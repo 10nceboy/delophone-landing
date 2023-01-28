@@ -11,7 +11,6 @@
     @include flex-col;
     margin: 0 auto;
     @include laptop {
-      width: 536px;
     }
   }
 
@@ -104,5 +103,10 @@
 
   &__text {
     margin-top: $spacer * 3;
+  }
+
+  &__button {
+    justify-content: flex-start;
+    margin-right: 0px;
   }
 }

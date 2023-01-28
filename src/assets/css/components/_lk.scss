@@ -1,10 +1,12 @@
 .lk {
+  padding-top: 80px;
   &__card {
     padding: $spacer * 4;
     @include flex-col;
 
     @include laptop {
       padding: $spacer * 6 $spacer * 10;
+      margin-top: -$spacer * 6;
     }
 
     &_bottom {

@@ -180,7 +180,6 @@
 
 .header__dropdown {
   @include laptop {
-    margin-top: $spacer;
     order: 1;
     display: block;
   }
