@@ -56,6 +56,10 @@
       }
     }
   }
+
+  &__calculator {
+    padding-top: 60px;
+  }
 }
 
 .step-upside {
@@ -66,4 +70,15 @@
 
 .steps__lk {
   padding-top: 60px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: url('/public/circe-steps.svg');
+    bottom: -246px;
+    transform: translateX(calc(150% + 12px));
+    max-width: 312px;
+    user-select: none;
+    transform: rotatateY(180deg);
+  }
 }
