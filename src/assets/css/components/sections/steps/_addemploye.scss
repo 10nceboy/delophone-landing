@@ -46,6 +46,8 @@
       padding: $spacer * 10;
       box-sizing: border-box;
       max-height: 372px;
+      position: relative;
+      z-index: 2;
     }
 
     &::before {
@@ -65,5 +67,25 @@
       max-width: 312px;
       user-select: none;
     }
+  }
+}
+
+.arc__employe {
+  height: 0;
+  z-index: 1;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: url('/public/arc-step-2.svg');
+    top: -105px;
+    left: 622px;
+    z-index: -1;
+  }
+
+  &_reversed {
+    transform: scale(-1, 1);
+    top: 81px;
+    left: -115px;
   }
 }
