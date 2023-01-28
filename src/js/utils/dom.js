@@ -52,3 +52,11 @@ export const scrollToElement = (element) => {
 
   observer.observe(element);
 };
+
+export const clickOutside = (element, callback) => {
+  document.addEventListener('click', (event) => {
+    if (!element.contains(event.target)) {
+      callback();
+    }
+  });
+};
