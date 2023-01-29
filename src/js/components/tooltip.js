@@ -1,4 +1,5 @@
-import { arrow, createPopper } from '@popperjs/core';
+import { createPopper } from '@popperjs/core';
+import { scrollToElement } from '../utils/dom';
 
 const svg = `
 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,31 +36,51 @@ tooltips.forEach((item) => {
   if (!activator) {
     activator = renderActivator(item);
   }
-  activator.addEventListener('mouseenter', (event) => {
-    const popup = renderTooltip(item.getAttribute('data-tooltip'));
-    item.appendChild(popup);
-    const popper = createPopper(event.target, popup, {
+
+  const tooltipContent = renderTooltip(item.getAttribute('data-tooltip'));
+  item.appendChild(tooltipContent);
+
+  requestAnimationFrame(() => {
+    const popper = createPopper(item, tooltipContent, {
       placement: 'top',
       animation: false,
-
       modifiers: [
         {
           name: 'offset',
-
           options: {
             offset: () => {
-              return [0, 10];
+              return [2, 10];
             }
           }
         },
-        { name: 'arrow', enabled: true }
+        {
+          name: 'eventListeners',
+          options: {
+            scroll: false
+          }
+        },
+        {
+          name: 'flip',
+          options: {
+            fallbackPlacements: ['top']
+          }
+        }
       ]
     });
-  });
 
-  activator.addEventListener('mouseleave', (event) => {
-    const tooltip = event.target?.parentNode?.querySelector('.tooltip__inner');
-    tooltip?.remove();
+    activator.addEventListener('mouseenter', (event) => {
+      tooltipContent.classList.add('tooltip__inner_visible');
+      popper.update();
+
+      tooltipContent.classList.add('tooltip__inner_active');
+    });
+
+    activator.addEventListener('mouseleave', (event) => {
+      const tooltipContent =
+        event.target?.parentNode?.querySelector('.tooltip__inner');
+      tooltipContent.classList.remove('tooltip__inner_active');
+      tooltipContent?.classList.remove('tooltip__inner_visible');
+    });
   });
 
   item.addEventListener('click', (event) => {

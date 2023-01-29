@@ -5,17 +5,17 @@
   padding: $spacer * 4;
   border-radius: $border-radius-xl;
   position: relative;
-  transform-style: preserve-3d;
   z-index: 2;
 
   @include tablet {
     max-width: 1110px;
-    padding: $spacer * 9 $spacer * 10;
+    padding: 0px;
   }
 
   @include tablet {
     max-width: 1110px;
     padding: $spacer * 9 $spacer * 10;
+    padding-bottom: $spacer * 10;
   }
 
   &__table {
@@ -272,10 +272,10 @@
     @include tablet {
       align-items: flex-end;
       min-width: 485px;
+    }
 
-      div {
-        min-width: 460px;
-      }
+    .tooltip {
+      margin-left: auto;
     }
   }
 
@@ -416,7 +416,6 @@
 
     @include tablet {
       margin-top: $spacer * 6;
-      margin-bottom: $spacer * 10;
       @include flex-row;
 
       h5 {
@@ -466,15 +465,24 @@
 }
 
 .arc__calc {
-  height: 0;
-  z-index: 1;
-  position: relative;
+  display: none;
+  @include laptop {
+    display: block;
+    height: 0;
+    z-index: 1;
+    position: relative;
+  }
 
   &::before {
-    position: absolute;
-    content: url('/public/arc-step-5.svg');
-    top: -165px;
-    right: -$spacer * 15;
-    z-index: -1;
+    display: none;
+
+    @include laptop {
+      display: block;
+      position: absolute;
+      content: url('/arc-step-5.svg');
+      top: -162px;
+      right: -$spacer * 15;
+      z-index: -1;
+    }
   }
 }

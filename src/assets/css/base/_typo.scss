@@ -136,6 +136,7 @@ h5 {
 
 .text_mobile {
   display: block;
+  font-size: 15px;
 
   @include laptop {
     display: none;

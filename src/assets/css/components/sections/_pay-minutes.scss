@@ -8,6 +8,7 @@
     margin-top: $spacer * 20;
     background-color: $light-gray;
     padding: $spacer * 10;
+    margin-bottom: 100px;
   }
 
   &__header {
@@ -37,15 +38,19 @@
   &__card-top {
     padding: $spacer * 4;
     background-color: $light-gray;
+    max-width: 100%;
 
     @include laptop {
-      padding: $spacer * 6 38px $spacer * 4 $spacer * 6;
+      padding: $spacer * 6 38px $spacer * 6 $spacer * 6;
       background-color: $white;
+      height: 157px;
     }
   }
 
   &__card-bottom {
     padding: $spacer * 4 $spacer * 4 $spacer * 6;
+    min-width: 320px;
+    max-width: 100%;
     @include laptop {
       padding: $spacer * 4 $spacer * 6;
       display: flex;
@@ -101,13 +106,12 @@
     padding: $spacer * 2 0;
     border-radius: $border-radius-xs;
     margin-bottom: $spacer * 2;
-    display: flex;
     text-align: center;
     display: flex;
-    justify-content: center;
     @include font(500, 14px, $black);
     line-height: 21px;
     width: 100%;
+    justify-content: center;
 
     @include laptop {
       display: block;
@@ -115,7 +119,9 @@
       @include font(600, 14px, $black);
       line-height: 21px;
       margin-right: $spacer;
+      margin-bottom: 0px;
       width: auto;
+      justify-content: initial;
     }
 
     &:nth-child(2) {
@@ -167,7 +173,7 @@
   }
 
   &__tooltip-top-activator {
-    margin-left: $spacer;
+    margin-left: $spacer * 2;
   }
 
   &__tooltip-bot-content {
@@ -189,8 +195,15 @@
     }
   }
 }
+
 .chip-text {
   @include laptop {
     margin-left: 0px;
+  }
+}
+
+.chip-text__container {
+  @include laptop {
+    align-items: baseline;
   }
 }

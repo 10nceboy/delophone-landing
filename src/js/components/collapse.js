@@ -16,9 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const collapsibles = document.querySelectorAll('.collapse');
 
   collapsibles.forEach((collapse) => {
+    let animated = false;
     const arrow = renderArrow(collapse);
     const content = collapse.querySelector('.collapse__content');
     collapse.addEventListener('click', () => {
+      if (animated) {
+        return false;
+      }
+      animated = true;
+      window.setTimeout(() => (animated = false), 200);
       content.classList.toggle('collapse__content_visible');
       if (arrow) {
         arrow.classList.toggle('collapse__arrow_active');

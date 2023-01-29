@@ -44,6 +44,7 @@
     @include flex-col;
     padding: $spacer * 4;
     position: relative;
+    z-index: 2;
 
     @include laptop {
       display: flex;
@@ -104,6 +105,7 @@
         @include font(400, 16px, $light-gray);
         line-height: 24.8px;
         margin-bottom: 0px;
+        margin-top: $spacer;
       }
     }
   }
@@ -124,6 +126,7 @@
 .multichannel__button_mobile {
   display: block;
   padding: $spacer * 3 $spacer * 2;
+  width: 100%;
 
   text-align: center;
   @include laptop {

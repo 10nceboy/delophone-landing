@@ -1,5 +1,7 @@
 .startuse {
-  margin-top: $spacer * 20;
+  @include tablet {
+    margin-top: 150px;
+  }
 
   &__header {
     margin-bottom: $spacer * 4;

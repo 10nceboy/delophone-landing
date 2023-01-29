@@ -16,7 +16,7 @@
 
   &__imageblock {
     display: none;
-    @include laptop {
+    @include tablet {
       display: block;
       margin-left: auto;
       width: 528px;
@@ -30,7 +30,7 @@
     display: block;
     margin: $spacer * 4 auto 0;
 
-    @include laptop {
+    @include tablet {
       display: none;
     }
   }
@@ -39,18 +39,20 @@
     display: flex;
     justify-content: center;
     margin-top: $spacer * 2;
+    box-sizing: border-box;
 
     @include laptop {
-      min-width: 320px;
       background-color: $light-gray;
       border-radius: 0px $border-radius-xs 0 $border-radius-xs;
-      padding: 16px $spacer * 4 $spacer * 3;
+      padding: $spacer * 3 $spacer * 4 $spacer * 3 $spacer * 4;
       margin-top: $spacer * 8;
       white-space: nowrap;
-      height: 30px;
       align-items: center;
       @include font(400, 16px, $gray);
+      margin-left: -5px;
       flex-shrink: 0;
+      width: 348px;
+      height: 55px;
     }
   }
 
@@ -112,6 +114,7 @@
   }
 
   &__button {
+    width: 100%;
     justify-content: flex-start;
     margin-right: 0px;
   }

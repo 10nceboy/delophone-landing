@@ -2,6 +2,7 @@
 
 .header {
   margin-top: 2 * $spacer;
+  max-width: 100%;
 
   &__dropdown {
     @include tablet {
@@ -84,6 +85,8 @@
     @include hidden;
     border: none;
     white-space: nowrap;
+    @include smartphone {
+    }
 
     ul {
       margin-top: $spacer * 7;
@@ -99,6 +102,7 @@
 
     @include laptop {
       @include visible;
+      display: flex;
 
       ul {
         margin-top: 0;
@@ -178,7 +182,13 @@
   }
 }
 
+.header__container {
+  height: 35px;
+  max-height: fit-content;
+}
+
 .header__dropdown {
+  display: none;
   @include laptop {
     order: 1;
     display: block;
@@ -198,6 +208,7 @@
   &__menu {
     @include laptop {
       margin-left: 0;
+      height: 65px;
 
       li {
         &:hover {

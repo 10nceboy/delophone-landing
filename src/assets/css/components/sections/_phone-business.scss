@@ -1,5 +1,5 @@
 .phone-business {
-  margin-top: $spacer * 16;
+  margin-top: $spacer * 13;
 
   @include tablet {
     margin-top: 0px;
@@ -13,14 +13,18 @@
       margin-bottom: $spacer;
     }
 
-    &_text {
+    &__text {
+      @include font(400, 15px, $gray);
+      line-height: 24px;
+
       @include tablet {
         line-height: 31px;
+        @include font(400, 20px, $gray);
       }
     }
+
     p {
       margin-bottom: $spacer;
-      margin-top: $spacer;
     }
 
     @include tablet {
@@ -49,10 +53,11 @@
     position: relative;
     z-index: 1;
     @include flex-col;
-    margin-bottom: $spacer * 6;
+    margin-bottom: $spacer * 5;
     justify-content: center;
     align-items: center;
     margin-top: $spacer * 5;
+    min-height: 111px;
 
     @include tablet {
       width: 475px;
@@ -68,6 +73,7 @@
   }
 
   &__card-numbersblock {
+    position: relative;
     padding: $spacer * 3 $spacer * 5;
 
     h4,
@@ -95,10 +101,24 @@
         margin-bottom: 0px;
       }
     }
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: url('/public/arc-mobile.svg');
+      top: -35px;
+      left: max(55%, 154px);
+      z-index: -1;
+      display: block;
+      @include laptop {
+        display: none;
+      }
+    }
   }
 
   &__card-numbers {
     @include flex-row;
+    justify-content: center;
 
     @include laptop {
       display: block;
@@ -114,14 +134,22 @@
     padding: $spacer;
     flex: 1;
     min-height: 24px;
+    max-height: 24px;
+    margin-right: 12px;
     letter-spacing: -1px;
     height: 100%;
+
+    &:last-child {
+      height: 27px;
+    }
 
     @include tablet {
       padding: 0 $spacer;
       justify-content: center;
       @include font(500, 24px, $orange);
       min-height: 37px;
+      max-height: 37px;
+      margin-right: 0px;
 
       svg {
         height: 18px;
@@ -151,18 +179,17 @@
     position: relative;
     margin-top: $spacer * 5;
     max-width: 100%;
-    margin-left: auto;
     display: flex;
 
     &::before {
-      content: url('/public/graphic-mobile-bot.svg');
+      content: url('/graphic-mobile-bot.svg');
       position: relative;
       z-index: $z-index-hidden;
       top: -30px;
       left: 0px;
 
       @include tablet {
-        content: url('/public/v1.svg');
+        content: url('/v1.svg');
         top: 18px;
         left: 0px;
       }
@@ -210,14 +237,20 @@
   @include tablet {
     display: block;
     position: relative;
+
     &:after {
-      content: url('/Vector233.svg');
-      position: absolute;
-      width: 53px;
-      height: 143px;
-      z-index: 1;
-      top: -75px;
-      left: -3px;
+      display: none;
+
+      @include tablet {
+        content: url('/Vector233.svg');
+        position: absolute;
+        width: 53px;
+        height: 143px;
+        z-index: 1;
+        top: -75px;
+        left: -3px;
+        display: block;
+      }
     }
   }
 }

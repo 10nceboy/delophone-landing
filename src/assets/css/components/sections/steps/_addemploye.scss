@@ -3,6 +3,8 @@
     margin-top: $spacer * 16;
     margin-bottom: $spacer * 16;
   }
+  margin-top: $spacer * 12;
+  margin-bottom: $spacer * 12;
 
   &__card {
     display: none;
@@ -51,41 +53,57 @@
     }
 
     &::before {
-      position: absolute;
-      content: url('/public/circe-steps.svg');
-      top: -246px;
-      transform: translateX(calc(-150% + 12px));
-      max-width: 312px;
-      user-select: none;
-    }
-
-    &::after {
-      position: absolute;
-      content: url('/public/circe-steps.svg');
-      top: -246px;
-      transform: translateX(calc(-150% + 12px));
-      max-width: 312px;
-      user-select: none;
+      display: none;
+      @include laptop {
+        display: block;
+        position: absolute;
+        content: url('/circe-steps.svg');
+        top: -246px;
+        transform: translateX(calc(-150% + 12px));
+        max-width: 312px;
+        user-select: none;
+      }
     }
   }
 }
 
 .arc__employe {
+  display: none;
   height: 0;
   z-index: 1;
   position: relative;
 
+  @include tablet {
+    display: block;
+  }
+
   &::before {
-    position: absolute;
-    content: url('/public/arc-step-2.svg');
-    top: -105px;
-    left: 622px;
-    z-index: -1;
+    display: none;
+    @include tablet {
+      position: absolute;
+      content: url('/arc-step-2.svg');
+      top: -105px;
+      left: 640px;
+      z-index: -1;
+      display: block;
+    }
   }
 
   &_reversed {
-    transform: scale(-1, 1);
-    top: 81px;
-    left: -115px;
+    display: none;
+    @include tablet {
+      transform: scale(-1, 1);
+      top: 81px;
+      left: -115px;
+      display: block;
+
+      &::before {
+        display: none;
+
+        @include tablet {
+          display: block;
+        }
+      }
+    }
   }
 }

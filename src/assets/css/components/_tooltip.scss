@@ -28,6 +28,16 @@
     border: 1px solid $light-gray;
     border-bottom: none;
     min-width: 250px;
+    display: none;
+    opacity: 0;
+
+    &_active {
+      display: block;
+    }
+
+    &_visible {
+      opacity: 1;
+    }
   }
 
   .tooltip__content {

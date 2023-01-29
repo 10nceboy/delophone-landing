@@ -12,6 +12,12 @@
     box-shadow: none;
     border: none;
 
+    @include laptop {
+      padding: 15px 20px;
+      width: 280px;
+      height: 53px;
+    }
+
     &:hover {
       outline: 2px $deep-blue solid;
     }

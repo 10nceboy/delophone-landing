@@ -1,8 +1,10 @@
 .collapse {
   overflow: hidden;
+  cursor: pointer;
 
   &__content {
     user-select: none;
+    cursor: default;
 
     max-height: 0;
     overflow: hidden;

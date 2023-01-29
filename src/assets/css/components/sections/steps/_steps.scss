@@ -4,10 +4,11 @@
 
 .steps {
   background-color: $light-gray;
-  padding-top: 0px;
+  padding-top: 80px;
 
   @include laptop {
     padding-top: 150px;
+    margin-top: 0px;
   }
 
   &__header {
@@ -29,7 +30,7 @@
         @include tablet {
           display: block;
           position: absolute;
-          content: url('/public/arc-step-1.svg');
+          content: url('/arc-step-1.svg');
           left: 388px;
           top: calc(100% - 28px);
         }
@@ -58,8 +59,10 @@
   }
 
   &__calculator {
-    padding-top: 60px;
-    position: relative;
+    @include tablet {
+      padding-top: 80px;
+      position: relative;
+    }
   }
 }
 
