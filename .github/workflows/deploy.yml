@@ -7,7 +7,7 @@ on:
 
 jobs:
   permissions:
-  contents: write
+    contents: write
 
   build:
     name: Build
