@@ -1,0 +1,98 @@
+.cases {
+  @include flex-col;
+  padding: 60px 0;
+
+  @include laptop {
+    @include flex-row;
+    padding: 80px 0;
+    padding-top: 150px;
+  }
+
+  &__card {
+    background: $white;
+    border-radius: $border-radius-xl;
+    width: 100%;
+    padding: $spacer * 4;
+    box-sizing: border-box;
+    background: $light-gray;
+    @include flex-col;
+
+    @include laptop {
+      padding: $spacer * 10;
+      min-height: 368px;
+    }
+  }
+
+  &__logo {
+    margin-bottom: $spacer * 3;
+
+    img {
+      margin-bottom: $spacer;
+
+      @include tablet {
+        margin-bottom: $spacer * 4;
+      }
+    }
+
+    @include laptop {
+      margin-bottom: $spacer * 5;
+    }
+  }
+
+  &__caption {
+    margin-top: $spacer * 2;
+  }
+
+  &__chip {
+    display: inline;
+    @include font(400, 12px, $gray);
+    background: transparent;
+
+    &::after {
+      margin: 0 $spacer;
+      content: '/';
+      @include font(400, 12px, $gray);
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    @include tablet {
+      padding: $spacer $spacer * 3;
+      border-radius: $border-radius-xs;
+      background: $white;
+      margin-right: $spacer * 3;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    margin: $spacer * 3 0 $spacer;
+    @include font(500, 16px, $black);
+    line-height: 20.8px;
+
+    @include tablet {
+      font: inherit;
+      @include font(500, 20px, $black);
+    }
+  }
+
+  &__content {
+    margin-bottom: $spacer * 4;
+    @include font(400, 14px, $gray);
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: $spacer * 2;
+    }
+  }
+}

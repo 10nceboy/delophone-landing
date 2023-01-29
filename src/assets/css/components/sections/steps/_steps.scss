@@ -1,0 +1,78 @@
+@import 'multichannel';
+@import 'addemploye';
+@import 'connection-methods';
+
+.steps {
+  background-color: $light-gray;
+  padding-top: 80px;
+
+  @include laptop {
+    padding-top: 150px;
+    margin-top: 0px;
+  }
+
+  &__header {
+    margin: 0 auto;
+    margin-bottom: $spacer * 5;
+
+    @include laptop {
+      margin-right: auto;
+      margin-bottom: $spacer * 11;
+    }
+
+    &_with-arc {
+      position: relative;
+      overflow: visible;
+      z-index: 1;
+
+      &::after {
+        display: none;
+        @include tablet {
+          display: block;
+          position: absolute;
+          content: url('/arc-step-1.svg');
+          left: 388px;
+          top: calc(100% - 28px);
+        }
+      }
+    }
+  }
+
+  &__checklist {
+    @include font(400, 15px, $gray);
+    line-height: 23.25px;
+    display: block;
+
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr) !important;
+      @include font(400, 16px, $gray);
+      grid-column-gap: $spacer !important;
+      display: grid;
+
+      line-height: 24.8px;
+      margin-top: $spacer * 2;
+
+      svg {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  &__calculator {
+    @include tablet {
+      padding-top: 80px;
+      position: relative;
+    }
+  }
+}
+
+.step-upside {
+  &__header-text {
+    margin-left: $spacer * 3;
+  }
+}
+
+.steps__lk {
+  padding-top: 80px;
+  position: relative;
+}

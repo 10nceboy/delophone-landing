@@ -1,0 +1,99 @@
+.connection-methods {
+  @include flex-col;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+
+  &__main {
+    @include laptop {
+      padding: 50px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__cards {
+    @include flex-col;
+    width: 100%;
+    margin-top: $spacer * 3;
+
+    @include laptop {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: $spacer * 6;
+      margin-top: $spacer * 5;
+    }
+  }
+
+  &__card {
+    @include flex-col;
+    justify-content: space-between;
+    background: $light-gray;
+    box-sizing: border-box;
+    width: 100%;
+    padding: $spacer * 3;
+    margin-bottom: $spacer * 3;
+    position: relative;
+    min-height: 111px;
+
+    &:last-child {
+      margin-bottom: 0;
+      height: 132px;
+      @include laptop {
+        height: auto;
+      }
+    }
+
+    @include laptop {
+      padding: $spacer * 4;
+      position: relative;
+      height: 136px;
+      width: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  &__info {
+    margin-left: auto;
+    font-size: 12px;
+    color: $gray;
+    line-height: 16px;
+    text-align: right;
+
+    @include laptop {
+      right: $spacer * 4;
+      top: $spacer * 4;
+      max-width: none;
+    }
+  }
+
+  &__title {
+    @include font(500, 16px, $black);
+    line-height: 21px;
+    max-width: 210px;
+
+    @include laptop {
+      max-width: 100%;
+      @include font(500, 18px, $black);
+      line-height: 26px;
+    }
+  }
+
+  &__top {
+    display: flex;
+  }
+
+  &_image {
+    position: absolute;
+    top: $spacer * 5;
+
+    @include laptop {
+      position: absolute;
+      top: $spacer * 8;
+    }
+  }
+}

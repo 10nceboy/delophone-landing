@@ -1,12 +1,33 @@
 @import '../utils/';
 @import '../base/typo';
 
-$dropdown-transition: 0.15s ease-in;
-
 .dropdown {
   position: relative;
   max-width: fit-content;
   max-height: fit-content;
+
+  &_inline {
+    display: inline-flex;
+    align-items: flex-end;
+    font-size: 14px;
+    text-decoration: underline;
+
+    @include laptop {
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    &::after {
+      display: none;
+
+      @include laptop {
+        content: url('/arrow-down.svg');
+        display: inline-block;
+        transform: translateY(3px);
+        margin: 2px 0;
+      }
+    }
+  }
 
   &__button {
     @include font(400, 16px, $black);
@@ -17,10 +38,15 @@ $dropdown-transition: 0.15s ease-in;
 
     &::after {
       content: url('/arrow-down.svg');
+
+      @include laptop {
+        transform: scale(1);
+      }
+
+      transform: scale(0.7);
       display: flex;
       margin-left: $spacer;
       padding-top: $spacer;
-      transition: all $dropdown-transition;
     }
 
     &.active {
@@ -29,6 +55,17 @@ $dropdown-transition: 0.15s ease-in;
 
     @include laptop {
       @include visible;
+    }
+
+    &_inline {
+      font-size: 14px;
+
+      @include laptop {
+        font-size: 20px;
+      }
+      color: $gray;
+      padding: 0;
+      margin: 0px -2px;
     }
   }
 
@@ -45,7 +82,7 @@ $dropdown-transition: 0.15s ease-in;
       gap: $spacer * 2;
       padding: $spacer * 4 $spacer * 5;
       background: $light-gray;
-      border-radius: $btn-border-radius;
+      border-radius: $border-radius-xs;
 
       @include desktop {
         box-shadow: map-get($elevations, 1);
@@ -55,6 +92,10 @@ $dropdown-transition: 0.15s ease-in;
         white-space: nowrap;
         user-select: none;
         cursor: pointer;
+
+        &:hover {
+          color: $blue;
+        }
       }
     }
   }
@@ -86,10 +127,6 @@ $dropdown-transition: 0.15s ease-in;
     @include tablet {
       display: block;
     }
-
-    @include wide-screen {
-      display: block;
-    }
   }
 
   &_white {
@@ -97,20 +134,17 @@ $dropdown-transition: 0.15s ease-in;
       @include font(400, 16px, $white);
 
       &::after {
-        content: url('/arrow-down.svg');
+        content: url('/arrow-down-white.svg');
         color: $white;
       }
     }
   }
 
-  &:hover {
+  &.active {
     .dropdown {
       &__button {
-        color: $blue;
-
         &::after {
           transform: rotateX(180deg) translateY(-2px);
-          transition: transform $dropdown-transition;
         }
       }
 

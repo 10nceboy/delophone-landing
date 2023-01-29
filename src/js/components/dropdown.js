@@ -1,30 +1,30 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const setDropdownValue = (dropdown, value) => {
-    dropdown.data.value = value;
-    dropdown.innerText = value;
-  };
+import { clickOutside } from '../utils/dom';
 
+document.addEventListener('DOMContentLoaded', () => {
   const dropdowns = document.querySelectorAll('.dropdown');
 
+  const setDropdownValue = (dropdown, value) => {
+    const button = dropdown.querySelector('.dropdown__button');
+    dropdown.dataset.value = value;
+    button.innerText = value;
+  };
+
   dropdowns.forEach((dropdown) => {
-    const items = dropdown.querySelectorAll('.dropdown-menu li');
+    dropdown.addEventListener('click', () =>
+      dropdown.classList.toggle('active')
+    );
+
+    const items = dropdown.querySelectorAll('.dropdown__menu li');
 
     /** handle item click => dispatch syntetic event  */
     items.forEach((dropdownItem) => {
       dropdownItem.addEventListener('click', () => {
-        dropdown.dispatchEvent(
-          new CustomEvent('change', {
-            detail: {
-              value: dropdownItem.data.value
-            }
-          })
-        );
+        if (dropdown.dataset.value) {
+          setDropdownValue(dropdown, dropdownItem.dataset.value);
+        }
       });
     });
 
-    /**handle dropdown Change */
-    dropdown.addEventListener('change', ({ detail }) =>
-      setDropdownValue(dropdown, detail.value)
-    );
+    clickOutside(dropdown, () => dropdown.classList.remove('active'));
   });
 });

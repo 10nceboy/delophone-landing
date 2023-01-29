@@ -1,37 +1,91 @@
 .card {
-  &__card_light-gray {
+  box-sizing: border-box;
+
+  &_light-gray {
     background-color: $light-gray;
 
-    &:hover {
-      border: $border-orange;
-    }
     &:focus {
       border: $border-orange;
     }
   }
 
-  &__card_white {
-    &__card_light-gray {
-      background-color: $white;
+  &_white {
+    background-color: $white;
 
-      &:hover {
-        border: $border-orange;
+    &:focus {
+      border: $border-orange;
+    }
+  }
+
+  &_black {
+    background-color: $black;
+  }
+
+  &_round {
+    border-radius: $border-radius-xl;
+    margin-bottom: $spacer * 2;
+    padding: $spacer * 3;
+    @include flex-col;
+
+    @include laptop {
+      padding: 0;
+      min-width: 210px;
+    }
+
+    &_header {
+      @include font(500, 16px, $black);
+      line-height: 21px;
+
+      @include laptop {
+        margin-bottom: $spacer;
+        @include font(500, 18px, 23.4px);
       }
-      &:focus {
-        border: $border-orange;
+    }
+
+    @include laptop {
+      border-radius: 268px;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      display: flex;
+      flex-shrink: 0;
+      width: 210px;
+      height: 210px;
+      margin-right: $spacer * 3;
+
+      &:nth-child(5) {
+        margin-right: 0;
       }
     }
   }
 
-  &__card_black {
-    background-color: $black;
+  &_rectangle {
+    border-radius: $border-radius-xl;
   }
 
-  &__card_round {
-    border-radius: 268px;
+  &_rounded-bot {
+    border-radius: 0px 0px $border-radius-xl $border-radius-xl;
   }
 
-  &__card_rectangle {
-    border-radius: 12px;
+  &_rounded-top {
+    border-radius: $border-radius-xl $border-radius-xl 0px 0px;
+  }
+}
+
+.card__round_text {
+  display: none;
+  @include laptop {
+    display: block;
+  }
+}
+
+.card__round_text-mobile {
+  display: block;
+  @include font(400, 15px, $gray);
+  line-height: 21px;
+  margin-top: 3px;
+  @include laptop {
+    display: none;
   }
 }

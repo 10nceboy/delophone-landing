@@ -2,15 +2,18 @@
 @import '../utils/vars';
 
 .button {
-  border-radius: $btn-border-radius;
+  border-radius: $border-radius-xs;
   transition: $btn-transition;
   padding: $spacer * 3 $spacer * 6;
+  white-space: nowrap;
   box-shadow: none;
   outline: none;
+  box-sizing: border-box;
+  max-height: 55px;
 
   cursor: pointer;
 
-  &.button_outlined {
+  &_outlined {
     border: 1px solid $blue;
     background-color: $white;
     color: $blue;
@@ -18,9 +21,12 @@
     &:hover {
       background-color: $deep-blue;
       color: $white;
+
+      @media (hover: hover) and (pointer: fine) {
+        color: $white;
+      }
     }
 
-    &:focus,
     &:active {
       background-color: $dark-blue;
       color: $white;
@@ -32,40 +38,43 @@
     }
   }
 
-  &.button_blue {
+  &_blue {
+    max-height: 55px;
+
     background-color: $blue;
     @include font(400, 16px, $white);
     border-color: transparent;
-    line-height: 25px;
 
     &:hover {
       background-color: $deep-blue;
     }
 
-    &:focus,
-    &.active {
+    &:active {
       background-color: $dark-blue;
     }
 
     &:disabled {
       background-color: $light-blue;
     }
+
+    @media (hover: hover) and (pointer: fine) {
+      color: $white;
+    }
   }
 
-  &.button_white {
+  &_white {
     border-color: transparent;
     background-color: $white;
     color: $black;
     white-space: nowrap;
-    height: 54px;
+    height: 55px;
 
     &:hover {
       background-color: $blue;
       color: $white;
     }
 
-    &:focus,
-    &.active {
+    &:active {
       background-color: $dark-blue;
       color: $white;
     }
@@ -75,19 +84,53 @@
       color: $white;
     }
   }
-}
 
-.button__start {
-  padding: $spacer * 3 $spacer * 14;
-  margin-top: $spacer * 4;
+  &_green {
+    background-color: $green;
+    @include font(400, 16px, $white);
+    border-color: transparent;
+    line-height: 25px;
 
-  @include laptop {
-    padding: $spacer * 3 $spacer * 6;
-    white-space: nowrap;
-    flex-shrink: 2;
-    margin-right: auto;
-    margin-top: 40px;
-    border-radius: $btn-border-radius;
-    width: 200px;
+    &:hover {
+      background-color: $dark-green;
+    }
+
+    &:active {
+      background-color: $darker-green;
+    }
+
+    &:disabled {
+      background-color: $light-green;
+    }
+  }
+
+  &_with-icon {
+    @include flex-row;
+    padding: $spacer * 3 $spacer * 3;
+  }
+
+  &__icon {
+    margin-right: $spacer * 2;
+    flex-grow: 1;
+
+    @include laptop {
+      min-width: 25px;
+      min-height: 25px;
+    }
+  }
+
+  &__start {
+    padding: $spacer * 3 $spacer * 14;
+    margin-top: $spacer * 4;
+
+    @include laptop {
+      padding: $spacer * 3 $spacer * 6;
+      white-space: nowrap;
+      flex-shrink: 2;
+      margin-right: auto;
+      margin-top: 40px;
+      border-radius: $border-radius-xs;
+      width: 200px;
+    }
   }
 }

@@ -11,6 +11,7 @@ body {
 h1 {
   @include font(600, 22px, $black);
   line-height: 30px;
+
   @include laptop {
     @include font(600, 32px, $black);
     line-height: 50px;
@@ -20,6 +21,7 @@ h1 {
 h2 {
   @include font(600, 20px, $black);
   line-height: 26px;
+
   @include laptop {
     @include font(600, 32px, $black);
     line-height: 43px;
@@ -29,24 +31,26 @@ h2 {
 h3 {
   @include font(600, 18px, $black);
   line-height: 23px;
+
   @include laptop {
     @include font(600, 26px, $black);
-    line-height: 43px;
+    line-height: 34px;
   }
 }
 
 h4 {
   @include font(500, 18px, $black);
   line-height: 23px;
+
   @include laptop {
-    @include font(500, 18px, $black);
+    @include font(500, 20px, $black);
     line-height: 26px;
   }
 }
 
 h5 {
-  @include font(500, 20px, $black);
-  line-height: 23px;
+  @include font(500, 18px, $black);
+  line-height: 23.4px;
 }
 
 .accent_orange {
@@ -79,11 +83,21 @@ h5 {
 
 .text_regular {
   @include font(400, 15px, $gray);
-  line-height: 23px;
+  line-height: 23.25px;
 
   @include laptop {
     @include font(400, 20px, $gray);
     line-height: 24.8px;
+  }
+}
+
+.text_regular_14 {
+  @include font(400, 14px, $gray);
+  line-height: 21px;
+
+  @include laptop {
+    @include font(400, 14px, $gray);
+    line-height: 21px;
   }
 }
 
@@ -94,5 +108,45 @@ h5 {
   @include laptop {
     @include font(400, 16px, $gray);
     line-height: 24.8px;
+  }
+}
+
+.text_caption {
+  @include font(400, 14px, $gray);
+  line-height: 21px;
+}
+
+.text_orange {
+  color: $orange;
+}
+
+.text_white {
+  color: $white;
+}
+
+.text_semibold {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24.8px;
+}
+
+.text_light-gray {
+  color: $light-gray;
+}
+
+.text_mobile {
+  display: block;
+  font-size: 15px;
+
+  @include laptop {
+    display: none;
+  }
+}
+
+.text_visible {
+  display: none;
+
+  @include laptop {
+    display: block;
   }
 }

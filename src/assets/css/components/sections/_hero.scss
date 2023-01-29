@@ -1,22 +1,22 @@
 .hero {
   @include flex-col;
   margin-top: $spacer * 10;
+
   @include laptop {
-    margin-top: 9 * $spacer;
-    height: 532px;
+    margin-top: $spacer * 9;
+    margin-bottom: $spacer * 30;
   }
 
   &__textblock {
     @include flex-col;
     margin: 0 auto;
     @include laptop {
-      width: 536px;
     }
   }
 
   &__imageblock {
     display: none;
-    @include laptop {
+    @include tablet {
       display: block;
       margin-left: auto;
       width: 528px;
@@ -28,10 +28,9 @@
 
   &__imageblock_mobile {
     display: block;
-    margin-top: $spacer * 4;
-    margin-left: auto;
-    margin-right: auto;
-    @include laptop {
+    margin: $spacer * 4 auto 0;
+
+    @include tablet {
       display: none;
     }
   }
@@ -40,22 +39,49 @@
     display: flex;
     justify-content: center;
     margin-top: $spacer * 2;
+    box-sizing: border-box;
 
     @include laptop {
-      margin-right: auto;
       background-color: $light-gray;
-      border-radius: 0px $spacer 0 $spacer;
-      padding: 16px $spacer * 4 $spacer * 3;
+      border-radius: 0px $border-radius-xs 0 $border-radius-xs;
+      padding: $spacer * 3 $spacer * 4 $spacer * 3 $spacer * 4;
       margin-top: $spacer * 8;
       white-space: nowrap;
-      border-radius: 0px;
-      height: 30px;
       align-items: center;
       @include font(400, 16px, $gray);
+      margin-left: -5px;
       flex-shrink: 0;
+      width: 348px;
+      height: 55px;
     }
   }
+
+  &__card-container {
+    max-height: 100%;
+    margin-top: 45px;
+
+    @include laptop {
+      align-items: flex-start;
+      @include flex-col;
+
+      max-height: 230px;
+      max-width: 290px;
+    }
+  }
+
   &__card {
+    padding: $spacer * 4;
+    padding-top: $spacer * 5;
+    margin: 0 0 $spacer * 3 0;
+    height: 33.3%;
+    width: 100%;
+
+    &:first-child {
+      margin-top: $spacer * 9;
+      @include laptop {
+      }
+    }
+
     h4 {
       margin-left: $spacer * 2;
     }
@@ -64,41 +90,38 @@
       margin-bottom: $spacer * 3;
     }
 
-    padding: $spacer * 5 $spacer * 4 $spacer * 4 $spacer * 4;
-    margin: 0 auto $spacer * 3;
-
-    &:first-child {
-      margin-top: $spacer * 5;
-    }
-
-    &:last-child {
-      margin-bottom: $spacer * 16;
-    }
-
     @include laptop {
       margin-right: $spacer * 6;
+      max-width: 100%;
       flex-grow: 1;
-      width: $spacer * 70;
-      padding: $spacer * 9 $spacer * 4 $spacer * 8 $spacer * 4;
+      padding: $spacer * 9 $spacer * 4 $spacer * 8;
       margin-top: 58px;
       margin-bottom: 0px;
-
-      &:first-child {
-        margin-top: 58px;
-      }
-
-      &:last-child {
-        margin-top: 58px;
-        margin-right: 0;
-        margin-bottom: 0px;
-      }
+      max-height: 230px;
 
       h4 {
         margin-left: $spacer * 4;
       }
-      .container-flex {
-        margin-bottom: $spacer * 4;
+
+      &:last-child {
+        margin-right: 0px;
       }
     }
+  }
+
+  &__text {
+    margin-top: $spacer * 3;
+  }
+
+  &__button {
+    width: 100%;
+    justify-content: flex-start;
+    margin-right: 0px;
+  }
+}
+
+.hero__text {
+  @include tablet {
+    line-height: 31px;
   }
 }

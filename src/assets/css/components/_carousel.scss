@@ -1,0 +1,90 @@
+.carousel {
+  min-width: 290px;
+
+  @include laptop {
+    min-width: 1100px;
+  }
+
+  @include tablet {
+    position: relative;
+  }
+
+  &__navigation {
+    @include flex-row;
+    justify-content: center;
+    align-items: center;
+    margin-top: $spacer * 5;
+
+    @include tablet {
+      position: absolute;
+      width: calc(100% + 140px);
+      justify-content: space-between;
+      top: 50%;
+      left: -$spacer * 14;
+    }
+  }
+
+  &__button {
+    padding: 0;
+    svg {
+      height: 40px;
+      width: 40px;
+
+      circle {
+        stroke: $blue;
+      }
+      path {
+        stroke: $blue;
+      }
+    }
+
+    &:hover {
+      &:not(.swiper-button-disabled) {
+        @include laptop {
+          svg {
+            circle {
+              fill: $blue;
+              stroke: $white;
+            }
+            path {
+              stroke: $white;
+            }
+          }
+        }
+      }
+    }
+
+    &:active {
+      &:not(.swiper-button-disabled) {
+        @include laptop {
+          svg {
+            circle {
+              fill: $blue;
+              stroke: $white;
+            }
+            path {
+              stroke: $white;
+            }
+          }
+        }
+      }
+    }
+
+    &.swiper-button-disabled {
+      cursor: default;
+
+      svg {
+        circle {
+          stroke: $light-blue;
+        }
+        path {
+          stroke: $light-blue;
+        }
+      }
+    }
+
+    &_prev {
+      margin-right: $spacer * 3;
+    }
+  }
+}

@@ -1,14 +1,21 @@
 @import '../utils/index';
 
 .header {
-  margin-top: 4 * $spacer;
+  margin-top: 2 * $spacer;
+  max-width: 100%;
+
+  &__dropdown {
+    @include tablet {
+      opacity: 1 !important;
+    }
+  }
 
   &__upside {
     @include flex-col;
 
     @include laptop {
       @include flex-row;
-      margin: 8 * $spacer 0 3 * $spacer;
+      margin: 5 * $spacer 0 3 * $spacer;
     }
   }
 
@@ -66,20 +73,10 @@
     width: 0;
     @include hidden;
     background-color: $white;
+    display: none;
 
     @include laptop {
       display: none;
-    }
-
-    &.active {
-      @include visible($opacity-transition);
-      width: auto;
-      background-color: $light-gray;
-      border: none;
-
-      @include laptop {
-        @include hidden;
-      }
     }
   }
 
@@ -88,66 +85,132 @@
     @include hidden;
     border: none;
     white-space: nowrap;
-
-    &.active {
-      @include visible($opacity-transition);
+    @include smartphone {
     }
 
     ul {
-      li {
-        margin-top: 3 * $spacer;
+      margin-top: $spacer * 7;
 
-        @include desktop {
-          &:last-child {
-            text-align: right;
-            margin-right: 0;
-          }
+      li {
+        margin-bottom: $spacer * 3;
+
+        &:last-child {
+          margin-bottom: 0px;
         }
       }
     }
 
     @include laptop {
       @include visible;
+      display: flex;
+
       ul {
+        margin-top: 0;
         @include flex-row;
-      }
+        padding-top: 20px;
+        padding-bottom: 20px;
 
-      li {
-        margin: 4 * $spacer;
-        flex-grow: 1;
+        li {
+          margin-bottom: 0px;
+          margin-right: 117px;
 
-        &:first-child {
-          margin-left: 0;
-          margin-top: 4 * $spacer;
+          &:last-child {
+            margin-right: 0px;
+            margin-bottom: 0px;
+          }
         }
       }
+    }
+  }
 
-      &__login {
-        margin: 0 9 * $spacer 0 13 * $spacer;
-        order: 6;
-        @include visible;
-      }
+  &__login {
+    margin: 0 9 * $spacer 0 13 * $spacer;
+    order: 6;
+    @include visible;
+  }
+
+  &_active {
+    @include fullscreen;
+    background-color: $light-gray;
+    z-index: 100;
+    margin-top: 0px;
+
+    .header__menu,
+    .login__phone-number,
+    .login,
+    .header__burger_opened,
+    .header__dropdown {
+      @include visible($opacity-transition);
+      display: block;
+    }
+
+    .header__dropdown {
+      opacity: 1;
+    }
+
+    .dropdown__menu_list {
+      padding: $spacer * 2 0 0 $spacer * 3;
+    }
+
+    .login__phone-number {
+      margin-bottom: $spacer * 2;
+    }
+
+    .login {
+      background-color: $light-gray;
+      margin: 0 auto $spacer * 3 0;
+      padding: 0;
+      order: initial;
+      display: flex;
+    }
+
+    .header__upside {
+      margin-top: $spacer * 2;
+    }
+
+    .header__burger_opened {
+      width: auto;
+      background-color: $light-gray;
+      border: none;
+      padding: 0;
+    }
+
+    .header__dropdown-button {
+      @include visible($opacity-transition);
+      padding: 0;
     }
   }
 }
 
+.header__container {
+  height: 35px;
+  max-height: fit-content;
+}
+
 .header__dropdown {
+  display: none;
   @include laptop {
-    margin-top: $spacer;
     order: 1;
+    display: block;
+    margin-top: 5px;
   }
 
-  &__drodown-button {
+  &-button {
     display: none;
+    height: 0;
+    opacity: 0;
 
     @include laptop {
       display: block;
+      opacity: 1;
+      margin-top: 2px;
     }
   }
 
   &__menu {
     @include laptop {
       margin-left: 0;
+      height: 65px;
 
       li {
         &:hover {
@@ -171,6 +234,7 @@
   &.active {
     @include visible($opacity-transition);
     background-color: $light-gray;
+    display: block;
 
     @include laptop {
       @include hidden;

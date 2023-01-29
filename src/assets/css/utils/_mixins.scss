@@ -1,10 +1,10 @@
 $family: 'Manrope';
 
 /* layout*/
-@mixin flex-row {
+@mixin flex-row($align: center) {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: $align;
 }
 
 @mixin flex-col {
@@ -12,33 +12,45 @@ $family: 'Manrope';
   flex-direction: column;
 }
 
+@mixin flex-row-start {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*breakpoints*/
-@mixin wide-screen {
+@mixin desktop {
   @media screen and (min-width: 1400px) {
     @content;
   }
 }
 
-@mixin desktop {
+@mixin laptop {
   @media screen and (min-width: 1200px) {
     @content;
   }
 }
 
-@mixin laptop {
-  @media screen and (min-width: 992px) {
+@mixin tablet {
+  @media screen and (min-width: 960px) {
     @content;
   }
 }
 
-@mixin tablet {
-  @media (min-width: 576px) {
+@mixin smartphone {
+  @media (min-width: 640px) {
     @content;
   }
 }
 
 /*fonts*/
-/* $family is coming from typo.scss */
+
 @mixin font($weight, $size, $color, $fam: $family) {
   font: $weight $size $fam;
   color: $color;
@@ -54,4 +66,19 @@ $family: 'Manrope';
   height: auto;
   opacity: 1;
   transition: $transition;
+}
+
+@mixin center {
+  @include flex-row;
+  justify-content: center;
+}
+
+@mixin fullscreen() {
+  height: 100%;
+  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
 }

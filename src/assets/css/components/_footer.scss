@@ -2,7 +2,7 @@
   background: $black;
   padding: $spacer * 6 0;
 
-  @include wide-screen {
+  @include desktop {
     padding: $spacer * 9 0 $spacer * 7;
   }
 
@@ -17,9 +17,10 @@
     }
   }
 
-  .footer__upside {
+  .footer-upside {
     @include laptop {
       @include flex-row;
+      justify-content: space-between;
       padding-bottom: $spacer * 9;
     }
 
@@ -29,7 +30,7 @@
       margin-bottom: $spacer * 3;
 
       @include laptop {
-        margin-right: $spacer * 8;
+        margin-bottom: 0px;
       }
 
       svg {
@@ -48,8 +49,11 @@
     }
 
     &__dropdown {
+      margin-left: 0px;
+
       @include laptop {
-        margin-right: $spacer * 16;
+        white-space: nowrap;
+        margin-left: -$spacer * 6;
       }
     }
 
@@ -84,13 +88,15 @@
     }
 
     &__login {
-      @include flex-row;
-      margin-left: $spacer * 9;
-      background: transparent;
-      order: 0;
+      @include laptop {
+        @include flex-row;
+        background: transparent;
+        order: 0;
+        margin-right: 0;
 
-      .button__login-button {
-        margin-left: 0;
+        .button__login-button {
+          margin-left: 0;
+        }
       }
     }
 
@@ -98,8 +104,7 @@
       margin-top: $spacer * 5;
 
       @include laptop {
-        margin-top: 0;
-        margin-left: $spacer * 11;
+        margin-top: 0px;
       }
     }
   }
@@ -107,7 +112,7 @@
   .footer-contacts {
     font-size: 14px;
     background: $gray;
-    border-radius: $btn-border-radius;
+    border-radius: $border-radius-xs;
     padding: $spacer * 4;
     margin-top: $spacer * 6;
 
@@ -123,6 +128,8 @@
 
       @include laptop {
         @include flex-row;
+        align-items: flex-start;
+        justify-content: space-between;
       }
     }
 
@@ -132,7 +139,6 @@
 
       @include laptop {
         margin-top: 0;
-        margin-left: auto;
       }
     }
 
@@ -148,7 +154,6 @@
     &__email,
     &__phone {
       @include laptop {
-        margin-right: $spacer * 10;
         margin-top: 0;
       }
     }

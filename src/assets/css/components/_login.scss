@@ -47,6 +47,7 @@
     @include font(400, 16px, $black);
     @include hidden;
     margin-top: 3 * $spacer;
+    display: none;
 
     @include laptop {
       @include visible(all 0);
@@ -54,10 +55,6 @@
       margin-top: 0;
       margin-left: auto;
       display: block;
-    }
-
-    &.active {
-      @include visible($opacity-transition);
     }
   }
 }
@@ -68,11 +65,11 @@
   @include hidden;
   background: transparent;
   border: none;
-  margin-top: 3 * $spacer;
   display: none;
 
   @include laptop {
     @include visible;
+    display: flex;
   }
 
   &:hover {

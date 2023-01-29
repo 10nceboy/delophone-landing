@@ -16,14 +16,9 @@
 .container {
   margin: 0 auto;
   width: calc(100vw - 30px);
+  overflow: visible;
 
   @include desktop {
-    width: calc(100vw - 330px);
-    max-width: 1110px;
-  }
-
-  @include wide-screen {
-    width: calc(100vw - 165px);
     max-width: auto;
   }
 
@@ -33,7 +28,7 @@
   }
 
   @include tablet {
-    width: calc(100vw - 120px);
+    width: calc(100vw - 40px);
   }
 
   &.container-bottom {
@@ -50,19 +45,55 @@
   }
 }
 
+.container_flex-start {
+  @include flex-row-start;
+}
+
 .container_flex-col {
   @include flex-col;
 }
 
-.overlay_gray {
-  background-color: $light-gray;
+.container_flex-center {
+  @include flex-center;
 }
 
-.container_rotate {
+.background_gray {
+  background-color: $light-gray;
+
+  @include laptop {
+    height: 65px;
+  }
+}
+
+.container_adaptive {
   @include flex-col;
   justify-content: center;
+  align-items: center;
+  max-width: 100%;
 
   @include laptop {
     @include flex-row;
+  }
+
+  &-reverse {
+    @include flex-row;
+    @include laptop {
+      @include flex-col;
+      align-items: flex-start;
+    }
+  }
+}
+
+.mobile-hidden {
+  display: none !important;
+
+  @include laptop {
+    display: flex !important;
+  }
+}
+
+.mobile-only {
+  @include laptop {
+    display: none;
   }
 }

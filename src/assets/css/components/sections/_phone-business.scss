@@ -1,0 +1,325 @@
+.phone-business {
+  margin-top: $spacer * 13;
+
+  @include tablet {
+    margin-top: 0px;
+  }
+
+  &__textblock {
+    display: block;
+    margin-bottom: auto;
+
+    h2 {
+      margin-bottom: $spacer;
+    }
+
+    &__text {
+      @include font(400, 15px, $gray);
+      line-height: 24px;
+
+      @include tablet {
+        line-height: 31px;
+        @include font(400, 20px, $gray);
+      }
+    }
+
+    p {
+      margin-bottom: $spacer;
+    }
+
+    @include tablet {
+      h2 {
+        margin-bottom: $spacer * 4;
+      }
+      p {
+        margin-bottom: $spacer * 2;
+      }
+    }
+  }
+
+  &__cardblock_right {
+    min-width: 290px;
+    width: 100%;
+
+    @include tablet {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__card-userblock {
+    position: relative;
+    z-index: 1;
+    @include flex-col;
+    margin-bottom: $spacer * 5;
+    justify-content: center;
+    align-items: center;
+    margin-top: $spacer * 5;
+    min-height: 111px;
+
+    @include tablet {
+      width: 475px;
+      height: 100px;
+      @include flex-row;
+      justify-content: space-between;
+      max-width: auto;
+      margin-left: auto;
+      margin-right: 0;
+      padding: 20px 30px;
+      margin-top: 0;
+    }
+  }
+
+  &__card-numbersblock {
+    position: relative;
+    padding: $spacer * 3 $spacer * 5;
+
+    h4,
+    p {
+      text-align: center;
+      margin-left: 0;
+    }
+    p {
+      margin-bottom: $spacer * 2;
+    }
+
+    @include tablet {
+      padding: $spacer * 6;
+      height: 124px;
+      display: flex;
+      align-items: center;
+      min-width: 475px;
+
+      h4,
+      p {
+        text-align: left;
+      }
+
+      p {
+        margin-bottom: 0px;
+      }
+    }
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: url('/public/arc-mobile.svg');
+      top: -35px;
+      left: max(55%, 154px);
+      z-index: -1;
+      display: block;
+      @include laptop {
+        display: none;
+      }
+    }
+  }
+
+  &__card-numbers {
+    @include flex-row;
+    justify-content: center;
+
+    @include laptop {
+      display: block;
+    }
+  }
+
+  &__card-number {
+    display: flex;
+    border: 1px solid $black;
+    border-radius: 4px;
+    align-items: center;
+    @include font(500, 16px, $orange);
+    padding: $spacer;
+    flex: 1;
+    min-height: 24px;
+    max-height: 24px;
+    margin-right: 12px;
+    letter-spacing: -1px;
+    height: 100%;
+
+    &:last-child {
+      height: 27px;
+    }
+
+    @include tablet {
+      padding: 0 $spacer;
+      justify-content: center;
+      @include font(500, 24px, $orange);
+      min-height: 37px;
+      max-height: 37px;
+      margin-right: 0px;
+
+      svg {
+        height: 18px;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        width: 43px;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        display: flex;
+      }
+
+      &:nth-child(4) {
+        width: 78px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__cardblock_bottom {
+    position: relative;
+    margin-top: $spacer * 5;
+    max-width: 100%;
+    display: flex;
+    height: 415px;
+    max-height: 415px;
+
+    &::before {
+      content: url('/graphic-mobile-bot.svg');
+      position: relative;
+      z-index: $z-index-hidden;
+      top: -35px;
+      left: 0px;
+      margin-right: -22px;
+
+      @include tablet {
+        content: url('/v1.svg');
+        top: 18px;
+        left: 27px;
+        margin-right: 0px;
+      }
+    }
+
+    @include tablet {
+      margin-left: 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 0;
+      text-align: center;
+      width: 100%;
+      margin-top: -10px;
+      height: auto;
+
+      h5 {
+        text-align: center;
+        margin-bottom: $spacer * 2;
+      }
+      p {
+        @include tablet {
+          @include font(400, 16px, $gray);
+          line-height: 20.8px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &__cards {
+    @include tablet {
+      @include flex-row;
+    }
+    flex-grow: 1;
+  }
+
+  &__your-numbers {
+    flex: 1 1;
+  }
+}
+
+.graphic {
+  display: none;
+
+  @include tablet {
+    display: block;
+    position: relative;
+
+    &:after {
+      display: none;
+
+      @include tablet {
+        content: url('/Vector233.svg');
+        position: absolute;
+        width: 53px;
+        height: 143px;
+        z-index: 1;
+        top: -75px;
+        left: -3px;
+        display: block;
+      }
+    }
+  }
+}
+
+.graphic__bottom {
+  display: none;
+  position: relative;
+
+  @include tablet {
+    display: block;
+    &::before {
+      content: url('/v1.svg');
+      position: absolute;
+      display: block;
+      left: 75px;
+      z-index: $z-index-hidden;
+      top: -5px;
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.usersblock__image {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.usersblock__image_mobile {
+  display: block;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.phone-bussines__numbers_up {
+  @include flex-row;
+  @include tablet {
+    gap: $spacer * 3;
+    margin-bottom: $spacer * 2;
+    align-self: flex-end;
+  }
+
+  div {
+    &:nth-child(2) {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+    }
+  }
+}
+
+.phone-business_numbers_down {
+  @include flex-row;
+
+  @include tablet {
+    gap: $spacer * 3;
+  }
+}

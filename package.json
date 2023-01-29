@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/delophone-landing/",
+    "build:ci": "vite build --base=/delophone-landing/",
+    "build": "vite build",
     "preview": "vite preview",
     "host": "vite --host"
   },
   "devDependencies": {
     "bowser": "^2.11.0",
+    "cypress": "^12.4.1",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -20,6 +22,8 @@
     "vite": "^4.0.0"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "swiper": "^8.4.6",
     "vite-plugin-svg-icons": "^2.0.1"
   }
 }

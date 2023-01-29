@@ -1,0 +1,53 @@
+.startuse {
+  @include tablet {
+    margin-top: 150px;
+    padding-bottom: 150px;
+  }
+
+  &__header {
+    margin-bottom: $spacer * 4;
+  }
+
+  &__text {
+    margin-bottom: $spacer * 3;
+    line-height: 31px;
+  }
+
+  &__button {
+    display: none;
+    margin-top: $spacer * 5;
+    flex-shrink: 0;
+    max-height: 55px;
+    order: 2;
+    line-height: normal;
+
+    @include laptop {
+      display: block;
+    }
+
+    &_mobile {
+      display: block;
+
+      @include laptop {
+        display: none;
+      }
+    }
+  }
+
+  &__image {
+    display: none;
+
+    @include laptop {
+      display: block;
+    }
+  }
+
+  &__image_mobile {
+    display: block;
+    margin: $spacer * 5 0;
+
+    @include laptop {
+      display: none;
+    }
+  }
+}

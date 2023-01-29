@@ -1,0 +1,61 @@
+.collapse {
+  overflow: hidden;
+  cursor: pointer;
+
+  &__content {
+    user-select: none;
+    cursor: default;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height $collapse-transition;
+
+    &_visible {
+      max-height: 450px;
+      user-select: all;
+    }
+  }
+
+  &__activator {
+    cursor: pointer;
+    user-select: none;
+    box-sizing: border-box;
+    max-height: 112px;
+    display: flex;
+    align-items: flex-start;
+
+    @include laptop {
+      align-items: center;
+    }
+  }
+
+  &__arrow {
+    width: 25px;
+    height: 25px;
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    margin-left: auto;
+
+    @include laptop {
+      width: 32px;
+      height: 32px;
+    }
+
+    transform: rotateX(180deg);
+    transition: transform $collapse-transition;
+
+    &_active {
+      transform: rotateX(0deg);
+    }
+  }
+
+  &_closed {
+    .collapse__content {
+      display: none;
+    }
+  }
+}
