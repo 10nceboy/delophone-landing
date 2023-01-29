@@ -125,9 +125,12 @@ h5 {
 }
 
 .text_semibold {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24.8px;
+  @include laptop {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24.8px;
+  }
+  font-size: 15px;
 }
 
 .text_light-gray {

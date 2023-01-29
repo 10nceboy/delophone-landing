@@ -87,6 +87,7 @@
   &__downside {
     padding: $spacer * 4;
     display: block;
+    height: 230px;
 
     @include laptop {
       display: flex;

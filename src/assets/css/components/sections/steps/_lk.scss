@@ -13,9 +13,11 @@
       display: flex;
       flex-direction: column;
       color: $white;
+      min-height: 230px;
 
       @include laptop {
         padding: $spacer * 6 $spacer * 10;
+        min-height: auto;
       }
 
       .lk__text {
@@ -76,13 +78,19 @@
 
   &__support {
     @include flex-col;
-    margin-right: 33px;
+
     color: $white;
+
+    h4 {
+      font-size: 16px;
+      line-height: 21px;
+    }
 
     @include laptop {
       &__text {
         color: $light-gray !important;
         margin-bottom: $spacer * 2;
+        margin-right: 33px;
       }
     }
   }
@@ -103,11 +111,18 @@
     @include laptop {
       width: 239px;
     }
+    svg {
+      margin-right: -10px;
+    }
+    @include laptop {
+      margin-right: initial;
+    }
   }
 
   &__answer-time {
     color: $light-gray;
     margin-top: $spacer * 2;
+    text-align: center;
 
     @include laptop {
       max-width: 115px;

@@ -1,7 +1,6 @@
 .hero {
   @include flex-col;
-  margin-top: $spacer * 10;
-
+  margin-top: 50px;
   @include laptop {
     margin-top: $spacer * 9;
     margin-bottom: $spacer * 30;
@@ -79,6 +78,7 @@
     &:first-child {
       margin-top: $spacer * 9;
       @include laptop {
+        margin-top: 58px;
       }
     }
 
@@ -94,10 +94,10 @@
       margin-right: $spacer * 6;
       max-width: 100%;
       flex-grow: 1;
-      padding: $spacer * 9 $spacer * 4 $spacer * 8;
+      padding: $spacer * 9 $spacer * 5 $spacer * 8 $spacer * 5;
       margin-top: 58px;
       margin-bottom: 0px;
-      max-height: 230px;
+      min-height: 230px;
 
       h4 {
         margin-left: $spacer * 4;

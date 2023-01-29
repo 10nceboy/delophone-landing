@@ -1,7 +1,11 @@
 .startuse {
+  margin-top: 80px;
+  margin-bottom: 80px;
   @include tablet {
-    margin-top: 150px;
     padding-bottom: 150px;
+    padding-top: 150px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   &__header {
@@ -9,8 +13,13 @@
   }
 
   &__text {
-    margin-bottom: $spacer * 3;
-    line-height: 31px;
+    line-height: 23.25px;
+    margin-bottom: 15px;
+
+    @include tablet {
+      margin-bottom: $spacer * 3;
+      line-height: 31px;
+    }
   }
 
   &__button {
@@ -27,6 +36,7 @@
 
     &_mobile {
       display: block;
+      width: 100%;
 
       @include laptop {
         display: none;
