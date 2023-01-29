@@ -119,3 +119,9 @@
     margin-right: 0px;
   }
 }
+
+.hero__text {
+  @include tablet {
+    line-height: 31px;
+  }
+}

@@ -8,3 +8,4 @@ import '~/js/components/carousel';
 import '~/js/components/tooltip';
 import '~/js/components/hero';
 import '~/js/components/city';
+import '~/js/components/menu';

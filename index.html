@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="alternate" hreflang="ru-ru" href="https://delofon.ru" />
+    <link rel="canonical" href="https://delofon.ru/" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <meta property="og:site_name" content="Делофон" />
@@ -38,7 +40,7 @@
         <div class="header__upside">
           <div class="container_flex header__container">
             <figure class="header__logo_mobile">
-              <a href="#">
+              <a arai-label="Логотип" href="/">
                 <img
                   alt="Делофон - логотип"
                   src="./src/assets/images/icons/svg/logo-mobile.svg"
@@ -46,7 +48,7 @@
               </a>
             </figure>
             <figure class="header__logo">
-              <a href="#">
+              <a arai-label="Логотип" href="/">
                 <img
                   alt="Делофон - логотип"
                   src="./src/assets/images/icons/svg/logo-large.svg"
@@ -96,7 +98,12 @@
             <span class="login__text"> Войти </span>
           </button>
           <div class="login__phone-number phone-number">
-            <a class="link" href="tel:+8-(495)-286–01–11">8 (495) 286–01–11</a>
+            <a
+              class="link"
+              href="tel:+8-(495)-286–01–11"
+              arai-label="Телефон +8 495 286-01-11"
+              >8 (495) 286–01–11</a
+            >
           </div>
           <div class="dropdown header__dropdown city" data-value="Москва">
             <button
@@ -126,23 +133,53 @@
           <nav class="header__menu">
             <ul>
               <li>
-                <a class="link link__gray" href="#phone-business">Для кого</a>
+                <a
+                  class="menu-link link link__gray"
+                  href="#phone-business"
+                  arai-label="Для кого"
+                  >Для кого</a
+                >
               </li>
               <li>
-                <a class="link link__gray" href="#features">Возможности</a>
+                <a
+                  class="link link__gray menu-link"
+                  href="#features"
+                  arai-label="Возможности"
+                  >Возможности</a
+                >
               </li>
               <li>
-                <a class="link link__gray" href="#steps">Как подключить</a>
+                <a
+                  class="link link__gray menu-link"
+                  href="#steps"
+                  aria-label="Как подключить"
+                  >Как подключить</a
+                >
               </li>
               <li>
-                <a class="link link__gray" href="#connection-methods"
+                <a
+                  class="link link__gray menu-link"
+                  href="#connection-methods"
+                  aria-label="Cпособы связи"
                   >Способы связи</a
                 >
               </li>
               <li>
-                <a class="link link__gray" href="#calculator">Стоимость</a>
+                <a
+                  class="link link__gray menu-link"
+                  href="#calculator"
+                  aria-label="Cтоимость"
+                  >Стоимость</a
+                >
               </li>
-              <li><a class="link link__gray" href="#faq">FAQ</a></li>
+              <li>
+                <a
+                  class="link link__gray menu-link"
+                  href="#faq"
+                  aria-label="Вопросы и ответы"
+                  >FAQ</a
+                >
+              </li>
             </ul>
           </nav>
         </div>
@@ -227,6 +264,7 @@
               </h3>
               <figure class="whatsapp__qrcode">
                 <img
+                  alt="Вопросы и ответы"
                   src="/src/assets/images/sections/qr.svg"
                   width="180px"
                   height="180x"
@@ -250,7 +288,7 @@
                 <strong class="accent_orange"> без абонентской платы </strong>
               </h1>
               <div class="container_adaptive">
-                <p class="text_regular">
+                <p class="text_regular hero__text">
                   <b class="accent_black"> Настройте звонки в бизнесе: </b>
                   c красивым номером, многоканальной линией и распределением
                   звонков <br />
@@ -1900,10 +1938,10 @@
         </section>
       </div>
 
-      <section class="steps" id="steps">
+      <section class="steps">
         <div class="container">
           <div class="steps__header steps__header_with-arc">
-            <h2>
+            <h2 id="steps">
               Настройте технологичную <br />
               телефонию за 5 шагов
             </h2>
@@ -2082,12 +2120,12 @@
               </div>
               <div class="addemploye__image">
                 <img
-                  alt="Мульиканальный обзвон"
+                  alt="Подключение сотрудников"
                   src="src/assets/images/sections/steps/employe.svg"
                 />
               </div>
               <div class="addemploye__image_mobile">
-                <img alt="Мульиканальный обзвон" src="/employe-mobile.svg" />
+                <img alt="Подключение сотрудников" src="/employe-mobile.svg" />
               </div>
               <div
                 class="card_light-gray card_rectangle text_caption addemploye__card_mobile"
@@ -2611,7 +2649,6 @@
                   class="tabs__item tabs__item_active"
                   data-tab="journal"
                   aria-hidden="true"
-                  data-pidor="oleg"
                 >
                   <img
                     src="./src/assets/images/sections/lk/journal.svg"
@@ -3151,7 +3188,12 @@
               </svg>
               <h5>Исходящие 1.4 ₽/мин</h5>
             </div>
-            <a class="link link_blue calculator__link">Посмотреть все цены →</a>
+            <a
+              class="link link_blue calculator__link"
+              aria-label="Посмотреть все цены"
+              href="https://delofon.ru/#price"
+              >Посмотреть все цены →</a
+            >
           </div>
         </div>
         <div class="container">
@@ -3226,7 +3268,10 @@
               <div class="swiper-slide">
                 <article class="card cases__card">
                   <figure class="cases__logo">
-                    <img src="/src/assets/images/cases/sputnik.svg" />
+                    <img
+                      alt="Кейс Спутник"
+                      src="/src/assets/images/cases/sputnik.svg"
+                    />
                     <figcaption class="cases__caption">
                       <span class="cases__chip"> 8 сотрудников </span>
                       <span class="cases__chip">
@@ -3242,7 +3287,10 @@
                     Теперь все звонки видны в одном месте, будь то офис-менеджер
                     или риэлтор на выезде.
                   </div>
-                  <a class="link link_blue link_bottom" href="/"
+                  <a
+                    class="link link_blue link_bottom"
+                    aria-label="Посмотреть весь кейс"
+                    href="/"
                     >Посмотреть весь кейс →</a
                   >
                 </article>
@@ -3250,7 +3298,10 @@
               <div class="swiper-slide">
                 <article class="card cases__card">
                   <figure class="cases__logo">
-                    <img src="/src/assets/images/cases/goodseller.svg" />
+                    <img
+                      alt="Кейс Гудселлер"
+                      src="/src/assets/images/cases/goodseller.svg"
+                    />
                     <figcaption class="cases__caption">
                       <span class="cases__chip"> 8 сотрудников </span>
                       <span class="cases__chip">
@@ -3266,7 +3317,10 @@
                     Повысили скорость холодного обзвона почти в 2 раза и стали
                     намного реже терять клиентов.
                   </div>
-                  <a class="link link_blue link_bottom" href="/"
+                  <a
+                    class="link link_blue link_bottom"
+                    href="/"
+                    aria-label="Посмотреть весь кейс"
                     >Посмотреть весь кейс →</a
                   >
                 </article>
@@ -3274,7 +3328,10 @@
               <div class="swiper-slide">
                 <article class="card cases__card">
                   <figure class="cases__logo">
-                    <img src="/src/assets/images/cases/uni.svg" />
+                    <img
+                      alt="Кейс Унипицца"
+                      src="/src/assets/images/cases/uni.svg"
+                    />
                     <figcaption class="cases__caption">
                       <span class="cases__chip"> 8 сотрудников </span>
                       <span class="cases__chip">
@@ -3289,7 +3346,10 @@
                     Объединили в одном кабинете систему связи клиентов,
                     приёмщиков заказов и курьеров.
                   </div>
-                  <a class="link link_blue link_bottom" href="/"
+                  <a
+                    class="link link_blue link_bottom"
+                    href="/"
+                    aria-label="Посмотреть весь кейс"
                     >Посмотреть весь кейс →</a
                   >
                 </article>
@@ -3297,7 +3357,10 @@
               <div class="swiper-slide">
                 <article class="card cases__card">
                   <figure class="cases__logo">
-                    <img src="/src/assets/images/cases/delofon.svg" />
+                    <img
+                      alt="Кейс делофона"
+                      src="/src/assets/images/cases/delofon.svg"
+                    />
                     <figcaption class="cases__caption">
                       <span class="cases__chip"> 8 сотрудников </span>
                       <span class="cases__chip">
@@ -3312,7 +3375,10 @@
                     Мы сами используем Делофон в самых разных комбинациях
                     устройств и отделов.
                   </div>
-                  <a class="link link_blue link_bottom" href="/"
+                  <a
+                    class="link link_blue link_bottom"
+                    href="/"
+                    aria-label="Посмотреть весь кейс"
                     >Посмотреть весь кейс →</a
                   >
                 </article>
@@ -3320,7 +3386,10 @@
               <div class="swiper-slide">
                 <article class="card cases__card">
                   <figure class="cases__logo">
-                    <img src="/src/assets/images/cases/float.svg" />
+                    <img
+                      alt="Кейс Флоат Сервис"
+                      src="/src/assets/images/cases/float.svg"
+                    />
                     <figcaption class="cases__caption">
                       <span class="cases__chip"> 8 сотрудников </span>
                       <span class="cases__chip">
@@ -3335,7 +3404,10 @@
                     Наладили систему быстрого заказа цветов по телефону прямо
                     через смартфоны сотрудников.
                   </div>
-                  <a class="link link_blue link_bottom" href="/"
+                  <a
+                    class="link link_blue link_bottom"
+                    href="/"
+                    aria-label="Посмотреть весь кейс"
                     >Посмотреть весь кейс →</a
                   >
                 </article>
@@ -3343,7 +3415,10 @@
               <div class="swiper-slide">
                 <article class="card cases__card">
                   <figure class="cases__logo">
-                    <img src="/src/assets/images/cases/educa.svg" />
+                    <img
+                      alt="Кейс Эдука"
+                      src="/src/assets/images/cases/educa.svg"
+                    />
                     <figcaption class="cases__caption">
                       <span class="cases__chip"> 8 сотрудников </span>
                       <span class="cases__chip">
@@ -3358,7 +3433,10 @@
                     Повысили качество работы менеджеров на телефоне за счёт
                     анализа звонков.
                   </div>
-                  <a class="link link_blue link_bottom" href="/"
+                  <a
+                    class="link link_blue link_bottom"
+                    href="/"
+                    aria-label="Посмотреть весь кейс"
                     >Посмотреть весь кейс →</a
                   >
                 </article>
@@ -3642,7 +3720,10 @@
                   Да, для SIM-карт предусмотрены дополнительные интернет-пакеты,
                   с помощью которых на смартфоне помимо телефонии будет доступен
                   и интернет.
-                  <a href="/" class="link link_blue"
+                  <a
+                    href="/"
+                    class="link link_blue"
+                    aria-label="Посмотреть весь кейс"
                     >Посмотреть интернет-пакеты→</a
                   >
                 </p>
@@ -3669,8 +3750,8 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-upside">
-          <div class="footer-upside__logo">
-            <a href="#">
+          <div class="footer-upside__logo" aria-label="Логотип">
+            <a href="/">
               <svg
                 width="172"
                 height="32"
@@ -3741,9 +3822,24 @@
           </div>
           <nav class="footer-upside__menu">
             <ul>
-              <li><a href="/" class="link link_white">Стоимость</a></li>
-              <li><a href="/" class="link link_white">Возможности</a></li>
-              <li><a href="/" class="link link_white">Как подключить</a></li>
+              <li>
+                <a
+                  href="#calculator"
+                  class="link link_white"
+                  aria-label="Стоимость"
+                  >Стоимость</a
+                >
+              </li>
+              <li>
+                <a href="#phone-business" class="link link_white"
+                  >Возможности</a
+                >
+              </li>
+              <li>
+                <a href="#steps" class="link link_white" aria-label="Стоимость"
+                  >Как подключить</a
+                >
+              </li>
             </ul>
           </nav>
           <div class="footer-upside__login">

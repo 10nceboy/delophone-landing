@@ -188,13 +188,13 @@
       position: relative;
       z-index: $z-index-hidden;
       top: -35px;
-      left: 13px;
+      left: 0px;
       margin-right: -22px;
 
       @include tablet {
         content: url('/v1.svg');
         top: 18px;
-        left: 0px;
+        left: 27px;
         margin-right: 0px;
       }
     }
@@ -208,6 +208,7 @@
       text-align: center;
       width: 100%;
       margin-top: -10px;
+      height: auto;
 
       h5 {
         text-align: center;

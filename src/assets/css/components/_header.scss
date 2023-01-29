@@ -192,6 +192,7 @@
   @include laptop {
     order: 1;
     display: block;
+    margin-top: 5px;
   }
 
   &-button {
@@ -202,6 +203,7 @@
     @include laptop {
       display: block;
       opacity: 1;
+      margin-top: 2px;
     }
   }
 

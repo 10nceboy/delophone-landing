@@ -161,7 +161,7 @@
       margin-bottom: $spacer * 2;
       padding: $spacer * 2;
       text-align: center;
-      width: 100%;
+      width: calc(100% - 20px);
 
       @include laptop {
         display: none;

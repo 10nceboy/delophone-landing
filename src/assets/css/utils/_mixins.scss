@@ -25,32 +25,26 @@ $family: 'Manrope';
 }
 
 /*breakpoints*/
-@mixin wide-screen {
+@mixin desktop {
   @media screen and (min-width: 1400px) {
     @content;
   }
 }
 
-@mixin desktop {
+@mixin laptop {
   @media screen and (min-width: 1200px) {
     @content;
   }
 }
 
-@mixin laptop {
-  @media screen and (min-width: 968px) {
-    @content;
-  }
-}
-
 @mixin tablet {
-  @media (min-width: 960px) {
+  @media screen and (min-width: 960px) {
     @content;
   }
 }
 
 @mixin smartphone {
-  @media (min-width: 480px) {
+  @media (min-width: 640px) {
     @content;
   }
 }
