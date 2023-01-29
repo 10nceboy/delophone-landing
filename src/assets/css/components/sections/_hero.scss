@@ -124,6 +124,7 @@
     width: 100%;
     justify-content: flex-start;
     margin-right: 0px;
+    z-index: 2;
   }
 }
 
@@ -137,4 +138,8 @@
   @include laptop {
     align-items: flex-start;
   }
+}
+
+.hero_small {
+  margin-top: 10px;
 }
