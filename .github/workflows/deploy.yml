@@ -6,9 +6,6 @@ on:
       - main
 
 jobs:
-  permissions:
-    contents: write
-
   build:
     name: Build
     runs-on: ubuntu-latest
