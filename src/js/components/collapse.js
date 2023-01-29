@@ -30,9 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         arrow.classList.toggle('collapse__arrow_active');
       }
       requestAnimationFrame(() => {
-        if (collapse.classList.contains('collapse__content_visible')) {
-          scrollToElement(content);
-        }
+        scrollToElement(collapse);
       });
     });
     content.addEventListener('click', (event) => event.stopPropagation());

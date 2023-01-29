@@ -13,13 +13,10 @@
       h2 {
         margin-top: $spacer * 2;
       }
-    h2 {
-      margin-bottom: $spacer;
-      margin-top: 5px;
     }
 
     &__text {
-      @include font(400, 15px, $gray);
+      @include font(400, n 15px, $gray);
       line-height: 24px;
       line-height: 31px;
 
@@ -70,10 +67,11 @@
 
     @include tablet {
       width: 475px;
+      max-width: 475px;
+
       height: 100px;
       @include flex-row;
       justify-content: space-between;
-      max-width: auto;
       margin-left: auto;
       margin-right: 0;
       padding: 20px 30px;
@@ -154,7 +152,7 @@
     @include tablet {
       padding: $spacer;
       justify-content: center;
-      @include font(500, 24px, $orange);
+      @include font(400, 24px, $orange);
       min-height: 37px;
       max-height: 37px;
       margin-right: 0px;
@@ -183,9 +181,10 @@
 
   &__cardblock_bottom {
     position: relative;
-    margin-top: -20px;
+    margin-top: $spacer * 5;
     max-width: 100%;
     display: flex;
+    height: 415px;
     max-height: 415px;
 
     &::before {
@@ -198,10 +197,9 @@
 
       @include tablet {
         content: url('/v1.svg');
-        top: 20px;
-        left: 0px;
+        top: 18px;
+        left: 27px;
         margin-right: 0px;
-        width: 100%;
       }
     }
 
@@ -330,7 +328,9 @@
       min-width: 43px;
     }
     &:first-child {
-      min-width: 78px;
+      @include laptop {
+        min-width: 78px;
+      }
     }
   }
 

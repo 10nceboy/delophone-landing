@@ -34,15 +34,14 @@
     height: 25px;
 
     svg {
-      width: 25px;
+      width: 25.6px;
       height: 25px;
     }
 
     margin-left: auto;
 
     @include laptop {
-      width: 32px;
-      height: 32px;
+      width: 22px;
     }
 
     transform: rotateX(180deg);
