@@ -2,6 +2,7 @@
   margin-top: 40px;
   background: $light-gray;
   border-radius: $border-radius-xl;
+
   &__block {
     padding: $spacer * 4;
 
@@ -9,8 +10,20 @@
       display: flex;
     }
 
+    &:first-child {
+      @include tablet {
+        padding-top: $spacer * 10;
+      }
+    }
+
+    &:nth-child(3) {
+      @include laptop {
+        padding-bottom: $spacer * 10;
+      }
+    }
+
     @include laptop {
-      padding: $spacer * 10;
+      padding: $spacer * 8 $spacer * 10 0 $spacer * 10;
     }
   }
 
@@ -147,7 +160,7 @@
 
     @include laptop {
       margin: 0 0 0 $spacer * 12;
-      width: 220px;
+      width: 200px;
       font-size: 16px;
       padding: 15px 30px;
       height: auto;

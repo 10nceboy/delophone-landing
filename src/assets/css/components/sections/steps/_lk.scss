@@ -6,13 +6,17 @@
     z-index: 2;
 
     @include laptop {
-      padding: $spacer * 6 $spacer * 10;
+      padding: $spacer * 10 $spacer * 10;
     }
 
     &_bottom {
       display: flex;
       flex-direction: column;
       color: $white;
+
+      @include laptop {
+        padding: $spacer * 6 $spacer * 10;
+      }
 
       .lk__text {
         color: $light-gray !important;
@@ -22,6 +26,7 @@
 
         @include laptop {
           margin-top: $spacer;
+          margin-bottom: 0px;
           white-space: nowrap;
           line-height: inherit;
         }

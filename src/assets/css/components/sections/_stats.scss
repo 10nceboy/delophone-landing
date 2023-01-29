@@ -3,8 +3,9 @@
   gap: $spacer * 4;
 
   @include laptop {
-    margin-top: $spacer * 14 0;
+    margin-top: $spacer * 14;
     gap: $spacer * 7;
+    margin-bottom: 150px;
   }
 
   &__header {

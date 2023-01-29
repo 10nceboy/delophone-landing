@@ -26,8 +26,12 @@
     margin-bottom: $spacer * 2;
     padding: $spacer * 3;
     @include flex-col;
+    min-width: 239px;
+    max-width: 239px;
+
     @include laptop {
       padding: 0;
+      min-width: 210px;
     }
 
     &_header {
@@ -67,7 +71,7 @@
   }
 
   &_rounded-top {
-    border: $border-radius-xl $border-radius-xl 0px 0px;
+    border-radius: $border-radius-xl $border-radius-xl 0px 0px;
   }
 }
 

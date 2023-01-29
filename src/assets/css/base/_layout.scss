@@ -59,6 +59,10 @@
 
 .background_gray {
   background-color: $light-gray;
+
+  @include laptop {
+    height: 65px;
+  }
 }
 
 .container_adaptive {

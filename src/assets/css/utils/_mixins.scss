@@ -56,7 +56,7 @@ $family: 'Manrope';
 }
 
 /*fonts*/
-/* $family is coming from typo.scss */
+
 @mixin font($weight, $size, $color, $fam: $family) {
   font: $weight $size $fam;
   color: $color;
