@@ -38,6 +38,7 @@
   &__card-top {
     padding: $spacer * 4;
     background-color: $light-gray;
+    max-width: 100%;
 
     @include laptop {
       padding: $spacer * 6 38px $spacer * 6 $spacer * 6;
@@ -48,6 +49,8 @@
 
   &__card-bottom {
     padding: $spacer * 4 $spacer * 4 $spacer * 6;
+    min-width: 320px;
+    max-width: 100%;
     @include laptop {
       padding: $spacer * 4 $spacer * 6;
       display: flex;
@@ -108,6 +111,7 @@
     @include font(500, 14px, $black);
     line-height: 21px;
     width: 100%;
+    justify-content: center;
 
     @include laptop {
       display: block;
@@ -117,6 +121,7 @@
       margin-right: $spacer;
       margin-bottom: 0px;
       width: auto;
+      justify-content: initial;
     }
 
     &:nth-child(2) {
