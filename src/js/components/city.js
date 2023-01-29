@@ -1,4 +1,3 @@
-import { cities } from '../constants/city';
 import { phones, cities } from '../constants/contacts';
 
 import { watchValue } from '../utils/watch';
