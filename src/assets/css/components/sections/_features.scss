@@ -91,13 +91,10 @@
     padding: $spacer * 4 $spacer * 3;
     height: 165px;
 
-    @include desktop {
-      max-width: 285px;
-      max-height: 183px;
-    }
-    @include tablet {
-      max-width: 265px;
-      max-height: 173px;
+    @include laptop {
+      width: 285px;
+      height: 183px;
+      padding: 20px;
     }
   }
 

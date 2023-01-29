@@ -14,10 +14,11 @@
     }
 
     &__text {
-      @include font(400, 15px, $gray);
+      @include font(400, n 15px, $gray);
       line-height: 24px;
+      line-height: 31px;
 
-      @include tablet {
+      @include laptop {
         line-height: 31px;
         @include font(400, 20px, $gray);
       }
@@ -25,9 +26,12 @@
 
     p {
       margin-bottom: $spacer;
+      @include laptop {
+        line-height: 31px;
+      }
     }
 
-    @include tablet {
+    @include laptop {
       h2 {
         margin-bottom: $spacer * 4;
       }
@@ -144,12 +148,14 @@
     }
 
     @include tablet {
-      padding: 0 $spacer;
+      padding: 5 $spacer;
       justify-content: center;
       @include font(500, 24px, $orange);
       min-height: 37px;
       max-height: 37px;
       margin-right: 0px;
+      min-width: 60px;
+      @include center;
 
       svg {
         height: 18px;
@@ -159,18 +165,14 @@
         margin-left: 0;
       }
 
-      &:last-child {
-        width: 43px;
-      }
-
       &:nth-child(2),
       &:nth-child(3) {
         display: flex;
       }
 
       &:nth-child(4) {
-        width: 78px;
         margin-left: 0;
+        min-width: 78px;
       }
     }
   }
@@ -310,7 +312,7 @@
       display: none;
 
       @include tablet {
-        display: block;
+        display: flex;
       }
     }
   }
@@ -318,6 +320,12 @@
 
 .phone-business_numbers_down {
   @include flex-row;
+
+  div {
+    &:last-child {
+      min-width: 43px;
+    }
+  }
 
   @include tablet {
     gap: $spacer * 3;
