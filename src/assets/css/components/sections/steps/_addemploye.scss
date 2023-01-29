@@ -68,7 +68,6 @@
 }
 
 .arc__employe {
-  display: none;
   height: 0;
   z-index: 1;
   position: relative;
@@ -78,31 +77,24 @@
   }
 
   &::before {
-    display: none;
-    @include desktop {
+    @include laptop {
       position: absolute;
       content: url('/arc-step-2.svg');
       top: -105px;
-      left: 640px;
+      left: 60%;
       z-index: -1;
       display: block;
-    }
-    @include laptop {
-      left: 900px;
     }
   }
 
   &_reversed {
-    display: none;
-    @include tablet {
+    @include laptop {
       transform: scale(-1, 1);
       top: 81px;
-      left: -115px;
+      left: -4%;
       display: block;
 
       &::before {
-        display: none;
-
         @include tablet {
           display: block;
         }

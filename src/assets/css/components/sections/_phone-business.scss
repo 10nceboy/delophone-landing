@@ -148,7 +148,7 @@
     }
 
     @include tablet {
-      padding: 5 $spacer;
+      padding: $spacer;
       justify-content: center;
       @include font(500, 24px, $orange);
       min-height: 37px;
@@ -324,6 +324,9 @@
   div {
     &:last-child {
       min-width: 43px;
+    }
+    &:first-child {
+      min-width: 78px;
     }
   }
 
