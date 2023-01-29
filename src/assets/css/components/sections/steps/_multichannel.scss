@@ -21,6 +21,12 @@
   &__image_mobile {
     display: block;
     align-self: center;
+
+    svg {
+      width: 320px;
+      height: 320px;
+    }
+
     @include laptop {
       display: none;
     }

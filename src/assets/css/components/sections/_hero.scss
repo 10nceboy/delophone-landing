@@ -1,32 +1,44 @@
 .hero {
   @include flex-col;
-  margin-top: 50px;
-
+  margin-top: $spacer * 10;
   max-width: 100%;
 
   @include desktop {
     width: 100%;
   }
 
-  @include laptop {
+  @include tablet {
     margin-top: $spacer * 9;
     margin-bottom: $spacer * 30;
+  }
+
+  &__container {
+    @include flex-col;
+    justify-content: center;
+
+    @include tablet {
+      @include flex-row;
+      align-items: flex-start;
+    }
   }
 
   &__textblock {
     @include flex-col;
     margin: 0 auto;
-    @include laptop {
-    }
   }
 
   &__imageblock {
-    display: none;
+    width: 419px;
+
     @include tablet {
-      display: block;
-      margin-left: auto;
+      width: 320px;
+      height: 320px;
+    }
+
+    @include laptop {
       width: 528px;
     }
+
     img {
       height: 100%;
     }
@@ -38,6 +50,12 @@
 
     @include tablet {
       display: none;
+    }
+  }
+
+  &__text {
+    @include tablet {
+      line-height: 31px;
     }
   }
 
@@ -66,7 +84,7 @@
     max-height: 100%;
     margin-top: 45px;
 
-    @include laptop {
+    @include tablet {
       align-items: flex-start;
       @include flex-col;
 
@@ -97,7 +115,7 @@
       margin-bottom: $spacer * 3;
     }
 
-    @include laptop {
+    @include tablet {
       margin-right: $spacer * 6;
       max-width: 100%;
       flex-grow: 1;
@@ -125,18 +143,6 @@
     justify-content: flex-start;
     margin-right: 0px;
     z-index: 2;
-  }
-}
-
-.hero__text {
-  @include tablet {
-    line-height: 31px;
-  }
-}
-
-.hero__container {
-  @include laptop {
-    align-items: flex-start;
   }
 }
 

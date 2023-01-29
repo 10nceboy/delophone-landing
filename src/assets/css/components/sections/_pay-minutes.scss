@@ -12,7 +12,7 @@
     }
   }
 
-  @include laptop {
+  @include tablet {
     margin-top: $spacer * 20;
     background-color: $light-gray;
     padding: $spacer * 10;
@@ -22,7 +22,7 @@
   &__header {
     display: none;
 
-    @include laptop {
+    @include tablet {
       display: block;
       max-width: 235px;
       margin-right: auto;
@@ -37,7 +37,7 @@
       @include font(600, 20px, $black);
       line-height: 26px;
 
-      @include laptop {
+      @include tablet {
         display: none;
       }
     }
@@ -48,7 +48,7 @@
     background-color: $light-gray;
     max-width: 100%;
 
-    @include laptop {
+    @include tablet {
       padding: $spacer * 6 38px $spacer * 6 $spacer * 6;
       background-color: $white;
       height: 157px;
@@ -59,7 +59,8 @@
     padding: $spacer * 4 $spacer * 4 $spacer * 6;
     min-width: 290px;
     max-width: 100%;
-    @include laptop {
+
+    @include tablet {
       padding: $spacer * 4 $spacer * 6;
       display: flex;
       justify-content: stretch;
@@ -80,9 +81,10 @@
         margin-right: $spacer;
       }
 
-      @include laptop {
+      @include tablet {
         margin-right: $spacer * 6;
         margin-top: 0px;
+
         &:last-child {
           margin-right: 0;
         }
@@ -98,14 +100,14 @@
   &__card-header {
     margin-bottom: $spacer * 3;
 
-    @include laptop {
+    @include tablet {
       margin-bottom: $spacer * 4;
     }
   }
 
   &__chip-container {
     height: auto;
-    @include laptop {
+    @include tablet {
       height: 51px;
     }
   }
@@ -121,7 +123,7 @@
     width: 100%;
     justify-content: center;
 
-    @include laptop {
+    @include tablet {
       display: block;
       padding: $spacer * 3;
       @include font(600, 14px, $black);
@@ -134,7 +136,7 @@
 
     &:nth-child(2) {
       display: none;
-      @include laptop {
+      @include tablet {
         display: block;
       }
     }
@@ -142,7 +144,7 @@
     &:first-child {
       display: none;
 
-      @include laptop {
+      @include tablet {
         display: block;
       }
     }
@@ -163,7 +165,7 @@
       text-align: center;
       width: calc(100% - 20px);
 
-      @include laptop {
+      @include tablet {
         display: none;
       }
     }
@@ -174,7 +176,7 @@
     align-items: baseline;
     font-size: 15px;
 
-    @include laptop {
+    @include tablet {
       margin-left: $spacer * 2;
     }
   }
@@ -200,7 +202,7 @@
       width: 15px;
     }
 
-    @include laptop {
+    @include tablet {
       margin-left: $spacer;
       margin-top: $spacer;
     }
@@ -208,13 +210,13 @@
 }
 
 .chip-text {
-  @include laptop {
+  @include tablet {
     margin-left: 0px;
   }
 }
 
 .chip-text__container {
-  @include laptop {
+  @include tablet {
     align-items: baseline;
   }
 }

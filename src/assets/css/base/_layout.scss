@@ -26,7 +26,7 @@
   }
 
   @include tablet {
-    width: calc(100vw - 40px);
+    width: calc(100vw - 120px);
   }
 
   &.container-bottom {
@@ -66,7 +66,6 @@
 .container_adaptive {
   @include flex-col;
   justify-content: center;
-  align-items: center;
 
   @include laptop {
     @include flex-row;
