@@ -182,7 +182,13 @@
   }
 }
 
+.header__container {
+  height: 35px;
+  max-height: fit-content;
+}
+
 .header__dropdown {
+  display: none;
   @include laptop {
     order: 1;
     display: block;

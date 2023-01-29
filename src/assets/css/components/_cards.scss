@@ -26,8 +26,6 @@
     margin-bottom: $spacer * 2;
     padding: $spacer * 3;
     @include flex-col;
-    min-width: 239px;
-    max-width: 239px;
 
     @include laptop {
       padding: 0;
@@ -84,7 +82,7 @@
 
 .card__round_text-mobile {
   display: block;
-  @include font(400, 16px, $gray);
+  @include font(400, 15px, $gray);
   line-height: 21px;
   margin-top: 3px;
   @include laptop {

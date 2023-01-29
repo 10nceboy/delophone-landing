@@ -16,7 +16,7 @@
 
   &__imageblock {
     display: none;
-    @include laptop {
+    @include tablet {
       display: block;
       margin-left: auto;
       width: 528px;
@@ -30,7 +30,7 @@
     display: block;
     margin: $spacer * 4 auto 0;
 
-    @include laptop {
+    @include tablet {
       display: none;
     }
   }
@@ -114,6 +114,7 @@
   }
 
   &__button {
+    width: 100%;
     justify-content: flex-start;
     margin-right: 0px;
   }

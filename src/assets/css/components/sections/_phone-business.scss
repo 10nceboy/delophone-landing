@@ -73,6 +73,7 @@
   }
 
   &__card-numbersblock {
+    position: relative;
     padding: $spacer * 3 $spacer * 5;
 
     h4,
@@ -98,6 +99,19 @@
 
       p {
         margin-bottom: 0px;
+      }
+    }
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: url('/public/arc-mobile.svg');
+      top: -35px;
+      left: max(55%, 154px);
+      z-index: -1;
+      display: block;
+      @include laptop {
+        display: none;
       }
     }
   }
@@ -165,7 +179,6 @@
     position: relative;
     margin-top: $spacer * 5;
     max-width: 100%;
-    margin-left: auto;
     display: flex;
 
     &::before {

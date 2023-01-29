@@ -44,6 +44,7 @@
     @include flex-col;
     padding: $spacer * 4;
     position: relative;
+    z-index: 2;
 
     @include laptop {
       display: flex;
