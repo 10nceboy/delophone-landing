@@ -13,7 +13,7 @@
     padding: 0px;
   }
 
-  @include tablet {
+  @include laptop {
     max-width: 1110px;
     padding: $spacer * 9 $spacer * 10;
     padding-bottom: $spacer * 10;

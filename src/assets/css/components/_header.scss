@@ -5,7 +5,7 @@
   max-width: 100%;
 
   &__dropdown {
-    @include tablet {
+    @include laptop {
       opacity: 1 !important;
     }
   }
@@ -87,8 +87,6 @@
     @include hidden;
     border: none;
     white-space: nowrap;
-    @include smartphone {
-    }
 
     ul {
       margin-top: $spacer * 7;
@@ -98,6 +96,7 @@
 
         &:last-child {
           margin-bottom: 0px;
+          margin-right: 0px;
         }
       }
     }
@@ -114,13 +113,21 @@
 
         li {
           margin-bottom: 0px;
-          margin-right: 117px;
+          margin-right: 115px;
 
           &:last-child {
             margin-right: 0px;
             margin-bottom: 0px;
           }
         }
+      }
+    }
+  }
+
+  @include desktop {
+    ul {
+      li {
+        margin-right: 115px;
       }
     }
   }

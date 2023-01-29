@@ -66,6 +66,10 @@
       }
       margin-top: $spacer * 5;
     }
+
+    @include laptop {
+      width: 900px;
+    }
   }
 
   &__buttons {

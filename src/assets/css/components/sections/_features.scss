@@ -77,10 +77,11 @@
   &__cards {
     @include flex-col;
     gap: $spacer * 3;
+    width: 100%;
 
     @include laptop {
       display: grid;
-      grid-template-columns: repeat(2, minmax(285px, 1fr));
+      grid-template-columns: repeat(2, minmax(245px, 1fr));
       grid-template-rows: repeat(2, 183px);
       gap: $spacer * 3;
     }
@@ -90,9 +91,13 @@
     padding: $spacer * 4 $spacer * 3;
     height: 165px;
 
-    @include laptop {
+    @include desktop {
       max-width: 285px;
       max-height: 183px;
+    }
+    @include tablet {
+      max-width: 265px;
+      max-height: 173px;
     }
   }
 

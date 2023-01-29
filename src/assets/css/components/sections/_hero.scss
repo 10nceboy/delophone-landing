@@ -1,6 +1,13 @@
 .hero {
   @include flex-col;
   margin-top: 50px;
+
+  max-width: 100%;
+
+  @include desktop {
+    width: 100%;
+  }
+
   @include laptop {
     margin-top: $spacer * 9;
     margin-bottom: $spacer * 30;
@@ -123,5 +130,11 @@
 .hero__text {
   @include tablet {
     line-height: 31px;
+  }
+}
+
+.hero__container {
+  @include laptop {
+    align-items: flex-start;
   }
 }

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     slidesPerView: 1,
     slidesPerGroup: 1,
     breakpoints: {
-      576: {
+      640: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 20

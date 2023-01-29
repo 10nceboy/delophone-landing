@@ -79,13 +79,16 @@
 
   &::before {
     display: none;
-    @include tablet {
+    @include desktop {
       position: absolute;
       content: url('/arc-step-2.svg');
       top: -105px;
       left: 640px;
       z-index: -1;
       display: block;
+    }
+    @include laptop {
+      left: 900px;
     }
   }
 
