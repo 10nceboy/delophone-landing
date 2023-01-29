@@ -22,15 +22,18 @@
       @include flex-row;
       justify-content: space-between;
       padding-bottom: $spacer * 9;
+      align-items: baseline;
     }
 
     @include flex-col;
 
     &__logo {
       margin-bottom: $spacer * 3;
+      margin-top: -30px;
 
       @include laptop {
         margin-bottom: 0px;
+        margin-top: 0px;
       }
 
       svg {
@@ -49,8 +52,7 @@
     }
 
     &__dropdown {
-      margin-left: 0px;
-
+      margin-left: -5px;
       @include laptop {
         white-space: nowrap;
         margin-left: -$spacer * 6;
@@ -88,11 +90,15 @@
     }
 
     &__login {
+      display: block;
+      order: -1;
+      margin-left: auto;
+
       @include laptop {
         @include flex-row;
-        background: transparent;
-        order: 0;
-        margin-right: 0;
+        margin-left: 0;
+        order: initial;
+        margin-bottom: -20px;
 
         .button__login-button {
           margin-left: 0;

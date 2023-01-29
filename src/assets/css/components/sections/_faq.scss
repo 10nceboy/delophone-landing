@@ -1,9 +1,11 @@
 .faq {
   background-color: $light-gray;
-  padding: 150px 0;
+  padding-bottom: 80px;
+  padding-top: 80px;
 
   @include laptop {
     padding-bottom: 150px;
+    padding-top: 150px;
   }
 
   &__cards {

@@ -140,17 +140,20 @@
     }
   }
 
-  &.active {
+  &_active {
     .dropdown {
       &__button {
+        color: $blue;
+
         &::after {
           transform: rotateX(180deg) translateY(-2px);
+          content: url('/arrow-down.svg');
         }
       }
 
       &__menu {
+        transition: $dropdown-transition;
         display: block;
-        @include visible($dropdown-transition);
         position: relative;
         z-index: 0;
 
@@ -159,6 +162,12 @@
           z-index: 1;
         }
       }
+    }
+  }
+
+  &_visible {
+    .dropdown__menu {
+      opacity: 1;
     }
   }
 }

@@ -22,9 +22,11 @@
   &__logo {
     margin-right: $spacer * 8;
     display: none;
+    margin-bottom: 40px;
 
     @include laptop {
       display: block;
+      margin-bottom: 0px;
     }
 
     a {
@@ -124,9 +126,14 @@
   }
 
   &__login {
-    margin: 0 9 * $spacer 0 13 * $spacer;
-    order: 6;
-    @include visible;
+    @include hidden;
+    display: none;
+
+    @include laptop {
+      margin: 0 9 * $spacer 0 13 * $spacer;
+      order: 6;
+      @include visible;
+    }
   }
 
   &_active {
@@ -239,6 +246,9 @@
     @include laptop {
       @include hidden;
     }
+  }
+  &.hidden {
+    display: none;
   }
 }
 
