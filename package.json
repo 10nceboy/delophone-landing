@@ -25,5 +25,17 @@
     "@popperjs/core": "^2.11.6",
     "swiper": "^8.4.6",
     "vite-plugin-svg-icons": "^2.0.1"
-  }
+  },
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/10nceboy/delophone-landing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/10nceboy/delophone-landing/issues"
+  },
+  "homepage": "https://github.com/10nceboy/delophone-landing#readme",
+  "description": ""
 }
