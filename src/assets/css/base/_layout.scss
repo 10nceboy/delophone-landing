@@ -16,15 +16,14 @@
 .container {
   margin: 0 auto;
   width: calc(100vw - 30px);
-  overflow: visible;
+  overflow: hidden;
 
   @include desktop {
     max-width: auto;
   }
 
   @include laptop {
-    width: calc(100vw - 330px);
-    max-width: 1110px;
+    max-width: 1100px;
   }
 
   @include tablet {
@@ -69,7 +68,6 @@
   @include flex-col;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
 
   @include laptop {
     @include flex-row;

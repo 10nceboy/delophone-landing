@@ -239,14 +239,14 @@
 .graphic {
   display: none;
 
-  @include tablet {
+  @include desktop {
     display: block;
     position: relative;
 
     &:after {
       display: none;
 
-      @include tablet {
+      @include desktop {
         content: url('/Vector233.svg');
         position: absolute;
         width: 53px;

@@ -61,7 +61,6 @@ h5 {
   border-radius: $spacer * 12;
   padding: 2px 7px;
   margin-left: -7px;
-  margin-bottom: $spacer * 3;
 
   @include laptop {
     @include font(600, 36px, $orange);
