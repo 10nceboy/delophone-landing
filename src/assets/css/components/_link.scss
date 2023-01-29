@@ -1,4 +1,5 @@
 .link {
+  transition: $link-transition;
   font-family: $family;
   text-decoration: none;
   color: $gray;

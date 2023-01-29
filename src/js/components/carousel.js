@@ -15,10 +15,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         spaceBetween: 20
       }
     },
-    cssMode: true,
+    grabCursor: true,
+    draggable: true,
+    autoplay: 5000,
     navigation: {
       nextEl: '.carousel__button_next',
       prevEl: '.carousel__button_prev'
-    }
+    },
+    resizeObserver: true
   });
 });

@@ -2,10 +2,10 @@ import { isTouchDevice } from '../utils/dom';
 
 document.addEventListener('DOMContentLoaded', () => {
   let enter = false;
-
+  const btn = document.querySelector('.hero__button button');
   if (!isTouchDevice()) {
     document
-      .querySelector('.hero__button')
+      .querySelector('.hero__button button')
       .addEventListener('mouseover', (el) => {
         if (enter) {
           return;
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
           '⚡ Сразу после регистрации';
       });
 
-    addEventListener('mouseout', (el) => {
+    btn.addEventListener('mouseout', (el) => {
       enter = false;
       document.querySelector('.hero__label').textContent =
         '1 номер, 3 сотрудника, 100 ₽ на балансе';

@@ -62,7 +62,7 @@
   &__tabs-items {
     @include laptop {
       img {
-        width: 1010px;
+        max-width: 1000px;
       }
       margin-top: $spacer * 5;
     }

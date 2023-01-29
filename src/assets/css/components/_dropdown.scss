@@ -30,11 +30,16 @@
   }
 
   &__button {
+    transition: $link-transition;
     @include font(400, 16px, $black);
     cursor: pointer;
     background: transparent;
     @include flex-row;
     border: none;
+
+    &:hover {
+      color: $blue;
+    }
 
     &::after {
       content: url('/arrow-down.svg');
@@ -47,10 +52,6 @@
       display: flex;
       margin-left: $spacer;
       padding-top: $spacer;
-    }
-
-    &.active {
-      @include visible($opacity-transition);
     }
 
     @include laptop {
@@ -95,6 +96,7 @@
 
         &:hover {
           color: $blue;
+          transition: $link-transition;
         }
       }
     }
@@ -104,6 +106,7 @@
     height: 15px;
     margin: 0;
     min-width: 100%;
+
     background: transparent;
     display: none;
 

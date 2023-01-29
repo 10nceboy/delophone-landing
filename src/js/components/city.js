@@ -1,5 +1,4 @@
-import { cities } from '../constants/city';
-import { phones, addresses } from '../constants/contacts';
+import { phones, cities } from '../constants/contacts';
 
 import { watchValue } from '../utils/watch';
 
@@ -11,9 +10,6 @@ citiesDropdowns.forEach((dropdown) => {
     if (cities.includes(value));
     document.querySelectorAll('.phone-number').forEach((number) => {
       number.textContent = phones[value];
-    });
-    document.querySelectorAll('.address').forEach((address) => {
-      address.textContent = addresses[value];
     });
   });
 });

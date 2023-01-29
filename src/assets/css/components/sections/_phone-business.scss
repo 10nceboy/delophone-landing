@@ -9,6 +9,10 @@
     display: block;
     margin-bottom: auto;
 
+    @include laptop {
+      h2 {
+        margin-top: $spacer * 2;
+      }
     h2 {
       margin-bottom: $spacer;
       margin-top: 5px;
@@ -135,13 +139,12 @@
     border: 1px solid $black;
     border-radius: 4px;
     align-items: center;
-    @include font(500, 16px, $orange);
+    @include font(400, 16px, $orange);
     padding: $spacer;
     flex: 1;
     min-height: 24px;
     max-height: 24px;
     margin-right: 12px;
-    letter-spacing: -1px;
     height: 100%;
 
     &:last-child {
