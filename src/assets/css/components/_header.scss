@@ -24,7 +24,7 @@
     display: none;
     margin-bottom: 40px;
 
-    @include laptop {
+    @include tablet {
       display: block;
       margin-bottom: 0px;
     }
@@ -52,7 +52,7 @@
       }
     }
 
-    @include laptop {
+    @include tablet {
       display: none;
     }
   }
