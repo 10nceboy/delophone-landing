@@ -1,5 +1,4 @@
 .features {
-  margin-top: 40px;
   background: $light-gray;
   border-radius: $border-radius-xl;
 
@@ -8,6 +7,7 @@
 
     @include tablet {
       display: flex;
+      margin-top: 40pxпше ф;
     }
 
     &:first-child {

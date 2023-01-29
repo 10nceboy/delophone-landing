@@ -2,7 +2,7 @@
   background: $black;
   padding: $spacer * 6 0;
 
-  @include wide-screen {
+  @include desktop {
     padding: $spacer * 9 0 $spacer * 7;
   }
 

@@ -127,10 +127,6 @@
     @include tablet {
       display: block;
     }
-
-    @include wide-screen {
-      display: block;
-    }
   }
 
   &_white {
