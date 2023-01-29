@@ -57,7 +57,7 @@
 
   &__card-bottom {
     padding: $spacer * 4 $spacer * 4 $spacer * 6;
-    min-width: 320px;
+    min-width: 290px;
     max-width: 100%;
     @include laptop {
       padding: $spacer * 4 $spacer * 6;
@@ -171,6 +171,8 @@
 
   &__card-textblock {
     margin-left: 0px;
+    align-items: baseline;
+    font-size: 15px;
 
     @include laptop {
       margin-left: $spacer * 2;
