@@ -69,6 +69,7 @@
     @include smartphone {
       display: flex;
       width: calc(100vw - 80px);
+      width: 100%;
 
       li {
         margin-right: 5px;

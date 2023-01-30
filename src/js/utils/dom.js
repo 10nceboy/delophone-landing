@@ -35,22 +35,24 @@ export const isTouchDevice = () => {
 };
 
 export const scrollToElement = (element) => {
-  const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.6
-  };
+  element.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        observer.disconnect();
-      }
-    });
-  }, options);
+  // const options = {
+  //   root: null,
+  //   rootMargin: '0px',
+  //   threshold: 0.6
+  // };
 
-  observer.observe(element);
+  // const observer = new IntersectionObserver((entries) => {
+  //   entries.forEach((entry) => {
+  //     if (!entry.isIntersecting) {
+  //       element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  //       observer.disconnect();
+  //     }
+  //   });
+  // }, options);
+
+  // observer.observe(element);
 };
 
 export const clickOutside = (element, callback) => {

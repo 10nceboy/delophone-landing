@@ -12,6 +12,8 @@ const renderArrow = (collapse) => {
   }
 };
 
+let scrolling = false;
+
 document.addEventListener('DOMContentLoaded', () => {
   const collapsibles = document.querySelectorAll('.collapse');
 
@@ -20,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const arrow = renderArrow(collapse);
     const content = collapse.querySelector('.collapse__content');
     collapse.addEventListener('click', () => {
-      if (animated) {
+      if (animated || scrolling) {
         return false;
       }
       animated = true;
@@ -29,8 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (arrow) {
         arrow.classList.toggle('collapse__arrow_active');
       }
+
       requestAnimationFrame(() => {
-        scrollToElement(collapse);
+        if (content.classList.contains('collapse__content_visible')) {
+          scrolling = true;
+          scrollToElement(collapse);
+          window.setTimeout(() => (scrolling = false), 300);
+        }
       });
     });
     content.addEventListener('click', (event) => event.stopPropagation());
