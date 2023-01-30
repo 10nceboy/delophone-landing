@@ -95,6 +95,10 @@
     display: block;
     height: 230px;
 
+    @include smartphone {
+      height: 175px;
+    }
+
     @include laptop {
       display: flex;
       padding: $spacer * 6 $spacer * 10;

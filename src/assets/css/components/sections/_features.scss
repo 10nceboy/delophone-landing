@@ -1,6 +1,8 @@
 .features {
-  background: $light-gray;
-  border-radius: $border-radius-xl;
+  .container {
+    background: $light-gray;
+    border-radius: $border-radius-xl;
+  }
 
   &__block {
     padding: $spacer * 4;

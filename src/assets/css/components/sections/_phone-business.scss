@@ -229,9 +229,12 @@
   }
 
   &__cards {
+    @include flex-col;
+
     @include tablet {
       @include flex-row;
     }
+
     flex-grow: 1;
   }
 
