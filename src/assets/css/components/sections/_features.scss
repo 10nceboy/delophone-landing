@@ -10,7 +10,12 @@
     @include tablet {
       display: flex;
       margin-top: 40px;
-      padding: $spacer * 8 $spacer * 10 0 $spacer * 10;
+      padding: $spacer * 8 $spacer * 10;
+      padding-bottom: $spacer * 5;
+    }
+
+    @include laptop {
+      padding-bottom: 0;
     }
 
     &:first-child {
@@ -106,6 +111,11 @@
     padding: $spacer * 4 $spacer * 3;
     height: 165px;
 
+    @include tablet {
+      height: 183px;
+      padding: 20px;
+    }
+
     @include laptop {
       width: 285px;
       height: 183px;
@@ -131,18 +141,37 @@
     align-items: flex-start;
     box-sizing: border-box;
 
-    @include laptop {
+    @include tablet {
       padding: $spacer * 6 $spacer * 10;
-      align-items: center;
       box-sizing: initial;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 50% 50%;
+      align-items: initial;
+    }
+
+    @include laptop {
+      @include flex-row;
     }
 
     h4 {
       color: $white;
       font-size: 16px;
+
       @include laptop {
         font-size: 20px;
       }
+    }
+  }
+
+  .list {
+    @include tablet {
+      display: grid;
+      grid-template-columns: min(50%, 160px) min(50%, 160px);
+      grid-template-rows: 25px 25px;
+      column-gap: $spacer * 4;
+      row-gap: $spacer * 4;
+      white-space: nowrap;
     }
   }
 
@@ -152,7 +181,7 @@
     @include flex-row;
     height: 42px;
 
-    @include laptop {
+    @include tablet {
       margin-right: $spacer * 4;
       margin-bottom: 0;
       height: auto;
@@ -162,7 +191,7 @@
       margin-right: 12px;
       max-height: 40px;
 
-      @include laptop {
+      @include tablet {
         margin-right: $spacer * 5;
         max-height: none;
       }
@@ -183,6 +212,11 @@
       font-size: 16px;
       padding: 15px 30px;
       height: auto;
+    }
+
+    @include tablet {
+      font-size: 16px;
+      grid-column: 1 / span2;
     }
   }
 }

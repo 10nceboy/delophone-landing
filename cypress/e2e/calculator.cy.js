@@ -1,13 +1,8 @@
 describe('Calculator', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000'); // or the URL where your app is hosted
+    cy.visit('http://localhost:3000');
+    cy.viewport(1400, 10000);
   });
-
-  // it('should update the sum and sum per month when an input value is changed', () => {
-  //   cy.get('.calculator__input').first().type('5');
-  //   cy.get('.calculator__sum').should('have.text', '5');
-  //   cy.get('.calculator__sum-per-month').should('have.text', '5');
-  // });
 
   it('should increment and decrement input values', () => {
     cy.get('.calculator__input').first().type('5');
@@ -19,8 +14,11 @@ describe('Calculator', () => {
 
   it('should update the fixed and monthly prices when an input value is changed', () => {
     cy.get('.calculator__input').first().type('5');
-    cy.get('.calculator__multiplier').first().invoke('data', 'price');
-    cy.get('.calculator__price-fixed').first().should('have.text', '9 950₽ разово');
+    cy.get('.calculator__price-fixed')
+      .first()
+      .should('have.text', '9 950₽ разово');
+    cy.get('.calculator__sum').first().should('have.text', '11 850');
+
     cy.get('.calculator__price-per-month').first().should('have.text', '');
   });
 
