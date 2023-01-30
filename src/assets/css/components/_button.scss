@@ -107,15 +107,24 @@
   &_with-icon {
     @include flex-row;
     padding: $spacer * 3 $spacer * 3;
+
+    @include tablet {
+      justify-content: center;
+    }
   }
 
   &__icon {
     margin-right: $spacer * 2;
     flex-grow: 1;
 
-    @include laptop {
+    @include tablet {
+      flex-grow: 0;
       min-width: 25px;
       min-height: 25px;
+    }
+
+    @include laptop {
+      justify-content: unset;
     }
   }
 

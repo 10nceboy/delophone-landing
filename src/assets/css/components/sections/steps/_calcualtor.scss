@@ -13,7 +13,7 @@
     padding: 0px;
   }
 
-  @include laptop {
+  @include tablet {
     max-width: 1110px;
     padding: $spacer * 9 $spacer * 10;
     padding-bottom: $spacer * 10;
@@ -48,12 +48,11 @@
 
   &__head {
     box-sizing: border-box;
-
     background: $light-gray;
     border-radius: $border-radius-xs;
-    max-width: 250px;
     padding: $spacer * 3;
     margin-top: $spacer * 4;
+    width: 100%;
 
     @include flex-col;
 
@@ -188,6 +187,9 @@
   }
 
   &__price {
+    color: $orange !important;
+    font-size: 16px;
+
     @include tablet {
       @include flex-row;
       white-space: nowrap;
@@ -204,8 +206,6 @@
       width: 290px;
       font-size: 18px;
     }
-    color: $orange !important;
-    font-size: 16px;
 
     &_disabled {
       font-weight: 500;

@@ -114,7 +114,13 @@
 
     @include laptop {
       width: 239px;
+      justify-content: unset;
     }
+
+    @include laptop {
+      justify-content: center;
+    }
+
     svg {
       margin-right: -10px;
     }
