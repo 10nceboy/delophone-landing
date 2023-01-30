@@ -115,7 +115,7 @@
 
   &__icon {
     margin-right: $spacer * 2;
-    flex-grow: 1;
+    flex-grow: 0;
 
     @include smartphone {
       flex-grow: 0;
@@ -134,6 +134,7 @@
     @include tablet {
       svg {
         margin-right: 10px;
+        flex-grow: 1;
       }
     }
   }

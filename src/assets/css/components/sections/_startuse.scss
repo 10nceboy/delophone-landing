@@ -21,6 +21,10 @@
     margin-bottom: $spacer * 4;
   }
 
+  @include laptop {
+    margin-top: -50px;
+  }
+
   &__text {
     line-height: 23.25px;
     margin-bottom: 15px;
@@ -61,11 +65,11 @@
       width: 350px;
 
       @include laptop {
-        width: auto;
+        width: 608px;
+        height: 518px;
       }
 
       @include tablet {
-        width: 400px;
       }
     }
 
