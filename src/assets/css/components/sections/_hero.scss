@@ -121,7 +121,7 @@
   &__imageblock {
     display: none;
 
-    @include laptop {
+    @include tablet {
       display: block;
       margin-left: auto;
       width: 528px;
@@ -137,15 +137,6 @@
     margin: $spacer * 4 auto 0;
 
     @include tablet {
-      display: none;
-    }
-  }
-
-  &__imageblock_mobile {
-    display: block;
-    margin: $spacer * 4 auto 0;
-
-    @include laptop {
       display: none;
     }
   }
@@ -200,7 +191,7 @@
     margin-right: 0px;
     z-index: 2;
 
-    @include tablet {
+    @include laptop {
       width: 200px;
     }
   }
