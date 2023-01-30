@@ -136,9 +136,10 @@
     @include tablet {
       height: 183px;
       padding: 20px;
+      width: auto;
     }
 
-    @include laptop {
+    @include desktop {
       width: 285px;
       height: 183px;
       padding: 20px;
@@ -195,6 +196,10 @@
       column-gap: 0;
       row-gap: $spacer * 2;
       white-space: nowrap;
+    }
+
+    @include tablet {
+      grid-template-columns: 160px 160px;
     }
 
     @include laptop {
