@@ -61,10 +61,17 @@
   }
 
   &__textblock {
-    @include font(400, 16px, $gray);
-    line-height: 24.8px;
-    margin-bottom: $spacer * 2;
-    margin-top: $spacer * 5;
+    @include font(400, 15px, $gray);
+    line-height: 23.25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @include tablet {
+      @include font(400, 16px, $gray);
+      line-height: 24.8px;
+      margin-bottom: $spacer * 2;
+      margin-top: $spacer * 5;
+    }
   }
 
   &__buttonblock {
