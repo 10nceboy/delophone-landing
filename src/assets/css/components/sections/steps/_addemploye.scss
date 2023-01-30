@@ -1,14 +1,15 @@
 .addemploye {
+  margin-top: $spacer * 12;
+  margin-bottom: $spacer * 12;
+
   @include tablet {
     margin-top: $spacer * 16;
     margin-bottom: $spacer * 16;
   }
-  margin-top: $spacer * 12;
-  margin-bottom: $spacer * 12;
 
   &__card {
     display: none;
-    @include laptop {
+    @include tablet {
       padding: $spacer * 4 $spacer * 6;
       margin-top: 35px;
       text-align: center;
@@ -21,7 +22,7 @@
     text-align: center;
     padding: $spacer * 3;
 
-    @include laptop {
+    @include tablet {
       display: none;
     }
   }
@@ -71,6 +72,7 @@
   height: 0;
   z-index: 1;
   position: relative;
+  display: none;
 
   @include tablet {
     display: block;

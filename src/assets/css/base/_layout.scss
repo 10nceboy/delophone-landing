@@ -73,7 +73,7 @@
 
   &-reverse {
     @include flex-row;
-    @include laptop {
+    @include tablet {
       @include flex-col;
       align-items: flex-start;
     }

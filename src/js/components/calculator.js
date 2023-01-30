@@ -53,27 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setInputValue(input, value - 1);
   };
 
-  const allowedKeys = [
-    'Enter',
-    'Tab',
-    'Backspace',
-    'Delete',
-    'ArrowUp',
-    'ArrowDown',
-    'ArrowLeft',
-    'ArrowRight',
-    '0',
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9'
-  ];
-
   const updatePrices = (inputValue, input, price, monthlyPrice) => {
     const priceParenEl =
       input?.parentElement?.parentElement.querySelector('.calculator__price');
@@ -161,6 +140,27 @@ document.addEventListener('DOMContentLoaded', () => {
     input.addEventListener('change', () => {
       handleInputChange(event);
     });
+
+    const allowedKeys = [
+      'Enter',
+      'Tab',
+      'Backspace',
+      'Delete',
+      'ArrowUp',
+      'ArrowDown',
+      'ArrowLeft',
+      'ArrowRight',
+      '0',
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9'
+    ];
 
     input.addEventListener('keydown', (event) => {
       if (allowedKeys.includes(event.key)) {

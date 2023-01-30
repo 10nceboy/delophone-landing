@@ -1,10 +1,12 @@
 .stats {
   &__articles {
+    @include flex-col;
     margin: $spacer * 8 0 $spacer * 16;
     gap: $spacer * 4;
     @include flex-col;
 
     @include tablet {
+      @include flex-row;
       margin-top: $spacer * 14;
       gap: $spacer * 7;
       margin-bottom: 150px;

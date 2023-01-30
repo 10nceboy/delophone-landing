@@ -242,7 +242,7 @@
           </div>
         </div>
         <div class="container">
-          <div class="container_adaptive">
+          <div class="hero__cards">
             <div class="card card_light-gray card_rectangle hero__card">
               <div class="container_flex">
                 <svg
@@ -880,7 +880,7 @@
             <div class="graphic"></div>
           </div>
           <div class="phone-business__cardblock_bottom">
-            <div class="container__adaptive phone-business__cards">
+            <div class="phone-business__cards">
               <div class="card card_light-gray card_round">
                 <div class="card_round_header">Руководитель</div>
                 <div class="text_caption card__round_text">
@@ -956,7 +956,7 @@
                   <h4>Виртуальная АТС за 1 990 ₽</h4>
                 </div>
 
-                <div class="container_adaptive pay-minutes__chip-container">
+                <div class="pay-minutes__chip-container">
                   <div class="chip_light-gray pay-minutes__chip">
                     3 сотрудника
                   </div>
@@ -1053,9 +1053,9 @@
                       Оплата только за подключение,
                     </div>
                     <div class="container_flex">
-                      <div class="text_semibold text_white">
+                      <strong class="text_semibold text_white">
                         без ежемесячных платежей
-                      </div>
+                      </strong>
                       <div
                         data-tooltip="Некоторые номера мы подключаем через партнёров, за
                         них мы вынуждены взымать абонентскую плату (190 ₽ /
@@ -1959,8 +1959,8 @@
           </section>
         </div>
 
-        <div class="container">
-          <section class="addemploye" id="addemploye">
+        <section class="addemploye" id="addemploye">
+          <div class="container">
             <div
               class="card card_white card_rounded-top multichannel__upside addemploye__content"
             >
@@ -2043,8 +2043,9 @@
                 разово.
               </div>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
+
         <div class="container"><div class="arc__employe"></div></div>
 
         <div class="container">
@@ -2638,8 +2639,8 @@
             <div class="lk__support">
               <h4>Человеческая поддержка 24/7</h4>
               <div class="text_small lk__text">
-                Ответим на любой вопрос и поможем настроить телефонию под любые
-                задачи
+                Ответим на любой вопрос и поможем настроить телефонию
+                под&nbsp;любые&nbsp; задачи
               </div>
             </div>
             <div class="lk__whatsapp">
@@ -3105,12 +3106,13 @@
             >
           </div>
         </div>
-        <div class="container">
+        <div class="container features">
           <div
             class="features__bottom container_adaptive card card_rounded-bot"
           >
             <div class="features__gift">
               <svg
+                aria-hidden="true"
                 width="60"
                 height="60"
                 viewBox="0 0 60 60"
@@ -3382,7 +3384,7 @@
       </section>
 
       <section class="cases-bottom">
-        <div class="container">
+        <div class="container features">
           <div
             class="card card_light-gray card_rounded-top casess-bottom__card container_adaptive"
           >
@@ -3478,7 +3480,7 @@
       </section>
       <section class="startuse">
         <div class="container">
-          <div class="container_adaptive">
+          <div class="startuse__container">
             <div class="startuse__textblock">
               <div class="startuse__header">
                 <h2>Начните использовать сразу после регистрации</h2>
@@ -3791,6 +3793,25 @@
                 </defs>
               </svg>
             </a>
+            <div
+              class="dropdown dropdown_white footer-upside__dropdown footer-upside__dropdown_tablet city"
+              data-value="Москва"
+            >
+              <button
+                type="button"
+                class="footer__dropdown-button dropdown__button"
+              >
+                Москва
+              </button>
+              <div class="dropdown__menu">
+                <div class="dropdown__arrow"></div>
+                <ul class="dropdown__menu_list header__dropdown_menu сity">
+                  <li data-value="Москва">Москва</li>
+                  <li data-value="Санкт-Петербург">Санкт-Петербург</li>
+                  <li data-value="Сочи">Сочи</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div
             class="dropdown dropdown_white footer-upside__dropdown city"

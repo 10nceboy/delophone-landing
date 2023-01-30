@@ -5,7 +5,7 @@
     position: relative;
     z-index: 2;
 
-    @include laptop {
+    @include tablet {
       padding: $spacer * 10 $spacer * 10;
     }
 
@@ -15,9 +15,14 @@
       color: $white;
       min-height: 230px;
 
-      @include laptop {
+      @include tablet {
         padding: $spacer * 6 $spacer * 10;
+      }
+
+      @include laptop {
         min-height: auto;
+        height: 116px;
+        align-items: flex-start;
       }
 
       .lk__text {
@@ -29,8 +34,11 @@
         @include laptop {
           margin-top: $spacer;
           margin-bottom: 0px;
-          white-space: nowrap;
           line-height: inherit;
+        }
+
+        @include desktop {
+          white-space: nowrap;
         }
       }
 
@@ -40,7 +48,7 @@
 
       @include laptop {
         flex-direction: row;
-        align-items: flex-start;
+        align-items: flex-end;
       }
     }
   }
@@ -82,15 +90,24 @@
 
   &__support {
     @include flex-col;
-
     color: $white;
 
     h4 {
       font-size: 16px;
       line-height: 21px;
+
+      @include tablet {
+        font-size: 20px;
+        line-height: 26px;
+        max-width: 600px;
+      }
     }
 
     @include laptop {
+      margin-right: $spacer * 6;
+    }
+
+    @include tablet {
       &__text {
         color: $light-gray !important;
         margin-bottom: $spacer * 2;
@@ -114,12 +131,11 @@
 
     @include laptop {
       width: 239px;
+      justify-content: unset;
     }
-    svg {
-      margin-right: -10px;
-    }
-    @include laptop {
-      margin-right: initial;
+
+    @include smartphone {
+      justify-content: center;
     }
   }
 
@@ -128,7 +144,12 @@
     margin-top: $spacer * 2;
     text-align: center;
 
+    @include tablet {
+      margin-top: $spacer * 4;
+    }
+
     @include laptop {
+      text-align: left;
       max-width: 115px;
       margin-left: $spacer * 4;
       margin-top: 0;

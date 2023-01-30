@@ -28,6 +28,53 @@
     }
   }
 
+  &__cards {
+    @include flex-col;
+
+    @include tablet {
+      @include flex-row;
+      margin-top: $spacer * 9;
+    }
+  }
+
+  &__card {
+    padding: $spacer * 4;
+    padding-top: $spacer * 5;
+    margin: 0 0 $spacer * 3 0;
+    height: 33.3%;
+    width: 100%;
+
+    @include tablet {
+      padding: $spacer * 4;
+    }
+
+    h4 {
+      margin-left: $spacer * 2;
+    }
+
+    .container-flex {
+      margin-bottom: $spacer * 3;
+    }
+
+    @include tablet {
+      margin-right: $spacer * 6;
+      max-width: 100%;
+      flex-grow: 1;
+      padding: $spacer * 9 $spacer * 5 $spacer * 8 $spacer * 5;
+      margin-top: 58px;
+      margin-bottom: 0px;
+      min-height: 230px;
+
+      h4 {
+        margin-left: $spacer * 4;
+      }
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+
   &__textblock {
     @include flex-col;
     margin: 0 auto;
@@ -100,47 +147,6 @@
 
       max-height: 230px;
       max-width: 290px;
-    }
-  }
-
-  &__card {
-    padding: $spacer * 4;
-    padding-top: $spacer * 5;
-    margin: 0 0 $spacer * 3 0;
-    height: 33.3%;
-    width: 100%;
-
-    &:first-child {
-      margin-top: $spacer * 9;
-      @include laptop {
-        margin-top: 58px;
-      }
-    }
-
-    h4 {
-      margin-left: $spacer * 2;
-    }
-
-    .container-flex {
-      margin-bottom: $spacer * 3;
-    }
-
-    @include tablet {
-      margin-right: $spacer * 6;
-      max-width: 100%;
-      flex-grow: 1;
-      padding: $spacer * 9 $spacer * 5 $spacer * 8 $spacer * 5;
-      margin-top: 58px;
-      margin-bottom: 0px;
-      min-height: 230px;
-
-      h4 {
-        margin-left: $spacer * 4;
-      }
-
-      &:last-child {
-        margin-right: 0px;
-      }
     }
   }
 
