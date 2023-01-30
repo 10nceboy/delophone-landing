@@ -2,11 +2,13 @@
   &__articles {
     margin: $spacer * 8 0 $spacer * 16;
     gap: $spacer * 4;
+    @include flex-col;
 
-    @include laptop {
+    @include tablet {
       margin-top: $spacer * 14;
       gap: $spacer * 7;
       margin-bottom: 150px;
+      @include flex-row;
     }
   }
 

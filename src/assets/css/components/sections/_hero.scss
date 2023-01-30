@@ -3,6 +3,12 @@
   margin-top: $spacer * 10;
   max-width: 100%;
 
+  h1 {
+    @include laptop {
+      margin-top: 140px;
+    }
+  }
+
   @include desktop {
     width: 100%;
   }
@@ -28,17 +34,12 @@
   }
 
   &__imageblock {
-    width: 419px;
-
+    display: none;
     @include tablet {
-      width: 320px;
-      height: 320px;
-    }
-
-    @include laptop {
+      display: block;
+      margin-left: auto;
       width: 528px;
     }
-
     img {
       height: 100%;
     }
@@ -49,6 +50,15 @@
     margin: $spacer * 4 auto 0;
 
     @include tablet {
+      display: none;
+    }
+  }
+
+  &__imageblock_mobile {
+    display: block;
+    margin: $spacer * 4 auto 0;
+
+    @include laptop {
       display: none;
     }
   }
