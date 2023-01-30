@@ -38,7 +38,7 @@
       @include font(600, 20px, $black);
       line-height: 26px;
 
-      @include tablet {
+      @include laptop {
         display: none;
       }
     }
@@ -108,7 +108,8 @@
 
   &__chip-container {
     height: auto;
-    @include tablet {
+
+    @include laptop {
       height: 51px;
     }
   }

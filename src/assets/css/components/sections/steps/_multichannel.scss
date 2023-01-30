@@ -52,10 +52,10 @@
     position: relative;
     z-index: 2;
 
-    @include laptop {
+    @include tablet {
       display: flex;
       flex-direction: row;
-      padding: 8px $spacer * 10;
+      padding: $spacer * 10;
       align-items: initial;
     }
   }
@@ -94,14 +94,19 @@
     padding: $spacer * 4;
     display: block;
     height: 230px;
+    box-sizing: border-box;
 
     @include smartphone {
       height: 175px;
     }
 
+    @include tablet {
+      padding: $spacer * 6 $spacer * 10;
+      height: 200px;
+    }
+
     @include laptop {
       display: flex;
-      padding: $spacer * 6 $spacer * 10;
       justify-content: space-between;
       flex-direction: row;
       height: auto;

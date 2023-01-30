@@ -5,7 +5,7 @@
   z-index: 2;
 
   &__main {
-    @include laptop {
+    @include tablet {
       padding: 50px;
     }
   }

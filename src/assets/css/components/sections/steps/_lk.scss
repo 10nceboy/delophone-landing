@@ -5,7 +5,7 @@
     position: relative;
     z-index: 2;
 
-    @include laptop {
+    @include tablet {
       padding: $spacer * 10 $spacer * 10;
     }
 
@@ -15,9 +15,8 @@
       color: $white;
       min-height: 230px;
 
-      @include laptop {
+      @include tablet {
         padding: $spacer * 6 $spacer * 10;
-        min-height: auto;
       }
 
       .lk__text {
@@ -117,15 +116,8 @@
       justify-content: unset;
     }
 
-    @include laptop {
+    @include smartphone {
       justify-content: center;
-    }
-
-    svg {
-      margin-right: -10px;
-    }
-    @include laptop {
-      margin-right: initial;
     }
   }
 
@@ -133,6 +125,10 @@
     color: $light-gray;
     margin-top: $spacer * 2;
     text-align: center;
+
+    @include tablet {
+      margin-top: $spacer * 4;
+    }
 
     @include laptop {
       max-width: 115px;
