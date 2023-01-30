@@ -85,15 +85,13 @@
 
   &__top {
     display: flex;
+
+    svg {
+      height: 60px;
+    }
   }
 
   &_image {
-    position: absolute;
-    top: $spacer * 5;
-
-    @include laptop {
-      position: absolute;
-      top: $spacer * 8;
-    }
+    width: 47px;
   }
 }
