@@ -10,6 +10,9 @@
     margin-bottom: auto;
 
     @include laptop {
+      max-width: 540px;
+      margin-right: 85px;
+
       h2 {
         margin-top: $spacer * 2;
       }

@@ -95,7 +95,7 @@
       margin-right: $spacer * 6;
       min-height: 230px;
       max-height: 230px;
-      min-width: 350px;
+      min-width: 346px;
     }
 
     @include laptop {
@@ -124,7 +124,8 @@
     @include tablet {
       display: block;
       margin-left: auto;
-      width: 528px;
+      width: 522px;
+      overflow: visible;
     }
 
     img {

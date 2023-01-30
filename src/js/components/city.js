@@ -8,7 +8,7 @@ citiesDropdowns.forEach((dropdown) => {
   watchValue(dropdown, (el) => {
     const { value } = el.dataset;
     if (cities.includes(value));
-    document.querySelectorAll('.phone-number').forEach((number) => {
+    document.querySelectorAll('.phone-number a').forEach((number) => {
       number.textContent = phones[value];
     });
   });

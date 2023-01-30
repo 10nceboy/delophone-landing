@@ -6,6 +6,7 @@
   z-index: $zindex-modal;
   opacity: 0;
   transition: opacity 0.2s ease;
+  cursor: pointer;
 
   &_visible {
     display: flex;
@@ -16,12 +17,13 @@
   }
 
   &__dialog {
+    cursor: default;
     background: $white;
-
     padding: 0;
     height: fit-content;
     max-width: 320px;
     background: $white;
+    position: relative;
 
     @include laptop {
       max-width: 460px;
