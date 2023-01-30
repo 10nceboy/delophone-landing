@@ -13,9 +13,12 @@
   &__upside {
     @include flex-col;
 
+    @include tablet {
+      margin: 5 * $spacer 0 3 * $spacer;
+    }
+
     @include laptop {
       @include flex-row;
-      margin: 5 * $spacer 0 3 * $spacer;
     }
   }
 
@@ -99,6 +102,11 @@
           margin-right: 0px;
         }
       }
+
+      @include tablet {
+        width: 100%;
+        justify-content: space-between;
+      }
     }
 
     @include laptop {
@@ -113,21 +121,12 @@
 
         li {
           margin-bottom: 0px;
-          margin-right: 115px;
 
           &:last-child {
             margin-right: 0px;
             margin-bottom: 0px;
           }
         }
-      }
-    }
-  }
-
-  @include desktop {
-    ul {
-      li {
-        margin-right: 116px;
       }
     }
   }

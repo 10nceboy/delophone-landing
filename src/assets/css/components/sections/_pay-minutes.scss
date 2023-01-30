@@ -25,20 +25,27 @@
 
     @include tablet {
       display: block;
-      max-width: 235px;
       margin-right: auto;
       margin-bottom: auto;
+
       @include font(600, 26px, $black);
       line-height: 33.8px;
+      margin-bottom: $spacer * 5;
+    }
+
+    @include laptop {
+      max-width: 235px;
+      margin-bottom: 0;
     }
 
     &_mobile {
       display: block;
       margin-bottom: $spacer * 5;
+
       @include font(600, 20px, $black);
       line-height: 26px;
 
-      @include laptop {
+      @include tablet {
         display: none;
       }
     }
@@ -62,7 +69,7 @@
     max-width: 100%;
 
     @include tablet {
-      padding: $spacer * 4 $spacer * 6;
+      padding: $spacer * 6 $spacer * 10;
       display: flex;
       justify-content: stretch;
     }
@@ -108,9 +115,11 @@
 
   &__chip-container {
     height: auto;
+    @include flex-col;
 
-    @include laptop {
+    @include tablet {
       height: 51px;
+      @include flex-row;
     }
   }
 

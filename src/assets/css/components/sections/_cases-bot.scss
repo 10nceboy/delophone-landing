@@ -11,7 +11,7 @@
 .casess-bottom__card {
   padding: $spacer * 4;
 
-  @include laptop {
+  @include tablet {
     padding: $spacer * 10;
   }
 }

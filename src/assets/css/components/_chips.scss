@@ -3,7 +3,7 @@
   border-radius: $border-radius-xs;
 
   &_light-gray {
-    @include laptop {
+    @include tablet {
       background-color: $light-gray;
       border: 1px solid $dim-gray;
     }

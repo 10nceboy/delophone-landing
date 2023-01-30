@@ -1,7 +1,7 @@
 .phone-business {
   margin-top: $spacer * 13;
 
-  @include tablet {
+  @include laptop {
     margin-top: 0px;
   }
 
@@ -47,7 +47,7 @@
     min-width: 290px;
     width: 100%;
 
-    @include tablet {
+    @include laptop {
       position: relative;
       z-index: 2;
       display: flex;
@@ -65,7 +65,7 @@
     margin-top: $spacer * 5;
     min-height: 111px;
 
-    @include tablet {
+    @include laptop {
       width: 475px;
       max-width: 475px;
 
@@ -92,7 +92,7 @@
       margin-bottom: $spacer * 2;
     }
 
-    @include tablet {
+    @include laptop {
       padding: $spacer * 6;
       height: 124px;
       display: flex;
@@ -117,6 +117,7 @@
       left: max(55%, 154px);
       z-index: -1;
       display: block;
+
       @include laptop {
         display: none;
       }
@@ -149,7 +150,7 @@
       height: 27px;
     }
 
-    @include tablet {
+    @include laptop {
       padding: $spacer;
       justify-content: center;
       @include font(400, 24px, $orange);
@@ -195,7 +196,7 @@
       left: 0px;
       margin-right: -22px;
 
-      @include tablet {
+      @include laptop {
         content: url('/v1.svg');
         top: 18px;
         left: 27px;
@@ -203,7 +204,7 @@
       }
     }
 
-    @include tablet {
+    @include laptop {
       margin-left: 0;
       flex-direction: column;
       align-items: center;
@@ -219,7 +220,7 @@
         margin-bottom: $spacer * 2;
       }
       p {
-        @include tablet {
+        @include laptop {
           @include font(400, 16px, $gray);
           line-height: 20.8px;
           text-align: center;
@@ -230,12 +231,11 @@
 
   &__cards {
     @include flex-col;
+    flex-grow: 1;
 
-    @include tablet {
+    @include laptop {
       @include flex-row;
     }
-
-    flex-grow: 1;
   }
 
   &__your-numbers {
@@ -246,14 +246,14 @@
 .graphic {
   display: none;
 
-  @include desktop {
+  @include laptop {
     display: block;
     position: relative;
 
     &:after {
       display: none;
 
-      @include desktop {
+      @include laptop {
         content: url('/Vector233.svg');
         position: absolute;
         width: 53px;
@@ -271,8 +271,9 @@
   display: none;
   position: relative;
 
-  @include tablet {
+  @include laptop {
     display: block;
+
     &::before {
       content: url('/v1.svg');
       position: absolute;
@@ -283,7 +284,7 @@
     }
   }
 
-  @include tablet {
+  @include laptop {
     display: none;
   }
 }
@@ -291,7 +292,7 @@
 .usersblock__image {
   display: none;
 
-  @include tablet {
+  @include laptop {
     display: block;
   }
 }
@@ -299,14 +300,14 @@
 .usersblock__image_mobile {
   display: block;
 
-  @include tablet {
+  @include laptop {
     display: none;
   }
 }
 
 .phone-bussines__numbers_up {
   @include flex-row;
-  @include tablet {
+  @include laptop {
     gap: $spacer * 3;
     margin-bottom: $spacer * 2;
     align-self: flex-end;
@@ -316,7 +317,7 @@
     &:nth-child(2) {
       display: none;
 
-      @include tablet {
+      @include laptop {
         display: flex;
       }
     }
@@ -328,7 +329,12 @@
 
   div {
     &:last-child {
-      min-width: 43px;
+      @include laptop {
+        min-width: 43px;
+        svg {
+          width: 22px;
+        }
+      }
     }
     &:first-child {
       @include laptop {
@@ -337,7 +343,7 @@
     }
   }
 
-  @include tablet {
+  @include laptop {
     gap: $spacer * 3;
   }
 }

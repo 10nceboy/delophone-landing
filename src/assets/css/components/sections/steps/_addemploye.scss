@@ -1,10 +1,11 @@
 .addemploye {
+  margin-top: $spacer * 12;
+  margin-bottom: $spacer * 12;
+
   @include tablet {
     margin-top: $spacer * 16;
     margin-bottom: $spacer * 16;
   }
-  margin-top: $spacer * 12;
-  margin-bottom: $spacer * 12;
 
   &__card {
     display: none;
@@ -44,7 +45,7 @@
   }
 
   &__content {
-    @include tablet {
+    @include laptop {
       padding: $spacer * 10;
       box-sizing: border-box;
       max-height: 372px;
@@ -57,7 +58,7 @@
       @include laptop {
         display: block;
         position: absolute;
-      content: url('/circe-steps.svg');
+        content: url('/circe-steps.svg');
         top: -246px;
         transform: translateX(calc(-150% + 12px));
         max-width: 312px;
@@ -71,6 +72,7 @@
   height: 0;
   z-index: 1;
   position: relative;
+  display: none;
 
   @include tablet {
     display: block;

@@ -27,11 +27,6 @@
     margin-bottom: $spacer * 2;
     padding: $spacer * 3;
 
-    @include laptop {
-      padding: 80px 20px 80px 20px;
-      min-width: 210px;
-    }
-
     &_header {
       @include font(500, 16px, $black);
       line-height: 21px;
@@ -43,6 +38,8 @@
     }
 
     @include laptop {
+      padding: 80px 20px 80px 20px;
+      min-width: 210px;
       border-radius: 268px;
       height: 210px;
       margin-right: $spacer * 3;
@@ -68,6 +65,7 @@
 
 .card__round_text {
   display: none;
+
   @include laptop {
     display: block;
   }
