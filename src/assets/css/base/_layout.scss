@@ -31,11 +31,9 @@
 
   &.container-bottom {
     margin-top: auto;
-    position: fixed;
-    bottom: $spacer * 4;
     @include flex-row;
     justify-content: center;
-    padding: 0 $spacer * 3;
+    height: 100px;
   }
 
   &_flex {

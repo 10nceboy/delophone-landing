@@ -143,7 +143,10 @@
     flex: 1;
     min-height: 24px;
     max-height: 24px;
-    margin-right: 10px;
+    margin-right: 6px;
+    @include smartphone {
+      margin-right: 12px;
+    }
     width: fit-content;
     max-width: 38px;
     height: 100%;

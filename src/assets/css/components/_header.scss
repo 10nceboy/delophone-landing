@@ -144,9 +144,27 @@
 
   &_active {
     @include fullscreen;
+    height: fill;
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height: fill-available;
+    @include flex-col;
     background-color: $light-gray;
-    z-index: 100;
+    z-index: $zindex-modal + 1;
     margin-top: 0px;
+    overflow: hidden;
+
+    @include smartphone {
+      flex-direction: column;
+    }
+
+    @include tablet {
+      padding-top: 15px;
+    }
+
+    @include laptop {
+      display: none;
+    }
 
     .header__menu,
     .login__phone-number,
@@ -175,6 +193,7 @@
       padding: 0;
       order: initial;
       display: flex;
+      margin-top: 40px;
     }
 
     .header__upside {
@@ -186,6 +205,8 @@
       background-color: $light-gray;
       border: none;
       padding: 0;
+      margin-left: auto;
+      box-sizing: border-box;
     }
 
     .header__dropdown-button {

@@ -7,12 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
     '.header_start-button_mobile'
   );
   const dropdowns = document.querySelector('.header__dropdown');
-
+  const overlay = document.querySelector('.overlay');
 
   burgerButton.addEventListener('click', () => {
     burgerButton.classList.toggle('header__burger_hidden');
     changeButtonColor.classList.add('active');
     document.querySelector('.header').classList.add('header_active');
+    overlay.classList.add('overlay__active');
     toggleOverflow(true);
   });
 
@@ -21,9 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     changeButtonColor.classList.remove('active');
     document.querySelector('.header').classList.remove('header_active');
     dropdowns.classList.remove('active');
+    overlay.classList.remove('overlay__active');
     toggleOverflow(false);
   });
-
 });
-
-

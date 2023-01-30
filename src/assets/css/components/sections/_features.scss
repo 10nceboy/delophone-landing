@@ -65,6 +65,27 @@
     }
   }
 
+  &__checklist {
+    @include smartphone {
+      display: flex;
+      width: calc(100vw - 80px);
+
+      li {
+        margin-right: 5px;
+      }
+    }
+
+    @include tablet {
+      width: auto;
+      display: unset;
+
+      li {
+        white-space: inherit;
+        margin-right: unset;
+      }
+    }
+  }
+
   &__checklist-item {
     color: $gray;
     align-items: flex-start;
@@ -167,13 +188,17 @@
   }
 
   .list {
-    @include tablet {
+    @include smartphone {
       display: grid;
-      grid-template-columns: min(50%, 160px) min(50%, 160px);
-      grid-template-rows: 25px 25px;
-      column-gap: $spacer * 4;
+      grid-template-columns: 50% 50%;
+      column-gap: 0;
       row-gap: $spacer * 2;
       white-space: nowrap;
+    }
+
+    @include laptop {
+      grid-template-columns: min(50%, 160px) min(50%, 160px);
+      grid-template-rows: 25px 25px;
     }
   }
 
