@@ -8,7 +8,7 @@
     align-items: stretch;
 
     @include tablet {
-      align-items: center;
+      align-items: flex-start;
       background-color: $light-gray;
       padding: $spacer * 10;
     }
@@ -27,6 +27,7 @@
       display: block;
       margin-right: auto;
       margin-bottom: auto;
+      margin-top: 10px;
 
       @include font(600, 26px, $black);
       line-height: 33.8px;

@@ -41,6 +41,7 @@
 
     @include laptop {
       display: block;
+      margin-top: $spacer * 7;
     }
 
     &_mobile {
@@ -56,16 +57,20 @@
   &__image {
     display: none;
 
-    @include laptop {
-      width: auto;
+    img {
+      width: 350px;
+
+      @include laptop {
+        width: auto;
+      }
+
+      @include tablet {
+        width: 400px;
+      }
     }
 
     @include tablet {
       display: block;
-
-      img {
-        width: 400px;
-      }
     }
   }
 

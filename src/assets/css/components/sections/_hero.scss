@@ -5,7 +5,7 @@
 
   h1 {
     @include laptop {
-      margin-top: 140px;
+      margin-top: 100px;
     }
   }
 
@@ -33,7 +33,7 @@
 
     @include tablet {
       @include flex-row;
-      margin-top: $spacer * 9;
+      margin-top: 58px;
     }
   }
 
@@ -44,28 +44,45 @@
     height: 33.3%;
     width: 100%;
 
-    @include tablet {
-      padding: $spacer * 4;
+    &:first-child {
+      margin-top: $spacer * 9;
+
+      @include tablet {
+        margin-top: 0;
+      }
     }
 
     h4 {
       margin-left: $spacer * 2;
+      font-size: 16px;
+      line-height: 130%;
+
+      @include laptop {
+        font-size: 20px;
+        margin-left: $spacer * 4;
+      }
     }
 
-    .container-flex {
-      margin-bottom: $spacer * 3;
+    svg {
+      min-width: 60px;
+      @include tablet {
+        min-width: 40px;
+      }
     }
 
     @include tablet {
-      margin-right: $spacer * 6;
+      margin-right: $spacer * 2;
       max-width: 100%;
       flex-grow: 1;
-      padding: $spacer * 9 $spacer * 5 $spacer * 8 $spacer * 5;
-      margin-top: 58px;
+      padding: $spacer * 4;
       margin-bottom: 0px;
-      min-height: 230px;
+      max-height: 180px;
+      min-height: 180px;
 
       h4 {
+        @include laptop {
+          margin-left: $spacer * 4;
+        }
         margin-left: $spacer * 4;
       }
 
@@ -73,20 +90,43 @@
         margin-right: 0px;
       }
     }
+
+    @include laptop {
+      margin-right: $spacer * 6;
+      min-height: 230px;
+      max-height: 230px;
+      min-width: 350px;
+    }
+
+    @include laptop {
+      padding: $spacer * 9 $spacer * 5 $spacer * 8 $spacer * 5;
+    }
+  }
+
+  &__card-header {
+    @include tablet {
+      margin-bottom: $spacer * 4;
+    }
   }
 
   &__textblock {
     @include flex-col;
     margin: 0 auto;
+
+    @include tablet {
+      margin: 0;
+    }
   }
 
   &__imageblock {
     display: none;
-    @include tablet {
+
+    @include laptop {
       display: block;
       margin-left: auto;
       width: 528px;
     }
+
     img {
       height: 100%;
     }
@@ -159,9 +199,9 @@
     justify-content: flex-start;
     margin-right: 0px;
     z-index: 2;
-  }
-}
 
-.hero_small {
-  margin-top: 10px;
+    @include tablet {
+      width: 200px;
+    }
+  }
 }

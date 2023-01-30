@@ -10,6 +10,14 @@
 
   &__cards {
     margin-top: $spacer * 5;
+
+    @include tablet {
+      margin-top: $spacer * 7;
+    }
+
+    @include laptop {
+      margin-top: $spacer * 11;
+    }
   }
 
   &__card {

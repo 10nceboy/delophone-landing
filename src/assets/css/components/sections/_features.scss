@@ -159,8 +159,9 @@
       color: $white;
       font-size: 16px;
 
-      @include laptop {
+      @include tablet {
         font-size: 20px;
+        flex: 1;
       }
     }
   }
