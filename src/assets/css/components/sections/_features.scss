@@ -68,7 +68,11 @@
   &__checklist {
     @include smartphone {
       display: flex;
-      width: 500px;
+      width: calc(100vw - 80px);
+
+      li {
+        margin-right: 5px;
+      }
     }
 
     @include tablet {
@@ -77,6 +81,7 @@
 
       li {
         white-space: inherit;
+        margin-right: unset;
       }
     }
   }
