@@ -1,12 +1,10 @@
 .card {
   box-sizing: border-box;
+  transition: $btn-transition;
 
   &_light-gray {
+    /* border: transparent 1px; */
     background-color: $light-gray;
-
-    &:focus {
-      border: $border-orange;
-    }
   }
 
   &_white {

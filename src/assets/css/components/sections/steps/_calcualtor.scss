@@ -158,13 +158,15 @@
         min-width: 50%;
       }
 
+      @include tablet {
+        min-width: 300px;
+      }
+
       @include laptop {
         margin-right: $spacer * 4;
         min-width: 365px;
         max-width: 365px;
-
         white-space: nowrap;
-        min-width: auto;
       }
 
       &::after {
@@ -279,12 +281,6 @@
       display: none;
       max-width: 144px;
       min-width: 144px;
-
-      @include tablet {
-        display: block;
-        min-width: 77px;
-      }
-
       content: '';
       width: 100%;
       flex-basis: 100%;
@@ -292,6 +288,16 @@
       margin-top: -1px;
       border-bottom: 1px dotted $gray2;
       margin-right: $spacer * 4;
+
+      @include tablet {
+        display: block;
+        min-width: 77px;
+      }
+
+      @include laptop {
+        max-width: 144px;
+        min-width: 144px;
+      }
     }
 
     .tooltip {

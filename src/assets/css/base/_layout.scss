@@ -34,6 +34,7 @@
     @include flex-row;
     justify-content: center;
     height: 100px;
+    display: none;
   }
 
   &_flex {

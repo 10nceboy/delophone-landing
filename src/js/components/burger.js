@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     changeButtonColor.classList.add('active');
     document.querySelector('.header').classList.add('header_active');
     overlay.classList.add('overlay__active');
+    
+    document.querySelector('.container-bottom').display = 'block';
     toggleOverflow(true);
   });
 
@@ -23,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.header').classList.remove('header_active');
     dropdowns.classList.remove('active');
     overlay.classList.remove('overlay__active');
+    document.querySelector('.container-bottom').display = 'none';
     toggleOverflow(false);
   });
 });
