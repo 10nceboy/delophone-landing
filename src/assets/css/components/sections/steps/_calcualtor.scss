@@ -82,8 +82,12 @@
 
   &__row {
     display: flex;
-    align-items: baseline;
+    align-items: flex-start;
     justify-content: space-between;
+
+    @include smartphone {
+      align-items: baseline;
+    }
 
     @include tablet {
       margin-bottom: $spacer * 3;
@@ -140,10 +144,13 @@
       margin-right: $spacer * 3;
 
       h4 {
+        font-size: 16px;
+
         min-width: 142px;
 
         @include smartphone {
           min-width: none;
+          font-size: auto;
         }
       }
 
@@ -156,10 +163,8 @@
         min-width: 365px;
         max-width: 365px;
 
-        h4 {
-          white-space: nowrap;
-          min-width: auto;
-        }
+        white-space: nowrap;
+        min-width: auto;
       }
 
       &::after {
@@ -311,7 +316,7 @@
     border-radius: $border-radius-xs;
     border: 1px solid $dim-gray;
     margin-bottom: $spacer;
-    width: 78px;
+    width: fit-content;
 
     @include tablet {
       margin-right: $spacer * 4;
@@ -379,6 +384,7 @@
       h4 {
         color: $white;
       }
+
       @include font(400, 14px, $white);
       padding: 20px 15px;
       @include tablet {
