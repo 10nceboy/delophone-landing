@@ -1,4 +1,4 @@
-import { scrollToElement } from '../utils/dom';
+import { scrollToElement, isInViewport } from '../utils/dom';
 
 const renderArrow = (collapse) => {
   const arrow = collapse.querySelector('.collapse__arrow');
@@ -32,13 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
         arrow.classList.toggle('collapse__arrow_active');
       }
 
-      requestAnimationFrame(() => {
-        if (content.classList.contains('collapse__content_visible')) {
+      window.setTimeout(() => {
+        if (
+          content.classList.contains('collapse__content_visible') &&
+          !isInViewport(content)
+        ) {
           scrolling = true;
           scrollToElement(collapse);
           window.setTimeout(() => (scrolling = false), 300);
         }
-      });
+      }),
+        250;
     });
     content.addEventListener('click', (event) => event.stopPropagation());
   });

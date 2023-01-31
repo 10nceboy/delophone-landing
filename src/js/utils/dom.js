@@ -10,9 +10,6 @@ export const getScrollbarWidth = () => {
   return scrollbarWidth;
 };
 
-export const getViewportWidth = () =>
-  Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-
 export const toggleOverflow = (flag) => {
   if (flag) {
     const paddingRight = getScrollbarWidth();
@@ -36,23 +33,6 @@ export const isTouchDevice = () => {
 
 export const scrollToElement = (element) => {
   element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-  const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.6
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        observer.disconnect();
-      }
-    });
-  }, options);
-
-  observer.observe(element);
 };
 
 export const clickOutside = (element, callback) => {
@@ -63,4 +43,23 @@ export const clickOutside = (element, callback) => {
   });
 };
 
+export const isInViewport = (element) => {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+};
 
+// export const itemTransition = (el, className, state) => {
+//   if (state) {
+//     el.classlist.add(`${className}_active`);
+//     requestAnimationFrame(() => el.classlist.add(`${className}_visible`));
+//   } else {
+//     el.classlist.remove(`${className}_active`);
+//     el.classlist.remove(`${className}_visible`);
+//   }
+// };
