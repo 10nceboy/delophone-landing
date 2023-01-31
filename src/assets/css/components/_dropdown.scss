@@ -13,6 +13,8 @@
     text-decoration: underline;
     cursor: pointer;
 
+    user-select: none;
+
     @include laptop {
       font-size: 20px;
       text-decoration: none;
@@ -20,12 +22,24 @@
 
     &::after {
       display: none;
+      transition: $dropdown-transition;
+      display: none;
 
       @include laptop {
         content: url('/arrow-down.svg');
         display: inline-block;
         transform: translateY(3px);
         margin: 2px 0;
+      }
+    }
+
+    &:hover {
+      color: $blue;
+    }
+
+    &.dropdown_active {
+      &::after {
+        transform: rotateX(180deg) translateY(-2px);
       }
     }
   }

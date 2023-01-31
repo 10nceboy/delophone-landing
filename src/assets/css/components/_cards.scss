@@ -7,6 +7,21 @@
     background-color: $light-gray;
   }
 
+  &_with-hover {
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    &:focus {
+      border-color: $border-orange;
+    }
+
+    &:hover {
+      &:hover {
+        border-color: $orange;
+      }
+    }
+  }
+
   &_white {
     background-color: $white;
 

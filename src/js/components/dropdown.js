@@ -23,7 +23,9 @@ dropdowns.forEach((dropdown) => {
     );
 
     if (content) {
-      activator.addEventListener('click', () => {
+      activator.addEventListener('click', (event) => {
+        event.preventDefault();
+        activator.classList.toggle('dropdown_active');
         content?.classList.toggle('dropdown__content_visible');
         requestAnimationFrame(() => {
           content?.classList.toggle('dropdown__content_active');
