@@ -64,7 +64,9 @@
     line-height: 16px;
     text-align: right;
 
-    @include laptop {
+    @include tablet {
+      font-size: 14px;
+      line-height: 21px;
       right: $spacer * 4;
       top: $spacer * 4;
       max-width: none;

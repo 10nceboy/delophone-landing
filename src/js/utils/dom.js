@@ -55,12 +55,20 @@ export const isInViewport = (element) => {
   );
 };
 
-// export const itemTransition = (el, className, state) => {
-//   if (state) {
-//     el.classlist.add(`${className}_active`);
-//     requestAnimationFrame(() => el.classlist.add(`${className}_visible`));
-//   } else {
-//     el.classlist.remove(`${className}_active`);
-//     el.classlist.remove(`${className}_visible`);
-//   }
-// };
+export const itemTransition = (
+  el,
+  className,
+  state,
+  activeClass = '_active',
+  visibleClass = '_visible'
+) => {
+  if (state) {
+    el?.classList.add(`${className}${visibleClass}`);
+    requestAnimationFrame(() => el.classList.add(`${className}${activeClass}`));
+  } else {
+    el?.classList.remove(`${className}${visibleClass}`);
+    requestAnimationFrame(() => {
+      el.classList.remove(`${className}${activeClass}`);
+    });
+  }
+};

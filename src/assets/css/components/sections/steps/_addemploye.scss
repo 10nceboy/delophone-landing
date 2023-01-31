@@ -9,6 +9,7 @@
 
   &__card {
     display: none;
+
     @include tablet {
       padding: $spacer * 4 $spacer * 6;
       margin-top: 35px;
@@ -64,6 +65,14 @@
         max-width: 312px;
         user-select: none;
       }
+    }
+  }
+
+  &__chip {
+    @include tablet {
+      margin-top: 35px;
+      max-width: 573px;
+      padding: $spacer * 4 $spacer * 6;
     }
   }
 }

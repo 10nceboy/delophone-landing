@@ -154,14 +154,14 @@
     font-size: 14px;
     background: $gray;
     border-radius: $border-radius-xs;
-    padding: $spacer * 4;
     margin-top: $spacer * 6;
 
     @include laptop {
-      border-radius: none;
+      border-radius: 0;
       background: transparent;
       padding-top: $spacer * 7;
-      max-width: auto;
+      margin-top: 0;
+      height: 21px;
     }
 
     ul {

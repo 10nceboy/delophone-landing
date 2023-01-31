@@ -98,9 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
       parseInt(monthlyPrice) * diff,
       inputValue * diff
     );
-
     input.prevValue = inputValue;
-
     updatePrices(inputValue, input, price, monthlyPrice);
   };
 
@@ -121,44 +119,13 @@ document.addEventListener('DOMContentLoaded', () => {
       .querySelector('.calculator__decrement')
       .addEventListener('click', () => decrement(input));
 
-    input.addEventListener('focus', (event) => {
+    input.addEventListener('click', (event) => {
       event.preventDefault();
-    });
-
-    input.addEventListener('blur', () => {
-      if (input.value === '') {
-        input.value = 0;
-      }
-    });
-
-    input.addEventListener('input', (event) => {
-      handleInputChange(event);
     });
 
     input.addEventListener('change', () => {
       handleInputChange(event);
     });
-
-    const allowedKeys = [
-      'Enter',
-      'Tab',
-      'Backspace',
-      'Delete',
-      'ArrowUp',
-      'ArrowDown',
-      'ArrowLeft',
-      'ArrowRight',
-      '0',
-      '1',
-      '2',
-      '3',
-      '4',
-      '5',
-      '6',
-      '7',
-      '8',
-      '9'
-    ];
 
     input.addEventListener('keydown', (event) => {
       event.preventDefault();

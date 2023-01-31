@@ -1,4 +1,4 @@
-import { clickOutside } from '../utils/dom';
+import { clickOutside, itemTransition } from '../utils/dom';
 
 const dropdowns = document.querySelectorAll('.dropdown');
 
@@ -40,9 +40,12 @@ dropdowns.forEach((dropdown) => {
     return;
   }
 
+  let dropdownState = false;
+
   dropdown.addEventListener('click', () => {
-    dropdown.classList.toggle('dropdown_active');
-    requestAnimationFrame(() => dropdown.classList.toggle('dropdown_visible'));
+    dropdownState = !dropdownState;
+
+    itemTransition(dropdown, 'dropdown', dropdownState);
   });
 
   const items = dropdown.querySelectorAll('.dropdown__menu li');

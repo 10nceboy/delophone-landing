@@ -73,7 +73,6 @@ tooltips.forEach((item) => {
     });
 
     const hideTooltip = (event) => {
-      debugger;
       const tooltipContent =
         event.target?.parentNode?.querySelector('.tooltip__inner');
       tooltipContent?.classList.remove('tooltip__inner_active');
