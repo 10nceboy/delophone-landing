@@ -15,31 +15,26 @@
     <meta name="theme-color" content="#ffffff" />
     <meta property="og:site_name" content="Делофон" />
     <meta property="og:url" content=https://delofon.ru/>
-    <meta property="og:image:width" content="2400" />
-    <meta property="og:image:height" content="1260" />
-    <meta
-      property="og:image"
-      content="https://10nceboy.github.io/delophone-landing/cover.png"
-    />
+    <meta property="og:image" content="/cover.png" />
     <meta property="og:image:type" content="image/png" />
     <meta
       property="og:description"
-      content="Делофон - Первая виртуальная АТС без абонентской платы. Настройте звонки в бизнесе: скрасивым номером, многоканальной линией и распределением звонков по сотрудникам с любыми устройствами."
+      content="Делофон - Первая виртуальная АТС без абонентской платы. Настройте звонки в бизнесе: с красивым номером, многоканальной линией и распределением звонков по сотрудникам с любыми устройствами."
     />
     <meta property="og:type" content="product" />
     <meta
       property="og:title"
-      content="Делофон - Первая виртуальная сеть без абонентской платы"
+      content="Делофон - Первая виртуальная АТС без абонентской платы"
     />
     <meta
       name="description"
-      content="Настройте звонки в бизнесе: скрасивым номером, многоканальной линией и распределением звонков по сотрудникам с любыми устройствами."
+      content="Настройте звонки в бизнесе: с красивым номером, многоканальной линией и распределением звонков по сотрудникам с любыми устройствами."
     />
 
     
     
-    <script type="module" crossorigin src="/delophone-landing/assets/index-7ef2d8ad.js"></script>
-    <link rel="stylesheet" href="/delophone-landing/assets/index-7e8629a3.css">
+    <script type="module" crossorigin src="/delophone-landing/assets/index-04f60c1a.js"></script>
+    <link rel="stylesheet" href="/delophone-landing/assets/index-c6d3ee57.css">
   </head>
   <body class="body">
     <div class="overlay"></div>
@@ -64,20 +59,55 @@
               </a>
             </figure>
             <button class="header__burger_opened">
-              <img
-                alt="Закрыть меню"
-                width="35px"
-                height="35px"
-                src="/delophone-landing/assets/close-28f4c68f.svg"
-              />
+              <svg
+                width="35"
+                height="35"
+                viewBox="0 0 35 35"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="17.5" cy="17.5" r="17" stroke="#2B8FEB" />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.9933 12.2846C12.798 12.0894 12.4814 12.0894 12.2862 12.2846C12.0909 12.4799 12.0909 12.7965 12.2862 12.9918L16.7944 17.5L12.2862 22.0082C12.0909 22.2035 12.0909 22.5201 12.2862 22.7153C12.4814 22.9106 12.798 22.9106 12.9933 22.7153L17.5015 18.2071L22.0094 22.7149C22.2046 22.9102 22.5212 22.9102 22.7165 22.7149C22.9117 22.5197 22.9117 22.2031 22.7165 22.0078L18.2086 17.5L22.7165 12.9922C22.9117 12.7969 22.9117 12.4803 22.7165 12.285C22.5212 12.0898 22.2046 12.0898 22.0094 12.285L17.5015 16.7929L12.9933 12.2846Z"
+                  fill="#2B8FEB"
+                />
+              </svg>
             </button>
             <button class="header__burger">
-              <img
-                alt="Открыть меню"
-                width="35px"
-                height="35px"
-                src="/delophone-landing/assets/burger-aecb1379.svg"
-              />
+              <svg
+                width="35"
+                height="35"
+                viewBox="0 0 35 35"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="1.40002"
+                  y="8.40039"
+                  width="32.2"
+                  height="1.4"
+                  rx="0.7"
+                  fill="#2B8FEB"
+                />
+                <rect
+                  x="1.40002"
+                  y="16.7998"
+                  width="32.2"
+                  height="1.4"
+                  rx="0.700001"
+                  fill="#2B8FEB"
+                />
+                <rect
+                  x="1.40002"
+                  y="25.2002"
+                  width="32.2"
+                  height="1.4"
+                  rx="0.7"
+                  fill="#2B8FEB"
+                />
+              </svg>
             </button>
           </div>
           <button class="button login header__login">
@@ -226,6 +256,7 @@
                 <img
                   alt="Довольные клиенты Делофона"
                   src="/delophone-landing/assets/hero-image-mobile-e9ce5d94.svg"
+                  class="no-select"
                 />
               </div>
               <div class="container_adaptive hero__button">
@@ -238,12 +269,16 @@
                 <div class="hero__label text_regular">
                   1 номер, 3 сотрудника, 100 ₽ на балансе
                 </div>
+                <div class="hero__label hero__label_hidden text_regular">
+                  '⚡ Сразу после регистрации';
+                </div>
               </div>
             </div>
             <div class="hero__imageblock">
               <img
                 alt="Довольные клиенты Делофона"
                 src="/delophone-landing/assets/hero-image-bc7e6cac.svg"
+                class="no-select"
               />
             </div>
           </div>
@@ -1954,6 +1989,7 @@
                 <img
                   alt="Мультиканальный обзвон"
                   src="/delophone-landing/multichannel-image.svg"
+                  class="no-select"
                 />
               </div>
               <div class="multichannel__image_mobile">
@@ -1962,6 +1998,7 @@
                   width="320px"
                   height="320px"
                   src="multichannel-image.svg"
+                  class="no-select"
                 />
               </div>
             </div>
@@ -2059,10 +2096,15 @@
                 <img
                   alt="Подключение сотрудников"
                   src="/delophone-landing/assets/employe-a2ac8172.svg"
+                  class="no-select"
                 />
               </div>
               <div class="addemploye__image_mobile">
-                <img alt="Подключение сотрудников" src="/delophone-landing/employe-mobile.svg" />
+                <img
+                  alt="Подключение сотрудников"
+                  src="/delophone-landing/employe-mobile.svg"
+                  class="no-select"
+                />
               </div>
               <div
                 class="card card_light-gray card_rectangle text_caption addemploye__card_mobile"
@@ -2591,18 +2633,21 @@
                   <img
                     src="/delophone-landing/assets/journal-f81d7cbd.svg"
                     alt="Журнал звонков"
+                    class="no-select"
                   />
                 </div>
                 <div class="tabs__item" data-tab="settings" aria-hidden="true">
                   <img
                     src="/delophone-landing/assets/settings-b4031102.svg"
                     alt="Настройки звонков"
+                    class="no-select"
                   />
                 </div>
                 <div class="tabs__item" data-tab="numbers" aria-hidden="true">
                   <img
                     src="/delophone-landing/assets/numbers-f91a90e3.svg"
                     alt="Номера телефонов"
+                    class="no-select"
                   />
                 </div>
               </div>
@@ -2621,6 +2666,7 @@
                         alt="Журнал звонков"
                         width="250px"
                         height="272px"
+                        class="no-select"
                       />
                     </figure>
                   </div>
@@ -2637,6 +2683,7 @@
                         alt="Журнал звонков"
                         width="250px"
                         height="272px"
+                        class="no-select"
                       />
                     </figure>
                   </div>
@@ -2653,6 +2700,7 @@
                         alt="Журнал звонков"
                         width="250px"
                         height="272px"
+                        class="no-select"
                       />
                     </figure>
                   </div>
@@ -3071,7 +3119,7 @@
                     <div
                       class="calculator__multiplier"
                       data-price="3190"
-                      data-monthly-price="3190"
+                      data-monthly-price="0"
                     >
                       <button class="calculator__decrement">-</button>
                       <input
@@ -3290,6 +3338,7 @@
                     <img
                       alt="Кейс Спутник"
                       src="/delophone-landing/assets/sputnik-98dddb37.svg"
+                      class="no-select"
                     />
                     <figcaption class="cases__caption">
                       <span class="cases__chip"> 8 сотрудников </span>
@@ -3318,7 +3367,7 @@
                 <article class="card cases__card">
                   <figure class="cases__logo">
                     <img
-                      alt="Кейс Гудселлер"
+                      alt="Гудселлер"
                       src="/delophone-landing/assets/goodseller-53ff0361.svg"
                     />
                     <figcaption class="cases__caption">
@@ -3596,7 +3645,6 @@
               <div class="text_regular startuse__text">
                 Получите доступ ко всем возможностям виртуальной АТС
               </div>
-
               <ul class="list">
                 <li class="list-item list-item_checked text_small">
                   Без навязчивых звонков после регистрации
@@ -3619,10 +3667,18 @@
               </button>
             </div>
             <div class="startuse__image">
-              <img alt="Шаги для использования" src="/delophone-landing/stepuse.svg" />
+              <img
+                alt="Шаги для использования"
+                src="/delophone-landing/stepuse.svg"
+                class="no-select"
+              />
             </div>
             <div class="startuse__image_mobile">
-              <img alt="Шаги для использования" src="/delophone-landing/stepsuse.mobile.svg" />
+              <img
+                alt="Шаги для использования"
+                src="/delophone-landing/stepsuse.mobile.svg"
+                class="no-select"
+              />
             </div>
             <button
               type="button"
@@ -3718,7 +3774,6 @@
                 Могу ли я прослушивать записи разговоров?
                 <div class="collapse__arrow"></div>
               </h4>
-
               <div class="faq__answer collapse__content">
                 <p class="faq__paragraph">
                   Да, в личном кабинете доступны записи разговоров всех входящих
@@ -3779,6 +3834,7 @@
               src="/delophone-landing/assets/qr-060073d4.svg"
               width="180px"
               height="180x"
+              class="no-select"
             />
           </figure>
           <figcaption class="whatsapp__caption text_caption">
@@ -3889,18 +3945,21 @@
               <li>
                 <a
                   href="#calculator"
-                  class="link link_white"
+                  class="link link_white menu-link"
                   aria-label="Стоимость"
                   >Стоимость</a
                 >
               </li>
               <li>
-                <a href="#phone-business" class="link link_white"
+                <a href="#phone-business" class="link link_white menu-link"
                   >Возможности</a
                 >
               </li>
               <li>
-                <a href="#steps" class="link link_white" aria-label="Стоимость"
+                <a
+                  href="#steps"
+                  class="link link_white menu-link"
+                  aria-label="Стоимость"
                   >Как подключить</a
                 >
               </li>
@@ -3938,6 +3997,7 @@
           </button>
         </div>
       </div>
+
       <div class="footer__divider"></div>
       <div class="container">
         <div class="footer-contacts">
