@@ -5,14 +5,18 @@
   &__content {
     user-select: none;
     cursor: default;
-
     max-height: 0;
     overflow: hidden;
+    display: none;
     transition: max-height $collapse-transition;
 
     &_visible {
+      display: block;
+    }
+
+    &_active {
+      overflow: visible;
       max-height: 450px;
-      user-select: all;
     }
   }
 
@@ -20,7 +24,7 @@
     cursor: pointer;
     user-select: none;
     box-sizing: border-box;
-    max-height: 112px;
+    max-height: 112px !important;
     display: flex;
     align-items: flex-start;
 

@@ -28,9 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
       animated = true;
       window.setTimeout(() => (animated = false), 200);
       content.classList.toggle('collapse__content_visible');
+
       if (arrow) {
         arrow.classList.toggle('collapse__arrow_active');
       }
+
+      requestAnimationFrame(() => {
+        content.classList.toggle('collapse__content_active');
+      });
 
       window.setTimeout(() => {
         if (

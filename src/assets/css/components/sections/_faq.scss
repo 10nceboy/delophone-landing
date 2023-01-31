@@ -59,16 +59,31 @@
   }
 
   &__answer {
-    p {
-      margin-top: $spacer * 2;
-    }
-
+    margin-top: $spacer * 2;
     @include font(400, 14px, $gray);
     line-height: 21px;
 
-    @include laptop {
+    @include tablet {
       @include font(400, 16px, $gray);
+      margin-top: $spacer * 4;
       line-height: 24.8px;
+    }
+  }
+
+  &__paragraph {
+    margin-top: $spacer * 2;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__list {
+    list-style: decimal outside;
+    margin: $spacer * 2 0px 0px $spacer * 2;
+
+    @include tablet {
+      margin-left: 20px;
     }
   }
 }
