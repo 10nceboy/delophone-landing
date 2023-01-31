@@ -24,7 +24,6 @@
     @include tablet {
       margin-top: $spacer * 5;
       border: 1px solid $dim-gray;
-
       padding: $spacer * 6;
       @include flex-col;
       border-bottom: none;
@@ -105,6 +104,10 @@
       .calculator__price {
         &::before {
           min-width: 538px;
+
+          @include tablet {
+            min-width: unset;
+          }
         }
       }
     }
@@ -138,9 +141,17 @@
 
       h4 {
         min-width: 142px;
+
+        @include smartphone {
+          min-width: none;
+        }
       }
 
-      @include tablet {
+      @include smartphone {
+        min-width: 50%;
+      }
+
+      @include laptop {
         margin-right: $spacer * 4;
         min-width: 365px;
         max-width: 365px;
@@ -164,7 +175,14 @@
 
     &_auto-width {
       margin-right: 0;
-      max-width: 250px;
+      min-width: 250px;
+      width: 100%;
+      flex-grow: 1;
+
+      @include smartphone {
+        max-width: 100%;
+        width: 100%;
+      }
 
       @include tablet {
         max-width: 100%;
@@ -175,6 +193,10 @@
     &_right {
       @include flex-col;
       position: relative;
+
+      @include smartphone {
+        max-width: 50%;
+      }
 
       @include tablet {
         @include flex-row;
@@ -255,6 +277,7 @@
 
       @include tablet {
         display: block;
+        min-width: 77px;
       }
 
       content: '';
@@ -305,6 +328,11 @@
     color: $gray;
     display: inline;
 
+    @include smartphone {
+      font-size: 16px;
+      white-space: nowrap;
+    }
+
     @include tablet {
       font-size: 20px;
       white-space: nowrap;
@@ -325,6 +353,8 @@
       appearance: none;
       margin: 0;
     }
+
+    font-size: 20px;
   }
 
   &__increment,

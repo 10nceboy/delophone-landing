@@ -69,7 +69,6 @@
     @include smartphone {
       display: flex;
       width: calc(100vw - 80px);
-      width: 100%;
 
       li {
         margin-right: 5px;
@@ -140,7 +139,7 @@
     }
 
     @include desktop {
-      width: 285px;
+      width: 280px;
       height: 183px;
       padding: 20px;
     }
@@ -196,15 +195,18 @@
       column-gap: 0;
       row-gap: $spacer * 2;
       white-space: nowrap;
+      width: 100%;
     }
 
     @include tablet {
-      grid-template-columns: 160px 160px;
+      grid-template-columns: min(50%, 160px) min(50%, 160px);
+      grid-template-rows: 25px 25px;
     }
 
     @include laptop {
-      grid-template-columns: min(50%, 160px) min(50%, 160px);
-      grid-template-rows: 25px 25px;
+      width: unset;
+      grid-template-columns: 160px 160px;
+      column-gap: $spacer * 7;
     }
   }
 
