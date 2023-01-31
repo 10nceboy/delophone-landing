@@ -23,8 +23,9 @@ $spacer: 5px;
 $btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
   border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 $opacity-transition: opacity 0.3s ease-in-out;
-$collapse-transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-$collapse-transition-height: max-height $collapse-transition;
+$collapse-transition: ease-in-out 0.3s, opacity ease-in-out 0.3s;
+$collapse-transition-height: max-height ease-in-out 0.3s,
+  opacity ease-in-out 0.3s;
 
 $dropdown-transition: 0.15s ease-in;
 $link-transition: color 0.3s ease;

@@ -6,13 +6,8 @@
   transition: $btn-transition;
   padding: $spacer * 3 $spacer * 6;
   white-space: nowrap;
-  box-shadow: none;
-  outline: none;
   box-sizing: border-box;
   max-height: 55px;
-
- 
-
   cursor: pointer;
 
   &_outlined {

@@ -108,10 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.calculator__multiplier').forEach((multiplier) => {
     const input = multiplier.querySelector('.calculator__input');
-    input?.setAttribute('maxlength', 2);
     const price = multiplier.dataset.price;
     const monthlyPrice = multiplier.dataset.monthlyPrice;
-
     const handleInputChange = () => {
       onChangeDebounced(input, price, monthlyPrice);
     };
@@ -123,9 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
       .querySelector('.calculator__decrement')
       .addEventListener('click', () => decrement(input));
 
-    input.addEventListener('focus', () => {
-      const inputValue = getInputValue(input);
-      input.prevValue = inputValue;
+    input.addEventListener('focus', (event) => {
+      event.preventDefault();
     });
 
     input.addEventListener('blur', () => {
@@ -164,12 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     input.addEventListener('keydown', (event) => {
-      if (event.target.value?.length === 3) {
-        event.preventDefault();
-      }
-      if (allowedKeys.includes(event.key)) {
-        return true;
-      }
       event.preventDefault();
     });
 

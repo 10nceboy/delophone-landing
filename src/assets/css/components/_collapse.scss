@@ -8,7 +8,7 @@
     max-height: 0;
     overflow: hidden;
     display: none;
-    transition: max-height $collapse-transition;
+    transition: $collapse-transition-height;
 
     &_visible {
       display: block;

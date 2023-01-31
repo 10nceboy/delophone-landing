@@ -54,14 +54,6 @@
   @include flex-center;
 }
 
-.background_gray {
-  background-color: $light-gray;
-
-  @include laptop {
-    height: 65px;
-  }
-}
-
 .container_adaptive {
   @include flex-col;
   justify-content: center;
@@ -79,16 +71,3 @@
   }
 }
 
-.mobile-hidden {
-  display: none !important;
-
-  @include laptop {
-    display: flex !important;
-  }
-}
-
-.mobile-only {
-  @include laptop {
-    display: none;
-  }
-}

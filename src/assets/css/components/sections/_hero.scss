@@ -167,6 +167,15 @@
       width: 348px;
       height: 55px;
     }
+
+    &_hidden {
+      display: none;
+    }
+
+    &_visible {
+      display: none;
+      opacity: 1;
+    }
   }
 
   &__card-container {

@@ -67,6 +67,8 @@
     display: flex;
   }
 
+  transition: $link-transition;
+
   &:hover {
     color: $blue;
 

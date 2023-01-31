@@ -22,7 +22,7 @@
 
     &::after {
       display: none;
-      transition: $dropdown-transition;
+      transition: transform $dropdown-transition;
       display: none;
 
       @include laptop {
@@ -46,6 +46,7 @@
 
   &__button {
     transition: $link-transition;
+
     @include font(400, 16px, $black);
     cursor: pointer;
     background: transparent;
@@ -58,6 +59,7 @@
 
     &::after {
       content: url('/arrow-down.svg');
+      transition: transform $dropdown-transition;
 
       @include laptop {
         transform: scale(1);
@@ -174,7 +176,7 @@
       }
 
       &__menu {
-        transition: $dropdown-transition;
+        transition: transform $dropdown-transition;
         display: block;
         position: relative;
         z-index: 0;

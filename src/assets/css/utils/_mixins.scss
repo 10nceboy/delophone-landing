@@ -24,6 +24,21 @@ $family: 'Manrope';
   justify-content: center;
 }
 
+@mixin center {
+  @include flex-row;
+  justify-content: center;
+}
+
+@mixin fullscreen() {
+  height: 100%;
+  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
 /*breakpoints*/
 @mixin desktop {
   @media screen and (min-width: 1400px) {
@@ -56,12 +71,12 @@ $family: 'Manrope';
 }
 
 /*fonts*/
-
 @mixin font($weight, $size, $color, $fam: $family) {
   font: $weight $size $fam;
   color: $color;
 }
 
+/*etc */
 @mixin hidden {
   height: 0;
   opacity: 0;
@@ -72,19 +87,4 @@ $family: 'Manrope';
   height: auto;
   opacity: 1;
   transition: $transition;
-}
-
-@mixin center {
-  @include flex-row;
-  justify-content: center;
-}
-
-@mixin fullscreen() {
-  height: 100%;
-  width: 100%;
-  min-width: 100vw;
-  min-height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
 }

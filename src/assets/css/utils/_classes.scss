@@ -1,0 +1,27 @@
+.mobile-hidden {
+  display: none !important;
+
+  @include laptop {
+    display: flex !important;
+  }
+}
+
+.mobile-only {
+  @include laptop {
+    display: none;
+  }
+}
+
+.background_gray {
+  background-color: $light-gray;
+
+  @include laptop {
+    height: 65px;
+  }
+}
+
+.no-select {
+  pointer-events: none;
+  user-select: none;
+}
+

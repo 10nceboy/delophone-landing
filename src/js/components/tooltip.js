@@ -72,12 +72,16 @@ tooltips.forEach((item) => {
       tooltipContent.classList.add('tooltip__inner_active');
     });
 
-    activator.addEventListener('mouseleave', (event) => {
+    const hideTooltip = (event) => {
+      debugger;
       const tooltipContent =
         event.target?.parentNode?.querySelector('.tooltip__inner');
-      tooltipContent.classList.remove('tooltip__inner_active');
+      tooltipContent?.classList.remove('tooltip__inner_active');
       tooltipContent?.classList.remove('tooltip__inner_visible');
-    });
+    };
+
+    activator.addEventListener('mouseleave', hideTooltip);
+    activator.addEventListener('click', hideTooltip);
   });
 
   item.addEventListener('click', (event) => {
