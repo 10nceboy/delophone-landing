@@ -223,6 +223,7 @@
 
 .header__dropdown {
   display: none;
+
   @include laptop {
     order: 1;
     display: block;
@@ -241,20 +242,10 @@
     }
   }
 
-  &__menu {
+  .dropdown__menu {
+    left: 0;
     @include laptop {
-      margin-left: 0;
-      height: 65px;
-
-      li {
-        &:hover {
-          color: $light-blue;
-
-          &.header_dropdown {
-            background-color: $light-gray;
-          }
-        }
-      }
+      left: -10px;
     }
   }
 }

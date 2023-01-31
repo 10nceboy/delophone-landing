@@ -87,6 +87,12 @@
           display: none;
         }
       }
+
+      .dropdown__menu {
+        @include mobile {
+          background: transparent;
+        }
+      }
     }
 
     &__menu {

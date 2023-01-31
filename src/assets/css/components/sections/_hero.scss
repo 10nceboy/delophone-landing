@@ -3,12 +3,6 @@
   margin-top: $spacer * 10;
   max-width: 100%;
 
-  h1 {
-    @include laptop {
-      margin-top: 100px;
-    }
-  }
-
   @include desktop {
     width: 100%;
   }
