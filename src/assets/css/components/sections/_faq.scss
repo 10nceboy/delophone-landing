@@ -21,22 +21,24 @@
   }
 
   &__card {
-    margin-bottom: $spacer * 3;
+    margin-bottom: calc($spacer * 3 - 1px);
     padding: $spacer * 4;
     box-sizing: border-box;
     background: $white;
     border-radius: $border-radius-xl;
+    border: 1px solid transparent;
+    transition: border 0.3s ease;
+
+    @include laptop {
+      padding: $spacer * 10;
+    }
 
     &:hover {
-      outline: 1px $blue solid;
+      border-color: $blue;
     }
 
     :last-child {
       margin-bottom: 0;
-    }
-
-    @include laptop {
-      padding: $spacer * 10;
     }
   }
 

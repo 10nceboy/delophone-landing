@@ -63,14 +63,16 @@
 
     &__dropdown {
       margin-left: -$spacer;
+      display: block;
+
+      @include tablet {
+        display: none;
+      }
 
       @include laptop {
         white-space: nowrap;
         margin-left: -$spacer * 6;
-      }
-
-      @include tablet {
-        display: none;
+        display: block;
       }
 
       &_tablet {

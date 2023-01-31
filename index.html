@@ -2698,7 +2698,7 @@
           </div>
         </div>
       </section>
-      <div class="container"><div class="arc__calc"></div></div>
+      <div class="container mobile-hidden"><div class="arc__calc"></div></div>
 
       <section class="steps steps__calculator" id="calculator">
         <div class="container calculator">
@@ -2796,7 +2796,7 @@
                       <button class="calculator__increment">+</button>
                     </div>
                     <h4 class="calculator__price calculator__price_disabled">
-                      <span class="calculator__price-fixed">Не выбрано </span>
+                      <span class="calculator__price-fixed">Не выбрано</span>
                     </h4>
                   </div>
                 </div>
@@ -2814,6 +2814,7 @@
                       <span
                         >Городские&nbsp;без абонплаты(<span
                           class="dropdown dropdown_inline"
+                          data-dropdown="calc-city"
                           >список</span
                         >)</span
                       >
@@ -2838,12 +2839,52 @@
                     </h4>
                   </div>
                 </div>
+                <div class="dropdown__content" data-dropdown="calc-city">
+                  <button class="button button_no-border dropdown__close">
+                    <svg
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12.5" cy="12.5" r="12" stroke="#2B8FEB" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.38189 8.67404C9.18662 8.47878 8.87004 8.47878 8.67478 8.67404C8.47952 8.8693 8.47952 9.18588 8.67478 9.38114L11.7939 12.5003L8.67477 15.6195C8.47951 15.8147 8.47951 16.1313 8.67477 16.3266C8.87003 16.5218 9.18662 16.5218 9.38188 16.3266L12.501 13.2074L15.6199 16.3263C15.8152 16.5215 16.1318 16.5215 16.327 16.3263C16.5223 16.131 16.5223 15.8144 16.327 15.6192L13.2081 12.5003L16.327 9.38143C16.5223 9.18617 16.5223 8.86959 16.327 8.67432C16.1318 8.47906 15.8152 8.47906 15.6199 8.67432L12.501 11.7932L9.38189 8.67404Z"
+                        fill="#2B8FEB"
+                      />
+                    </svg>
+                  </button>
+                  <div class="dropdown__inner">
+                    <ul class="list list_markers list_grid-4x4">
+                      <li>Москва</li>
+                      <li>Санкт-Петербург</li>
+                      <li>Краснодар</li>
+                      <li>Ростов-на-Дону</li>
+                      <li>Екатеринбург</li>
+                      <li>Сысерть</li>
+                      <li>Елабуга</li>
+                      <li>Ставрополь</li>
+                      <li>Владикавказ</li>
+                      <li>Владивосток</li>
+                      <li>Владибург</li>
+                      <li>Владиград</li>
+                      <li>Владикавказ</li>
+                      <li>Владивосток</li>
+                      <li>Владибург</li>
+                      <li>Владиград</li>
+                    </ul>
+                  </div>
+                </div>
                 <div class="calculator__row calculator__row_flex-start">
                   <div class="calculator__col calculator__col_left">
                     <div class="calculator__dropdown">
                       <span
                         >Городские c абонплатой&nbsp;(<span
                           class="dropdown dropdown_inline"
+                          data-dropdown="calc-city-abon"
                           >список</span
                         >)</span
                       >
@@ -2865,7 +2906,7 @@
                       <button class="calculator__increment">+</button>
                     </div>
                     <h4 class="calculator__price calculator__price_disabled">
-                      <span class="calculator__price-fixed">Не выбрано </span>
+                      <span class="calculator__price-fixed">Не выбрано</span>
                       <span class="calculator__price-per-month"></span>
                       <span
                         class="tooltip"
@@ -2874,6 +2915,46 @@
                       >
                       </span>
                     </h4>
+                  </div>
+                </div>
+
+                <div class="dropdown__content" data-dropdown="calc-city-abon">
+                  <button class="button button_no-border dropdown__close">
+                    <svg
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12.5" cy="12.5" r="12" stroke="#2B8FEB" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.38189 8.67404C9.18662 8.47878 8.87004 8.47878 8.67478 8.67404C8.47952 8.8693 8.47952 9.18588 8.67478 9.38114L11.7939 12.5003L8.67477 15.6195C8.47951 15.8147 8.47951 16.1313 8.67477 16.3266C8.87003 16.5218 9.18662 16.5218 9.38188 16.3266L12.501 13.2074L15.6199 16.3263C15.8152 16.5215 16.1318 16.5215 16.327 16.3263C16.5223 16.131 16.5223 15.8144 16.327 15.6192L13.2081 12.5003L16.327 9.38143C16.5223 9.18617 16.5223 8.86959 16.327 8.67432C16.1318 8.47906 15.8152 8.47906 15.6199 8.67432L12.501 11.7932L9.38189 8.67404Z"
+                        fill="#2B8FEB"
+                      />
+                    </svg>
+                  </button>
+                  <div class="dropdown__inner">
+                    <ul class="list list_markers list_grid-4x4">
+                      <li>Москва</li>
+                      <li>Санкт-Петербург</li>
+                      <li>Краснодар</li>
+                      <li>Ростов-на-Дону</li>
+                      <li>Екатеринбург</li>
+                      <li>Сысерть</li>
+                      <li>Елабуга</li>
+                      <li>Ставрополь</li>
+                      <li>Владикавказ</li>
+                      <li>Владивосток</li>
+                      <li>Владибург</li>
+                      <li>Владиград</li>
+                      <li>Владикавказ</li>
+                      <li>Владивосток</li>
+                      <li>Владибург</li>
+                      <li>Владиград</li>
+                    </ul>
                   </div>
                 </div>
 
@@ -2896,7 +2977,7 @@
                       <button class="calculator__increment">+</button>
                     </div>
                     <h4 class="calculator__price calculator__price_disabled">
-                      <span class="calculator__price-fixed">Не выбрано </span>
+                      <span class="calculator__price-fixed">Не выбрано</span>
                       <span class="calculator__price-per-month"></span>
                       <span
                         class="tooltip"
@@ -2926,7 +3007,7 @@
                       <button class="calculator__increment">+</button>
                     </div>
                     <h4 class="calculator__price calculator__price_disabled">
-                      <span class="calculator__price-fixed">Не выбрано </span>
+                      <span class="calculator__price-fixed">Не выбрано</span>
                       <span class="calculator__price-per-month"></span>
                       <span
                         class="tooltip"
@@ -3710,7 +3791,7 @@
       <div class="container">
         <div class="footer-upside">
           <div class="footer-upside__logo" aria-label="Логотип">
-            <a href="/">
+            <a href="/" aria-label="logo">
               <svg
                 width="172"
                 height="32"

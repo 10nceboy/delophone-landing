@@ -1,5 +1,6 @@
 .whatsapp {
   &__button {
+    display: none;
     position: fixed;
     @include center;
     background-color: $green;
@@ -9,7 +10,7 @@
     border-radius: 50%;
     box-shadow: $wa-shadow;
     bottom: 20px;
-    right: 5px;
+    right: 20px;
 
     height: 40px;
     width: 40px;
