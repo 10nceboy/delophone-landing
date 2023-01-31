@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import '../utils/vars';
-@import '../utils/mixins';
-
-$family: 'Manrope';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@100;200;300;400;500;600;700;800;900&display=block');
 
 body {
   font-family: $family;
@@ -13,7 +9,7 @@ h1 {
   line-height: 30px;
 
   @include tablet {
-    @include font(600, 32px, $black);
+    @include font(600, 36px, $black);
     line-height: 50px;
   }
 }
