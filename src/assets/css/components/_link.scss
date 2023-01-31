@@ -24,4 +24,9 @@
   &_bottom {
     margin-top: auto;
   }
+
+  &_underlined {
+    text-decoration: underline;
+    text-decoration-skip: skip;
+  }
 }
