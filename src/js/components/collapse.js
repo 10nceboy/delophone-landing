@@ -1,4 +1,4 @@
-import { scrollToElement, isInViewport } from '../utils/dom';
+import { scrollToElement, isInViewport, itemTransition } from '../utils/dom';
 
 const renderArrow = (collapse) => {
   const arrow = collapse.querySelector('.collapse__arrow');
@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   collapsibles.forEach((collapse) => {
     let animated = false;
     const arrow = renderArrow(collapse);
+    let state = false;
     const content = collapse.querySelector('.collapse__content');
     collapse.addEventListener('click', () => {
       if (animated || scrolling) {
@@ -27,21 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       animated = true;
       window.setTimeout(() => (animated = false), 200);
-      content.classList.toggle('collapse__content_visible');
 
       if (arrow) {
         arrow.classList.toggle('collapse__arrow_active');
       }
 
-      requestAnimationFrame(() => {
-        content.classList.toggle('collapse__content_active');
-      });
+      state = !state;
+      itemTransition(content, 'collapse__content', state);
 
       window.setTimeout(() => {
-        if (
-          content.classList.contains('collapse__content_visible') &&
-          !isInViewport(content)
-        ) {
+        if (state && !isInViewport(content)) {
           scrolling = true;
           scrollToElement(collapse);
           window.setTimeout(() => (scrolling = false), 300);

@@ -2,7 +2,6 @@ import Swiper, { Navigation } from 'swiper';
 
 document.addEventListener('DOMContentLoaded', async () => {
   await import('swiper/css/bundle');
-
   const swiper = new Swiper('.swiper', {
     modules: [Navigation],
     speed: 500,

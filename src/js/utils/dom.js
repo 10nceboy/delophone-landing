@@ -63,10 +63,12 @@ export const itemTransition = (
   visibleClass = '_visible'
 ) => {
   if (state) {
-    el.classlist.add(`${className}_active`);
-    requestAnimationFrame(() => el.classlist.add(`${className}_visible`));
+    el?.classList.add(`${className}${visibleClass}`);
+    requestAnimationFrame(() => el.classList.add(`${className}${activeClass}`));
   } else {
-    el.classlist.remove(`${className}${}`);
-    el.classlist.remove(`${className}_visible`);
+    el?.classList.remove(`${className}${visibleClass}`);
+    requestAnimationFrame(() => {
+      el.classList.remove(`${className}${activeClass}`);
+    });
   }
 };
