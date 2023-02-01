@@ -130,7 +130,7 @@
               </svg>
             </button>
           </div>
-          <button class="button login header__login">
+          <button type="button" class="header__login button login">
             <svg
               class="login__icon"
               width="25"
@@ -1156,12 +1156,10 @@
       <section class="features" id="features">
         <div class="container">
           <section class="features__block">
-            <div class="features__header text_bold">
+            <div class="features__header">
               <h3>
                 Контроль и порядок
-                <strong class="features__accent text_bold"
-                  >для руководителя</strong
-                >
+                <strong class="features__accent">для руководителя</strong>
               </h3>
               <ul class="features__checklist">
                 <li
@@ -1343,12 +1341,10 @@
             </div>
           </section>
           <section class="features__block">
-            <div class="features__header text_bold">
+            <div class="features__header">
               <h3>
                 Удобство и&nbsp; автоматизация
-                <strong class="features__accent text_bold"
-                  >для сотрудников</strong
-                >
+                <strong class="features__accent">для сотрудников</strong>
               </h3>
               <ul class="features__checklist">
                 <li
@@ -1636,12 +1632,10 @@
             </div>
           </section>
           <section class="features__block">
-            <div class="features__header text_bold">
+            <div class="features__header">
               <h3>
                 Качество сервиса и скорость реакции
-                <strong class="text_orange text_bold">
-                  &nbsp;для&nbsp;клиентов</strong
-                >
+                <strong class="text_orange"> &nbsp;для&nbsp;клиентов</strong>
               </h3>
               <ul class="features__checklist">
                 <li
@@ -1937,7 +1931,9 @@
             </h2>
           </div>
           <section class="multichannel">
-            <div class="card card_white card_rounded-top multichannel__upside">
+            <div
+              class="card card_white card_rounded-top card_wide multichannel__upside"
+            >
               <div class="multichannel__content">
                 <div class="step-upside__header multichannel__header">
                   <div class="step-upside__header-image">
@@ -2031,9 +2027,7 @@
               <button class="button button_blue multichannel__button-up_mobile">
                 Выбрать номер телефона
               </button>
-              <div
-                class="text_caption multichannel__buttonblock-text mobile-only"
-              >
+              <div class="text_caption multichannel__buttonblock-text_mobile">
                 Номера сохраняются за вами, если <br />
                 вы совершаете хотя бы 1 звонок в год
               </div>
@@ -2063,7 +2057,7 @@
         <section class="addemploye" id="addemploye">
           <div class="container">
             <div
-              class="card card_white card_rounded-top multichannel__upside addemploye__content"
+              class="card card_white card_rounded-top card_wide addemploye__content"
             >
               <div class="multichannel__content">
                 <div class="step-upside__header multichannel__header">
@@ -2143,7 +2137,7 @@
                 />
               </div>
               <div
-                class="card card_light-gray card_rectangle text_caption addemploye__card_mobile"
+                class="card card_light-gray card_rectangle text_caption addemploye__chip_mobile"
               >
                 3 сотрудника уже в стартовом пакете. Далее 990 ₽ за сотрудника
                 разово.
@@ -2157,7 +2151,7 @@
         <div class="container">
           <section class="connection-methods" id="connection-methods">
             <div
-              class="card card_white card_rectangle multichannel__upside connection-methods__main"
+              class="card card_white card_rectangle card_wide connection-methods__main"
             >
               <div class="connection-methods" id="connection-methods">
                 <div class="step-upside__header multichannel__header">
@@ -2700,9 +2694,7 @@
                       <img
                         src="./src/assets/images/sections/lk/journal-mobile.svg"
                         alt="Журнал звонков"
-                        width="250px"
-                        height="272px"
-                        class="no-select"
+                        class="no-select lk__image"
                       />
                     </figure>
                   </div>
@@ -2717,9 +2709,7 @@
                       <img
                         src="./src/assets/images/sections/lk/settings-mobile.svg"
                         alt="Журнал звонков"
-                        width="250px"
-                        height="272px"
-                        class="no-select"
+                        class="no-select lk__image"
                       />
                     </figure>
                   </div>
@@ -2734,9 +2724,7 @@
                       <img
                         src="./src/assets/images/sections/lk/numbers-mobile.svg"
                         alt="Журнал звонков"
-                        width="250px"
-                        height="272px"
-                        class="no-select"
+                        class="no-select lk__image"
                       />
                     </figure>
                   </div>
@@ -4030,7 +4018,10 @@
             </ul>
           </nav>
           <div class="footer-upside__login">
-            <button class="login login_white">
+            <button
+              type="button"
+              class="login login_white buuton__login-button"
+            >
               <svg
                 class="login__icon"
                 width="25"

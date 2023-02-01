@@ -1,6 +1,6 @@
 .footer {
   background: $black;
-  padding: $spacer * 6 0;
+  padding: 30px 15px 60px 15px;
 
   @include desktop {
     padding: $spacer * 9 0 $spacer * 7;
@@ -30,6 +30,11 @@
     &__logo {
       margin-bottom: $spacer * 3;
       margin-top: -30px;
+      max-width: 200px;
+
+      @include smartphone {
+        max-width: none;
+      }
 
       @include laptop {
         margin-bottom: 0px;
@@ -156,6 +161,7 @@
     border-radius: $border-radius-xs;
     margin-top: $spacer * 6;
     line-height: 21px;
+    padding: 20px;
 
     @include laptop {
       border-radius: 0;
@@ -214,17 +220,19 @@
     &__phone {
       margin-top: $spacer * 2;
       margin-bottom: $spacer * 2;
+      margin-left: auto;
 
       @include laptop {
         margin-top: 0;
         margin-bottom: 0;
+        margin-left: 0px;
       }
     }
   }
 
   .footer-case {
     margin-top: $spacer * 4;
-    text-align: right;
+    text-align: center;
     font-size: 12px;
     margin-right: 15px;
   }

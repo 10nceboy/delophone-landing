@@ -8,6 +8,11 @@ h1 {
   @include font(600, 22px, $black);
   line-height: 30px;
 
+  @include smartphone {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
   @include tablet {
     @include font(600, 36px, $black);
     line-height: 50px;
@@ -17,6 +22,10 @@ h1 {
 h2 {
   @include font(600, 20px, $black);
   line-height: 26px;
+
+  @include smartphone {
+    font-size: 24px;
+  }
 
   @include tablet {
     @include font(600, 32px, $black);
@@ -148,17 +157,5 @@ h5 {
 
   @include laptop {
     display: block;
-  }
-}
-
-.text_bold {
-  @include laptop {
-    h3 {
-      font-weight: 700;
-    }
-
-    strong {
-      font-weight: 700;
-    }
   }
 }

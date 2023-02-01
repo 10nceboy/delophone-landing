@@ -7,27 +7,6 @@
     margin-bottom: $spacer * 16;
   }
 
-  &__card {
-    display: none;
-
-    @include tablet {
-      padding: $spacer * 4 $spacer * 6;
-      margin-top: 35px;
-      text-align: center;
-      display: block;
-    }
-  }
-
-  &__card_mobile {
-    display: block;
-    text-align: center;
-    padding: $spacer * 3;
-
-    @include tablet {
-      display: none;
-    }
-  }
-
   &__image {
     display: none;
 
@@ -69,10 +48,22 @@
   }
 
   &__chip {
+    display: none;
+
     @include tablet {
       margin-top: 35px;
       max-width: 573px;
       padding: $spacer * 4 $spacer * 6;
+    }
+  }
+
+  &__chip_mobile {
+    display: block;
+    text-align: center;
+    padding: $spacer * 3;
+
+    @include tablet {
+      display: none;
     }
   }
 }
@@ -83,12 +74,12 @@
   position: relative;
   display: none;
 
-  @include tablet {
+  @include smartphone {
     display: block;
   }
 
   &::before {
-    @include laptop {
+    @include smartphone {
       position: absolute;
       content: url('/arc-step-2.svg');
       top: -105px;
@@ -99,6 +90,8 @@
   }
 
   &_reversed {
+    transform: scale(-1, 1);
+
     @include laptop {
       transform: scale(-1, 1);
       top: 81px;
@@ -109,6 +102,8 @@
         @include tablet {
           display: block;
         }
+      }
+      @include smartphone {
       }
     }
   }

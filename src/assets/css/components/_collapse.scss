@@ -15,8 +15,10 @@
     }
 
     &_active {
+      opacity: 1;
       overflow: visible;
-      max-height: 450px;
+      max-height: 1000px;
+      display: block;
     }
   }
 

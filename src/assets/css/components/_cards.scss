@@ -22,6 +22,20 @@
     }
   }
 
+  &_wide {
+    @include flex-col;
+    padding: $spacer * 4;
+    position: relative;
+    z-index: 2;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      padding: 8px $spacer * 10;
+      align-items: initial;
+    }
+  }
+
   &_white {
     background-color: $white;
 

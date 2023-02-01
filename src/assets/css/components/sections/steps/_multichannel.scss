@@ -25,11 +25,13 @@
   &__image_mobile {
     display: block;
     align-self: center;
-    height: 320px;
 
-    svg {
-      width: 320px;
+    img {
+      width: 290px;
       height: 320px;
+      @include smartphone {
+        width: 320px;
+      }
     }
 
     @include laptop {
@@ -66,18 +68,6 @@
   }
 
   &__upside {
-    @include flex-col;
-    padding: $spacer * 4;
-    position: relative;
-    z-index: 2;
-
-    @include tablet {
-      display: flex;
-      flex-direction: row;
-      padding: 8px $spacer * 10;
-      align-items: initial;
-    }
-
     img {
       height: 350px;
     }
@@ -112,14 +102,32 @@
     }
 
     &-text {
+      display: none;
       margin-top: $spacer * 2;
+
       @include smartphone {
         align-self: center;
+      }
+
+      @include tablet {
+        display: block;
+        align-self: initial;
+        margin-top: 0px;
       }
 
       @include laptop {
         margin-top: 0px;
         align-self: initial;
+      }
+
+      &_mobile {
+        display: block;
+        align-self: center;
+        margin-top: 10px;
+
+        @include tablet {
+          display: none;
+        }
       }
     }
   }

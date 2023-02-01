@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         spaceBetween: 20
       }
     },
+    spaceBetween: 20,
     grabCursor: true,
     draggable: true,
     autoplay: 5000,
