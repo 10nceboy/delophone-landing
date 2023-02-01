@@ -39,7 +39,7 @@
 
   &__card {
     padding: $spacer * 4;
-    padding-top: $spacer * 5;
+
     margin: 0 0 $spacer * 3 0;
     height: 33.3%;
     width: 100%;
@@ -96,6 +96,7 @@
       min-height: 230px;
       max-height: 230px;
       min-width: 346px;
+      padding-top: $spacer * 5;
     }
 
     @include laptop {

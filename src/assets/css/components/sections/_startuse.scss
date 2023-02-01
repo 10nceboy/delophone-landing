@@ -70,12 +70,15 @@
         height: 518px;
       }
 
-      @include tablet {
+      @include smartphone {
+        width: 508px;
       }
     }
 
-    @include tablet {
+    @include smartphone {
       display: block;
+      align-self: center;
+      margin-top: 20px;
     }
   }
 
@@ -83,7 +86,7 @@
     display: block;
     margin: $spacer * 5 0;
 
-    @include tablet {
+    @include smartphone {
       display: none;
     }
   }

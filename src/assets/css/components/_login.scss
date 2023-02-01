@@ -44,7 +44,6 @@
   &__phone-number {
     @include font(400, 16px, $black);
     @include hidden;
-    margin-top: 3 * $spacer;
     display: none;
 
     @include laptop {

@@ -29,6 +29,13 @@ const renderActivator = (element) => {
 
 const tooltips = document.querySelectorAll('.tooltip');
 
+const hideTooltip = (event) => {
+  const tooltipContent =
+    event.target?.parentNode?.querySelector('.tooltip__inner');
+  tooltipContent?.classList.remove('tooltip__inner_active');
+  tooltipContent?.classList.remove('tooltip__inner_visible');
+};
+
 tooltips.forEach((item) => {
   let activator = item?.querySelector('.tooltip__activator');
   if (!activator) {
@@ -72,15 +79,12 @@ tooltips.forEach((item) => {
       tooltipContent.classList.add('tooltip__inner_active');
     });
 
-    const hideTooltip = (event) => {
-      const tooltipContent =
-        event.target?.parentNode?.querySelector('.tooltip__inner');
-      tooltipContent?.classList.remove('tooltip__inner_active');
-      tooltipContent?.classList.remove('tooltip__inner_visible');
-    };
-
     activator.addEventListener('mouseleave', hideTooltip);
-    activator.addEventListener('click', hideTooltip);
+    activator.addEventListener('click', () => {
+      if (event.currentTarget === activator) {
+        hideTooltip;
+      }
+    });
   });
 
   item.addEventListener('click', (event) => {

@@ -9,6 +9,7 @@
 
   &_grid-2x2 {
     @include flex-col;
+    row-gap: 0px;
 
     @include laptop {
       display: grid;

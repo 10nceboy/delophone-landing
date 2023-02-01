@@ -21,7 +21,7 @@
     />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630px" />
+    <meta property="og:image:height" content="630" />
 
     <meta
       property="og:description"
@@ -35,6 +35,22 @@
     <meta
       name="description"
       content="Настройте звонки в бизнесе: с красивым номером, многоканальной линией и распределением звонков по сотрудникам с любыми устройствами."
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="delofon.ru" />
+    <meta property="twitter:url" content="https://delofon.ru" />
+    <meta
+      name="twitter:title"
+      content="Делофон - Первая виртуальная АТС без абонентской платы"
+    />
+    <meta
+      name="twitter:description"
+      content="Делофон - Первая виртуальная АТС без абонентской платы. Настройте звонки в бизнесе: с красивым номером, многоканальной линией и распределением звонков по сотрудникам с любыми устройствами."
+    />
+    <meta
+      name="twitter:image"
+      content="https://10nceboy.github.io/delophone-landing/cover.png"
     />
 
     <link rel="stylesheet" href="./src/assets/css/index.scss" />
@@ -271,10 +287,7 @@
                   Начать бесплатно
                 </button>
                 <div class="hero__label text_regular">
-                  1 номер, 3 сотрудника, 100 ₽ на балансе
-                </div>
-                <div class="hero__label hero__label_hidden text_regular">
-                  '⚡ Сразу после регистрации';
+                  <span>1 номер, 3 сотрудника, 100 ₽ на балансе</span>
                 </div>
               </div>
             </div>
@@ -1972,9 +1985,15 @@
                     Мобильные номера
                   </li>
                   <li
-                    class="multichannel__list-item list-item list-item_checked"
+                    class="multichannel__list-item_hidden list-item list-item_checked mobile-hidden"
                   >
                     Бесплатные для клиентов 8-800
+                  </li>
+                  <li
+                    class="multichannel__list-item list-item list-item_checked mobile-only"
+                  >
+                    Бесплатные для клиентов <br clas="mobile-only" />
+                    8-800
                   </li>
                   <li
                     class="list-item list-item_checked multichannel__list-item"
@@ -2008,6 +2027,15 @@
                   src="multichannel-image.svg"
                   class="no-select"
                 />
+              </div>
+              <button class="button button_blue multichannel__button-up_mobile">
+                Выбрать номер телефона
+              </button>
+              <div
+                class="text_caption multichannel__buttonblock-text mobile-only"
+              >
+                Номера сохраняются за вами, если <br />
+                вы совершаете хотя бы 1 звонок в год
               </div>
             </div>
             <div
@@ -2129,7 +2157,7 @@
         <div class="container">
           <section class="connection-methods" id="connection-methods">
             <div
-              class="card card_white card_rounded-top multichannel__upside connection-methods__main"
+              class="card card_white card_rectangle multichannel__upside connection-methods__main"
             >
               <div class="connection-methods" id="connection-methods">
                 <div class="step-upside__header multichannel__header">
@@ -2873,7 +2901,7 @@
                   <div class="calculator__col calculator__col_left">
                     <div class="calculator__dropdown">
                       <span
-                        >Городские&nbsp;без абонплаты(<span
+                        >Городские&nbsp;без абонплаты (<span
                           class="dropdown dropdown_inline"
                           data-dropdown="calc-city"
                           >список</span
@@ -3118,8 +3146,8 @@
                     <p class="text_regular">IP-телефон Делофон</p>
                     <span
                       class="tooltip"
-                      data-tooltip="Некоторые номера мы подключаем через партнёров, за них мы вынуждены взымать абонентскую плату (190 ₽ / месяц).  
-                Абонплата за партнёрские номера и SIM-карты — единственные возможные ежемесячные платежи в Делофоне."
+                      data-tooltip="Обычный офисный стационарный телефон, но со всеми функциями телефонии Делофон.
+                      Не требует настройки, достаточно подключить к интернету, настроить в ЛК и можно звонить."
                     >
                     </span>
                   </div>
@@ -3148,8 +3176,7 @@
                     <p class="text_regular">SIM-карта (FMC)</p>
                     <span
                       class="tooltip"
-                      data-tooltip="Некоторые номера мы подключаем через партнёров, за них мы вынуждены взымать абонентскую плату (190 ₽ / месяц).  
-                  Абонплата за партнёрские номера и SIM-карты — единственные возможные ежемесячные платежи в Делофоне."
+                      data-tooltip="SIM-карта для телефона со всеми функциями телефонии Делофон."
                     >
                     </span>
                   </div>
@@ -3445,7 +3472,7 @@
                     </figcaption>
                   </figure>
                   <h4 class="cases__title">
-                    Все наши сотрудники тоже используют Делофон :)
+                    Все наши сотрудники тоже используют Делофон&nbsp;:)
                   </h4>
                   <div class="cases__content">
                     Мы сами используем Делофон в самых разных комбинациях
@@ -4064,7 +4091,7 @@
                 </a>
               </li>
               <li>
-                <a class="link link_white link_underlined" href="#"
+                <a class="link link_white link_underlined footer__docs" href="#"
                   >Документы</a
                 >
               </li>

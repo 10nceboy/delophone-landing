@@ -19,9 +19,8 @@
     }
 
     &__text {
-      @include font(400, n 15px, $gray);
+      @include font(400, 15px, $gray);
       line-height: 24px;
-      line-height: 31px;
 
       @include laptop {
         line-height: 31px;
@@ -141,12 +140,13 @@
     border: 1px solid $black;
     border-radius: 4px;
     align-items: center;
-    @include font(400, 16px, $orange);
+    @include font(400, 15px, $orange);
     padding: $spacer;
     flex: 1;
     min-height: 24px;
     max-height: 24px;
     margin-right: 6px;
+    padding: 5px;
     @include smartphone {
       margin-right: 12px;
     }

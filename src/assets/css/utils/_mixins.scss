@@ -70,6 +70,12 @@ $family: 'Manrope';
   }
 }
 
+@mixin mini {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
 /*fonts*/
 @mixin font($weight, $size, $color, $fam: $family) {
   font: $weight $size $fam;

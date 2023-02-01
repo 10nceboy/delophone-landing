@@ -23,13 +23,12 @@
     &::after {
       display: none;
       transition: transform $dropdown-transition;
-      display: none;
 
       @include laptop {
         content: url('/arrow-down.svg');
         display: inline-block;
         transform: translateY(3px);
-        margin: 2px 0;
+        margin: 2px 2px 2px 5px;
       }
     }
 
