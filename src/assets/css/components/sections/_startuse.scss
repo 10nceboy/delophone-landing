@@ -3,7 +3,7 @@
   margin-bottom: 80px;
 
   @include tablet {
-    padding-bottom: 150px;
+    padding-bottom: 80px;
     padding-top: 150px;
     margin-top: 0;
     margin-bottom: 0;
@@ -14,15 +14,16 @@
 
     @include tablet {
       @include flex-row;
+      align-items: flex-start;
     }
   }
 
   &__header {
     margin-bottom: $spacer * 4;
-  }
 
-  @include laptop {
-    margin-top: -50px;
+    @include laptop {
+      margin-top: -42px;
+    }
   }
 
   &__text {
@@ -84,6 +85,19 @@
 
     @include tablet {
       display: none;
+    }
+  }
+
+  &__list-item {
+    @include tablet {
+      margin: 10px 0px !important;
+      line-height: 24.8px !important;
+      &:last-child {
+        margin-bottom: 0px !important;
+      }
+      &:first-child {
+        margin-top: 0px !important;
+      }
     }
   }
 }

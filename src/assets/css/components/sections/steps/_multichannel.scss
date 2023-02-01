@@ -55,8 +55,12 @@
     @include tablet {
       display: flex;
       flex-direction: row;
-      padding: $spacer * 10;
+      padding: 8px $spacer * 10;
       align-items: initial;
+    }
+
+    img {
+      height: 350px;
     }
   }
 

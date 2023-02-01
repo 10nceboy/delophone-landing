@@ -10,12 +10,10 @@
 
     &:hover {
       svg {
-        circle {
-          fill: $orange;
-        }
+        fill: $orange;
 
         path {
-          stroke: $white;
+          fill: $white;
         }
       }
     }
