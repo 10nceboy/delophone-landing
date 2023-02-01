@@ -46,6 +46,9 @@
       @include laptop {
         height: auto;
       }
+      @include smartphone {
+        height: 111px;
+      }
     }
 
     @include tablet {
@@ -77,6 +80,9 @@
     @include font(500, 16px, $black);
     line-height: 21px;
     max-width: 210px;
+    @include smartphone {
+      max-width: 100%;
+    }
 
     @include laptop {
       max-width: 100%;

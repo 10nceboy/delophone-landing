@@ -147,6 +147,11 @@
 
         min-width: 142px;
 
+        @include laptop {
+          @include font(500, 20px, $black);
+          line-height: 26px;
+        }
+
         @include smartphone {
           min-width: none;
           font-size: auto;
@@ -175,6 +180,11 @@
           flex-grow: 1;
           margin-left: 20px;
           border-bottom: 1px dotted $gray2;
+        }
+      }
+      .text_regular {
+        @include tablet {
+          line-height: 31px;
         }
       }
     }
@@ -244,14 +254,22 @@
 
       .calculator__price-fixed {
         color: $gray;
+        @include tablet {
+          font-size: 20px;
+        }
       }
     }
 
     &_shifted {
       margin-right: -$spacer * 6;
+      font-size: 20px;
     }
 
     &_single {
+      @include tablet {
+        font-size: 20px !important;
+      }
+
       &::before {
         max-width: none;
       }
@@ -269,11 +287,14 @@
     @include tablet {
       font-size: inherit;
       line-height: inherit;
-      color: $gray;
+      color: $black;
+      font-weight: 500;
+      line-height: 26px;
+      font-size: 20px;
       position: static;
       justify-content: initial;
       padding: 0;
-      color: $gray !important;
+      color: $black !important;
     }
 
     &::before {
@@ -314,6 +335,8 @@
 
     .text_regular {
       white-space: normal;
+      @include tablet {
+      }
     }
 
     .tooltip {
@@ -351,6 +374,8 @@
     @include tablet {
       font-size: 20px;
       white-space: nowrap;
+      font-weight: 400;
+      line-height: 31px;
     }
   }
 
@@ -368,6 +393,7 @@
       appearance: none;
       margin: 0;
     }
+    color: $gray;
     font-size: 20px;
     cursor: default;
   }
@@ -436,7 +462,7 @@
   &__sum-per-month {
     display: inline;
 
-    color: $gray;
+    color: $gray2;
     margin-left: $spacer;
 
     &::after {
@@ -496,7 +522,7 @@
     margin-left: $spacer;
 
     @include tablet {
-      @include font(400, 16px, $gray);
+      @include font(400, 16px, $gray2);
     }
   }
 
@@ -521,12 +547,20 @@
 
 .arc__calc {
   display: none;
+  height: 0;
+  z-index: 1;
+  position: relative;
+
+  @include tablet {
+    right: -90%;
+  }
 
   @include laptop {
     display: block;
     height: 0;
     z-index: 1;
     position: relative;
+    right: -96%;
   }
 
   &::before {
@@ -536,8 +570,7 @@
       display: block;
       position: absolute;
       content: url('/arc-step-5.svg');
-      top: -162px;
-      left: 30vw;
+      top: -152px;
       z-index: -1;
     }
   }

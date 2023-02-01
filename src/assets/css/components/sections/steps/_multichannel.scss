@@ -12,6 +12,10 @@
 
   &__image {
     display: none;
+    @include tablet {
+      align-self: center;
+    }
+
     @include laptop {
       margin-left: auto;
       display: block;
@@ -21,6 +25,7 @@
   &__image_mobile {
     display: block;
     align-self: center;
+    height: 320px;
 
     svg {
       width: 320px;
@@ -38,6 +43,20 @@
 
     @include laptop {
       margin: 0px;
+    }
+
+    &_mobile {
+      display: block;
+      @include mobile {
+        display: none;
+      }
+
+      &_hidden {
+        display: none;
+        @include mini {
+          display: block;
+        }
+      }
     }
   }
 
@@ -94,9 +113,13 @@
 
     &-text {
       margin-top: $spacer * 2;
+      @include smartphone {
+        align-self: center;
+      }
 
       @include laptop {
         margin-top: 0px;
+        align-self: initial;
       }
     }
   }
@@ -149,6 +172,18 @@
 
   &-up {
     padding: 15px 30px;
+    display: none;
+    @include laptop {
+      display: block;
+    }
+
+    &_mobile {
+      display: block;
+      margin-top: 10px;
+      @include tablet {
+        display: none;
+      }
+    }
   }
 }
 

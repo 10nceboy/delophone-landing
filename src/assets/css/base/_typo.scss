@@ -70,7 +70,7 @@ h5 {
 
 .accent_black {
   @include font(600, 15px, $black);
-  line-height: 31px;
+  line-height: 23.25px;
 
   @include laptop {
     @include font(600, 20px, $gray);
