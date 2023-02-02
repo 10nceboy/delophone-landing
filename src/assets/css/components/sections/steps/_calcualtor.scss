@@ -12,6 +12,7 @@
 
   &__table {
     background: $white;
+    padding: $spacer * 4;
 
     @include tablet {
       margin-top: $spacer * 5;
@@ -19,14 +20,6 @@
       padding: $spacer * 6;
       @include flex-col;
       border-bottom: none;
-    }
-  }
-
-  &__card {
-    padding: $spacer * 4;
-
-    @include tablet {
-      padding: $spacer * 10;
     }
   }
 
@@ -148,7 +141,7 @@
       margin-right: $spacer * 3;
 
       h4 {
-        font-size: 16px;
+        font-size: 20px;
         min-width: 142px;
 
         @include laptop {
@@ -245,18 +238,14 @@
     width: 290px;
     color: $orange !important;
 
-    
-
     @include tablet {
       margin-left: $spacer * 2;
       font-size: 18px;
     }
 
-    
-
     &_disabled {
       font-weight: 500;
-      color: $gray !important;
+      color: $gray;
 
       .tooltip {
         display: none;
@@ -275,14 +264,18 @@
       margin-right: -$spacer * 6;
       font-size: 20px;
 
-      @include tablet {
-        color: $gray !important;
-      }
-
       &::before {
         @include laptop {
           max-width: 78px !important;
         }
+      }
+    }
+
+    &_black {
+      color: $orange;
+
+      @include tablet {
+        color: $black !important;
       }
     }
 
@@ -310,14 +303,13 @@
     @include tablet {
       font-size: inherit;
       line-height: inherit;
-      color: $black;
+      color: $black !important;
       font-weight: 500;
       line-height: 26px;
       font-size: 20px;
       position: static;
       justify-content: initial;
       padding: 0;
-      color: $gray !important;
     }
 
     &::before {
@@ -392,7 +384,6 @@
 
   &__input {
     width: 22px;
-    height: 13px;
     pointer-events: none;
     user-select: none;
     outline: none;
@@ -411,6 +402,7 @@
     border: none;
     box-shadow: none;
     user-select: none;
+    max-width: 20px;
 
     &:hover,
     :active {
@@ -502,6 +494,7 @@
 
     @include tablet {
       padding: auto;
+      max-width: -webkit-fill-available;
     }
 
     h5 {

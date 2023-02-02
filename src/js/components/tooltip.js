@@ -1,4 +1,5 @@
 import { createPopper } from '@popperjs/core';
+import { isTouchDevice } from '../utils/dom';
 const svg = `
 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="7.5" cy="7.5" r="7" stroke="#F88C28"/>
@@ -86,8 +87,10 @@ tooltips.forEach((item) => {
       popper.update();
       /**set tooltip width */
       if (width) {
-        tooltipContent.style.maxWidth = width;
-        tooltipContent.style.width = width;
+        if (!isTouchDevice()) {
+          tooltipContent.style.maxWidth = width;
+          tooltipContent.style.width = width;
+        }
       }
     });
 

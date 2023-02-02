@@ -29,13 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
     setSumPerMonth(commonMonthlyPrice + perMonth);
   };
 
-  const getInputValue = ({ value }) => {
+  const getInputValue = ({ textContent: value }) => {
     if (value.trim() === '') return 0;
     return parseInt(value, 10);
   };
 
   const setInputValue = (input, value) => {
-    input.value = String(value);
+    input.textContent = String(value);
     input.dispatchEvent(new Event('change'));
   };
 
