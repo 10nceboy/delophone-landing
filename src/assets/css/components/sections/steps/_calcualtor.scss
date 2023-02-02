@@ -10,6 +10,14 @@
     padding: $spacer * 9 $spacer * 10;
   }
 
+  &__card {
+    padding: $spacer * 4;
+
+    @include tablet {
+      padding: 0;
+    }
+  }
+
   &__table {
     background: $white;
     padding: $spacer * 4;

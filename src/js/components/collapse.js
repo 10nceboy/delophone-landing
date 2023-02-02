@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return false;
       }
       animated = true;
-      window.setTimeout(() => (animated = false), 400);
+      window.setTimeout(() => (animated = false), 320);
 
       if (arrow) {
         arrow.classList.toggle('collapse__arrow_active');
