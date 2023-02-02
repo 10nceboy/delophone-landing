@@ -22,7 +22,6 @@
       @include flex-row;
       justify-content: space-between;
       padding-bottom: $spacer * 9;
-      align-items: baseline;
     }
 
     @include flex-col;
@@ -76,7 +75,6 @@
 
       @include laptop {
         white-space: nowrap;
-        margin-left: -$spacer * 6;
         display: block;
       }
 
@@ -133,11 +131,9 @@
     &__login {
       display: block;
       order: -1;
-      margin-left: auto;
 
       @include laptop {
         @include flex-row;
-        margin: 0 0 -20px 0;
         order: initial;
 
         .button__login-button {
@@ -150,7 +146,7 @@
       margin-top: $spacer * 5;
 
       @include laptop {
-        margin-top: 10px;
+        margin-top: 0;
       }
     }
   }
@@ -161,17 +157,22 @@
     border-radius: $border-radius-xs;
     margin-top: $spacer * 6;
     line-height: 21px;
-    padding: 20px;
+    padding: $spacer * 4;
 
     @include laptop {
       border-radius: 0;
       background: transparent;
-      padding-top: $spacer * 7;
+      padding: $spacer * 7 0;
       margin-top: 0;
       height: 21px;
     }
 
-    ul {
+    &__copy {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    &__list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
@@ -236,9 +237,4 @@
     font-size: 12px;
     margin-right: 15px;
   }
-}
-
-.footer-contacts__copy {
-  grid-column-start: 1;
-  grid-column-end: 3;
 }
