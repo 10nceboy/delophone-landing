@@ -140,7 +140,7 @@
       @include laptop {
         @include flex-row;
         order: initial;
-        margin-left: none;
+        margin-left: 0;
 
         .button__login-button {
           margin-left: 0;

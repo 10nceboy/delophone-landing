@@ -16,6 +16,8 @@ dropdowns.forEach((dropdown) => {
     ? dropdown
     : dropdown.querySelector('.dropdown__button');
 
+  let state = false;
+
   if (isInline) {
     const dropdownId = dropdown.dataset.dropdown;
     const content = document.querySelector(
@@ -24,12 +26,10 @@ dropdowns.forEach((dropdown) => {
 
     if (content) {
       activator.addEventListener('click', (event) => {
+        state = !state;
         event.preventDefault();
         activator.classList.toggle('dropdown_active');
-        content?.classList.toggle('dropdown__content_visible');
-        requestAnimationFrame(() => {
-          content?.classList.toggle('dropdown__content_active');
-        });
+        itemTransition(content, 'dropdown__content', state);
       });
       content
         .querySelector('.dropdown__close')
