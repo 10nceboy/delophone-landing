@@ -8,9 +8,8 @@ const svg = `
 />
 </svg>`;
 
-const renderTooltip = (content, width = 'auto') => {
+const renderTooltip = (content) => {
   const popup = document.createElement('div');
-  popup.style.width = width;
   popup.classList.add('tooltip__inner');
   popup.role = 'tooltip';
   popup.innerHTML = `
@@ -42,12 +41,8 @@ tooltips.forEach((item) => {
   if (!activator) {
     activator = renderActivator(item);
   }
-  const width = item.getAttribute('data-tooltip-width');
 
-  const tooltipContent = renderTooltip(
-    item.getAttribute('data-tooltip'),
-    width
-  );
+  const tooltipContent = renderTooltip(item.getAttribute('data-tooltip'));
   item.appendChild(tooltipContent);
 
   requestAnimationFrame(() => {
@@ -64,12 +59,7 @@ tooltips.forEach((item) => {
             }
           }
         },
-        {
-          name: 'eventListeners',
-          options: {
-            scroll: false
-          }
-        },
+
         {
           name: 'flip',
           options: {
@@ -80,23 +70,25 @@ tooltips.forEach((item) => {
           name: 'arrow',
           options: {
             element: arrow,
-            pading: 5
-          }
-        },
-        {
-          name: 'preventOverflow',
-          options: {
-            pading: 4,
-            boundary: document.querySelector('#calculator')
+            padding: {
+              top: -100
+            }
           }
         }
       ]
     });
+    const width = item.getAttribute('data-tooltip-width');
 
     activator.addEventListener('mouseenter', () => {
       tooltipContent.classList.add('tooltip__inner_visible');
       popper.update();
       tooltipContent.classList.add('tooltip__inner_active');
+      popper.update();
+      /**set tooltip width */
+      if (width) {
+        tooltipContent.style.maxWidth = width;
+        tooltipContent.style.width = width;
+      }
     });
 
     activator.addEventListener('mouseleave', hideTooltip);

@@ -2,6 +2,13 @@
   &__activator {
     cursor: pointer;
     margin-left: $spacer;
+    max-width: 15px;
+    max-height: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    user-select: none;
 
     svg {
       max-width: 15px;
@@ -27,12 +34,14 @@
   .tooltip__inner {
     border-radius: $border-radius-xs;
     box-shadow: 0px 4px 10px #0000001a;
+    box-sizing: border-box;
     opacity: 1 !important;
     border: 1px solid $light-gray;
     border-bottom: none;
-    min-width: 461px;
     display: none;
     opacity: 0;
+    max-width: 224px;
+    width: fit-content;
 
     &_active {
       display: block;
@@ -40,6 +49,14 @@
 
     &_visible {
       opacity: 1;
+    }
+
+    @include tablet {
+      max-width: 461px;
+    }
+
+    &.fms {
+      max-width: 242px !important;
     }
   }
 
@@ -55,6 +72,8 @@
     width: fit-content;
     overflow: hidden;
     max-width: 289px;
+    z-index: 1;
+    position: relative;
 
     @include tablet {
       max-width: 461px;
@@ -62,9 +81,9 @@
   }
 
   .tooltip__arrow {
-    overflow: hidden;
-
-    &::before {
+    z-index: -1;
+    position: relative;
+    &::after {
       overflow: hidden;
       content: '';
       position: absolute;
@@ -74,7 +93,7 @@
       transform: translateX(-50%) translateY(-50%) rotate(45deg);
       top: 100%;
       left: 50%;
-      z-index: $z-index-hidden;
+      z-index: -1;
       box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
     }
   }
