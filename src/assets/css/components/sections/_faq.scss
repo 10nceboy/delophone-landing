@@ -56,16 +56,20 @@
   &__question {
     display: flex;
     align-items: flex-start;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+
+    &.collapse__activator_active {
+      margin-bottom: $spacer * 4;
+    }
   }
 
   &__answer {
-    margin-top: $spacer * 2;
     @include font(400, 14px, $gray);
     line-height: 21px;
 
     @include tablet {
       @include font(400, 16px, $gray);
-      margin-top: $spacer * 4;
       line-height: 24.8px;
     }
   }

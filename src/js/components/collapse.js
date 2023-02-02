@@ -7,7 +7,6 @@ const renderArrow = (collapse) => {
     <path d="M28.7998 22.4L15.9998 10.4L3.1998 22.4" stroke="#2B8FEB" stroke-linecap="round"/>
     </svg>
   `;
-
     return arrow;
   }
 };
@@ -34,7 +33,21 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       state = !state;
-      itemTransition(content, 'collapse__content', state);
+
+      if (state) {
+        itemTransition(content, 'collapse__content', state);
+        collapse
+          .querySelector('.collapse__activator')
+          .classList.toggle('collapse__activator_active');
+      } else {
+        content.classList.remove('collapse__content_active');
+        content.classList.remove('collapse__content_visble');
+        window.setTimeout(() => {
+          collapse
+            .querySelector('.collapse__activator')
+            .classList.toggle('collapse__activator_active');
+        }, 310);
+      }
 
       window.setTimeout(() => {
         if (state && !isInViewport(content)) {
