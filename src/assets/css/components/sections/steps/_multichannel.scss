@@ -134,6 +134,8 @@
     display: block;
     height: 230px;
     box-sizing: border-box;
+    position: relative;
+    z-index: 2;
 
     @include smartphone {
       height: 175px;

@@ -1,0 +1,39 @@
+.arc__multichannel {
+  @include smartphone {
+    display: block;
+    position: relative;
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: url('/public/arc-step1-tabl.svg');
+      top: -33px;
+      z-index: 1;
+      right: 50%;
+    }
+
+    @include laptop {
+      display: none;
+    }
+  }
+}
+
+.arc__lk {
+  @include smartphone {
+    display: block;
+    position: relative;
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: url('/public/arc_step4-tabl.svg');
+      top: -26px;
+      z-index: 1;
+      right: 31%;
+    }
+
+    @include laptop {
+      display: none;
+    }
+  }
+}
