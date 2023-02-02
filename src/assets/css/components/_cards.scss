@@ -31,7 +31,7 @@
     @include tablet {
       display: flex;
       flex-direction: row;
-      padding: 8px $spacer * 10 $spacer;
+      padding: 8px $spacer * 10;
       align-items: initial;
     }
   }

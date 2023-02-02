@@ -3,7 +3,8 @@
   z-index: 2;
 
   &__checklist {
-    row-gap: 10px;
+    row-gap: 5px !important;
+    margin-top: 0 !important;
   }
 
   &__content {
