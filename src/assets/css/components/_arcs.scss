@@ -7,9 +7,15 @@
       display: block;
       position: absolute;
       content: url('/public/arc-step1-tabl.svg');
-      top: -33px;
       z-index: 1;
       right: 50%;
+
+      @include smartphone {
+        top: -45px;
+      }
+      @include tablet {
+        top: -33px;
+      }
     }
 
     @include laptop {
@@ -27,9 +33,14 @@
       display: block;
       position: absolute;
       content: url('/public/arc_step4-tabl.svg');
-      top: -26px;
       z-index: 1;
       right: 31%;
+      @include smartphone {
+        top: -58px;
+      }
+      @include tablet {
+        top: -26px;
+      }
     }
 
     @include laptop {
