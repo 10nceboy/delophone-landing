@@ -25,6 +25,7 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto;
       margin-top: $spacer * 5;
+      gap: $spacer * 6;
     }
   }
 
@@ -40,6 +41,14 @@
     min-height: 111px;
     margin-bottom: $spacer * 6;
 
+    @include tablet {
+      padding: $spacer * 4;
+      position: relative;
+      height: 136px;
+      width: auto;
+      margin-bottom: 0;
+    }
+
     &:last-child {
       margin-bottom: 0;
       height: 132px;
@@ -53,14 +62,6 @@
       @include tablet {
         height: 136px;
       }
-    }
-
-    @include tablet {
-      padding: $spacer * 4;
-      position: relative;
-      height: 136px;
-      width: auto;
-      margin-bottom: 0;
     }
   }
 

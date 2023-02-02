@@ -8,8 +8,9 @@ const svg = `
 />
 </svg>`;
 
-const renderTooltip = (content) => {
+const renderTooltip = (content, width = 'auto') => {
   const popup = document.createElement('div');
+  popup.style.width = width;
   popup.classList.add('tooltip__inner');
   popup.role = 'tooltip';
   popup.innerHTML = `
@@ -41,11 +42,16 @@ tooltips.forEach((item) => {
   if (!activator) {
     activator = renderActivator(item);
   }
+  const width = item.getAttribute('data-tooltip-width');
 
-  const tooltipContent = renderTooltip(item.getAttribute('data-tooltip'));
+  const tooltipContent = renderTooltip(
+    item.getAttribute('data-tooltip'),
+    width
+  );
   item.appendChild(tooltipContent);
 
   requestAnimationFrame(() => {
+    const arrow = tooltipContent.querySelector('.tooltip__arrow');
     const popper = createPopper(item, tooltipContent, {
       placement: 'top',
       animation: false,
@@ -68,6 +74,20 @@ tooltips.forEach((item) => {
           name: 'flip',
           options: {
             fallbackPlacements: ['top']
+          }
+        },
+        {
+          name: 'arrow',
+          options: {
+            element: arrow,
+            pading: 5
+          }
+        },
+        {
+          name: 'preventOverflow',
+          options: {
+            pading: 4,
+            boundary: document.querySelector('#calculator')
           }
         }
       ]

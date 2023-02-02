@@ -45,22 +45,26 @@
 
   .tooltip__content {
     background: $white !important;
-    color: $gray;
+    color: $gray !important;
+    font-weight: 400;
     font-size: 14px;
     line-height: 21.4px;
     text-align: left;
     padding: $spacer * 3;
     white-space: pre-line;
     width: fit-content;
-    max-width: 461px;
-    max-height: 124px;
+    overflow: hidden;
+    max-width: 289px;
+
+    @include tablet {
+      max-width: 461px;
+    }
   }
 
   .tooltip__arrow {
     overflow: hidden;
-    z-index: $z-index-hidden;
 
-    &::after {
+    &::before {
       overflow: hidden;
       content: '';
       position: absolute;
@@ -70,25 +74,6 @@
       transform: translateX(-50%) translateY(-50%) rotate(45deg);
       top: 100%;
       left: 50%;
-      z-index: $z-index-hidden;
-      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
-    }
-  }
-
-  .tooltip__arrow-price {
-    overflow: hidden;
-    z-index: $z-index-hidden;
-
-    &::after {
-      overflow: hidden;
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background: $white;
-      transform: translateX(-50%) translateY(-50%) rotate(45deg);
-      top: 100%;
-      left: 66%;
       z-index: $z-index-hidden;
       box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
     }
