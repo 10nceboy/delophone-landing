@@ -81,7 +81,7 @@ h5 {
   @include font(600, 15px, $black);
   line-height: 23.25px;
 
-  @include laptop {
+  @include tablet {
     @include font(600, 20px, $gray);
     line-height: 31px;
   }

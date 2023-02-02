@@ -14,12 +14,17 @@
     width: 100%;
     padding: $spacer * 4;
     max-height: 279px;
-    height: 279px;
-    min-height: 200px;
+    height: 200px;
+    min-height: 279px;
     cursor: grab;
     box-sizing: border-box;
     background: $light-gray;
     @include flex-col;
+
+    @include mobile-s {
+      height: 250px;
+      min-height: 250px;
+    }
 
     @include tablet {
       padding: $spacer * 6;

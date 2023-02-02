@@ -31,8 +31,12 @@
     @include tablet {
       display: flex;
       flex-direction: row;
-      padding: 8px $spacer * 10;
+      padding: 20px;
       align-items: initial;
+    }
+
+    @include laptop {
+      padding: 8px $spacer * 10;
     }
   }
 

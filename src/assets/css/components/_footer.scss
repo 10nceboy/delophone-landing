@@ -183,17 +183,16 @@
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
 
-      @include tablet {
-        grid-auto-columns: 50% 5;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 25px 25px 25px;
-        align-items: center;
+      @include smartphone {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
       }
 
       @include laptop {
         @include flex-row;
-        align-items: flex-start;
         justify-content: space-between;
+        align-items: flex-start;
       }
     }
 
@@ -228,6 +227,10 @@
       margin-top: $spacer * 2;
       margin-bottom: $spacer * 2;
       margin-left: auto;
+
+      @include smartphone {
+        margin-left: 0px;
+      }
 
       @include laptop {
         margin-top: 0;

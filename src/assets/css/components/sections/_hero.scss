@@ -57,6 +57,11 @@
       font-size: 16px;
       line-height: 130%;
 
+      @include tablet {
+        font-size: 17px;
+        line-height: 22px;
+      }
+
       @include laptop {
         font-size: 20px;
         margin-left: $spacer * 4;
@@ -74,10 +79,10 @@
       margin-right: $spacer * 2;
       max-width: 100%;
       flex-grow: 1;
-      padding: $spacer * 4;
+      padding: 40px 20px;
       margin-bottom: 0px;
-      max-height: 180px;
-      min-height: 180px;
+      max-height: 196px;
+      min-height: 196px;
 
       h4 {
         @include laptop {
@@ -115,7 +120,10 @@
     margin: 0 auto;
 
     @include tablet {
-      margin: 0;
+      margin-right: 45px;
+    }
+    @include laptop {
+      margin-right: 0px;
     }
   }
 
@@ -125,12 +133,24 @@
     @include tablet {
       display: block;
       margin-left: auto;
-      width: 522px;
       overflow: visible;
     }
 
+    @include laptop {
+      width: 522px;
+      height: 532px;
+    }
+
     img {
-      height: 100%;
+      @include tablet {
+        width: 313px;
+        height: 315px;
+
+        @include laptop {
+          width: 522px;
+          height: 532px;
+        }
+      }
     }
   }
 
@@ -155,18 +175,23 @@
     margin-top: $spacer * 2;
     box-sizing: border-box;
 
-    @include laptop {
+    @include tablet {
       background-color: $light-gray;
       border-radius: 0px $border-radius-xs 0 $border-radius-xs;
       padding: $spacer * 3 $spacer * 4;
       margin-top: $spacer * 8;
       white-space: nowrap;
       align-items: center;
-      @include font(400, 16px, $gray);
-      margin-left: -5px;
+      @include font(400, 14px, $gray);
       flex-shrink: 0;
-      width: 348px;
+      width: 311px;
       height: 55px;
+
+      @include laptop {
+        width: 348px;
+        @include font(400, 16px, $gray);
+        line-height: 24.8px;
+      }
     }
 
     &_hidden {
@@ -201,8 +226,40 @@
     margin-right: 0px;
     z-index: 2;
 
+    @include tablet {
+      flex-direction: row;
+    }
     @include laptop {
       width: 200px;
     }
+
+    &_small {
+      width: 100%;
+      margin-right: 0px;
+      z-index: 2;
+
+      @include tablet {
+        margin-top: 40px;
+        @include font(400, 16px, $white);
+        line-height: 21.7px;
+        padding: 15px 30px;
+      }
+      @include laptop {
+        @include font(400, 16px, $white);
+        width: 200px;
+      }
+    }
+  }
+}
+
+.hero_small {
+  @include tablet {
+    font-size: 14px;
+    line-height: 21.7px;
+    font-weight: 400;
+  }
+  @include laptop {
+    font-size: 16px;
+    line-height: 24.8px;
   }
 }

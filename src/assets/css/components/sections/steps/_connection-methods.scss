@@ -63,6 +63,13 @@
         height: 136px;
       }
     }
+
+    @include tablet {
+      padding: $spacer * 4;
+      position: relative;
+      height: 136px;
+      margin-bottom: 0;
+    }
   }
 
   &__info {
@@ -85,7 +92,7 @@
     @include font(500, 16px, $black);
     line-height: 21px;
     max-width: 210px;
-    @include smartphone {
+    @include mobile {
       max-width: 100%;
     }
 
