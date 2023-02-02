@@ -2,6 +2,13 @@
   &__activator {
     cursor: pointer;
     margin-left: $spacer;
+    max-width: 15px;
+    max-height: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    user-select: none;
 
     svg {
       max-width: 15px;
@@ -27,12 +34,14 @@
   .tooltip__inner {
     border-radius: $border-radius-xs;
     box-shadow: 0px 4px 10px #0000001a;
+    box-sizing: border-box;
     opacity: 1 !important;
     border: 1px solid $light-gray;
     border-bottom: none;
-    min-width: 461px;
     display: none;
     opacity: 0;
+    max-width: 224px;
+    width: fit-content;
 
     &_active {
       display: block;
@@ -41,25 +50,39 @@
     &_visible {
       opacity: 1;
     }
+
+    @include tablet {
+      max-width: 461px;
+    }
+
+    &.fms {
+      max-width: 242px !important;
+    }
   }
 
   .tooltip__content {
     background: $white !important;
-    color: $gray;
+    color: $gray !important;
+    font-weight: 400;
     font-size: 14px;
     line-height: 21.4px;
     text-align: left;
     padding: $spacer * 3;
     white-space: pre-line;
     width: fit-content;
-    max-width: 461px;
-    max-height: 124px;
+    overflow: hidden;
+    max-width: 289px;
+    z-index: 1;
+    position: relative;
+
+    @include tablet {
+      max-width: 461px;
+    }
   }
 
   .tooltip__arrow {
-    overflow: hidden;
-    z-index: $z-index-hidden;
-
+    z-index: -1;
+    position: relative;
     &::after {
       overflow: hidden;
       content: '';
@@ -70,26 +93,7 @@
       transform: translateX(-50%) translateY(-50%) rotate(45deg);
       top: 100%;
       left: 50%;
-      z-index: $z-index-hidden;
-      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
-    }
-  }
-
-  .tooltip__arrow-price {
-    overflow: hidden;
-    z-index: $z-index-hidden;
-
-    &::after {
-      overflow: hidden;
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background: $white;
-      transform: translateX(-50%) translateY(-50%) rotate(45deg);
-      top: 100%;
-      left: 66%;
-      z-index: $z-index-hidden;
+      z-index: -1;
       box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
     }
   }

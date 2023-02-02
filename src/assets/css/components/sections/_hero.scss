@@ -158,7 +158,7 @@
     @include laptop {
       background-color: $light-gray;
       border-radius: 0px $border-radius-xs 0 $border-radius-xs;
-      padding: $spacer * 3 $spacer * 4 $spacer * 3 $spacer * 4;
+      padding: $spacer * 3 $spacer * 4;
       margin-top: $spacer * 8;
       white-space: nowrap;
       align-items: center;
