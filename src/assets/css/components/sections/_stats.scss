@@ -16,6 +16,14 @@
 
   &__header {
     margin-bottom: $spacer;
+    @include tablet {
+      font-size: 26px;
+    }
+
+    @include laptop {
+      font-size: 32px;
+      line-height: 43px;
+    }
   }
 
   &__caption {

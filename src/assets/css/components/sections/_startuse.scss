@@ -4,17 +4,19 @@
 
   @include tablet {
     padding-bottom: 80px;
-    padding-top: 150px;
+    padding-top: 100px;
     margin-top: 0;
     margin-bottom: 0;
   }
 
   &__container {
     @include flex-col;
+    align-items: center;
+    justify-content: center;
 
     @include tablet {
       @include flex-row;
-      align-items: flex-start;
+      align-items: center;
     }
   }
 
@@ -61,24 +63,29 @@
 
   &__image {
     display: none;
+    @include smartphone {
+      display: block;
+      align-self: center;
+    }
 
     img {
       width: 350px;
+
+      @include smartphone {
+        display: block;
+        align-self: center;
+        margin-top: 20px;
+      }
+
+      @include tablet {
+        width: 408px;
+        margin-top: 0px;
+      }
 
       @include laptop {
         width: 608px;
         height: 518px;
       }
-
-      @include smartphone {
-        width: 508px;
-      }
-    }
-
-    @include smartphone {
-      display: block;
-      align-self: center;
-      margin-top: 20px;
     }
   }
 

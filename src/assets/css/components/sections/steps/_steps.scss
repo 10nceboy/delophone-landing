@@ -59,13 +59,15 @@
   }
 
   &__calculator {
+    padding-top: 60px;
+
     @include tablet {
-      padding-top: 80px;
       position: relative;
     }
 
     @include laptop {
       padding-bottom: 165px;
+      padding-top: 80px;
     }
   }
 }
@@ -77,6 +79,10 @@
 }
 
 .steps__lk {
-  padding-top: 80px;
+  padding-top: 60px;
   position: relative;
+
+  @include tablet {
+    padding-top: 80px;
+  }
 }

@@ -9,12 +9,17 @@
     display: block;
     margin-bottom: auto;
 
+    h2 {
+      margin-bottom: $spacer * 2;
+    }
+
     @include laptop {
       max-width: 540px;
       margin-right: 85px;
 
       h2 {
         margin-top: $spacer * 2;
+        margin-bottom: $spacer * 4;
       }
     }
 

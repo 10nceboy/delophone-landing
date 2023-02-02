@@ -49,6 +49,10 @@
       @include smartphone {
         height: 111px;
       }
+
+      @include tablet {
+        height: 136px;
+      }
     }
 
     @include tablet {

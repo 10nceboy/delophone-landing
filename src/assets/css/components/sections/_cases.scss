@@ -13,8 +13,9 @@
     border-radius: $border-radius-xl;
     width: 100%;
     padding: $spacer * 4;
-    max-height: 290px;
-    height: 290px;
+    max-height: 279px;
+    height: 279px;
+    min-height: 200px;
     cursor: grab;
     box-sizing: border-box;
     background: $light-gray;
@@ -83,7 +84,7 @@
   }
 
   &__title {
-    margin: $spacer * 3 0 $spacer;
+    margin: $spacer * 2 0 $spacer;
     @include font(500, 16px, $black);
     line-height: 20.8px;
 
