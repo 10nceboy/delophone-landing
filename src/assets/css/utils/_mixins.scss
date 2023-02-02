@@ -65,6 +65,14 @@ $family: 'Manrope';
   }
 }
 
+/**only for 480**/
+
+@mixin mobile-s {
+  @media screen and (min-width: 480px) and (max-width: 640px) {
+    @content;
+  }
+}
+
 /*fonts*/
 @mixin font($weight, $size, $color, $fam: $family) {
   font: $weight $size $fam;

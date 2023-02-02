@@ -173,8 +173,18 @@
       height: 27px;
     }
 
+    @include smartphone {
+      min-height: 37px;
+      max-height: 37px;
+      margin-right: 0px;
+      min-width: 60px;
+      max-width: 78px;
+      @include center;
+      margin-right: $spacer * 2;
+      font-size: 18px;
+    }
+
     @include laptop {
-      padding: $spacer;
       justify-content: center;
       @include font(400, 24px, $orange);
       min-height: 37px;
