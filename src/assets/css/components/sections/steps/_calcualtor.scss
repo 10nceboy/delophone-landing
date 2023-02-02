@@ -1,21 +1,19 @@
 .calculator {
   box-sizing: border-box;
   background: $white;
-  overflow: hidden;
   padding: $spacer * 4;
   border-radius: $border-radius-xl;
   position: relative;
   z-index: 2;
 
   @include tablet {
-    max-width: 1010px;
-    padding: 0px;
+    max-width: 1110px;
+    padding: $spacer * 9 $spacer * 10;
   }
 
   @include tablet {
-    max-width: 1100px;
+    max-width: 1110px;
     padding: $spacer * 9 $spacer * 10;
-    padding-bottom: $spacer * 10;
   }
 
   &__table {
@@ -24,6 +22,7 @@
     @include tablet {
       margin-top: $spacer * 5;
       border: 1px solid $dim-gray;
+
       padding: $spacer * 6;
       @include flex-col;
       border-bottom: none;
@@ -32,7 +31,7 @@
 
   &__section {
     margin-bottom: $spacer * 4;
-    border-bottom: 1px solid $in-gray;
+    border-bottom: 1px solid #cdd6df;
 
     @include tablet {
       border-bottom: none;
@@ -46,19 +45,19 @@
 
   &__head {
     box-sizing: border-box;
+
     background: $light-gray;
     border-radius: $border-radius-xs;
+    max-width: 250px;
     padding: $spacer * 3;
     margin-top: $spacer * 4;
-    width: 100%;
-    max-width: 100%;
 
     @include flex-col;
 
     @include tablet {
       display: block;
       min-width: 481px;
-      max-width: 481px;
+      max-width: none;
       margin-top: 0;
       padding: $spacer * 4;
     }
@@ -70,6 +69,7 @@
     @include tablet {
       display: flex;
       margin-top: $spacer * 3;
+      gap: $spacer * 2;
       font-size: 14px;
     }
   }
@@ -82,7 +82,7 @@
 
   &__row {
     display: flex;
-    align-items: flex-start;
+    align-items: baseline;
     justify-content: space-between;
 
     @include smartphone {
@@ -95,7 +95,7 @@
       height: 36px;
       justify-content: left;
       align-items: center;
-      max-width: 759px;
+      max-width: 481px;
     }
 
     &_full-height {
@@ -148,11 +148,10 @@
 
       h4 {
         font-size: 16px;
-
         min-width: 142px;
 
         @include laptop {
-          @include font(500, 20px, $black);
+          @include font(500, 16px, $black);
           line-height: 26px;
         }
 
@@ -228,25 +227,21 @@
   }
 
   &__price {
-    color: $orange !important;
-    font-size: 16px;
+    @include flex-row;
 
-    @include tablet {
-      @include flex-row;
-      white-space: nowrap;
-      color: $black;
-      flex-grow: 1;
-      font-size: 14px;
-      line-height: 21px;
-      width: 290px;
-      justify-content: flex-end;
-      padding: 0px 20px;
-      position: absolute;
-      top: 100%;
-      left: -230px;
-      width: 290px;
-      font-size: 18px;
-    }
+    white-space: nowrap;
+    color: $black;
+    flex-grow: 1;
+    font-size: 14px;
+    line-height: 21px;
+    width: 290px;
+    justify-content: flex-end;
+    padding: 0px 20px;
+    position: absolute;
+    top: 100%;
+    left: -230px;
+    width: 290px;
+    color: $orange !important;
 
     &_disabled {
       font-weight: 500;
@@ -309,13 +304,18 @@
       position: static;
       justify-content: initial;
       padding: 0;
-      color: $black;
+      color: $gray !important;
     }
 
     &::before {
       display: none;
       max-width: 144px;
       min-width: 144px;
+
+      @include tablet {
+        display: block;
+      }
+
       content: '';
       width: 100%;
       flex-basis: 100%;
@@ -345,19 +345,15 @@
     @include tablet {
       align-items: flex-end;
       min-width: 485px;
-      max-width: 485px;
-    }
 
-    .text_regular {
-      white-space: normal;
-      @include tablet {
+      div {
+        min-width: 460px;
       }
     }
   }
 
   &__multiplier {
     @include flex-row;
-    justify-content: space-between;
     border-radius: $border-radius-xs;
     border: 1px solid $dim-gray;
     margin-bottom: $spacer;
@@ -368,9 +364,8 @@
       margin-right: $spacer * 4;
       margin-bottom: 0;
       padding: 2px 10px;
-      min-width: 93px;
+      width: 78px;
       height: 32px;
-      padding: 2px 11px;
     }
   }
 
@@ -402,13 +397,7 @@
     border: none;
     text-align: center;
     appearance: none;
-    -moz-appearance: textfield;
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      appearance: none;
-      margin: 0;
-    }
+
     color: $gray;
     font-size: 20px;
     cursor: default;
@@ -436,9 +425,9 @@
       h4 {
         color: $white;
       }
-
       @include font(400, 14px, $white);
       padding: 20px 15px;
+
       @include tablet {
         display: none;
       }
@@ -533,11 +522,13 @@
   }
 
   &__price-per-month {
+    transition: color 0.2s ease-in-out;
+
     @include font(400, 14px, $orange);
     margin-left: $spacer;
 
     @include tablet {
-      @include font(400, 16px, $gray2);
+      @include font(400, 16px, $gray);
     }
   }
 
@@ -547,46 +538,19 @@
     @include font(400, 14px, $black);
   }
 
-  &__label {
-    width: 100%;
-    max-width: 485px;
+  &__price-fixed {
+    transition: color 0.2s ease-in-out;
+    color: $orange;
+
+    @include tablet {
+      color: $black;
+    }
   }
-}
+  &__price-per-month {
+    color: $orange;
 
-.calculator__price-fixed {
-  color: $orange;
-  @include tablet {
-    color: $black;
-  }
-}
-
-.arc__calc {
-  display: none;
-  height: 0;
-  z-index: 1;
-  position: relative;
-
-  @include tablet {
-    right: -90%;
-  }
-
-  @include laptop {
-    display: block;
-    height: 0;
-    z-index: 1;
-    position: relative;
-    right: -96%;
-  }
-
-  &::before {
-    display: none;
-
-    @include laptop {
-      display: block;
-      position: absolute;
-      content: url('/arc-step-5.svg');
-      top: -152px;
-      z-index: -1;
+    @include tablet {
+      color: $gray;
     }
   }
 }
