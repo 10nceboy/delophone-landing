@@ -322,12 +322,19 @@
 .phone-bussines__numbers_up {
   @include flex-row;
   @include laptop {
-    gap: $spacer * 3;
     margin-bottom: $spacer * 2;
     align-self: flex-end;
   }
 
   div {
+    @include laptop {
+      margin-right: $spacer * 3;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
     &:nth-child(2) {
       display: none;
 
@@ -342,10 +349,15 @@
   @include flex-row;
 
   div {
+    @include laptop {
+      margin-right: $spacer * 3;
+    }
+
     &:last-child {
       max-width: 27px;
 
       @include laptop {
+        margin-right: 0;
         min-width: 43px;
         max-width: 43px;
         svg {
@@ -359,9 +371,5 @@
         min-width: 78px;
       }
     }
-  }
-
-  @include laptop {
-    gap: $spacer * 3;
   }
 }

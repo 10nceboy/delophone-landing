@@ -12,6 +12,7 @@ const renderArrow = (collapse) => {
 };
 
 let scrolling = false;
+const animationDruation = 500;
 
 document.addEventListener('DOMContentLoaded', () => {
   const collapsibles = document.querySelectorAll('.collapse');
@@ -46,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
           collapse
             .querySelector('.collapse__activator')
             .classList.toggle('collapse__activator_active');
-        }, 310);
+        }, animationDruation);
       }
 
       window.setTimeout(() => {
@@ -56,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
           window.setTimeout(() => (scrolling = false), 300);
         }
       }),
-        250;
+        animationDruation;
     });
     content.addEventListener('click', (event) => event.stopPropagation());
   });

@@ -2,7 +2,6 @@
   &__activators {
     @include flex-row;
     width: 100%;
-    gap: $spacer * 5;
   }
 
   &__activator {
@@ -11,6 +10,8 @@
     color: $gray;
     box-shadow: none;
     border: none;
+
+    @include gap($spacer * 5, $spacer * 5);
 
     @include laptop {
       padding: 15px 20px;

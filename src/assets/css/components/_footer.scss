@@ -43,7 +43,6 @@
 
       @include tablet {
         @include flex-row;
-        gap: $spacer * 5;
       }
 
       svg {

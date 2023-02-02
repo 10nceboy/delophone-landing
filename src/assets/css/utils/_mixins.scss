@@ -83,3 +83,19 @@ $family: 'Manrope';
   opacity: 1;
   transition: $transition;
 }
+
+@mixin gap($right, $bottom) {
+  margin-bottom: $bottom;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include laptop {
+    margin-bottom: auto;
+    margin-right: $right;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

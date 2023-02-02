@@ -95,7 +95,6 @@
       @include flex-row;
       align-items: center;
       justify-content: flex-start;
-      gap: 25px;
       margin-top: 35px;
     }
 
@@ -177,13 +176,16 @@
   }
 
   &-up {
-    padding: 15px 30px;
+    padding: $spacer * 3 $spacer * 6;
     display: none;
+
     @include laptop {
       display: block;
+      margin-right: $spacer * 5;
     }
 
     &_mobile {
+      margin-right: 0;
       display: block;
       margin-top: 10px;
       @include tablet {

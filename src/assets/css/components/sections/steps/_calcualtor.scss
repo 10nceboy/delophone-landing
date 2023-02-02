@@ -51,13 +51,14 @@
     padding: $spacer * 3;
     margin-top: $spacer * 4;
     width: 100%;
+    max-width: 100%;
 
     @include flex-col;
 
     @include tablet {
       display: block;
       min-width: 481px;
-      max-width: none;
+      max-width: 481px;
       margin-top: 0;
       padding: $spacer * 4;
     }
@@ -69,7 +70,6 @@
     @include tablet {
       display: flex;
       margin-top: $spacer * 3;
-      gap: $spacer * 2;
       font-size: 14px;
     }
   }
@@ -104,6 +104,10 @@
 
     &_full-width {
       width: 100%;
+
+      @include tablet {
+        max-width: 759px;
+      }
 
       .calculator__price {
         &::before {
@@ -263,11 +267,22 @@
     &_shifted {
       margin-right: -$spacer * 6;
       font-size: 20px;
+
+      @include tablet {
+        color: $gray !important;
+      }
+
+      &::before {
+        @include laptop {
+          max-width: 78px !important;
+        }
+      }
     }
 
     &_single {
       @include tablet {
         font-size: 20px !important;
+        color: $gray;
       }
 
       &::before {
@@ -294,7 +309,7 @@
       position: static;
       justify-content: initial;
       padding: 0;
-      color: $black !important;
+      color: $black;
     }
 
     &::before {
@@ -509,7 +524,6 @@
       @include flex-row;
       margin-right: 70px;
       max-width: 300px;
-      gap: $spacer * 4;
     }
   }
 

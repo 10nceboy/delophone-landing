@@ -113,7 +113,6 @@
 
   &__cards {
     @include flex-col;
-    gap: $spacer * 3;
     width: 100%;
 
     @include tablet {
@@ -132,6 +131,7 @@
   &__card {
     padding: $spacer * 3 $spacer * 3;
     height: 165px;
+    margin-bottom: $spacer * 3;
 
     @include smartphone {
       height: 151px;
@@ -139,6 +139,7 @@
 
     @include tablet {
       height: auto;
+      margin-bottom: 0;
     }
 
     @include laptop {
