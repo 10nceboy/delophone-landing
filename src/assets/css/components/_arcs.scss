@@ -1,0 +1,50 @@
+.arc__multichannel {
+  @include smartphone {
+    display: block;
+    position: relative;
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: url('/public/arc-step1-tabl.svg');
+      z-index: 1;
+      right: 50%;
+
+      @include smartphone {
+        top: -45px;
+      }
+      @include tablet {
+        top: -33px;
+      }
+    }
+
+    @include laptop {
+      display: none;
+    }
+  }
+}
+
+.arc__lk {
+  @include smartphone {
+    display: block;
+    position: relative;
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: url('/public/arc_step4-tabl.svg');
+      z-index: 1;
+      right: 31%;
+      @include smartphone {
+        top: -58px;
+      }
+      @include tablet {
+        top: -26px;
+      }
+    }
+
+    @include laptop {
+      display: none;
+    }
+  }
+}
