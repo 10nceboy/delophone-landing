@@ -101,19 +101,23 @@
     &_list {
       @include font(400, 14px, $gray);
       @include flex-col;
-      gap: $spacer * 2;
+
       padding: $spacer * 4 $spacer * 5;
       background: $light-gray;
       border-radius: $border-radius-xs;
 
       @include tablet {
-        box-shadow: map-get($elevations, 1);
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
       }
 
       li {
         white-space: nowrap;
         user-select: none;
         cursor: pointer;
+        margin-bottom: $spacer * 2;
+        &:last-child {
+          margin-bottom: 0;
+        }
 
         &:hover {
           color: $blue;

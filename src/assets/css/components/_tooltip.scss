@@ -6,6 +6,11 @@
     svg {
       max-width: 15px;
       max-height: 15px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      vertical-align: middle;
+      user-select: none;
     }
 
     &:hover {
