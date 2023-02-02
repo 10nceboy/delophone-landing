@@ -255,7 +255,7 @@
     padding-top: 0;
     max-height: 0;
     overflow: hidden;
-    transition: max-height $dropdown-transition;
+    transition: $collapse-transition-height;
   }
 
   .list {
@@ -267,17 +267,7 @@
     }
   }
 
-  &_active {
-    display: block;
-  }
-
-  &_visible {
-    opacity: 1;
-
-    @include smartphone {
-      max-height: 1000px;
-    }
-  }
+  @include collapse;
 
   .dropdown__inner {
     width: fit-content;

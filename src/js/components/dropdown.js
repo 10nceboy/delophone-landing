@@ -26,10 +26,21 @@ dropdowns.forEach((dropdown) => {
 
     if (content) {
       activator.addEventListener('click', (event) => {
-        state = !state;
         event.preventDefault();
+        state = !state;
+        if (state) {
+          itemTransition(content, 'dropdown__content', state);
+        } else {
+          content?.classList.remove('dropdown__content_active');
+          content.addEventListener(
+            'transitionend',
+            () => {
+              content?.classList.remove('dropdown__content_visible');
+            },
+            { once: true }
+          );
+        }
         activator.classList.toggle('dropdown_active');
-        itemTransition(content, 'dropdown__content', state);
       });
       content
         .querySelector('.dropdown__close')
