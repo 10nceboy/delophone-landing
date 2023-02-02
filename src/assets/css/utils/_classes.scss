@@ -23,5 +23,13 @@
 .no-select {
   pointer-events: none;
   user-select: none;
+  -webkit-user-drag: none;
+  & > * {
+    pointer-events: none;
+    user-select: none;
+  }
 }
 
+.no-wrap {
+  white-space: nowrap;
+}

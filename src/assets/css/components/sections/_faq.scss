@@ -57,7 +57,7 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 0;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 
     &.collapse__activator_active {
       margin-bottom: $spacer * 4;

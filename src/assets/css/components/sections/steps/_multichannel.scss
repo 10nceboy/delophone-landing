@@ -55,9 +55,6 @@
 
       &_hidden {
         display: none;
-        @include mini {
-          display: block;
-        }
       }
     }
   }

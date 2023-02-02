@@ -16,7 +16,7 @@ const smoothContentSwitch = (element, newContent) => {
 };
 
 if (!isTouchDevice()) {
-  const heroBtn = document.querySelector('.hero__button');
+  const heroBtn = document.querySelector('.hero__button button');
   const label = document.querySelector('.hero__label span');
   const originalContent = label.textContent;
   const newContent = '⚡️ Сразу после регистрации';

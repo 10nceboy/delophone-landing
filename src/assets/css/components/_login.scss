@@ -6,6 +6,28 @@
   border: none;
 
   &:hover {
+    color: $deep-blue;
+
+    .login__icon {
+      color: $deep-blue;
+      path {
+        stroke: $white;
+      }
+    }
+  }
+
+  &:active {
+    color: $dark-blue;
+
+    .login__icon {
+      color: $blue;
+      path {
+        stroke: $white;
+      }
+    }
+  }
+
+  &:focus {
     color: $dark-blue;
 
     .login__icon {

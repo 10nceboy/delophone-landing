@@ -1,18 +1,5 @@
 @import '../utils/';
 
-.body {
-  &.overlay_gray {
-    background-color: $light-gray;
-
-    @include laptop {
-      background-color: $white;
-    }
-  }
-  &.lock {
-    overflow: hidden;
-  }
-}
-
 .container {
   margin: 0 auto;
   width: calc(100vw - 30px);
@@ -43,7 +30,7 @@
 }
 
 .container_flex-start {
-  @include flex-row-start;
+  @include flex-row(align-items-start);
 }
 
 .container_flex-col {
@@ -70,4 +57,3 @@
     }
   }
 }
-
