@@ -18,17 +18,17 @@
   }
 
   .footer-upside {
+    @include flex-col;
+
     @include laptop {
       @include flex-row;
       justify-content: space-between;
       padding-bottom: $spacer * 9;
     }
 
-    @include flex-col;
-
     &__logo {
       margin-bottom: $spacer * 3;
-      margin-top: -30px;
+      margin-top: -$spacer * 6;
       max-width: 200px;
 
       @include smartphone {
@@ -52,7 +52,6 @@
           width: 172px;
           height: 32px;
           margin-bottom: $spacer * 4;
-          margin-right: $spacer * 5;
         }
 
         @include laptop {
@@ -61,6 +60,7 @@
 
         & > * {
           fill: $white !important;
+          stroke: $white;
         }
       }
     }
@@ -74,6 +74,7 @@
       }
 
       @include laptop {
+        margin-left: -$spacer * 8;
         white-space: nowrap;
         display: block;
       }
@@ -84,6 +85,8 @@
         @include tablet {
           display: block;
           margin-top: -$spacer * 2;
+          margin-left: $spacer * 5;
+          display: none;
         }
 
         @include laptop {
@@ -91,9 +94,9 @@
         }
       }
 
-      .dropdown__menu {
+      .dropdown__menu ul {
         @include mobile {
-          background: transparent;
+          background: transparent !important;
         }
       }
     }
@@ -132,9 +135,12 @@
       display: block;
       order: -1;
 
+      margin-left: auto;
+
       @include laptop {
         @include flex-row;
         order: initial;
+        margin-left: none;
 
         .button__login-button {
           margin-left: 0;

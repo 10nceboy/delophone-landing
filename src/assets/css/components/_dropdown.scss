@@ -190,6 +190,17 @@
         }
       }
     }
+
+    &.dropdown_white {
+      .dropdown__button {
+        @include font(400, 16px, $white);
+
+        &::after {
+          content: url('/arrow-down-white.svg');
+          color: $white;
+        }
+      }
+    }
   }
 
   &_visible {

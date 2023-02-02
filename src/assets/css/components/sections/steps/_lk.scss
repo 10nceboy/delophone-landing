@@ -39,6 +39,7 @@
           margin-top: $spacer;
           margin-bottom: 0px;
           line-height: inherit;
+          line-height: 24px;
         }
 
         @include desktop {
@@ -52,7 +53,6 @@
 
       @include laptop {
         flex-direction: row;
-        align-items: flex-end;
       }
     }
   }
@@ -108,7 +108,7 @@
     }
 
     @include laptop {
-      margin-right: $spacer * 6;
+      margin-right: 33px;
     }
 
     @include tablet {

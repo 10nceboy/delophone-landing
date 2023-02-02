@@ -4,6 +4,7 @@
   background: transparent;
   background-color: $white;
   border: none;
+  display: none;
 
   &:hover {
     color: $deep-blue;
@@ -81,14 +82,13 @@
 .login_white {
   @include flex-row;
   @include font(400, 16px, $white);
+  transition: $link-transition;
   background: transparent;
 
   @include laptop {
     @include visible;
     display: flex;
   }
-
-  transition: $link-transition;
 
   &:hover {
     color: $blue;
