@@ -41,3 +41,13 @@ if (!isTouchDevice()) {
     }
   });
 }
+
+/**fix hero iamge drag */
+
+const hero = document.querySelector('#hero');
+
+hero.addEventListener('mousedown', (event) => {
+  if (event.target === hero) {
+    event.preventDefault();
+  }
+});
