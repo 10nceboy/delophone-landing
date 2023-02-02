@@ -1,6 +1,10 @@
 .phone-business {
   margin-top: $spacer * 13;
 
+  @include tablet {
+    margin-top: 0px;
+  }
+
   @include laptop {
     margin-top: 0px;
   }
@@ -27,6 +31,11 @@
       @include font(400, 15px, $gray);
       line-height: 24px;
 
+      @include tablet {
+        line-height: 31px;
+        @include font(400, 18px, $gray);
+      }
+
       @include laptop {
         line-height: 31px;
         @include font(400, 20px, $gray);
@@ -35,7 +44,7 @@
 
     p {
       margin-bottom: $spacer;
-      @include laptop {
+      @include tablet {
         line-height: 31px;
       }
     }

@@ -5,6 +5,20 @@
   &__checklist {
     row-gap: 5px !important;
     margin-top: 0 !important;
+
+    :nth-child(2) {
+      order: 1;
+      @include laptop {
+        order: initial;
+      }
+    }
+
+    :nth-child(4) {
+      order: 1;
+      @include laptop {
+        order: initial;
+      }
+    }
   }
 
   &__content {
@@ -132,7 +146,7 @@
   &__downside {
     padding: $spacer * 4;
     display: block;
-    height: 230px;
+
     box-sizing: border-box;
     position: relative;
     z-index: 2;

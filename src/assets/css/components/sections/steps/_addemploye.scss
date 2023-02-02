@@ -115,3 +115,19 @@
     }
   }
 }
+
+.employe__list {
+  :nth-child(2) {
+    order: 1;
+    @include laptop {
+      order: initial;
+    }
+  }
+
+  :nth-child(4) {
+    order: 1;
+    @include laptop {
+      order: initial;
+    }
+  }
+}
