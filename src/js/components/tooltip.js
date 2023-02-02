@@ -46,6 +46,7 @@ tooltips.forEach((item) => {
   item.appendChild(tooltipContent);
 
   requestAnimationFrame(() => {
+    const arrow = tooltipContent.querySelector('.tooltip__arrow');
     const popper = createPopper(item, tooltipContent, {
       placement: 'top',
       animation: false,
@@ -58,25 +59,36 @@ tooltips.forEach((item) => {
             }
           }
         },
-        {
-          name: 'eventListeners',
-          options: {
-            scroll: false
-          }
-        },
+
         {
           name: 'flip',
           options: {
             fallbackPlacements: ['top']
           }
+        },
+        {
+          name: 'arrow',
+          options: {
+            element: arrow,
+            padding: {
+              top: -100
+            }
+          }
         }
       ]
     });
+    const width = item.getAttribute('data-tooltip-width');
 
     activator.addEventListener('mouseenter', () => {
       tooltipContent.classList.add('tooltip__inner_visible');
       popper.update();
       tooltipContent.classList.add('tooltip__inner_active');
+      popper.update();
+      /**set tooltip width */
+      if (width) {
+        tooltipContent.style.maxWidth = width;
+        tooltipContent.style.width = width;
+      }
     });
 
     activator.addEventListener('mouseleave', hideTooltip);

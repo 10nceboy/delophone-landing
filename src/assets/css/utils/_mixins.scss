@@ -102,6 +102,7 @@ $family: 'Manrope';
   @include laptop {
     margin-bottom: auto;
     margin-right: $right;
+
     &:last-child {
       margin-right: 0;
     }

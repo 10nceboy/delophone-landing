@@ -18,6 +18,17 @@ dropdowns.forEach((dropdown) => {
 
   let state = false;
 
+  const closeDropdown = (content) => {
+    content?.classList.remove('dropdown__content_active');
+    content.addEventListener(
+      'transitionend',
+      () => {
+        content?.classList.remove('dropdown__content_visible');
+      },
+      { once: true }
+    );
+  };
+
   if (isInline) {
     const dropdownId = dropdown.dataset.dropdown;
     const content = document.querySelector(
@@ -31,21 +42,15 @@ dropdowns.forEach((dropdown) => {
         if (state) {
           itemTransition(content, 'dropdown__content', state);
         } else {
-          content?.classList.remove('dropdown__content_active');
-          content.addEventListener(
-            'transitionend',
-            () => {
-              content?.classList.remove('dropdown__content_visible');
-            },
-            { once: true }
-          );
+          closeDropdown(content);
         }
-        activator.classList.toggle('dropdown_active');
       });
       content
         .querySelector('.dropdown__close')
         .addEventListener('click', () => {
-          content?.classList.toggle('dropdown__content_active');
+          state = !state;
+
+          closeDropdown(content);
         });
     }
     return;
