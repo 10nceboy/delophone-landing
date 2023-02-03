@@ -165,8 +165,10 @@
     }
 
     .dropdown__menu ul {
+      color: $white !important;
+
       @include tablet {
-        color: $white !important;
+        color: $gray !important;
       }
     }
   }
