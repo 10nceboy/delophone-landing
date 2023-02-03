@@ -40,16 +40,17 @@ dropdowns.forEach((dropdown) => {
         event.preventDefault();
         state = !state;
         if (state) {
+          activator.classList.add('dropdown_active');
           itemTransition(content, 'dropdown__content', state);
         } else {
           closeDropdown(content);
+          activator.classList.add('dropdown_active');
         }
       });
       content
         .querySelector('.dropdown__close')
         .addEventListener('click', () => {
           state = !state;
-
           closeDropdown(content);
         });
     }

@@ -1,9 +1,14 @@
 import { isTouchDevice, toggleOverflow } from '../utils/dom';
+import { smoothScrollSafari } from '../utils/polyfill';
 
 const scrollToSectionByLink = (link) => {
   const section = document.querySelector(link.getAttribute('href'));
   if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
+    if ('scrollBehavior' in document.documentElement.style) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      smoothScrollSafari(section);
+    }
   }
 };
 
