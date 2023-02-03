@@ -5,7 +5,6 @@ import {
 } from '../utils/dom';
 
 const dropdowns = document.querySelectorAll('.dropdown');
-const animationDuration = 600;
 
 const setDropdownValue = (dropdown, value) => {
   const button = dropdown.querySelector('.dropdown__button');
