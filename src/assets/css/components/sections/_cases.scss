@@ -26,6 +26,11 @@
       min-height: 250px;
     }
 
+    @include smartphone {
+      height: 290px;
+      max-height: 290px;
+    }
+
     @include tablet {
       padding: $spacer * 6;
       min-height: 340px;
