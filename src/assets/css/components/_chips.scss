@@ -1,6 +1,7 @@
 .chip {
   padding: $spacer * 3;
   border-radius: $border-radius-xs;
+  box-sizing: border-box;
 
   &_light-gray {
     @include tablet {

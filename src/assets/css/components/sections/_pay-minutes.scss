@@ -143,9 +143,10 @@
     }
   }
 
-  &__chip-container {
+  &__chips {
     height: auto;
     @include flex-col;
+    box-sizing: border-box;
 
     @include tablet {
       @include flex-row;
