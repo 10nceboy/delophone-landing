@@ -1,7 +1,7 @@
 .list-item {
   display: flex;
   font-size: 15px;
-  margin: 5px 0;
+  margin: 2.5px 0;
   line-height: 23px;
 
   &:last-child {
@@ -9,6 +9,10 @@
     @include laptop {
       margin: 0;
     }
+  }
+
+  @include tablet {
+    margin: 5px 0;
   }
 
   @include laptop {

@@ -5,6 +5,12 @@
 
     @include tablet {
       @include flex-row;
+      align-items: flex-start;
+      margin-top: $spacer * 5;
+      margin-bottom: 75px;
+    }
+
+    @include laptop {
       margin-top: $spacer * 14;
       margin-bottom: 150px;
     }
@@ -30,7 +36,7 @@
   &__header {
     margin-bottom: $spacer;
     @include tablet {
-      font-size: 26px;
+      font-size: 22px;
     }
 
     @include laptop {
@@ -42,5 +48,17 @@
   &__caption {
     color: $gray;
     line-height: 23px;
+
+    @include tablet {
+      line-height: 20px;
+      font-size: 13px;
+    }
+
+    @include tablet-1024 {
+      font-size: 14px;
+    }
+    @include laptop {
+      font-size: 16px;
+    }
   }
 }

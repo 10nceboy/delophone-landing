@@ -33,7 +33,7 @@
 
       @include tablet {
         line-height: 31px;
-        @include font(400, 18px, $gray);
+        @include font(400, 20px, $gray);
       }
 
       @include laptop {
