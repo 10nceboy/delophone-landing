@@ -55,6 +55,11 @@ export const isInViewport = (element) => {
   );
 };
 
+export const isMobile = () => {
+  const mediaQuery = window.matchMedia('(max-width: 640px)');
+  return mediaQuery.matches;
+};
+
 export const itemTransition = (
   el,
   className,
@@ -71,4 +76,17 @@ export const itemTransition = (
       el.classList.remove(`${className}${activeClass}`);
     });
   }
+};
+
+export const itemsTransitionLeave = (
+  el,
+  className,
+  duration,
+  activeClass = '_active',
+  visibleClass = '_visible'
+) => {
+  el.classList.remove(`${className}${activeClass}`);
+  setTimeout(() => {
+    el.classList.remove(`${className}${visibleClass}`);
+  }, duration);
 };

@@ -99,7 +99,7 @@ $family: 'Manrope';
     margin-bottom: 0;
   }
 
-  @include laptop {
+  @include tablet() {
     margin-bottom: auto;
     margin-right: $right;
 

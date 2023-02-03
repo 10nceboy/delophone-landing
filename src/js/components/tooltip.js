@@ -1,5 +1,5 @@
 import { createPopper } from '@popperjs/core';
-import { isTouchDevice } from '../utils/dom';
+import { isMobile, isTouchDevice } from '../utils/dom';
 const svg = `
 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="7.5" cy="7.5" r="7" stroke="#F88C28"/>
@@ -48,12 +48,19 @@ tooltips.forEach((item) => {
 
   requestAnimationFrame(() => {
     const arrow = tooltipContent.querySelector('.tooltip__arrow');
+    /**center at mobile devices */
+
+    const mobileProps = isMobile() ? [{}] : [];
+
+    console.log(mobileProps);
+
     const popper = createPopper(item, tooltipContent, {
       placement: 'top',
       animation: false,
       modifiers: [
         {
           name: 'offset',
+          enabled: true,
           options: {
             offset: () => {
               return [2, 10];
@@ -63,6 +70,7 @@ tooltips.forEach((item) => {
 
         {
           name: 'flip',
+          enabled: false,
           options: {
             fallbackPlacements: ['top']
           }
@@ -70,12 +78,10 @@ tooltips.forEach((item) => {
         {
           name: 'arrow',
           options: {
-            element: arrow,
-            padding: {
-              top: -100
-            }
+            element: arrow
           }
-        }
+        },
+        ...mobileProps
       ]
     });
     const width = item.getAttribute('data-tooltip-width');

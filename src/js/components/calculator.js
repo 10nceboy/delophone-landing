@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }`;
       priceParenEl.classList.remove('calculator__price_disabled');
       if (monthlyPriceEL && monthlyPrice) {
-        monthlyPriceEL.textContent = `${formattedmonthlyPrice} ₽ / месяц.`;
+        monthlyPriceEL.textContent = `${formattedmonthlyPrice} ₽ / месяц`;
       }
       if (tooltip) {
         tooltip.style.display = 'block';
@@ -112,25 +112,37 @@ document.addEventListener('DOMContentLoaded', () => {
       onChangeDebounced(input, price, monthlyPrice);
     };
 
-    multiplier
-      .querySelector('.calculator__increment')
-      .addEventListener('click', () => increment(input));
-    multiplier
-      .querySelector('.calculator__decrement')
-      .addEventListener('click', () => decrement(input));
+    let intervalIncrement, intervalDecrement;
 
-    input.addEventListener('click', (event) => {
-      event.preventDefault();
+    const incrementEl = multiplier.querySelector('.calculator__increment');
+
+    incrementEl.addEventListener('click', () => {
+      increment(input);
+    });
+
+    incrementEl.addEventListener('mousedown', () => {
+      intervalIncrement = setInterval(() => increment(input), 150);
+    });
+
+    incrementEl.addEventListener('mouseup', () => {
+      clearInterval(intervalIncrement);
+    });
+
+    const decrementEl = multiplier.querySelector('.calculator__decrement');
+    decrementEl.addEventListener('click', () => {
+      decrement(input);
+    });
+
+    decrementEl.addEventListener('mousedown', () => {
+      intervalDecrement = setInterval(() => decrement(input), 150);
+    });
+
+    decrementEl.addEventListener('mouseup', () => {
+      clearInterval(intervalDecrement);
     });
 
     input.addEventListener('change', () => {
       handleInputChange(event);
     });
-
-    input.addEventListener('keydown', (event) => {
-      event.preventDefault();
-    });
-
-    input.addEventListener('paste', (e) => e.preventDefault());
   });
 });

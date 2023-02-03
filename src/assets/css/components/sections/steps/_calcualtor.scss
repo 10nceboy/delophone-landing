@@ -47,11 +47,11 @@
     font-size: 16px;
     line-height: 20.8px;
 
-    @include tablet {
+    @include smartphone {
       font-size: 18px !important;
     }
 
-    @include laptop {
+    @include tablet {
       font-size: 20px !important;
     }
   }
@@ -64,34 +64,74 @@
     padding: $spacer * 3;
     margin-top: $spacer * 4;
     flex: 1;
-
     @include flex-col;
 
     @include tablet {
       display: block;
-      min-width: 481px;
+      min-width: 410px;
+      max-width: 410px;
       max-width: none;
       margin-top: 0;
       flex: auto;
       padding: $spacer * 4;
+    }
+
+    @include laptop {
+      min-width: 481px;
     }
   }
 
   &__chips {
     display: none;
 
+    @include smartphone {
+      display: flex;
+      margin-top: $spacer * 2;
+    }
+
     @include tablet {
+      display: none;
+    }
+
+    @include laptop {
       display: flex;
       margin-top: $spacer * 3;
       font-size: 14px;
     }
+
     .chip {
-      @include gap($spacer * 2, $spacer * 2);
+      margin-right: $spacer * 2;
+      color: $gray;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @include smartphone {
+        display: flex;
+        margin-top: $spacer * 2;
+      }
     }
   }
 
   &__start {
+    margin-top: $spacer;
+    margin-bottom: $spacer * 2;
+    @include font(400, 14px, $black);
+
+    @include smartphone {
+      display: none;
+    }
+
     @include tablet {
+      display: block;
+      white-space: nowrap;
+      margin-top: $spacer * 2;
+      margin-bottom: 0;
+      @include font(400, 15px, $black);
+    }
+
+    @include laptop {
       display: none;
     }
   }
@@ -128,7 +168,12 @@
       .calculator__price {
         &::before {
           min-width: unset;
+
           @include tablet {
+            min-width: 288px;
+          }
+
+          @include laptop {
             min-width: 488px;
           }
         }
@@ -189,6 +234,10 @@
       }
 
       .text_regular {
+        @include smartphone {
+          font-size: 18px;
+        }
+
         @include tablet {
           line-height: 31px;
         }
@@ -208,7 +257,19 @@
 
       @include tablet {
         max-width: 100%;
-        width: auto;
+        min-width: 400px;
+
+        &::after {
+          display: none !important;
+        }
+      }
+
+      @include laptop {
+        min-width: 100%;
+
+        &::after {
+          display: block !important;
+        }
       }
     }
 
@@ -295,12 +356,14 @@
 
       &::before {
         @include tablet {
-          max-width: 10px !important;
-          display: none;
+          min-width: 80px !important;
+          max-width: 80px !important;
+          margin-left: 20px;
         }
 
         @include laptop {
-          max-width: 78px !important;
+          min-width: 144px !important;
+          max-width: inherit !important;
         }
       }
     }
@@ -329,9 +392,17 @@
       min-width: 0px !important;
       position: static;
 
+      @include smartphone {
+        font-size: 18px;
+      }
+
       @include tablet {
         display: none;
       }
+    }
+
+    @include smartphone {
+      font-size: 18px;
     }
 
     @include tablet {
@@ -514,19 +585,10 @@
   }
 
   &__summary {
-    &_mobile {
-      h4 {
-        color: $white;
-      }
-      @include font(400, 14px, $white);
-      padding: 20px 15px;
-
-      @include tablet {
-        display: none;
-      }
-    }
+    display: none;
 
     @include tablet {
+      display: flex;
       padding: $spacer * 4 $spacer * 6;
       background: $light-gray;
       border: 1px solid $light-gray;
@@ -534,6 +596,19 @@
 
       h4 {
         margin-right: $spacer * 5;
+      }
+    }
+
+    &_mobile {
+      @include font(400, 14px, $white);
+      padding: 20px 15px;
+
+      @include tablet {
+        display: none;
+      }
+
+      h4 {
+        color: $white;
       }
     }
 
@@ -552,8 +627,13 @@
       content: ' ₽  разово,';
     }
 
+    @include smartphone {
+      font-size: 18px;
+    }
+
     @include tablet {
       color: $black;
+      font-size: inherit;
     }
   }
 
@@ -562,6 +642,14 @@
     color: $gray2;
     margin-left: $spacer;
     font-weight: 400;
+
+    @include smartphone {
+      font-size: 18px;
+    }
+
+    @include tablet {
+      font-size: inherit;
+    }
 
     &::after {
       display: inline;
@@ -632,12 +720,6 @@
     }
   }
 
-  &__start {
-    margin-top: $spacer;
-    margin-bottom: $spacer * 2;
-    @include font(400, 14px, $black);
-  }
-
   &__price-fixed {
     transition: color 0.2s ease-in-out;
     color: $orange;
@@ -655,6 +737,10 @@
   &__price-per-month {
     color: $orange;
 
+    @include smartphone {
+      font-size: 18px;
+    }
+
     @include tablet {
       color: $gray2;
       font-size: 16px;
@@ -663,7 +749,6 @@
 
     @include laptop {
       font-size: 18px;
-      line-height: 130%;
     }
 
     @include desktop {

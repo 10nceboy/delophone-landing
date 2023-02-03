@@ -1,6 +1,11 @@
-import { clickOutside, itemTransition } from '../utils/dom';
+import {
+  clickOutside,
+  itemTransition,
+  itemsTransitionLeave
+} from '../utils/dom';
 
 const dropdowns = document.querySelectorAll('.dropdown');
+const animationDuration = 600;
 
 const setDropdownValue = (dropdown, value) => {
   const button = dropdown.querySelector('.dropdown__button');
@@ -44,7 +49,7 @@ dropdowns.forEach((dropdown) => {
           itemTransition(content, 'dropdown__content', state);
         } else {
           closeDropdown(content);
-          activator.classList.add('dropdown_active');
+          activator.classList.remove('dropdown_active');
         }
       });
       content
@@ -58,11 +63,13 @@ dropdowns.forEach((dropdown) => {
   }
 
   let dropdownState = false;
-
   dropdown.addEventListener('click', () => {
     dropdownState = !dropdownState;
-
-    itemTransition(dropdown, 'dropdown', dropdownState);
+    if (!dropdownState) {
+      itemsTransitionLeave(dropdown, 'dropdown', 600);
+    } else {
+      itemTransition(dropdown, 'dropdown', dropdownState);
+    }
   });
 
   const items = dropdown.querySelectorAll('.dropdown__menu li');
