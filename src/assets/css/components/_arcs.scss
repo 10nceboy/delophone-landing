@@ -48,3 +48,38 @@
     }
   }
 }
+
+.arc__calc {
+  display: none;
+  height: 0;
+  z-index: 1;
+  position: relative;
+
+  @include laptop {
+    display: block;
+    height: 0;
+    z-index: 1;
+    position: relative;
+    right: -94%;
+  }
+
+  @include desktop {
+    right: -96%;
+  }
+
+  &::before {
+    display: none;
+
+    @include laptop {
+      display: block;
+      position: absolute;
+      content: url('/arc-step-5.svg');
+      top: -170px;
+      z-index: -1;
+    }
+
+    @include desktop {
+      top: -152px;
+    }
+  }
+}

@@ -104,6 +104,7 @@
       }
 
       svg {
+        min-height: 15px;
         height: 18px;
         width: 18px;
         margin-right: 5px;
@@ -240,6 +241,9 @@
     margin-left: 0px;
     align-items: baseline;
     font-size: 15px;
+    .tooltip__activator {
+      max-width: 18px;
+    }
 
     @include tablet {
       margin-left: $spacer * 2;
@@ -284,4 +288,8 @@
   @include tablet {
     align-items: baseline;
   }
+}
+
+.pay-minutes__tooltip {
+  max-width: 20px;
 }

@@ -80,6 +80,8 @@
   }
 
   &__upside {
+    position: relative;
+    z-index: 3;
     img {
       height: 350px;
     }

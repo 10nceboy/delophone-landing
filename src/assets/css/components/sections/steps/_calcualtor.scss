@@ -83,8 +83,10 @@
     @include tablet {
       display: flex;
       margin-top: $spacer * 3;
-      gap: $spacer * 2;
       font-size: 14px;
+    }
+    .chip {
+      @include gap($spacer * 2, $spacer * 2);
     }
   }
 

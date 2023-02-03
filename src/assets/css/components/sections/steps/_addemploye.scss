@@ -36,13 +36,15 @@
 
     &::before {
       display: none;
+
       @include laptop {
         display: block;
         position: absolute;
         content: url('/circe-steps.svg');
         top: -246px;
-        transform: translateX(calc(-150% + 12px));
+        transform: translateX(calc(-150% + 20px));
         max-width: 312px;
+        z-index: -2;
         user-select: none;
       }
     }
