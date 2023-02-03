@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.calculator__sum-per-month'
   );
 
-  let commonPrice = 1900;
+  let commonPrice = 1990;
   let commonMonthlyPrice = 0;
 
   const setSum = (value) => {

@@ -4,7 +4,7 @@ let timeoutIdOver = null;
 let timeoutIdOut = null;
 
 let over = false;
-const delayMS = 250;
+const delayMS = 100;
 
 const smoothContentSwitch = (element, newContent) => {
   element.style.opacity = 0;

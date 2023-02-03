@@ -52,22 +52,6 @@
       }
     }
 
-    h4 {
-      margin-left: $spacer * 2;
-      font-size: 16px;
-      line-height: 130%;
-
-      @include tablet {
-        font-size: 17px;
-        line-height: 22px;
-      }
-
-      @include laptop {
-        font-size: 20px;
-        margin-left: $spacer * 4;
-      }
-    }
-
     svg {
       min-width: 60px;
       @include tablet {
@@ -112,6 +96,23 @@
   &__card-header {
     @include tablet {
       margin-bottom: $spacer * 2;
+    }
+
+    h4 {
+      margin-left: $spacer * 2;
+      font-size: 16px;
+      line-height: 26px;
+
+      @include tablet {
+        font-size: 17px;
+        line-height: 22px;
+      }
+
+      @include laptop {
+        font-size: 20px;
+        line-height: 26px;
+        margin-left: $spacer * 4;
+      }
     }
   }
 

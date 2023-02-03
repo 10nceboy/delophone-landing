@@ -132,7 +132,6 @@
     &__login {
       display: block;
       order: -1;
-
       margin-left: auto;
 
       @include laptop {
@@ -143,6 +142,10 @@
         .button__login-button {
           margin-left: 0;
         }
+      }
+
+      svg {
+        transition: all 0.2s ease-in;
       }
     }
 
@@ -162,6 +165,7 @@
     margin-top: $spacer * 6;
     line-height: 21px;
     padding: $spacer * 4;
+    color: $white;
 
     @include laptop {
       border-radius: 0;
