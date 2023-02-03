@@ -83,3 +83,24 @@
     }
   }
 }
+
+.arc__employe_left {
+  position: relative;
+  &::before {
+    display: none;
+
+    @include laptop {
+      display: block;
+      position: absolute;
+      content: url('/public/circe-steps.svg');
+      left: -58px;
+      top: -171px;
+      z-index: 1;
+
+      @include desktop {
+        top: -150px;
+        left: -119px;
+      }
+    }
+  }
+}
