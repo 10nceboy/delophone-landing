@@ -10,14 +10,6 @@
     padding: $spacer * 9 $spacer * 10;
   }
 
-  &__card {
-    padding: $spacer * 4;
-
-    @include tablet {
-      padding: 0;
-    }
-  }
-
   &__table {
     background: $white;
     padding: $spacer * 4;
@@ -50,9 +42,11 @@
     box-sizing: border-box;
     background: $light-gray;
     border-radius: $border-radius-xs;
-    max-width: 250px;
+    max-width: 100%;
     padding: $spacer * 3;
     margin-top: $spacer * 4;
+
+    flex: 1;
 
     @include flex-col;
 
@@ -61,6 +55,7 @@
       min-width: 481px;
       max-width: none;
       margin-top: 0;
+      flex: auto;
       padding: $spacer * 4;
     }
   }
@@ -153,7 +148,7 @@
         min-width: 142px;
 
         @include laptop {
-          @include font(500, 16px, $black);
+          @include font(500, 20px, $black);
           line-height: 26px;
         }
 
@@ -242,7 +237,7 @@
     padding: 0px 20px;
     position: absolute;
     top: 100%;
-    left: -230px;
+    left: -220px;
     width: 290px;
     color: $orange !important;
 
@@ -432,6 +427,13 @@
     }
 
     @include tablet {
+      font-size: 18px;
+      white-space: nowrap;
+      font-weight: 400;
+      line-height: 31px;
+    }
+
+    @include laptop {
       font-size: 20px;
       white-space: nowrap;
       font-weight: 400;
