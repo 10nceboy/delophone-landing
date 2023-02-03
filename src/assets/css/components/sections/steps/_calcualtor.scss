@@ -43,6 +43,19 @@
     }
   }
 
+  &__section-header {
+    font-size: inherit;
+    line-height: 130%;
+
+    @include tablet {
+      font-size: 18px !important;
+    }
+
+    @include laptop {
+      font-size: 20px !important;
+    }
+  }
+
   &__head {
     box-sizing: border-box;
     background: $light-gray;
@@ -227,6 +240,14 @@
         position: static;
       }
     }
+
+    &_mobile-hidden {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+    }
   }
 
   &__price {
@@ -271,6 +292,14 @@
           font-size: 20px;
         }
       }
+
+      @include tablet {
+        font-size: 18px;
+      }
+
+      @include laptop {
+        font-size: inherit;
+      }
     }
 
     &_shifted {
@@ -278,6 +307,11 @@
       font-size: 20px;
 
       &::before {
+        @include tablet {
+          max-width: 10px !important;
+          display: none;
+        }
+
         @include laptop {
           max-width: 78px !important;
         }
@@ -383,9 +417,18 @@
 
       p {
         max-width: 460px;
+
         min-width: 460px;
         position: relative;
       }
+    }
+
+    @include laptop {
+      min-width: 480px;
+    }
+
+    @include desktop {
+      min-width: 485px;
     }
   }
 
