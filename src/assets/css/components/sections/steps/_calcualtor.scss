@@ -43,6 +43,19 @@
     }
   }
 
+  &__section-header {
+    font-size: inherit;
+    line-height: 130%;
+
+    @include tablet {
+      font-size: 18px !important;
+    }
+
+    @include laptop {
+      font-size: 20px !important;
+    }
+  }
+
   &__head {
     box-sizing: border-box;
     background: $light-gray;
@@ -50,7 +63,6 @@
     max-width: 100%;
     padding: $spacer * 3;
     margin-top: $spacer * 4;
-
     flex: 1;
 
     @include flex-col;
@@ -228,6 +240,14 @@
         position: static;
       }
     }
+
+    &_mobile-hidden {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+    }
   }
 
   &__price {
@@ -249,12 +269,17 @@
 
     @include tablet {
       margin-left: $spacer * 2;
-      font-size: 18px;
+      font-size: 16px;
+    }
+
+    @include desktop {
+      white-space: nowrap;
     }
 
     &_disabled {
       font-weight: 500;
       color: $gray;
+      white-space: nowrap;
 
       .tooltip {
         display: none;
@@ -267,6 +292,14 @@
           font-size: 20px;
         }
       }
+
+      @include tablet {
+        font-size: 18px;
+      }
+
+      @include laptop {
+        font-size: inherit;
+      }
     }
 
     &_shifted {
@@ -274,6 +307,11 @@
       font-size: 20px;
 
       &::before {
+        @include tablet {
+          max-width: 10px !important;
+          display: none;
+        }
+
         @include laptop {
           max-width: 78px !important;
         }
@@ -355,10 +393,22 @@
     }
   }
 
+  &__price-container {
+    display: block;
+
+    @include tablet {
+      @include flex-col;
+    }
+
+    @include desktop {
+      display: block;
+    }
+  }
+
   &__ip-tel {
     @include tablet {
       align-items: flex-end;
-      min-width: 485px;
+      min-width: 467px;
       max-width: 485px;
 
       .text_regular {
@@ -367,9 +417,28 @@
 
       p {
         max-width: 460px;
+
         min-width: 460px;
         position: relative;
       }
+    }
+
+    @include laptop {
+      min-width: 480px;
+    }
+
+    @include desktop {
+      min-width: 485px;
+    }
+  }
+
+  &__ip-tel-tooltip {
+    position: absolute;
+    left: calc(60% - 10px);
+    top: 24px;
+
+    @include smartphone {
+      position: static;
     }
   }
 
@@ -588,13 +657,30 @@
 
     @include tablet {
       color: $black;
+      font-size: 18px;
+    }
+
+    @include laptop {
+      font-size: inherit;
     }
   }
+
   &__price-per-month {
     color: $orange;
 
     @include tablet {
       color: $gray;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    @include laptop {
+      font-size: 18px;
+      line-height: 130%;
+    }
+
+    @include desktop {
+      margin-left: $spacer;
     }
   }
 }
