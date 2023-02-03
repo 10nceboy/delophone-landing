@@ -25,6 +25,7 @@
 
   &__section {
     margin-bottom: $spacer * 4;
+    padding-bottom: $spacer * 2;
     border-bottom: 1px solid #cdd6df;
 
     @include tablet {
@@ -34,6 +35,10 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &:last-child,
+    &:first-child {
       border: none;
     }
   }
@@ -142,6 +147,7 @@
       max-width: 142px;
       box-sizing: border-box;
       margin-right: $spacer * 3;
+      position: relative;
 
       h4 {
         font-size: 20px;
@@ -364,6 +370,16 @@
         min-width: 460px;
         position: relative;
       }
+    }
+  }
+
+  &__ip-tel-tooltip {
+    position: absolute;
+    left: calc(60% - 10px);
+    top: 24px;
+
+    @include smartphone {
+      position: static;
     }
   }
 
