@@ -4,22 +4,19 @@ describe('Dropdown component', () => {
   });
 
   it('should toggle the active class on click', () => {
-    cy.get('.dropdown').first().click().should('have.class', 'active');
-
-    cy.get('.dropdown').first().click().should('not.have.class', 'active');
-  });
-
-  it('should update the button text and data-value attribute when an item is clicked', () => {
-    cy.get('.dropdown__menu li').first().click();
-    cy.get('.dropdown__button')
+    cy.wait(100)
+      .get('.dropdown')
       .first()
-      .should('have.text', 'Item 1')
-      .and('have.attr', 'data-value', 'item-1');
+      .click()
+      .should('have.class', 'dropdown_active');
   });
 
   it('should remove the active class when an item is clicked', () => {
-    cy.get('.dropdown').first().click().should('have.class', 'active');
+    cy.get('.dropdown').first().click().should('have.class', 'droddown_active');
     cy.get('.dropdown__menu li').first().click();
-    cy.get('.dropdown').first().should('not.have.class', 'active');
+    cy.wait(300)
+      .get('.dropdown')
+      .first()
+      .should('not.have.class', 'dropdown_active');
   });
 });

@@ -74,7 +74,6 @@
       }
 
       @include laptop {
-        margin-left: -$spacer * 8;
         white-space: nowrap;
         display: block;
       }
