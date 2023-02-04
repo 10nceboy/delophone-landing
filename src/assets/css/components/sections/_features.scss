@@ -67,7 +67,27 @@
   }
 
   &__checklist {
+    @include mobile-s {
+      display: flex;
+      flex-direction: column;
+      width: calc(100vw - 80px);
+      line-height: 20px;
+
+      li {
+        margin-right: 5px;
+      }
+    }
+
     @include smartphone {
+      display: flex;
+      width: calc(100vw - 80px);
+
+      li {
+        margin-right: 5px;
+      }
+    }
+
+    @include mobile-s {
       display: flex;
       width: calc(100vw - 80px);
 
@@ -206,6 +226,16 @@
   }
 
   .list {
+    @include mobile-s {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      column-gap: 0;
+      row-gap: $spacer * 2;
+      white-space: nowrap;
+      width: 100%;
+      font-size: 16px;
+    }
+
     @include smartphone {
       display: grid;
       grid-template-columns: 50% 50%;
