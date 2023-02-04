@@ -221,7 +221,6 @@
     color: $white;
     background: $black;
     padding: $spacer * 4;
-    align-items: flex-start;
     box-sizing: border-box;
 
     @include tablet {
@@ -284,6 +283,7 @@
       width: unset;
       grid-template-columns: 160px 160px;
       column-gap: $spacer * 7;
+      row-gap: 10px;
     }
   }
 
@@ -293,6 +293,10 @@
     @include flex-row;
     height: 42px;
 
+    svg {
+      max-height: 40px;
+    }
+
     @include tablet {
       margin-bottom: 0;
       height: auto;
@@ -301,25 +305,23 @@
       h4 {
         font-size: 18px;
       }
-    }
 
-    svg {
-      margin-right: 12px;
-      max-height: 40px;
-
-      @include tablet {
-        margin-right: 0px;
-      }
-
-      @include laptop {
-        margin-right: $spacer * 5;
-        max-height: none;
-        margin-left: 12px;
+      svg {
+        margin-right: 10px;
+        max-height: 60px;
       }
     }
 
     @include laptop {
-      margin-right: $spacer * 4;
+      max-height: none;
+
+      h4 {
+        font-size: 20px;
+      }
+
+      svg {
+        margin-right: 20px;
+      }
     }
   }
 
