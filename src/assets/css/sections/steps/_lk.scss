@@ -20,13 +20,20 @@
       }
 
       @include tablet {
-        padding: $spacer * 6 $spacer * 10;
+        display: grid;
+        grid-template-columns: 500px auto;
+        align-items: center;
+        padding: $spacer * 4 $spacer * 6;
       }
 
       @include laptop {
+        padding: $spacer * 6 $spacer * 10;
+
         min-height: auto;
         height: 116px;
         align-items: flex-start;
+        display: flex;
+        flex-direction: column;
       }
 
       .lk__text {
@@ -109,10 +116,6 @@
       }
     }
 
-    @include laptop {
-      margin-right: 33px;
-    }
-
     @include tablet {
       &__text {
         color: $light-gray !important;
@@ -149,6 +152,10 @@
     margin-top: $spacer * 2;
     text-align: center;
     width: 100%;
+
+    @include tablet {
+      display: none;
+    }
 
     @include tablet {
       margin-top: $spacer * 4;

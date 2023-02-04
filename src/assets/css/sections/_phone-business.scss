@@ -18,7 +18,7 @@
     }
 
     @include laptop {
-      max-width: 540px;
+      min-width: 540px;
       width: 540px;
       margin-right: 85px;
 
