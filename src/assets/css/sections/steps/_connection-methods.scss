@@ -6,6 +6,10 @@
 
   &__main {
     @include tablet {
+      padding: 50px 20px;
+    }
+
+    @include laptop {
       padding: 50px;
     }
   }

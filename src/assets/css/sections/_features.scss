@@ -224,7 +224,7 @@
     box-sizing: border-box;
 
     @include tablet {
-      padding: $spacer * 6 $spacer * 4;
+      padding: $spacer * 6 $spacer * 2;
       box-sizing: initial;
       display: flex;
       flex-direction: row;
