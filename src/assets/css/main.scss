@@ -8,21 +8,10 @@
 @import './components/dropdown.scss';
 @import './components/login';
 @import './components/link';
-@import './components/sections/hero';
 @import './components/cards';
 @import './components/footer';
-@import './components/sections/phone-business';
-@import './components/sections/pay-minutes';
 @import './components/chips';
-@import './components/sections/steps/steps';
-@import './components/sections/startuse';
-@import './components/sections/features';
-@import './components/sections/stats';
-@import './components/sections/faq';
-@import './components/sections/cases';
-@import './components/sections/cases-bot';
 @import './components/arcs';
-
 @import './components/list';
 @import './components/list-item';
 @import './components/collapse';
@@ -32,6 +21,16 @@
 @import './components/tabs';
 @import './components/carousel';
 @import './components/tooltip';
+@import './components/icon';
 
-@import './components/sections/steps/calcualtor';
-@import './components/sections/steps/lk';
+/**sections**/
+@import './sections/hero';
+@import './sections/phone-business';
+@import './sections/pay-minutes';
+@import './sections/startuse';
+@import './sections/features';
+@import './sections/steps/steps'; /* <= imports all step sections */
+@import './sections/stats';
+@import './sections/faq';
+@import './sections/cases';
+@import './sections/cases-bot';

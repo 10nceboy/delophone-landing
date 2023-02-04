@@ -10,9 +10,9 @@ const smoothContentSwitch = (element, newContent) => {
   element.style.opacity = 0;
   setTimeout(() => {
     element.innerHTML = newContent;
-    element.style.transition = 'opacity 0.2s ease-in-out';
+    element.style.transition = 'opacity 0.15s ease-in-out';
     element.style.opacity = 1;
-  }, 200);
+  }, 150);
 };
 
 if (!isTouchDevice()) {

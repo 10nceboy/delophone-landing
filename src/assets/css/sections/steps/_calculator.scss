@@ -1,3 +1,5 @@
+$line-width: 140px;
+
 .calculator {
   box-sizing: border-box;
   background: $white;
@@ -241,6 +243,10 @@
         @include tablet {
           line-height: 31px;
         }
+
+        @include laptop {
+          font-size: 20px;
+        }
       }
     }
 
@@ -362,7 +368,7 @@
         }
 
         @include laptop {
-          min-width: 144px !important;
+          min-width: $line-width !important;
           max-width: inherit !important;
         }
       }
@@ -380,6 +386,7 @@
       @include tablet {
         font-size: 20px !important;
         color: $gray;
+        margin-left: 0;
       }
 
       &::before {
@@ -419,8 +426,8 @@
 
     &::before {
       display: none;
-      max-width: 144px;
-      min-width: 144px;
+      max-width: $line-width;
+      min-width: $line-width;
 
       @include tablet {
         display: block;
@@ -440,8 +447,8 @@
       }
 
       @include laptop {
-        max-width: 144px;
-        min-width: 144px;
+        max-width: $line-width;
+        min-width: $line-width;
       }
     }
 
@@ -471,11 +478,7 @@
 
       .text_regular {
         white-space: normal;
-      }
-
-      p {
         max-width: 460px;
-
         min-width: 460px;
         position: relative;
       }
@@ -543,6 +546,7 @@
   &__increment,
   &__decrement {
     background: transparent;
+    transition: $link-transition;
     color: $gray;
     font-size: 20px;
     border: none;
@@ -697,6 +701,15 @@
       @include flex-row;
       margin-right: 70px;
       max-width: 300px;
+    }
+  }
+
+  &__in-out-icon {
+    @include tablet {
+      margin-right: $spacer * 2;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 
