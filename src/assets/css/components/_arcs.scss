@@ -6,7 +6,7 @@
     &::before {
       display: block;
       position: absolute;
-      content: url('/public/arc-step1-tabl.svg');
+      content: url('/arc-step1-tabl.svg');
       z-index: 1;
       right: 50%;
 
@@ -32,7 +32,7 @@
     &::before {
       display: block;
       position: absolute;
-      content: url('/public/arc_step4-tabl.svg');
+      content: url('/arc_step4-tabl.svg');
       z-index: 1;
       right: 31%;
       @include smartphone {
@@ -92,7 +92,7 @@
     @include laptop {
       display: block;
       position: absolute;
-      content: url('/public/circe-steps.svg');
+      content: url('/circe-steps.svg');
       left: -58px;
       top: -171px;
       z-index: 1;
