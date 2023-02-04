@@ -45,18 +45,22 @@
     line-height: 23.25px;
     display: block;
 
-    @include laptop {
+    @include smartphone {
       grid-template-columns: repeat(2, 1fr) !important;
-      @include font(400, 16px, $gray);
+      @include font(400, 15px, $gray);
       grid-column-gap: $spacer !important;
       display: grid;
 
-      line-height: 24.8px;
+      line-height: 21px;
       margin-top: $spacer * 2;
 
       svg {
         margin-right: 12px;
       }
+    }
+
+    @include laptop {
+      line-height: 24.8px;
     }
   }
 
@@ -78,6 +82,15 @@
 .step-upside {
   &__header-text {
     margin-left: $spacer * 3;
+
+    h3 {
+      @include tablet {
+        font-size: 24px;
+      }
+      @include laptop {
+        font-size: 26px;
+      }
+    }
   }
 }
 

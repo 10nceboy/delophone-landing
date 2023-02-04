@@ -4,6 +4,7 @@
 
   &__checklist {
     row-gap: 0px;
+
     @include tablet {
       margin-top: 0 !important;
     }
@@ -29,6 +30,7 @@
 
   &__image {
     display: none;
+
     @include tablet {
       align-self: center;
     }
@@ -46,9 +48,19 @@
     img {
       width: 290px;
       height: 320px;
+
       @include smartphone {
         width: 320px;
       }
+
+      @include tablet {
+        width: 290px;
+        height: 290px;
+      }
+    }
+
+    @include tablet {
+      height: 300px;
     }
 
     @include laptop {
@@ -94,7 +106,7 @@
 
     @include tablet {
       @include font(400, 16px, $gray);
-      line-height: 24.8px;
+      line-height: 23.25px;
       margin-bottom: $spacer * 2;
       margin-top: $spacer * 5;
     }
@@ -106,11 +118,11 @@
     align-items: initial;
     margin-top: $spacer * 2;
 
-    @include laptop {
+    @include tablet {
       @include flex-row;
       align-items: center;
       justify-content: flex-start;
-      margin-top: 35px;
+      margin-top: $spacer * 7;
     }
 
     &-text {
@@ -148,25 +160,33 @@
   &__downside {
     padding: $spacer * 4;
     display: block;
-
     box-sizing: border-box;
     position: relative;
     z-index: 2;
 
     @include smartphone {
-      height: 175px;
+      height: auto;
     }
 
     @include tablet {
+      display: flex;
+    }
+
+    @include laptop {
       padding: $spacer * 6 $spacer * 10;
       height: 200px;
     }
 
     @include laptop {
-      display: flex;
       justify-content: space-between;
       flex-direction: row;
       height: auto;
+    }
+
+    &-textblock {
+      @include tablet {
+        flex: 1;
+      }
     }
 
     &-text {
@@ -174,6 +194,10 @@
       line-height: 21px;
       margin-top: $spacer * 2;
       margin-bottom: $spacer * 4;
+
+      @include tablet-1024 {
+        font-size: 15px;
+      }
 
       @include laptop {
         @include font(400, 16px, $light-gray);
@@ -197,9 +221,18 @@
     padding: $spacer * 3 $spacer * 6;
     display: none;
 
-    @include laptop {
+    @include tablet {
       display: block;
       margin-right: $spacer * 5;
+      padding: $spacer * 3 $spacer * 2;
+      width: 205px;
+      font-size: 15px;
+    }
+
+    @include laptop {
+      font-size: 16px;
+      padding: 15px 30px;
+      width: 256px;
     }
 
     &_mobile {
@@ -218,6 +251,10 @@
   padding: $spacer * 3 $spacer * 2;
   width: 100%;
 
+  @include tablet {
+    width: auto;
+  }
+
   text-align: center;
   @include laptop {
     display: none;
@@ -225,7 +262,11 @@
 }
 
 .multichannel__downside-header {
-  @include laptop {
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include tablet-1024 {
     font-size: 20px;
   }
 
