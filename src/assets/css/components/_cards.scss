@@ -58,7 +58,7 @@
     padding: $spacer * 3;
 
     @include tablet {
-      padding: 40px 20px 40px 20px;
+      padding: 50px 10px 30px 15px;
       min-width: 160px;
       max-width: 160px;
       max-height: 160px;
@@ -92,9 +92,13 @@
       @include font(500, 16px, $black);
       line-height: 21px;
 
+      @include tablet {
+        font-size: 15px;
+      }
+
       @include laptop {
         margin-bottom: $spacer;
-        @include font(500, 18px, 23.4px);
+        @include font(500, 18px, $black);
       }
     }
   }
@@ -117,6 +121,10 @@
 
   @include tablet {
     display: block;
+  }
+
+  @include laptop {
+    font-size: 16px;
   }
 }
 

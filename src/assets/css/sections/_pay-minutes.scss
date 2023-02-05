@@ -381,3 +381,9 @@
     }
   }
 }
+
+.pay-minutes__content {
+  @include tablet {
+    width: 100%;
+  }
+}

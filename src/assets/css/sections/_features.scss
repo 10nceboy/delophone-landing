@@ -41,11 +41,6 @@
     @include tablet {
       margin-right: $spacer * 6;
       min-width: 395px;
-      margin-bottom: $spacer * 4;
-    }
-
-    @include laptop {
-      box-sizing: content-box;
     }
 
     h3 {
@@ -93,8 +88,7 @@
 
   &__checklist {
     @include mobile-s {
-      display: flex;
-      flex-direction: column;
+      @include flex-col;
       width: calc(100vw - 30px);
       line-height: 20px;
 
@@ -105,15 +99,6 @@
 
     @include smartphone {
       flex-direction: column;
-      display: flex;
-      width: calc(100vw - 80px);
-
-      li {
-        margin-right: 5px;
-      }
-    }
-
-    @include mobile-s {
       display: flex;
       width: calc(100vw - 80px);
 
@@ -154,7 +139,6 @@
     display: block;
     font-weight: 600;
     line-height: 26px;
-    font-size: 20px;
     font-size: inherit;
 
     @include smartphone {
@@ -162,7 +146,6 @@
     }
 
     @include tablet {
-      display: inline;
       line-height: 34px;
       margin-left: 5px;
     }
@@ -178,18 +161,19 @@
     width: 100%;
 
     @include tablet {
-      width: 100%;
-      flex-grow: 0;
       display: grid;
       grid-template-columns: repeat(2, auto);
-      gap: $spacer * 2;
+      grid-row-gap: $spacer * 2;
+      grid-column-gap: $spacer * 2;
+      flex-grow: 0;
     }
 
     @include laptop {
       display: grid;
       grid-template-columns: repeat(2, minmax(245px, 1fr));
       grid-template-rows: repeat(2, 183px);
-      gap: $spacer * 3;
+      grid-gap: 0px;
+      gap: 15px;
     }
   }
 
@@ -203,19 +187,22 @@
     }
 
     @include tablet {
-      height: auto;
+      width: 390px;
+      height: 170px;
+      margin-bottom: 0px;
+    }
+
+    @include tablet-1024 {
+      width: 415px;
+      height: 170px;
+      margin-bottom: 0px;
     }
 
     @include laptop {
-      height: 183px;
-      padding: 20px;
-      width: auto;
-    }
-
-    @include desktop {
       width: 280px;
       height: 183px;
       padding: 20px;
+      margin-bottom: $spacer * 3;
     }
   }
 
@@ -309,6 +296,9 @@
 
     svg {
       max-height: 40px;
+      margin-right: 12px;
+      min-height: 40px;
+      min-width: 40px;
     }
 
     @include tablet {

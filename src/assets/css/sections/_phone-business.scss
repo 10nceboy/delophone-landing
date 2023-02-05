@@ -346,7 +346,7 @@
       display: none;
 
       @include laptop {
-        content: url('/public/arc-6.svg');
+        content: url('/arc-6.svg');
         position: absolute;
         z-index: 1;
         top: 25%;
@@ -421,7 +421,7 @@
 
   div {
     @include tablet {
-      margin-right: $spacer * 2;
+      margin-right: $spacer;
 
       &:last-child {
         margin-right: 0;
@@ -447,7 +447,7 @@
 
   div {
     @include tablet {
-      margin-right: $spacer * 2;
+      margin-right: $spacer;
     }
 
     &:last-child {
