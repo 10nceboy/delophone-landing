@@ -54,8 +54,8 @@
       }
 
       @include tablet {
-        width: 290px;
-        height: 290px;
+        width: 270px;
+        height: 320px;
       }
     }
 
@@ -95,6 +95,9 @@
     z-index: 3;
     img {
       height: 350px;
+    }
+    @include tablet {
+      padding-top: 10px;
     }
   }
 
@@ -170,6 +173,7 @@
 
     @include tablet {
       display: flex;
+      padding: $spacer * 4 $spacer * 6;
     }
 
     @include laptop {
@@ -195,6 +199,10 @@
       margin-top: $spacer * 2;
       margin-bottom: $spacer * 4;
 
+      @include tablet {
+        margin-bottom: 0px;
+      }
+
       @include tablet-1024 {
         font-size: 15px;
       }
@@ -202,7 +210,6 @@
       @include laptop {
         @include font(400, 16px, $light-gray);
         line-height: 24.8px;
-        margin-bottom: 0px;
         margin-top: $spacer;
       }
     }

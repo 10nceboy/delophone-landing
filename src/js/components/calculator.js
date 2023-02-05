@@ -67,12 +67,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const formattedPrice = formatNumber(price * inputValue);
       const formattedmonthlyPrice = formatNumber(monthlyPrice * inputValue);
 
-      priceEl.textContent = `${formattedPrice}₽ разово${
-        monthlyPriceEL ? ',' : ''
-      }`;
+      priceEl.textContent = `${formattedPrice}₽ разово${monthlyPriceEL ? ',' : ''
+        }`;
       priceParenEl.classList.remove('calculator__price_disabled');
       if (monthlyPriceEL && monthlyPrice) {
-        monthlyPriceEL.textContent = `${formattedmonthlyPrice} ₽ / месяц`;
+        monthlyPriceEL.textContent = `${formattedmonthlyPrice} ₽ / мес`;
       }
       if (tooltip) {
         tooltip.style.display = 'block';

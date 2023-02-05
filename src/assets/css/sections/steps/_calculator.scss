@@ -9,6 +9,10 @@ $line-width: 140px;
 
   @include tablet {
     max-width: 1110px;
+    padding: $spacer * 6 $spacer * 6;
+  }
+
+  @include laptop {
     padding: $spacer * 9 $spacer * 10;
   }
 
@@ -677,7 +681,6 @@ $line-width: 140px;
     }
 
     @include flex-col;
-    width: 100%;
 
     svg {
       display: none;
@@ -690,6 +693,7 @@ $line-width: 140px;
     @include tablet {
       margin-top: $spacer * 6;
       @include flex-row;
+      width: 100%;
 
       h5 {
         font-size: inherit;

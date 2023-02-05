@@ -27,7 +27,7 @@
 
   &__content {
     @include tablet {
-      padding: 50px 20px;
+      padding: 30px 30px;
     }
     @include laptop {
       padding: $spacer * 10;
@@ -46,6 +46,7 @@
       max-width: 573px;
       padding: $spacer * 4 $spacer * 6;
       display: block;
+      hyphens: auto;
     }
   }
 

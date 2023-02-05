@@ -58,9 +58,13 @@
     max-width: 100%;
 
     @include tablet {
-      padding: $spacer * 6 38px $spacer * 6 $spacer * 6;
+      padding: $spacer * 6;
       background-color: $white;
       height: 157px;
+    }
+
+    @include laptop {
+      padding: $spacer * 6 38px $spacer * 6 $spacer * 6;
     }
   }
 
@@ -72,6 +76,10 @@
     @include mobile-s {
       padding-left: $spacer * 2;
       padding-right: $spacer * 2;
+    }
+
+    @include tablet {
+      padding: $spacer * 6;
     }
 
     @include laptop {
