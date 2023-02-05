@@ -1,3 +1,7 @@
+/**
+ * Get scrollbar width for page (need to add it when scrolling is turned off)
+ * @returns
+ */
 export const getScrollbarWidth = () => {
   const outer = document.createElement('div');
   outer.style.visibility = 'hidden';
@@ -10,6 +14,10 @@ export const getScrollbarWidth = () => {
   return scrollbarWidth;
 };
 
+/**
+ * Cross-browser turn on / off of page scrolling (for modals, dialogs, etc)
+ * @param {boolean} flag
+ */
 export const toggleOverflow = (flag) => {
   if (flag) {
     const paddingRight = getScrollbarWidth();
@@ -23,18 +31,19 @@ export const toggleOverflow = (flag) => {
   }
 };
 
-export const isTouchDevice = () => {
-  return (
-    'ontouchstart' in window ||
-    navigator.maxTouchPoints ||
-    navigator.msMaxTouchPoints
-  );
-};
-
+/**
+ * Scrolls window to specific element
+ * @param {HTMLElement} element
+ */
 export const scrollToElement = (element) => {
   element.scrollIntoView({ behavior: 'smooth', block: 'center' });
 };
 
+/**
+ * Add a handler for click ouside of specific element
+ * @param {HTMLElement} element
+ * @param {function} callback
+ */
 export const clickOutside = (element, callback) => {
   document.addEventListener('click', (event) => {
     if (!element.contains(event.target)) {
@@ -43,6 +52,11 @@ export const clickOutside = (element, callback) => {
   });
 };
 
+/**
+ * Checks if element is in viewport
+ * @param {HTMLElement} element
+ * @returns {boolean}
+ */
 export const isInViewport = (element) => {
   const rect = element.getBoundingClientRect();
   return (
@@ -55,38 +69,89 @@ export const isInViewport = (element) => {
   );
 };
 
-export const isMobile = () => {
-  const mediaQuery = window.matchMedia('(max-width: 640px)');
-  return mediaQuery.matches;
-};
-
-export const itemTransition = (
+/**
+ * Make a enter transition for element with specifific className, by adding visibleClass than activeClass on the next animation frame
+ * @param {HTMLElement} el
+ * @param {string} className
+ * @param {string} activeClass
+ * @param {string} visibleClass
+ */
+export const transitionEnter = (
   el,
   className,
-  state,
   activeClass = '_active',
   visibleClass = '_visible'
 ) => {
-  if (state) {
-    el?.classList.add(`${className}${visibleClass}`);
-    requestAnimationFrame(() => el.classList.add(`${className}${activeClass}`));
-  } else {
-    el?.classList.remove(`${className}${visibleClass}`);
-    requestAnimationFrame(() => {
-      el.classList.remove(`${className}${activeClass}`);
-    });
-  }
+  el?.classList.add(`${className}${visibleClass}`);
+  requestAnimationFrame(() => el.classList.add(`${className}${activeClass}`));
 };
 
-export const itemsTransitionLeave = (
+/**
+ * Make a leave transition for element with specifific className, by removing activeClass than removing visibleClass when transition ends
+ * @param {HTMLElement} el
+ * @param {string} className
+ * @param {string} activeClass
+ * @param {string} visibleClass
+ */
+export const transitionLeave = (
   el,
   className,
-  duration,
   activeClass = '_active',
   visibleClass = '_visible'
 ) => {
+  el.addEventListener(
+    'transitionend',
+    (event) => {
+      if (event.target === el) {
+        el.classList.remove(`${className}${visibleClass}`);
+      }
+    },
+    { once: true }
+  );
   el.classList.remove(`${className}${activeClass}`);
-  setTimeout(() => {
-    el.classList.remove(`${className}${visibleClass}`);
-  }, duration);
+};
+
+/**
+ * get Media Query state
+ * @returns {boolean}
+ */
+export const getDeviceType = () => {
+  const breakpoints = {
+    mobile: 360,
+    smartphone: 480,
+    tablet: 960,
+    laptop: 1200
+  };
+
+  let deviceType = '';
+
+  for (const [key, value] of Object.entries(breakpoints)) {
+    if (window.matchMedia(`(min-width: ${value}px)`).matches) {
+      deviceType = key;
+    }
+  }
+  return deviceType || 'mobile';
+};
+
+/**
+ * Check if device supports touching events
+ * @returns {boolean}
+ */
+export const isTouchDevice = () => {
+  return (
+    'ontouchstart' in window ||
+    navigator.maxTouchPoints ||
+    navigator.msMaxTouchPoints
+  );
+};
+
+/**
+ * Return offset between midle of screen by X
+ * @param {*} el
+ * @returns
+ */
+export const getMiddleXOffset = (el) => {
+  const { left, width } = el.getBoundingClientRect();
+  const offsetX = (160 - (left + width / 2)) / 2;
+  return Math.floor(offsetX);
 };

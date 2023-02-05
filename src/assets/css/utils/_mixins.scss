@@ -100,6 +100,7 @@ $family: 'Manrope';
   transition: $transition;
 }
 
+/**safari gap polyfill **/
 @mixin gap($right, $bottom) {
   margin-bottom: $bottom;
 
@@ -117,7 +118,13 @@ $family: 'Manrope';
   }
 }
 
+/** collapse **/
+
 @mixin collapse {
+  max-height: 0;
+  will-change: max-heigth;
+  overflow: hidden;
+
   &_visible {
     display: block;
     opacity: 0;
@@ -126,7 +133,7 @@ $family: 'Manrope';
   &_active {
     opacity: 1;
     overflow: visible;
-    max-height: 1000px;
+    max-height: 1500px;
     display: block;
   }
 }

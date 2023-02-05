@@ -44,7 +44,6 @@
 
   &__button {
     transition: $link-transition;
-
     @include font(400, 16px, $black);
     cursor: pointer;
     background: transparent;
@@ -57,16 +56,15 @@
 
     &::after {
       content: url('/arrow-down.svg');
-      transition: transform $dropdown-transition;
+      transition: $dropdown-transition;
+      display: flex;
+      margin-left: $spacer;
+      padding-top: $spacer;
+      transform: scale(0.7);
 
       @include laptop {
         transform: scale(1);
       }
-
-      transform: scale(0.7);
-      display: flex;
-      margin-left: $spacer;
-      padding-top: $spacer;
     }
 
     @include laptop {
@@ -91,6 +89,7 @@
     position: absolute;
     z-index: 1;
     overflow: visible;
+    transition: $dropdown-transition;
 
     @include tablet {
       display: auto;
@@ -99,12 +98,11 @@
     &_list {
       @include font(400, 14px, $gray);
       @include flex-col;
-
       padding: $spacer * 4 $spacer * 5;
       background: $light-gray;
-      border-radius: $border-radius-xs;
 
       @include tablet {
+        border-radius: $border-radius-xs;
         box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
       }
 
@@ -179,16 +177,20 @@
         color: $blue;
 
         &::after {
-          transform: rotateX(180deg) translateY(-2px);
+          transform: rotateX(180deg) translateY(-2px) scale(0.7);
           content: url('/arrow-down.svg');
+
+          @include laptop {
+            transform: rotateX(180deg) translateY(-2px) scale(1);
+          }
         }
       }
 
       &__menu {
-        transition: transform $dropdown-transition;
         display: block;
         position: relative;
         z-index: 0;
+        opacity: 1;
 
         @include laptop {
           position: absolute;
@@ -210,8 +212,10 @@
   }
 
   &_visible {
-    .dropdown__menu {
-      opacity: 1;
+    .dropdown {
+      &__menu {
+        display: block;
+      }
     }
   }
 

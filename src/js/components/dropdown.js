@@ -1,11 +1,11 @@
-import {
-  clickOutside,
-  itemTransition,
-  itemsTransitionLeave
-} from '../utils/dom';
+import { clickOutside, transitionEnter, transitionLeave } from '../utils/dom';
 
 const dropdowns = document.querySelectorAll('.dropdown');
-
+/**
+ * Set value of dropdown in data-value attribute
+ * @param {HTMLElement} dropdown
+ * @param {any} value
+ */
 const setDropdownValue = (dropdown, value) => {
   const button = dropdown.querySelector('.dropdown__button');
   dropdown.dataset.value = value;
@@ -22,17 +22,6 @@ dropdowns.forEach((dropdown) => {
 
   let state = false;
 
-  const closeDropdown = (content) => {
-    content?.classList.remove('dropdown__content_active');
-    content.addEventListener(
-      'transitionend',
-      () => {
-        content?.classList.remove('dropdown__content_visible');
-      },
-      { once: true }
-    );
-  };
-
   if (isInline) {
     const dropdownId = dropdown.dataset.dropdown;
     const content = document.querySelector(
@@ -45,12 +34,13 @@ dropdowns.forEach((dropdown) => {
         state = !state;
         if (state) {
           activator.classList.add('dropdown_active');
-          itemTransition(content, 'dropdown__content', state);
+          transitionEnter(content, 'dropdown__content');
         } else {
-          closeDropdown(content);
+          transitionLeave(content, 'dropdown__content');
           activator.classList.remove('dropdown_active');
         }
       });
+      /**handle close btn click */
       content
         .querySelector('.dropdown__close')
         .addEventListener('click', () => {
@@ -61,13 +51,12 @@ dropdowns.forEach((dropdown) => {
     return;
   }
 
-  let dropdownState = false;
   dropdown.addEventListener('click', () => {
-    dropdownState = !dropdownState;
-    if (!dropdownState) {
-      itemsTransitionLeave(dropdown, 'dropdown', 600);
+    state = !state;
+    if (state) {
+      transitionEnter(dropdown, 'dropdown');
     } else {
-      itemTransition(dropdown, 'dropdown', dropdownState);
+      transitionLeave(dropdown, 'dropdown');
     }
   });
 
@@ -82,6 +71,6 @@ dropdowns.forEach((dropdown) => {
 
   clickOutside(dropdown, () => {
     dropdown.classList.remove('dropdown_active', 'dropdown_visible');
-    dropdownState = false;
+    state = false;
   });
 });

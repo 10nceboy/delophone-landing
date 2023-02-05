@@ -1,5 +1,15 @@
-import { createPopper } from '@popperjs/core';
-import { isMobile, isTouchDevice } from '../utils/dom';
+import {
+  computePosition,
+  arrow,
+  offset,
+  detectOverflow
+} from '@floating-ui/dom';
+import {
+  getDeviceType,
+  transitionEnter,
+  transitionLeave,
+  getMiddleXOffset
+} from '../utils/dom';
 const svg = `
 <svg class="icon" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="7.5" cy="7.5" r="7" stroke="#F88C28"/>
@@ -33,9 +43,10 @@ const tooltips = document.querySelectorAll('.tooltip');
 const hideTooltip = (event) => {
   const tooltipContent =
     event.target?.parentNode?.querySelector('.tooltip__inner');
-  tooltipContent?.classList.remove('tooltip__inner_active');
-  tooltipContent?.classList.remove('tooltip__inner_visible');
+  transitionLeave(tooltipContent, 'tooltip__inner');
 };
+
+const deviceType = getDeviceType();
 
 tooltips.forEach((item) => {
   let activator = item?.querySelector('.tooltip__activator');
@@ -47,54 +58,79 @@ tooltips.forEach((item) => {
   item.appendChild(tooltipContent);
 
   requestAnimationFrame(() => {
-    const arrow = tooltipContent.querySelector('.tooltip__arrow');
+    const arrowEl = tooltipContent.querySelector('.tooltip__arrow');
+
     /**center at mobile devices */
-
-    // const mobileProps = isMobile() ? [{}] : [];
-
-    const popper = createPopper(item, tooltipContent, {
-      placement: 'top',
-      animation: false,
-      modifiers: [
-        {
-          name: 'offset',
-          enabled: true,
-          options: {
-            offset: () => {
-              return [2, 10];
-            }
-          }
-        },
-
-        {
-          name: 'flip',
-          enabled: false,
-          options: {
-            fallbackPlacements: ['top']
-          }
-        },
-        {
-          name: 'arrow',
-          options: {
-            element: arrow
-          }
+    let overflow = null;
+    const mobileDisplay = {
+      name: 'middleware',
+      async fn(middlewareArguments) {
+        if (deviceType !== 'mobile') {
+          return { middlewareArguments };
         }
-      ]
-    });
-    const width = item.getAttribute('data-tooltip-width');
+        const padding = 15;
+        overflow = await detectOverflow(middlewareArguments);
 
-    activator.addEventListener('mouseenter', () => {
-      tooltipContent.classList.add('tooltip__inner_visible');
-      popper.update();
-      tooltipContent.classList.add('tooltip__inner_active');
-      popper.update();
-      /**set tooltip width */
-      if (width) {
-        if (!isTouchDevice()) {
-          tooltipContent.style.maxWidth = width;
-          tooltipContent.style.width = width;
-        }
+        middlewareArguments.middlewareData.arrow.x =
+          middlewareArguments.middlewareData.arrow.x - overflow.left - padding;
+
+        return {
+          ...middlewareArguments,
+          x: middlewareArguments.x + overflow.left + padding,
+          y: middlewareArguments.y
+        };
       }
+    };
+
+    const computePopperPosition = async () => {
+      const { x, y, middlewareData } = await computePosition(
+        activator,
+        tooltipContent,
+        {
+          placement: 'top',
+          animation: false,
+          middleware: [
+            offset(10),
+            arrow({
+              element: arrowEl
+            }),
+            mobileDisplay
+          ]
+        }
+      );
+
+      Object.assign(tooltipContent.style, {
+        left: `${x}px`,
+        top: `${y}px`
+      });
+
+      const arrowData = middlewareData.arrow;
+      if (arrowData) {
+        const { x: arrowX, y: arrowY } = arrowData;
+
+        Object.assign(arrowEl.style, {
+          left: arrowX != null ? `${arrowX}px` : '',
+          top: arrowY != null ? `${arrowY}px` : ''
+        });
+      }
+    };
+
+    let width =
+      item.getAttribute(`data-tooltip-width-${deviceType}`) ??
+      'max(calc(100vw - 30px)';
+
+    tooltipContent.style.maxWidth = width;
+    tooltipContent.style.width = width;
+
+    computePopperPosition();
+
+    activator.addEventListener('mouseenter', async () => {
+      await computePopperPosition();
+
+      transitionEnter(tooltipContent, 'tooltip__inner');
+      window.setTimeout(async () => {
+        computePopperPosition();
+      });
     });
 
     activator.addEventListener('mouseleave', hideTooltip);
