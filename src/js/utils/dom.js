@@ -1,3 +1,7 @@
+/**
+ * Get scrollbar width for page (need to add it when scrolling is turned off)
+ * @returns
+ */
 export const getScrollbarWidth = () => {
   const outer = document.createElement('div');
   outer.style.visibility = 'hidden';
@@ -10,6 +14,10 @@ export const getScrollbarWidth = () => {
   return scrollbarWidth;
 };
 
+/**
+ * Cross-browser turn on / off of page scrolling (for modals, dialogs, etc)
+ * @param {boolean} flag
+ */
 export const toggleOverflow = (flag) => {
   if (flag) {
     const paddingRight = getScrollbarWidth();
@@ -23,18 +31,19 @@ export const toggleOverflow = (flag) => {
   }
 };
 
-export const isTouchDevice = () => {
-  return (
-    'ontouchstart' in window ||
-    navigator.maxTouchPoints ||
-    navigator.msMaxTouchPoints
-  );
-};
-
+/**
+ * Scrolls window to specific element
+ * @param {HTMLElement} element
+ */
 export const scrollToElement = (element) => {
   element.scrollIntoView({ behavior: 'smooth', block: 'center' });
 };
 
+/**
+ * Add a handler for click ouside of specific element
+ * @param {HTMLElement} element
+ * @param {function} callback
+ */
 export const clickOutside = (element, callback) => {
   document.addEventListener('click', (event) => {
     if (!element.contains(event.target)) {
@@ -43,6 +52,11 @@ export const clickOutside = (element, callback) => {
   });
 };
 
+/**
+ * Checks if element is in viewport
+ * @param {HTMLElement} element
+ * @returns {boolean}
+ */
 export const isInViewport = (element) => {
   const rect = element.getBoundingClientRect();
   return (
@@ -55,38 +69,65 @@ export const isInViewport = (element) => {
   );
 };
 
+/**
+ * Make a enter transition for element with specifific className, by adding visibleClass than activeClass on the next animation frame
+ * @param {HTMLElement} el
+ * @param {string} className
+ * @param {string} activeClass
+ * @param {string} visibleClass
+ */
+export const transitionEnter = (
+  el,
+  className,
+  activeClass = '_active',
+  visibleClass = '_visible'
+) => {
+  el?.classList.add(`${className}${visibleClass}`);
+  requestAnimationFrame(() => el.classList.add(`${className}${activeClass}`));
+};
+
+/**
+ * Make a leave transition for element with specifific className, by removing activeClass than removing visibleClass when transition ends
+ * @param {HTMLElement} el
+ * @param {string} className
+ * @param {string} activeClass
+ * @param {string} visibleClass
+ */
+export const transitionLeave = (
+  el,
+  className,
+  activeClass = '_active',
+  visibleClass = '_visible'
+) => {
+  el.addEventListener(
+    'transitionend',
+    (event) => {
+      if (event.target === el) {
+        el.classList.remove(`${className}${visibleClass}`);
+      }
+    },
+    { once: true }
+  );
+  el.classList.remove(`${className}${activeClass}`);
+};
+
+/**
+ * Checks if app running on mobile device Mobile by media queries API
+ * @returns {boolean}
+ */
 export const isMobile = () => {
   const mediaQuery = window.matchMedia('(max-width: 640px)');
   return mediaQuery.matches;
 };
 
-export const itemTransition = (
-  el,
-  className,
-  state,
-  activeClass = '_active',
-  visibleClass = '_visible'
-) => {
-  if (state) {
-    el?.classList.add(`${className}${visibleClass}`);
-    requestAnimationFrame(() => el.classList.add(`${className}${activeClass}`));
-  } else {
-    el?.classList.remove(`${className}${visibleClass}`);
-    requestAnimationFrame(() => {
-      el.classList.remove(`${className}${activeClass}`);
-    });
-  }
-};
-
-export const itemsTransitionLeave = (
-  el,
-  className,
-  duration,
-  activeClass = '_active',
-  visibleClass = '_visible'
-) => {
-  el.classList.remove(`${className}${activeClass}`);
-  setTimeout(() => {
-    el.classList.remove(`${className}${visibleClass}`);
-  }, duration);
+/**
+ * Check if device supports touching events
+ * @returns {boolean}
+ */
+export const isTouchDevice = () => {
+  return (
+    'ontouchstart' in window ||
+    navigator.maxTouchPoints ||
+    navigator.msMaxTouchPoints
+  );
 };

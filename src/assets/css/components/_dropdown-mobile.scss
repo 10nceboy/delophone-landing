@@ -1,0 +1,28 @@
+.dropdown_mobile {
+  @include mobile {
+    .dropdown__menu {
+      background: $black !important;
+      position: relative;
+      max-height: 0px;
+      height: auto;
+      overflow: hidden;
+      opacity: 0;
+      transition: $collapse-transition-height;
+    }
+
+    &.dropdown_active {
+      .dropdown__menu {
+        max-height: 1000px;
+        overflow: visible;
+        display: block;
+        opacity: 1;
+      }
+    }
+
+    &.dropdown_visible {
+      .dropdown__menu {
+        display: block;
+      }
+    }
+  }
+}

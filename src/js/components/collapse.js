@@ -1,4 +1,9 @@
-import { scrollToElement, isInViewport, itemTransition } from '../utils/dom';
+import {
+  scrollToElement,
+  isInViewport,
+  transitionEnter,
+  transitionLeave
+} from '../utils/dom';
 
 const renderArrow = (collapse) => {
   const arrow = collapse.querySelector('.collapse__arrow');
@@ -12,7 +17,7 @@ const renderArrow = (collapse) => {
 };
 
 let scrolling = false;
-const animationDruation = 500;
+const animationDruation = 400;
 
 document.addEventListener('DOMContentLoaded', () => {
   const collapsibles = document.querySelectorAll('.collapse');
@@ -22,10 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const arrow = renderArrow(collapse);
     let state = false;
     const content = collapse.querySelector('.collapse__content');
+    const activator = collapse.querySelector('.collapse__activator');
+
     collapse.addEventListener('click', () => {
       if (animated || scrolling) {
         return false;
       }
+      state = !state;
       animated = true;
       window.setTimeout(() => (animated = false), 320);
 
@@ -33,20 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
         arrow.classList.toggle('collapse__arrow_active');
       }
 
-      state = !state;
-
       if (state) {
-        itemTransition(content, 'collapse__content', state);
-        collapse
-          .querySelector('.collapse__activator')
-          .classList.toggle('collapse__activator_active');
+        activator.classList.toggle('collapse__activator_active');
+        transitionEnter(content, 'collapse__content');
       } else {
-        content.classList.remove('collapse__content_active');
-        content.classList.remove('collapse__content_visble');
+        transitionLeave(content, 'collapse__content');
         window.setTimeout(() => {
-          collapse
-            .querySelector('.collapse__activator')
-            .classList.toggle('collapse__activator_active');
+          activator.classList.toggle('collapse__activator_active');
         }, animationDruation);
       }
 
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (state && !isInViewport(content)) {
           scrolling = true;
           scrollToElement(collapse);
-          window.setTimeout(() => (scrolling = false), 300);
+          window.setTimeout(() => (scrolling = false), animationDruation);
         }
       }),
         animationDruation;
