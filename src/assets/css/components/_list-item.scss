@@ -13,6 +13,11 @@
 
   @include tablet {
     margin: 5px 0;
+    font-size: 14px;
+  }
+
+  @include tablet-1024 {
+    font-size: 16px;
   }
 
   @include laptop {

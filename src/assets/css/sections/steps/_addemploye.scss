@@ -26,6 +26,9 @@
   }
 
   &__content {
+    @include tablet {
+      padding: 50px 20px;
+    }
     @include laptop {
       padding: $spacer * 10;
       box-sizing: border-box;

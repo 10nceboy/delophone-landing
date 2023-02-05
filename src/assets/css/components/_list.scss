@@ -11,7 +11,7 @@
     @include flex-col;
     row-gap: 0px;
 
-    @include laptop {
+    @include smartphone {
       display: grid;
       grid-template-columns: 160px 160px;
       grid-template-rows: 25px 25px;
