@@ -112,12 +112,25 @@ export const transitionLeave = (
 };
 
 /**
- * Checks if app running on mobile device Mobile by media queries API
+ * get Media Query state
  * @returns {boolean}
  */
-export const isMobile = () => {
-  const mediaQuery = window.matchMedia('(max-width: 640px)');
-  return mediaQuery.matches;
+export const getDeviceType = () => {
+  const breakpoints = {
+    mobile: 360,
+    smartphone: 480,
+    tablet: 960,
+    laptop: 1200
+  };
+
+  let deviceType = '';
+
+  for (const [key, value] of Object.entries(breakpoints)) {
+    if (window.matchMedia(`(min-width: ${value}px)`).matches) {
+      deviceType = key;
+    }
+  }
+  return deviceType || 'mobile';
 };
 
 /**
@@ -130,4 +143,15 @@ export const isTouchDevice = () => {
     navigator.maxTouchPoints ||
     navigator.msMaxTouchPoints
   );
+};
+
+/**
+ * Return offset between midle of screen by X
+ * @param {*} el
+ * @returns
+ */
+export const getMiddleXOffset = (el) => {
+  const { left, width } = el.getBoundingClientRect();
+  const offsetX = (160 - (left + width / 2)) / 2;
+  return Math.floor(offsetX);
 };

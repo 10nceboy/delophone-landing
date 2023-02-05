@@ -71,6 +71,6 @@ dropdowns.forEach((dropdown) => {
 
   clickOutside(dropdown, () => {
     dropdown.classList.remove('dropdown_active', 'dropdown_visible');
-    dropdownState = false;
+    state = false;
   });
 });
