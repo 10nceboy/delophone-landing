@@ -86,8 +86,7 @@
       grid-template-rows: auto auto;
       align-items: self-end;
       justify-content: center;
-      grid-column-gap: 5px;
-      font-size: 12px;
+      grid-column-gap: 10px;
     }
 
     @include smartphone {
@@ -96,7 +95,6 @@
       grid-template-rows: auto auto;
       align-items: self-end;
       justify-content: center;
-      grid-column-gap: 10px;
     }
 
     &_container {
@@ -264,11 +262,11 @@
       .text_semibold {
         font-size: 14px;
       }
+    }
 
-      @include smartphone {
-        .text_semibold {
-          font-size: 15p;
-        }
+    @include smartphone {
+      .text_semibold {
+        font-size: 15p;
       }
     }
 
@@ -278,6 +276,10 @@
 
     @include tablet {
       margin-left: $spacer * 2;
+
+      .text_semibold {
+        font-size: 16px;
+      }
     }
   }
 
@@ -353,7 +355,17 @@
     flex-direction: column;
 
     .text_semibold {
+      font-size: 16px;
+    }
+
+    .text_caption {
       font-size: 15px;
+    }
+  }
+
+  @include laptop {
+    .text_semibold {
+      font-size: 16px;
     }
 
     .text_caption {

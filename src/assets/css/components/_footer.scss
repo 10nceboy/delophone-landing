@@ -20,6 +20,11 @@
   .footer-upside {
     @include flex-col;
 
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     @include laptop {
       @include flex-row;
       justify-content: space-between;
@@ -35,7 +40,7 @@
         max-width: none;
       }
 
-      @include laptop {
+      @include tablet {
         margin-bottom: 0px;
         margin-top: 0px;
       }
@@ -100,6 +105,10 @@
     }
 
     &__menu {
+      @include tablet {
+        align-self: center;
+      }
+
       ul {
         @include flex-col;
         margin-top: $spacer * 2;
@@ -107,6 +116,7 @@
         @include tablet {
           @include flex-row;
           margin-top: 0;
+          align-self: center;
         }
 
         li {
@@ -134,6 +144,12 @@
       order: -1;
       margin-left: auto;
 
+      @include tablet {
+        order: initial;
+        grid-column-start: 2;
+        grid-row-start: 1;
+      }
+
       @include laptop {
         @include flex-row;
         order: initial;
@@ -152,7 +168,9 @@
     &__start-button {
       margin-top: $spacer * 5;
 
-      @include laptop {
+      @include tablet {
+        max-width: 230px;
+        margin-left: auto;
         margin-top: 0;
       }
     }

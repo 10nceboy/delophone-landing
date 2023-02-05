@@ -163,7 +163,7 @@ h5 {
   @include smartphone {
     font-size: 15px;
   }
-  @include laptop {
+  @include tablet {
     display: none;
   }
 }
@@ -171,7 +171,11 @@ h5 {
 .text_visible {
   display: none;
 
-  @include laptop {
+  @include tablet {
     display: block;
+    font-size: 15px;
+  }
+  @include laptop {
+    font-size: 14px;
   }
 }
