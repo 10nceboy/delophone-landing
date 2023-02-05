@@ -29,3 +29,25 @@
 .no-wrap {
   white-space: nowrap;
 }
+
+.tablet-only {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include laptop {
+    display: none;
+  }
+}
+
+.tablet-hidden {
+  @include tablet {
+    display: none;
+  }
+
+  @include laptop {
+    display: block;
+  }
+}
