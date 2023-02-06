@@ -223,13 +223,16 @@
 
   &__button {
     width: 100%;
-    justify-content: flex-start;
     margin-right: 0px;
     z-index: 2;
 
     @include tablet {
       flex-direction: row;
       justify-content: flex-start;
+
+      .container-adaptive {
+        justify-content: flex-start;
+      }
     }
 
     &_small {
@@ -261,4 +264,8 @@
     font-size: 16px;
     line-height: 24.8px;
   }
+}
+
+.hero__button .container_adaptive {
+  justify-content: flex-start;
 }
