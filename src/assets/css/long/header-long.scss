@@ -26,7 +26,7 @@
       padding-left: $spacer * 2;
       margin-top: $spacer * 2;
 
-      @include tablet {
+      @include laptop {
         @include flex-row(flex-start);
         border-radius: $border-radius-xs;
         box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
@@ -39,7 +39,7 @@
       }
     }
 
-    @include tablet {
+    @include laptop {
       max-height: auto !important;
       z-index: 1;
       right: 0;
@@ -74,7 +74,7 @@
     @include font(600, 16px, $black);
     font-size: 14px;
 
-    @include tablet {
+    @include laptop {
       font-size: 16px;
 
       line-height: 24.8px;
@@ -165,7 +165,7 @@
       overflow: visible;
     }
 
-    @include tablet {
+    @include laptop {
       display: block;
     }
   }

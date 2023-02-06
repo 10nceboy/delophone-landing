@@ -81,6 +81,13 @@ $family: 'Manrope';
   }
 }
 
+/**only for tablets**/
+@mixin tablet-only {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
 /*fonts*/
 @mixin font($weight, $size, $color, $fam: $family) {
   font: $weight $size $fam;
