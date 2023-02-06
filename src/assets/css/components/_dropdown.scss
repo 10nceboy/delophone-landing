@@ -287,22 +287,24 @@
 }
 
 .dropdown_mobile {
-  @include mobile {
+  @include smartphone-only {
     .dropdown__menu {
       background: $black !important;
       position: relative;
       max-height: 0px;
       height: auto;
+      display: none;
       overflow: hidden;
+      display: none;
       opacity: 0;
+      margin: 0;
       transition: $collapse-transition-height;
     }
 
     &.dropdown_active {
       .dropdown__menu {
-        max-height: 1000px;
+        max-height: 1500px;
         overflow: visible;
-        display: block;
         opacity: 1;
       }
     }
@@ -331,10 +333,6 @@
       div {
         box-shadow: none;
       }
-    }
-
-    .dropdown__arrow {
-      display: none;
     }
 
     &.dropdown_active {

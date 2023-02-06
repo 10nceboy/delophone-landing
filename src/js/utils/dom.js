@@ -97,18 +97,13 @@ export const transitionLeave = (
   el,
   className,
   activeClass = '_active',
-  visibleClass = '_visible'
+  visibleClass = '_visible',
+  duration = 500
 ) => {
-  el.addEventListener(
-    'transitionend',
-    (event) => {
-      if (event.target === el) {
-        el.classList.remove(`${className}${visibleClass}`);
-      }
-    },
-    { once: true }
-  );
   el.classList.remove(`${className}${activeClass}`);
+  setTimeout(() => {
+    el.classList.remove(`${className}${visibleClass}`);
+  }, duration);
 };
 
 /**
@@ -144,4 +139,3 @@ export const isTouchDevice = () => {
     navigator.msMaxTouchPoints
   );
 };
-

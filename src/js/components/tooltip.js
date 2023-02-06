@@ -4,13 +4,7 @@ import {
   offset,
   detectOverflow
 } from '@floating-ui/dom';
-import {
-  getDeviceType,
-  transitionEnter,
-  transitionLeave,
-} from '../utils/dom';
-
-
+import { getDeviceType, transitionEnter, transitionLeave } from '../utils/dom';
 
 const svg = `
 <svg class="icon" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,9 +37,9 @@ const renderActivator = (element) => {
 const tooltips = document.querySelectorAll('.tooltip');
 
 const hideTooltip = (event) => {
-  const tooltipContent =
-    event.target?.parentNode?.querySelector('.tooltip__inner');
-  transitionLeave(tooltipContent, 'tooltip__inner');
+  const tooltipContent = event.target?.parentNode
+    ?.querySelector('.tooltip__inner')
+    ?.classList.remove('tooltip__inner_visible');
 };
 
 const deviceType = getDeviceType();
@@ -126,16 +120,28 @@ tooltips.forEach((item) => {
 
     computePopperPosition();
 
-    activator.addEventListener('mouseenter', async () => {
-      await computePopperPosition();
+    let enter = false;
+    const timeout = null;
 
-      transitionEnter(tooltipContent, 'tooltip__inner');
-      window.setTimeout(async () => {
-        computePopperPosition();
+    activator.addEventListener('mouseenter', async () => {
+      enter = true;
+      if (timeout) clearTimeout(timeout);
+
+      tooltipContent.classList.add('tooltip__inner_visible');
+      await computePopperPosition();
+    });
+
+    activator.addEventListener('mouseleave', (event) => {
+      if (timeout) clearTimeout(timeout);
+      enter = false;
+      setTimeout(() => {
+        if (enter) {
+          return;
+        }
+        hideTooltip(event);
       });
     });
 
-    activator.addEventListener('mouseleave', hideTooltip);
     activator.addEventListener('click', () => {
       if (event.currentTarget === activator) {
         hideTooltip;

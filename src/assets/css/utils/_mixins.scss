@@ -60,7 +60,14 @@ $family: 'Manrope';
 
 /**only for mobiles**/
 @mixin mobile {
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 641px) {
+    @content;
+  }
+}
+
+/**only for mobiles**/
+@mixin smartphone-only {
+  @media screen and (max-width: 959px) {
     @content;
   }
 }

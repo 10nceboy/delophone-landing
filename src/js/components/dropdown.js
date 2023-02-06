@@ -80,8 +80,9 @@ dropdowns.forEach((dropdown) => {
   const deviceType = getDeviceType();
 
   if (
-    deviceType === ['mobile', 'smartphone'].includes(deviceType) &&
-    dropdown.classList.contains('dropdown_mobile')
+    (deviceType === ['mobile', 'smartphone'].includes(deviceType) &&
+      dropdown.classList.contains('dropdown_mobile')) ||
+    dropdown.classList.contains('dropdown_tablet')
   ) {
     return;
   }
