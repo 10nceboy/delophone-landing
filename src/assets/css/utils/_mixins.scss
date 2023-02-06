@@ -60,7 +60,14 @@ $family: 'Manrope';
 
 /**only for mobiles**/
 @mixin mobile {
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 641px) {
+    @content;
+  }
+}
+
+/**only for mobiles**/
+@mixin smartphone-only {
+  @media screen and (max-width: 959px) {
     @content;
   }
 }
@@ -87,7 +94,9 @@ $family: 'Manrope';
   }
 }
 
-/**only for 768**/
+/**only for tablets**/
+@mixin tablet-only {
+  @media screen and (max-width: 1200px) {
 
 @mixin tablet-768 {
   @media screen and (min-width: 640px) and (max-width: 960px) {

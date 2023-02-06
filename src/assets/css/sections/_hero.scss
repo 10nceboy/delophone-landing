@@ -230,9 +230,6 @@
     @include tablet {
       flex-direction: row;
     }
-    @include laptop {
-      width: 200px;
-    }
 
     &_small {
       width: 100%;

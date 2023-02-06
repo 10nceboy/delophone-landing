@@ -37,4 +37,16 @@
   &_black {
     color: $black;
   }
+
+  &_orange {
+    color: $orange;
+
+    &:hover {
+      color: $dark-orange;
+    }
+
+    &:active {
+      color: $dark-orange;
+    }
+  }
 }

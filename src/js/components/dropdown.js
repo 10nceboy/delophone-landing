@@ -50,7 +50,7 @@ dropdowns.forEach((dropdown) => {
         .querySelector('.dropdown__close')
         .addEventListener('click', () => {
           state = !state;
-          closeDropdown(content);
+          transitionLeave(content, 'dropdown__content');
         });
     }
     return;
@@ -65,20 +65,24 @@ dropdowns.forEach((dropdown) => {
     }
   });
 
-  const items = dropdown.querySelectorAll('.dropdown__menu li');
-  items.forEach((dropdownItem) => {
-    dropdownItem.addEventListener('click', () => {
-      if (dropdown.dataset.value) {
-        setDropdownValue(dropdown, dropdownItem.dataset.value);
-      }
+  if (dropdown.dataset.value) {
+    const items = dropdown.querySelectorAll('.dropdown__menu li');
+
+    items.forEach((dropdownItem) => {
+      dropdownItem.addEventListener('click', () => {
+        if (dropdown.dataset.value) {
+          setDropdownValue(dropdown, dropdownItem.dataset.value);
+        }
+      });
     });
-  });
+  }
 
   const deviceType = getDeviceType();
 
   if (
-    deviceType === ['mobile', 'smartphone'].includes(deviceType) &&
-    dropdown.classList.contains('dropdown_mobile')
+    (deviceType === ['mobile', 'smartphone'].includes(deviceType) &&
+      dropdown.classList.contains('dropdown_mobile')) ||
+    dropdown.classList.contains('dropdown_tablet')
   ) {
     return;
   }

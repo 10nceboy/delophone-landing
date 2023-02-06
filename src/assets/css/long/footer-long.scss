@@ -28,7 +28,7 @@
   }
 
   &__dropdown-menu {
-    margin-top: $spacer * 2;
+    margin-top: $spacer * 2 !important;
 
     @include tablet {
       display: block;
@@ -69,8 +69,7 @@
   }
 
   &__contacts {
-    @include tablet {
-      margin-top: 0px !important;
+    @include smartphone {
       grid-column-start: 3;
       grid-column-end: 5;
       grid-row-start: 2;
@@ -110,20 +109,13 @@
     border-radius: $border-radius-xs;
     margin-top: $spacer * 6;
     line-height: 21px;
-    padding: $spacer * 4;
     color: $white;
-
-    @include laptop {
-      border-radius: 0;
-      background: transparent;
-      margin-top: 0;
-      height: 21px;
-    }
 
     &__copy {
       @include laptop {
         grid-column-start: 1;
         grid-column-end: 4;
+        display: grid;
       }
     }
 
@@ -131,6 +123,7 @@
       @include laptop {
         grid-column-start: 1;
         grid-column-end: 4;
+        display: grid;
       }
     }
   }
@@ -138,9 +131,10 @@
   .footer-contacts__list {
     @include flex-col;
     padding: $spacer * 4;
+    margin-top: 0;
 
     @include tablet {
-      padding: $spacer * 6;
+      padding: 0;
     }
 
     @include laptop {
@@ -153,12 +147,16 @@
   }
 }
 
-.footer-upside__dropdown {
-  .city {
-    margin-left: 40px;
-  }
-}
-
 .footer__divider {
   display: block !important;
+  margin-bottom: $spacer * 6;
+  margin-top: $spacer * 6;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+
+  @include laptop {
+    margin-bottom: 0;
+  }
 }
