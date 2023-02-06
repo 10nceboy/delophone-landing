@@ -52,15 +52,13 @@
 
     img {
       width: 290px;
-      height: 320px;
 
       @include smartphone {
         width: 320px;
       }
 
       @include tablet {
-        width: 270px;
-        height: 320px;
+        width: 290px;
       }
     }
 
@@ -98,11 +96,15 @@
   &__upside {
     position: relative;
     z-index: 3;
-    img {
-      height: 350px;
-    }
+
     @include tablet {
       padding-top: 10px;
+
+      @include laptop {
+        img {
+          height: 350px;
+        }
+      }
     }
   }
 
