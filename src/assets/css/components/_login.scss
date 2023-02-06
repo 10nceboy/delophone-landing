@@ -61,6 +61,7 @@
 
     path {
       stroke: $white;
+      padding: 5px;
     }
   }
 
@@ -118,4 +119,8 @@
       stroke: $black;
     }
   }
+}
+
+.login__text {
+  transition: all 0.2s ease-in;
 }
