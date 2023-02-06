@@ -36,6 +36,11 @@
 
       ul {
         @include gap($spacer * 6, $spacer * 2);
+        margin-bottom: $spacer * 2;
+
+        @include laptop {
+          margin-bottom: 0;
+        }
       }
     }
 
@@ -70,13 +75,12 @@
   }
 
   &__title {
-    margin-bottom: $spacer * 2;
     @include font(600, 16px, $black);
+    margin-bottom: $spacer * 2;
     font-size: 14px;
 
     @include laptop {
       font-size: 16px;
-
       line-height: 24.8px;
       margin-bottom: $spacer * 3;
 

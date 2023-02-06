@@ -50,7 +50,7 @@ dropdowns.forEach((dropdown) => {
         .querySelector('.dropdown__close')
         .addEventListener('click', () => {
           state = !state;
-          closeDropdown(content);
+          transitionLeave(content, 'dropdown__content');
         });
     }
     return;
