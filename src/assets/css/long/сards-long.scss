@@ -1,24 +1,26 @@
 @import '../utils/vars';
 .card {
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: border ease 0.3, box-shadow 0.3s ease;
+  &_hover {
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
 
-  &:focus,
-  :active {
-    border-color: $orange;
-    box-shadow: none;
-    background: $light-gray;
-  }
-
-  &:hover {
-    border-color: $orange;
-    box-shadow: 0px 0px 28px rgba(70, 98, 121, 0.14);
-  }
-
-  &.card-rounded {
-    &:hover {
+    &:focus,
+    :active {
+      border-color: $orange;
       box-shadow: none;
+      background: $light-gray;
+    }
+
+    &:hover {
+      border-color: $orange;
+      box-shadow: 0px 0px 28px rgba(70, 98, 121, 0.14);
+    }
+
+    &.card-rounded {
+      &:hover {
+        box-shadow: none;
+      }
     }
   }
 }

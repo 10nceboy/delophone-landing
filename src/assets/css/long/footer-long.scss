@@ -70,7 +70,7 @@
 
   &__contacts {
     @include tablet {
-      margin-top: 0px !important;
+      margin-top: $spacer * 4 !important;
       grid-column-start: 3;
       grid-column-end: 5;
       grid-row-start: 2;
@@ -124,6 +124,7 @@
       @include laptop {
         grid-column-start: 1;
         grid-column-end: 4;
+        display: grid;
       }
     }
 
@@ -131,6 +132,7 @@
       @include laptop {
         grid-column-start: 1;
         grid-column-end: 4;
+        display: grid;
       }
     }
   }

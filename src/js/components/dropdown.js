@@ -65,14 +65,17 @@ dropdowns.forEach((dropdown) => {
     }
   });
 
-  const items = dropdown.querySelectorAll('.dropdown__menu li');
-  items.forEach((dropdownItem) => {
-    dropdownItem.addEventListener('click', () => {
-      if (dropdown.dataset.value) {
-        setDropdownValue(dropdown, dropdownItem.dataset.value);
-      }
+  if (dropdown.dataset.value) {
+    const items = dropdown.querySelectorAll('.dropdown__menu li');
+
+    items.forEach((dropdownItem) => {
+      dropdownItem.addEventListener('click', () => {
+        if (dropdown.dataset.value) {
+          setDropdownValue(dropdown, dropdownItem.dataset.value);
+        }
+      });
     });
-  });
+  }
 
   const deviceType = getDeviceType();
 
