@@ -50,6 +50,15 @@
     justify-content: flex-start;
   }
 
+  &_full {
+    @include flex-col;
+    @include laptop {
+      @include flex-row;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
   &-reverse {
     @include flex-row;
     @include tablet {

@@ -223,11 +223,13 @@
 }
 
 .header__help {
-  color: $black;
+  color: $gray;
+  margin-top: 15px;
 
   @include laptop {
     margin-bottom: 0;
-
+    margin-top: 0px;
+    color: $black;
     margin-left: auto;
   }
 
@@ -238,6 +240,12 @@
     @include laptop {
       padding-bottom: 0;
       padding-top: 0;
+
+      li {
+        &:first-child {
+          margin-top: 10px;
+        }
+      }
     }
 
     &:first-child {
@@ -266,5 +274,13 @@
 .background_gray {
   @include tablet {
     margin-top: -$spacer * 3;
+  }
+}
+
+.city {
+  margin-top: 10px;
+
+  @include laptop {
+    margin-top: 0px;
   }
 }

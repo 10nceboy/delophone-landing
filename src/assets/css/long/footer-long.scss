@@ -37,7 +37,7 @@
   &__dropdown-menu {
     margin-top: $spacer * 2 !important;
 
-    @include laptop {
+    @include tablet {
       display: block;
       opacity: 1;
       position: static;
@@ -66,6 +66,7 @@
 
       @include tablet {
         display: none;
+        cursor: auto;
       }
     }
   }
@@ -114,7 +115,7 @@
     font-size: 14px;
     background: $gray !important;
     border-radius: $border-radius-xs;
-    margin-top: $spacer * 6;
+    margin-top: $spacer * 10;
     line-height: 21px;
     color: $white;
     align-items: flex-start;
@@ -160,8 +161,9 @@
       display: grid !important;
       grid-template-columns: repeat(2, 1fr) !important;
       background: $gray !important;
-      padding: $spacer * 9 $spacer * 10;
+      padding: $spacer * 8 $spacer * 10;
       border-radius: $border-radius-xs;
+      margin-top: 40px;
     }
   }
 }
