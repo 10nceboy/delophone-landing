@@ -100,6 +100,7 @@
       @include flex-col;
       padding: $spacer * 4 $spacer * 5;
       background: $light-gray;
+      max-width: fit-content;
 
       @include tablet {
         border-radius: $border-radius-xs;
