@@ -135,6 +135,9 @@
   &__login {
     @include hidden;
     display: none;
+    svg {
+      transition: all 0.2s ease-in;
+    }
 
     @include laptop {
       margin: 0 9 * $spacer 0 13 * $spacer;

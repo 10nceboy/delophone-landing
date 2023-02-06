@@ -87,6 +87,10 @@
   }
 
   &__checklist {
+    width: 100%;
+    @include mobile-m {
+      width: calc(100vw - 60px);
+    }
     @include mobile-s {
       @include flex-col;
       width: calc(100vw - 30px);
