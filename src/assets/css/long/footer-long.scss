@@ -14,6 +14,11 @@
     grid-template-rows: repeat(3, auto);
     grid-auto-flow: column;
     justify-content: space-between;
+    grid-column-gap: 15px;
+  }
+
+  @include laptop {
+    grid-column-gap: 0px;
   }
 
   &__menu {
@@ -32,7 +37,7 @@
   &__dropdown-menu {
     margin-top: $spacer * 2 !important;
 
-    @include tablet {
+    @include laptop {
       display: block;
       opacity: 1;
       position: static;
@@ -128,6 +133,10 @@
         grid-column-end: 4;
         display: grid;
       }
+    }
+
+    &__phone {
+      margin-left: 0px;
     }
   }
 

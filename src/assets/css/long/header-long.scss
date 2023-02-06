@@ -11,6 +11,17 @@
     color: $gray;
     @include font(400, 16px, $gray);
     line-height: 24.8px;
+    margin-top: 30px;
+  }
+
+  &__tech-menu {
+    left: -11vw !important;
+
+    .dropdown__arrow {
+      &::before {
+        left: calc(11vw + 50px) !important;
+      }
+    }
   }
 
   .dropdown__button {
@@ -41,6 +52,7 @@
 
         @include laptop {
           margin-bottom: 0;
+          padding-top: 0px;
         }
 
         &:first-child {
@@ -205,7 +217,7 @@
 }
 
 .header__help {
-  color: $gray;
+  color: $black;
 
   @include laptop {
     margin-bottom: 0;
