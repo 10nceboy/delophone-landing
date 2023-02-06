@@ -4,9 +4,9 @@
   align-items: center;
   vertical-align: middle;
   user-select: none;
-  transition: $icon-transtition;
+  transition: $icon-transition;
 
   & > * {
-    transition: $icon-transtition;
+    transition: $icon-transition;
   }
 }
