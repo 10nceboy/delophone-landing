@@ -175,7 +175,7 @@
   &_active {
     .dropdown {
       &__button {
-        color: $blue;
+        color: $blue !important;
 
         &::after {
           transform: rotateX(180deg) translateY(-2px) scale(0.7);
@@ -203,6 +203,7 @@
     &.dropdown_white {
       .dropdown__button {
         @include font(400, 16px, $white);
+        color: $white !important;
 
         &::after {
           content: url('/arrow-down-white.svg');
