@@ -229,6 +229,7 @@
 
     @include tablet {
       flex-direction: row;
+      justify-content: flex-start;
     }
 
     &_small {
