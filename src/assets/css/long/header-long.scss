@@ -8,7 +8,7 @@
     @include flex-row;
     justify-content: space-between;
     height: 65px;
-    color: $gray !important;
+    color: $gray;
     @include font(400, 16px, $gray);
     line-height: 24.8px;
   }
@@ -36,10 +36,15 @@
 
       ul {
         @include gap($spacer * 6, $spacer * 2);
-        margin-bottom: $spacer * 2;
+
+        padding-top: $spacer * 3;
 
         @include laptop {
           margin-bottom: 0;
+        }
+
+        &:first-child {
+          padding-top: 0;
         }
       }
     }
@@ -128,6 +133,14 @@
       align-self: center;
     }
   }
+
+  &__tech {
+    margin-top: -$spacer;
+
+    @include laptop {
+      margin-top: unset;
+    }
+  }
 }
 
 .nav {
@@ -193,8 +206,25 @@
 
 .header__help {
   color: $gray;
+
   @include laptop {
+    margin-bottom: 0;
+
     margin-left: auto;
+  }
+
+  ul {
+    padding-bottom: $spacer * 3 !important;
+    padding-top: $spacer * 3;
+
+    @include laptop {
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+
+    &:first-child {
+      padding-top: 0px;
+    }
   }
 }
 
@@ -212,5 +242,11 @@
     @include laptop {
       padding: 0;
     }
+  }
+}
+
+.background_gray {
+  @include tablet {
+    margin-top: -$spacer * 3;
   }
 }

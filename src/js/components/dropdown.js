@@ -79,12 +79,12 @@ dropdowns.forEach((dropdown) => {
   const deviceType = getDeviceType();
 
   clickOutside(dropdown, () => {
-    if (
-      (['mobile', 'smartphone'].includes(deviceType) &&
-        dropdown.classList.contains('dropdown_mobile')) ||
-      dropdown.classList.contains('dropdown_tablet')
-    ) {
-      return;
+    if (['mobile', 'smartphone'].includes(deviceType)) {
+      if (
+        dropdown.classList.contains('dropdown_mobile') ||
+        dropdown.classList.contains('dropdown_tablet')
+      )
+        return;
     }
     dropdown.classList.remove('dropdown_active', 'dropdown_visible');
     state = false;
