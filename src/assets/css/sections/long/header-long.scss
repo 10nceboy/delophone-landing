@@ -1,3 +1,7 @@
+@import '../../base/layout';
+@import '../../utils/vars';
+@import '../../utils/mixins';
+
 .header-nav {
   display: none;
 
@@ -38,7 +42,6 @@
 
     @include tablet {
       max-height: auto !important;
-
       z-index: 1;
       right: 0;
       left: -184%;
@@ -177,7 +180,7 @@
 }
 
 .header__login {
-  margin-top: 50px !important;
+  margin-top: 50px;
 
   @include laptop {
     margin-top: 0;

@@ -1,3 +1,7 @@
+@import '../../base/layout';
+@import '../../utils/vars';
+@import '../../utils/mixins';
+
 .footer-downside {
   @include flex-col;
   margin-top: $spacer * 9;
@@ -99,5 +103,23 @@
       align-self: center;
       transition: stroke 0.3s ease, fill 0.3s ease;
     }
+  }
+}
+
+.footer-contatcs {
+  font-size: 14px;
+  background: $gray;
+  border-radius: $border-radius-xs;
+  margin-top: $spacer * 6;
+  line-height: 21px;
+  padding: $spacer * 4;
+  color: $white;
+
+  @include laptop {
+    border-radius: 0;
+    background: transparent;
+    padding: $spacer * 7 0;
+    margin-top: 0;
+    height: 21px;
   }
 }
