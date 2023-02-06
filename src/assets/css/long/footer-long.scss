@@ -136,7 +136,12 @@
     }
 
     &__phone {
+      grid-row-start: 3;
       margin-left: 0px;
+    }
+
+    &__email {
+      grid-row-start: 3;
     }
   }
 
