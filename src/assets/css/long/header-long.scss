@@ -15,7 +15,9 @@
   }
 
   &__tech-menu {
-    left: -11vw !important;
+    @include laptop {
+      left: -11vw !important;
+    }
 
     .dropdown__arrow {
       &::before {
