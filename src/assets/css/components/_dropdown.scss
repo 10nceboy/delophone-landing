@@ -51,7 +51,7 @@
     border: none;
 
     &:hover {
-      color: $blue;
+      color: $blue !important;
     }
 
     &::after {

@@ -269,3 +269,12 @@
 .hero__button .container_adaptive {
   justify-content: flex-start;
 }
+
+.hero__text {
+  @include tablet-768 {
+    width: 60%;
+  }
+  @include tablet {
+    width: 100%;
+  }
+}

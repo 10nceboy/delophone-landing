@@ -104,7 +104,7 @@
       }
 
       .dropdown__menu ul {
-        @include mobile {
+        @include smartphone-only {
           background: transparent !important;
         }
       }

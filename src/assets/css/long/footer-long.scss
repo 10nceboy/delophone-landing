@@ -36,13 +36,14 @@
 
   &__dropdown-menu {
     margin-top: $spacer * 2 !important;
-
+    padding-left: 15px;
     @include tablet {
       display: block;
       opacity: 1;
       position: static;
       height: auto;
       margin-top: $spacer * 4;
+      padding-left: 0px;
     }
   }
 
@@ -71,6 +72,9 @@
       @include tablet {
         display: none;
       }
+    }
+    @include tablet {
+      margin-bottom: 20px;
     }
   }
 
@@ -103,8 +107,6 @@
 
     &:hover {
       svg {
-        stroke: $dark-orange;
-
         path {
           fill: $dark-orange;
           transition: fill 0.3s ease;
@@ -134,6 +136,7 @@
         grid-column-start: 1;
         grid-column-end: 4;
         display: grid;
+        margin-bottom: 10px;
       }
     }
 
@@ -199,8 +202,8 @@
   grid-row-start: 3;
 }
 
-.footer-downside__contacts__docs {
-  grid-row-start: 3;
+.footer-downside__contacts__copy {
+  margin-bottom: 10px;
 }
 
 .footer-downside__contacts__phone {
