@@ -1,6 +1,5 @@
-@import '../../base/layout';
-@import '../../utils/vars';
-@import '../../utils/mixins';
+@import '../base/layout';
+@import '../utils/';
 
 .header-nav {
   display: none;
@@ -96,8 +95,12 @@
     }
 
     @include laptop {
-      margin-top: $spacer;
+      margin: 0;
       display: block;
+
+      &:last-child {
+        margin: 0;
+      }
     }
   }
 
@@ -107,20 +110,18 @@
 
     &:hover {
       svg {
-        transition: fill 0.4 linear;
-
         path {
           fill: $dark-orange;
-          transition: fill 0.4 linear;
+          transition: $icon-transition;
         }
       }
     }
 
     svg {
+      transition: $icon-transition;
       fill: $orange;
       margin-left: $spacer;
       align-self: center;
-      transition: stroke 0.3s ease, fill 0.3s ease;
     }
   }
 }
@@ -129,12 +130,11 @@
   &__dropdown {
     height: 21px;
     color: $gray;
-
     margin-bottom: $spacer * 3;
     margin-top: $spacer;
 
     @include laptop {
-      margin-bottom: 0;
+      margin: -9px 0 0;
     }
   }
 

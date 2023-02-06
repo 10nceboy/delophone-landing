@@ -41,12 +41,10 @@
       }
 
       @include tablet {
+        @include flex-row;
+
         margin-bottom: 0px;
         margin-top: 0px;
-      }
-
-      @include tablet {
-        @include flex-row;
       }
 
       svg {
@@ -61,6 +59,11 @@
 
         @include laptop {
           margin-bottom: 0;
+          width: 150px;
+        }
+
+        @include desktop {
+          width: 172px;
         }
 
         & > * {
@@ -81,6 +84,9 @@
       @include laptop {
         white-space: nowrap;
         display: block;
+        margin-left: $spacer * 6;
+        min-width: 166px;
+        margin-right: 20px;
       }
 
       &_tablet {
@@ -153,7 +159,8 @@
       @include laptop {
         @include flex-row;
         order: initial;
-        margin-left: 0;
+        margin-left: 30px;
+        margin-right: 30px;
 
         .button__login-button {
           margin-left: 0;
@@ -169,9 +176,13 @@
       margin-top: $spacer * 5;
 
       @include tablet {
-        max-width: 230px;
+        max-width: 200px;
         margin-left: auto;
         margin-top: 0;
+      }
+
+      @include laptop {
+        max-width: 200px;
       }
     }
   }

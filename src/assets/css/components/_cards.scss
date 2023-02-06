@@ -7,21 +7,6 @@
     background-color: $light-gray;
   }
 
-  &_with-hover {
-    border: 1px solid transparent;
-    cursor: pointer;
-
-    &:focus {
-      border-color: $border-orange;
-    }
-
-    &:hover {
-      &:hover {
-        border-color: $orange;
-      }
-    }
-  }
-
   &_wide {
     @include flex-col;
     padding: $spacer * 4;
@@ -42,10 +27,6 @@
 
   &_white {
     background-color: $white;
-
-    &:focus {
-      border: $border-orange;
-    }
   }
 
   &_black {
