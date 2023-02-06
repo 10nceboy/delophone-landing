@@ -45,7 +45,6 @@ dropdowns.forEach((dropdown) => {
           activator.classList.remove('dropdown_active');
         }
       });
-      /**handle close btn click */
       content
         .querySelector('.dropdown__close')
         .addEventListener('click', () => {
@@ -79,15 +78,14 @@ dropdowns.forEach((dropdown) => {
 
   const deviceType = getDeviceType();
 
-  if (
-    (deviceType === ['mobile', 'smartphone'].includes(deviceType) &&
-      dropdown.classList.contains('dropdown_mobile')) ||
-    dropdown.classList.contains('dropdown_tablet')
-  ) {
-    return;
-  }
-
   clickOutside(dropdown, () => {
+    if (
+      (['mobile', 'smartphone'].includes(deviceType) &&
+        dropdown.classList.contains('dropdown_mobile')) ||
+      dropdown.classList.contains('dropdown_tablet')
+    ) {
+      return;
+    }
     dropdown.classList.remove('dropdown_active', 'dropdown_visible');
     state = false;
   });

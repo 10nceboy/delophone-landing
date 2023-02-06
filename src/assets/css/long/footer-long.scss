@@ -4,9 +4,11 @@
 
 .footer-downside {
   @include flex-col;
-  margin-top: $spacer * 9;
+  margin-top: 0;
 
   @include tablet {
+    margin-top: $spacer * 9;
+
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(3, auto);
@@ -110,6 +112,7 @@
     margin-top: $spacer * 6;
     line-height: 21px;
     color: $white;
+    align-items: flex-start;
 
     &__copy {
       @include laptop {
@@ -130,11 +133,13 @@
 
   .footer-contacts__list {
     @include flex-col;
-    padding: $spacer * 4;
     margin-top: 0;
+    align-items: start;
+    padding: 0;
 
     @include tablet {
       padding: 0;
+      align-items: start;
     }
 
     @include laptop {
