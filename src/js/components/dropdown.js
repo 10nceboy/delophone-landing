@@ -1,4 +1,9 @@
-import { clickOutside, transitionEnter, transitionLeave } from '../utils/dom';
+import {
+  clickOutside,
+  getDeviceType,
+  transitionEnter,
+  transitionLeave
+} from '../utils/dom';
 
 const dropdowns = document.querySelectorAll('.dropdown');
 /**
@@ -68,6 +73,15 @@ dropdowns.forEach((dropdown) => {
       }
     });
   });
+
+  const deviceType = getDeviceType();
+
+  if (
+    deviceType === ['mobile', 'smartphone'].includes(deviceType) &&
+    dropdown.classList.contains('dropdown_mobile')
+  ) {
+    return;
+  }
 
   clickOutside(dropdown, () => {
     dropdown.classList.remove('dropdown_active', 'dropdown_visible');

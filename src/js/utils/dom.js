@@ -145,13 +145,3 @@ export const isTouchDevice = () => {
   );
 };
 
-/**
- * Return offset between midle of screen by X
- * @param {*} el
- * @returns
- */
-export const getMiddleXOffset = (el) => {
-  const { left, width } = el.getBoundingClientRect();
-  const offsetX = (160 - (left + width / 2)) / 2;
-  return Math.floor(offsetX);
-};

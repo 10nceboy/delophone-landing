@@ -1,5 +1,4 @@
 /*colors*/
-$orange: #f88c28;
 $black: #344351;
 $blue: #2b8feb;
 $gray: #5e6b77;
@@ -7,6 +6,7 @@ $gray2: #9ca5ac;
 $light-gray: #f6f7f8;
 $dim-gray: #efefef;
 $in-gray: #cdd6df;
+$scrollbar-gray: #cdd6e0;
 $white: #ffffff;
 $green: #65d072;
 $light-blue: #8ec0ef;
@@ -17,6 +17,7 @@ $darker-green: #48ba56;
 $deep-blue: #1d7dd6;
 $black-shadow: #0000001a;
 $dark-orange: #f15018;
+$orange: #f88c28;
 
 /*sizes*/
 $spacer: 5px;
@@ -25,7 +26,7 @@ $spacer: 5px;
 $btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
   border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 $link-transition: color 0.3s ease;
-$icon-transtition: fill 0.2s ease, stroke 0.2 ease;
+$icon-transition: fill 0.2s ease, stroke 0.2 ease;
 $opacity-transition: opacity 0.3s ease-in-out;
 $collapse-transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1),
   opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
