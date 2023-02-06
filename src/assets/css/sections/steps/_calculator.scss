@@ -180,7 +180,7 @@ $line-width: 140px;
           }
 
           @include laptop {
-            min-width: 488px;
+            min-width: 548px;
           }
         }
       }
@@ -389,7 +389,7 @@ $line-width: 140px;
     &_single {
       @include tablet {
         font-size: 20px !important;
-        color: $gray;
+        color: $gray !important;
         margin-left: 0;
       }
 
@@ -460,6 +460,18 @@ $line-width: 140px;
       margin-left: $spacer;
       align-self: center;
     }
+
+    &_single {
+      @include tablet {
+        font-size: 20px !important;
+        color: $gray !important;
+        margin-left: 9px;
+      }
+
+      &::before {
+        max-width: none;
+      }
+    }
   }
 
   &__price-container {
@@ -469,7 +481,7 @@ $line-width: 140px;
       @include flex-col;
     }
 
-    @include desktop {
+    @include laptop {
       display: block;
     }
   }
@@ -770,7 +782,7 @@ $line-width: 140px;
     }
 
     @include laptop {
-      font-size: 18px;
+      font-size: 16px;
     }
 
     @include desktop {

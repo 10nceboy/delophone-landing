@@ -332,6 +332,9 @@
 
   &__your-numbers {
     flex: 1 1;
+    @include tablet {
+      max-width: 200px;
+    }
   }
 }
 
