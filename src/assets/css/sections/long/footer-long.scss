@@ -1,0 +1,103 @@
+.footer-downside {
+  @include flex-col;
+  margin-top: $spacer * 9;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    flex: 1;
+    margin-bottom: $spacer * 3;
+
+    @include tablet {
+      margin-bottom: $spacer * 7;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  &__dropdown-menu {
+    margin-top: $spacer * 2;
+
+    @include tablet {
+      display: block;
+      opacity: 1;
+      position: static;
+      height: auto;
+      margin-top: $spacer * 4;
+    }
+  }
+
+  &__menu-item {
+    @include font(400, 14px, $white);
+    line-height: 21px;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__header {
+    @include font(600, 16px, $white);
+    font-weight: 600 !important;
+
+    line-height: 24.8px;
+
+    &::after {
+      display: flex;
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__help {
+    grid-column: 4;
+    grid-row: 1;
+  }
+
+  &__contacts {
+    @include tablet {
+      margin-top: 0px !important;
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 2;
+      grid-row-end: 4;
+      display: grid;
+      max-height: 174px;
+      align-self: center;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: baseline;
+
+    &:hover {
+      svg {
+        stroke: $blue;
+
+        path {
+          fill: $blue;
+          transition: fill 0.3s ease;
+        }
+      }
+    }
+
+    svg {
+      fill: #f88c28;
+      margin-left: 5px;
+      align-self: center;
+      transition: stroke 0.3s ease, fill 0.3s ease;
+    }
+  }
+}
