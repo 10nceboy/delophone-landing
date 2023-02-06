@@ -11,7 +11,7 @@
     color: $gray;
     @include font(400, 16px, $gray);
     line-height: 24.8px;
-    margin-top: 30px;
+    margin-top: 40px;
   }
 
   &__tech-menu {
@@ -227,7 +227,7 @@
   margin-top: 15px;
 
   @include laptop {
-    margin-bottom: 0;
+    margin-bottom: -5px;
     margin-top: 0px;
     color: $black;
     margin-left: auto;
@@ -277,10 +277,13 @@
   }
 }
 
-.city {
+.longcity {
   margin-top: 10px;
+  @include tablet {
+    margin-top: 10px;
+  }
 
   @include laptop {
-    margin-top: 0px;
+    margin-bottom: 5px;
   }
 }

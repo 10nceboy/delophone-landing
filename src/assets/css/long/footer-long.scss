@@ -60,13 +60,16 @@
     @include font(600, 16px, $white);
     font-weight: 600 !important;
     line-height: 24.8px;
+    cursor: pointer;
+    @include tablet {
+      cursor: default;
+    }
 
     &::after {
       display: flex;
 
       @include tablet {
         display: none;
-        cursor: auto;
       }
     }
   }
@@ -77,6 +80,7 @@
   }
 
   &__contacts {
+    @include flex-col;
     @include smartphone {
       grid-column-start: 3;
       grid-column-end: 5;
@@ -85,6 +89,11 @@
       display: grid;
       max-height: 174px;
       align-self: baseline;
+      width: calc(100vw - 70px);
+    }
+
+    @include tablet {
+      width: auto;
     }
   }
 
@@ -196,4 +205,5 @@
 
 .footer-downside__contacts__phone {
   grid-row-start: 3;
+  margin-left: 0px !important;
 }
