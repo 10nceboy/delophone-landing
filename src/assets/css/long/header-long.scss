@@ -28,6 +28,10 @@
 
   .dropdown__button {
     color: $gray;
+
+    &:hover {
+      color: $blue;
+    }
   }
 
   &__menu {
