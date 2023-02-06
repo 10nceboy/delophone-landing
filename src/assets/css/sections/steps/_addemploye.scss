@@ -12,7 +12,7 @@
 
     @include laptop {
       display: block;
-      height: 279px;
+      height: 350px;
     }
 
     &_mobile {
@@ -30,7 +30,7 @@
       padding: 30px 30px;
     }
     @include laptop {
-      padding: $spacer * 10;
+      padding: 11px $spacer * 10 11px $spacer * 10;
       box-sizing: border-box;
       max-height: 372px;
       position: relative;
