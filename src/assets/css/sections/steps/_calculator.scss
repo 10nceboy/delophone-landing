@@ -790,3 +790,10 @@ $line-width: 140px;
     }
   }
 }
+.calculator__header {
+  padding: 20px 10px 0px 20px;
+
+  @include tablet {
+    padding: 0px;
+  }
+}

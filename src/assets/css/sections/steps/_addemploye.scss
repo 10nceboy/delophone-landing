@@ -13,11 +13,26 @@
     @include laptop {
       display: block;
       height: 350px;
+
+      img {
+        height: 350px;
+      }
     }
 
     &_mobile {
       align-self: center;
       display: block;
+
+      img {
+        height: 262px;
+        width: 290px;
+        align-self: center;
+
+        @include tablet {
+          height: 300px;
+          width: 320px;
+        }
+      }
 
       @include laptop {
         display: none;
