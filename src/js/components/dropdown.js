@@ -1,6 +1,7 @@
 import {
   clickOutside,
   getDeviceType,
+  isTouchDevice,
   transitionEnter,
   transitionLeave
 } from '../utils/dom';
@@ -55,18 +56,58 @@ dropdowns.forEach((dropdown) => {
     return;
   }
 
-  dropdown.addEventListener('click', () => {
-    state = !state;
+  const open = () => {
+    state = true;
     if (state) {
       transitionEnter(dropdown, 'dropdown');
-    } else {
-      transitionLeave(dropdown, 'dropdown');
+    }
+  };
+
+  const close = () => {
+    transitionLeave(dropdown, 'dropdown');
+  };
+
+  let timeoutIdOver = null;
+  let timeoutIdOut = null;
+  const delayMS = 150;
+  let over = false;
+
+  dropdown.addEventListener('mouseenter', () => {
+    if (isTouchDevice()) {
+      return;
+    }
+
+    const deviceType = getDeviceType();
+
+    if (
+      dropdown.classList.contains('footer-downside__menu') &&
+      ['laptop', 'desktop', 'tablet'].includes(deviceType)
+    ) {
+      return;
+    }
+
+    clearTimeout(timeoutIdOut);
+    timeoutIdOver = setTimeout(() => {
+      over = true;
+      open();
+    }, delayMS);
+  });
+
+  dropdown.addEventListener('mouseleave', () => {
+    if (isTouchDevice()) {
+      return;
+    }
+
+    clearTimeout(timeoutIdOver);
+    if (over === true) {
+      timeoutIdOut = setTimeout(() => {
+        close();
+      }, delayMS);
     }
   });
 
   if (dropdown.dataset.value) {
     const items = dropdown.querySelectorAll('.dropdown__menu li');
-
     items.forEach((dropdownItem) => {
       dropdownItem.addEventListener('click', () => {
         if (dropdown.dataset.value) {
@@ -77,6 +118,17 @@ dropdowns.forEach((dropdown) => {
   }
 
   const deviceType = getDeviceType();
+
+  if (isTouchDevice()) {
+    dropdown.addEventListener('click', () => {
+      state = !state;
+      if (state) {
+        transitionEnter(dropdown, 'dropdown');
+      } else {
+        transitionLeave(dropdown, 'dropdown');
+      }
+    });
+  }
 
   clickOutside(dropdown, () => {
     if (['mobile', 'smartphone'].includes(deviceType)) {
