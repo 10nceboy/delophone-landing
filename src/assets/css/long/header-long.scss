@@ -188,6 +188,7 @@
 }
 
 .header__help {
+  color: $gray;
   @include laptop {
     margin-left: auto;
   }

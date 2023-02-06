@@ -91,7 +91,7 @@
     overflow: visible;
     transition: $dropdown-transition;
 
-    @include tablet {
+    @include laptop {
       display: auto;
     }
 

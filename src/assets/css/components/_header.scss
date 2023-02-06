@@ -153,7 +153,7 @@
     background-color: $light-gray;
     z-index: $zindex-modal + 1;
     margin-top: 0px;
-    overflow: hidden;
+    overflow: scroll;
 
     @include smartphone {
       flex-direction: column;
@@ -168,6 +168,7 @@
     }
 
     .header__menu,
+    .header-nav,
     .login__phone-number,
     .login,
     .header__burger_opened,
@@ -214,6 +215,10 @@
       @include visible($opacity-transition);
       padding: 0;
     }
+    .city {
+      margin-bottom: 35px;
+      margin-top: 10px;
+    }
   }
 }
 
@@ -226,7 +231,6 @@
   display: none;
 
   @include laptop {
-    order: 1;
     display: block;
     margin-top: 5px;
   }
