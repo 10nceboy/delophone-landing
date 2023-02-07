@@ -62,6 +62,8 @@
   .tooltip__arrow {
     z-index: -1;
     position: relative;
+    max-width: fit-content;
+    width: fit-content;
 
     &::after {
       overflow: hidden;
