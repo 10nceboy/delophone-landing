@@ -48,14 +48,16 @@
       margin-bottom: $spacer;
 
       @include mobile-m {
-        width: calc(100vw - 50px);
+        width: calc(100vw - 70px);
+        font-size: 16px;
       }
 
       @include mobile-s {
         max-height: 60px;
         box-sizing: border-box;
-        width: calc(100vw - 80px);
+        width: calc(100vw - 50px);
         display: inline-block;
+        font-size: 18px;
       }
 
       @include smartphone {
