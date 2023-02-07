@@ -2,12 +2,12 @@ import {
   computePosition,
   arrow,
   offset,
-  detectOverflow
+  detectOverflow,
+  autoUpdate
 } from '@floating-ui/dom';
 import { getDeviceType } from '../utils/dom';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const svg = `
+const svg = `
 <svg class="icon" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="7.5" cy="7.5" r="7" stroke="#F88C28"/>
 <path
@@ -15,6 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
   fill="#F88C28"
 />
 </svg>`;
+
+document.addEventListener('DOMContentLoaded', () => {
+  const getTooltipShift = ({ x, y }, { left, right }) => {
+    // Check if the tooltip overflows the viewport on the left side
+    let newX = x;
+    let newY = y;
+    if (right > 0) {
+      newX = x - right;
+    }
+
+    newX;
+  };
 
   const renderTooltip = (content) => {
     const popup = document.createElement('div');
@@ -62,22 +74,58 @@ document.addEventListener('DOMContentLoaded', () => {
       const mobileDisplay = {
         name: 'middleware',
         async fn(middlewareArguments) {
-          if (deviceType !== 'mobile') {
+          if (
+            !['smartphone', 'mobile', 'laptop', 'tablet'].includes(deviceType)
+          ) {
             return { middlewareArguments };
           }
-          const padding = 15;
-          overflow = await detectOverflow(middlewareArguments);
 
-          middlewareArguments.middlewareData.arrow.x =
-            middlewareArguments.middlewareData.arrow.x -
-            overflow.left -
-            padding;
+          if (
+            deviceType === 'smartphone' ||
+            deviceType === 'laptop' ||
+            deviceType === 'tablet'
+          ) {
+            /**detec oveflow and cal new positions */
+            const { right, left } = await detectOverflow(middlewareArguments);
+            let x = middlewareArguments.x;
 
-          return {
-            ...middlewareArguments,
-            x: middlewareArguments.x + overflow.left + padding,
-            y: middlewareArguments.y
-          };
+            if (right > 0) {
+              x = x - right;
+              middlewareArguments.middlewareData.arrow.x =
+                middlewareArguments.middlewareData.arrow.x + right;
+            }
+
+            if (left > 0) {
+              x = x + left;
+              middlewareArguments.middlewareData.arrow.x =
+                middlewareArguments.middlewareData.arrow.x - left;
+            }
+
+            return {
+              ...middlewareArguments,
+              x,
+              y: middlewareArguments.y
+            };
+          }
+
+          /**center ta mobile */
+          if (deviceType === 'mobile') {
+            const padding = 15;
+            overflow = await detectOverflow(middlewareArguments);
+
+            middlewareArguments.middlewareData.arrow.x =
+              middlewareArguments.middlewareData.arrow.x -
+              overflow.left -
+              padding;
+
+            return {
+              ...middlewareArguments,
+              x: middlewareArguments.x + overflow.left + padding,
+              y: middlewareArguments.y
+            };
+          }
+
+          return middlewareArguments;
         }
       };
 
@@ -122,6 +170,8 @@ document.addEventListener('DOMContentLoaded', () => {
       tooltipContent.style.width = width;
 
       computePopperPosition();
+
+      autoUpdate(activator, tooltipContent, computePopperPosition);
 
       let enter = false;
       const timeout = null;
