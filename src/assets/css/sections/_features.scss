@@ -96,7 +96,7 @@
     }
     @include mobile-s {
       @include flex-col;
-      width: calc(100vw - 30px);
+      width: calc(100vw - 60px);
       line-height: 20px;
 
       li {

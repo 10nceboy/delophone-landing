@@ -93,6 +93,8 @@
     display: block;
     margin: $spacer * 5 0;
 
+    width: 290px;
+
     @include smartphone {
       display: none;
     }
