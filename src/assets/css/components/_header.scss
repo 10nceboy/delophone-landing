@@ -249,6 +249,7 @@
 
   .dropdown__menu {
     left: 0;
+
     @include laptop {
       left: -10px;
     }

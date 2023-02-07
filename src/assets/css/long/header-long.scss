@@ -3,8 +3,10 @@
 
 .header-nav {
   display: none;
-
+  transform: translateY(5px);
   @include laptop {
+    transform: none;
+
     @include flex-row;
     justify-content: space-between;
     height: 65px;
@@ -181,11 +183,10 @@
   }
 
   &__arrow {
+    display: none;
     height: 15px;
     margin: 0;
     min-width: 100%;
-    background: transparent;
-    display: none;
 
     &::before {
       content: '';

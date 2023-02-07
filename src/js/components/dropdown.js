@@ -118,14 +118,20 @@ dropdowns.forEach((dropdown) => {
   }
 
   const deviceType = getDeviceType();
-
+  let animate = false;
   if (isTouchDevice()) {
     dropdown.addEventListener('click', () => {
+      if (animate) {
+        return;
+      }
+      animate = true;
       state = !state;
       if (state) {
         transitionEnter(dropdown, 'dropdown');
+        window.setTimeout(() => (animate = false), 300);
       } else {
         transitionLeave(dropdown, 'dropdown');
+        window.setTimeout(() => (animate = false), 300);
       }
     });
   }
