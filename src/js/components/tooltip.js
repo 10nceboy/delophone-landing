@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
           let { x: arrowX, y: arrowY } = arrowData;
 
           if (placement === 'bottom') {
-            arrowY = -tooltipContent.offsetHeight;
+            arrowY = -tooltipContent.offsetHeight + 5;
           }
 
           Object.assign(arrowEl.style, {
