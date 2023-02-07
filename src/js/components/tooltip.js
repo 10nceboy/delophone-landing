@@ -4,9 +4,10 @@ import {
   offset,
   detectOverflow
 } from '@floating-ui/dom';
-import { getDeviceType, transitionEnter, transitionLeave } from '../utils/dom';
+import { getDeviceType } from '../utils/dom';
 
-const svg = `
+document.addEventListener('DOMContentLoaded', () => {
+  const svg = `
 <svg class="icon" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="7.5" cy="7.5" r="7" stroke="#F88C28"/>
 <path
@@ -15,142 +16,145 @@ const svg = `
 />
 </svg>`;
 
-const renderTooltip = (content) => {
-  const popup = document.createElement('div');
-  popup.classList.add('tooltip__inner');
-  popup.role = 'tooltip';
-  popup.innerHTML = `
+  const renderTooltip = (content) => {
+    const popup = document.createElement('div');
+    popup.classList.add('tooltip__inner');
+    popup.role = 'tooltip';
+    popup.innerHTML = `
       <div class="tooltip__content">${content}</div>
       <div class="tooltip__arrow"></div>
     `;
-  return popup;
-};
+    return popup;
+  };
 
-const renderActivator = (element) => {
-  const activator = document.createElement('div');
-  activator.classList.add('icon', 'tooltip__activator');
-  element.appendChild(activator);
-  activator.innerHTML = svg;
-  return activator;
-};
+  const renderActivator = (element) => {
+    const activator = document.createElement('div');
+    activator.classList.add('icon', 'tooltip__activator');
+    element.appendChild(activator);
+    activator.innerHTML = svg;
+    return activator;
+  };
 
-const tooltips = document.querySelectorAll('.tooltip');
+  const tooltips = document.querySelectorAll('.tooltip');
 
-const hideTooltip = (event) => {
-  const tooltipContent = event.target?.parentNode
-    ?.querySelector('.tooltip__inner')
-    ?.classList.remove('tooltip__inner_visible');
-};
+  const hideTooltip = (event) => {
+    const tooltipContent = event.target?.parentNode
+      ?.querySelector('.tooltip__inner')
+      ?.classList.remove('tooltip__inner_visible');
+  };
 
-const deviceType = getDeviceType();
+  const deviceType = getDeviceType();
 
-tooltips.forEach((item) => {
-  let activator = item?.querySelector('.tooltip__activator');
-  if (!activator) {
-    activator = renderActivator(item);
-  }
+  tooltips.forEach((item) => {
+    let activator = item?.querySelector('.tooltip__activator');
+    if (!activator) {
+      activator = renderActivator(item);
+    }
 
-  const tooltipContent = renderTooltip(item.getAttribute('data-tooltip'));
-  item.appendChild(tooltipContent);
+    const tooltipContent = renderTooltip(item.getAttribute('data-tooltip'));
+    item.appendChild(tooltipContent);
 
-  requestAnimationFrame(() => {
-    const arrowEl = tooltipContent.querySelector('.tooltip__arrow');
+    requestAnimationFrame(() => {
+      const arrowEl = tooltipContent.querySelector('.tooltip__arrow');
 
-    /**center at mobile devices */
-    let overflow = null;
-    const mobileDisplay = {
-      name: 'middleware',
-      async fn(middlewareArguments) {
-        if (deviceType !== 'mobile') {
-          return { middlewareArguments };
+      /**center at mobile devices */
+      let overflow = null;
+      const mobileDisplay = {
+        name: 'middleware',
+        async fn(middlewareArguments) {
+          if (deviceType !== 'mobile') {
+            return { middlewareArguments };
+          }
+          const padding = 15;
+          overflow = await detectOverflow(middlewareArguments);
+
+          middlewareArguments.middlewareData.arrow.x =
+            middlewareArguments.middlewareData.arrow.x -
+            overflow.left -
+            padding;
+
+          return {
+            ...middlewareArguments,
+            x: middlewareArguments.x + overflow.left + padding,
+            y: middlewareArguments.y
+          };
         }
-        const padding = 15;
-        overflow = await detectOverflow(middlewareArguments);
+      };
 
-        middlewareArguments.middlewareData.arrow.x =
-          middlewareArguments.middlewareData.arrow.x - overflow.left - padding;
+      const computePopperPosition = async () => {
+        const { x, y, middlewareData } = await computePosition(
+          activator,
+          tooltipContent,
+          {
+            placement: 'top',
+            animation: false,
+            middleware: [
+              offset(10),
+              arrow({
+                element: arrowEl
+              }),
+              mobileDisplay
+            ]
+          }
+        );
 
-        return {
-          ...middlewareArguments,
-          x: middlewareArguments.x + overflow.left + padding,
-          y: middlewareArguments.y
-        };
-      }
-    };
-
-    const computePopperPosition = async () => {
-      const { x, y, middlewareData } = await computePosition(
-        activator,
-        tooltipContent,
-        {
-          placement: 'top',
-          animation: false,
-          middleware: [
-            offset(10),
-            arrow({
-              element: arrowEl
-            }),
-            mobileDisplay
-          ]
-        }
-      );
-
-      Object.assign(tooltipContent.style, {
-        left: `${x}px`,
-        top: `${y}px`
-      });
-
-      const arrowData = middlewareData.arrow;
-      if (arrowData) {
-        const { x: arrowX, y: arrowY } = arrowData;
-
-        Object.assign(arrowEl.style, {
-          left: arrowX != null ? `${arrowX}px` : '',
-          top: arrowY != null ? `${arrowY}px` : ''
+        Object.assign(tooltipContent.style, {
+          left: `${x}px`,
+          top: `${y}px`
         });
-      }
-    };
 
-    let width =
-      item.getAttribute(`data-tooltip-width-${deviceType}`) ??
-      'max(calc(100vw - 30px)';
+        const arrowData = middlewareData.arrow;
+        if (arrowData) {
+          const { x: arrowX, y: arrowY } = arrowData;
 
-    tooltipContent.style.maxWidth = width;
-    tooltipContent.style.width = width;
-
-    computePopperPosition();
-
-    let enter = false;
-    const timeout = null;
-
-    activator.addEventListener('mouseenter', async () => {
-      enter = true;
-      if (timeout) clearTimeout(timeout);
-
-      tooltipContent.classList.add('tooltip__inner_visible');
-      await computePopperPosition();
-    });
-
-    activator.addEventListener('mouseleave', (event) => {
-      if (timeout) clearTimeout(timeout);
-      enter = false;
-      setTimeout(() => {
-        if (enter) {
-          return;
+          Object.assign(arrowEl.style, {
+            left: arrowX != null ? `${arrowX}px` : '',
+            top: arrowY != null ? `${arrowY}px` : ''
+          });
         }
-        hideTooltip(event);
+      };
+
+      let width =
+        item.getAttribute(`data-tooltip-width-${deviceType}`) ??
+        'max(calc(100vw - 30px)';
+
+      tooltipContent.style.maxWidth = width;
+      tooltipContent.style.width = width;
+
+      computePopperPosition();
+
+      let enter = false;
+      const timeout = null;
+
+      activator.addEventListener('mouseenter', async () => {
+        enter = true;
+        if (timeout) clearTimeout(timeout);
+
+        tooltipContent.classList.add('tooltip__inner_visible');
+        await computePopperPosition();
+      });
+
+      activator.addEventListener('mouseleave', (event) => {
+        if (timeout) clearTimeout(timeout);
+        enter = false;
+        setTimeout(() => {
+          if (enter) {
+            return;
+          }
+          hideTooltip(event);
+        });
+      });
+
+      activator.addEventListener('click', () => {
+        if (event.currentTarget === activator) {
+          hideTooltip;
+        }
       });
     });
 
-    activator.addEventListener('click', () => {
-      if (event.currentTarget === activator) {
-        hideTooltip;
-      }
+    item.addEventListener('click', (event) => {
+      event.stopPropagation();
+      event.preventDefault();
     });
-  });
-
-  item.addEventListener('click', (event) => {
-    event.stopPropagation();
-    event.preventDefault();
   });
 });
