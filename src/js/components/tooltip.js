@@ -3,7 +3,8 @@ import {
   arrow,
   offset,
   detectOverflow,
-  autoUpdate
+  autoUpdate,
+  flip
 } from '@floating-ui/dom';
 import { getDeviceType } from '../utils/dom';
 
@@ -17,17 +18,6 @@ const svg = `
 </svg>`;
 
 document.addEventListener('DOMContentLoaded', () => {
-  const getTooltipShift = ({ x, y }, { left, right }) => {
-    // Check if the tooltip overflows the viewport on the left side
-    let newX = x;
-    let newY = y;
-    if (right > 0) {
-      newX = x - right;
-    }
-
-    newX;
-  };
-
   const renderTooltip = (content) => {
     const popup = document.createElement('div');
     popup.classList.add('tooltip__inner');
@@ -50,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const tooltips = document.querySelectorAll('.tooltip');
 
   const hideTooltip = (event) => {
-    const tooltipContent = event.target?.parentNode
+    event.target?.parentNode
       ?.querySelector('.tooltip__inner')
       ?.classList.remove('tooltip__inner_visible');
   };
@@ -85,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
             deviceType === 'laptop' ||
             deviceType === 'tablet'
           ) {
-            /**detec oveflow and cal new positions */
+            /**detect oveflow and calc new positions */
             const { right, left } = await detectOverflow(middlewareArguments);
             let x = middlewareArguments.x;
 
@@ -130,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       const computePopperPosition = async () => {
-        const { x, y, middlewareData } = await computePosition(
+        const { x, y, middlewareData, placement } = await computePosition(
           activator,
           tooltipContent,
           {
@@ -138,6 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
             animation: false,
             middleware: [
               offset(10),
+              flip(),
+
               arrow({
                 element: arrowEl
               }),
@@ -153,7 +145,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const arrowData = middlewareData.arrow;
         if (arrowData) {
-          const { x: arrowX, y: arrowY } = arrowData;
+          let { x: arrowX, y: arrowY } = arrowData;
+
+          if (placement === 'bottom') {
+            arrowY = -tooltipContent.offsetHeight;
+          }
 
           Object.assign(arrowEl.style, {
             left: arrowX != null ? `${arrowX}px` : '',
