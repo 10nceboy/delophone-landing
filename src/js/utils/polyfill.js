@@ -1,3 +1,7 @@
+/**
+ * SmoothScrolling to Safari
+ * @param {HTMLElement} element
+ */
 export const smoothScrollSafari = (element) => {
   const targetPosition = element.offsetTop;
   const startPosition = window.pageYOffset;
