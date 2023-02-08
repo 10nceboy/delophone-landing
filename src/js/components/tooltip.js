@@ -70,11 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return { middlewareArguments };
           }
 
-          if (
-            deviceType === 'smartphone' ||
-            deviceType === 'laptop' ||
-            deviceType === 'tablet'
-          ) {
+          if (deviceType !== 'mobile') {
             /**detect oveflow and calc new positions */
             const { right, left } = await detectOverflow(middlewareArguments);
             let x = middlewareArguments.x;
@@ -96,10 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
               x,
               y: middlewareArguments.y
             };
-          }
-
-          /**center ta mobile */
-          if (deviceType === 'mobile') {
+          } else {
+            /**center ta mobile */
             const padding = 15;
             overflow = await detectOverflow(middlewareArguments);
 
@@ -114,8 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
               y: middlewareArguments.y
             };
           }
-
-          return middlewareArguments;
         }
       };
 

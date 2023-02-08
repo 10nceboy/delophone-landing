@@ -751,7 +751,6 @@ $line-width: 140px;
     transition: color 0.2s ease-in-out;
 
     @include font(400, 14px, $orange);
-    margin-left: $spacer;
 
     @include tablet {
       @include font(400, 16px, $gray);
