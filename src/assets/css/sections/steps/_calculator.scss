@@ -580,6 +580,17 @@ $line-width: 140px;
       border: none;
       color: $orange;
     }
+
+    &_disabled {
+      pointer-events: none;
+      cursor: default;
+      color: $in-gray;
+
+      &:hover,
+      :active {
+        color: $in-gray;
+      }
+    }
   }
 
   &__dropdown {
