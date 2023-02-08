@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return { middlewareArguments };
           }
 
-          if (['smartphone', 'laptop', 'tablet'].includes(deviceType)) {
+          if (deviceType !== 'mobile') {
             /**detect oveflow and calc new positions */
             const { right, left } = await detectOverflow(middlewareArguments);
             let x = middlewareArguments.x;
@@ -92,10 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
               x,
               y: middlewareArguments.y
             };
-          }
+          } else {
 
           /**center ta mobile */
-          if (deviceType === 'mobile') {
             const padding = 15;
             overflow = await detectOverflow(middlewareArguments);
 
