@@ -66,9 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (inputValue > 0) {
       const formattedPrice = formatNumber(price * inputValue);
       const formattedmonthlyPrice = formatNumber(monthlyPrice * inputValue);
-
-      priceEl.textContent = `${formattedPrice}₽ разово${monthlyPriceEL ? ',' : ''
-        }`;
+      priceEl.textContent = `${formattedPrice}₽ разово${
+        monthlyPriceEL ? ',' : ''
+      }`;
       priceParenEl.classList.remove('calculator__price_disabled');
       if (monthlyPriceEL && monthlyPrice) {
         monthlyPriceEL.textContent = `${formattedmonthlyPrice} ₽ / мес`;
@@ -114,13 +114,19 @@ document.addEventListener('DOMContentLoaded', () => {
     let intervalIncrement, intervalDecrement;
 
     const incrementEl = multiplier.querySelector('.calculator__increment');
-
     incrementEl.addEventListener('click', () => {
       increment(input);
     });
 
     incrementEl.addEventListener('mousedown', () => {
       intervalIncrement = setInterval(() => increment(input), 150);
+      incrementEl.addEventListener(
+        'mouseleave',
+        () => {
+          clearInterval(intervalIncrement);
+        },
+        { once: true }
+      );
     });
 
     incrementEl.addEventListener('mouseup', () => {
@@ -129,17 +135,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const decrementEl = multiplier.querySelector('.calculator__decrement');
     decrementEl.addEventListener('click', () => {
+      clearInterval(intervalDecrement);
       decrement(input);
     });
 
     decrementEl.addEventListener('mousedown', () => {
+      const inputValue = getInputValue(input);
+      if (inputValue === 0) {
+        debugger;
+        return;
+      }
       intervalDecrement = setInterval(() => decrement(input), 150);
+      decrementEl.addEventListener(
+        'mouseleave',
+        () => {
+          clearInterval(intervalDecrement);
+        },
+        { once: true }
+      );
     });
 
     decrementEl.addEventListener('mouseup', () => {
       clearInterval(intervalDecrement);
     });
 
+    /**change here - synthetic event, not native!!!! */
     input.addEventListener('change', () => {
       handleInputChange(event);
     });
