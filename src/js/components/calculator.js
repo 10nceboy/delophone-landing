@@ -142,7 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
     decrementEl.addEventListener('mousedown', () => {
       const inputValue = getInputValue(input);
       if (inputValue === 0) {
-        debugger;
         return;
       }
       intervalDecrement = setInterval(() => decrement(input), 150);
