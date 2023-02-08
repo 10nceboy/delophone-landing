@@ -10,13 +10,5 @@ export default defineConfig({
       '~': path.resolve(__dirname, 'src')
     },
     extensions: ['.js', '.scss']
-  },
-  build: {
-    rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, 'index.html'),
-        nested: path.resolve(__dirname, 'pages/full.html')
-      }
-    }
   }
 });
