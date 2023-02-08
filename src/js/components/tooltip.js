@@ -70,11 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return { middlewareArguments };
           }
 
-          if (
-            deviceType === 'smartphone' ||
-            deviceType === 'laptop' ||
-            deviceType === 'tablet'
-          ) {
+          if (['smartphone', 'laptop', 'tablet'].includes(deviceType)) {
             /**detect oveflow and calc new positions */
             const { right, left } = await detectOverflow(middlewareArguments);
             let x = middlewareArguments.x;
