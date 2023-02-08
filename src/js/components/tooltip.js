@@ -93,8 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
               y: middlewareArguments.y
             };
           } else {
-
-          /**center ta mobile */
+            /**center ta mobile */
             const padding = 15;
             overflow = await detectOverflow(middlewareArguments);
 
@@ -109,8 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
               y: middlewareArguments.y
             };
           }
-
-          return middlewareArguments;
         }
       };
 
