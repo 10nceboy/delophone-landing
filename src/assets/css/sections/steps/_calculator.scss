@@ -173,6 +173,7 @@ $line-width: 140px;
 
       .calculator__price {
         &::before {
+          user-select: none;
           min-width: unset;
 
           @include tablet {

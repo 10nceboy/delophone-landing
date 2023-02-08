@@ -47,12 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const decrement = (input, decrementEl) => {
     const value = getInputValue(input);
     if (value <= 0) {
-      decrementEl.classList.add('calculator__decrement_disabled');
-
       return;
     }
     input.prevValue = value;
-
+    if (value - 1 <= 0) {
+      decrementEl.classList.add('calculator__decrement_disabled');
+    }
     setInputValue(input, value - 1);
   };
 
