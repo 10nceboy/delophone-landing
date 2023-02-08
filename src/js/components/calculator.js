@@ -44,12 +44,15 @@ document.addEventListener('DOMContentLoaded', () => {
     setInputValue(input, getInputValue(input) + 1);
   };
 
-  const decrement = (input) => {
+  const decrement = (input, decrementEl) => {
     const value = getInputValue(input);
     if (value <= 0) {
       return;
     }
     input.prevValue = value;
+    if (value - 1 <= 0) {
+      decrementEl.classList.add('calculator__decrement_disabled');
+    }
     setInputValue(input, value - 1);
   };
 
@@ -114,12 +117,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let intervalIncrement, intervalDecrement;
 
     const incrementEl = multiplier.querySelector('.calculator__increment');
+    const decrementEl = multiplier.querySelector('.calculator__decrement');
+
     incrementEl.addEventListener('click', () => {
       increment(input);
     });
 
     incrementEl.addEventListener('mousedown', () => {
       intervalIncrement = setInterval(() => increment(input), 150);
+      decrementEl.classList.remove('calculator__decrement_disabled');
+
       incrementEl.addEventListener(
         'mouseleave',
         () => {
@@ -133,10 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
       clearInterval(intervalIncrement);
     });
 
-    const decrementEl = multiplier.querySelector('.calculator__decrement');
     decrementEl.addEventListener('click', () => {
       clearInterval(intervalDecrement);
-      decrement(input);
+      decrement(input, decrementEl);
     });
 
     decrementEl.addEventListener('mousedown', () => {
@@ -144,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (inputValue === 0) {
         return;
       }
-      intervalDecrement = setInterval(() => decrement(input), 150);
+      intervalDecrement = setInterval(() => decrement(input, decrementEl), 150);
       decrementEl.addEventListener(
         'mouseleave',
         () => {
