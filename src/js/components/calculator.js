@@ -1,4 +1,4 @@
-import { debounce, formatNumber } from '../utils/common';
+import { formatNumber } from '../utils/common';
 
 document.addEventListener('DOMContentLoaded', () => {
   const sumDivs = document.querySelectorAll('.calculator__sum');
@@ -104,14 +104,12 @@ document.addEventListener('DOMContentLoaded', () => {
     updatePrices(inputValue, input, price, monthlyPrice);
   };
 
-  const onChangeDebounced = debounce(onChange, 100);
-
   document.querySelectorAll('.calculator__multiplier').forEach((multiplier) => {
     const input = multiplier.querySelector('.calculator__input');
     const price = multiplier.dataset.price;
     const monthlyPrice = multiplier.dataset.monthlyPrice;
     const handleInputChange = () => {
-      onChangeDebounced(input, price, monthlyPrice);
+      onChange(input, price, monthlyPrice);
     };
 
     let intervalIncrement, intervalDecrement;
@@ -120,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const decrementEl = multiplier.querySelector('.calculator__decrement');
 
     incrementEl.addEventListener('click', () => {
+      clearInterval(intervalIncrement);
       increment(input);
     });
 
@@ -147,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     decrementEl.addEventListener('mousedown', () => {
       const inputValue = getInputValue(input);
-      if (inputValue === 0) {
+      if (inputValue <= 0) {
         return;
       }
       intervalDecrement = setInterval(() => decrement(input, decrementEl), 150);
@@ -166,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /**change here - synthetic event, not native!!!! */
     input.addEventListener('change', () => {
-      handleInputChange(event);
+      handleInputChange();
     });
   });
 });
