@@ -23,7 +23,8 @@
   },
   "dependencies": {
     "@floating-ui/dom": "^1.1.1",
-    "swiper": "^8.4.6"
+    "swiper": "^8.4.6",
+    "vite-plugin-handlebars": "^1.6.0"
   },
   "main": "main.js",
   "repository": {
