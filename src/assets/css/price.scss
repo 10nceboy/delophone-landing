@@ -11,27 +11,32 @@
 @import './components/cards';
 @import './components/footer';
 @import './components/chips';
-@import './components/arcs';
 @import './components/list';
 @import './components/list-item';
 @import './components/collapse';
 @import './components/whatsapp';
 @import './components/modal';
 @import './components/overlay';
-@import './components/tabs';
-@import './components/carousel';
 @import './components/tooltip';
 @import './components/icon';
 @import './components/breadcrumbs';
 
 /**sections**/
-@import './sections/main/hero';
-@import './sections/main/phone-business';
-@import './sections/main/pay-minutes';
 @import './sections/common/startuse';
 @import './sections/main/features';
 @import './sections/main/steps/steps'; /* <= imports all step sections */
 @import './sections/main/stats';
 @import './sections/main/faq';
-@import './sections/main/cases';
-@import './sections/main/cases-bot';
+@import './sections/price/calls';
+
+.price {
+  &__header {
+    margin-top: $spacer * 6;
+    margin-bottom: $spacer * 5;
+
+    @include tablet {
+      margin-top: $spacer * 14;
+      margin-bottom: $spacer * 11;
+    }
+  }
+}

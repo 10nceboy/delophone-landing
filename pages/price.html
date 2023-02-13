@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Делофон - Стоимость</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/icon/favicon-16x16.png"
+    />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="alternate" hreflang="ru-ru" href="https://delofon.ru" />
+    <link rel="canonical" href="https://delofon.ru/" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:site_name" content="Делофон" />
+    <meta property="og:url" content=https://delofon.ru/>
+    <meta
+      property="og:image"
+      content="https://10nceboy.github.io/delophone-landing/cover.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:description"
+      content="Настройте звонки в бизнесе: с красивым номером, многоканальной линией и распределением звонков по сотрудникам с любыми устройствами."
+    />
+    <meta property="og:type" content="product" />
+    <meta
+      property="og:title"
+      content="Делофон - Первая виртуальная АТС без абонентской платы"
+    />
+    <meta
+      name="description"
+      content="Настройте звонки в бизнесе: с красивым номером, многоканальной линией и распределением звонков по сотрудникам с любыми устройствами."
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="delofon.ru" />
+    <meta property="twitter:url" content="https://delofon.ru" />
+    <meta
+      name="twitter:title"
+      content="Делофон - Первая виртуальная АТС без абонентской платы"
+    />
+    <meta
+      name="twitter:description"
+      content="Настройте звонки в бизнесе: с красивым номером, многоканальной линией и распределением звонков по сотрудникам с любыми устройствами."
+    />
+    <meta
+      name="twitter:image"
+      content="https://10nceboy.github.io/delophone-landing/cover.png"
+    />
+    <link rel="stylesheet" href="../src/assets/css/price.scss" />
+    <link rel="stylesheet" href="../src/assets/css/long/header-long.scss" />
+    <link rel="stylesheet" href="../src/assets/css/long/footer-long.scss" />
+
+    <link rel="stylesheet" href="../src/assets/css/long/сards-long.scss" />
+    <script src="../main.js" type="module"></script>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    {{> header }}
+
+    <main>
+      <div class="container">
+        <ul class="breadcrumbs price__breadcrumbs">
+          <li>
+            <a class="link link_black breadcrumbs__link" href="/index.html">
+              Главная&nbsp;/</a
+            >
+          </li>
+          <li>Стоимость</li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <div class="price__header">
+          <h1>Сколько стоит Делофон</h1>
+        </div>
+      </div>
+      <section class="calls">
+        <div class="container">
+          <div class="calls__header"><h3>Звонки</h3></div>
+          <div class="calls__content"></div>
+        </div>
+        {{> whatsapp }} {{> startuse }}
+      </section>
+    </main>
+  </body>
+</html>
