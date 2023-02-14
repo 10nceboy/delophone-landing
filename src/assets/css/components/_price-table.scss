@@ -1,0 +1,113 @@
+.price-table {
+  &__section {
+    display: block;
+
+    @include tablet {
+      display: flex;
+      margin-top: $spacer * 5;
+      width: 80%;
+
+      &:first-child {
+        margin-top: 0px;
+      }
+    }
+  }
+
+  &__leftside {
+    @include font($normal, 18px, $gray);
+    line-height: 130%;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 155%;
+    }
+  }
+
+  &__rightside {
+    @include font($normal, 16px, $gray);
+    line-height: 130%;
+    margin-top: $spacer * 2;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 155%;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    &_per-month {
+      color: $gray2;
+      font-size: 14px;
+
+      @include tablet {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__divider {
+    display: none;
+
+    @include tablet {
+      display: block;
+      border-top: 1px dotted $gray2;
+      align-self: center;
+      flex: 1;
+      margin: 0px $spacer * 4;
+    }
+  }
+
+  &__divider_mobile {
+    display: block;
+    border: 1px solid $in-gray;
+    margin: $spacer * 4 0px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__accent {
+    font-weight: $semi-bold;
+    color: $black;
+  }
+
+  &__list {
+    display: none;
+    list-style: inside;
+
+    @include tablet {
+      display: flex;
+      margin-top: $spacer;
+    }
+  }
+
+  &__list-item {
+    @include font($normal, 14px, $gray);
+
+    @include tablet {
+      margin-right: $spacer * 3;
+    }
+  }
+
+  &__note {
+    @include font($normal, 14px, $gray);
+    margin-top: $spacer;
+    display: none;
+
+    @include tablet {
+      margin-bottom: 0px;
+      display: block;
+    }
+
+    &_mobile {
+      display: block;
+      @include font($normal, 14px, $gray);
+      margin-top: $spacer;
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+}

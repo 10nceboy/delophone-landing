@@ -1,0 +1,9 @@
+.iptel {
+  &__content {
+    padding: $spacer * 4;
+
+    @include tablet {
+      padding: $spacer * 4 $spacer * 10 $spacer * 10 $spacer * 10;
+    }
+  }
+}

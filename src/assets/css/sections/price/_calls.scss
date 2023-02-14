@@ -1,0 +1,30 @@
+.calls {
+  &__content {
+    padding: $spacer * 4;
+    @include tablet {
+      padding: $spacer * 10 0px $spacer * 10 $spacer * 10;
+    }
+  }
+
+  &__list {
+    @include tablet {
+      display: flex;
+      margin-top: $spacer * 6;
+      width: 80%;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    @include font($normal, 16px, $gray);
+
+    @include tablet {
+      margin-left: $spacer * 6;
+      line-height: 24, 8px;
+
+      &:first-child {
+        margin-left: 0px;
+      }
+    }
+  }
+}

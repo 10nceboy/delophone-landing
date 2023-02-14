@@ -3,9 +3,9 @@
 @import './base/layout';
 
 /* components */
-@import './components/button.scss';
-@import './components/header.scss';
-@import './components/dropdown.scss';
+@import './components/button';
+@import './components/header';
+@import './components/dropdown';
 @import './components/login';
 @import './components/link';
 @import './components/cards';
@@ -20,6 +20,7 @@
 @import './components/tooltip';
 @import './components/icon';
 @import './components/breadcrumbs';
+@import './components/price-table';
 
 /**sections**/
 @import './sections/common/startuse';
@@ -28,6 +29,8 @@
 @import './sections/main/stats';
 @import './sections/main/faq';
 @import './sections/price/calls';
+@import './sections/price/virtueats';
+@import './sections/price/iptel';
 
 .price {
   &__header {
@@ -36,7 +39,43 @@
 
     @include tablet {
       margin-top: $spacer * 14;
-      margin-bottom: $spacer * 11;
     }
+  }
+
+  &__section {
+    margin-top: $spacer * 7;
+
+    @include tablet {
+      margin-top: $spacer * 11;
+    }
+  }
+
+  &__section-header {
+    margin-bottom: $spacer * 3;
+
+    @include tablet {
+      margin-bottom: $spacer * 5;
+    }
+  }
+
+  &__section-content {
+    border: $border-cold-gray;
+    border-radius: $border-radius-xl;
+
+    &_top {
+      @include laptop {
+        display: flex;
+      }
+    }
+  }
+
+  &__textblock {
+    @include font($normal, 20px, $gray);
+    line-height: 31px;
+    margin-right: $spacer * 8;
+  }
+
+  &_top {
+    margin-bottom: $spacer * 2;
   }
 }
