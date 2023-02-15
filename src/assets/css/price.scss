@@ -72,10 +72,16 @@
   &__textblock {
     @include font($normal, 20px, $gray);
     line-height: 31px;
-    margin-right: $spacer * 8;
+    margin-left: $spacer * 8;
   }
 
-  &_top {
+  &__textblock_top {
     margin-bottom: $spacer * 2;
+    line-height: 31px;
+  }
+
+  &__devilvery-accent {
+    color: $black;
+    font-weight: $semi-bold;
   }
 }

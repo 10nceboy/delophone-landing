@@ -5,7 +5,7 @@
     @include tablet {
       display: flex;
       margin-top: $spacer * 5;
-      width: 80%;
+      flex-basis: 33, 3%;
 
       &:first-child {
         margin-top: 0px;
@@ -33,6 +33,7 @@
       line-height: 155%;
       margin-bottom: 0px;
       margin-top: 0px;
+      flex-shrink: 0;
     }
 
     &_per-month {
@@ -52,8 +53,8 @@
       display: block;
       border-top: 1px dotted $gray2;
       align-self: center;
-      flex: 1;
       margin: 0px $spacer * 4;
+      flex-grow: 1;
     }
   }
 
