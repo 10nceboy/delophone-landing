@@ -5,17 +5,24 @@
     @include tablet {
       display: flex;
       margin-top: $spacer * 5;
-      flex-basis: 33, 3%;
 
       &:first-child {
         margin-top: 0px;
       }
+    }
+
+    @include laptop {
+      max-width: 84%;
     }
   }
 
   &__leftside {
     @include font($normal, 18px, $gray);
     line-height: 130%;
+
+    @include smartphone {
+      font-size: 20px;
+    }
 
     @include tablet {
       font-size: 20px;
@@ -28,17 +35,26 @@
     line-height: 130%;
     margin-top: $spacer * 2;
 
+    @include smartphone {
+      font-size: 17px;
+    }
+
     @include tablet {
       font-size: 20px;
       line-height: 155%;
       margin-bottom: 0px;
       margin-top: 0px;
       flex-shrink: 0;
+      min-width: 136px;
     }
 
     &_per-month {
       color: $gray2;
       font-size: 14px;
+
+      @include smartphone {
+        font-size: 15px;
+      }
 
       @include tablet {
         font-size: 16px;
@@ -106,9 +122,19 @@
       @include font($normal, 14px, $gray);
       margin-top: $spacer;
 
+      @include smartphone {
+        font-size: 16px;
+      }
+
       @include tablet {
         display: none;
       }
+    }
+  }
+
+  &__rate {
+    @include laptop {
+      max-width: 88%;
     }
   }
 }

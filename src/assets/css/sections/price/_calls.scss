@@ -1,8 +1,9 @@
 .calls {
   &__content {
     padding: $spacer * 4;
+
     @include tablet {
-      padding: $spacer * 10 0px $spacer * 10 $spacer * 10;
+      padding: $spacer * 10;
     }
   }
 
@@ -10,21 +11,46 @@
     @include tablet {
       display: flex;
       margin-top: $spacer * 6;
-      width: 80%;
+    }
+
+    @include laptop {
+      width: 86%;
     }
   }
 
   &__list-item {
     display: flex;
-    @include font($normal, 16px, $gray);
+    @include font($normal, 15px, $gray);
+    line-height: 23.25px;
+    margin-bottom: $spacer;
+
+    @include smartphone {
+      font-size: 18px;
+    }
 
     @include tablet {
-      margin-left: $spacer * 6;
-      line-height: 24, 8px;
+      font-size: 14.5px;
+      line-height: 24.8px;
+      margin-bottom: 0px;
+      margin-left: $spacer * 3;
 
       &:first-child {
         margin-left: 0px;
       }
+    }
+
+    @include tablet-1024 {
+      font-size: 16px;
+    }
+
+    @include laptop {
+      margin-left: $spacer * 6;
+    }
+  }
+  &__break {
+    display: none;
+    @include tablet {
+      display: inline;
     }
   }
 }

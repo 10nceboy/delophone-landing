@@ -107,6 +107,18 @@ $family: 'Manrope';
   }
 }
 
+@mixin tablet-m {
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin tablet-s {
+  @media screen and (min-width: 680px) and (max-width: 767px) {
+    @content;
+  }
+}
+
 /*fonts*/
 @mixin font($weight, $size, $color, $fam: $family) {
   font: $weight $size $fam;

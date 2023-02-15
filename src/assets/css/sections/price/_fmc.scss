@@ -1,5 +1,70 @@
 .fmc {
-  &__packages {
+  &__textblock_top {
+    @include desktop {
+      width: 760px;
+    }
+  }
+}
+
+.fmc-packages {
+  display: block;
+  background-color: $light-gray;
+  border-radius: $border-radius-xl;
+  padding: $spacer * 4;
+  margin-top: $spacer * 4;
+
+  @include tablet {
     display: flex;
+    width: 657px;
+  }
+
+  &__header {
+    margin-bottom: $spacer * 3;
+    @include font($medium, 16px, $black);
+    line-height: 21px;
+
+    @include tablet {
+      margin-right: $spacer * 7;
+      margin-bottom: 0px;
+      font-size: 18px;
+      line-height: 23.4px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 63px);
+    grid-row-gap: $spacer * 3;
+    grid-column-gap: 20px;
+
+    @include smartphone {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &__cell {
+    @include font($medium, 16px, $gray);
+    border-right: 2px solid $cold-gray;
+
+    &:nth-child(3) {
+      border-right: none;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    @include tablet {
+      margin-right: $spacer * 2;
+      margin-left: $spacer * 2;
+      font-size: 18px;
+      line-height: 23.4px;
+    }
+  }
+
+  &__giga {
+    color: $black;
+    margin-bottom: $spacer;
   }
 }

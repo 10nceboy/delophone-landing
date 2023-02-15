@@ -24,13 +24,13 @@
 
 /**sections**/
 @import './sections/common/startuse';
-@import './sections/main/features';
 @import './sections/main/steps/steps'; /* <= imports all step sections */
 @import './sections/main/stats';
-@import './sections/main/faq';
+
 @import './sections/price/calls';
 @import './sections/price/virtueats';
 @import './sections/price/iptel';
+@import './sections/price/fmc';
 
 .price {
   &__header {
@@ -53,8 +53,18 @@
   &__section-header {
     margin-bottom: $spacer * 3;
 
+    @include smartphone {
+      h3 {
+        font-size: 22px;
+      }
+    }
+
     @include tablet {
       margin-bottom: $spacer * 5;
+
+      h3 {
+        font-size: 26px;
+      }
     }
   }
 
@@ -63,21 +73,79 @@
     border-radius: $border-radius-xl;
 
     &_top {
-      @include laptop {
-        display: flex;
+      padding: 0px $spacer * 4;
+      display: flex;
+      flex-direction: column;
+
+      @include tablet {
+        flex-direction: row;
+        align-items: center;
+        padding: $spacer * 4 $spacer * 10 $spacer * 2 29px;
+      }
+    }
+
+    &_bottom {
+      padding: $spacer * 5 $spacer * 4 $spacer * 4 $spacer * 4;
+
+      @include tablet {
+        padding: 0px $spacer * 10 $spacer * 10 $spacer * 10;
       }
     }
   }
 
   &__textblock {
-    @include font($normal, 20px, $gray);
-    line-height: 31px;
-    margin-left: $spacer * 8;
+    @include font($normal, 15px, $gray);
+    line-height: 155%;
+
+    @include mobile-m {
+      font-size: 16px;
+    }
+
+    @include smartphone {
+      font-size: 19px;
+    }
+
+    @include tablet {
+      font-size: 17px;
+      margin-left: $spacer * 8;
+      margin-bottom: 0px;
+    }
+
+    @include tablet-1024 {
+      font-size: 18px;
+    }
+
+    @include laptop {
+      font-size: 19px;
+    }
+
+    @include desktop {
+      font-size: 20px;
+    }
   }
 
   &__textblock_top {
-    margin-bottom: $spacer * 2;
-    line-height: 31px;
+    margin-bottom: $spacer;
+
+    @include tablet {
+      margin-bottom: $spacer * 2;
+    }
+  }
+
+  &__image {
+    min-width: 226px;
+    min-height: 226px;
+    align-self: center;
+
+    @include smartphone {
+      min-width: 280px;
+      min-height: 280px;
+    }
+
+    @include tablet {
+      min-width: 226px;
+      min-height: 226px;
+    }
   }
 
   &__devilvery-accent {
