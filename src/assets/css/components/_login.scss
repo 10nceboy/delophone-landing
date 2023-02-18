@@ -102,6 +102,24 @@
     }
   }
 
+  &:active {
+    .login__icon {
+      color: $blue;
+      path:nth-child(1) {
+        stroke: $black;
+      }
+    }
+  }
+
+  &:focus {
+    .login__icon {
+      color: $blue;
+      path:nth-child(1) {
+        stroke: $black;
+      }
+    }
+  }
+
   &.active {
     background-color: $light-gray;
     @include visible($opacity-transition);

@@ -105,6 +105,16 @@
     display: flex;
     align-items: baseline;
 
+    svg {
+      fill: $orange;
+      margin-left: $spacer;
+      align-self: center;
+      path {
+        fill: $orange;
+        transition: fill 0.3s ease;
+      }
+    }
+
     &:hover {
       svg {
         path {
@@ -112,13 +122,6 @@
           transition: fill 0.3s ease;
         }
       }
-    }
-
-    svg {
-      fill: $orange;
-      margin-left: $spacer;
-      align-self: center;
-      transition: stroke 0.3s ease, fill 0.3s ease;
     }
   }
 
