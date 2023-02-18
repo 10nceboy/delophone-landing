@@ -1,5 +1,6 @@
+import { resolve } from 'path';
 import { defineConfig } from 'vite';
-import path from 'path';
+import handlebars from 'vite-plugin-handlebars';
 
 export default defineConfig({
   server: {
@@ -7,15 +8,20 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '~': path.resolve(__dirname, 'src')
+      '~': resolve(__dirname, 'src')
     },
     extensions: ['.js', '.scss']
   },
+  plugins: [
+    handlebars({
+      partialDirectory: [resolve(__dirname, 'src/html/components'), resolve(__dirname, 'src/html/sections')]
+    })
+  ],
   build: {
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'index.html'),
-        nested: path.resolve(__dirname, 'pages/full.html')
+        main: resolve(__dirname, 'index.html'),
+        nested: resolve(__dirname, 'pages/price.html')
       }
     }
   }

@@ -1,0 +1,73 @@
+.expand {
+  &__card {
+    padding: $spacer * 3 $spacer * 4;
+
+    @include tablet {
+      min-height: 93px;
+      height: 93px;
+      padding: $spacer * 6 $spacer * 10;
+    }
+  }
+
+  &__icon-plus,
+  &__icon-minus {
+    transition: opacity 0.5s;
+    min-height: 25px;
+    min-width: 25px;
+    margin-left: auto;
+
+    @include mobile-s {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__icon-minus {
+    display: none;
+  }
+
+  &__button {
+    cursor: pointer;
+    user-select: none;
+    @include flex-row;
+  }
+
+  &__title {
+    @include font($normal, 18px, $gray);
+    line-height: 155%;
+
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+
+  &__content {
+    max-height: 0px;
+    transition: $collapse-transition-height;
+    will-change: max-height;
+    overflow: hidden;
+  }
+}
+
+.expand__button_active {
+  .expand__icon-minus {
+    display: block;
+    opacity: 1;
+  }
+
+  .expand__icon-plus {
+    display: none;
+    opacity: 0;
+  }
+}
+
+.expand__content_visible {
+  opacity: 0;
+}
+
+.expand__content_active {
+  display: block;
+  max-height: 500px;
+  opacity: 1;
+  transition: $collapse-transition-height-reverse;
+}

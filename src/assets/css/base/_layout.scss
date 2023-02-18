@@ -73,3 +73,15 @@ html {
     }
   }
 }
+
+.background_gray {
+  background-color: $light-gray;
+
+  .startuse {
+    background-color: $light-gray;
+
+    img {
+      background-color: $light-gray;
+    }
+  }
+}

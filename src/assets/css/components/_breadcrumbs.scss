@@ -1,0 +1,18 @@
+.breadcrumbs {
+  @include flex-row;
+  margin-right: auto;
+  margin-top: $spacer * 10;
+
+  @include laptop {
+    font-size: 16px;
+    margin-top: $spacer * 7;
+  }
+
+  li {
+    margin-right: 5px;
+    color: $gray;
+  }
+  &__link {
+    font-weight: 400;
+  }
+}

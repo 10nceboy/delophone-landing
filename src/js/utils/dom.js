@@ -63,8 +63,8 @@ export const isInViewport = (element) => {
     rect.top >= 0 &&
     rect.left >= 0 &&
     rect.bottom <=
-      (window.innerHeight - 100 ||
-        document.documentElement.clientHeight - 100) &&
+    (window.innerHeight - 100 ||
+      document.documentElement.clientHeight - 100) &&
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 };
@@ -80,7 +80,8 @@ export const transitionEnter = (
   el,
   className,
   activeClass = '_active',
-  visibleClass = '_visible'
+  visibleClass = '_visible',
+  duration = 500
 ) => {
   el?.classList.add(`${className}${visibleClass}`);
   requestAnimationFrame(() => el.classList.add(`${className}${activeClass}`));

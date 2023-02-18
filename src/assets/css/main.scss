@@ -22,15 +22,16 @@
 @import './components/carousel';
 @import './components/tooltip';
 @import './components/icon';
+@import './components/breadcrumbs';
 
 /**sections**/
-@import './sections/hero';
-@import './sections/phone-business';
-@import './sections/pay-minutes';
-@import './sections/startuse';
-@import './sections/features';
-@import './sections/steps/steps'; /* <= imports all step sections */
-@import './sections/stats';
-@import './sections/faq';
-@import './sections/cases';
-@import './sections/cases-bot';
+@import './sections/common/hero';
+@import './sections/main/phone-business';
+@import './sections/common/pay-minutes';
+@import './sections/common/startuse';
+@import './sections/main/features';
+@import './sections/common/steps/steps'; /* <= imports all step sections */
+@import './sections/common/stats';
+@import './sections/common/faq';
+@import './sections/main/cases';
+@import './sections/common/cases-bot';
