@@ -46,3 +46,26 @@
     }
   }
 }
+
+.mobile {
+  display: flex;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.tablet {
+  display: none;
+  @include tablet {
+    display: flex;
+  }
+}
+
+.mobile-375 {
+  display: none;
+
+  @include mobile-375 {
+    display: flex;
+  }
+}
