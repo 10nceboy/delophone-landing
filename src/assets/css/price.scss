@@ -52,6 +52,14 @@
     }
   }
 
+  &__section-upside {
+    padding: $spacer * 4;
+
+    @include tablet {
+      padding: $spacer * 10;
+    }
+  }
+
   &__section-header {
     margin-bottom: $spacer * 3;
 
@@ -156,8 +164,18 @@
   }
 
   &__archive-rates {
+    font-size: 16px;
     text-align: center;
-    padding-top: $spacer * 11;
-    padding-bottom: $spacer * 30;
+    padding-top: $spacer * 7;
+    padding-bottom: $spacer * 16;
+
+    @include smartphone {
+      font-size: 18px;
+    }
+
+    @include tablet {
+      padding-top: $spacer * 11;
+      padding-bottom: $spacer * 30;
+    }
   }
 }

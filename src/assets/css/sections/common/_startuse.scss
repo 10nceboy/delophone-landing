@@ -112,4 +112,16 @@
       }
     }
   }
+
+  &_gray {
+    background-color: $light-gray;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+
+    @include tablet {
+      padding-top: 150px;
+    }
+  }
 }

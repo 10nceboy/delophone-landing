@@ -16,20 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const phonenNumber = document.getElementById('phone-numbers');
     let state = false;
     const headerArray = Array.from(tableHeader);
-    const headerView = headerArray.some(element => isInViewport(element));
+    let headerView = headerArray.some(element => isInViewport(element));
 
     expand.addEventListener('click', () => {
         state = !state;
 
 
 
-        if (state && headerView) {
-            console.log(state);
-            console.log(headerView);
+        if (state) {
             expandButton.classList.add('expand__button_active');
             expandContent.forEach(element => transitionEnter(element, 'expand__content'));
             tableHeader.forEach(element => transitionEnter(element, 'phone-numbers__header'));
-            phonenNumber.scrollIntoView({ block: 'nearest' });
+            phonenNumber.scrollIntoView({ block: 'start' });
         }
         else {
             expandContent.forEach(element => transitionLeave(element, 'expand__content'));
@@ -37,10 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.setTimeout(() => {
                 expandButton.classList.remove('expand__button_active');
             }, 400);
-            phonenNumber.scrollIntoView({ block: 'nearest' });
-
-
-
+            phonenNumber.scrollIntoView({ block: 'end' });
         }
     });
 

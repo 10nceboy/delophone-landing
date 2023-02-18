@@ -46,6 +46,10 @@
       margin-bottom: 0px;
       margin-top: 0px;
       flex-shrink: 0;
+      min-width: 149px;
+    }
+
+    @include laptop {
       min-width: 136px;
     }
 
@@ -186,6 +190,19 @@
   &__abon-vip-section {
     @include laptop {
       max-width: 93%;
+    }
+  }
+
+  &__dropdown {
+    left: 19px;
+    @include smartphone {
+      left: 0px;
+      padding-top: 20px;
+    }
+
+    @include tablet {
+      padding-bottom: 0px;
+      margin-bottom: 0px;
     }
   }
 }

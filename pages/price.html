@@ -77,14 +77,16 @@
     {{> header }}
     <main>
       <div class="container">
-        <ul class="breadcrumbs price__breadcrumbs">
-          <li>
-            <a class="link link_black breadcrumbs__link" href="/index.html">
-              Главная&nbsp;/</a
-            >
-          </li>
-          <li>Стоимость</li>
-        </ul>
+        <nav>
+          <ul class="breadcrumbs price__breadcrumbs">
+            <li>
+              <a class="link link_black breadcrumbs__link" href="/index.html">
+                Главная&nbsp;/</a
+              >
+            </li>
+            <li>Стоимость</li>
+          </ul>
+        </nav>
       </div>
       <div class="container">
         <div class="price__header">
@@ -97,7 +99,7 @@
             <h3>Виртуальная АТС</h3>
           </div>
           <div class="price__section-content virtueats__content">
-            <div class="virtueats__upside">
+            <div class="price__section-upside">
               <div class="price-table">
                 <div class="price-table__section">
                   <div class="price-table__leftside price-table__accent">
@@ -858,7 +860,7 @@
             <h3>Номера телефонов</h3>
           </div>
           <div class="price__section-content phone-numbers__content">
-            <div class="virtueats__upside">
+            <div class="price__section-upside">
               <div class="price-table phone-numbers__price-table">
                 <div class="price-table__section phone-numbers__header">
                   <div class="price-table__leftside price-table__accent">
@@ -886,7 +888,10 @@
                   </div>
                 </div>
 
-                <div class="dropdown__content" data-dropdown="calc-city">
+                <div
+                  class="dropdown__content price-table__dropdown"
+                  data-dropdown="calc-city"
+                >
                   <button class="button button_no-border dropdown__close">
                     <svg
                       width="25"
@@ -905,7 +910,9 @@
                     </svg>
                   </button>
                   <div class="dropdown__inner">
-                    <ul class="list list_markers list_grid-4x4">
+                    <ul
+                      class="list list_markers list_grid-4x4 price-table__dropdown-list"
+                    >
                       <li>Москва</li>
                       <li>Санкт-Петербург</li>
                       <li>Сочи</li>
@@ -1028,7 +1035,10 @@
                     </span>
                   </div>
                 </div>
-                <div class="dropdown__content" data-dropdown="calc-city-abon">
+                <div
+                  class="dropdown__content price-table__dropdown"
+                  data-dropdown="calc-city-abon"
+                >
                   <button class="button button_no-border dropdown__close">
                     <svg
                       width="25"
@@ -1047,7 +1057,9 @@
                     </svg>
                   </button>
                   <div class="dropdown__inner">
-                    <ul class="list list_markers list_grid-4x4">
+                    <ul
+                      class="list list_markers list_grid-4x4 price-table__dropdown-list"
+                    >
                       <li>Москва</li>
                       <li>Санкт-Петербург</li>
                       <li>Сочи</li>
@@ -1874,18 +1886,16 @@
       </section>
       <div class="container">
         <div class="price__archive-rates">
-          <h5>
-            <a
-              class="link link_blue"
-              aria-label="Архивные тарифы"
-              href="https://delofon.ru/tariffs"
-            >
-              Архивные тарифы
-            </a>
-          </h5>
+          <a
+            class="link link_blue"
+            aria-label="Архивные тарифы"
+            href="https://delofon.ru/tariffs"
+          >
+            Архивные тарифы
+          </a>
         </div>
       </div>
-      {{> whatsapp }} {{>startuse }}
+      {{>startuse_gray}} {{> whatsapp }}
     </main>
   </body>
 </html>

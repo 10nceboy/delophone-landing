@@ -1,12 +1,4 @@
 .virtueats {
-  &__upside {
-    padding: $spacer * 4;
-
-    @include tablet {
-      padding: $spacer * 10;
-    }
-  }
-
   &__collapse {
     background-color: $light-gray;
   }
