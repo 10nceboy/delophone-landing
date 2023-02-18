@@ -96,8 +96,8 @@
 
     .login__icon {
       color: $blue;
-      path {
-        stroke: $white;
+      path:nth-child(1) {
+        stroke: $black;
       }
     }
   }
