@@ -25,13 +25,13 @@
 @import './components/breadcrumbs';
 
 /**sections**/
-@import './sections/main/hero';
+@import './sections/common/hero';
 @import './sections/main/phone-business';
-@import './sections/main/pay-minutes';
+@import './sections/common/pay-minutes';
 @import './sections/common/startuse';
 @import './sections/main/features';
-@import './sections/main/steps/steps'; /* <= imports all step sections */
-@import './sections/main/stats';
-@import './sections/main/faq';
+@import './sections/common/steps/steps'; /* <= imports all step sections */
+@import './sections/common/stats';
+@import './sections/common/faq';
 @import './sections/main/cases';
-@import './sections/main/cases-bot';
+@import './sections/common/cases-bot';

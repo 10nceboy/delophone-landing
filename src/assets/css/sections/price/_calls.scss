@@ -1,12 +1,4 @@
 .calls {
-  &__content {
-    padding: $spacer * 4;
-
-    @include tablet {
-      padding: $spacer * 10;
-    }
-  }
-
   &__list {
     @include tablet {
       display: flex;

@@ -70,7 +70,7 @@
     <link rel="stylesheet" href="../src/assets/css/long/footer-long.scss" />
 
     <link rel="stylesheet" href="../src/assets/css/long/сards-long.scss" />
-    <script src="../main.js" type="module"></script>
+    <script src="price.js" type="module"></script>
   </head>
   <body>
     <div class="overlay"></div>
@@ -80,7 +80,11 @@
         <nav>
           <ul class="breadcrumbs price__breadcrumbs">
             <li>
-              <a class="link link_black breadcrumbs__link" href="/index.html">
+              <a
+                class="link link_black breadcrumbs__link"
+                href="/index.html"
+                aria-label="Главная"
+              >
                 Главная&nbsp;/</a
               >
             </li>
@@ -1330,7 +1334,7 @@
           <div class="price__section-header calls__header">
             <h3>Звонки</h3>
           </div>
-          <div class="price__section-content calls__content">
+          <div class="price__section-content price__section-upside">
             <div class="price-table">
               <div class="price-table__section">
                 <div class="price-table__leftside price-table__accent">
@@ -1358,7 +1362,8 @@
               </div>
               <div class="price-table__section">
                 <div class="price-table__leftside">
-                  Входящие звонки на&nbsp;номерах 8-800
+                  Входящие звонки&nbsp;на&nbsp;номера <br class="mobile-375" />
+                  8-800
                 </div>
 
                 <div class="price-table__divider"></div>
@@ -1392,8 +1397,8 @@
           <div class="price__section-header">
             <h3>SIM-карты (FMC) с телефонией</h3>
           </div>
-          <div class="price__section-content iptel__content">
-            <div class="price__section-content_top">
+          <div class="price__section-content price__section-with-image">
+            <div class="price__section-with-image_top">
               <svg
                 class="price__image"
                 width="226"
@@ -1524,7 +1529,7 @@
                   </clipPath>
                 </defs>
               </svg>
-              <div class="price__textblock iptel__textblock">
+              <div class="price__textblock">
                 <div class="price__textblock_top fmc__textblock_top">
                   SIM-карта для мобильного телефона со всеми функциями телефонии
                   Делофон. Идеально подходит для сотрудников в разъездах.
@@ -1536,7 +1541,7 @@
                 </div>
               </div>
             </div>
-            <div class="price__section-content_bottom">
+            <div class="price__section-with-image_bottom">
               <div class="price-table">
                 <div class="price-table__section">
                   <div class="price-table__leftside price-table__accent">
@@ -1595,10 +1600,10 @@
           <div class="price__section-header">
             <h3>IP-телефон Делофон</h3>
           </div>
-          <div class="price__section-content">
-            <div class="price__section-content_top">
+          <div class="price__section-content price__section-with-image">
+            <div class="price__section-with-image_top">
               <svg
-                class="price__image iptel__image"
+                class="price__image"
                 width="226"
                 height="226"
                 viewBox="0 0 226 226"
@@ -1856,7 +1861,7 @@
                 </div>
               </div>
             </div>
-            <div class="price__section-content_bottom">
+            <div class="price__section-with-image_bottom">
               <div class="price-table">
                 <div class="price-table__section">
                   <div class="price-table__leftside price-table__accent">
@@ -1897,5 +1902,6 @@
       </div>
       {{>startuse_gray}} {{> whatsapp }}
     </main>
+    {{> footer }}
   </body>
 </html>

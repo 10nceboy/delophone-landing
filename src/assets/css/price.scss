@@ -25,12 +25,9 @@
 
 /**sections**/
 @import './sections/common/startuse';
-@import './sections/main/steps/steps'; /* <= imports all step sections */
-@import './sections/main/stats';
-
+@import './sections/common/steps/steps'; /* <= imports all step sections */
 @import './sections/price/calls';
 @import './sections/price/virtueats';
-@import './sections/price/iptel';
 @import './sections/price/fmc';
 @import './sections/price/phone-numbers';
 
@@ -81,7 +78,9 @@
   &__section-content {
     border: $border-cold-gray;
     border-radius: $border-radius-xl;
+  }
 
+  &__section-with-image {
     &_top {
       padding: 0px $spacer * 4;
       display: flex;

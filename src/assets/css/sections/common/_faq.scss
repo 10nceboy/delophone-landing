@@ -1,0 +1,93 @@
+.faq {
+  background-color: $light-gray;
+  padding-bottom: 80px;
+  padding-top: 80px;
+
+  @include laptop {
+    padding-bottom: 150px;
+    padding-top: 150px;
+  }
+
+  &__cards {
+    margin-top: $spacer * 5;
+
+    @include tablet {
+      margin-top: $spacer * 7;
+    }
+
+    @include laptop {
+      margin-top: $spacer * 11;
+    }
+  }
+
+  &__card {
+    margin-bottom: calc($spacer * 3 - 1px);
+    padding: $spacer * 4;
+    box-sizing: border-box;
+    background: $white;
+    border-radius: $border-radius-xl;
+    border: 1px solid transparent;
+    transition: border 0.3s ease;
+
+    @include laptop {
+      padding: $spacer * 10;
+    }
+
+    &:hover {
+      border-color: $blue;
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__arrow {
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+
+    @include laptop {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__question {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0;
+    transition: all 0.15s linear;
+
+    &.collapse__activator_active {
+      margin-bottom: $spacer * 4;
+    }
+  }
+
+  &__answer {
+    @include font(400, 14px, $gray);
+    line-height: 21px;
+
+    @include tablet {
+      @include font(400, 16px, $gray);
+      line-height: 24.8px;
+    }
+  }
+
+  &__paragraph {
+    margin-top: $spacer * 2;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__list {
+    list-style: decimal outside;
+    margin: $spacer * 2 0px 0px $spacer * 2;
+
+    @include tablet {
+      margin-left: 20px;
+    }
+  }
+}
