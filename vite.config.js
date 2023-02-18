@@ -14,7 +14,7 @@ export default defineConfig({
   },
   plugins: [
     handlebars({
-      partialDirectory: resolve(__dirname, 'src/html/components')
+      partialDirectory: [resolve(__dirname, 'src/html/components'), resolve(__dirname, 'src/html/sections')]
     })
   ],
   build: {

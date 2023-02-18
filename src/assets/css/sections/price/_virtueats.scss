@@ -1,0 +1,131 @@
+.virtueats {
+  &__collapse {
+    background-color: $light-gray;
+  }
+
+  &__activator {
+    @include font($normal, 18px, $gray);
+    line-height: 130%;
+    padding: $spacer * 3 $spacer * 4;
+
+    @include smartphone {
+      font-size: 20px;
+      padding-top: $spacer * 5;
+      padding-bottom: $spacer * 5;
+    }
+
+    @include tablet {
+      line-height: 155%;
+      font-size: 20px;
+      padding: $spacer * 6 $spacer * 10 $spacer * 6 $spacer * 10;
+    }
+  }
+
+  &__cards {
+    display: block;
+    background-color: $light-gray;
+    padding: $spacer * 4;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: $spacer * 3;
+      padding-left: $spacer * 10;
+      padding-right: $spacer * 10;
+    }
+
+    @include laptop {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: $spacer * 4;
+      padding: $spacer * 7 $spacer * 10 $spacer * 10 $spacer * 10;
+    }
+
+    @include desktop {
+      grid-gap: $spacer * 5;
+    }
+  }
+
+  &__cards-header {
+    @include font($semi-bold, 18px, $black);
+    line-height: 130%;
+    padding: $spacer * 4;
+
+    @include smartphone {
+      font-size: 20px;
+    }
+
+    @include tablet {
+      padding: $spacer * 4 0px 0px $spacer * 10;
+    }
+  }
+
+  &__card {
+    display: block;
+    padding: $spacer * 3;
+    margin-bottom: $spacer * 3;
+    min-height: 172px;
+
+    @include smartphone {
+      @include flex-row;
+      padding-top: $spacer * 6;
+      padding-bottom: $spacer * 6;
+      min-height: 120px;
+
+      h4 {
+        font-size: 20px;
+      }
+    }
+
+    @include tablet {
+      display: block;
+      padding: $spacer * 4;
+      min-height: none;
+      margin-bottom: 0px;
+      min-height: 185px;
+    }
+
+    @include laptop {
+      padding: $spacer * 4 $spacer * 11 $spacer * 4 $spacer * 4;
+      min-height: 183px;
+    }
+  }
+
+  &__caption {
+    @include font(400, 14px, $gray);
+    line-height: 150%;
+    margin-top: $spacer;
+
+    @include smartphone {
+      font-size: 15px;
+    }
+
+    @include tablet-s {
+      font-size: 16px;
+    }
+
+    @include tablet-m {
+      font-size: 18px;
+    }
+
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+
+  &__icon {
+    max-width: 60px;
+    max-height: 60px;
+    margin-bottom: $spacer * 2;
+
+    @include smartphone {
+      margin-bottom: 0px;
+      margin-right: $spacer * 2;
+    }
+
+    @include tablet {
+      margin-bottom: $spacer * 2;
+      margin-right: 0px;
+    }
+  }
+}

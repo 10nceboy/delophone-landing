@@ -239,7 +239,6 @@
   left: 0;
   display: none;
   padding: $spacer * 8 $spacer * 5;
-  padding-right: 0;
   background: $white;
   margin-bottom: $spacer * 3;
   z-index: $zindex-modal;
@@ -255,15 +254,13 @@
 
   @include smartphone {
     opacity: 1;
-    padding-top: 0;
     position: relative;
     z-index: $zindex-modal;
-    padding: $spacer * 4;
+    padding: $spacer * 4 0;
     transform: none;
     width: 100%;
     max-width: 600px;
     box-shadow: none;
-    padding-top: 0;
     max-height: 0;
     overflow: hidden;
     transition: $collapse-transition-height;
@@ -271,7 +268,7 @@
 
   .list {
     line-height: 21px;
-    font-size: 15px;
+    font-size: 13.5px;
 
     @include tablet {
       font-size: 14px;
@@ -304,7 +301,7 @@
     &.dropdown_active {
       .dropdown__menu {
         max-height: 1500px;
-        overflow: visible;
+
         opacity: 1;
       }
     }

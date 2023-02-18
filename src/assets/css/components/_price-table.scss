@@ -1,0 +1,208 @@
+.price-table {
+  &__section {
+    display: block;
+
+    @include tablet {
+      display: flex;
+      margin-top: $spacer * 5;
+
+      &:first-child {
+        margin-top: 0px;
+      }
+    }
+
+    @include laptop {
+      max-width: 84%;
+      min-width: 84%;
+    }
+  }
+
+  &__leftside {
+    @include font($normal, 18px, $gray);
+    line-height: 130%;
+
+    @include smartphone {
+      font-size: 20px;
+    }
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 155%;
+    }
+  }
+
+  &__rightside {
+    @include font($normal, 16px, $gray);
+    line-height: 130%;
+    margin-top: $spacer * 2;
+
+    @include smartphone {
+      font-size: 17px;
+    }
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 155%;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      flex-shrink: 0;
+      min-width: 149px;
+    }
+
+    @include laptop {
+      min-width: 136px;
+    }
+
+    &_per-month {
+      color: $gray2;
+      font-size: 14px;
+
+      @include smartphone {
+        font-size: 15px;
+      }
+
+      @include tablet {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__divider {
+    display: none;
+
+    @include tablet {
+      display: block;
+      border-top: 1px dotted $gray2;
+      align-self: center;
+      margin: 0px $spacer * 4;
+      flex-grow: 1;
+    }
+  }
+
+  &__divider_mobile {
+    display: block;
+    border: 1px solid $in-gray;
+    margin: $spacer * 4 0px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__accent {
+    font-weight: $semi-bold;
+    color: $black;
+  }
+
+  &__list {
+    display: none;
+    list-style: inside;
+
+    @include tablet {
+      display: flex;
+      margin-top: $spacer;
+    }
+  }
+
+  &__list-item {
+    @include font($normal, 14px, $gray);
+
+    @include tablet {
+      margin-right: $spacer * 3;
+    }
+  }
+
+  &__note {
+    @include font($normal, 14px, $gray);
+    margin-top: $spacer;
+    display: none;
+
+    @include tablet {
+      margin-bottom: 0px;
+      display: block;
+    }
+
+    &_mobile {
+      display: block;
+      @include font($normal, 14px, $gray);
+      margin-top: $spacer;
+
+      @include smartphone {
+        font-size: 16px;
+      }
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__rate {
+    @include laptop {
+      max-width: 88%;
+    }
+  }
+
+  &__expand-section {
+    margin-top: $spacer * 3;
+
+    &:first-child {
+      margin-top: $spacer * 3;
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__expand-rightside {
+    margin-top: $spacer;
+
+    @include tablet {
+      margin-top: 0px;
+    }
+  }
+
+  &__vip-section {
+    @include laptop {
+      max-width: 92%;
+    }
+  }
+
+  &__wide-section {
+    @include laptop {
+      max-width: calc(85% + 3px);
+    }
+  }
+
+  &_usual-section {
+    @include laptop {
+      max-width: calc(85% + 10px);
+    }
+  }
+
+  &__abon-section {
+    @include laptop {
+      max-width: 85%;
+    }
+  }
+
+  &__abon-vip-section {
+    @include laptop {
+      max-width: 93%;
+    }
+  }
+
+  &__dropdown {
+    left: 19px;
+    @include smartphone {
+      left: 0px;
+      padding-top: 20px;
+    }
+
+    @include tablet {
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }
+  }
+}
