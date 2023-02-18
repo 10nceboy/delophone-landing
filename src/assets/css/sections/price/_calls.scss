@@ -21,7 +21,7 @@
   &__list-item {
     display: flex;
     @include font($normal, 15px, $gray);
-    line-height: 23.25px;
+    line-height: 155%;
     margin-bottom: $spacer;
 
     @include smartphone {

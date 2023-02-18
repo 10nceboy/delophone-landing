@@ -9,33 +9,65 @@
 .fmc-packages {
   display: block;
   background-color: $light-gray;
+  box-sizing: border-box;
   border-radius: $border-radius-xl;
   padding: $spacer * 4;
   margin-top: $spacer * 4;
 
+  @include smartphone {
+    display: flex;
+    align-items: center;
+  }
+
   @include tablet {
     display: flex;
     width: 657px;
+    align-items: center;
   }
 
   &__header {
     margin-bottom: $spacer * 3;
     @include font($medium, 16px, $black);
-    line-height: 21px;
+    line-height: 155%;
+    @include mobile-m {
+      font-size: 18px;
+    }
+
+    @include mobile-s {
+      font-size: 18px;
+    }
+
+    @include smartphone {
+      font-size: 16px;
+      margin-right: $spacer * 3;
+      margin-bottom: 0px;
+    }
+
+    @include tablet-s {
+      font-size: 18px;
+      margin-right: $spacer * 5;
+    }
+
+    @include tablet-m {
+      font-size: 19px;
+      margin-right: $spacer * 7;
+    }
 
     @include tablet {
       margin-right: $spacer * 7;
       margin-bottom: 0px;
       font-size: 18px;
-      line-height: 23.4px;
     }
   }
 
   &__content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 63px);
-    grid-row-gap: $spacer * 3;
-    grid-column-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $spacer * 4;
+
+    @include mobile-l {
+      display: flex;
+    }
 
     @include smartphone {
       display: flex;
@@ -46,6 +78,7 @@
   &__cell {
     @include font($medium, 16px, $gray);
     border-right: 2px solid $cold-gray;
+    line-height: 130%;
 
     &:nth-child(3) {
       border-right: none;
@@ -55,11 +88,55 @@
       border-right: none;
     }
 
-    @include tablet {
-      margin-right: $spacer * 2;
-      margin-left: $spacer * 2;
+    @include mobile-m {
+      font-size: 17px;
+    }
+
+    @include mobile-l {
+      font-size: 14px;
+      min-width: 45px;
+      &:nth-child(3) {
+        border-right: 2px solid $cold-gray;
+      }
+    }
+
+    @include mobile-s {
       font-size: 18px;
-      line-height: 23.4px;
+      min-width: 55px;
+      &:nth-child(3) {
+        border-right: 2px solid $cold-gray;
+      }
+    }
+
+    @include smartphone {
+      font-size: 16px;
+      &:nth-child(3) {
+        border-right: 2px solid $cold-gray;
+      }
+    }
+
+    @include tablet-s {
+      font-size: 18px;
+      min-width: 55px;
+      &:nth-child(3) {
+        border-right: 2px solid $cold-gray;
+      }
+    }
+
+    @include tablet-m {
+      font-size: 19px;
+      min-width: 65px;
+      &:nth-child(3) {
+        border-right: 2px solid $cold-gray;
+      }
+    }
+
+    @include tablet {
+      font-size: 18px;
+      min-width: 65px;
+      &:nth-child(3) {
+        border-right: 2px solid $cold-gray;
+      }
     }
   }
 

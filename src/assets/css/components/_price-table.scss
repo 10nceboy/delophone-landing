@@ -13,6 +13,7 @@
 
     @include laptop {
       max-width: 84%;
+      min-width: 84%;
     }
   }
 
@@ -135,6 +136,56 @@
   &__rate {
     @include laptop {
       max-width: 88%;
+    }
+  }
+
+  &__expand-section {
+    margin-top: $spacer * 3;
+
+    &:first-child {
+      margin-top: $spacer * 3;
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__expand-rightside {
+    margin-top: $spacer;
+
+    @include tablet {
+      margin-top: 0px;
+    }
+  }
+
+  &__vip-section {
+    @include laptop {
+      max-width: 92%;
+    }
+  }
+
+  &__wide-section {
+    @include laptop {
+      max-width: calc(85% + 3px);
+    }
+  }
+
+  &_usual-section {
+    @include laptop {
+      max-width: calc(85% + 10px);
+    }
+  }
+
+  &__abon-section {
+    @include laptop {
+      max-width: 85%;
+    }
+  }
+
+  &__abon-vip-section {
+    @include laptop {
+      max-width: 93%;
     }
   }
 }

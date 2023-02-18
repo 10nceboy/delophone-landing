@@ -21,6 +21,7 @@
 @import './components/icon';
 @import './components/breadcrumbs';
 @import './components/price-table';
+@import './components/expand';
 
 /**sections**/
 @import './sections/common/startuse';
@@ -31,6 +32,7 @@
 @import './sections/price/virtueats';
 @import './sections/price/iptel';
 @import './sections/price/fmc';
+@import './sections/price/phone-numbers';
 
 .price {
   &__header {
@@ -151,5 +153,11 @@
   &__devilvery-accent {
     color: $black;
     font-weight: $semi-bold;
+  }
+
+  &__archive-rates {
+    text-align: center;
+    padding-top: $spacer * 11;
+    padding-bottom: $spacer * 30;
   }
 }
