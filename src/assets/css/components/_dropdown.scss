@@ -239,6 +239,7 @@
   left: 0;
   display: none;
   padding: $spacer * 8 $spacer * 5;
+  padding-right: 0px;
   background: $white;
   margin-bottom: $spacer * 3;
   z-index: $zindex-modal;
@@ -251,18 +252,20 @@
   border-radius: $border-radius-xl;
   max-width: 436px;
   opacity: 0;
+  overflow: hidden;
 
   @include smartphone {
     opacity: 1;
     position: relative;
     z-index: $zindex-modal;
     padding: $spacer * 4 0;
+    padding-right: 0px;
     transform: none;
     width: 100%;
     max-width: 600px;
     box-shadow: none;
     max-height: 0;
-    overflow: hidden;
+
     transition: $collapse-transition-height;
   }
 

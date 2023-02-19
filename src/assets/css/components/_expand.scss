@@ -1,6 +1,7 @@
 .expand {
   &__card {
     padding: $spacer * 3 $spacer * 4;
+    cursor: pointer;
 
     @include tablet {
       min-height: 93px;

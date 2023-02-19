@@ -10,6 +10,7 @@
     overflow: hidden;
     display: block;
     transition: $collapse-transition-height;
+    opacity: 0;
 
     &_visible {
       opacity: 0;
@@ -18,9 +19,16 @@
     &_active {
       opacity: 1;
       overflow: visible;
-      max-height: 3500px;
+      max-height: 2500px;
       display: block;
-      transition: $collapse-transition-height-reverse;
+      transition: max-height linear 1s, opacity linear 0.5s;
+      @include tablet {
+        transition: $collapse-transition-height-reverse;
+        max-height: 1800px;
+      }
+      @include laptop {
+        max-height: 1000px;
+      }
     }
   }
 

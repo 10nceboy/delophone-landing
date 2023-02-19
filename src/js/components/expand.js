@@ -3,6 +3,10 @@ import {
     transitionLeave,
 } from '../utils/dom';
 
+import {
+    smoothScrollSafari
+}
+    from '../utils/polyfill';
 
 
 
@@ -25,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             expandContent.forEach(element => transitionEnter(element, 'expand__content'));
             tableHeader.forEach(element => transitionEnter(element, 'phone-numbers__header'));
             phonenNumber.scrollIntoView({ block: 'start', behavior: 'smooth' });
+            smoothScrollSafari(phonenNumber);
         }
         else {
             expandContent.forEach(element => transitionLeave(element, 'expand__content'));
@@ -33,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 expandButton.classList.remove('expand__button_active');
             }, 400);
             phonenNumber.scrollIntoView({ block: 'start', behavior: 'smooth' });
+            smoothScrollSafari(phonenNumber);
         }
     });
 
