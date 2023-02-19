@@ -87,6 +87,12 @@
     @include tablet {
       display: none;
     }
+
+    &_smartphone {
+      @include smartphone {
+        margin-top: 0px;
+      }
+    }
   }
 
   &__accent {
@@ -182,7 +188,9 @@
   }
 
   &__abon-table {
-    max-width: 84.2%;
+    @include laptop {
+      max-width: 84.2%;
+    }
   }
 
   &__abon-section {
@@ -200,17 +208,31 @@
   &__dropdown {
     left: 19px;
     box-sizing: content-box;
+    display: block;
 
     @include smartphone {
       left: 0px;
-      padding-top: $spacer * 4;
       box-sizing: border-box;
+      padding-top: 0px;
     }
 
     @include tablet {
-      padding-bottom: 0px;
+      box-sizing: content-box;
+
       margin-bottom: 0px;
       padding-left: $spacer * 4;
+      padding-top: 20px;
+    }
+  }
+
+  &__dropdown-list {
+    @include smartphone {
+      margin-bottom: $spacer * 5;
+      margin-top: $spacer * 4;
+    }
+
+    @include tablet {
+      margin-top: 0px;
     }
   }
 

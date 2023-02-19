@@ -1,9 +1,17 @@
 .phone-numbers {
   &__price-table {
-    margin-top: $spacer * 5;
+    margin-top: 25px;
 
     &:first-child {
       margin-top: 0px;
+    }
+
+    &:nth-child(2) {
+      margin-top: 5px;
+    }
+
+    &:nth-child(3) {
+      margin-top: 5px;
     }
   }
 

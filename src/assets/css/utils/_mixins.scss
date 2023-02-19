@@ -172,20 +172,23 @@ $family: 'Manrope';
 /** collapse **/
 
 @mixin collapse {
-  max-height: 0;
-  will-change: max-heigth;
+  max-height: 0px;
+  will-change: max-height;
   overflow: hidden;
+  transition: $collapse-transition-height;
 
   &_visible {
-    display: block;
     opacity: 0;
   }
 
   &_active {
     opacity: 1;
-    overflow: visible;
-    max-height: 1500px;
-    display: block;
+    transition: max-height 0.5s, opacity 0.5s;
+    max-height: 1400px;
+
+    @include smartphone {
+      max-height: 100px;
+    }
   }
 }
 
