@@ -43,7 +43,7 @@
 
   &__content {
     max-height: 0px;
-    transition: $collapse-transition-height;
+    transition: max-height 1s;
     will-change: max-height;
     overflow: hidden;
   }
@@ -69,5 +69,5 @@
   display: block;
   max-height: 500px;
   opacity: 1;
-  transition: $collapse-transition-height-reverse;
+  transition: max-height 1s;
 }
