@@ -21,6 +21,7 @@ const animationDruation = 400;
 
 document.addEventListener('DOMContentLoaded', () => {
   const collapsibles = document.querySelectorAll('.collapse');
+  const starter = document.getElementById('start');
 
   collapsibles.forEach((collapse) => {
     let animated = false;
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (state) {
         activator.classList.toggle('collapse__activator_active');
         transitionEnter(content, 'collapse__content');
+        starter.scrollIntoView({ block: 'start', behavior: 'smooth' });
       } else {
         transitionLeave(content, 'collapse__content');
         window.setTimeout(() => {
@@ -55,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (state && !isInViewport(content)) {
           scrolling = true;
           scrollToElement(collapse);
+
           window.setTimeout(() => (scrolling = false), animationDruation);
         }
       }),

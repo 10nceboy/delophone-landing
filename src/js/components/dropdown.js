@@ -30,6 +30,7 @@ dropdowns.forEach((dropdown) => {
 
   if (isInline) {
     const dropdownId = dropdown.dataset.dropdown;
+    const starterCity = document.getElementById('start-city');
     const content = document.querySelector(
       `.dropdown__content[data-dropdown="${dropdownId}"]`
     );
@@ -37,10 +38,13 @@ dropdowns.forEach((dropdown) => {
     if (content) {
       activator.addEventListener('click', (event) => {
         event.preventDefault();
+
         state = !state;
         if (state) {
           activator.classList.add('dropdown_active');
           transitionEnter(content, 'dropdown__content');
+          const phonenNumber = document.getElementById('phone-numbers');
+          phonenNumber.scrollIntoView({ block: 'start', behavior: 'smooth' });
         } else {
           transitionLeave(content, 'dropdown__content');
           activator.classList.remove('dropdown_active');

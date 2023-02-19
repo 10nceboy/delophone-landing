@@ -197,12 +197,13 @@
     left: 19px;
     @include smartphone {
       left: 0px;
-      padding-top: 20px;
+      padding-top: $spacer * 4;
     }
 
     @include tablet {
       padding-bottom: 0px;
       margin-bottom: 0px;
+      padding-left: $spacer * 4;
     }
   }
 }
