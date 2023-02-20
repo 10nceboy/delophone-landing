@@ -1,7 +1,8 @@
 .phone-numbers {
   &__price-table {
-    margin-top: 25px;
-
+    @include tablet {
+      margin-top: 25px;
+    }
     &:first-child {
       margin-top: 0px;
     }
@@ -22,7 +23,6 @@
     &_active {
       .price-table__rightside {
         opacity: 0;
-        height: 0px;
         transition: opacity 0.5s height 0.5;
         display: none;
       }
@@ -34,6 +34,16 @@
 
       .price-table__leftside {
         font-weight: $semi-bold;
+        color: $black;
+      }
+
+      .price-table__divider_wide {
+        opacity: 1;
+      }
+
+      .price-table__rightside_wide {
+        opacity: 1;
+        display: block;
       }
     }
   }
