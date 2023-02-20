@@ -94,7 +94,7 @@ $family: 'Manrope';
 
 /*for break on mobile dropdowns in price-table on price page*/
 @mixin mobile-375 {
-  @media screen and (min-width: 320px) and (max-width: 385px) {
+  @media screen and (min-width: 320px) and (max-width: 400px) {
     @content;
   }
 }
