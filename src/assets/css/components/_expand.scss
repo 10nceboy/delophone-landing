@@ -37,6 +37,14 @@
     @include font($normal, 18px, $gray);
     line-height: 155%;
 
+    @include mobile-m {
+      font-size: 16px;
+    }
+
+    @include mobile-s {
+      font-size: 16px;
+    }
+
     @include tablet {
       font-size: 20px;
     }
