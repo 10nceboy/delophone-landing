@@ -152,12 +152,14 @@
   &__expand-section {
     margin-top: $spacer * 3;
 
-    &:first-child {
-      margin-top: $spacer * 3;
-    }
-
     &:last-child {
-      margin-bottom: 0px;
+      @include smartphone {
+        margin-bottom: $spacer * 4;
+      }
+
+      @include tablet {
+        margin-bottom: 25px;
+      }
     }
   }
 
@@ -239,6 +241,11 @@
   &__tooltip {
     margin-left: 0px;
     margin-right: 3px;
+
+    .icon {
+      z-index: 5;
+    }
+
     .tooltip__activator {
       margin-left: 2px;
     }

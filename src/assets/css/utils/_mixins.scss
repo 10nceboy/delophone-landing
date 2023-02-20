@@ -175,16 +175,18 @@ $family: 'Manrope';
   max-height: 0px;
   will-change: max-height;
   overflow: hidden;
-  transition: $collapse-transition-height;
 
   &_visible {
     opacity: 0;
+    z-index: 6;
   }
 
   &_active {
     opacity: 1;
     transition: max-height 0.5s, opacity 0.5s;
     max-height: 1400px;
+
+    z-index: 6;
 
     @include smartphone {
       max-height: 100px;

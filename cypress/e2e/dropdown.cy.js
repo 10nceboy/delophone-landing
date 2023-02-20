@@ -12,7 +12,7 @@ describe('Dropdown component', () => {
   });
 
   it('should remove the active class when an item is clicked', () => {
-    cy.get('.dropdown').first().click().should('have.class', 'droddown_active');
+    cy.get('.dropdown').first().click().should('have.class', 'dropdown_active');
     cy.get('.dropdown__menu li').first().click();
     cy.wait(300)
       .get('.dropdown')

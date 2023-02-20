@@ -31,6 +31,10 @@
         opacity: 0;
         transition: opacity 0.5s;
       }
+
+      .price-table__leftside {
+        font-weight: $semi-bold;
+      }
     }
   }
 }

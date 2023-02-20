@@ -160,6 +160,12 @@ $line-width: 140px;
       max-width: 481px;
     }
 
+    &_abon {
+      @include tablet {
+        margin-bottom: 10px;
+      }
+    }
+
     &_full-height {
       height: auto;
     }
@@ -810,5 +816,11 @@ $line-width: 140px;
 
   @include tablet {
     padding: 0px;
+  }
+}
+
+.calculator__dropdown-list {
+  @include smartphone {
+    margin-bottom: $spacer * 3;
   }
 }
