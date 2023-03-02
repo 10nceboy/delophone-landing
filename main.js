@@ -10,3 +10,4 @@ import '~/js/components/tooltip';
 import '~/js/components/hero';
 import '~/js/components/city';
 import '~/js/components/menu';
+import '~/js/components/autocomplete';

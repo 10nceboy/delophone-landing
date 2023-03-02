@@ -6,6 +6,7 @@
 @import './components/button';
 @import './components/header';
 @import './components/dropdown';
+@import './components/tabs';
 @import './components/login';
 @import './components/link';
 @import './components/cards';
@@ -21,7 +22,10 @@
 @import './components/icon';
 @import './components/breadcrumbs';
 @import './components/price-table';
-@import './components/expand';
+@import './components/autocomplete';
+@import './components/cart';
+@import './components/search';
+@import './components/input';
 @import './long/header-long.scss';
 @import './long/footer-long.scss';
 
@@ -32,6 +36,7 @@
 @import './sections/price/virtueats';
 @import './sections/numbers/workphone';
 @import './sections/price/phone-numbers';
+@import './sections/numbers/choose';
 
 .price {
   &__header {
@@ -158,27 +163,6 @@
     @include tablet {
       min-width: 226px;
       min-height: 226px;
-    }
-  }
-
-  &__devilvery-accent {
-    color: $black;
-    font-weight: $semi-bold;
-  }
-
-  &__archive-rates {
-    font-size: 16px;
-    text-align: center;
-    padding-top: $spacer * 7;
-    padding-bottom: $spacer * 16;
-
-    @include smartphone {
-      font-size: 18px;
-    }
-
-    @include tablet {
-      padding-top: $spacer * 11;
-      padding-bottom: $spacer * 30;
     }
   }
 }

@@ -17,6 +17,10 @@ const svg = `
 />
 </svg>`;
 
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const renderTooltip = (content) => {
     const popup = document.createElement('div');
@@ -51,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let activator = item?.querySelector('.tooltip__activator');
     if (!activator) {
       activator = renderActivator(item);
+      console.log("aaaa");
     }
 
     const tooltipContent = renderTooltip(item.getAttribute('data-tooltip'));
@@ -93,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
               y: middlewareArguments.y
             };
           } else {
-            /**center ta mobile */
+            /**center on mobile */
             const padding = 15;
             overflow = await detectOverflow(middlewareArguments);
 

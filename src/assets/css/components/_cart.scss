@@ -1,0 +1,286 @@
+.cart {
+  @include tablet {
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: 4;
+    margin-left: $spacer * 6;
+
+    @include tablet {
+      min-width: 300px;
+    }
+
+    @include laptop {
+      min-width: 350px;
+      min-height: 678px;
+    }
+  }
+
+  &__header {
+    padding: $spacer * 3 $spacer * 4;
+    background-color: $gray;
+    @include font($semi-bold, 15px, $white);
+
+    @include mobile-m {
+      font-size: 16px;
+    }
+
+    @include mobile-l {
+      font-size: 20px;
+    }
+
+    @include smartphone {
+      font-size: 20px;
+    }
+
+    @include mobile-s {
+      font-size: 20px;
+    }
+
+    @include tablet {
+      font-size: 18px;
+    }
+
+    @include laptop {
+      font-size: 20px;
+    }
+  }
+
+  &__content-upside {
+    min-height: 424px;
+    max-height: 424px;
+    padding: $spacer * 4 $spacer * 2;
+    padding-top: 0px;
+    overflow: auto;
+
+    @include tablet {
+      padding: $spacer * 5 $spacer * 4;
+      padding-top: $spacer;
+      min-height: 484px;
+      max-height: 484px;
+    }
+  }
+
+  &__divider {
+    display: block;
+    border: 1px solid $cold-gray;
+  }
+
+  &__content-downside {
+    padding: $spacer * 3;
+    text-align: center;
+    @include tablet {
+      padding: $spacer * 4 $spacer * 4;
+    }
+  }
+
+  &__button {
+    @include tablet {
+      padding: $spacer * 3;
+      width: 100%;
+    }
+
+    @include laptop {
+      padding: $spacer * 3 $spacer * 11;
+      width: 100%;
+    }
+  }
+
+  &__content-header {
+    @include font($semi-bold, 15px, $black);
+    line-height: 155%;
+    margin-bottom: $spacer * 2;
+    margin-top: $spacer * 4;
+
+    @include mobile-l {
+      font-size: 17px;
+    }
+
+    @include mobile-s {
+      font-size: 17px;
+    }
+
+    @include smartphone {
+      font-size: 17px;
+    }
+
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+
+  &__summary {
+    @include font($medium, 16px, $black);
+    text-align: center;
+
+    @include tablet {
+      margin-bottom: $spacer * 3;
+      line-height: 130%;
+    }
+
+    @include mobile-l {
+      font-size: 20px;
+    }
+
+    @include smartphone {
+      font-size: 20px;
+    }
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+    @include laptop {
+      font-size: 20px;
+    }
+
+    &_per-month {
+      color: $gray2;
+      font-size: 16px;
+
+      @include smartphone {
+        font-size: 18px;
+      }
+
+      @include tablet {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__card {
+    @include flex-row;
+    border-radius: $border-radius-xs;
+    @include font($medium, 15px, $black);
+    line-height: 155%;
+    padding: $spacer * 2;
+    margin-bottom: $spacer * 2;
+    min-height: 60px;
+    max-height: 60px;
+
+    @include mobile-l {
+      font-size: 17px;
+    }
+
+    @include mobile-l {
+      font-size: 18px;
+    }
+    @include smartphone {
+      font-size: 18px;
+      padding: $spacer * 3 $spacer * 4;
+    }
+
+    @include tablet {
+      font-size: 14px;
+      padding: $spacer * 2;
+    }
+
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+
+  &__card-single-number {
+    flex-shrink: 0;
+  }
+
+  &__card-pair-numbers {
+    flex-shrink: 0;
+  }
+
+  &__card-price {
+    flex-shrink: 0;
+    margin-left: $spacer * 3;
+    font-size: 13px;
+    line-height: 150%;
+
+    @include mobile-m {
+      margin-left: $spacer * 5;
+    }
+
+    @include mobile-l {
+      font-size: 17px;
+      margin-left: $spacer * 10;
+    }
+
+    @include smartphone {
+      font-size: 17px;
+      margin-left: $spacer * 20;
+      display: flex;
+    }
+
+    @include tablet-768 {
+      margin-left: $spacer * 20;
+    }
+
+    @include tablet {
+      margin-left: $spacer * 2;
+      font-size: 13px;
+      display: block;
+    }
+
+    @include laptop {
+      font-size: 14px;
+      margin-left: $spacer * 6;
+    }
+
+    &_line-trough {
+      text-decoration-line: line-through;
+      text-decoration-color: $orange;
+    }
+  }
+
+  &__card-icon {
+    margin-left: auto;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    width: 20px;
+    height: 20px;
+
+    @include mobile-m {
+      height: 25px;
+      width: 25px;
+    }
+
+    @include smartphone {
+      height: 30px;
+      width: 30px;
+    }
+
+    @include tablet {
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  &__card-price_per-month {
+    color: $gray2;
+    @include smartphone {
+      margin-left: $spacer;
+    }
+  }
+
+  &__card-free {
+    flex-shrink: 0;
+    @include smartphone {
+      display: flex;
+    }
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__card-price-free {
+    @include smartphone {
+      margin-left: 5px;
+    }
+
+    @include tablet {
+      margin-left: $spacer * 2;
+    }
+
+    @include laptop {
+      margin-left: $spacer * 6;
+    }
+  }
+}

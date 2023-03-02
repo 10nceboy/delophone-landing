@@ -1,0 +1,9 @@
+.input {
+  box-sizing: border-box;
+  border: 0px;
+  outline: none;
+
+  &_light-gray {
+    background-color: $light-gray;
+  }
+}

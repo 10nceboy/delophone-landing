@@ -1,0 +1,87 @@
+.search {
+  @include flex-row;
+  margin-top: $spacer * 2;
+  padding: $spacer * 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border-radius: $border-radius-xl;
+
+  @include tablet {
+    padding: $spacer * 3 $spacer * 3;
+    height: 53px;
+  }
+
+  @include laptop {
+    padding: $spacer * 3 $spacer * 4;
+    height: 53px;
+  }
+
+  &__input {
+    background-color: $light-gray;
+    @include font($medium, 15px, $black);
+    width: 300px;
+
+    &::placeholder {
+      @include font($semi-bold, 15px, $gray2);
+      line-height: 155%;
+
+      @include smartphone {
+        font-size: 18px;
+        font-weight: $medium;
+      }
+
+      @include tablet {
+        font-size: 16px;
+        height: 53px;
+      }
+
+      @include laptop {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: $spacer * 2;
+    min-height: 20px;
+    min-width: 20px;
+
+    svg {
+      min-height: 20px;
+      min-width: 20px;
+    }
+  }
+
+  &__tooltip {
+    max-width: 132px;
+    display: flex;
+    @include font($normal, 14px, $blue);
+    margin: $spacer 0 $spacer * 5 0;
+
+    @include smartphone {
+      font-size: 16px;
+      max-width: 300px;
+    }
+
+    @include tablet {
+      margin: 0;
+      margin-left: auto;
+      font-size: 14px;
+      max-width: 100%;
+      max-height: none;
+      width: 135px;
+    }
+
+    .tooltip__content {
+      padding-right: $spacer * 6;
+
+      @include mobile-m {
+        padding-right: 10px;
+      }
+    }
+
+    b {
+      color: $black;
+    }
+  }
+}
