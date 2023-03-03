@@ -7,11 +7,18 @@
 
     @include tablet {
       min-width: 300px;
+      margin-left: $spacer * 3;
+    }
+
+    @include tablet-1024 {
+      margin-left: $spacer * 6;
     }
 
     @include laptop {
       min-width: 350px;
       min-height: 678px;
+      max-height: 678px;
+      margin-left: $spacer * 6;
     }
   }
 
@@ -60,20 +67,15 @@
     }
   }
 
-  &__divider {
-    display: block;
-    border: 1px solid $cold-gray;
-  }
-
   &__content-downside {
     padding: $spacer * 3;
     text-align: center;
     @include tablet {
-      padding: $spacer * 4 $spacer * 4;
+      padding: $spacer * 4 $spacer * 4 $spacer * 5 $spacer * 4;
     }
   }
 
-  &__button {
+  &__button-buy {
     @include tablet {
       padding: $spacer * 3;
       width: 100%;
@@ -147,7 +149,7 @@
     }
   }
 
-  &__card {
+  &__item {
     @include flex-row;
     border-radius: $border-radius-xs;
     @include font($medium, 15px, $black);
@@ -179,15 +181,15 @@
     }
   }
 
-  &__card-single-number {
+  &__item-single-number {
     flex-shrink: 0;
   }
 
-  &__card-pair-numbers {
+  &__item-pair-numbers {
     flex-shrink: 0;
   }
 
-  &__card-price {
+  &__item-price {
     flex-shrink: 0;
     margin-left: $spacer * 3;
     font-size: 13px;
@@ -229,7 +231,7 @@
     }
   }
 
-  &__card-icon {
+  &__item-icon {
     margin-left: auto;
     cursor: pointer;
     flex-shrink: 0;
@@ -253,14 +255,14 @@
     }
   }
 
-  &__card-price_per-month {
+  &__item-price_per-month {
     color: $gray2;
     @include smartphone {
       margin-left: $spacer;
     }
   }
 
-  &__card-free {
+  &__item-free {
     flex-shrink: 0;
     @include smartphone {
       display: flex;
@@ -270,7 +272,7 @@
     }
   }
 
-  &__card-price-free {
+  &__item-price-free {
     @include smartphone {
       margin-left: 5px;
     }

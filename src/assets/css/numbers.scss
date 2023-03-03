@@ -12,10 +12,7 @@
 @import './components/cards';
 @import './components/footer';
 @import './components/chips';
-@import './components/list';
-@import './components/list-item';
 @import './components/collapse';
-@import './components/whatsapp';
 @import './components/modal';
 @import './components/overlay';
 @import './components/tooltip';
@@ -26,6 +23,10 @@
 @import './components/cart';
 @import './components/search';
 @import './components/input';
+@import './components/filter';
+@import './components/divider';
+@import './components/loader';
+@import './components/whatsapp';
 @import './long/header-long.scss';
 @import './long/footer-long.scss';
 
@@ -38,131 +39,13 @@
 @import './sections/price/phone-numbers';
 @import './sections/numbers/choose';
 
-.price {
+.numbers {
   &__header {
     margin-top: $spacer * 6;
     margin-bottom: $spacer * 5;
 
     @include tablet {
       margin-top: $spacer * 14;
-    }
-  }
-
-  &__section {
-    margin-top: $spacer * 7;
-
-    @include tablet {
-      margin-top: $spacer * 11;
-    }
-  }
-
-  &__section-upside {
-    padding: $spacer * 4;
-
-    @include tablet {
-      padding: $spacer * 10;
-    }
-  }
-
-  &__section-header {
-    margin-bottom: $spacer * 3;
-
-    @include smartphone {
-      h3 {
-        font-size: 22px;
-      }
-    }
-
-    @include tablet {
-      margin-bottom: $spacer * 5;
-
-      h3 {
-        font-size: 26px;
-      }
-    }
-  }
-
-  &__section-content {
-    border: $border-cold-gray;
-    border-radius: $border-radius-xl;
-  }
-
-  &__section-with-image {
-    &_top {
-      padding: 0px $spacer * 4;
-      display: flex;
-      flex-direction: column;
-
-      @include tablet {
-        flex-direction: row;
-        align-items: center;
-        padding: $spacer * 4 $spacer * 10 $spacer * 2 29px;
-      }
-    }
-
-    &_bottom {
-      padding: $spacer * 5 $spacer * 4 $spacer * 4 $spacer * 4;
-
-      @include tablet {
-        padding: 0px $spacer * 10 $spacer * 10 $spacer * 10;
-      }
-    }
-  }
-
-  &__textblock {
-    @include font($normal, 15px, $gray);
-    line-height: 155%;
-
-    @include mobile-m {
-      font-size: 16px;
-    }
-
-    @include smartphone {
-      font-size: 19px;
-    }
-
-    @include tablet {
-      font-size: 17px;
-      margin-left: $spacer * 8;
-      margin-bottom: 0px;
-    }
-
-    @include tablet-1024 {
-      font-size: 18px;
-    }
-
-    @include laptop {
-      font-size: 19px;
-    }
-
-    @include desktop {
-      font-size: 20px;
-    }
-  }
-
-  &__textblock_top {
-    margin-bottom: $spacer;
-
-    @include tablet {
-      margin-bottom: $spacer * 2;
-    }
-  }
-
-  &__image {
-    min-width: 226px;
-    min-height: 226px;
-    max-width: 226px;
-    max-height: 226px;
-    align-self: center;
-
-    @include smartphone {
-      min-width: 280px;
-      min-height: 280px;
-    }
-
-    @include tablet {
-      min-width: 226px;
-      min-height: 226px;
     }
   }
 }

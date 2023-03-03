@@ -1,5 +1,5 @@
 import '~/js/components/burger';
-
+import '~/js/components/search';
 import '~/js/components/dropdown';
 import '~/js/components/collapse';
 import '~/js/components/modal';

@@ -1,14 +1,25 @@
 .choose {
-  padding-bottom: 150px;
+  padding-bottom: 80px;
+
+  @include tablet {
+    padding-bottom: 150px;
+  }
 
   &__content {
     @include tablet {
-      padding-bottom: 150px;
       padding-top: 70px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 53px 53px 1fr;
-      height: 678px;
+      min-height: 678px;
+      max-height: 678px;
+    }
+
+    @include laptop {
+      grid-template-columns: 350px 350px 380px;
+    }
+
+    @include desktop {
+      grid-template-columns: 370px 360px 380px;
     }
   }
 
@@ -16,11 +27,15 @@
     border-radius: 5px;
     max-width: 100%;
     box-sizing: border-box;
-
     background-color: $light-gray;
 
     @include laptop {
+      max-width: 350px;
+    }
+
+    @include desktop {
       max-width: 370px;
+      max-height: 53px;
     }
   }
 
@@ -30,7 +45,6 @@
     padding: $spacer * 2;
     @include font($medium, 15px, $black);
     line-height: 155%;
-
     transition: $outline-transition;
 
     &:hover {
@@ -108,16 +122,24 @@
     }
 
     @include laptop {
-      min-width: 730px;
+      min-width: 700px;
+      max-width: 700px;
       min-height: 537px;
+      max-height: 537px;
+    }
+
+    @include desktop {
+      min-width: 730px;
+      max-width: 730px;
     }
   }
 
   &__phones-tabs {
     box-sizing: border-box;
-
     @include tablet {
       padding: 10px;
+      padding-bottom: 20px;
+      max-height: 92px;
     }
     @include laptop {
       padding: $spacer * 5 $spacer * 9 $spacer * 4 $spacer * 4;
@@ -130,14 +152,21 @@
 
     @include tablet {
       margin-right: $spacer;
-      font-size: 11px;
+      padding: 0px;
+      font-size: 12px;
       text-align: left;
       padding: $spacer;
     }
 
+    @include tablet-1024 {
+      font-size: 13px;
+    }
+
     @include laptop {
       margin-right: $spacer * 2;
-      padding: 0px;
+      padding: $spacer $spacer * 2;
+      font-size: 14px;
+
       min-height: 52px;
       max-width: 145px;
       line-height: 130%;
@@ -160,7 +189,7 @@
     }
   }
 
-  &__button_gold {
+  &__button_silver {
     @include tablet {
       width: 145px;
     }
@@ -190,8 +219,7 @@
     @include font($normal, 15px, $black);
     line-height: 155%;
     text-align: center;
-    margin-bottom: $spacer * 2;
-
+    margin-bottom: 20px;
     @include smartphone {
       font-size: 18px;
     }
@@ -199,7 +227,6 @@
     @include tablet {
       font-weight: $medium;
       font-size: 16px;
-      margin-bottom: $spacer * 4;
     }
 
     @include laptop {
@@ -208,8 +235,19 @@
   }
 
   &__phones-tab-item {
+    min-height: 350px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
     @include tablet {
-      padding: $spacer * 5 $spacer * 4;
+      padding: $spacer * 5 $spacer * 4 $spacer * 4 $spacer * 4;
+      min-height: 410px;
+      max-height: 410px;
+    }
+
+    @include laptop {
+      min-height: 400px;
+      max-height: 400px;
     }
   }
 
@@ -217,24 +255,37 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: $spacer * 2;
+    max-height: 330px;
+    min-height: 330px;
+    overflow: hidden;
+    margin-bottom: $spacer * 6;
 
     @include tablet {
       grid-template-columns: repeat(3, 1fr);
+      grid-gap: $spacer;
+      grid-template-rows: repeat(3, 57px);
+      margin-bottom: 0px;
+      max-height: 309px;
+      min-height: 309px;
     }
 
     @include laptop {
-      grid-template-columns: repeat(4, 161px);
+      grid-template-columns: repeat(4, 150px);
+      grid-template-rows: repeat(4, 66px);
+      width: 100%;
       grid-gap: $spacer * 3;
-      @include tablet {
-        min-height: 310px;
-        max-height: 310px;
-      }
+      max-height: 309px;
+      min-height: 309px;
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(4, 161px);
     }
   }
 
   &__phones-card {
     min-height: 58px;
-    border: $border-dim-gray;
+    border: 1px solid $cold-gray;
     border-radius: $border-radius-xs;
     text-align: center;
     @include flex-col;
@@ -263,14 +314,21 @@
     }
 
     @include tablet {
-      font-size: 16px;
+      font-size: 13px;
+      max-height: 50px;
     }
 
     @include laptop {
-      min-width: 161px;
-      max-width: 161px;
+      min-width: 150px;
+      max-width: 150px;
       min-height: 66px;
       max-height: 66px;
+      font-size: 14px;
+    }
+
+    @include desktop {
+      min-width: 161px;
+      max-width: 161px;
     }
 
     &_active {
@@ -288,7 +346,7 @@
     }
 
     @include tablet {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
 
@@ -304,8 +362,15 @@
       font-size: 12px;
     }
 
-    @include laptop {
+    @include desktop {
       font-size: 14px;
+    }
+  }
+
+  &__phones-pair-tooltip {
+    .tooltip__actiavtor {
+      vertical-align: bottom;
+      margin-right: 0px;
     }
   }
 }

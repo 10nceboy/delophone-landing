@@ -95,393 +95,762 @@
           </ul>
         </nav>
       </div>
-      <section class="choose">
-        <div class="container">
-          <div class="price__header">
-            <h1>Выберите номер телефона</h1>
-          </div>
-          <div class="choose__content">
-            <div class="tabs tabs__activators choose__number-tabs">
-              <button
-                type="button"
-                data-tab="cities"
-                class="button tabs__activator tabs__activator_active choose__button button_light-gray choose__button choose__button_cities"
-              >
-                Городские
-              </button>
-              <button
-                type="button"
-                data-tab="mobiles"
-                class="button tabs__activator button_light-gray choose__button choose__button_mobiles"
-              >
-                Мобильные
-              </button>
-              <button
-                data-tab="8800"
-                type="button"
-                class="button tabs__activator choose__button button_light-gray choose__button_8800"
-              >
-                8 800
-              </button>
+      <div class="container">
+        <section class="choose">
+          <div class="container">
+            <div class="numbers__header">
+              <h1>Выберите номер телефона</h1>
             </div>
-            <div class="autocomplete">
-              <input
-                type="text"
-                value="Москва (495)"
-                class="input input_light-gray autocomplete__input"
-              />
-              <div class="autocomplete__arrow"></div>
-              <ul class="autocomplete__options">
-                <li class="autocomplete__option-item">Москва (495)</li>
-                <li class="autocomplete__option-item">Москва (499)</li>
-                <li class="autocomplete__option-item">Санкт-Петербург</li>
-                <li class="autocomplete__option-item">Екатеринбург</li>
-                <li class="autocomplete__option-item">Владибург</li>
-                <li class="autocomplete__option-item">Владиград</li>
-                <li class="autocomplete__option-item">Владивосток</li>
-                <li class="autocomplete__option-item">Антанананариву</li>
-                <li class="autocomplete__option-item">Якутс</li>
-                <li class="autocomplete__option-item">Ямал</li>
-              </ul>
-            </div>
-
-            <div class="card card_light-gray card_rectangle cart">
-              <div class="card_rounded-top cart__header">
-                Выбрано <b class="cart__quantity"> 0 номеров </b>
+            <div class="choose__content">
+              <div class="tabs tabs__activators choose__number-tabs">
+                <button
+                  type="button"
+                  data-tab="cities"
+                  class="button tabs__activator tabs__activator_active choose__button button_light-gray choose__button choose__button_cities"
+                >
+                  Городские
+                </button>
+                <button
+                  type="button"
+                  data-tab="mobiles"
+                  class="button tabs__activator button_light-gray choose__button choose__button_mobiles"
+                >
+                  Мобильные
+                </button>
+                <button
+                  data-tab="8800"
+                  type="button"
+                  class="button tabs__activator choose__button button_light-gray choose__button_8800"
+                >
+                  8 800
+                </button>
               </div>
-              <div class="card cart__content-upside">
-                <div class="cart__content-header">Москва 499</div>
-                <div class="card card_white cart__card">
-                  <div class="cart__card-number">
-                    <span class="choose__city-code">8 495</span> 243-45-61
-                  </div>
-                  <div class="cart__card-price">990₽ разово</div>
-                  <svg
-                    class="cart__card-icon"
-                    width="25"
-                    height="25"
-                    viewBox="0 0 25 25"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="12.5" cy="12.5" r="12" stroke="#9CA5AC" />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M9.38201 8.6741C9.18674 8.47884 8.87016 8.47884 8.6749 8.6741C8.47964 8.86936 8.47964 9.18594 8.6749 9.38121L11.7941 12.5004L8.67489 15.6195C8.47963 15.8148 8.47963 16.1314 8.67489 16.3266C8.87016 16.5219 9.18674 16.5219 9.382 16.3266L12.5012 13.2075L15.62 16.3263C15.8153 16.5216 16.1319 16.5216 16.3271 16.3263C16.5224 16.1311 16.5224 15.8145 16.3271 15.6192L13.2083 12.5004L16.3271 9.38149C16.5224 9.18623 16.5224 8.86965 16.3271 8.67439C16.1319 8.47912 15.8153 8.47912 15.62 8.67439L12.5012 11.7933L9.38201 8.6741Z"
-                      fill="#9CA5AC"
-                    />
-                  </svg>
-                </div>
+              <div class="autocomplete">
+                <input
+                  type="text"
+                  value="Москва (495)"
+                  class="input input_light-gray autocomplete__input"
+                />
+                <div class="autocomplete__arrow"></div>
+                <ul class="autocomplete__options">
+                  <li class="autocomplete__option-item">Москва (495)</li>
+                  <li class="autocomplete__option-item">Москва (499)</li>
+                  <li class="autocomplete__option-item">Санкт-Петербург</li>
+                  <li class="autocomplete__option-item">Екатеринбург</li>
+                  <li class="autocomplete__option-item">Владибург</li>
+                  <li class="autocomplete__option-item">Владиград</li>
+                  <li class="autocomplete__option-item">Владивосток</li>
+                  <li class="autocomplete__option-item">Антанананариву</li>
+                  <li class="autocomplete__option-item">Якутс</li>
+                  <li class="autocomplete__option-item">Ямал</li>
+                </ul>
+              </div>
 
-                <div class="cart__content-header">Мобильные</div>
-                <div class="card card_white cart__card">
-                  <div class="cart__card-number">
-                    <span class="choose__city-code">8 495</span> 243-45-61
-                  </div>
-                  <div class="cart__card-price">
-                    990₽ разово,
-                    <div class="cart__card-price_per-month">190₽/мес</div>
-                  </div>
-                  <svg
-                    class="cart__card-icon"
-                    width="25"
-                    height="25"
-                    viewBox="0 0 25 25"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="12.5" cy="12.5" r="12" stroke="#9CA5AC" />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M9.38201 8.6741C9.18674 8.47884 8.87016 8.47884 8.6749 8.6741C8.47964 8.86936 8.47964 9.18594 8.6749 9.38121L11.7941 12.5004L8.67489 15.6195C8.47963 15.8148 8.47963 16.1314 8.67489 16.3266C8.87016 16.5219 9.18674 16.5219 9.382 16.3266L12.5012 13.2075L15.62 16.3263C15.8153 16.5216 16.1319 16.5216 16.3271 16.3263C16.5224 16.1311 16.5224 15.8145 16.3271 15.6192L13.2083 12.5004L16.3271 9.38149C16.5224 9.18623 16.5224 8.86965 16.3271 8.67439C16.1319 8.47912 15.8153 8.47912 15.62 8.67439L12.5012 11.7933L9.38201 8.6741Z"
-                      fill="#9CA5AC"
-                    />
-                  </svg>
+              <div
+                class="card card_light-gray card_rectangle cart tablet-block"
+              >
+                <div class="card_rounded-top cart__header">
+                  Выбрано <b class="cart__quantity"> 0 номеров </b>
                 </div>
-                <div class="cart__content-header">
-                  Москва 499+495 (комплект)
-                </div>
-                <div class="card card_white cart__card">
-                  <div class="cart__card-pair-numbers">
-                    <div class="cart__card-number">
+                <div class="card cart__content-upside">
+                  <div class="cart__content-header">
+                    Нажимайте на подходящие номера, чтобы выбрать их для
+                    покупки.
+                  </div>
+                  <div class="cart__content-header">Москва 499</div>
+                  <div class="card card_white cart__item">
+                    <div class="cart__item-number">
                       <span class="choose__city-code">8 495</span> 243-45-61
                     </div>
-                    <div class="cart__card-number">
-                      <span class="choose__city-code">8 495</span> 243-45-61
-                    </div>
+                    <div class="cart__item-price">990₽ разово</div>
+                    <svg
+                      class="cart__item-icon"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12.5" cy="12.5" r="12" stroke="#9CA5AC" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.38201 8.6741C9.18674 8.47884 8.87016 8.47884 8.6749 8.6741C8.47964 8.86936 8.47964 9.18594 8.6749 9.38121L11.7941 12.5004L8.67489 15.6195C8.47963 15.8148 8.47963 16.1314 8.67489 16.3266C8.87016 16.5219 9.18674 16.5219 9.382 16.3266L12.5012 13.2075L15.62 16.3263C15.8153 16.5216 16.1319 16.5216 16.3271 16.3263C16.5224 16.1311 16.5224 15.8145 16.3271 15.6192L13.2083 12.5004L16.3271 9.38149C16.5224 9.18623 16.5224 8.86965 16.3271 8.67439C16.1319 8.47912 15.8153 8.47912 15.62 8.67439L12.5012 11.7933L9.38201 8.6741Z"
+                        fill="#9CA5AC"
+                      />
+                    </svg>
                   </div>
 
-                  <div class="cart__card-price">990₽ разово</div>
-                  <svg
-                    class="cart__card-icon"
-                    width="25"
-                    height="25"
-                    viewBox="0 0 25 25"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="12.5" cy="12.5" r="12" stroke="#9CA5AC" />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M9.38201 8.6741C9.18674 8.47884 8.87016 8.47884 8.6749 8.6741C8.47964 8.86936 8.47964 9.18594 8.6749 9.38121L11.7941 12.5004L8.67489 15.6195C8.47963 15.8148 8.47963 16.1314 8.67489 16.3266C8.87016 16.5219 9.18674 16.5219 9.382 16.3266L12.5012 13.2075L15.62 16.3263C15.8153 16.5216 16.1319 16.5216 16.3271 16.3263C16.5224 16.1311 16.5224 15.8145 16.3271 15.6192L13.2083 12.5004L16.3271 9.38149C16.5224 9.18623 16.5224 8.86965 16.3271 8.67439C16.1319 8.47912 15.8153 8.47912 15.62 8.67439L12.5012 11.7933L9.38201 8.6741Z"
-                      fill="#9CA5AC"
-                    />
-                  </svg>
-                </div>
-
-                <div class="card card_white cart__card">
-                  <div class="cart__card-pair-numbers">
-                    <div class="cart__card-single-number">
-                      <div class="cart__card-number">
+                  <div class="cart__content-header">Мобильные</div>
+                  <div class="card card_white cart__item">
+                    <div class="cart__item-number">
+                      <span class="choose__city-code">8 495</span> 243-45-61
+                    </div>
+                    <div class="cart__item-price">
+                      990₽ разово,
+                      <div class="cart__item-price_per-month">190₽/мес</div>
+                    </div>
+                    <svg
+                      class="cart__item-icon"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12.5" cy="12.5" r="12" stroke="#9CA5AC" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.38201 8.6741C9.18674 8.47884 8.87016 8.47884 8.6749 8.6741C8.47964 8.86936 8.47964 9.18594 8.6749 9.38121L11.7941 12.5004L8.67489 15.6195C8.47963 15.8148 8.47963 16.1314 8.67489 16.3266C8.87016 16.5219 9.18674 16.5219 9.382 16.3266L12.5012 13.2075L15.62 16.3263C15.8153 16.5216 16.1319 16.5216 16.3271 16.3263C16.5224 16.1311 16.5224 15.8145 16.3271 15.6192L13.2083 12.5004L16.3271 9.38149C16.5224 9.18623 16.5224 8.86965 16.3271 8.67439C16.1319 8.47912 15.8153 8.47912 15.62 8.67439L12.5012 11.7933L9.38201 8.6741Z"
+                        fill="#9CA5AC"
+                      />
+                    </svg>
+                  </div>
+                  <div class="cart__content-header">
+                    Москва 499+495 (комплект)
+                  </div>
+                  <div class="card card_white cart__item">
+                    <div class="cart__item-pair-numbers">
+                      <div class="cart__item-number">
+                        <span class="choose__city-code">8 495</span> 243-45-61
+                      </div>
+                      <div class="cart__item-number">
                         <span class="choose__city-code">8 495</span> 243-45-61
                       </div>
                     </div>
-                  </div>
-                  <div class="cart__card-free">
-                    <div class="cart__card-price cart__card-price_line-trough">
-                      990₽ разово
-                    </div>
-                    <div class="cart__card-price cart__card-price-free">
-                      Бесплатно
-                      <span
-                        class="tooltip"
-                        data-tooltip-width-laptop="252px"
-                        data-tooltip-width-tablet="252px"
-                        data-tooltip-width-smartphone="400px"
-                        data-tooltip="Вы можете бесплатно подключить к аккаунту один номер телефона. Только для номеров без абонплаты."
-                      >
-                      </span>
-                    </div>
-                  </div>
-                  <svg
-                    class="cart__card-icon"
-                    width="25"
-                    height="25"
-                    viewBox="0 0 25 25"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="12.5" cy="12.5" r="12" stroke="#9CA5AC" />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M9.38201 8.6741C9.18674 8.47884 8.87016 8.47884 8.6749 8.6741C8.47964 8.86936 8.47964 9.18594 8.6749 9.38121L11.7941 12.5004L8.67489 15.6195C8.47963 15.8148 8.47963 16.1314 8.67489 16.3266C8.87016 16.5219 9.18674 16.5219 9.382 16.3266L12.5012 13.2075L15.62 16.3263C15.8153 16.5216 16.1319 16.5216 16.3271 16.3263C16.5224 16.1311 16.5224 15.8145 16.3271 15.6192L13.2083 12.5004L16.3271 9.38149C16.5224 9.18623 16.5224 8.86965 16.3271 8.67439C16.1319 8.47912 15.8153 8.47912 15.62 8.67439L12.5012 11.7933L9.38201 8.6741Z"
-                      fill="#9CA5AC"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="cart__divider"></div>
-              <div class="card cart__content-downside">
-                <div class="cart__summary">
-                  <span class="cart__summary_once">3 960 ₽ разово,</span>
-                  <span class="cart__summary_per-month"> 400 ₽/мес </span>
-                </div>
-                <button
-                  class="button button_blue cart__button tablet-block"
-                  disabled
-                >
-                  Купить номера телефонов
-                </button>
-              </div>
-            </div>
-            <div class="card card_light-gray search">
-              <svg
-                class="search__icon"
-                width="25"
-                height="25"
-                viewBox="0 0 25 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M17.0723 10.9106C17.0723 15.0035 13.7543 18.3215 9.66135 18.3215C5.5684 18.3215 2.25041 15.0035 2.25041 10.9106C2.25041 6.81763 5.5684 3.49963 9.66135 3.49963C13.7543 3.49963 17.0723 6.81763 17.0723 10.9106ZM15.6745 16.7916C14.1475 18.3527 12.0176 19.3215 9.66135 19.3215C5.01612 19.3215 1.25041 15.5558 1.25041 10.9106C1.25041 6.26534 5.01612 2.49963 9.66135 2.49963C14.3066 2.49963 18.0723 6.26534 18.0723 10.9106C18.0723 12.8396 17.4229 14.617 16.3308 16.036L22.8945 21.287C23.1101 21.4595 23.1451 21.7741 22.9726 21.9897C22.8001 22.2054 22.4854 22.2403 22.2698 22.0678L15.6745 16.7916Z"
-                  fill="#344351"
-                />
-              </svg>
 
-              <input
-                type="text"
-                class="input input_light-gray search__input"
-                placeholder="Введите комбинацию цифр"
-              />
-              <div
-                class="tooltip search__tooltip tablet"
-                data-tooltip-width-laptop="420px"
-                data-tooltip-width-tablet="398px"
-                data-tooltip-width-smartphone="252px"
-                data-tooltip="Любая цифра — ставьте вопросик <b>(?5?5?5)</b>
-              Цифра в конце — ставьте звёздочку <b>(*5555)</b>
-              Комбинация цифр — используйте оба знака <b>(*?5?5?5)</b>."
-              >
-                <div class="tooltip__activator search__tooltip tablet">
-                  Как искать номера?
-                </div>
-              </div>
-            </div>
-            <div
-              class="tooltip search__tooltip mobiles"
-              data-tooltip-width-laptop="420px"
-              data-tooltip-width-tablet="398px"
-              data-tooltip-width-smartphone="420px"
-              data-tooltip="Любая цифра — ставьте вопросик <b>(?5?5?5)</b>
-          Цифра в конце — ставьте звёздочку <b>(*5555)</b>
-          Комбинация цифр — используйте оба знака <b>(*?5?5?5)</b>."
-            >
-              <div class="tooltip__activator search__tooltip mobile">
-                Как искать номера?
-              </div>
-            </div>
-            <div class="card card_rectangle choose__phones">
-              <div class="tabs tabs__activators choose__phones-tabs tablet">
-                <button
-                  type="button"
-                  data-tab="usuals"
-                  class="button tabs__activator tabs__activator_active choose__button choose__button-phones choose__button_usual"
-                >
-                  <div class="choose__button-header no-select">
-                    Обычные
-                    <span class="choose__phones-quantity no-select"
-                      >(1400)</span
+                    <div class="cart__item-price">990₽ разово</div>
+                    <svg
+                      class="cart__item-icon"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
+                      <circle cx="12.5" cy="12.5" r="12" stroke="#9CA5AC" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.38201 8.6741C9.18674 8.47884 8.87016 8.47884 8.6749 8.6741C8.47964 8.86936 8.47964 9.18594 8.6749 9.38121L11.7941 12.5004L8.67489 15.6195C8.47963 15.8148 8.47963 16.1314 8.67489 16.3266C8.87016 16.5219 9.18674 16.5219 9.382 16.3266L12.5012 13.2075L15.62 16.3263C15.8153 16.5216 16.1319 16.5216 16.3271 16.3263C16.5224 16.1311 16.5224 15.8145 16.3271 15.6192L13.2083 12.5004L16.3271 9.38149C16.5224 9.18623 16.5224 8.86965 16.3271 8.67439C16.1319 8.47912 15.8153 8.47912 15.62 8.67439L12.5012 11.7933L9.38201 8.6741Z"
+                        fill="#9CA5AC"
+                      />
+                    </svg>
                   </div>
-                  <div class="choose__button_price no-select">990 ₽</div>
-                </button>
-                <button
-                  type="button"
-                  data-tab="bronze"
-                  class="button tabs__activator choose__button choose__button-phones choose__button_bronze"
-                >
-                  <div class="choose__button-header no-select">
-                    Бронзовые
-                    <span class="choose__phones-quantity no-select"
-                      >(862)
-                    </span>
-                  </div>
-                  <div class="choose__button_price no-select">1990 ₽</div>
-                </button>
-                <button
-                  data-tab="silver"
-                  type="button"
-                  class="button tabs__activator choose__button choose__button-phones choose__button_silver"
-                >
-                  Серебряные
-                  <span class="choose__phones-quantity no-select">(421)</span>
 
-                  <div class="choose__button_price no-select">3 990 ₽</div>
-                </button>
-                <button
-                  data-tab="vip"
-                  type="button"
-                  class="tabs__activator button choose__button choose__button-phones choose__button_gold"
-                >
-                  <div class="choose__button-header no-select">
-                    Золотые
-                    <span class="choose__phones-quantity no-select">(167)</span>
-                  </div>
-                  <div class="choose__button_price no-select">8 990 ₽</div>
-                </button>
-                <button
-                  data-tab="gold"
-                  type="button"
-                  class="button tabs__activator choose__button button_light-gray choose__button-phones choose__button_vip"
-                >
-                  <div class="choose__button-header no-select">
-                    VIP
-                    <span class="choose__phones-quantity no-select">(120)</span>
-                  </div>
-                  <div class="choose__button_price no-select">от 15 000 ₽</div>
-                </button>
-              </div>
-              <div class="tabs__items choose__phones-tab-items">
-                <div
-                  class="tabs__item tabs__item_active tabs__item_visible choose__phones-tab-item"
-                  data-tab="usuals"
-                  aria-hidden="true"
-                >
-                  <div class="choose__phones-header">
-                    Подключение — 990 ₽, <br class="smartphone" />
-                    абонплата — 0 ₽ / месяц
-                  </div>
-                  <div class="choose__phones-cards">
-                    <div class="card card_white choose__phones-card">
-                      <div class="choose__phones-single-number no-select">
-                        <span class="choose__city-code">8 495</span> <i>2</i
-                        ><i>4</i><i>3</i><i>-</i><i>4</i><i>5</i><i>-</i><i>6</i
-                        ><i>1</i>
-                      </div>
-                    </div>
-                    <div class="card card_white choose__phones-card">
-                      <div class="choose__phones-single-number no-select">
-                        <span class="choose__city-code">8 861</span> <i>5</i
-                        ><i>0</i><i>5</i><i>-</i><i>8</i><i>3</i><i>-</i><i>3</i
-                        ><i>1</i>
-                      </div>
-                    </div>
-                    <div class="card card_white choose__phones-card">
-                      <div class="choose__phones-pair-numbers">
-                        <span class="no-select">
-                          <span class="choose__city-code no-select">8 495</span>
-                          <span class="choose__phone-number no-select"
-                            ><i>5</i><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i
-                            ><i>-</i><i>5</i><i>5</i>
-                          </span></span
-                        >
-                        <div class="choose__phones-pair-complect">
-                          <span class="no-select">Комплект 495+499</span
-                          ><span
-                            class="tooltip choose__phones-pair-tooltip"
-                            data-tooltip-width-laptop="300px"
-                            data-tooltip-width-tablet="300px"
-                            data-tooltip-width-smartphone="252px"
-                            data-tooltip="Сразу два номера в комплекте: 
-                            8 <i>495</i> 505-35-55
-                            8 <i>499</i> 505-35-55
-                            Номера продаются только вместе"
-                          >
-                          </span>
+                  <div class="card card_white cart__item">
+                    <div class="cart__item-pair-numbers">
+                      <div class="cart__item-single-number">
+                        <div class="cart__item-number">
+                          <span class="choose__city-code">8 495</span> 243-45-61
                         </div>
                       </div>
                     </div>
-                    <div class="card card_white choose__phones-card">
-                      <div class="choose__phones-vip-number no-select">
-                        <span class="choose__city-code">8 495</span> <i>5</i
-                        ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i><i>5</i
-                        ><i>5</i>
-                        <div class="choose__phones-vip-price">450 000 ₽</div>
+                    <div class="cart__item-free">
+                      <div
+                        class="cart__item-price cart__item-price_line-trough"
+                      >
+                        990₽ разово
+                      </div>
+                      <div class="cart__item-price cart__item-price-free">
+                        Бесплатно
+                        <span
+                          class="tooltip"
+                          data-tooltip-width-laptop="252px"
+                          data-tooltip-width-tablet="252px"
+                          data-tooltip-width-smartphone="400px"
+                          data-tooltip="Вы можете бесплатно подключить к аккаунту один номер телефона. Только для номеров без абонплаты."
+                        >
+                        </span>
+                      </div>
+                    </div>
+                    <svg
+                      class="cart__item-icon"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12.5" cy="12.5" r="12" stroke="#9CA5AC" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.38201 8.6741C9.18674 8.47884 8.87016 8.47884 8.6749 8.6741C8.47964 8.86936 8.47964 9.18594 8.6749 9.38121L11.7941 12.5004L8.67489 15.6195C8.47963 15.8148 8.47963 16.1314 8.67489 16.3266C8.87016 16.5219 9.18674 16.5219 9.382 16.3266L12.5012 13.2075L15.62 16.3263C15.8153 16.5216 16.1319 16.5216 16.3271 16.3263C16.5224 16.1311 16.5224 15.8145 16.3271 15.6192L13.2083 12.5004L16.3271 9.38149C16.5224 9.18623 16.5224 8.86965 16.3271 8.67439C16.1319 8.47912 15.8153 8.47912 15.62 8.67439L12.5012 11.7933L9.38201 8.6741Z"
+                        fill="#9CA5AC"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="divider_cold-gray cart__divider"></div>
+                <div class="card cart__content-downside">
+                  <div class="cart__summary">
+                    <span class="cart__summary_once">3 960 ₽ разово,</span>
+                    <span class="cart__summary_per-month"> 400 ₽/мес </span>
+                  </div>
+                  <button
+                    class="button button_blue cart__button-buy tablet-block"
+                    disabled
+                  >
+                    Купить номера телефонов
+                  </button>
+                </div>
+              </div>
+              <div class="card card_light-gray search">
+                <svg
+                  class="search__icon"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.0723 10.9106C17.0723 15.0035 13.7543 18.3215 9.66135 18.3215C5.5684 18.3215 2.25041 15.0035 2.25041 10.9106C2.25041 6.81763 5.5684 3.49963 9.66135 3.49963C13.7543 3.49963 17.0723 6.81763 17.0723 10.9106ZM15.6745 16.7916C14.1475 18.3527 12.0176 19.3215 9.66135 19.3215C5.01612 19.3215 1.25041 15.5558 1.25041 10.9106C1.25041 6.26534 5.01612 2.49963 9.66135 2.49963C14.3066 2.49963 18.0723 6.26534 18.0723 10.9106C18.0723 12.8396 17.4229 14.617 16.3308 16.036L22.8945 21.287C23.1101 21.4595 23.1451 21.7741 22.9726 21.9897C22.8001 22.2054 22.4854 22.2403 22.2698 22.0678L15.6745 16.7916Z"
+                    fill="#344351"
+                  />
+                </svg>
+
+                <input
+                  type="text"
+                  class="input input_light-gray search__input"
+                  placeholder="Введите комбинацию цифр"
+                />
+                <button
+                  type="submit"
+                  class="button button_no-border button_transparent search__submit-button"
+                >
+                  Применить
+                </button>
+                <div
+                  class="tooltip search__tooltip tablet"
+                  data-tooltip-width-laptop="420px"
+                  data-tooltip-width-tablet="398px"
+                  data-tooltip-width-smartphone="252px"
+                  data-tooltip="Любая цифра — ставьте вопросик <b>(?5?5?5)</b>
+              Цифра в конце — ставьте звёздочку <b>(*5555)</b>
+              Комбинация цифр — используйте оба знака <b>(*?5?5?5)</b>."
+                >
+                  <div class="tooltip__activator search__tooltip tablet">
+                    Как искать номера?
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tooltip search__tooltip mobiles"
+                data-tooltip-width-laptop="420px"
+                data-tooltip-width-tablet="398px"
+                data-tooltip-width-smartphone="420px"
+                data-tooltip="Любая цифра — ставьте вопросик <b>(?5?5?5)</b>
+          Цифра в конце — ставьте звёздочку <b>(*5555)</b>
+          Комбинация цифр — используйте оба знака <b>(*?5?5?5)</b>."
+              >
+                <div class="tooltip__activator search__tooltip mobile">
+                  Как искать номера?
+                </div>
+              </div>
+              <div class="card card_rectangle choose__phones">
+                <div class="tabs tabs__activators choose__phones-tabs tablet">
+                  <button
+                    type="button"
+                    data-tab="usuals"
+                    class="button tabs__activator tabs__activator_active choose__button choose__button-phones choose__button_usual"
+                  >
+                    <div class="choose__button-header no-select">
+                      Обычные
+                      <span class="choose__phones-quantity no-select"
+                        >(1400)</span
+                      >
+                    </div>
+                    <div class="choose__button_price no-select">990 ₽</div>
+                  </button>
+                  <button
+                    type="button"
+                    data-tab="bronze"
+                    class="button tabs__activator choose__button choose__button-phones choose__button_bronze"
+                  >
+                    <div class="choose__button-header no-select">
+                      Бронзовые
+                      <span class="choose__phones-quantity no-select"
+                        >(862)
+                      </span>
+                    </div>
+                    <div class="choose__button_price no-select">1990 ₽</div>
+                  </button>
+                  <button
+                    data-tab="silver"
+                    type="button"
+                    class="button tabs__activator choose__button choose__button-phones choose__button_silver"
+                  >
+                    Серебряные
+                    <span class="choose__phones-quantity no-select">(421)</span>
+
+                    <div class="choose__button_price no-select">3 990 ₽</div>
+                  </button>
+                  <button
+                    data-tab="gold"
+                    type="button"
+                    class="tabs__activator button choose__button choose__button-phones choose__button_gold"
+                  >
+                    <div class="choose__button-header no-select">
+                      Золотые
+                      <span class="choose__phones-quantity no-select"
+                        >(167)</span
+                      >
+                    </div>
+                    <div class="choose__button_price no-select">8 990 ₽</div>
+                  </button>
+                  <button
+                    data-tab="vip"
+                    type="button"
+                    class="button tabs__activator choose__button button_light-gray choose__button-phones choose__button_vip"
+                  >
+                    <div class="choose__button-header no-select">
+                      VIP
+                      <span class="choose__phones-quantity no-select"
+                        >(120)</span
+                      >
+                    </div>
+                    <div class="choose__button_price no-select">
+                      от 15 000 ₽
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="divider_cold-gray choose__phones-divider tablet"
+                ></div>
+                <div class="tabs__items choose__phones-tab-items">
+                  <div
+                    class="tabs__item tabs__item_active choose__phones-tab-item"
+                    data-tab="usuals"
+                    aria-hidden="true"
+                  >
+                    <div class="choose__phones-header">
+                      Подключение — 990 ₽, <br class="smartphone" />
+                      абонплата — 0 ₽ / месяц
+                    </div>
+                    <div class="choose__phones-cards">
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-single-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>2</i
+                          ><i>4</i><i>3</i><i>-</i><i>4</i><i>5</i><i>-</i
+                          ><i>6</i><i>1</i>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-single-number no-select">
+                          <span class="choose__city-code">8 861</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>8</i><i>3</i><i>-</i
+                          ><i>3</i><i>1</i>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-pair-numbers">
+                          <span class="no-select">
+                            <span class="choose__city-code no-select"
+                              >8 495</span
+                            >
+                            <span class="choose__phone-number no-select"
+                              ><i>5</i><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i
+                              ><i>-</i><i>5</i><i>5</i>
+                            </span></span
+                          >
+                          <div class="choose__phones-pair-complect">
+                            <span class="no-select">Комплект 495+499</span
+                            ><span
+                              class="tooltip"
+                              data-tooltip-width-laptop="300px"
+                              data-tooltip-width-tablet="300px"
+                              data-tooltip-width-smartphone="252px"
+                              data-tooltip="Сразу два номера в комплекте: 
+                            8 <i>495</i> 505-35-55
+                            8 <i>499</i> 505-35-55
+                            Номера продаются только вместе"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">450 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-single-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>2</i
+                          ><i>4</i><i>3</i><i>-</i><i>4</i><i>5</i><i>-</i
+                          ><i>6</i><i>1</i>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-single-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>2</i
+                          ><i>4</i><i>3</i><i>-</i><i>4</i><i>5</i><i>-</i
+                          ><i>6</i><i>1</i>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-single-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>2</i
+                          ><i>4</i><i>3</i><i>-</i><i>4</i><i>5</i><i>-</i
+                          ><i>6</i><i>1</i>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>7</i
+                          ><i>0</i><i>7</i><i>-</i><i>3</i><i>7</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">23 000 ₽</div>
+                        </div>
                       </div>
                     </div>
                   </div>
-
                   <div
-                    class="tabs__item"
-                    data-tab="settings"
+                    class="tabs__item choose__phones-tab-item"
+                    data-tab="bronze"
                     aria-hidden="true"
                   >
-                    <img
-                      src="src/assets/images/sections/lk/settings.svg"
-                      alt="Настройки звонков"
-                      class="no-select"
-                    />
+                    <div class="choose__phones-header">
+                      Подключение — 990 ₽, <br class="smartphone" />
+                      абонплата — 0 ₽ / месяц
+                      <span
+                        class="tooltip price-table__tooltip"
+                        data-tooltip-width-laptop="461px"
+                        data-tooltip-width-tablet="461px"
+                        data-tooltip-width-smartphone="361px"
+                        data-tooltip="Некоторые номера мы подключаем через партнёров, за них мы вынуждены взымать абонентскую плату (190 ₽ / месяц).  
+                        Абонплата за партнёрские номера и SIM-карты — единственные возможные ежемесячные платежи в Делофоне."
+                      >
+                      </span>
+                    </div>
+                    <div class="choose__phones-cards">
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-single-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>2</i
+                          ><i>4</i><i>3</i><i>-</i><i>4</i><i>5</i><i>-</i
+                          ><i>6</i><i>1</i>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-single-number no-select">
+                          <span class="choose__city-code">8 861</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>8</i><i>3</i><i>-</i
+                          ><i>3</i><i>1</i>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-pair-numbers">
+                          <span class="no-select">
+                            <span class="choose__city-code no-select"
+                              >8 495</span
+                            >
+                            <span class="choose__phone-number no-select"
+                              ><i>5</i><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i
+                              ><i>-</i><i>5</i><i>5</i>
+                            </span></span
+                          >
+                          <div class="choose__phones-pair-complect">
+                            <span class="no-select">Комплект 495+499</span
+                            ><span
+                              class="tooltip"
+                              data-tooltip-width-laptop="300px"
+                              data-tooltip-width-tablet="300px"
+                              data-tooltip-width-smartphone="252px"
+                              data-tooltip="Сразу два номера в комплекте: 
+                            8 <i>495</i> 505-35-55
+                            8 <i>499</i> 505-35-55
+                            Номера продаются только вместе"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">450 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-single-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>2</i
+                          ><i>4</i><i>3</i><i>-</i><i>4</i><i>5</i><i>-</i
+                          ><i>6</i><i>1</i>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-single-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>2</i
+                          ><i>4</i><i>3</i><i>-</i><i>4</i><i>5</i><i>-</i
+                          ><i>6</i><i>1</i>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-single-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>2</i
+                          ><i>4</i><i>3</i><i>-</i><i>4</i><i>5</i><i>-</i
+                          ><i>6</i><i>1</i>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>7</i
+                          ><i>0</i><i>7</i><i>-</i><i>3</i><i>7</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">23 000 ₽</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="tabs__item" data-tab="numbers" aria-hidden="true">
-                    <img
-                      src="src/assets/images/sections/lk/numbers.svg"
-                      alt="Номера телефонов"
-                      class="no-select"
-                    />
+                  <div
+                    class="tabs__item choose__phones-tab-item"
+                    data-tab="silver"
+                    aria-hidden="true"
+                  >
+                    <div class="loader"></div>
                   </div>
+                  <div
+                    class="tabs__item choose__phones-tab-item"
+                    data-tab="gold"
+                    aria-hidden="true"
+                  >
+                    <div class="search__error">
+                      <svg
+                        class="search__error-icon"
+                        width="66"
+                        height="67"
+                        viewBox="0 0 66 67"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_3532_13445)">
+                          <path
+                            d="M64.3516 65.3616C63.4803 66.2231 62.3013 66.7067 61.0723 66.7067C59.8433 66.7067 58.6643 66.2231 57.793 65.3616L37.2918 44.984L43.8481 38.465L64.3516 58.8425C65.2184 59.7086 65.7049 60.8804 65.7049 62.102C65.7049 63.3236 65.2184 64.4955 64.3516 65.3616Z"
+                            fill="white"
+                          />
+                          <path
+                            d="M61.0712 66.9999C60.4233 67.0031 59.7813 66.878 59.1826 66.632C58.5839 66.386 58.0404 66.024 57.5838 65.5672L36.8757 44.984L43.8504 38.0513L64.5586 58.6345C65.0169 59.0895 65.3805 59.6298 65.6286 60.2246C65.8767 60.8194 66.0044 61.457 66.0044 62.1008C66.0044 62.7447 65.8767 63.3823 65.6286 63.9771C65.3805 64.5718 65.0169 65.1122 64.5586 65.5672C64.1014 66.0233 63.5578 66.3848 62.9592 66.6307C62.3606 66.8767 61.7189 67.0022 61.0712 66.9999ZM37.701 44.984L57.9976 65.1582C58.8132 65.9676 59.9186 66.4222 61.0712 66.4222C62.2237 66.4222 63.3291 65.9676 64.1447 65.1582C64.5485 64.7571 64.8688 64.2808 65.0874 63.7566C65.3059 63.2324 65.4184 62.6706 65.4184 62.1031C65.4184 61.5357 65.3059 60.9739 65.0874 60.4497C64.8688 59.9255 64.5485 59.4492 64.1447 59.0481L43.8481 38.874L37.701 44.984Z"
+                            fill="#344351"
+                          />
+                          <path
+                            d="M44.0104 43.7466C54.0123 33.8051 54.0123 17.6866 44.0104 7.7451C34.0086 -2.19644 17.7923 -2.19644 7.79047 7.7451C-2.2114 17.6866 -2.2114 33.8051 7.79047 43.7466C17.7923 53.6881 34.0086 53.6881 44.0104 43.7466Z"
+                            fill="white"
+                          />
+                          <path
+                            d="M25.8997 51.4892C20.7767 51.4892 15.7687 49.9792 11.5091 47.1501C7.24946 44.321 3.92953 40.3 1.96914 35.5954C0.00874948 30.8909 -0.504061 25.7141 0.495562 20.7199C1.49519 15.7256 3.96234 11.1382 7.58503 7.53764C11.2077 3.93712 15.8232 1.48525 20.8479 0.492108C25.8725 -0.501037 31.0806 0.00914575 35.8136 1.95814C40.5465 3.90713 44.5917 7.20739 47.4375 11.4416C50.2834 15.6757 51.8022 20.6536 51.8017 25.7458C51.7943 32.5715 49.0629 39.1155 44.2069 43.9419C39.3508 48.7682 32.7668 51.4825 25.8997 51.4892ZM25.8997 0.57773C20.8916 0.577273 15.9959 2.05297 11.8316 4.81819C7.66731 7.58341 4.42152 11.514 2.50469 16.1128C0.587866 20.7116 0.0860997 25.7721 1.06284 30.6544C2.03959 35.5367 4.45098 40.0214 7.99206 43.5415C11.5331 47.0615 16.0449 49.4587 20.9567 50.43C25.8685 51.4014 30.9598 50.9031 35.5867 48.9982C40.2136 47.0934 44.1683 43.8675 46.9507 39.7286C49.733 35.5897 51.2181 30.7236 51.2181 25.7458C51.2126 19.0729 48.5434 12.6748 43.7966 7.95618C39.0497 3.23752 32.6131 0.58385 25.8997 0.57773Z"
+                            fill="#344351"
+                          />
+                          <path
+                            d="M40.5498 40.3069C48.6405 32.2651 48.6405 19.2266 40.5498 11.1848C32.4592 3.14293 19.3416 3.14293 11.251 11.1848C3.16033 19.2266 3.16033 32.2651 11.251 40.3069C19.3416 48.3488 32.4592 48.3488 40.5498 40.3069Z"
+                            fill="#F88C28"
+                          />
+                          <path
+                            d="M36.0899 7.81091L7.85828 35.8722C9.61854 38.9634 12.1504 41.5516 15.2097 43.3873L43.6505 15.118C41.8024 12.0782 39.1988 9.5619 36.0899 7.81091Z"
+                            fill="white"
+                          />
+                          <path
+                            d="M25.8997 46.6271C21.7441 46.6271 17.6819 45.4023 14.2267 43.1074C10.7715 40.8126 8.07854 37.5509 6.48839 33.7348C4.89823 29.9187 4.48229 25.7195 5.29317 21.6685C6.10405 17.6174 8.10532 13.8963 11.0439 10.9757C13.9825 8.05519 17.7264 6.0664 21.8022 5.26086C25.8779 4.45533 30.1025 4.86922 33.9416 6.45021C37.7807 8.0312 41.0619 10.7083 43.3703 14.1429C45.6786 17.5775 46.9105 21.6153 46.91 25.7458C46.9032 31.2822 44.6874 36.5899 40.7486 40.5045C36.8098 44.4191 31.4697 46.621 25.8997 46.6271ZM25.8997 5.43991C21.8594 5.44128 17.9104 6.63336 14.5517 8.86544C11.1931 11.0975 8.57573 14.2693 7.03057 17.9799C5.48541 21.6904 5.08184 25.773 5.87089 29.7115C6.65994 33.65 8.60617 37.2676 11.4635 40.1067C14.3209 42.9458 17.961 44.8791 21.9237 45.662C25.8863 46.445 29.9936 46.0425 33.7261 44.5054C37.4586 42.9682 40.6488 40.3656 42.8933 37.0264C45.1378 33.6873 46.3358 29.7616 46.3358 25.7458C46.3278 20.3616 44.1719 15.2003 40.3409 11.3937C36.5099 7.58713 31.3165 5.44602 25.8997 5.43991Z"
+                            fill="#344351"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_3532_13445">
+                            <rect width="66" height="67" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+
+                      <div class="search__error-caption">
+                        К сожалению, по вашему запросу не нашлось свободных
+                        номеров.<br />Попробуйте выбрать другой регион,
+                        тип&nbsp;номера или комбинацию цифр.
+                      </div>
+                      <button
+                        class="button button_no-border button_transparent search__error-button"
+                      >
+                        Сбросить фильтр
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="tabs__item choose__phones-tab-item"
+                    data-tab="vip"
+                    aria-hidden="true"
+                  >
+                    <div class="choose__phones-header">
+                      Абонплата — 0 ₽ / месяц
+                    </div>
+                    <div class="choose__phones-cards">
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">450 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">450 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">450 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">450 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">450 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">450 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">450 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">450 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">450 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">450 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">450 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">450 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">450 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">450 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">450 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="card card_white choose__phones-card">
+                        <div class="choose__phones-vip-number no-select">
+                          <span class="choose__city-code">8 495</span> <i>5</i
+                          ><i>0</i><i>5</i><i>-</i><i>3</i><i>5</i><i>-</i
+                          ><i>5</i><i>5</i>
+                          <div class="choose__phones-vip-price">450 000 ₽</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="filter__reset">
+                  <button class="button button_no-border filter__reset-button">
+                    <svg
+                      class="filter__reset-icon"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.3172 6.37338C17.5164 5.70093 17.6931 5.09775 17.8736 4.49391C17.9243 4.32335 17.9676 4.14952 18.0246 3.98092C18.1267 3.68227 18.3886 3.54111 18.6555 3.63195C18.9224 3.72279 19.0615 3.99137 18.9738 4.29656C18.6987 5.2474 18.4331 6.20085 18.1323 7.14255C18.0626 7.36893 17.9437 7.57545 17.7848 7.74594C17.6259 7.91644 17.4313 8.04631 17.2164 8.1254C17.0014 8.20449 16.7717 8.23066 16.5455 8.20187C16.3192 8.17308 16.1023 8.0901 15.9119 7.95942C15.1255 7.4425 14.3511 6.90925 13.5711 6.37991C13.286 6.18386 13.2133 5.88587 13.3762 5.62643C13.5391 5.36699 13.8317 5.31798 14.1181 5.50945C14.8279 5.98454 15.5347 6.46487 16.2433 6.94257C16.306 6.98636 16.3749 7.02687 16.4989 7.10595C16.4538 6.97133 16.4363 6.8916 16.4012 6.81776C15.2352 4.15214 13.2779 2.5295 10.4916 2.12759C6.41906 1.53945 2.72934 4.43771 2.08211 8.65474C2.04014 8.9279 2.03199 9.20629 1.99941 9.48076C1.95869 9.81732 1.73626 10.0245 1.45807 9.99768C1.16548 9.96958 0.982526 9.71863 1.00132 9.37097C1.10887 7.39724 1.84518 5.51747 3.09347 4.02984C4.34175 2.5422 6.03053 1.5319 7.89193 1.15917C9.75332 0.786443 11.6807 1.07264 13.3684 1.97237C15.0562 2.87209 16.4075 4.33382 17.2082 6.1257L17.3172 6.37338Z"
+                        fill="#2B8FEB"
+                      />
+                      <path
+                        d="M2.68338 13.6305C2.46723 14.3653 2.268 15.0405 2.06877 15.7164C2.03682 15.8249 2.00925 15.936 1.96978 16.0432C1.86453 16.3256 1.60766 16.4596 1.34891 16.3701C1.2866 16.3517 1.22851 16.3203 1.17814 16.2779C1.12777 16.2354 1.08616 16.1828 1.05584 16.1231C1.02551 16.0634 1.00708 15.9979 1.00167 15.9306C0.996267 15.8633 1.00399 15.7955 1.02437 15.7314C1.30505 14.7568 1.5732 13.777 1.88833 12.8141C1.95803 12.6003 2.07257 12.4053 2.22362 12.2435C2.37466 12.0817 2.55841 11.9571 2.76147 11.8787C2.96452 11.8004 3.18177 11.7703 3.39738 11.7907C3.613 11.811 3.82154 11.8813 4.00782 11.9964C4.84547 12.5193 5.65555 13.09 6.47127 13.6488C6.72939 13.826 6.78076 14.1293 6.62414 14.3744C6.46751 14.6195 6.17931 14.6836 5.92182 14.5123C5.2433 14.062 4.57043 13.6018 3.89505 13.1455C3.78416 13.0704 3.67264 12.9971 3.51476 12.8912C3.53069 12.9645 3.55078 13.0368 3.5749 13.1076C4.66253 15.6929 6.52264 17.3257 9.18594 17.8192C13.1743 18.5579 16.84 16.0249 17.8017 11.9428C17.9057 11.5022 17.9408 11.0427 17.9978 10.591C18.048 10.1949 18.2484 9.97264 18.5473 10.0027C18.8461 10.0328 19.0222 10.289 18.9977 10.6806C18.8749 12.5407 18.1979 14.3143 17.0614 15.7533C15.9249 17.1923 14.3858 18.2247 12.6593 18.7062C8.72233 19.7966 4.57732 17.7754 2.81557 13.909L2.68338 13.6305Z"
+                        fill="#2B8FEB"
+                      />
+                    </svg>
+                    <div class="filter__reset-caption">
+                      Показать другие номера
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
       <section class="workphone">
         <div class="container">
           <div class="workphone__header">
@@ -831,6 +1200,36 @@
           </div>
         </div>
       </section>
+      <div
+        class="cart__button mobile-hidden"
+        data-modal="whatsapp"
+        data-hide="true"
+      >
+        <div class="whatsapp__button modal__activator mobile">
+          <a target="_blank" href="https://wa.me/74952860111">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M26.3819 21.45C26.6721 21.45 26.9073 21.2147 26.9073 20.9246C26.9073 20.6344 26.6721 20.3992 26.3819 20.3992H9.37531L8.94718 17.5312H23.7237C24.2862 17.5312 24.3972 17.4492 24.5519 16.9171C25.4894 13.7026 26.4243 10.4877 27.3566 7.27261C27.3996 7.14344 27.4277 7.00975 27.4402 6.87417C27.4521 6.75105 27.4157 6.62811 27.3385 6.53141C27.2614 6.43472 27.1496 6.37187 27.0269 6.3562C26.8822 6.33585 26.7361 6.32801 26.5902 6.33277C20.2922 6.33277 13.9948 6.33433 7.69796 6.33745C7.39718 6.33745 7.26437 6.28901 7.22062 5.94683C7.05968 4.6812 6.85265 3.42183 6.66906 2.15933C6.5964 1.65933 6.44328 1.51245 5.95031 1.51245H2.97999C2.6922 1.51245 2.4589 1.74575 2.4589 2.03354C2.4589 2.32134 2.6922 2.55464 2.97999 2.55464H5.65734C5.76281 3.25151 5.86437 3.92183 5.96437 4.59292C6.34718 7.16688 6.72895 9.74032 7.10968 12.3132C7.48885 14.8653 7.8675 17.4174 8.24562 19.9695C8.29406 20.2976 8.33468 20.6265 8.39406 20.9523C8.45343 21.2781 8.63703 21.4351 8.97765 21.45C9.04562 21.45 9.11437 21.45 9.18234 21.45H26.3819ZM26.2128 7.40464C26.1925 7.48667 26.1823 7.53277 26.1691 7.57808C25.3331 10.4557 24.4998 13.3338 23.6691 16.2125C23.6042 16.439 23.5003 16.4859 23.2823 16.4859C18.5568 16.4796 13.8308 16.4778 9.10421 16.4804C9.00109 16.4804 8.89874 16.4718 8.79171 16.4671C8.34093 13.4304 7.89562 10.4281 7.4464 7.40464H26.2128Z"
+                fill="white"
+              />
+              <path
+                d="M13.4707 25.8852C13.4701 25.3624 13.3146 24.8515 13.024 24.4169C12.7334 23.9823 12.3206 23.6435 11.8376 23.4433C11.3547 23.2431 10.8233 23.1903 10.3104 23.2917C9.79753 23.3931 9.32617 23.6442 8.95579 24.0131C8.58541 24.3821 8.33258 24.8525 8.22921 25.365C8.12584 25.8775 8.17655 26.4091 8.37494 26.8928C8.57333 27.3765 8.91052 27.7906 9.34398 28.0829C9.77744 28.3752 10.2877 28.5326 10.8105 28.5352C11.5146 28.5362 12.1903 28.2577 12.6891 27.7608C13.1879 27.2639 13.469 26.5892 13.4707 25.8852ZM9.23008 25.8735C9.23286 25.5584 9.32891 25.2512 9.50611 24.9907C9.68332 24.7302 9.93372 24.528 10.2257 24.4097C10.5177 24.2914 10.8382 24.2622 11.1468 24.3259C11.4554 24.3896 11.7382 24.5432 11.9595 24.7675C12.1808 24.9917 12.3307 25.2765 12.3903 25.5859C12.4499 25.8953 12.4165 26.2154 12.2943 26.5058C12.1722 26.7962 11.9667 27.0439 11.7039 27.2177C11.441 27.3914 11.1326 27.4834 10.8176 27.482C10.6077 27.4807 10.4001 27.4381 10.2068 27.3565C10.0134 27.2749 9.83797 27.156 9.69055 27.0067C9.54313 26.8573 9.42658 26.6803 9.34757 26.4859C9.26856 26.2914 9.22864 26.0833 9.23008 25.8735Z"
+                fill="white"
+              />
+              <path
+                d="M21.8164 25.8821C21.8164 26.4074 21.9722 26.921 22.2641 27.3578C22.5559 27.7946 22.9708 28.1351 23.4562 28.3361C23.9415 28.5372 24.4756 28.5898 24.9909 28.4873C25.5061 28.3848 25.9794 28.1318 26.3509 27.7603C26.7224 27.3888 26.9754 26.9155 27.0779 26.4003C27.1804 25.885 27.1278 25.3509 26.9267 24.8656C26.7257 24.3802 26.3852 23.9654 25.9484 23.6735C25.5116 23.3816 24.998 23.2258 24.4727 23.2258C23.7687 23.2277 23.0942 23.5081 22.5965 24.0059C22.0987 24.5036 21.8183 25.1782 21.8164 25.8821ZM22.8695 25.868C22.872 25.5514 22.9683 25.2427 23.1463 24.9808C23.3242 24.719 23.5758 24.5158 23.8693 24.3969C24.1627 24.278 24.4848 24.2488 24.7948 24.313C25.1048 24.3772 25.3889 24.5319 25.611 24.7575C25.8331 24.9831 25.9833 25.2695 26.0427 25.5805C26.102 25.8915 26.0678 26.2131 25.9444 26.5047C25.8209 26.7962 25.6138 27.0446 25.3492 27.2184C25.0846 27.3923 24.7744 27.4838 24.4578 27.4813C24.034 27.4757 23.6294 27.3032 23.332 27.0011C23.0347 26.6991 22.8685 26.2919 22.8695 25.868Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
     </main>
     {{> footer }}
   </body>
