@@ -155,4 +155,12 @@
   &_no-border {
     border: none;
   }
+
+  &_light-gray {
+    background-color: $light-gray;
+  }
+
+  &_transparent {
+    background: transparent;
+  }
 }

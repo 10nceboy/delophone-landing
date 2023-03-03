@@ -1,0 +1,129 @@
+.autocomplete {
+  position: relative;
+  background-color: $light-gray;
+  border-radius: $border-radius-xs;
+  border: $border-dim-gray;
+  box-sizing: border-box;
+  display: flex;
+  padding: $spacer * 2;
+  margin: $spacer * 2 0;
+  width: 100%;
+
+  @include tablet {
+    margin-left: $spacer * 2;
+    min-width: 250px;
+    width: 96%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  @include laptop {
+    padding: $spacer * 3 $spacer * 4;
+    max-width: 330px;
+    max-height: 53px;
+  }
+
+  @include laptop {
+    max-width: 350px;
+  }
+
+  &__input {
+    @include font($semi-bold, 15px, $black);
+
+    @include smartphone {
+      font-size: 18px;
+    }
+
+    @include tablet {
+      font-weight: $medium;
+      font-size: 15px;
+    }
+
+    @include laptop {
+      font-size: 18px;
+    }
+  }
+
+  &__options {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 100%;
+    margin-top: $spacer;
+    border-radius: $border-radius-xs;
+    overflow-y: scroll;
+    max-height: 250px;
+    z-index: 4;
+    padding: $spacer * 4;
+    background-color: $light-gray;
+    box-sizing: border-box;
+
+    width: 100%;
+    @include custom-scrollbar;
+
+    @include tablet {
+      box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__option-item {
+    @include font($normal, 14px, $gray);
+    margin: $spacer * 2 0;
+    cursor: pointer;
+
+    &:first-child {
+      margin-top: 0px;
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &__arrow {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    margin-left: auto;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    @include smartphone {
+      width: 25px;
+      height: 25px;
+
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    @include tablet {
+      width: 20px;
+      height: 20px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    @include laptop {
+      width: 22px;
+    }
+
+    transform: rotateX(180deg);
+    transition: transform $collapse-transition;
+
+    &_active {
+      transform: rotateX(0deg);
+    }
+  }
+}

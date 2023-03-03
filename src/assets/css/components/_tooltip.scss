@@ -58,6 +58,11 @@
     z-index: 1;
     position: relative;
     box-sizing: border-box;
+
+    i {
+      color: $black;
+      font-weight: $medium;
+    }
   }
 
   .tooltip__arrow {

@@ -37,6 +37,8 @@ $collapse-transition-height-reverse: max-height linear 0.6s, opacity linear 0.5s
 $dropdown-transition: all 0.2s linear;
 $card-transition: border 0.3s ease, box-shadow 0.3s ease,
   background-color 0.3s ease;
+$outline-transition: outline 0.3s ease-in-out;
+
 /**elevations **/
 $elevations: (
   1: (
@@ -52,6 +54,8 @@ $wa-shadow: 0px 4px 10px $black-shadow;
 /*borders*/
 $border-orange: 1px solid $orange;
 $border-cold-gray: 1px solid $cold-gray;
+$border-dim-gray: 1px solid $dim-gray;
+$border-gray: 1px solid $gray;
 $border-radius-xl: 12px;
 $border-radius-xs: 5px;
 

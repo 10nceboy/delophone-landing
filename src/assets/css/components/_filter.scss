@@ -1,0 +1,42 @@
+.filter {
+  &__reset {
+    @include flex-row;
+    padding: 0 0 $spacer * 5 0;
+    justify-content: center;
+    box-sizing: border-box;
+
+    @include tablet {
+      max-height: 45px;
+    }
+  }
+
+  &__reset-button {
+    padding: 0;
+    @include flex-row;
+    background: transparent;
+    @include font($normal, 16px, $blue);
+
+    &:hover {
+      .filter__reset-caption {
+        color: $deep-blue;
+      }
+
+      .filter__reset-icon {
+        path {
+          fill: $deep-blue;
+        }
+      }
+    }
+  }
+
+  &__reset-caption {
+    line-height: 155%;
+    margin-left: $spacer * 2;
+
+    @include laptop {
+      line-height: 130%;
+      font-weight: $medium;
+      font-size: 18px;
+    }
+  }
+}
