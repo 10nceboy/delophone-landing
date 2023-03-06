@@ -21,6 +21,7 @@
     background-color: $light-gray;
     @include font($medium, 15px, $black);
     width: 100%;
+    transition: opacity 0.3s;
     @include smartphone {
       font-size: 18px;
       min-width: 300px;
@@ -31,8 +32,15 @@
     }
 
     &::placeholder {
-      @include font($semi-bold, 15px, $gray2);
+      font-size: 15px;
+      font-weight: $semi-bold;
       line-height: 155%;
+      transition: opacity 0.4s;
+      opacity: 1;
+
+      &:hover {
+        color: $orange;
+      }
 
       @include smartphone {
         font-size: 18px;
@@ -47,12 +55,20 @@
         font-size: 18px;
       }
     }
+
+    &_active {
+      &::placeholder {
+        opacity: 0;
+      }
+    }
   }
 
   &__icon {
     margin-right: $spacer * 2;
     min-height: 20px;
     min-width: 20px;
+    max-width: 20px;
+    max-height: 20px;
 
     svg {
       min-height: 20px;
@@ -100,23 +116,66 @@
     @include font($normal, 14px, $blue);
     padding: 0;
     text-align: center;
-    margin-left: auto;
+    margin-left: $spacer * 3;
     opacity: 0;
     transition: opacity 0.3s;
+    pointer-events: none;
     display: none;
+
+    &:hover {
+      color: $deep-blue;
+    }
+
+    &:active {
+      color: $dark-blue;
+    }
+
     @include smartphone {
       font-size: 16px;
     }
 
     @include tablet {
       font-size: 14px;
-      display: block;
       margin-right: $spacer * 6;
+      margin-left: $spacer * 6;
+    }
+
+    &_visible {
+      opacity: 0;
+      display: block;
+      transition: opacity 0.3s;
     }
 
     &_active {
       opacity: 1;
+      pointer-events: all;
+      transition: opacity 0.3s;
+    }
+  }
+
+  &__close-button {
+    opacity: 0;
+    margin-left: auto;
+    transition: opacity 0.3s;
+    padding: 0;
+    display: none;
+    margin-left: auto;
+
+    &:hover,
+    &:active {
+      path {
+        fill: $gray;
+      }
+    }
+
+    &_visible {
+      opacity: 0;
       display: block;
+    }
+
+    &_active {
+      opacity: 1;
+      transition: opacity 0.3s;
     }
   }
 

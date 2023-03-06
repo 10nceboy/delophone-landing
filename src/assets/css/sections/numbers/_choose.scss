@@ -219,7 +219,7 @@
     @include font($normal, 15px, $black);
     line-height: 155%;
     text-align: center;
-    margin-bottom: 20px;
+
     @include smartphone {
       font-size: 18px;
     }
@@ -259,14 +259,16 @@
     min-height: 330px;
     overflow: hidden;
     margin-bottom: $spacer * 6;
+    padding-top: $spacer * 4;
+    padding-left: 1px;
 
     @include tablet {
       grid-template-columns: repeat(3, 1fr);
       grid-gap: $spacer;
       grid-template-rows: repeat(3, 57px);
       margin-bottom: 0px;
-      max-height: 309px;
-      min-height: 309px;
+      max-height: 308px;
+      min-height: 308px;
     }
 
     @include laptop {
@@ -320,9 +322,9 @@
 
     @include laptop {
       min-width: 150px;
-      max-width: 150px;
-      min-height: 66px;
-      max-height: 66px;
+      max-width: 149px;
+      min-height: 65px;
+      max-height: 65px;
       font-size: 14px;
     }
 

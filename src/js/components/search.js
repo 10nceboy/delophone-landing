@@ -1,5 +1,7 @@
 import {
-    clickOutside
+    clickOutside,
+    transitionEnter,
+    transitionLeave
 } from '../utils/dom';
 
 
@@ -8,17 +10,44 @@ document.addEventListener('DOMContentLoaded', () => {
     let searchInput = document.querySelector('.search__input');
     const submitButton = document.querySelector('.search__submit-button');
     const search = document.querySelector('.search');
-    let value = searchInput.value;
+    const closeButton = document.querySelector('.search__close-button');
 
 
-    searchInput.addEventListener('input', (event) => {
-        if (event.target.value.trim() === '') {
-            submitButton.classList.remove('search__submit-button_active')
+    const onSearchLeave = () => {
+        closeButton.classList.remove('search__close-button_active')
+        submitButton.classList.remove('search__submit-button_active');
+        setTimeout(() => {
+            closeButton.classList.remove('search__close-button_visible')
+            submitButton.classList.remove('search__submit-button_visible');
+            searchInput.classList.remove('search__input_active')
+
+        }
+            , 200);
+
+    }
+
+    const onSearchStart = () => {
+        transitionEnter(submitButton, 'search__submit-button');
+        transitionEnter(closeButton, 'search__close-button');
+        transitionEnter(searchInput, 'search__input');
+
+    }
+
+
+    searchInput.addEventListener('keyup', (event) => {
+        if (event.target.value.length == 0) {
+            onSearchLeave();
         }
         else {
-            submitButton.classList.add('search__submit-button_active')
+            onSearchStart();
         }
     });
+
+    closeButton.addEventListener('click', () => {
+        onSearchLeave();
+        searchInput.value = '';
+    })
+
 
     searchInput.addEventListener('keydown', (event) => {
         const allowedKeys = [
@@ -51,15 +80,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         event.preventDefault();
 
+
+
+
     })
-
-
-
-    clickOutside(search, () => {
-        submitButton.classList.remove('search__submit-button_active')
-    });
-
-
 
 
 })

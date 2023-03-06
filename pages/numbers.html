@@ -127,23 +127,12 @@
               </div>
               <div class="autocomplete">
                 <input
+                  placeholder="Введите регион"
                   type="text"
                   value="Москва (495)"
                   class="input input_light-gray autocomplete__input"
                 />
                 <div class="autocomplete__arrow"></div>
-                <ul class="autocomplete__options">
-                  <li class="autocomplete__option-item">Москва (495)</li>
-                  <li class="autocomplete__option-item">Москва (499)</li>
-                  <li class="autocomplete__option-item">Санкт-Петербург</li>
-                  <li class="autocomplete__option-item">Екатеринбург</li>
-                  <li class="autocomplete__option-item">Владибург</li>
-                  <li class="autocomplete__option-item">Владиград</li>
-                  <li class="autocomplete__option-item">Владивосток</li>
-                  <li class="autocomplete__option-item">Антанананариву</li>
-                  <li class="autocomplete__option-item">Якутс</li>
-                  <li class="autocomplete__option-item">Ямал</li>
-                </ul>
               </div>
 
               <div
@@ -321,6 +310,34 @@
                 />
                 <button
                   type="submit"
+                  class="button button_no-border button_transparent search__close-button"
+                >
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_3758_11042)">
+                      <path
+                        d="M0.620264 12C0.462194 12 0.304125 11.9399 0.184028 11.8189C-0.0570701 11.5778 -0.0570701 11.1869 0.184028 10.9458L10.949 0.180823C11.1901 -0.0602744 11.581 -0.0602744 11.8221 0.180823C12.0632 0.421921 12.0632 0.8128 11.8221 1.05405L1.05725 11.8189C0.936253 11.9392 0.778183 12 0.620264 12Z"
+                        fill="#B4B4B4"
+                      />
+                      <path
+                        d="M11.386 12C11.228 12 11.07 11.9399 10.9498 11.8189L0.184028 1.05405C-0.0570701 0.8128 -0.0570701 0.421921 0.184028 0.180823C0.425126 -0.0602744 0.816005 -0.0602744 1.05725 0.180823L11.8221 10.9458C12.0632 11.1869 12.0632 11.5778 11.8221 11.8189C11.7011 11.9392 11.5432 12 11.386 12Z"
+                        fill="#B4B4B4"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_3758_11042">
+                        <rect width="12" height="12" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+                <button
+                  type="submit"
                   class="button button_no-border button_transparent search__submit-button"
                 >
                   Применить
@@ -423,6 +440,71 @@
                   class="divider_cold-gray choose__phones-divider tablet"
                 ></div>
                 <div class="tabs__items choose__phones-tab-items">
+                  <div class="gift">
+                    <button
+                      class="button button_no-border button_transparent gift__button"
+                    >
+                      <svg
+                        class="gift__icon"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 40 40"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="20" cy="20" r="19.5" stroke="white" />
+                        <path
+                          d="M30.5417 14.75H9.45833C8.92906 14.75 8.5 15.1791 8.5 15.7083V19.5417C8.5 20.0709 8.92906 20.5 9.45833 20.5H30.5417C31.0709 20.5 31.5 20.0709 31.5 19.5417V15.7083C31.5 15.1791 31.0709 14.75 30.5417 14.75Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M29.5833 21.1667V29.7917C29.5833 30.0459 29.4824 30.2897 29.3026 30.4694C29.1229 30.6491 28.8792 30.7501 28.625 30.7501H11.375C11.1208 30.7501 10.8771 30.6491 10.6973 30.4694C10.5176 30.2897 10.4167 30.0459 10.4167 29.7917V21.1667"
+                          fill="white"
+                        />
+                        <path
+                          d="M26.0878 13.3946C24.7325 14.7499 20.6667 14.7499 20.6667 14.7499C20.6667 14.7499 20.6667 10.684 22.0219 9.3287C22.5612 8.79004 23.2923 8.48758 24.0545 8.48779C24.8168 8.48801 25.5477 8.79089 26.0867 9.32986C26.6256 9.86883 26.9285 10.5998 26.9287 11.362C26.9289 12.1242 26.6265 12.8553 26.0878 13.3946V13.3946Z"
+                          stroke="white"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.9119 13.3946C15.2672 14.7499 19.333 14.7499 19.333 14.7499C19.333 14.7499 19.333 10.684 17.9777 9.3287C17.4385 8.79004 16.7073 8.48758 15.9451 8.48779C15.1829 8.48801 14.452 8.79089 13.913 9.32986C13.3741 9.86883 13.0712 10.5998 13.071 11.362C13.0707 12.1242 13.3732 12.8553 13.9119 13.3946V13.3946Z"
+                          stroke="white"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M20 8.66675V31.3334"
+                          stroke="#F88C28"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                    <div class="gift__caption">
+                      <b class="gift__accent">
+                        Первый номер для вас бесплатно!</b
+                      >
+                      <div class="div">Только для номеров без абонплаты</div>
+                    </div>
+                    <div class="button button_no-border gift__close-button">
+                      <svg
+                        width="25"
+                        height="25"
+                        viewBox="0 0 25 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="12.5" cy="12.5" r="12" stroke="white" />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.38193 8.67398C9.18667 8.47871 8.87009 8.47871 8.67482 8.67398C8.47956 8.86924 8.47956 9.18582 8.67482 9.38108L11.794 12.5002L8.67482 15.6194C8.47956 15.8147 8.47955 16.1312 8.67482 16.3265C8.87008 16.5218 9.18666 16.5218 9.38192 16.3265L12.5011 13.2073L15.62 16.3262C15.8152 16.5215 16.1318 16.5215 16.3271 16.3262C16.5223 16.131 16.5223 15.8144 16.3271 15.6191L13.2082 12.5002L16.3271 9.38137C16.5223 9.18611 16.5223 8.86953 16.3271 8.67426C16.1318 8.479 15.8152 8.479 15.62 8.67426L12.5011 11.7931L9.38193 8.67398Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                   <div
                     class="tabs__item tabs__item_active choose__phones-tab-item"
                     data-tab="usuals"
