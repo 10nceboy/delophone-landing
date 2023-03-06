@@ -13,11 +13,12 @@ const numbersEl = document.querySelectorAll('.number');
 
 const toggleNumber = (event) => {
   const { target } = event;
-  const { number, id } = target.dataset;
+  const { number, id, cityCode } = target.dataset;
   if (!number.classList.contains('.number__active')) {
     cart.push({
       number,
-      id
+      id,
+      cityCode
     });
   } else {
     const index = cart.findIndex((cartItem) => cartItem.id === id);
@@ -62,11 +63,11 @@ const renderDeleteIcon = () => {
   </svg>`;
 };
 
-const renderNumber = ({ city, number, id }) => {
+const renderNumber = ({ cityCode, number, id }) => {
   return `
   <div class="card card_white cart__item" data-number-id=${id}>
     <div class="cart__item-number">
-    <span class="choose__city-code">${city}</span> ${number}
+    <span class="choose__city-code">${cityCode}</span> ${number}
   </div>
   <div class="cart__item-price">
     990₽ разово,
@@ -79,7 +80,7 @@ const renderNumber = ({ city, number, id }) => {
 const renderCart = () => {
   cartEl.innerHTML = cart.map((number) => renderNumber(number)).join('');
   setTimeout(() => {
-    const cartItemsEl = document.querySelectorAll('.cart__item');
+    const cartItemsEl = cartEl.querySelectorAll('.cart__item');
     cartItemsEl.forEach((cartItem) => {
       const { numberId } = cartItem.dataset;
       if (numberId) {
