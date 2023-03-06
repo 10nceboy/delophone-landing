@@ -6,7 +6,7 @@
     background-color: $green;
     cursor: pointer;
     z-index: 10;
-    transform: $btn-transition;
+    transition: $btn-transition;
     border-radius: 50%;
     box-shadow: $wa-shadow;
     bottom: 20px;
