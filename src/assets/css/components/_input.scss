@@ -5,5 +5,8 @@
 
   &_light-gray {
     background-color: $light-gray;
+    &::placeholder {
+      color: $gray2;
+    }
   }
 }

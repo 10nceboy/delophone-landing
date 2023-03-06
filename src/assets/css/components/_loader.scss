@@ -9,6 +9,7 @@
   top: 50%;
   margin: auto;
   left: 50%;
+  cursor: progress;
 
   @include mobile-m {
     width: 30px;
