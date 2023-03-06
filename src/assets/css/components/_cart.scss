@@ -16,6 +16,7 @@
 
     @include laptop {
       min-width: 350px;
+      max-width: 350px;
       min-height: 678px;
       max-height: 678px;
       margin-left: $spacer * 6;
@@ -57,15 +58,18 @@
     max-height: 424px;
     padding: $spacer * 4 $spacer * 2;
     padding-top: 0px;
-
+    padding-right: 13px;
+    box-sizing: border-box;
     @include custom-scrollbar;
-    overflow: auto;
+    overflow-y: auto;
 
     @include tablet {
       padding: $spacer * 5 $spacer * 4;
+      padding-right: 8px;
       padding-top: $spacer;
       min-height: 484px;
       max-height: 484px;
+      max-width: 350px;
     }
   }
 
@@ -180,6 +184,8 @@
 
     @include laptop {
       font-size: 16px;
+      min-width: 310px;
+      max-width: 310px;
     }
   }
 
@@ -224,7 +230,7 @@
 
     @include laptop {
       font-size: 14px;
-      margin-left: $spacer * 6;
+      margin-left: $spacer * 5;
     }
 
     &_line-trough {
@@ -237,9 +243,17 @@
     margin-left: auto;
     cursor: pointer;
     flex-shrink: 0;
-
     width: 20px;
     height: 20px;
+
+    &:hover {
+      path {
+        fill: $white;
+      }
+      circle {
+        fill: $gray;
+      }
+    }
 
     @include mobile-m {
       height: 25px;
@@ -255,12 +269,22 @@
       height: 20px;
       width: 20px;
     }
+
+    @include laptop {
+      min-height: 25px;
+      min-width: 25px;
+      width: 25px;
+      height: 25px;
+    }
   }
 
   &__item-price_per-month {
     color: $gray2;
     @include smartphone {
       margin-left: $spacer;
+    }
+    @include tablet {
+      margin-left: 0;
     }
   }
 
@@ -284,7 +308,7 @@
     }
 
     @include laptop {
-      margin-left: $spacer * 6;
+      margin-left: $spacer * 5;
     }
   }
 

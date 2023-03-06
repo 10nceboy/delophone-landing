@@ -134,7 +134,7 @@
     }
   }
 
-  &__phones-tabs {
+  &__phones-filters {
     box-sizing: border-box;
     @include tablet {
       padding: 10px;
@@ -234,7 +234,7 @@
     }
   }
 
-  &__phones-tab-item {
+  &__phones-filter-item {
     min-height: 350px;
     box-sizing: border-box;
     position: relative;

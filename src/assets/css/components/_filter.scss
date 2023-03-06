@@ -40,3 +40,67 @@
     }
   }
 }
+
+.filters {
+  &__activators {
+    @include flex-row;
+    width: 100%;
+  }
+
+  &__activator {
+    color: $gray;
+    box-shadow: none;
+    border: none;
+
+    @include gap($spacer * 5, $spacer * 5);
+
+    @include laptop {
+      padding: 15px 20px;
+      width: 280px;
+      height: 53px;
+    }
+
+    &_active {
+      color: $white;
+      transition: $outline-transition;
+
+      &.choose__button {
+        background-color: $gray;
+        outline: 1px solid $gray;
+        color: $white;
+
+        transition: $outline-transition;
+      }
+      .choose__phones-quantity {
+        color: $dim-gray;
+      }
+    }
+  }
+
+  &__item {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.15s ease-in;
+
+    &_visible {
+      display: block;
+    }
+
+    &_active {
+      opacity: 1;
+      display: block;
+    }
+  }
+
+  &__tab_white {
+    background: $white;
+  }
+
+  &__tab_outline-blue {
+    outline: 1px solid $blue;
+
+    &:hover {
+      outline: 2px $deep-blue solid;
+    }
+  }
+}
