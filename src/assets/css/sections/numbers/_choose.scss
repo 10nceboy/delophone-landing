@@ -134,7 +134,7 @@
     }
   }
 
-  &__phones-tabs {
+  &__phones-filters {
     box-sizing: border-box;
     @include tablet {
       padding: 10px;
@@ -234,7 +234,7 @@
     }
   }
 
-  &__phones-tab-item {
+  &__phones-filter-item {
     min-height: 350px;
     box-sizing: border-box;
     position: relative;
@@ -254,6 +254,7 @@
   &__phones-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 58px);
     grid-gap: $spacer * 2;
     max-height: 330px;
     min-height: 330px;
@@ -287,6 +288,7 @@
 
   &__phones-card {
     min-height: 58px;
+    max-height: 58px;
     border: 1px solid $cold-gray;
     border-radius: $border-radius-xs;
     text-align: center;
