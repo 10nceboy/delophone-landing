@@ -1,13 +1,13 @@
 .choose {
-  padding-bottom: 80px;
+  padding-bottom: $spacer * 16;
 
   @include tablet {
-    padding-bottom: 150px;
+    padding-bottom: $spacer * 30;
   }
 
   &__content {
     @include tablet {
-      padding-top: 70px;
+      padding-top: $spacer * 14;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       min-height: 678px;
@@ -135,6 +135,7 @@
   }
 
   &__phones-filters {
+    display: block;
     box-sizing: border-box;
     @include tablet {
       padding: 10px;
@@ -147,15 +148,17 @@
   }
 
   &__button-phones {
-    @include font($normal, 14px, $black);
-    background-color: $white;
-
+    display: inline;
+    @include font($normal, 15px, $black);
+    line-height: 155%;
+    padding: 0px;
     @include tablet {
       margin-right: $spacer;
       padding: 0px;
       font-size: 12px;
       text-align: left;
       padding: $spacer;
+      background-color: $white;
     }
 
     @include tablet-1024 {
@@ -174,6 +177,13 @@
 
     &:last-child {
       margin-right: 0px;
+    }
+  }
+
+  &__button-header {
+    font-weight: $semi-bold;
+    @include tablet {
+      font-weight: unset;
     }
   }
 
@@ -212,6 +222,7 @@
   }
 
   &__phones-quantity {
+    font-weight: $normal;
     color: $gray;
   }
 
@@ -260,7 +271,7 @@
     min-height: 330px;
     overflow: hidden;
     margin-bottom: $spacer * 6;
-    padding-top: $spacer * 4;
+    padding-top: $spacer * 2;
     padding-left: 1px;
 
     @include tablet {
@@ -270,6 +281,7 @@
       margin-bottom: 0px;
       max-height: 308px;
       min-height: 308px;
+      padding-top: $spacer * 4;
     }
 
     @include laptop {

@@ -16,8 +16,4 @@ document.addEventListener('DOMContentLoaded', () => {
         gift.classList.remove('gift_active')
     }
     )
-
-    clickOutside(gift, () => {
-        gift.classList.remove('gift_active')
-    })
 });

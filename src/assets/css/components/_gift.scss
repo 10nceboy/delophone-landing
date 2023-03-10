@@ -16,7 +16,6 @@
   box-sizing: border-box;
   transition: min-width 0.5s;
   white-space: nowrap;
-  margin-top: -$spacer;
 
   @include mobile-m {
     font-size: 13px;
@@ -37,7 +36,7 @@
     min-height: 70px;
     max-width: 70px;
     font-size: 14px;
-    margin-top: 0px;
+    margin-top: $spacer * 4;
 
     @include laptop {
       min-height: 70px;
@@ -63,6 +62,7 @@
     .gift__caption {
       opacity: 1;
       transition: opacity 0.6s;
+      background-color: $orange;
     }
 
     .gift__close-button {

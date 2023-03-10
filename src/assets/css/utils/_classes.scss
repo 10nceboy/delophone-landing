@@ -52,6 +52,14 @@
   }
 }
 
+.mobile-block {
+  display: block;
+
+  @include tablet {
+    display: none;
+  }
+}
+
 .mobile {
   display: flex;
 

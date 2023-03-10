@@ -38,10 +38,6 @@
       transition: opacity 0.4s;
       opacity: 1;
 
-      &:hover {
-        color: $orange;
-      }
-
       @include smartphone {
         font-size: 18px;
         font-weight: $medium;

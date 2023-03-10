@@ -139,7 +139,10 @@
                 class="card card_light-gray card_rectangle cart tablet-block"
               >
                 <div class="card_rounded-top cart__header">
-                  Выбрано <b class="cart__quantity"> 0 номеров </b>
+                  <span class="cart__header-choice"></span>&nbsp;<b
+                    class="cart__quantity"
+                    >1</b
+                  >&nbsp;<span class="cart__quantity-number"> </span>
                 </div>
                 <div class="card cart__content-upside">
                   <div class="cart__content-header">
@@ -278,12 +281,14 @@
                     <span class="cart__summary_once">3 960 ₽ разово,</span>
                     <span class="cart__summary_per-month"> 400 ₽/мес </span>
                   </div>
-                  <button
-                    class="button button_blue cart__button-buy tablet-block"
-                    disabled
-                  >
-                    Купить номера телефонов
-                  </button>
+                  <a href="./order.html" class="link">
+                    <button
+                      class="button button_blue cart__button-buy tablet-block"
+                      disabled
+                    >
+                      Купить номера телефонов
+                    </button>
+                  </a>
                 </div>
               </div>
               <div class="card card_light-gray search">
@@ -357,7 +362,7 @@
                 </div>
               </div>
               <div
-                class="tooltip search__tooltip mobiles"
+                class="tooltip search__tooltip mobile"
                 data-tooltip-width-laptop="420px"
                 data-tooltip-width-tablet="398px"
                 data-tooltip-width-smartphone="420px"
@@ -370,6 +375,127 @@
                 </div>
               </div>
               <div class="card card_rectangle choose__phones">
+                <div
+                  class="dropdown filters__dropdown mobile-block"
+                  data-filter="usuals"
+                >
+                  <div class="filter__wrapper">
+                    <button
+                      class="button button_no-border button_transparent filters__dropdown-button"
+                    >
+                      <span
+                        class="choose__button-header no-select"
+                        data-value="Обычные"
+                      >
+                        Обычные
+                        <span class="choose__phones-quantity no-select"
+                          >(1400)</span
+                        >
+                        <span class="choose__button_price no-select">
+                          — 990 ₽
+                        </span>
+                      </span>
+                    </button>
+                    <div class="filter__arrow"></div>
+                  </div>
+
+                  <div class="dropdown__menu">
+                    <ul class="dropdown__menu_list filters__dropdown-list">
+                      <li
+                        data-filter="usuals"
+                        class="filters__dropdown-list-item"
+                        data-value="Обычные"
+                      >
+                        <button
+                          type="button"
+                          data-filter="usuals"
+                          class="button filters__activator button_no-border button_transparent choose__button-phones choose__button_usual"
+                        >
+                          <span class="choose__button-header no-select">
+                            Обычные
+                            <span class="choose__phones-quantity no-select"
+                              >(1400)</span
+                            >
+                          </span>
+
+                          <span class="choose__button_price no-select">
+                            — 990 ₽
+                          </span>
+                          <div class="drodpdown__menu"></div>
+                        </button>
+                      </li>
+                      <li class="filters__dropdown-list-item">
+                        <button
+                          type="button"
+                          data-filter="bronze"
+                          class="button filters__activator button_no-border button_transparent choose__button-phones choose__button_bronze"
+                        >
+                          <span class="choose__button-header no-select">
+                            Бронзовые
+                            <span class="choose__phones-quantity no-select"
+                              >(862)
+                            </span>
+                          </span>
+
+                          <span class="choose__button_price no-select">
+                            — 1990 ₽
+                          </span>
+                        </button>
+                      </li>
+                      <li class="filters__dropdown-list-item">
+                        <button
+                          data-filter="silver"
+                          type="button"
+                          class="button filters__activator button_no-border button_transparent choose__button-phones choose__button_silver"
+                        >
+                          <span class="choose__button-header no-select">
+                            Серебряные
+                            <span class="choose__phones-quantity no-select"
+                              >(421)</span
+                            >
+                          </span>
+                          <span class="choose__button_price no-select">
+                            — 3 990 ₽
+                          </span>
+                        </button>
+                      </li>
+                      <li class="filters__dropdown-list-item">
+                        <button
+                          data-filter="gold"
+                          type="button"
+                          class="button filters__activator button_no-border button_transparent choose__button-phones choose__button_gold"
+                        >
+                          <span class="choose__button-header no-select">
+                            Золотые
+                            <span class="choose__phones-quantity no-select"
+                              >(167)</span
+                            >
+                          </span>
+                          <span class="choose__button_price no-select">
+                            — 8 990 ₽
+                          </span>
+                        </button>
+                      </li>
+                      <li class="filters__dropdown-list-item">
+                        <button
+                          data-filter="vip"
+                          type="button"
+                          class="button filters__activator button_no-border button_transparent choose__button-phones choose__button_vip"
+                        >
+                          <span class="choose__button-header no-select">
+                            VIP
+                            <span class="choose__phones-quantity no-select"
+                              >(120)</span
+                            >
+                          </span>
+                          <span class="choose__button_price no-select">
+                            — 15 000 ₽
+                          </span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
                 <div
                   class="filters filters__activators choose__phones-filters tablet"
                 >

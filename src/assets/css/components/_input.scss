@@ -9,4 +9,9 @@
       color: $gray2;
     }
   }
+
+  &_with-border {
+    border: $border-dim-gray;
+    border-radius: $border-radius-xs;
+  }
 }

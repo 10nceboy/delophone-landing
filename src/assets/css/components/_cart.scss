@@ -4,9 +4,17 @@
     grid-column-start: 3;
     grid-row-end: 4;
     margin-left: $spacer * 6;
+    min-height: 518px;
+    max-height: 518px;
+
+    @include smartphone {
+      min-height: 678px;
+      max-height: 678px;
+    }
 
     @include tablet {
       min-width: 300px;
+      max-width: 300px;
       margin-left: $spacer * 3;
     }
 
@@ -24,7 +32,7 @@
   }
 
   &__header {
-    padding: $spacer * 3 $spacer * 4;
+    padding: $spacer * 2;
     background-color: $gray;
     @include font($semi-bold, 15px, $white);
 
@@ -46,6 +54,7 @@
 
     @include tablet {
       font-size: 18px;
+      padding: $spacer * 3 $spacer * 4;
     }
 
     @include laptop {
@@ -58,17 +67,26 @@
     max-height: 424px;
     padding: $spacer * 4 $spacer * 2;
     padding-top: 0px;
-    padding-right: 13px;
+    padding-right: 4px;
     box-sizing: border-box;
     @include custom-scrollbar;
     overflow-y: auto;
+
+    @include mobile-s {
+      min-height: 484px;
+      max-height: 484px;
+    }
+
+    @include smartphone {
+      padding-right: 13px;
+      min-height: 484px;
+      max-height: 484px;
+    }
 
     @include tablet {
       padding: $spacer * 5 $spacer * 4;
       padding-right: 8px;
       padding-top: $spacer;
-      min-height: 484px;
-      max-height: 484px;
       max-width: 350px;
     }
   }
@@ -76,6 +94,16 @@
   &__content-downside {
     padding: $spacer * 3;
     text-align: center;
+
+    @include mobile-s {
+      min-height: 71px;
+    }
+
+    @include smartphone {
+      min-height: 71px;
+      max-height: 71px;
+    }
+
     @include tablet {
       padding: $spacer * 4 $spacer * 4 $spacer * 5 $spacer * 4;
     }
@@ -143,7 +171,7 @@
 
     &_per-month {
       color: $gray2;
-      font-size: 16px;
+      font-size: 14px;
 
       @include smartphone {
         font-size: 18px;
@@ -151,6 +179,10 @@
 
       @include tablet {
         font-size: 14px;
+      }
+
+      @include laptop {
+        font-size: 16px;
       }
     }
   }
@@ -203,8 +235,8 @@
     font-size: 13px;
     line-height: 150%;
 
-    @include mobile-m {
-      margin-left: $spacer * 5;
+    @include mobile-425 {
+      margin-left: $spacer * 7;
     }
 
     @include mobile-l {
@@ -255,7 +287,17 @@
       }
     }
 
-    @include mobile-m {
+    @include mobile-425 {
+      height: 25px;
+      width: 25px;
+    }
+
+    @include mobile-l {
+      height: 25px;
+      width: 25px;
+    }
+
+    @include mobile-s {
       height: 25px;
       width: 25px;
     }
