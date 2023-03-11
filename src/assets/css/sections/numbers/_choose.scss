@@ -141,6 +141,7 @@
       padding: 10px;
       padding-bottom: 20px;
       max-height: 92px;
+      display: flex;
     }
     @include laptop {
       padding: $spacer * 5 $spacer * 9 $spacer * 4 $spacer * 4;
