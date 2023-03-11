@@ -1,7 +1,5 @@
 import {
-    clickOutside,
     transitionEnter,
-    transitionLeave
 } from '../utils/dom';
 
 

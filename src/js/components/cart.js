@@ -1,8 +1,7 @@
 
 
-import { numberQuantity, choice } from "../constants/cart";
+import { numberQuantity, choice } from '../constants/cart'
 
-const cartMassive = []
 const cart = document.querySelector('.cart')
 const cartEl = document.querySelector('.cart__content-upside');
 
