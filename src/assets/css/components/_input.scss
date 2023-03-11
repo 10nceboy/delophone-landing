@@ -1,0 +1,17 @@
+.input {
+  box-sizing: border-box;
+  border: 0px;
+  outline: none;
+
+  &_light-gray {
+    background-color: $light-gray;
+    &::placeholder {
+      color: $gray2;
+    }
+  }
+
+  &_with-border {
+    border: $border-dim-gray;
+    border-radius: $border-radius-xs;
+  }
+}

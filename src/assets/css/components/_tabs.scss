@@ -5,8 +5,6 @@
   }
 
   &__activator {
-    background: $white;
-    outline: 1px solid $blue;
     color: $gray;
     box-shadow: none;
     border: none;
@@ -19,16 +17,24 @@
       height: 53px;
     }
 
-    &:hover {
-      outline: 2px $deep-blue solid;
-    }
-
     &_active {
       background: $blue;
       color: $white;
+      transition: $outline-transition;
 
       &:hover {
         background-color: $deep-blue;
+      }
+
+      &.choose__button {
+        background-color: $gray;
+        outline: 1px solid $gray;
+        color: $white;
+
+        transition: $outline-transition;
+      }
+      .choose__phones-quantity {
+        color: $dim-gray;
       }
     }
   }
@@ -45,6 +51,18 @@
     &_active {
       opacity: 1;
       display: block;
+    }
+  }
+
+  &__tab_white {
+    background: $white;
+  }
+
+  &__tab_outline-blue {
+    outline: 1px solid $blue;
+
+    &:hover {
+      outline: 2px $deep-blue solid;
     }
   }
 }

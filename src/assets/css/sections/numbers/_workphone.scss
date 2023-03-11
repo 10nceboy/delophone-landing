@@ -1,0 +1,93 @@
+.workphone {
+  background-color: $light-gray;
+  padding: 65px 0;
+
+  @include tablet {
+    padding: 135px 0;
+  }
+
+  &__cards {
+    display: block;
+    background-color: $light-gray;
+    padding: $spacer * 5 0 0 0;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: $spacer * 4;
+      padding: $spacer * 11 0 0 0;
+    }
+
+    @include laptop {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: $spacer * 6;
+    }
+  }
+
+  &__card {
+    padding: $spacer * 5 $spacer * 4 $spacer * 4 $spacer * 4;
+    margin-bottom: $spacer * 3;
+
+    @include tablet {
+      padding: $spacer * 8 $spacer * 5;
+      margin-bottom: 0px;
+    }
+
+    @include laptop {
+      width: 350px;
+      height: 230px;
+    }
+  }
+
+  &__card-header {
+    @include flex-row;
+    margin-bottom: $spacer * 3;
+
+    @include tablet {
+      margin-bottom: $spacer * 4;
+    }
+
+    h4 {
+      font-size: 20px;
+    }
+  }
+
+  &__caption {
+    @include font($normal, 15px, $gray);
+    line-height: 155%;
+
+    @include smartphone {
+      font-size: 17px;
+    }
+  }
+
+  &__icon {
+    margin-right: $spacer * 3;
+    min-width: 60px;
+    min-height: 60px;
+    max-width: 60px;
+    max-height: 60px;
+
+    @include laptop {
+      margin-right: $spacer * 5;
+    }
+  }
+
+  &__break {
+    @include mobile-m {
+      display: none;
+    }
+
+    @include smartphone {
+      display: none;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    @include laptop {
+      display: inline;
+    }
+  }
+}

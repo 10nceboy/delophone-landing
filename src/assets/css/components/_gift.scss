@@ -1,0 +1,162 @@
+.gift {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  @include font($normal, 12px, $white);
+  background-color: $orange;
+  line-height: 150%;
+  padding: $spacer $spacer $spacer $spacer * 2;
+  border-radius: 40px 999em 999em 40px;
+  z-index: 1;
+  left: 0;
+  overflow: hidden;
+  min-width: 0px;
+  max-width: 45px;
+  max-height: 45px;
+  box-sizing: border-box;
+  transition: min-width 0.5s;
+  white-space: nowrap;
+
+  @include mobile-m {
+    font-size: 13px;
+  }
+
+  @include smartphone {
+    font-size: 14px;
+    max-width: 65px;
+    max-height: 65px;
+    padding: $spacer * 2;
+    align-items: flex-start;
+    margin-top: -$spacer * 3;
+  }
+
+  @include tablet {
+    padding: $spacer * 3;
+    left: initial;
+    min-height: 70px;
+    max-width: 70px;
+    font-size: 14px;
+    margin-top: $spacer * 4;
+
+    @include laptop {
+      min-height: 70px;
+    }
+  }
+
+  &_active {
+    min-width: 281px;
+    transition: min-width 0.5s;
+
+    @include mobile-m {
+      min-width: 310px;
+    }
+
+    @include smartphone {
+      min-width: 340px;
+    }
+
+    @include tablet {
+      min-width: 366px;
+    }
+
+    .gift__caption {
+      opacity: 1;
+      transition: opacity 0.6s;
+      background-color: $orange;
+    }
+
+    .gift__close-button {
+      opacity: 1;
+      transition: opacity 0.6s;
+    }
+  }
+
+  &__button {
+    background-color: $orange;
+    padding: 0px;
+    max-width: 25px;
+    max-height: 25px;
+    margin-right: $spacer;
+
+    &:hover {
+      svg {
+        circle {
+          stroke: $white;
+          fill: $white;
+        }
+        path {
+          fill: $orange;
+          stroke: $white;
+        }
+      }
+    }
+
+    @include smartphone {
+      margin-right: $spacer * 3;
+    }
+  }
+
+  &__close-button {
+    padding: 0;
+    margin-left: auto;
+    opacity: 0;
+    align-self: center;
+    transition: opacity 0.5s;
+
+    &:hover {
+      svg {
+        circle {
+          stroke: $orange;
+          fill: $white;
+        }
+        path {
+          fill: $orange;
+        }
+      }
+    }
+
+    svg {
+      max-height: 20px;
+      max-width: 20px;
+
+      @include smartphone {
+        max-height: 25px;
+        max-width: 25px;
+      }
+    }
+  }
+
+  &__icon {
+    min-height: 25px;
+    max-height: 25px;
+    min-width: 25px;
+    max-width: 25px;
+    margin-right: $spacer;
+
+    @include smartphone {
+      min-height: 40px;
+      min-width: 40px;
+      max-width: 40px;
+      max-height: 40px;
+      margin-right: $spacer * 2;
+      align-self: flex-start;
+    }
+
+    @include laptop {
+      max-height: 40px;
+      max-height: 40px;
+    }
+  }
+
+  &__caption {
+    opacity: 0;
+    transition: opacity 0.5s;
+    @include smartphone {
+      margin-left: 10px;
+    }
+  }
+
+  &__accent {
+    font-weight: $semi-bold;
+  }
+}

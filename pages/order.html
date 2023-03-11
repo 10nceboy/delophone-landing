@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Делофон - Выбор номера</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/icon/favicon-16x16.png"
+    />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="alternate" hreflang="ru-ru" href="https://delofon.ru" />
+    <link rel="canonical" href="https://delofon.ru/" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:site_name" content="Делофон" />
+    <meta property="og:url" content=https://delofon.ru/>
+    <meta
+      property="og:image"
+      content="https://10nceboy.github.io/delophone-landing/cover.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:description"
+      content="Настройте звонки в бизнесе: с красивым номером, многоканальной линией и распределением звонков по сотрудникам с любыми устройствами."
+    />
+    <meta property="og:type" content="product" />
+    <meta
+      property="og:title"
+      content="Делофон - Первая виртуальная АТС без абонентской платы"
+    />
+    <meta
+      name="description"
+      content="Настройте звонки в бизнесе: с красивым номером, многоканальной линией и распределением звонков по сотрудникам с любыми устройствами."
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="delofon.ru" />
+    <meta property="twitter:url" content="https://delofon.ru" />
+    <meta
+      name="twitter:title"
+      content="Делофон - Первая виртуальная АТС без абонентской платы"
+    />
+    <meta
+      name="twitter:description"
+      content="Настройте звонки в бизнесе: с красивым номером, многоканальной линией и распределением звонков по сотрудникам с любыми устройствами."
+    />
+    <meta
+      name="twitter:image"
+      content="https://10nceboy.github.io/delophone-landing/cover.png"
+    />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="stylesheet" href="../src/assets/css/order.scss" />
+
+    <link rel="stylesheet" href="../src/assets/css/long/header-long.scss" />
+    <link rel="stylesheet" href="../src/assets/css/long/footer-long.scss" />
+    <link rel="stylesheet" href="../src/assets/css/long/сards-long.scss" />
+    <script src="price.js" type="module"></script>
+    <script src="../main.js" type="module"></script>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    {{> header }}
+    <main>
+      <div class="container">
+        <nav>
+          <ul class="breadcrumbs numbers__breadcrumbs">
+            <li>
+              <a
+                class="link link_black breadcrumbs__link"
+                href="../"
+                aria-label="Главная"
+              >
+                Главная&nbsp;/</a
+              >
+            </li>
+            <li>
+              <a
+                class="link link_black breadcrumbs__link"
+                href="./numbers.html"
+                aria-label="Главная"
+              >
+                Выбрать номер&nbsp;/</a
+              >
+            </li>
+            <li>Ваш заказ</li>
+          </ul>
+        </nav>
+      </div>
+
+      <section class="order__section">
+        <div class="container">
+          <a
+            class="link link_blue order__link mobile"
+            aria-label="Назад к выбору номеров"
+            href="./numbers.html"
+          >
+            <div class="order__arrow">&#8592;</div>
+            <div class="">Назад к выбору номеров</div>
+          </a>
+          <div class="order__section-header">
+            <h1>Ваш заказ</h1>
+          </div>
+          <div class="order__content">
+            <div class="order__content-leftside">
+              <div class="card card_light-gray card_rectangle cart order__cart">
+                <div class="card_rounded-top cart__header">
+                  <span class="cart__header-choice"></span>&nbsp;<b
+                    class="cart__quantity"
+                    >1</b
+                  >&nbsp;<span class="cart__quantity-number"> </span>
+                </div>
+                <div
+                  class="card cart__content-upside order__cart-content-upside"
+                >
+                  <div class="cart__content-header">
+                    Нажимайте на подходящие номера, чтобы выбрать их для
+                    покупки.
+                  </div>
+                  <div class="cart__content-header">Москва 499</div>
+                  <div class="card card_white cart__item">
+                    <div class="cart__item-number">
+                      <span class="choose__city-code">8 495</span> 243-45-61
+                    </div>
+                    <div class="cart__item-price">990₽ разово</div>
+                    <svg
+                      class="cart__item-icon"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12.5" cy="12.5" r="12" stroke="#9CA5AC" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.38201 8.6741C9.18674 8.47884 8.87016 8.47884 8.6749 8.6741C8.47964 8.86936 8.47964 9.18594 8.6749 9.38121L11.7941 12.5004L8.67489 15.6195C8.47963 15.8148 8.47963 16.1314 8.67489 16.3266C8.87016 16.5219 9.18674 16.5219 9.382 16.3266L12.5012 13.2075L15.62 16.3263C15.8153 16.5216 16.1319 16.5216 16.3271 16.3263C16.5224 16.1311 16.5224 15.8145 16.3271 15.6192L13.2083 12.5004L16.3271 9.38149C16.5224 9.18623 16.5224 8.86965 16.3271 8.67439C16.1319 8.47912 15.8153 8.47912 15.62 8.67439L12.5012 11.7933L9.38201 8.6741Z"
+                        fill="#9CA5AC"
+                      />
+                    </svg>
+                  </div>
+                  <div class="cart__content-header">Мобильные</div>
+                  <div class="card card_white cart__item">
+                    <div class="cart__item-number">
+                      <span class="choose__city-code">8 495</span> 243-45-61
+                    </div>
+                    <div class="cart__item-price">
+                      990₽ разово,
+                      <div class="cart__item-price_per-month">190₽/мес</div>
+                    </div>
+                    <svg
+                      class="cart__item-icon"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12.5" cy="12.5" r="12" stroke="#9CA5AC" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.38201 8.6741C9.18674 8.47884 8.87016 8.47884 8.6749 8.6741C8.47964 8.86936 8.47964 9.18594 8.6749 9.38121L11.7941 12.5004L8.67489 15.6195C8.47963 15.8148 8.47963 16.1314 8.67489 16.3266C8.87016 16.5219 9.18674 16.5219 9.382 16.3266L12.5012 13.2075L15.62 16.3263C15.8153 16.5216 16.1319 16.5216 16.3271 16.3263C16.5224 16.1311 16.5224 15.8145 16.3271 15.6192L13.2083 12.5004L16.3271 9.38149C16.5224 9.18623 16.5224 8.86965 16.3271 8.67439C16.1319 8.47912 15.8153 8.47912 15.62 8.67439L12.5012 11.7933L9.38201 8.6741Z"
+                        fill="#9CA5AC"
+                      />
+                    </svg>
+                  </div>
+                  <div class="cart__content-header">
+                    Москва 499+495 (комплект)
+                  </div>
+                  <div class="card card_white cart__item">
+                    <div class="cart__item-pair-numbers">
+                      <div class="cart__item-number">
+                        <span class="choose__city-code">8 495</span> 243-45-61
+                      </div>
+                      <div class="cart__item-number">
+                        <span class="choose__city-code">8 495</span> 243-45-61
+                      </div>
+                    </div>
+
+                    <div class="cart__item-price">990₽ разово</div>
+                    <svg
+                      class="cart__item-icon"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12.5" cy="12.5" r="12" stroke="#9CA5AC" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.38201 8.6741C9.18674 8.47884 8.87016 8.47884 8.6749 8.6741C8.47964 8.86936 8.47964 9.18594 8.6749 9.38121L11.7941 12.5004L8.67489 15.6195C8.47963 15.8148 8.47963 16.1314 8.67489 16.3266C8.87016 16.5219 9.18674 16.5219 9.382 16.3266L12.5012 13.2075L15.62 16.3263C15.8153 16.5216 16.1319 16.5216 16.3271 16.3263C16.5224 16.1311 16.5224 15.8145 16.3271 15.6192L13.2083 12.5004L16.3271 9.38149C16.5224 9.18623 16.5224 8.86965 16.3271 8.67439C16.1319 8.47912 15.8153 8.47912 15.62 8.67439L12.5012 11.7933L9.38201 8.6741Z"
+                        fill="#9CA5AC"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="card card_white cart__item">
+                    <div class="cart__item-pair-numbers">
+                      <div class="cart__item-single-number">
+                        <div class="cart__item-number">
+                          <span class="choose__city-code">8 495</span>
+                          243-45-61
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart__item-free">
+                      <div
+                        class="cart__item-price cart__item-price_line-trough"
+                      >
+                        990₽ разово
+                      </div>
+                      <div class="cart__item-price cart__item-price-free">
+                        Бесплатно
+                        <span
+                          class="tooltip"
+                          data-tooltip-width-laptop="252px"
+                          data-tooltip-width-tablet="252px"
+                          data-tooltip-width-smartphone="400px"
+                          data-tooltip="Вы можете бесплатно подключить к аккаунту один номер телефона. Только для номеров без абонплаты."
+                        >
+                        </span>
+                      </div>
+                    </div>
+                    <svg
+                      class="cart__item-icon"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12.5" cy="12.5" r="12" stroke="#9CA5AC" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.38201 8.6741C9.18674 8.47884 8.87016 8.47884 8.6749 8.6741C8.47964 8.86936 8.47964 9.18594 8.6749 9.38121L11.7941 12.5004L8.67489 15.6195C8.47963 15.8148 8.47963 16.1314 8.67489 16.3266C8.87016 16.5219 9.18674 16.5219 9.382 16.3266L12.5012 13.2075L15.62 16.3263C15.8153 16.5216 16.1319 16.5216 16.3271 16.3263C16.5224 16.1311 16.5224 15.8145 16.3271 15.6192L13.2083 12.5004L16.3271 9.38149C16.5224 9.18623 16.5224 8.86965 16.3271 8.67439C16.1319 8.47912 15.8153 8.47912 15.62 8.67439L12.5012 11.7933L9.38201 8.6741Z"
+                        fill="#9CA5AC"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="divider_cold-gray cart__divider"></div>
+                <div
+                  class="card cart__content-downside order__cart-content-downside"
+                >
+                  <div class="cart__summary order__cart-summary">
+                    <span class="cart__summary_once" data-value="0">0</span
+                    >&nbsp;₽ разово,
+                    <span class="cart__summary_per-month" data-value="0">
+                      400 ₽/мес
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order__content-rightside">
+              <div class="order__step order__step-null">
+                <div class="step-upside__header order__step-header">
+                  <div
+                    class="step-upside__header-image order__step-header-image"
+                  >
+                    <svg
+                      width="35"
+                      height="35"
+                      viewBox="0 0 35 35"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.5 33.9705C26.5965 33.9705 33.9706 26.5963 33.9706 17.4999C33.9706 8.40343 26.5965 1.0293 17.5 1.0293C8.40355 1.0293 1.02942 8.40343 1.02942 17.4999C1.02942 26.5963 8.40355 33.9705 17.5 33.9705Z"
+                        fill="white"
+                        stroke="#F88C28"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M17.4338 22.6471V13.5254L15.4412 14.6907V13.5111L17.4338 12.353H18.5294V22.6471H17.4338Z"
+                        fill="#F88C28"
+                        stroke="#F88C28"
+                        stroke-width="0.5"
+                      />
+                    </svg>
+                  </div>
+                  <div class="step-upside__header-text order__step-header-text">
+                    <h3>Введите ваш номер</h3>
+                    &nbsp;
+                    <p class="order__caption order__step-header-caption">
+                      — для привязки номеров к&nbsp;личному кабинету
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="order__caption order__step-content-caption order__sms-novalidated"
+                  id="sms"
+                >
+                  Мы отправим смс-код подтверждения. После подтверждения номера
+                  вы сможете оплатить номера и перейти в личный кабинет.
+                </div>
+                <div class="order__note order__sms-note">
+                  Вы ввели неверный код,попробуйте ещё раз
+                </div>
+                <div class="order__inputblock">
+                  <input
+                    type="tel"
+                    minlength="11"
+                    maxlength="11"
+                    class="input input_light-gray input_with-border order__input order__phone-input"
+                    placeholder="Введите ваш номер телефона"
+                  />
+                  <button
+                    type="submit"
+                    class="button button_blue order__submit-button"
+                  >
+                    Подтвердить номер
+                  </button>
+                </div>
+                <button
+                  class="button button_no-border filter__reset-button order__validation-reset"
+                >
+                  Код действителен ещё&nbsp;<span class="timer">
+                    <span class="minutes">03</span>&nbsp;<span class="seconds"
+                      >00</span
+                    ></span
+                  >`
+                </button>
+              </div>
+              <div class="order__step order__second-step">
+                <div
+                  class="step-upside__header order__step-header order__second-step-header"
+                >
+                  <div
+                    class="step-upside__header-image order__step-header-image"
+                  >
+                    <svg
+                      width="36"
+                      height="36"
+                      viewBox="0 0 36 36"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.9998 35.0769C27.4311 35.0769 35.0767 27.4313 35.0767 18C35.0767 8.56869 27.4311 0.923096 17.9998 0.923096C8.56845 0.923096 0.922852 8.56869 0.922852 18C0.922852 27.4313 8.56845 35.0769 17.9998 35.0769Z"
+                        fill="white"
+                        stroke="#F88C28"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M14.0928 23.9917L14.1011 22.8785L19.5094 17.9936C19.9746 17.5726 20.282 17.1739 20.4315 16.7973C20.5866 16.4151 20.6642 16.0163 20.6642 15.601C20.6642 15.108 20.5479 14.6622 20.3152 14.2634C20.0826 13.8646 19.7697 13.549 19.3765 13.3163C18.9832 13.0782 18.5429 12.9591 18.0555 12.9591C17.546 12.9591 17.0919 13.0809 16.6931 13.3246C16.2943 13.5683 15.9786 13.8896 15.746 14.2883C15.5189 14.6871 15.4082 15.1219 15.4137 15.5926H14.1675C14.1675 14.8671 14.3392 14.2163 14.6826 13.6403C15.026 13.0643 15.4912 12.613 16.0783 12.2862C16.6654 11.9539 17.33 11.7877 18.0722 11.7877C18.7977 11.7877 19.4485 11.9594 20.0245 12.3028C20.606 12.6406 21.0629 13.1003 21.3952 13.6819C21.7331 14.2579 21.902 14.9003 21.902 15.6093C21.902 16.1077 21.8411 16.548 21.7192 16.9302C21.6029 17.3068 21.4174 17.6585 21.1626 17.9853C20.9134 18.3065 20.5949 18.6388 20.2072 18.9822L15.4054 23.3188L15.2143 22.8203H21.902V23.9917H14.0928Z"
+                        fill="#F88C28"
+                        stroke="#F88C28"
+                        stroke-width="0.5"
+                      />
+                    </svg>
+                  </div>
+                  <div class="step-upside__header-text order__step-header-text">
+                    <h3>Оплатите заказ</h3>
+                  </div>
+                </div>
+                <div class="order__inputblock order__payblock">
+                  <div class="order__payblock-text">
+                    <div class="order__caption order__step-content-caption">
+                      Подключение —
+                      <span class="order__pay-once"></span>&nbsp;₽
+                    </div>
+                    <div class="order__caption order__step-content-caption">
+                      Абонентская плата —
+                      <span class="order__pay-per-month"></span>
+                    </div>
+                    <div
+                      class="order__caption order__step-content-caption order__summary-pay"
+                    >
+                      Итоговый платеж —
+                      <span class="order__summary"></span>&nbsp;₽
+                    </div>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="button button_blue order__submit-button order__pay-button order__pay-button_disabled"
+                  >
+                    Оплатить&nbsp;<span class="order__summary"></span>&nbsp;₽
+                  </button>
+                </div>
+                <div class="order__note order__pay-note">
+                  Сначала подтвердите номер
+                </div>
+                <a
+                  class="link link_blue order__link tablet"
+                  aria-label="Назад к выбору номеров"
+                  href="./numbers.html"
+                >
+                  <div class="order__arrow">&#8592;</div>
+                  <div class="">Назад к выбору номеров</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <nav>
+          <ul class="breadcrumbs numbers__breadcrumbs">
+            <li>
+              <a
+                class="link link_black breadcrumbs__link"
+                href="../"
+                aria-label="Главная"
+              >
+                Главная&nbsp;/</a
+              >
+            </li>
+            <li>
+              <a
+                class="link link_black breadcrumbs__link"
+                href="./numbers.html"
+                aria-label="Главная"
+              >
+                Выбрать номер&nbsp;/</a
+              >
+            </li>
+            <li>Ваш заказ</li>
+          </ul>
+        </nav>
+      </div>
+      <section class="order__section">
+        <div class="container">
+          <a
+            class="link link_blue order__link mobile"
+            aria-label="Назад к выбору номеров"
+            href="./numbers.html"
+          >
+            <div class="order__arrow">&#8592;</div>
+            <div class="">Назад к выбору номеров</div>
+          </a>
+          <div class="order__section-header">
+            <h1>Ваш заказ</h1>
+          </div>
+          <div class="order__content">
+            <div class="order__content-leftside">
+              <div class="card card_light-gray card_rectangle cart order__cart">
+                <div class="card_rounded-top cart__header">
+                  <span class="cart__header-choice">Выбрано</span>&nbsp;<b
+                    class="cart__quantity"
+                    >0</b
+                  >&nbsp;<span class="cart__quantity-number">номеров</span>
+                </div>
+                <div
+                  class="card cart__content-upside order__cart-content-upside"
+                >
+                  <div class="cart__content-header mobile">
+                    Вернитесь к выбору номеров. Нажимайте на подходящие номера,
+                    чтобы выбрать их для покупки.
+                  </div>
+                </div>
+
+                <div class="divider_cold-gray cart__divider"></div>
+                <div
+                  class="card cart__content-downside order__cart-content-downside"
+                >
+                  <div class="cart__summary order__cart-summary">
+                    <span class="cart__summary_once" data-value="0">0</span
+                    >&nbsp;₽ разово,
+                    <span class="cart__summary_per-month" data-value="0">
+                      0 ₽/мес
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order__content-rightside tablet-block">
+              <div class="order__step order__first-step">
+                <div class="step-upside__header order__step-header">
+                  <div
+                    class="step-upside__header-text order__step-header-text order__step-null-text"
+                  >
+                    <h3>Ни одного номера не выбрано</h3>
+                  </div>
+                </div>
+                <div class="order__caption order__step-content-caption">
+                  Вернитесь к выбору номеров. Нажимайте на подходящие номера,
+                  чтобы выбрать их для покупки.
+                </div>
+              </div>
+
+              <a
+                class="link link_blue order__link tablet"
+                aria-label="Назад к выбору номеров"
+                href="./numbers.html"
+              >
+                <div class="order__arrow">&#8592;</div>
+                Назад к выбору номеров
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="order__section">
+        <div class="container">
+          <a
+            class="link link_blue order__link mobile"
+            aria-label="Назад к выбору номеров"
+            href="./numbers.html"
+          >
+            <div class="order__arrow">&#8592;</div>
+            <div class="">Назад к выбору номеров</div>
+          </a>
+          <div class="order__section-header">
+            <h1>Ваш заказ</h1>
+          </div>
+          <div class="order__content">
+            <div class="order__content-leftside">
+              <div class="card card_light-gray card_rectangle cart order__cart">
+                <div class="card_rounded-top cart__header">
+                  <span class="cart__header-choice"></span>&nbsp;<b
+                    class="cart__quantity"
+                    >1</b
+                  >&nbsp;<span class="cart__quantity-number"> </span>
+                </div>
+                <div
+                  class="card cart__content-upside order__cart-content-upside"
+                >
+                  <div class="cart__content-header">
+                    Нажимайте на подходящие номера, чтобы выбрать их для
+                    покупки.
+                  </div>
+                  <div class="cart__content-header">Москва 499</div>
+                  <div class="card card_white cart__item">
+                    <div class="cart__item-number">
+                      <span class="choose__city-code">8 495</span> 243-45-61
+                    </div>
+                    <div class="cart__item-price">990₽ разово</div>
+                    <svg
+                      class="cart__item-icon"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12.5" cy="12.5" r="12" stroke="#9CA5AC" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.38201 8.6741C9.18674 8.47884 8.87016 8.47884 8.6749 8.6741C8.47964 8.86936 8.47964 9.18594 8.6749 9.38121L11.7941 12.5004L8.67489 15.6195C8.47963 15.8148 8.47963 16.1314 8.67489 16.3266C8.87016 16.5219 9.18674 16.5219 9.382 16.3266L12.5012 13.2075L15.62 16.3263C15.8153 16.5216 16.1319 16.5216 16.3271 16.3263C16.5224 16.1311 16.5224 15.8145 16.3271 15.6192L13.2083 12.5004L16.3271 9.38149C16.5224 9.18623 16.5224 8.86965 16.3271 8.67439C16.1319 8.47912 15.8153 8.47912 15.62 8.67439L12.5012 11.7933L9.38201 8.6741Z"
+                        fill="#9CA5AC"
+                      />
+                    </svg>
+                  </div>
+                  <div class="cart__content-header">Мобильные</div>
+                  <div class="card card_white cart__item">
+                    <div class="cart__item-number">
+                      <span class="choose__city-code">8 495</span> 243-45-61
+                    </div>
+                    <div class="cart__item-price">
+                      990₽ разово,
+                      <div class="cart__item-price_per-month">190₽/мес</div>
+                    </div>
+                    <svg
+                      class="cart__item-icon"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12.5" cy="12.5" r="12" stroke="#9CA5AC" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.38201 8.6741C9.18674 8.47884 8.87016 8.47884 8.6749 8.6741C8.47964 8.86936 8.47964 9.18594 8.6749 9.38121L11.7941 12.5004L8.67489 15.6195C8.47963 15.8148 8.47963 16.1314 8.67489 16.3266C8.87016 16.5219 9.18674 16.5219 9.382 16.3266L12.5012 13.2075L15.62 16.3263C15.8153 16.5216 16.1319 16.5216 16.3271 16.3263C16.5224 16.1311 16.5224 15.8145 16.3271 15.6192L13.2083 12.5004L16.3271 9.38149C16.5224 9.18623 16.5224 8.86965 16.3271 8.67439C16.1319 8.47912 15.8153 8.47912 15.62 8.67439L12.5012 11.7933L9.38201 8.6741Z"
+                        fill="#9CA5AC"
+                      />
+                    </svg>
+                  </div>
+                  <div class="cart__content-header">
+                    Москва 499+495 (комплект)
+                  </div>
+                  <div class="card card_white cart__item">
+                    <div class="cart__item-pair-numbers">
+                      <div class="cart__item-number">
+                        <span class="choose__city-code">8 495</span> 243-45-61
+                      </div>
+                      <div class="cart__item-number">
+                        <span class="choose__city-code">8 495</span> 243-45-61
+                      </div>
+                    </div>
+
+                    <div class="cart__item-price">990₽ разово</div>
+                    <svg
+                      class="cart__item-icon"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12.5" cy="12.5" r="12" stroke="#9CA5AC" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.38201 8.6741C9.18674 8.47884 8.87016 8.47884 8.6749 8.6741C8.47964 8.86936 8.47964 9.18594 8.6749 9.38121L11.7941 12.5004L8.67489 15.6195C8.47963 15.8148 8.47963 16.1314 8.67489 16.3266C8.87016 16.5219 9.18674 16.5219 9.382 16.3266L12.5012 13.2075L15.62 16.3263C15.8153 16.5216 16.1319 16.5216 16.3271 16.3263C16.5224 16.1311 16.5224 15.8145 16.3271 15.6192L13.2083 12.5004L16.3271 9.38149C16.5224 9.18623 16.5224 8.86965 16.3271 8.67439C16.1319 8.47912 15.8153 8.47912 15.62 8.67439L12.5012 11.7933L9.38201 8.6741Z"
+                        fill="#9CA5AC"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="card card_white cart__item">
+                    <div class="cart__item-pair-numbers">
+                      <div class="cart__item-single-number">
+                        <div class="cart__item-number">
+                          <span class="choose__city-code">8 495</span>
+                          243-45-61
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart__item-free">
+                      <div
+                        class="cart__item-price cart__item-price_line-trough"
+                      >
+                        990₽ разово
+                      </div>
+                      <div class="cart__item-price cart__item-price-free">
+                        Бесплатно
+                        <span
+                          class="tooltip"
+                          data-tooltip-width-laptop="252px"
+                          data-tooltip-width-tablet="252px"
+                          data-tooltip-width-smartphone="400px"
+                          data-tooltip="Вы можете бесплатно подключить к аккаунту один номер телефона. Только для номеров без абонплаты."
+                        >
+                        </span>
+                      </div>
+                    </div>
+                    <svg
+                      class="cart__item-icon"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12.5" cy="12.5" r="12" stroke="#9CA5AC" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.38201 8.6741C9.18674 8.47884 8.87016 8.47884 8.6749 8.6741C8.47964 8.86936 8.47964 9.18594 8.6749 9.38121L11.7941 12.5004L8.67489 15.6195C8.47963 15.8148 8.47963 16.1314 8.67489 16.3266C8.87016 16.5219 9.18674 16.5219 9.382 16.3266L12.5012 13.2075L15.62 16.3263C15.8153 16.5216 16.1319 16.5216 16.3271 16.3263C16.5224 16.1311 16.5224 15.8145 16.3271 15.6192L13.2083 12.5004L16.3271 9.38149C16.5224 9.18623 16.5224 8.86965 16.3271 8.67439C16.1319 8.47912 15.8153 8.47912 15.62 8.67439L12.5012 11.7933L9.38201 8.6741Z"
+                        fill="#9CA5AC"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="divider_cold-gray cart__divider"></div>
+                <div
+                  class="card cart__content-downside order__cart-content-downside"
+                >
+                  <div class="cart__summary order__cart-summary">
+                    <span class="cart__summary_once" data-value="0">0</span
+                    >&nbsp;₽ разово,
+                    <span class="cart__summary_per-month" data-value="0">
+                      400 ₽/мес
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order__content-rightside">
+              <div class="order__step order__validate">
+                <div
+                  class="step-upside__header order__step-header order__validate-header"
+                >
+                  <span class="order__validate-accaunt"> Ваш аккаунт:</span>
+                  <span class="order__phone-accaunt"> +7 (985) 204-98-10</span>
+                  <span class="tablet">—</span
+                  ><span class="order__username">Арсений Малямов</span>
+                </div>
+                <div
+                  class="order__caption order__step-content-caption order__validate-caption"
+                >
+                  После оплаты номера будут закреплены за этим аккаунтом. Все
+                  настройки можно будет выполнять в личном кабинете.
+                </div>
+                <button
+                  class="button button_no-border filter__reset-button order__change-accaunt"
+                >
+                  Сменить аккаунт
+                </button>
+              </div>
+              <div
+                class="order__step order__second-step order__second-step-validated"
+              >
+                <div
+                  class="step-upside__header order__step-header order__second-step-header"
+                >
+                  <div
+                    class="step-upside__header-text order__step-header-text order__validated-header-text"
+                  >
+                    <h3>Оплатите заказ</h3>
+                  </div>
+                </div>
+                <div class="order__inputblock order__payblock">
+                  <div class="order__payblock-text">
+                    <div class="order__caption order__step-content-caption">
+                      Подключение —
+                      <span class="order__pay-once"></span>&nbsp;₽
+                    </div>
+                    <div class="order__caption order__step-content-caption">
+                      Абонентская плата —
+                      <span class="order__pay-per-month"></span>
+                    </div>
+                    <div
+                      class="order__caption order__step-content-caption order__summary-pay"
+                    >
+                      Итоговый платеж —
+                      <span class="order__summary"></span>&nbsp;₽
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    class="button button_blue order__submit-button order__pay-button"
+                  >
+                    Оплатить&nbsp;<span class="order__summary"></span>&nbsp;₽
+                  </button>
+                </div>
+                <div class="divider divider_gray2 order__divider"></div>
+                <div class="order__caption order__free-caption">
+                  На вашем аккаунте уже использован бесплатный номер телефона.
+                  <br />
+                  Номер
+                  <b class="order__free-number">8 499 543-45-62</b>&nbsp;будет
+                  оплачен по стандартной стоимости 990 ₽
+                </div>
+                <a
+                  class="link link_blue order__link tablet"
+                  aria-label="Назад к выбору номеров"
+                  href="./numbers.html"
+                >
+                  <div class="order__arrow">&#8592;</div>
+                  <div class="">Назад к выбору номеров</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> footer }}
+  </body>
+</html>

@@ -52,6 +52,14 @@
   }
 }
 
+.mobile-block {
+  display: block;
+
+  @include tablet {
+    display: none;
+  }
+}
+
 .mobile {
   display: flex;
 
@@ -64,6 +72,24 @@
   display: none;
   @include tablet {
     display: flex;
+  }
+}
+
+.smartphone {
+  display: block;
+  @include mobile-s {
+    display: none;
+  }
+
+  @include smartphone {
+    display: none;
+  }
+}
+
+.tablet-block {
+  display: none;
+  @include tablet {
+    display: block;
   }
 }
 

@@ -1,0 +1,10 @@
+.divider {
+  &_cold-gray {
+    display: block;
+    border: $border-cold-gray;
+  }
+
+  &_gray2 {
+    border: $border-gray2;
+  }
+}

@@ -99,6 +99,12 @@ $family: 'Manrope';
   }
 }
 
+@mixin mobile-425 {
+  @media screen and (min-width: 375px) and (max-width: 424px) {
+    @content;
+  }
+}
+
 /**only for 1024**/
 
 @mixin tablet-1024 {
@@ -215,7 +221,7 @@ $family: 'Manrope';
     background-clip: content-box;
 
     &:hover {
-      background: $black;
+      background: $gray2;
       border-right: 4px solid transparent;
       border-left: 0px solid transparent;
       border-radius: $border-radius-xs;
