@@ -7,6 +7,12 @@ const autocomplete = document.querySelector('.autocomplete');
 const autocompleteInput = document.querySelector('.autocomplete__input');
 
 
+const errorReset = document.querySelector('.search__error-button')
+
+
+
+
+
 activators.forEach((activator) => {
   activator.addEventListener('click', (event) => {
     const tabId = event.currentTarget.dataset.tab;
@@ -24,11 +30,14 @@ activators.forEach((activator) => {
     if (tabId !== 'cities') {
       autocomplete.classList.add('autocomplete_disabled')
       autocompleteInput.value = ''
+
     }
     else {
       autocomplete.classList.remove('autocomplete_disabled');
       autocompleteInput.value = 'Москва (495)'
     }
+
+
 
     items.forEach((content) => {
       content.classList.remove('tabs__item_active');
@@ -41,3 +50,20 @@ activators.forEach((activator) => {
     });
   });
 });
+
+
+
+
+errorReset.addEventListener('click', () => {
+
+
+  activators.forEach((activator) => {
+
+    if (!activator.classList.contains('choose__button_cities')) {
+      activator.classList.remove('tabs__activator_active');
+    }
+    else activator.classList.add('tabs__activator_active');
+
+  });
+
+})

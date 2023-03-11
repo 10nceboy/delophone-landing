@@ -1,3 +1,9 @@
+
+
+import '~/js/components/cart';
+
+
+
 import { codeHTML, smsCodePlaceholder, timerEndsMessage, validationCodeMock, steps, smsSendMessage } from '../constants/orderC';
 import { formatNumber, formatPhoneNumber } from '../utils/common';
 import { resetTimer, startTimer } from '../utils/timer';

@@ -6,7 +6,7 @@ const items = document.querySelectorAll('.filters__item');
 const filterDropdownButton = document.querySelector('.filters__dropdown-button')
 const filterDropdown = document.querySelector('.filter__wrapper')
 const list = document.querySelector('.filter__dropdown-list')
-
+const errorReset = document.querySelector('.search__error-button')
 
 
 
@@ -75,3 +75,18 @@ clickOutside(filterDropdown, () => {
         arrow.classList.remove('filter__arrow_active')
 })
 
+
+
+
+errorReset.addEventListener('click', () => {
+
+
+    activators.forEach((activator) => {
+
+
+        activator.classList.remove('filters__activator_active');
+        filterItem.classList.add('filters__item_visible');
+
+    });
+
+})
