@@ -51,3 +51,105 @@
     }
   }
 }
+
+.mobile-hidden {
+  display: none !important;
+
+  @include laptop {
+    display: flex !important;
+  }
+}
+
+.mobile-only {
+  @include laptop {
+    display: none;
+  }
+}
+
+.background_gray {
+  background-color: $light-gray;
+
+  @include laptop {
+    height: 65px;
+  }
+}
+
+.no-select {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.tablet-only {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include laptop {
+    display: none;
+  }
+}
+
+.tablet-hidden {
+  @include tablet {
+    display: none;
+  }
+
+  @include laptop {
+    display: block;
+  }
+}
+
+.mobile-block {
+  display: block;
+  @include tablet {
+    display: none;
+  }
+}
+
+.mobile {
+  display: flex;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.tablet {
+  display: none;
+  @include tablet {
+    display: flex;
+  }
+}
+
+.smartphone {
+  display: block;
+  @include mobile-s {
+    display: none;
+  }
+
+  @include smartphone {
+    display: none;
+  }
+}
+
+.tablet-block {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+
+.mobile-375 {
+  display: none;
+
+  @include mobile-375 {
+    display: flex;
+  }
+}

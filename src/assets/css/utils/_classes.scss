@@ -53,15 +53,14 @@
 }
 
 .mobile-block {
-  display: block !important;
-
+  display: block;
   @include tablet {
     display: none;
   }
 }
 
 .mobile {
-  display: flex !important;
+  display: flex;
 
   @include tablet {
     display: none;
@@ -69,7 +68,7 @@
 }
 
 .tablet {
-  display: none !important;
+  display: none;
   @include tablet {
     display: flex;
   }
