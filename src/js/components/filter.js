@@ -1,5 +1,4 @@
 
-import { arrow } from "@floating-ui/dom";
 import { clickOutside } from "../utils/dom";
 
 const activators = document.querySelectorAll('.filters__activator');
@@ -71,5 +70,8 @@ activators.forEach((activator) => {
 
 
 clickOutside(filterDropdown, () => {
-    arrow.classList.remove('filter__arrow_active')
+    const arrow = document.querySelector('.filter__arrow');
+    if (arrow)
+        arrow.classList.remove('filter__arrow_active')
 })
+
