@@ -8,10 +8,6 @@ import '~/js/components/hero';
 import '~/js/components/city';
 import '~/js/components/menu';
 import '~/js/components/carousel';
-import '~/js/components/filter';
-import '~/js/components/search';
-import '~/js/components/cart';
-import '~/js/components/autocomplete';
-import '~/js/components/gift';
+import '~/js/components/modal';
 
 
