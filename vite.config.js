@@ -19,13 +19,13 @@ export default defineConfig({
   ],
   build: {
     rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-        price: resolve(__dirname, 'price/price.html'),
-        numbers: resolve(__dirname, 'numbers/numbers.html'),
-        order: resolve(__dirname, 'order/order.html')
+      input:
+        [resolve(__dirname, 'index.html'),
+        resolve(__dirname, 'price/price.html'),
+        resolve(__dirname, 'numbers/numbers.html'),
+        resolve(__dirname, 'order/order.html')]
 
-      }
+
     }
   }
 });
