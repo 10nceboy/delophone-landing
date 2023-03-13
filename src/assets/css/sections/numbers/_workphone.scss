@@ -64,12 +64,13 @@
   &__icon {
     margin-right: $spacer * 3;
     min-width: 60px;
-    min-height: 60px;
+    min-height: 34px;
     max-width: 60px;
     max-height: 60px;
 
     @include laptop {
       margin-right: $spacer * 5;
+      min-height: 60px;
     }
   }
 
