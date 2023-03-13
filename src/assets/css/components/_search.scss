@@ -37,6 +37,7 @@
       line-height: 155%;
       transition: opacity 0.4s;
       opacity: 1;
+      overflow: visible;
 
       @include smartphone {
         font-size: 18px;
@@ -242,5 +243,9 @@
     @include laptop {
       font-size: 18px;
     }
+  }
+
+  &__highlight {
+    color: $orange;
   }
 }

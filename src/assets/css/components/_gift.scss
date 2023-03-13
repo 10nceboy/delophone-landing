@@ -94,6 +94,11 @@
     @include smartphone {
       margin-right: $spacer * 3;
     }
+
+    @include tablet {
+      max-width: 40px;
+      max-height: 40px;
+    }
   }
 
   &__close-button {
@@ -102,6 +107,7 @@
     opacity: 0;
     align-self: center;
     transition: opacity 0.5s;
+    max-height: 25px;
 
     &:hover {
       svg {

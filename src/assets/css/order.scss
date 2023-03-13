@@ -348,6 +348,7 @@
 
     &_disabled {
       opacity: 50%;
+      pointer-events: none;
       &:hover {
         background-color: $blue;
       }
