@@ -77,7 +77,7 @@
     max-width: 132px;
     display: flex;
     @include font($normal, 14px, $blue);
-    margin: $spacer 0 $spacer * 5 0;
+    margin: $spacer 0 $spacer * 3 0;
 
     &:hover {
       color: $deep-blue;

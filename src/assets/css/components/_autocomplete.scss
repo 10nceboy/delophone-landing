@@ -35,6 +35,8 @@
 
   &__input {
     @include font($semi-bold, 15px, $black);
+    line-height: 155%;
+    padding: 0px;
 
     @include smartphone {
       font-size: 18px;

@@ -5,6 +5,7 @@ export const groups = {
   mobile: 'Мобильные',
   499: 'Москва (499)',
   495: 'Москва (495)',
+  49599: 'Москва 499+495 (комплект)',
   sochi: 'Сочи',
   spb: 'Санкт-Петербург',
   kras: 'Краснодар'
@@ -24,7 +25,7 @@ export const phones = [
   {
     id: '2',
     type: 'pair',
-    group: '499',
+    group: '49599',
     code1: '8 495',
     code2: '8 499',
     number: '2564561',
@@ -54,7 +55,7 @@ export const phones = [
   {
     id: '5',
     type: 'pair',
-    group: 'mobile',
+    group: '49599',
     code1: '8 495',
     code2: '8 499',
     number: '7377777',
@@ -75,7 +76,7 @@ export const phones = [
     id: '7',
     type: 'single',
     group: 'kras',
-    code1: '8 495',
+    code1: '8 861',
     code2: '',
     number: '2434567',
     price: '990₽ разово',

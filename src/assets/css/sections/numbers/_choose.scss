@@ -102,8 +102,15 @@
   }
 
   &__input {
+    padding: 0px;
+
     @include tablet {
       @include font($medium, 18px, $black);
+    }
+
+    &::placeholder {
+      overflow: visible;
+      line-height: 1.5em;
     }
   }
 
