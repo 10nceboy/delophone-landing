@@ -130,6 +130,9 @@
     padding: 0;
     font-size: 15px;
     text-align: left;
+    @include smartphone {
+      font-size: 17px;
+    }
   }
 
   &__dropdown-list {
@@ -153,5 +156,10 @@
 
   &__dropdown-list-item {
     margin-bottom: $spacer * 2;
+
+    @include smartphone {
+      font-size: 16px;
+      margin-bottom: $spacer * 3;
+    }
   }
 }
