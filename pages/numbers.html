@@ -137,17 +137,18 @@
                 class="card card_light-gray card_rectangle cart tablet-block"
               >
                 <div class="card_rounded-top cart__header">
-                  <span class="cart__header-choice"></span>&nbsp;<b
+                  <span class="cart__header-choice">Выбрано</span>&nbsp;<b
                     class="cart__quantity"
-                  ></b
-                  >&nbsp;<span class="cart__quantity-number"></span>
+                    >0</b
+                  >&nbsp;<span class="cart__quantity-number">номеров</span>
                 </div>
                 <div class="card cart__content-upside"></div>
+
                 <div class="divider_cold-gray cart__divider"></div>
                 <div class="card cart__content-downside">
                   <div class="cart__summary">
-                    <span class="cart__summary_once">3 960 ₽ разово,</span>
-                    <span class="cart__summary_per-month"> 400 ₽/мес </span>
+                    <span class="cart__summary_once">0 ₽ разово,</span>
+                    <span class="cart__summary_per-month">0 ₽/мес </span>
                   </div>
                   <a href="./order.html" class="link">
                     <button
@@ -533,11 +534,16 @@
                       </span>
                     </div>
                     <div class="choose__phones-cards">
-                      <div class="card card_white choose__phones-card">
+                      <div
+                        class="card card_white choose__phones-card"
+                        data-id="1"
+                      >
                         <div class="choose__phones-single-number no-select">
-                          <span class="choose__city-code">8 495</span> <i>2</i
-                          ><i>4</i><i>3</i><i>-</i><i>4</i><i>5</i><i>-</i
-                          ><i>6</i><i>1</i>
+                          <span class="choose__city-code">8 495</span
+                          ><span class="choose__phone-number">
+                            <i>255</i><i>4</i><i>3</i><i>-</i><i>4</i><i>5</i
+                            ><i>-</i><i>6</i><i>1</i></span
+                          >
                         </div>
                       </div>
                       <div class="card card_white choose__phones-card">
@@ -1205,7 +1211,7 @@
         </div>
         <div class="container">
           <button class="button cart__mobile-button mobile">
-            <a>
+            <a href="/order/order.html">
               <svg
                 width="30"
                 height="30"

@@ -45,11 +45,11 @@
     padding: $spacer * 2;
     @include font($medium, 15px, $black);
     line-height: 155%;
-    transition: $outline-transition;
+    transition: $btn-transition;
 
     &:hover {
-      outline: $border-gray;
-      transition: $outline-transition;
+      box-shadow: 0 0 0 1px $gray;
+      transition: box-shadow 0.1s;
     }
 
     @include smartphone {
@@ -313,7 +313,7 @@
     transition: $btn-transition;
 
     &:hover {
-      outline: 1px solid $blue;
+      box-shadow: 0 0 0 1px $blue;
     }
 
     &:active {

@@ -5,10 +5,11 @@ import {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    let searchInput = document.querySelector('.search__input');
+    const searchInput = document.querySelector('.search__input');
     const submitButton = document.querySelector('.search__submit-button');
     const search = document.querySelector('.search');
     const closeButton = document.querySelector('.search__close-button');
+    const cardNumbers = document.querySelectorAll('.choose__phone-number')
 
 
     const onSearchLeave = () => {
@@ -30,6 +31,39 @@ document.addEventListener('DOMContentLoaded', () => {
         transitionEnter(searchInput, 'search__input');
 
     }
+
+    const highlightData = []
+
+
+    searchInput.addEventListener('input', (event) => {
+
+        const searchTerm = event.target.value.trim();
+        let re = new RegExp(searchTerm, "gi");
+        cardNumbers.forEach(card => {
+            const numbers = card.querySelectorAll("i")
+
+            numbers.forEach(number => {
+                const text = number.textContent;
+                const matches = text.match(re);
+                if (matches) {
+                    const highlightedText = text.replace(re, '<i class="search__highlight">$&</i>');
+                    number.innerHTML = highlightedText;
+                } else {
+                    number.innerHTML = text;
+                }
+            });
+        });
+    });
+
+
+
+
+
+
+
+
+
+
 
 
     searchInput.addEventListener('keyup', (event) => {

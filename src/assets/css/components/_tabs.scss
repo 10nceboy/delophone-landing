@@ -20,7 +20,6 @@
     &_active {
       background: $blue;
       color: $white;
-      transition: $outline-transition;
 
       &:hover {
         background-color: $deep-blue;
@@ -28,10 +27,8 @@
 
       &.choose__button {
         background-color: $gray;
-        outline: 1px solid $gray;
+        box-shadow: 0 0 0 1px $gray;
         color: $white;
-
-        transition: $outline-transition;
       }
       .choose__phones-quantity {
         color: $dim-gray;

@@ -21,9 +21,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        price: resolve(__dirname, 'price/price.html'),
-        numbers: resolve(__dirname, 'numbers/numbers.html'),
-        order: resolve(__dirname, 'order/order.html')
+        price: resolve(__dirname, 'pages/price.html'),
+        numbers: resolve(__dirname, 'pages/numbers.html'),
+        order: resolve(__dirname, 'pages/order.html')
 
       }
     }

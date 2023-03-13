@@ -284,6 +284,7 @@
       }
       circle {
         fill: $gray;
+        stroke: $gray;
       }
     }
 
@@ -404,5 +405,10 @@
     right: 10px;
     width: 15px;
     height: 15px;
+    display: none;
+
+    &_active {
+      display: flex;
+    }
   }
 }
