@@ -275,12 +275,13 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, 58px);
     grid-gap: $spacer * 2;
-    max-height: 330px;
-    min-height: 330px;
+    max-height: 335px;
+    min-height: 335px;
     overflow: hidden;
     margin-bottom: $spacer * 6;
     padding-top: $spacer * 2;
     padding-left: 1px;
+    padding-right: 1px;
 
     @include tablet {
       grid-template-columns: repeat(3, 1fr);
