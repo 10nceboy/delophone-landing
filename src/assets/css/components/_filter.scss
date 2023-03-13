@@ -103,6 +103,7 @@
     display: none;
     opacity: 0;
     transition: opacity 0.15s ease-in;
+    max-height: 390px;
 
     &_visible {
       display: block;
@@ -130,6 +131,10 @@
     padding: 0;
     font-size: 15px;
     text-align: left;
+
+    @include smartphone {
+      font-size: 17px;
+    }
   }
 
   &__dropdown-list {
@@ -143,6 +148,7 @@
     width: 100%;
     border-radius: $border-radius-xs;
     box-sizing: border-box;
+
     li {
       &:hover,
       &:active {
@@ -153,5 +159,10 @@
 
   &__dropdown-list-item {
     margin-bottom: $spacer * 2;
+
+    @include smartphone {
+      margin-bottom: $spacer * 3;
+      font-size: 16px;
+    }
   }
 }

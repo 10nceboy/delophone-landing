@@ -12,6 +12,7 @@ export const groups = {
 };
 
 export const phones = [
+
   {
     id: '1',
     type: 'single',
