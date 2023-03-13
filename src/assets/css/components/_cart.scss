@@ -72,9 +72,14 @@
     @include custom-scrollbar;
     overflow-y: auto;
 
+    @include mobile-l {
+      min-height: 410px;
+      max-height: 410px;
+    }
+
     @include mobile-s {
-      min-height: 484px;
-      max-height: 484px;
+      min-height: 424px;
+      max-height: 424px;
     }
 
     @include smartphone {
