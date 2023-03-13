@@ -1,4 +1,4 @@
-import{g as L,h as y}from"./menu-d5da2a40.js";const m=e=>{localStorage.setItem("cartArray",JSON.stringify(e))},A=()=>JSON.parse(localStorage.getItem("cartArray"))||[],w={mobile:"Мобильные",499:"Москва (499)",495:"Москва (495)",49599:"Москва 499+495 (комплект)",sochi:"Сочи",spb:"Санкт-Петербург",kras:"Краснодар"},f=[{id:"1",type:"single",group:"499",code1:"8 495",code2:"",number:"2434561",price:"990₽ разово",abonprice:"190 ₽/мес"},{id:"2",type:"pair",group:"49599",code1:"8 495",code2:"8 499",number:"2564561",price:"1 990₽ разово",abonprice:""},{id:"3",type:"vip",group:"495",code1:"8 495",code2:"",number:"7277777",price:"450 000 ₽",abonprice:""},{id:"4",type:"vip",group:"sochi",code1:"8 495",code2:"",number:"7777777",price:"450 000 ₽",abonprice:""},{id:"5",type:"pair",group:"49599",code1:"8 495",code2:"8 499",number:"7377777",price:"150 000 ₽",abonprice:""},{id:"6",type:"single",group:"mobile",code1:"8 495",code2:"",number:"2934566",price:"990₽ разово",abonprice:"190 ₽/мес"},{id:"7",type:"single",group:"kras",code1:"8 861",code2:"",number:"2434567",price:"990₽ разово",abonprice:"190 ₽/мес"},{id:"8",type:"single",group:"499",code1:"8 495",code2:"",number:"2434568",price:"990₽ разово",abonprice:"190 ₽/мес"},{id:"9",type:"single",group:"499",code1:"8 495",code2:"",number:"2434569",price:"990₽ разово",abonprice:"190 ₽/мес"}],n=document.querySelector(".cart__content-upside"),_=document.querySelector(".choose__phones-cards"),q=document.querySelector(".cart__summary"),o=document.querySelector(".cart__button-buy"),S=document.querySelector(".cart__header"),a=document.querySelector(".cart__mobile-quantity");let r=[];const h=()=>`
+import{g as C,h as $}from"./menu-d5da2a40.js";const m=e=>{localStorage.setItem("cartArray",JSON.stringify(e))},A=()=>JSON.parse(localStorage.getItem("cartArray"))||[],w={mobile:"Мобильные",499:"Москва (499)",495:"Москва (495)",49599:"Москва 499+495 (комплект)",sochi:"Сочи",spb:"Санкт-Петербург",kras:"Краснодар"},f=[{id:"1",type:"single",group:"499",code1:"8 495",code2:"",number:"2434561",price:"990₽ разово",abonprice:"190 ₽/мес"},{id:"2",type:"pair",group:"49599",code1:"8 495",code2:"8 499",number:"2564561",price:"1 990₽ разово",abonprice:""},{id:"3",type:"vip",group:"495",code1:"8 495",code2:"",number:"7277777",price:"450 000 ₽",abonprice:""},{id:"4",type:"vip",group:"sochi",code1:"8 495",code2:"",number:"7777777",price:"450 000 ₽",abonprice:""},{id:"5",type:"pair",group:"49599",code1:"8 495",code2:"8 499",number:"7377777",price:"150 000 ₽",abonprice:""},{id:"6",type:"single",group:"mobile",code1:"8 495",code2:"",number:"2934566",price:"990₽ разово",abonprice:"190 ₽/мес"},{id:"7",type:"single",group:"kras",code1:"8 861",code2:"",number:"2434567",price:"990₽ разово",abonprice:"190 ₽/мес"},{id:"8",type:"single",group:"499",code1:"8 495",code2:"",number:"2434568",price:"990₽ разово",abonprice:"190 ₽/мес"},{id:"9",type:"single",group:"499",code1:"8 495",code2:"",number:"2434569",price:"990₽ разово",abonprice:"190 ₽/мес"}],n=document.querySelector(".cart__content-upside"),_=document.querySelector(".choose__phones-cards"),q=document.querySelector(".cart__summary"),o=document.querySelector(".cart__button-buy"),S=document.querySelector(".cart__header"),a=document.querySelector(".cart__mobile-quantity");let r=[];const y=()=>`
     <svg
     class="cart__item-icon"
     width="25"
@@ -54,15 +54,15 @@ import{g as L,h as y}from"./menu-d5da2a40.js";const m=e=>{localStorage.setItem("
               </span>
             <div class="choose__phones-vip-price" data-price=${e.price}>${e.price}</div>
         </div>
-        </div>`;break}})},x=e=>{if(r.some(t=>t.id===e))return!1;{const t=f.find(s=>s.id===e);return r.push(t),t}},I=e=>{const t=r.findIndex(i=>i.id===e);if(t<0)return;const s=n.querySelectorAll(".cart__item")[t];s.classList.add("cart__item_deleted"),s.addEventListener("animationend",()=>{r.splice(t,1),b(),m(r)},{once:!0})},T=e=>`<div class="cart__content-header"">${w[e]??""}</div>`;function g(e){var i,c;const{target:t}=e,s=(c=(i=t.parentElement)==null?void 0:i.parentElement)==null?void 0:c.dataset.cartItemId;s&&I(s)}const b=()=>{r=L(r,"group");let e=null,t="";r.length==0&&(t=` <div class="cart__content-header">
+        </div>`;break}})},x=e=>{if(r.some(t=>t.id===e))return!1;{const t=f.find(s=>s.id===e);return r.push(t),t}},I=e=>{const t=r.findIndex(i=>i.id===e);if(t<0)return;const s=n.querySelectorAll(".cart__item")[t];s.classList.add("cart__item_deleted"),s.addEventListener("animationend",()=>{r.splice(t,1),b(),m(r)},{once:!0})},T=e=>`<div class="cart__content-header"">${w[e]??""}</div>`;function g(e){var i,c;const{target:t}=e,s=(c=(i=t.parentElement)==null?void 0:i.parentElement)==null?void 0:c.dataset.cartItemId;s&&I(s)}const b=()=>{r=C(r,"group");let e=null,t="";r.length==0&&(t=` <div class="cart__content-header">
 Нажимайте на подходящие номера, чтобы выбрать их для
 покупки.
-</div>`);let s=n.querySelectorAll(".cart__item-icon");s.forEach(i=>i.removeEventListener("click",g)),r.forEach(({id:i,number:c,code1:d,code2:l,group:p,abonprice:v,price:$,type:C})=>{e!==p&&(e=p,t+=T(p)),C!=="pair"?t+=`<div class="card card_white cart__item" data-cart-item-id=${i}>
+</div>`);let s=n.querySelectorAll(".cart__item-icon");s.forEach(i=>i.removeEventListener("click",g)),r.forEach(({id:i,number:c,code1:d,code2:l,group:p,abonprice:v,price:h,type:L})=>{e!==p&&(e=p,t+=T(p)),L!=="pair"?t+=`<div class="card card_white cart__item" data-cart-item-id=${i}>
           <div class="cart__item-number">
           <span class="choose__city-code">${d}</span> ${c.substring(0,3)}-${c.substring(3,5)}-${c.substring(5,7)}
  </div>
- <div class="cart__item-price">${$}<div class="cart__item-price_per-month">${v}</div>
- </div>${h()}</div>`:t+=`<div class="card card_white cart__item" data-cart-item-id=${i}>
+ <div class="cart__item-price">${h}<div class="cart__item-price_per-month">${v}</div>
+ </div>${y()}</div>`:t+=`<div class="card card_white cart__item" data-cart-item-id=${i}>
       <div class="cart__item-pair-numbers">
         <div class="cart__item-number">
         <span class="choose__city-code">${d}</span> ${c.substring(0,3)}-${c.substring(3,5)}-${c.substring(5,7)}
@@ -71,16 +71,16 @@ import{g as L,h as y}from"./menu-d5da2a40.js";const m=e=>{localStorage.setItem("
         <span class="choose__city-code">${l}</span> ${c.substring(0,3)}-${c.substring(3,5)}-${c.substring(5,7)}
         </div>
       </div>
-      <div class="cart__item-price">${$}</div>
+      <div class="cart__item-price">${h}</div>
       <div class="cart__item-price_per-month">${v}</div>
-      ${h()}
+      ${y()}
       </div>`}),n.innerHTML=t,s=n.querySelectorAll(".cart__item-icon"),s.forEach(i=>{i.addEventListener("click",g)}),H(),k()},k=()=>{let e=0,t=0;r.forEach(s=>{e+=parseInt(s.price.split(" ").join(""),10),t+=parseInt(s.abonprice.split(" ").join(""),10)||0}),q.innerHTML=`
   <div class="cart__summary">
     <span class="cart__summary_once">${e} ₽,</span>
     <span class="cart__summary_per-month"> ${t} ₽/мес </span>
   </div>`},H=()=>{let e=r.length;S.innerHTML=`
-  <span class="cart__header-choice">Выбран${y(e,["","о","о"])}</span>&nbsp;<b
+  <span class="cart__header-choice">Выбран${$(e,["","о","о"])}</span>&nbsp;<b
     class="cart__quantity"
   >${e}</b
-  >&nbsp;<span class="cart__quantity-number">номер${y(e,["","а","ов"])}</span>
-`,(a||o)&&(e==0?(o.disabled=!0,a.classList.remove("cart__mobile-quantity_active")):e==1&&(o.textContent="Купите номер телефона"),e>0?(o.disabled=!1,a.classList.add("cart__mobile-quantity_active"),a.textContent=e):a.classList.remove("cart__mobile-quantity_active"))},M=()=>{location.pathname.includes("order")?r=A():(m([]),E(),document.querySelectorAll(".choose__phones-card").forEach(t=>{t.addEventListener("click",()=>{const s=t.dataset.id;if(!x(s))return;b();const c=r.findIndex(l=>l.id===s);n.querySelectorAll(".cart__item")[c].classList.add("cart__item_new"),m(r)})})),b()};M();
+  >&nbsp;<span class="cart__quantity-number">номер${$(e,["","а","ов"])}</span>
+`,(a||o)&&(e==0?(o.disabled=!0,a.classList.remove("cart__mobile-quantity_active")):e==1&&(o.textContent="Купите номер телефона"),e>0?(o.disabled=!1,a.classList.add("cart__mobile-quantity_active"),a.textContent=e):a.classList.remove("cart__mobile-quantity_active"))},M=()=>{location.pathname.includes("order")?r=A():(m([]),E(),document.querySelectorAll(".choose__phones-card").forEach(t=>{t.addEventListener("click",()=>{const s=t.dataset.id;if(t.classList.add("choose__phones-card_disabled"),!x(s))return;b();const c=r.findIndex(l=>l.id===s);n.querySelectorAll(".cart__item")[c].classList.add("cart__item_new"),m(r)})})),b()};M();
