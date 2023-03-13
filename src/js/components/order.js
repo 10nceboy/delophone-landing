@@ -90,6 +90,10 @@ submitButton.addEventListener('click', () => {
     valid = true;
     phoneInput.classList.remove('order__sms-error');
     smsNote.classList.remove('order__pay-note_active');
+    resetTimer();
+    document
+      .querySelector('.order__pay-button')
+      .classList.remove('order__pay-button_disabled');
   } else if (step == steps.sendSms && phoneInput.value.trim() !== '') {
     phoneInput.classList.add('order__sms-error');
     smsNote.classList.add('order__pay-note_active');

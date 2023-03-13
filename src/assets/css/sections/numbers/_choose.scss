@@ -339,6 +339,17 @@
       }
     }
 
+    &_disabled {
+      .tooltip {
+        svg {
+          fill: $orange;
+
+          path {
+            fill: $white;
+          }
+        }
+      }
+    }
     @include smartphone {
       font-size: 18px;
     }
