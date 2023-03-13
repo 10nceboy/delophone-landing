@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const orderPayAbon = document.querySelector('.order__pay-per-month');
   const orderSum = document.querySelector('.order__summary');
   const buttonSum = document.querySelector('.order__summary-button');
-  const deleteIcons = document.querySelectorAll('.cart__item-icon')
+
 
 
 
