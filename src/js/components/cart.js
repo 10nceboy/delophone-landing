@@ -304,7 +304,6 @@ const init = () => {
     cards.forEach((card) => {
       card.addEventListener('click', () => {
         const id = card.dataset.id;
-        card.classList.add('choose__phones-card_disabled')
         const isPresent = addToCart(id);
         if (!isPresent) {
           return;
