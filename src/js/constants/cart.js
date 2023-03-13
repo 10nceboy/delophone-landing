@@ -101,5 +101,15 @@ export const phones = [
         number: '2434561',
         price: "990₽ разово",
         abonprice: "190 ₽/мес",
+    },
+    {
+        id: "11",
+        type: "vip",
+        filter: "city",
+        code1: '8 495',
+        code2: '',
+        number: '5054555',
+        price: "4500 ₽ разово",
+        abonprice: "",
     }
 ];

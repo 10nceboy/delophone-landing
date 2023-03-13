@@ -94,6 +94,7 @@
   &__content-downside {
     padding: $spacer * 3;
     text-align: center;
+    @include flex-row;
 
     @include mobile-s {
       min-height: 71px;
@@ -106,6 +107,7 @@
 
     @include tablet {
       padding: $spacer * 4 $spacer * 4 $spacer * 5 $spacer * 4;
+      display: block;
     }
   }
 
@@ -147,6 +149,7 @@
   &__summary {
     @include font($medium, 16px, $black);
     text-align: center;
+    flex-grow: 1;
 
     @include tablet {
       margin-bottom: $spacer * 3;
