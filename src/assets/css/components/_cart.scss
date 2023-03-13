@@ -205,6 +205,16 @@
     min-height: 60px;
     max-height: 60px;
 
+    &_new {
+      animation: new 0.2s ease-in;
+    }
+
+    &_deleted {
+      pointer-events: none;
+      user-select: none;
+      animation: deleted 0.2s ease-in;
+    }
+
     @include mobile-l {
       font-size: 17px;
     }
@@ -409,14 +419,32 @@
     position: absolute;
     background-color: $blue;
     border-radius: 50%;
-    top: 10px;
-    right: 10px;
-    width: 15px;
-    height: 15px;
+    top: $spacer * 2;
+    right: $spacer * 2;
+    width: $spacer * 3;
+    height: $spacer * 3;
     display: none;
 
     &_active {
       display: flex;
     }
+  }
+}
+
+@keyframes new {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes deleted {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
   }
 }
