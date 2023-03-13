@@ -3,9 +3,9 @@
   "env": {
     "browser": true,
     "node": false,
-    "es6": true,
-    "sourceType": "module"
+    "es2022": true
   },
   "extends": ["prettier", "plugin:prettier/recommended"],
-  "plugins": []
+  "plugins": [],
+  "parserOptions": { "sourceType": "module" }
 }

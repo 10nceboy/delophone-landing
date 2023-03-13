@@ -9,18 +9,7 @@ const summary = document.querySelector('.cart__summary');
 const buyButton = document.querySelector('.cart__button-buy');
 const cartHeader = document.querySelector('.cart__header');
 const mobileQuantity = document.querySelector('.cart__mobile-quantity');
-
-
-
-
-
-
 let cartArray = [];
-
-
-
-
-
 
 /**
  * Temporary mock for checking condition of getting cart from locaStorage for testing
@@ -57,21 +46,20 @@ const renderPhones = () => {
   phones.forEach((phone) => {
     switch (phone.type) {
       case phoneTypes.single:
-        phoneCards.innerHTML += `<div class="card card_white choose__phones-card" data-id="${phone.id
-          }">
+        phoneCards.innerHTML += `<div class="card card_white choose__phones-card" data-id="${
+          phone.id
+        }">
       <div class="choose__phones-single-number no-select">
         <span class="choose__city-code" data-city-code="${phone.code1}"
-          >${phone.code1
-          }</span> <span class="choose__phone-number no-select" data-number="${phone.number
-          }"
-        >&nbsp;<i>${phone.number.charAt(0)}</i><i>${phone.number.charAt(
-            1
-          )}</i><i>${phone.number.charAt(2)}</i><i>-</i><i>${phone.number.charAt(
-            3
-          )}</i><i>${phone.number.charAt(4)}</i
-        ><i>-</i><i>${phone.number.charAt(5)}</i><i>${phone.number.charAt(
-            6
-          )}</i></span>
+          >${
+            phone.code1
+          }</span> <span class="choose__phone-number no-select" data-number="${
+          phone.number
+        }"
+        >&nbsp;<i>${phone.number.substring(0, 3)}-${phone.number.substring(
+          3,
+          5
+        )}-${phone.number.substring(5, 7)}</i></span>
       </div >
     </div> `;
         break;
@@ -81,12 +69,17 @@ const renderPhones = () => {
         <div class="card card_white choose__phones-card" data-id="${phone.id}">
           <div class="choose__phones-pair-numbers">
             <span class="no-select">
-                <span class="choose__city-code no-select" data-city-code="${phone.code1
-          }"
+                <span class="choose__city-code no-select" data-city-code="${
+                  phone.code1
+                }"
                   >${phone.code1}</span
                 >
                 <span class="choose__phone-number">
-                  <i>${phone.number}</i>
+                  <i>${phone.number.substring(0, 3)}-${phone.number.substring(
+          3,
+          5
+        )}-${phone.number.substring(5, 7)}
+                  </i>
                 </span>
               </span>
             <div class="choose__phones-pair-complect">
@@ -98,13 +91,13 @@ const renderPhones = () => {
                 data-tooltip-width-smartphone="252px"
                 data-tooltip="Сразу два номера в комплекте: 
             8 <i>${phone.code1.substring(2, 5)}</i> ${phone.number.substring(
-            0,
-            3
-          )}-${phone.number.substring(3, 5)}-${phone.number.substring(5, 7)}
+          0,
+          3
+        )}-${phone.number.substring(3, 5)}-${phone.number.substring(5, 7)}
             8 <i>${phone.code2.substring(2, 5)}</i> ${phone.number.substring(
-            0,
-            3
-          )}-${phone.number.substring(3, 5)}-${phone.number.substring(5, 7)}
+          0,
+          3
+        )}-${phone.number.substring(3, 5)}-${phone.number.substring(5, 7)}
             Номера продаются только вместе"
               ></span>
             </div>
@@ -114,12 +107,21 @@ const renderPhones = () => {
         break;
 
       case phoneTypes.vip:
-        phoneCards.innerHTML += `<div class="card card_white choose__phones-card" data-id ="${phone.id}" >
+        phoneCards.innerHTML += `<div class="card card_white choose__phones-card" data-id ="${
+          phone.id
+        }" >
           <div class="choose__phones-vip-number no-select">
-            <span class="choose__city-code">${phone.code1}</span>  <span class="choose__phone-number ">
-              <i>${phone.number}</i>
+            <span class="choose__city-code">${
+              phone.code1
+            }</span>  <span class="choose__phone-number ">
+              <i>${phone.number.substring(0, 3)}-${phone.number.substring(
+          3,
+          5
+        )}-${phone.number.substring(5, 7)}</i>
               </span>
-            <div class="choose__phones-vip-price" data-price=${phone.price}>${phone.price}</div>
+            <div class="choose__phones-vip-price" data-price=${phone.price}>${
+          phone.price
+        }</div>
         </div>
         </div>`;
         break;
@@ -165,28 +167,27 @@ const renderCartSubheader = (group) => {
 function deleteCartItem(event) {
   const { target } = event;
   const id = target.parentElement?.parentElement?.dataset.cartItemId;
+  document
+    .querySelector(`.choose__phones-card_disabled[data-id="${id}"]`)
+    ?.classList.remove('choose__phones-card_disabled');
   if (id) {
     removeFromCart(id);
   }
 }
 
 const renderCartArray = () => {
-
   cartArray = sortByField(cartArray, 'group');
   let prevItemGroup = null;
-  let newCartHTML = ``
+  let newCartHTML = ``;
 
   if (cartArray.length == 0) {
     newCartHTML = ` <div class="cart__content-header">
 Нажимайте на подходящие номера, чтобы выбрать их для
 покупки.
-</div>`
-
+</div>`;
   }
 
-
   let closeIcons = cartEl.querySelectorAll('.cart__item-icon');
-
   closeIcons.forEach((closeIcon) =>
     closeIcon.removeEventListener('click', deleteCartItem)
   );
@@ -198,7 +199,6 @@ const renderCartArray = () => {
         prevItemGroup = group;
         newCartHTML += renderCartSubheader(group);
       }
-
 
       if (type !== 'pair') {
         newCartHTML += `<div class="card card_white cart__item" data-cart-item-id=${id}>
@@ -279,10 +279,12 @@ const renderCartHeader = () => {
 `;
 
   if (mobileQuantity || buyButton) {
-
     if (quantity == 0) {
       buyButton.disabled = true;
       mobileQuantity.classList.remove('cart__mobile-quantity_active');
+      document
+        .querySelector('.cart__mobile-button')
+        ?.classList.remove('cart__mobile-button_active');
     } else if (quantity == 1) {
       buyButton.textContent = 'Купите номер телефона';
     }
@@ -290,10 +292,12 @@ const renderCartHeader = () => {
       buyButton.disabled = false;
       mobileQuantity.classList.add('cart__mobile-quantity_active');
       mobileQuantity.textContent = quantity;
-    }
-    else mobileQuantity.classList.remove('cart__mobile-quantity_active');
-  };
-}
+      document
+        .querySelector('.cart__mobile-button')
+        ?.classList.add('cart__mobile-button_active');
+    } else mobileQuantity.classList.remove('cart__mobile-quantity_active');
+  }
+};
 const init = () => {
   if (location.pathname.includes('order')) {
     cartArray = getCart();
@@ -308,7 +312,9 @@ const init = () => {
         if (!isPresent) {
           return;
         }
+        card.classList.add('choose__phones-card_disabled');
         renderCartArray();
+
         const index = cartArray.findIndex((item) => item.id === id);
         const newEl = cartEl.querySelectorAll('.cart__item')[index];
         newEl.classList.add('cart__item_new');
@@ -318,8 +324,5 @@ const init = () => {
   }
   renderCartArray();
 };
-
-
-
 
 init();

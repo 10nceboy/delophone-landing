@@ -10,41 +10,21 @@ import { formatNumber, formatPhoneNumber } from '../utils/common';
 import { resetTimer, startTimer } from '../utils/timer';
 import IMask from 'imask';
 
-
 document.addEventListener('DOMContentLoaded', () => {
-
   const cartSum = document.querySelector('.cart__summary_once');
   const cartSumAbon = document.querySelector('.cart__summary_per-month');
   const orderPay = document.querySelector('.order__pay-once');
   const orderPayAbon = document.querySelector('.order__pay-per-month');
   const orderSum = document.querySelector('.order__summary');
   const buttonSum = document.querySelector('.order__summary-button');
-
-
-
-
-
   orderPay.textContent = cartSum.textContent;
   orderPayAbon.textContent = cartSumAbon.textContent;
-  let payed = parseInt(orderPay.textContent)
-  let payedAbons = parseInt(orderPayAbon.textContent)
-  buttonSum.textContent = orderSum.textContent = formatNumber(payed + payedAbons);
-
-
-
-
-
-
+  let payed = parseInt(orderPay.textContent);
+  let payedAbons = parseInt(orderPayAbon.textContent);
+  buttonSum.textContent = orderSum.textContent = formatNumber(
+    payed + payedAbons
+  );
 });
-
-
-
-
-
-
-
-
-
 
 let valid = false;
 
@@ -63,7 +43,6 @@ const renderTimer = (timerTime) => {
     validationReset.classList.add('order__validation-reset_active');
   }
 };
-
 
 const phoneInput = document.querySelector('.order__phone-input');
 const submitButton = document.querySelector('.order__submit-button');

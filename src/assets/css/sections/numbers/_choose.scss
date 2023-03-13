@@ -71,6 +71,9 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     margin-right: 1px;
+    @include laptop {
+      max-width: 132px;
+    }
   }
 
   &__button_mobiles {
@@ -88,6 +91,7 @@
     @include laptop {
       flex-shrink: 1;
       flex-grow: 0;
+      max-width: 92px;
     }
   }
 
