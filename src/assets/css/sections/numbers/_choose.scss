@@ -328,7 +328,8 @@
       box-shadow: 0 0 0 1px $blue;
     }
 
-    &:active {
+    &:active,
+    &_disabled {
       background-color: $blue;
       color: $white;
       .choose__city-code,
@@ -363,14 +364,6 @@
     &_active {
       background-color: $blue;
       color: $white;
-    }
-
-    &_disabled {
-      opacity: 70%;
-      background-color: transparent;
-      pointer-events: none;
-      color: $blue;
-      box-shadow: 0 0 0 1px $blue;
     }
   }
 
