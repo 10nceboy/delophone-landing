@@ -1,5 +1,5 @@
 import { getCart, saveCart } from '../utils/cart';
-import { declination, sortByField } from '../utils/common';
+import { declination, formatNumber, sortByField } from '../utils/common';
 
 import { groups, phones } from '../constants/cart';
 
@@ -181,10 +181,17 @@ const renderCartArray = () => {
   let newCartHTML = ``;
 
   if (cartArray.length == 0) {
-    newCartHTML = ` <div class="cart__content-header">
+    if (location.pathname.includes('order')) {
+      newCartHTML = ` <div class="cart__content-header">
+Вернитесь к выбору номеров. <br> Нажимайте на подходящие номера, чтобы выбрать их для
+покупки.
+</div>`;
+    } else {
+      newCartHTML = ` <div class="cart__content-header">
 Нажимайте на подходящие номера, чтобы выбрать их для
 покупки.
 </div>`;
+    }
   }
 
   let closeIcons = cartEl.querySelectorAll('.cart__item-icon');
@@ -259,6 +266,19 @@ const renderSummary = () => {
     <span class="cart__summary_once">${totalPrice} ₽,</span>
     <span class="cart__summary_per-month"> ${totalAbonPrice} ₽/мес </span>
   </div>`;
+
+  const orderPay = document.querySelector('.order__pay-once');
+  if (orderPay) {
+    const orderPayAbon = document.querySelector('.order__pay-per-month');
+    const orderSum = document.querySelector('.order__summary');
+    orderPay.textContent = totalPrice;
+    orderPayAbon.textContent = totalAbonPrice;
+    let payed = parseInt(orderPay.textContent);
+    let payedAbons = parseInt(orderPayAbon.textContent);
+    orderSum.textContent = formatNumber(payed + payedAbons);
+    document.querySelector('.order__summary-button').textContent =
+      document.querySelector('.order__summary').textContent;
+  }
 };
 
 const renderCartHeader = () => {
