@@ -302,7 +302,7 @@ const init = () => {
   if (location.pathname.includes('order')) {
     cartArray = getCart();
   } else {
-    saveCart([]);
+    cartArray = getCart();
     renderPhones();
     const cards = document.querySelectorAll('.choose__phones-card');
     cards.forEach((card) => {
@@ -316,7 +316,6 @@ const init = () => {
         }
         card.classList.add('choose__phones-card_disabled');
         renderCartArray();
-
         const index = cartArray.findIndex((item) => item.id === id);
         const newEl = cartEl.querySelectorAll('.cart__item')[index];
         newEl.classList.add('cart__item_new');

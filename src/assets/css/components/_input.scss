@@ -3,6 +3,10 @@
   border: 0px;
   outline: none;
 
+  &::placeholder {
+    overflow: visible;
+  }
+
   &_light-gray {
     background-color: $light-gray;
     &::placeholder {

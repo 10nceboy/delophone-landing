@@ -114,7 +114,8 @@
 
     &::placeholder {
       overflow: visible;
-      line-height: 1.5em;
+      line-height: 155%;
+      padding: 0px;
     }
   }
 
@@ -329,6 +330,7 @@
     }
 
     &:active,
+    &:focus,
     &_disabled {
       background-color: $blue;
       color: $white;

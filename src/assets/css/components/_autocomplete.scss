@@ -38,6 +38,10 @@
     line-height: 155%;
     padding: 0px;
 
+    &::placeholder {
+      overflow: visible;
+    }
+
     @include smartphone {
       font-size: 18px;
     }
