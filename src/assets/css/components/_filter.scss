@@ -1,12 +1,12 @@
 .filter {
   &__reset {
     @include flex-row;
-    padding: 0 0 $spacer * 5 0;
     justify-content: center;
     box-sizing: border-box;
 
     @include tablet {
       max-height: 45px;
+      padding: 0 0 $spacer * 5 0;
     }
   }
 
