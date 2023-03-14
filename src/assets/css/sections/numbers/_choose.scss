@@ -63,6 +63,8 @@
 
     @include laptop {
       font-size: 18px;
+      padding: $spacer * 3 $spacer * 4;
+      line-height: 23.4px;
     }
   }
 
