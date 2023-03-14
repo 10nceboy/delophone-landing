@@ -6,6 +6,7 @@ export const groups = {
   499: 'Москва (499)',
   495: 'Москва (495)',
   49599: 'Москва 499+495 (комплект)',
+  8800: '8 800',
   sochi: 'Сочи',
   spb: 'Санкт-Петербург',
   kras: 'Краснодар'
@@ -66,7 +67,7 @@ export const phones = [
     id: '6',
     type: 'single',
     group: 'mobile',
-    code1: '8 495',
+    code1: '8 988',
     code2: '',
     number: '2934566',
     price: '990₽ разово',
@@ -85,7 +86,7 @@ export const phones = [
   {
     id: '8',
     type: 'single',
-    group: '499',
+    group: '495',
     code1: '8 495',
     code2: '',
     number: '2434568',
@@ -95,10 +96,20 @@ export const phones = [
   {
     id: '9',
     type: 'single',
-    group: '499',
+    group: '495',
     code1: '8 495',
     code2: '',
-    number: '2434569',
+    number: '4434569',
+    price: '990₽ разово',
+    abonprice: '190 ₽/мес'
+  },
+  {
+    id: '10',
+    type: 'single',
+    group: '8800',
+    code1: '8 800',
+    code2: '',
+    number: '1233567',
     price: '990₽ разово',
     abonprice: '190 ₽/мес'
   }

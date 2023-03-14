@@ -312,6 +312,7 @@ const init = () => {
         if (!isPresent) {
           card.classList.remove('choose__phones-card_disabled');
           removeFromCart(id);
+
           return;
         }
         card.classList.add('choose__phones-card_disabled');
