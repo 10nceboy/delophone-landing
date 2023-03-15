@@ -21,7 +21,6 @@
   @include laptop {
     padding: $spacer * 3 $spacer * 4;
     max-width: 330px;
-    max-height: 53px;
   }
 
   @include laptop {
@@ -35,13 +34,13 @@
 
   &__input {
     @include font($semi-bold, 15px, $black);
-    line-height: 1;
+    line-height: 1.5em;
     padding: 0px;
+    overflow: visible;
 
     &::placeholder {
       overflow: visible;
       min-height: 100%;
-      line-height: 50px;
     }
 
     @include smartphone {
@@ -156,6 +155,19 @@
     &_active {
       transform: rotateX(180deg);
       transition: transform $collapse-transition;
+    }
+  }
+
+  &__close-button {
+    margin-left: auto;
+    padding: 0;
+    margin-left: auto;
+
+    &:hover,
+    &:active {
+      path {
+        fill: $gray;
+      }
     }
   }
 }

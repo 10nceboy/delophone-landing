@@ -475,7 +475,11 @@
     border: $border-gray2;
     padding: $spacer * 7 $spacer * 4;
     box-sizing: border-box;
-    min-height: 313px;
+    max-height: 313px;
+
+    @include smartphone {
+      min-height: 250px;
+    }
 
     @include tablet {
       padding: $spacer * 6;
@@ -489,6 +493,11 @@
     flex-direction: column;
     box-sizing: border-box;
     max-height: none;
+    align-items: start;
+
+    @include smartphone {
+      font-size: 20px;
+    }
 
     @include tablet {
       flex-direction: row;
@@ -506,6 +515,10 @@
 
   &__phone-accaunt {
     margin-top: $spacer * 2;
+
+    @include smartphone {
+    }
+
     @include tablet {
       margin: 0 $spacer 0 $spacer * 2;
     }

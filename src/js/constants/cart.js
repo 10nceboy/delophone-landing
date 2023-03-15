@@ -90,8 +90,8 @@ export const phones = [
     code1: '8 495',
     code2: '',
     number: '2434568',
-    price: '990₽ разово',
-    abonprice: '190 ₽/мес'
+    price: '990₽',
+    abonprice: '190'
   },
   {
     id: '9',
@@ -100,8 +100,8 @@ export const phones = [
     code1: '8 495',
     code2: '',
     number: '4434569',
-    price: '990₽ разово',
-    abonprice: '190 ₽/мес'
+    price: '990₽',
+    abonprice: '190'
   },
   {
     id: '10',
@@ -110,7 +110,7 @@ export const phones = [
     code1: '8 800',
     code2: '',
     number: '1233567',
-    price: '990₽ разово',
-    abonprice: '190 ₽/мес'
+    price: '990',
+    abonprice: '190'
   }
 ];
