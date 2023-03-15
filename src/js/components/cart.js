@@ -161,7 +161,7 @@ const removeFromCart = (id) => {
 
 const renderCartSubheader = (group) => {
   const groupText = groups[group] ?? '';
-  return `<div class="cart__content-header"">${groupText}</div>`;
+  return `<div class="cart__content-header no-select">${groupText}</div>`;
 };
 
 function deleteCartItem(event) {
@@ -209,17 +209,17 @@ const renderCartArray = () => {
 
       if (type !== 'pair') {
         newCartHTML += `<div class="card card_white cart__item" data-cart-item-id=${id}>
-          <div class="cart__item-number">
+          <div class="cart__item-number no-select">
           <span class="choose__city-code">${code1}</span> ${number.substring(
           0,
           3
         )}-${number.substring(3, 5)}-${number.substring(5, 7)}
  </div>
- <div class="cart__item-price">${price}<div class="cart__item-price_per-month">${abonprice}</div>
+ <div class="cart__item-price no-select">${price}<div class="cart__item-price_per-month no-select">${abonprice}</div>
  </div>${renderDeleteIcon()}</div>`;
       } else {
         newCartHTML += `<div class="card card_white cart__item" data-cart-item-id=${id}>
-      <div class="cart__item-pair-numbers">
+      <div class="cart__item-pair-numbers no-select">
         <div class="cart__item-number">
         <span class="choose__city-code">${code1}</span> ${number.substring(
           0,
@@ -233,8 +233,8 @@ const renderCartArray = () => {
         )}-${number.substring(3, 5)}-${number.substring(5, 7)}
         </div>
       </div>
-      <div class="cart__item-price">${price}</div>
-      <div class="cart__item-price_per-month">${abonprice}</div>
+      <div class="cart__item-price no-select">${price}</div>
+      <div class="cart__item-price_per-month no-select">${abonprice}</div>
       ${renderDeleteIcon()}
       </div>`;
       }
@@ -263,19 +263,19 @@ const renderSummary = () => {
   });
   summary.innerHTML = `
   <div class="cart__summary">
-    <span class="cart__summary_once">${totalPrice} ₽,</span>
-    <span class="cart__summary_per-month"> ${totalAbonPrice} ₽/мес </span>
+    <span class="cart__summary_once">${formatNumber(totalPrice)} ₽,</span>
+    <span class="cart__summary_per-month"> ${formatNumber(
+      totalAbonPrice
+    )} ₽/мес </span>
   </div>`;
 
   const orderPay = document.querySelector('.order__pay-once');
   if (orderPay) {
     const orderPayAbon = document.querySelector('.order__pay-per-month');
     const orderSum = document.querySelector('.order__summary');
-    orderPay.textContent = totalPrice;
-    orderPayAbon.textContent = totalAbonPrice;
-    let payed = parseInt(orderPay.textContent);
-    let payedAbons = parseInt(orderPayAbon.textContent);
-    orderSum.textContent = formatNumber(payed + payedAbons);
+    orderPay.textContent = formatNumber(totalPrice);
+    orderPayAbon.textContent = formatNumber(totalAbonPrice);
+    orderSum.textContent = formatNumber(totalAbonPrice + totalPrice);
     document.querySelector('.order__summary-button').textContent =
       document.querySelector('.order__summary').textContent;
   }
@@ -283,20 +283,21 @@ const renderSummary = () => {
 
 const renderCartHeader = () => {
   let quantity = cartArray.length;
+
   cartHeader.innerHTML = `
-  <span class="cart__header-choice">Выбран${declination(quantity, [
+  <span class="cart__header-choice no-select">Выбран${declination(quantity, [
     '',
     'о',
     'о'
   ])}</span>&nbsp;<b
-    class="cart__quantity"
+    class="cart__quantity no-select"
   >${quantity}</b
-  >&nbsp;<span class="cart__quantity-number">номер${declination(quantity, [
-    '',
-    'а',
-    'ов'
-  ])}</span>
+  >&nbsp;<span class="cart__quantity-number no-select">номер${declination(
+    quantity,
+    ['', 'а', 'ов']
+  )}</span>
 `;
+  cartHeader.classList.add('no-select');
 
   if (mobileQuantity || buyButton) {
     if (quantity == 0) {
@@ -326,7 +327,8 @@ const init = () => {
     renderPhones();
     const cards = document.querySelectorAll('.choose__phones-card');
     cards.forEach((card) => {
-      card.addEventListener('click', () => {
+      card.addEventListener('click', (event) => {
+        event.stopPropagation();
         const id = card.dataset.id;
         const isPresent = addToCart(id);
         if (!isPresent) {

@@ -57,7 +57,7 @@ payButton.addEventListener('click', () => {
 let step = steps.sendPhone;
 submitButton.addEventListener('click', () => {
   let nextStep = step;
-  if (step === steps.sendPhone && phoneInput.value.trim().length >= 11) {
+  if (step === steps.sendPhone && phoneInput.value.trim().length === 15) {
     const newValue = formatPhoneNumber(phoneInput.value.trim());
     phoneInput.placeholder = smsCodePlaceholder;
     sms.innerHTML = `${smsSendMessage} ${newValue}.`;
@@ -67,7 +67,12 @@ submitButton.addEventListener('click', () => {
     phoneInput.value = '';
     renderTimer(180);
     startTimer(renderTimer);
+    smsNote.classList.remove('order__pay-note_active');
     nextStep = steps.sendSms;
+  } else {
+    smsNote.classList.add('order__pay-note_active');
+    phoneInput.classList.add('order__sms-error');
+    smsNote.textContent = 'Вы ввели неверный номер телефона';
   }
 
   if (step == steps.sendSms && phoneInput.value.trim() === validationCodeMock) {
@@ -81,6 +86,7 @@ submitButton.addEventListener('click', () => {
   } else if (step == steps.sendSms && phoneInput.value.trim() !== '') {
     phoneInput.classList.add('order__sms-error');
     smsNote.classList.add('order__pay-note_active');
+    smsNote.textContent = 'Вы ввели неверный код,попробуйте ещё раз';
   }
   step = nextStep;
 });

@@ -23,26 +23,22 @@ document.addEventListener('DOMContentLoaded', () => {
     transitionEnter(searchInput, 'search__input');
   };
 
-  const highlightData = [];
-
   searchInput.addEventListener('input', (event) => {
-    const searchTerm = event.target.value;
+    const searchTerm = event.target.value.trim();
     let re = new RegExp(searchTerm.split('').join('[\\s-]*'), 'gi');
-    console.log(re);
     cardNumbers.forEach((card) => {
       const numbers = card.querySelectorAll('i');
 
       numbers.forEach((number) => {
         const text = number.textContent;
-        const formatText = number.textContent.replace('-', '');
-        const matches = formatText.matchAll(re);
+        const matches = text.matchAll(re);
         if (matches) {
           const highlightedText = text.replace(
             re,
             '<i class="search__highlight">$&</i>'
           );
           number.innerHTML = highlightedText;
-        }
+        } else number.innerHTML = text;
       });
     });
   });
@@ -55,9 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  closeButton.addEventListener('click', () => {
+  closeButton.addEventListener('click', (event) => {
     onSearchLeave();
     searchInput.value = '';
+    const text = number.textContent;
   });
 
   searchInput.addEventListener('keydown', (event) => {
