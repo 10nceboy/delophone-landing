@@ -7,7 +7,7 @@
 
   &__content {
     @include tablet {
-      padding-top: $spacer * 14;
+      padding-top: $spacer * 11;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       min-height: 678px;
@@ -43,6 +43,7 @@
     display: inline-block;
     margin: 0;
     padding: $spacer * 2;
+    color: $black;
     @include font($medium, 15px, $black);
     line-height: 155%;
     transition: $btn-transition;
@@ -327,11 +328,12 @@
     cursor: pointer;
     transition: $btn-transition;
 
-    &:hover {
-      box-shadow: 0 0 0 1px $blue;
+    @include tablet {
+      &:hover {
+        box-shadow: 0 0 0 1px $blue;
+      }
     }
 
-    &:active,
     &:focus,
     &_disabled {
       background-color: $blue;

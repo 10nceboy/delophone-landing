@@ -35,7 +35,7 @@
 
   &__input {
     @include font($semi-bold, 15px, $black);
-    line-height: 155%;
+    line-height: 1;
     padding: 0px;
 
     &::placeholder {
@@ -85,6 +85,10 @@
       opacity: 1;
       transition: opacity 0.3s;
     }
+
+    &_disabled {
+      pointer-events: none;
+    }
   }
 
   &__option-item {
@@ -102,6 +106,10 @@
 
     &:hover {
       color: $blue;
+    }
+
+    &_disabled {
+      pointer-events: none;
     }
   }
 

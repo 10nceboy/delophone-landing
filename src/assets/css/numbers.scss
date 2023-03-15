@@ -48,6 +48,7 @@
 
     @include tablet {
       margin-top: $spacer * 14;
+      margin-bottom: 0px;
     }
   }
 }

@@ -78,6 +78,7 @@
     display: flex;
     @include font($normal, 14px, $blue);
     margin: $spacer 0 $spacer * 3 0;
+    max-width: 100%;
 
     &:hover {
       color: $deep-blue;
@@ -85,7 +86,7 @@
 
     @include smartphone {
       font-size: 16px;
-      max-width: 300px;
+      max-width: 350px;
     }
 
     @include tablet {

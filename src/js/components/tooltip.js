@@ -15,10 +15,6 @@ const svg = `
   fill="#F88C28"
 /></svg>`;
 
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const renderTooltip = (content) => {
     const popup = document.createElement('div');
@@ -53,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let activator = item?.querySelector('.tooltip__activator');
     if (!activator) {
       activator = renderActivator(item);
-
     }
 
     const tooltipContent = renderTooltip(item.getAttribute('data-tooltip'));
