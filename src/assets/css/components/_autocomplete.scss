@@ -40,6 +40,8 @@
 
     &::placeholder {
       overflow: visible;
+      min-height: 100%;
+      line-height: 50px;
     }
 
     @include smartphone {
