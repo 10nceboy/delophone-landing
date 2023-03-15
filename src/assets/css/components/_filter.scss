@@ -82,14 +82,13 @@
 
     &_active {
       color: $white;
-      transition: $outline-transition;
+      transition: $btn-transition;
 
       &.choose__button {
         background-color: $gray;
-        outline: 1px solid $gray;
+        box-shadow: 0 0 0 1px $gray;
         color: $white;
-
-        transition: $outline-transition;
+        transition: $btn-transition;
       }
       .choose__phones-quantity {
         @include tablet {
