@@ -3,10 +3,16 @@
     @include flex-row;
     justify-content: center;
     box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s;
 
     @include tablet {
       max-height: 45px;
       padding: 0 0 $spacer * 5 0;
+    }
+
+    &_active {
+      opacity: 1;
     }
   }
 

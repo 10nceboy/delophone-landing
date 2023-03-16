@@ -43,6 +43,7 @@
     flex-grow: 1;
     min-height: 100%;
     box-sizing: border-box;
+    overflow: visible;
 
     @include tablet {
       padding: $spacer * 3;

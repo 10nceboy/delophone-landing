@@ -60,7 +60,7 @@ const renderPhones = () => {
           3,
           5
         )}-${phone.number.substring(5, 7)}</i></span>
-      </div >
+      </div>
     </div> `;
         break;
 
