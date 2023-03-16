@@ -1,5 +1,8 @@
 /* base */
 
+* {
+  outline: 1px solid red;
+}
 @import './base/reset';
 @import './base/layout';
 
