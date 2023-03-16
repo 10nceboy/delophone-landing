@@ -110,7 +110,6 @@
       padding: $spacer * 3 $spacer * 4;
       border-color: $dim-gray;
       border-radius: $border-radius-xs;
-      position: relative;
     }
   }
 
@@ -271,7 +270,7 @@
     min-height: 350px;
     box-sizing: border-box;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     @include tablet {
       padding: $spacer * 5 $spacer * 4 $spacer * 4 $spacer * 4;
       min-height: 410px;
