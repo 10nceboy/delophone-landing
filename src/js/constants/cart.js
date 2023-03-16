@@ -20,7 +20,7 @@ export const phones = [
     code1: '8 495',
     code2: '',
     number: '2434561',
-    price: '990₽ разово',
+    price: '990 ₽ разово',
     abonprice: '190 ₽/мес'
   },
   {
@@ -30,7 +30,7 @@ export const phones = [
     code1: '8 495',
     code2: '8 499',
     number: '2564561',
-    price: '1 990₽ разово',
+    price: '1 990 ₽ разово',
     abonprice: ''
   },
   {
@@ -70,7 +70,7 @@ export const phones = [
     code1: '8 988',
     code2: '',
     number: '2934566',
-    price: '990₽ разово',
+    price: '990 ₽ разово',
     abonprice: '190 ₽/мес'
   },
   {
@@ -80,7 +80,7 @@ export const phones = [
     code1: '8 861',
     code2: '',
     number: '2434567',
-    price: '990₽ разово',
+    price: '990 ₽ разово',
     abonprice: '190 ₽/мес'
   },
   {
@@ -90,8 +90,8 @@ export const phones = [
     code1: '8 495',
     code2: '',
     number: '2434568',
-    price: '990₽',
-    abonprice: '190'
+    price: '990 ₽ разово',
+    abonprice: '190 ₽/мес'
   },
   {
     id: '9',
@@ -100,8 +100,8 @@ export const phones = [
     code1: '8 495',
     code2: '',
     number: '4434569',
-    price: '990₽',
-    abonprice: '190'
+    price: '990 ₽',
+    abonprice: '190 ₽/мес'
   },
   {
     id: '10',
@@ -110,7 +110,7 @@ export const phones = [
     code1: '8 800',
     code2: '',
     number: '1233567',
-    price: '990',
-    abonprice: '190'
+    price: '990 ₽',
+    abonprice: '190 ₽/мес'
   }
 ];

@@ -14,11 +14,16 @@ const renderArrow = (autocomplete) => {
 };
 
 const autocomplete = document.querySelector('.autocomplete');
+const autocompleteWrapper = document.querySelector(
+  '.autocomplete__input-wrapper'
+);
 const autocompleteInput = document.querySelector('.autocomplete__input');
 const arrow = renderArrow(autocomplete);
+const arrowWrapper = document.querySelector('.autocomplete__arrow-wrapper');
+
+const searchCloseButton = document.querySelector('.autocomplete__close-button');
 
 function handleOptionClick(event) {
-  event.stopPropagation();
   const { target } = event;
   autocompleteInput.value = target.innerHTML;
   const autocompleteOptions = document.querySelector('.autocomplete__options');
@@ -27,6 +32,8 @@ function handleOptionClick(event) {
     removeautocompleteOptions();
   }, 300);
   arrow.classList.remove('autocomplete__arrow_active');
+  searchCloseButton.classList.remove('autocomplete__close-button_active');
+  event.stopImmediatePropagation();
 }
 
 const createautocompleteOptions = (list) => {
@@ -65,10 +72,11 @@ const renderFilteredList = (inputValue) => {
     const autocompleteOptions = document.querySelector(
       '.autocomplete__options'
     );
-    autocompleteOptions.classList.add('autocomplete__options_active');
+    autocompleteOptions.classList.add('autocomplete__options_disabled');
+
     document
       .querySelector('.autocomplete__option-item')
-      .classList.add('no-select');
+      .classList.add('autocomplete__option-item_disabled');
     return;
   }
   createautocompleteOptions(filteredCities);
@@ -81,6 +89,10 @@ const renderFilteredListDebounced = debounce(renderFilteredList);
 autocompleteInput.addEventListener('input', (event) => {
   const inputValue = event.target.value.toString().toLowerCase().trim();
   renderFilteredListDebounced(inputValue);
+  if (inputValue) {
+    searchCloseButton.classList.add('autocomplete__close-button_active');
+  } else
+    searchCloseButton.classList.remove('autocomplete__close-button_active');
 });
 
 clickOutside(autocomplete, () => {
@@ -94,9 +106,9 @@ clickOutside(autocomplete, () => {
   }
 });
 
-autocomplete.addEventListener('click', () => {
+autocompleteWrapper.addEventListener('click', (event) => {
+  event.stopImmediatePropagation();
   arrow.classList.add('autocomplete__arrow_active');
-
   const autocompleteOptions = document.querySelector('.autocomplete__options');
   if (!autocompleteOptions) {
     createautocompleteOptions(autocompleteCities);
@@ -104,7 +116,40 @@ autocomplete.addEventListener('click', () => {
       '.autocomplete__options'
     );
     transitionEnter(autocompleteOptions, 'autocomplete__options');
+  } else {
+    transitionLeave(autocompleteOptions, 'autocomplete__options');
+    window.setTimeout(() => {
+      removeautocompleteOptions();
+    }, 100);
+    arrow.classList.remove('autocomplete__arrow_active');
   }
+});
 
-  transitionEnter(autocompleteOptions, 'autocomplete__options');
+arrowWrapper.addEventListener('click', (event) => {
+  event.stopImmediatePropagation();
+  arrow.classList.add('autocomplete__arrow_active');
+  const autocompleteOptions = document.querySelector('.autocomplete__options');
+  if (!autocompleteOptions) {
+    createautocompleteOptions(autocompleteCities);
+    const autocompleteOptions = document.querySelector(
+      '.autocomplete__options'
+    );
+    transitionEnter(autocompleteOptions, 'autocomplete__options');
+  } else {
+    transitionLeave(autocompleteOptions, 'autocomplete__options');
+    window.setTimeout(() => {
+      removeautocompleteOptions();
+    }, 100);
+    arrow.classList.remove('autocomplete__arrow_active');
+  }
+});
+
+searchCloseButton.addEventListener('click', (event) => {
+  autocompleteInput.value = '';
+  removeautocompleteOptions();
+  createautocompleteOptions(autocompleteCities);
+  document
+    .querySelector('.autocomplete__options')
+    .classList.add('autocomplete__options_active');
+  searchCloseButton.classList.remove('autocomplete__close-button_active');
 });

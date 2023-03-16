@@ -38,7 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
             '<i class="search__highlight">$&</i>'
           );
           number.innerHTML = highlightedText;
-        } else number.innerHTML = text;
+        }
+        closeButton.addEventListener('click', () => {
+          number.textContent = text;
+        });
       });
     });
   });
@@ -54,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
   closeButton.addEventListener('click', (event) => {
     onSearchLeave();
     searchInput.value = '';
-    const text = number.textContent;
   });
 
   searchInput.addEventListener('keydown', (event) => {
