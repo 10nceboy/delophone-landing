@@ -449,8 +449,11 @@
   }
 
   &__sms-error {
-    transition: outline 0.15s;
+    transition: $btn-transition;
+    appearance: none;
+    -webkit-appearance: none;
     box-shadow: 0 0 0 1px $red;
+    -webkit-box-shadow: 0 0 0 1px $red;
   }
 
   &__validation-reset {

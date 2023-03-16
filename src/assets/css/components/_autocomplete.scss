@@ -16,15 +16,21 @@
     width: 96%;
     margin-top: 0px;
     margin-bottom: 0px;
+    max-height: 53px;
   }
 
-  @include laptop {
-    padding: $spacer * 3 $spacer * 4;
+  @include tablet-1024 {
     max-width: 330px;
   }
 
   @include laptop {
+    max-width: 340px;
+  }
+
+  @include desktop {
+    padding: $spacer * 3 $spacer * 4;
     max-width: 350px;
+    max-height: 53px;
   }
 
   &_disabled {
@@ -37,6 +43,8 @@
     line-height: 1.5em;
     padding: 0px;
     overflow: visible;
+    box-sizing: border-box;
+    max-height: 53px;
 
     &::placeholder {
       overflow: visible;

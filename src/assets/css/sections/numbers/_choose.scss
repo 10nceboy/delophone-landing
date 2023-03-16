@@ -28,6 +28,9 @@
     max-width: 100%;
     box-sizing: border-box;
     background-color: $light-gray;
+    @include tablet {
+      max-height: 53px;
+    }
 
     @include laptop {
       max-width: 350px;
@@ -58,14 +61,17 @@
     }
 
     @include tablet {
-      padding: $spacer * 2 $spacer * 2;
+      padding: $spacer * 2;
       font-size: 15px;
     }
 
     @include laptop {
       font-size: 18px;
-      padding: $spacer * 3 $spacer * 4;
       line-height: 23.4px;
+    }
+
+    @include desktop {
+      padding: $spacer * 3 $spacer * 4;
     }
   }
 
