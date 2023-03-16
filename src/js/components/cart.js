@@ -326,10 +326,16 @@ const init = () => {
     cartArray = getCart();
     renderPhones();
     const cards = document.querySelectorAll('.choose__phones-card');
+
     cards.forEach((card) => {
+      const id = card.dataset.id;
+      if (cartArray.some((item) => item.id === id)) {
+        card.classList.add('choose__phones-card_disabled');
+      }
+      card.dispatchEvent(new MouseEvent('mousedown'));
+      card.dispatchEvent(new MouseEvent('mouseup'));
+
       card.addEventListener('click', (event) => {
-        event.stopPropagation();
-        const id = card.dataset.id;
         const isPresent = addToCart(id);
         if (!isPresent) {
           card.classList.remove('choose__phones-card_disabled');
@@ -337,6 +343,7 @@ const init = () => {
 
           return;
         }
+
         card.classList.add('choose__phones-card_disabled');
         renderCartArray();
         const index = cartArray.findIndex((item) => item.id === id);
