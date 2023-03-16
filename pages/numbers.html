@@ -123,13 +123,17 @@
                   8 800
                 </button>
               </div>
+
               <div class="autocomplete">
-                <input
-                  placeholder="Введите регион"
-                  type="text"
-                  value="Москва (495)"
-                  class="input input_light-gray autocomplete__input"
-                /><button
+                <div class="autocomplete__input-wrapper">
+                  <input
+                    placeholder="Введите регион"
+                    type="text"
+                    value="Москва (495)"
+                    class="input input_light-gray autocomplete__input"
+                  />
+                </div>
+                <button
                   type="button"
                   class="button button_no-border button_transparent autocomplete__close-button"
                 >
@@ -157,7 +161,9 @@
                     </defs>
                   </svg>
                 </button>
-                <div class="autocomplete__arrow"></div>
+                <div class="autocomplete__arrow-wrapper">
+                  <div class="autocomplete__arrow"></div>
+                </div>
               </div>
 
               <div
@@ -599,9 +605,10 @@
                       </div>
                       <div class="card card_white choose__phones-card">
                         <div class="choose__phones-single-number no-select">
-                          <span class="choose__city-code">8 861</span>&nbsp;<i
-                            >505-83-31</i
-                          >
+                          <span class="choose__city-code">8 861</span>&nbsp;
+                          <span class="choose__phone-number"
+                            ><i>243-45-61</i>
+                          </span>
                         </div>
                       </div>
                       <div class="card card_white choose__phones-card">
