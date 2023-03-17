@@ -107,10 +107,11 @@ clickOutside(autocomplete, () => {
 });
 
 autocompleteWrapper.addEventListener('click', (event) => {
-  event.stopImmediatePropagation();
+  event.stopPropagation();
   arrow.classList.add('autocomplete__arrow_active');
   const autocompleteOptions = document.querySelector('.autocomplete__options');
   if (!autocompleteOptions) {
+    searchCloseButton.classList.add('autocomplete__close-button_active');
     createautocompleteOptions(autocompleteCities);
     const autocompleteOptions = document.querySelector(
       '.autocomplete__options'
@@ -122,6 +123,7 @@ autocompleteWrapper.addEventListener('click', (event) => {
       removeautocompleteOptions();
     }, 100);
     arrow.classList.remove('autocomplete__arrow_active');
+    searchCloseButton.classList.remove('autocomplete__close-button_active');
   }
 });
 
@@ -134,6 +136,7 @@ arrowWrapper.addEventListener('click', (event) => {
     const autocompleteOptions = document.querySelector(
       '.autocomplete__options'
     );
+    searchCloseButton.classList.add('autocomplete__close-button_active');
     transitionEnter(autocompleteOptions, 'autocomplete__options');
   } else {
     transitionLeave(autocompleteOptions, 'autocomplete__options');
@@ -141,6 +144,7 @@ arrowWrapper.addEventListener('click', (event) => {
       removeautocompleteOptions();
     }, 100);
     arrow.classList.remove('autocomplete__arrow_active');
+    searchCloseButton.classList.remove('autocomplete__close-button_active');
   }
 });
 
