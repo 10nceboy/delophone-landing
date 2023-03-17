@@ -180,11 +180,13 @@ document.addEventListener('DOMContentLoaded', () => {
           hideTooltip(event);
         });
       });
-
-      activator.addEventListener('click', () => {
-        if (event.currentTarget === activator) {
-          hideTooltip;
-        }
+      let state = false;
+      activator.addEventListener('click', (event) => {
+        event.preventDefault();
+        state = !state;
+        if (state) {
+          tooltipContent.classList.add('tooltip__inner_visible');
+        } else tooltipContent.classList.remove('tooltip__inner_visible');
       });
     });
 

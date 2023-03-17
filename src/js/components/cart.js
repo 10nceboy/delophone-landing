@@ -148,10 +148,10 @@ const removeFromCart = (id) => {
   }
   const deletedEl = cartEl.querySelectorAll('.cart__item')[index];
   deletedEl.classList.add('cart__item_deleted');
+  cartArray.splice(index, 1);
   deletedEl.addEventListener(
     'animationend',
     () => {
-      cartArray.splice(index, 1);
       renderCartArray();
       saveCart(cartArray);
     },
@@ -332,15 +332,15 @@ const init = () => {
       if (cartArray.some((item) => item.id === id)) {
         card.classList.add('choose__phones-card_disabled');
       }
-      card.dispatchEvent(new MouseEvent('mousedown'));
-      card.dispatchEvent(new MouseEvent('mouseup'));
 
-      card.addEventListener('click', (event) => {
+      card.addEventListener('click', () => {
         const isPresent = addToCart(id);
         if (!isPresent) {
           card.classList.remove('choose__phones-card_disabled');
           removeFromCart(id);
-
+          if (cartArray.length !== 0)
+            mobileQuantity.textContent = cartArray.length;
+          else mobileQuantity.classList.remove('cart__mobile-quantity_active');
           return;
         }
 

@@ -1,6 +1,3 @@
-export const numberQuantity = 'номер';
-export const choice = 'Выбран';
-
 export const groups = {
   mobile: 'Мобильные',
   499: 'Москва (499)',
@@ -100,7 +97,7 @@ export const phones = [
     code1: '8 495',
     code2: '',
     number: '4434569',
-    price: '990 ₽',
+    price: '990 ₽ разово',
     abonprice: '190 ₽/мес'
   },
   {
@@ -110,7 +107,7 @@ export const phones = [
     code1: '8 800',
     code2: '',
     number: '1233567',
-    price: '990 ₽',
+    price: '990 ₽ разово',
     abonprice: '190 ₽/мес'
   }
 ];

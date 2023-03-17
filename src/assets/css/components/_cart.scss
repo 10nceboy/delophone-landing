@@ -71,7 +71,7 @@
     padding-bottom: 0px;
     box-sizing: border-box;
     @include custom-scrollbar;
-    overflow-y: auto;
+    overflow: auto;
 
     @include mobile-l {
       min-height: 410px;
