@@ -3,7 +3,6 @@ import { transitionEnter } from '../utils/dom';
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.querySelector('.search__input');
   const submitButton = document.querySelector('.search__submit-button');
-  const search = document.querySelector('.search');
   const closeButton = document.querySelector('.search__close-button');
   const cardNumbers = document.querySelectorAll('.choose__phone-number');
 
@@ -57,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   closeButton.addEventListener('click', (event) => {
     onSearchLeave();
     searchInput.value = '';
+    searchInput.focus();
   });
 
   searchInput.addEventListener('keydown', (event) => {
