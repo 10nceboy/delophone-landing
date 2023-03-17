@@ -432,9 +432,11 @@
     width: $spacer * 3;
     height: $spacer * 3;
     display: none;
+    pointer-events: none;
 
     &_active {
       display: flex;
+      pointer-events: all;
     }
   }
 }

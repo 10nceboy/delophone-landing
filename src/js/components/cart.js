@@ -8,6 +8,8 @@ const phoneCards = document.querySelector('.choose__phones-cards');
 const summary = document.querySelector('.cart__summary');
 const buyButton = document.querySelector('.cart__button-buy');
 const cartHeader = document.querySelector('.cart__header');
+const cartMobile = document.querySelector('.cart__mobile-button');
+
 const mobileQuantity = document.querySelector('.cart__mobile-quantity');
 let cartArray = [];
 
@@ -149,11 +151,11 @@ const removeFromCart = (id) => {
   const deletedEl = cartEl.querySelectorAll('.cart__item')[index];
   deletedEl.classList.add('cart__item_deleted');
   cartArray.splice(index, 1);
+  saveCart(cartArray);
   deletedEl.addEventListener(
     'animationend',
     () => {
       renderCartArray();
-      saveCart(cartArray);
     },
     { once: true }
   );
@@ -303,9 +305,7 @@ const renderCartHeader = () => {
     if (quantity == 0) {
       buyButton.disabled = true;
       mobileQuantity.classList.remove('cart__mobile-quantity_active');
-      document
-        .querySelector('.cart__mobile-button')
-        ?.classList.remove('cart__mobile-button_active');
+      cartMobile.classList.remove('cart__mobile-button_active');
     } else if (quantity == 1) {
       buyButton.textContent = 'Купите номер телефона';
     }
@@ -313,10 +313,11 @@ const renderCartHeader = () => {
       buyButton.disabled = false;
       mobileQuantity.classList.add('cart__mobile-quantity_active');
       mobileQuantity.textContent = quantity;
-      document
-        .querySelector('.cart__mobile-button')
-        ?.classList.add('cart__mobile-button_active');
-    } else mobileQuantity.classList.remove('cart__mobile-quantity_active');
+      cartMobile.classList.add('cart__mobile-button_active');
+    } else {
+      mobileQuantity.classList.remove('cart__mobile-quantity_active');
+      cartMobile.classList.remove('cart__mobile-button_active');
+    }
   }
 };
 const init = () => {
@@ -338,9 +339,14 @@ const init = () => {
         if (!isPresent) {
           card.classList.remove('choose__phones-card_disabled');
           removeFromCart(id);
-          if (cartArray.length !== 0)
+          if (cartArray.length !== 0) {
             mobileQuantity.textContent = cartArray.length;
-          else mobileQuantity.classList.remove('cart__mobile-quantity_active');
+          } else {
+            console.log(cartArray.length);
+            mobileQuantity.textContent = cartArray.length;
+            mobileQuantity.classList.remove('cart__mobile-quantity_active');
+            cartMobile.classList.remove('cart__mobile-button_active');
+          }
           return;
         }
 
