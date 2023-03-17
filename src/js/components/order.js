@@ -72,7 +72,7 @@ submitButton.addEventListener('click', () => {
     smsNote.classList.remove('order__pay-note_active');
     phoneInput.classList.remove('order__sms-error');
     nextStep = steps.sendSms;
-  } else if (phoneInput.value.trim() !== '') {
+  } else if (phoneInput.value.trim().length !== 15) {
     smsNote.classList.add('order__pay-note_active');
     phoneInput.classList.add('order__sms-error');
   }
@@ -81,11 +81,15 @@ submitButton.addEventListener('click', () => {
     valid = true;
     phoneInput.classList.remove('order__sms-error');
     smsNote.classList.remove('order__pay-note_active');
+    note.classList.remove('order__pay-note_active');
     resetTimer();
     document
       .querySelector('.order__pay-button')
       .classList.remove('order__pay-button_disabled');
-  } else if (step == steps.sendSms && phoneInput.value.trim() !== '') {
+  } else if (
+    step == steps.sendSms &&
+    phoneInput.value.trim() !== validationCodeMock
+  ) {
     phoneInput.classList.add('order__sms-error');
     smsNote.classList.add('order__pay-note_active');
     smsNote.textContent = 'Вы ввели неверный код,попробуйте ещё раз';

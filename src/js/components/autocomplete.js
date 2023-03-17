@@ -148,8 +148,13 @@ searchCloseButton.addEventListener('click', (event) => {
   autocompleteInput.value = '';
   removeautocompleteOptions();
   createautocompleteOptions(autocompleteCities);
+  autocompleteInput.focus();
   document
     .querySelector('.autocomplete__options')
     .classList.add('autocomplete__options_active');
   searchCloseButton.classList.remove('autocomplete__close-button_active');
+});
+autocompleteInput.addEventListener('click', (event) => {
+  if (event.target.value.trim() !== '')
+    searchCloseButton.classList.add('autocomplete__close-button_active');
 });
