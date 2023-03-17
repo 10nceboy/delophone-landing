@@ -36,6 +36,8 @@ const note = document.querySelector('.order__pay-note');
 const smsNote = document.querySelector('.order__sms-note');
 const validationReset = document.querySelector('.order__validation-reset');
 
+smsNote.textContent = 'Вы ввели неверный номер телефона';
+
 const phoneMask = IMask(phoneInput, {
   mask: '{8}(000)000-00-00'
 });
@@ -68,11 +70,11 @@ submitButton.addEventListener('click', () => {
     renderTimer(180);
     startTimer(renderTimer);
     smsNote.classList.remove('order__pay-note_active');
+    phoneInput.classList.remove('order__sms-error');
     nextStep = steps.sendSms;
-  } else {
+  } else if (phoneInput.value.trim() !== '') {
     smsNote.classList.add('order__pay-note_active');
     phoneInput.classList.add('order__sms-error');
-    smsNote.textContent = 'Вы ввели неверный номер телефона';
   }
 
   if (step == steps.sendSms && phoneInput.value.trim() === validationCodeMock) {
