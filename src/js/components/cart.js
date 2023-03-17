@@ -342,7 +342,6 @@ const init = () => {
           if (cartArray.length !== 0) {
             mobileQuantity.textContent = cartArray.length;
           } else {
-            console.log(cartArray.length);
             mobileQuantity.textContent = cartArray.length;
             mobileQuantity.classList.remove('cart__mobile-quantity_active');
             cartMobile.classList.remove('cart__mobile-button_active');
