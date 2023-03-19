@@ -6,7 +6,6 @@ const filterDropdownButton = document.querySelector(
   '.filters__dropdown-button'
 );
 const filterDropdown = document.querySelector('.filter__wrapper');
-const errorReset = document.querySelector('.search__error-button');
 const filterReset = document.querySelector('.filter__reset');
 
 const renderArrow = (filters) => {
@@ -67,11 +66,4 @@ activators.forEach((activator) => {
 clickOutside(filterDropdown, () => {
   const arrow = document.querySelector('.filter__arrow');
   if (arrow) arrow.classList.remove('filter__arrow_active');
-});
-
-errorReset.addEventListener('click', () => {
-  activators.forEach((activator) => {
-    activator.classList.remove('filters__activator_active');
-    filterItem.classList.add('filters__item_visible');
-  });
 });

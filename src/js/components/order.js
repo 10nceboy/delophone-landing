@@ -25,6 +25,7 @@ const renderTimer = (timerTime) => {
   if (timerTime <= 0) {
     validationReset.textContent = timerEndsMessage;
     validationReset.classList.add('order__validation-reset_active');
+    resetTimer();
   }
 };
 
