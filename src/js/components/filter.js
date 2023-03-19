@@ -32,7 +32,6 @@ activators.forEach((activator) => {
   activator.addEventListener('click', (event) => {
     const filterId = event.currentTarget.dataset.filter;
     const searchId = event.currentTarget.dataset.search;
-    console.log(searchId);
     if (searchId !== 'phones') {
       filterReset.classList.remove('filter__reset_active');
     } else {
