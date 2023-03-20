@@ -28,8 +28,7 @@ import{g as E,f as o,h}from"./menu-91078bf9.js";const q=e=>{localStorage.setItem
                   >${e.code1}</span
                 >
                 <span class="choose__phone-number">
-                  <i>${e.number.substring(0,3)}-${e.number.substring(3,5)}-${e.number.substring(5,7)}
-                  </i>
+                  <i>${e.number.substring(0,3)}-${e.number.substring(3,5)}-${e.number.substring(5,7)}</i>
                 </span>
               </span>
             <div class="choose__phones-pair-complect">
