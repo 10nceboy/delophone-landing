@@ -162,3 +162,20 @@ autocompleteInput.addEventListener('click', (event) => {
   if (event.target.value.trim() !== '')
     searchCloseButton.classList.add('autocomplete__close-button_active');
 });
+
+const disableButtons = document.querySelectorAll('[data-disableAutocomplete]');
+
+disableButtons.forEach((disableButton) => {
+  disableButton.addEventListener('click', (event) => {
+    const { target } = event;
+    const disableFlag = target.dataset.disableautocomplete;
+    console.log(disableFlag);
+    if (disableFlag === 'true') {
+      autocompleteInput.value = ' ';
+      autocomplete.classList.add('autocomplete_disabled');
+    } else {
+      autocomplete.classList.remove('autocomplete_disabled');
+      autocompleteInput.value = 'Москва (495)';
+    }
+  });
+});

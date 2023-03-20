@@ -23,17 +23,30 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   searchInput.addEventListener('input', (event) => {
-    const searchTerm = event.target.value.trim();
-    let re = new RegExp(searchTerm.split('').join('[\\s-]*'), 'gi');
+    const { value } = event.target;
+    const hasSpeacialChar = value.includes('*');
+    let searchRegexpString = value
+      ?.trim()
+      .replace(/[?]/gi, '.')
+      .replace(/[*]/gi, '')
+      .split('')
+      .join('[\\s-]*');
+
+    if (hasSpeacialChar) {
+      searchRegexpString = `${searchRegexpString}$`;
+    }
+
+    let regexpFromSearch = new RegExp(searchRegexpString, 'g');
+
     cardNumbers.forEach((card) => {
       const numbers = card.querySelectorAll('i');
-
       numbers.forEach((number) => {
         const text = number.textContent;
-        const matches = text.matchAll(re);
+
+        const matches = text.matchAll(regexpFromSearch);
         if (matches) {
           const highlightedText = text.replace(
-            re,
+            regexpFromSearch,
             '<i class="search__highlight">$&</i>'
           );
           number.innerHTML = highlightedText;
@@ -84,6 +97,10 @@ document.addEventListener('DOMContentLoaded', () => {
       '?',
       '*'
     ];
+
+    if (event.target.value.includes('*') && event.key === '*') {
+      event.preventDefault();
+    }
 
     if (allowedKeys.includes(event.key)) {
       return true;

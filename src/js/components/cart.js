@@ -80,8 +80,7 @@ const renderPhones = () => {
                   <i>${phone.number.substring(0, 3)}-${phone.number.substring(
           3,
           5
-        )}-${phone.number.substring(5, 7)}
-                  </i>
+        )}-${phone.number.substring(5, 7)}</i>
                 </span>
               </span>
             <div class="choose__phones-pair-complect">
