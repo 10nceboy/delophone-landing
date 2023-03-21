@@ -169,7 +169,7 @@ disableButtons.forEach((disableButton) => {
   disableButton.addEventListener('click', (event) => {
     const { target } = event;
     const disableFlag = target.dataset.disableautocomplete;
-    console.log(disableFlag);
+
     if (disableFlag === 'true') {
       autocompleteInput.value = ' ';
       autocomplete.classList.add('autocomplete_disabled');

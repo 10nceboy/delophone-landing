@@ -586,6 +586,30 @@
       font-weight: 399;
     }
   }
+
+  &__change-phone-button {
+    @include font($normal, 15px, $blue);
+    padding: 0px;
+    text-decoration: underline;
+    display: inline-block;
+    margin-left: 0px;
+
+    @include mobile-m {
+      font-size: 16px;
+      margin-right: 0px;
+    }
+
+    @include smartphone {
+      font-size: 16px;
+      margin-left: $spacer;
+    }
+    @include tablet {
+      font-size: 14px;
+    }
+    @include laptop {
+      font-size: 16px;
+    }
+  }
 }
 
 .mobile-hidden {

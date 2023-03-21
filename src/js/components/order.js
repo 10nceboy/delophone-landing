@@ -1,11 +1,12 @@
 import {
-  codeHTML,
-  smsCodePlaceholder,
-  timerEndsMessage,
+  templates,
   validationCodeMock,
   steps,
-  smsSendMessage
-} from '../constants/orderC';
+  errorMessages,
+  placeholders,
+  messages,
+  timerTime
+} from '../constants/order';
 import { formatPhoneNumber } from '../utils/common';
 import { resetTimer, startTimer } from '../utils/timer';
 import IMask from 'imask';
@@ -23,13 +24,22 @@ const renderTimer = (timerTime) => {
     seconds < 10 ? `0${seconds} сек` : `${seconds} сек`;
 
   if (timerTime <= 0) {
-    validationReset.textContent = timerEndsMessage;
+    validationReset.textContent = messages.timerEndsMessage;
     validationReset.classList.add('order__validation-reset_active');
     resetTimer();
   }
 };
 
+const maskOptions = {
+  mask: '{8}(000)000-00-00',
+  lazy: true,
+  overwrite: true,
+  prepare: (value) => value,
+  commit: (value) => value === phoneInput.value
+};
+
 const phoneInput = document.querySelector('.order__phone-input');
+const phoneMask = IMask(phoneInput, maskOptions);
 const submitButton = document.querySelector('.order__submit-button');
 const sms = document.querySelector('#sms');
 const payButton = document.querySelector('.order__pay-button');
@@ -37,13 +47,10 @@ const note = document.querySelector('.order__pay-note');
 const smsNote = document.querySelector('.order__sms-note');
 const validationReset = document.querySelector('.order__validation-reset');
 
-smsNote.textContent = 'Вы ввели неверный номер телефона';
-
-const phoneMask = IMask(phoneInput, {
-  mask: '{8}(000)000-00-00'
-});
+smsNote.textContent = errorMessages.phone;
 
 let clickCount = 0;
+
 payButton.addEventListener('click', () => {
   if (!valid) {
     note.classList.add('order__pay-note_active');
@@ -57,18 +64,29 @@ payButton.addEventListener('click', () => {
   }
 });
 
+const renderChangeButton = () => {
+  return `<button type = "button" class="button button_no-border button_transparent order__change-phone-button">
+  Изменить
+</button>`;
+};
+
 let step = steps.sendPhone;
 submitButton.addEventListener('click', () => {
   let nextStep = step;
   if (step === steps.sendPhone && phoneInput.value.trim().length === 15) {
     const newValue = formatPhoneNumber(phoneInput.value.trim());
-    phoneInput.placeholder = smsCodePlaceholder;
-    sms.innerHTML = `${smsSendMessage} ${newValue}.`;
+    phoneInput.placeholder = placeholders.smsCodePlaceholder;
+    sms.innerHTML = `${
+      messages.smsSendMessage
+    }&nbsp;${newValue}&nbsp;${renderChangeButton()}`;
     validationReset.classList.add('order__validation-reset_visible');
-    phoneMask.destroy();
+    phoneMask.updateOptions({
+      mask: Number
+    });
     phoneInput.classList.add('order__sms');
     phoneInput.value = '';
-    renderTimer(180);
+    phoneMask.updateValue();
+    renderTimer(timerTime);
     startTimer(renderTimer);
     smsNote.classList.remove('order__pay-note_active');
     phoneInput.classList.remove('order__sms-error');
@@ -93,15 +111,38 @@ submitButton.addEventListener('click', () => {
   ) {
     phoneInput.classList.add('order__sms-error');
     smsNote.classList.add('order__pay-note_active');
-    smsNote.textContent = 'Вы ввели неверный код,попробуйте ещё раз';
+    smsNote.textContent = errorMessages.smsCode;
   }
+
   step = nextStep;
+
+  const changePhoneButton = document.querySelector(
+    '.order__change-phone-button'
+  );
+
+  if (changePhoneButton) {
+    changePhoneButton.addEventListener('click', () => {
+      step = steps.sendPhone;
+      phoneInput.placeholder = placeholders.phonePlaceholder;
+      sms.innerHTML = templates.smsHTML;
+      phoneMask.updateOptions({
+        mask: '{8}(000)000-00-00'
+      });
+      phoneInput.value = '';
+      phoneMask.updateValue();
+      validationReset.classList.remove('order__validation-reset_visible');
+      resetTimer();
+      phoneInput.classList.remove('order__sms-error');
+      smsNote.classList.remove('order__pay-note_active');
+      smsNote.textContent = errorMessages.phone;
+    });
+  }
 });
 
 validationReset.addEventListener('click', () => {
-  validationReset.innerHTML = codeHTML;
+  validationReset.innerHTML = templates.timerHTML;
   resetTimer();
-  renderTimer(180);
+  renderTimer(timerTime);
   startTimer(renderTimer);
 });
 

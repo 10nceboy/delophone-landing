@@ -1,5 +1,7 @@
 .autocomplete {
   position: relative;
+  @include font($semi-bold, 15px, $black);
+  font-size: 16px;
   background-color: $light-gray;
   border-radius: $border-radius-xs;
   border: $border-dim-gray;
@@ -10,6 +12,10 @@
   cursor: pointer;
   align-items: center;
 
+  @include smartphone {
+    font-size: 18px;
+  }
+
   @include tablet {
     margin-left: $spacer * 2;
     min-width: 250px;
@@ -17,10 +23,13 @@
     margin-top: 0px;
     margin-bottom: 0px;
     max-height: 53px;
+    font-weight: $medium;
+    font-size: 15px;
   }
 
   @include tablet-1024 {
     max-width: 330px;
+    font-size: 18px;
   }
 
   @include laptop {
@@ -57,7 +66,6 @@
   }
 
   &__input {
-    @include font($semi-bold, 15px, $black);
     line-height: 1.5em;
     padding: 0px;
     overflow: visible;
@@ -69,19 +77,6 @@
     &::placeholder {
       overflow: visible;
       min-height: 100%;
-    }
-
-    @include smartphone {
-      font-size: 18px;
-    }
-
-    @include tablet {
-      font-weight: $medium;
-      font-size: 15px;
-    }
-
-    @include laptop {
-      font-size: 18px;
     }
   }
 
