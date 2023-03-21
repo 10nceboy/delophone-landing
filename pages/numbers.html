@@ -72,12 +72,11 @@
     
     
     
-    <script type="module" crossorigin src="/delophone-landing/assets/numbers-3bcc3578.js"></script>
+    <script type="module" crossorigin src="/delophone-landing/assets/numbers-9f23afb2.js"></script>
     <link rel="modulepreload" crossorigin href="/delophone-landing/assets/menu-91078bf9.js">
-    <link rel="modulepreload" crossorigin href="/delophone-landing/assets/cart-9496d2bf.js">
-    <link rel="modulepreload" crossorigin href="/delophone-landing/assets/tabs-df46f4eb.js">
+    <link rel="modulepreload" crossorigin href="/delophone-landing/assets/cart-537171e6.js">
     <link rel="stylesheet" href="/delophone-landing/assets/menu-e1dcf944.css">
-    <link rel="stylesheet" href="/delophone-landing/assets/cart-49a1e1b6.css">
+    <link rel="stylesheet" href="/delophone-landing/assets/cart-64400ec7.css">
   </head>
   <body>
     <div class="overlay"></div>
@@ -513,28 +512,28 @@
               <h1>Выберите номер телефона</h1>
             </div>
             <div class="choose__content">
-              <div class="tabs tabs__activators choose__number-tabs">
+              <div class="filters filter__activators choose__number-filters">
                 <button
                   type="button"
-                  data-tab="cities"
+                  data-filter="cities"
                   data-disableAutocomplete="false"
-                  class="button tabs__activator tabs__activator_active choose__button button_light-gray choose__button choose__button_cities"
+                  class="button filter__activator filter__activator_active choose__button button_light-gray choose__button choose__button_cities"
                 >
                   Городские
                 </button>
                 <button
                   type="button"
-                  data-tab="mobiles"
+                  data-filter="mobiles"
                   data-disableAutocomplete="true"
-                  class="button tabs__activator button_light-gray choose__button choose__button_mobiles"
+                  class="button filter__activator button_light-gray choose__button choose__button_mobiles"
                 >
                   Мобильные
                 </button>
                 <button
-                  data-tab="8800"
+                  data-filter="8800"
                   data-disableAutocomplete="true"
                   type="button"
-                  class="button tabs__activator choose__button button_light-gray choose__button_8800"
+                  class="button filter__activator choose__button button_light-gray choose__button_8800"
                 >
                   8 800
                 </button>
@@ -694,13 +693,13 @@
               </div>
               <div class="card card_rectangle choose__phones">
                 <div
-                  class="dropdown filters__dropdown mobile-block"
+                  class="dropdown filter__dropdown mobile-block"
                   data-filter="usuals"
                   data-search="phones"
                 >
                   <div class="filter__wrapper">
                     <button
-                      class="button button_no-border button_transparent filters__dropdown-button"
+                      class="button button_no-border button_transparent filter__dropdown-button"
                     >
                       <span
                         class="choose__button-header no-select"
@@ -719,16 +718,16 @@
                   </div>
 
                   <div class="dropdown__menu">
-                    <ul class="dropdown__menu_list filters__dropdown-list">
+                    <ul class="dropdown__menu_list filter__dropdown-list">
                       <li
                         data-filter="usuals"
                         data-search="phones"
-                        class="filters__dropdown-list-item"
+                        class="filter__dropdown-list-item"
                       >
                         <button
                           type="button"
                           data-filter="usuals"
-                          class="button filters__activator button_no-border button_transparent choose__button-phones choose__button_usual"
+                          class="button filter__activator button_no-border button_transparent choose__button-phones choose__button_usual"
                         >
                           <span class="choose__button-header no-select">
                             Обычные
@@ -743,12 +742,12 @@
                           <div class="drodpdown__menu"></div>
                         </button>
                       </li>
-                      <li class="filters__dropdown-list-item">
+                      <li class="filter__dropdown-list-item">
                         <button
                           type="button"
                           data-filter="bronze"
                           data-search="phones"
-                          class="button filters__activator button_no-border button_transparent choose__button-phones choose__button_bronze"
+                          class="button filter__activator button_no-border button_transparent choose__button-phones choose__button_bronze"
                         >
                           <span class="choose__button-header no-select">
                             Бронзовые
@@ -761,12 +760,12 @@
                           </span>
                         </button>
                       </li>
-                      <li class="filters__dropdown-list-item">
+                      <li class="filter__dropdown-list-item">
                         <button
                           data-filter="silver"
                           data-search="loader"
                           type="button"
-                          class="button filters__activator button_no-border button_transparent choose__button-phones choose__button_silver"
+                          class="button filter__activator button_no-border button_transparent choose__button-phones choose__button_silver"
                         >
                           <span class="choose__button-header no-select">
                             Серебряные
@@ -779,12 +778,12 @@
                           </span>
                         </button>
                       </li>
-                      <li class="filters__dropdown-list-item">
+                      <li class="filter__dropdown-list-item">
                         <button
                           data-filter="gold"
                           data-search="loader"
                           type="button"
-                          class="button filters__activator button_no-border button_transparent choose__button-phones choose__button_gold"
+                          class="button filter__activator button_no-border button_transparent choose__button-phones choose__button_gold"
                         >
                           <span class="choose__button-header no-select">
                             Золотые
@@ -797,12 +796,12 @@
                           </span>
                         </button>
                       </li>
-                      <li class="filters__dropdown-list-item">
+                      <li class="filter__dropdown-list-item">
                         <button
                           data-filter="vip"
                           data-search="loader"
                           type="button"
-                          class="button filters__activator button_no-border button_transparent choose__button-phones choose__button_vip"
+                          class="button filter__activator button_no-border button_transparent choose__button-phones choose__button_vip"
                         >
                           <span class="choose__button-header no-select">
                             VIP
@@ -819,13 +818,13 @@
                   </div>
                 </div>
                 <div
-                  class="filters filters__activators choose__phones-filters tablet"
+                  class="filter filter__activators choose__phones-filters tablet"
                 >
                   <button
                     type="button"
                     data-filter="usuals"
                     data-search="phones"
-                    class="button filters__activator filters__activator_active choose__button choose__button-phones choose__button_usual"
+                    class="button filter__activator filter__activator_active choose__button choose__button-phones choose__button_usual"
                   >
                     <div class="choose__button-header no-select">
                       Обычные
@@ -839,7 +838,7 @@
                     type="button"
                     data-filter="bronze"
                     data-search="phones"
-                    class="button filters__activator choose__button choose__button-phones choose__button_bronze"
+                    class="button filter__activator choose__button choose__button-phones choose__button_bronze"
                   >
                     <div class="choose__button-header no-select">
                       Бронзовые
@@ -853,7 +852,7 @@
                     data-filter="silver"
                     data-search="loader"
                     type="button"
-                    class="button filters__activator choose__button choose__button-phones choose__button_silver"
+                    class="button filter__activator choose__button choose__button-phones choose__button_silver"
                   >
                     Серебряные
                     <span class="choose__phones-quantity no-select">(421)</span>
@@ -864,7 +863,7 @@
                     data-filter="gold"
                     data-search="error"
                     type="button"
-                    class="filters__activator button choose__button choose__button-phones choose__button_gold"
+                    class="filter__activator button choose__button choose__button-phones choose__button_gold"
                   >
                     <div class="choose__button-header no-select">
                       Золотые
@@ -878,7 +877,7 @@
                     data-filter="vip"
                     data-search="phones"
                     type="button"
-                    class="button filters__activator choose__button button_light-gray choose__button-phones choose__button_vip"
+                    class="button filter__activator choose__button button_light-gray choose__button-phones choose__button_vip"
                   >
                     <div class="choose__button-header no-select">
                       VIP
@@ -894,7 +893,7 @@
                 <div
                   class="divider_cold-gray choose__phones-divider tablet"
                 ></div>
-                <div class="filters__items choose__phones-filter-items">
+                <div class="filter__items choose__phones-filter-items">
                   <div class="gift">
                     <button
                       class="button button_no-border button_transparent gift__button"
@@ -963,7 +962,7 @@
                     </div>
                   </div>
                   <div
-                    class="filters__item filters__item_active choose__phones-filter-item"
+                    class="filter__item filter__item_active choose__phones-filter-item"
                     data-filter="usuals"
                     aria-hidden="true"
                   >
@@ -974,7 +973,7 @@
                     <div class="choose__phones-cards"></div>
                   </div>
                   <div
-                    class="filters__item choose__phones-filter-item"
+                    class="filter__item choose__phones-filter-item"
                     data-filter="bronze"
                     aria-hidden="true"
                   >
@@ -1081,14 +1080,14 @@
                     </div>
                   </div>
                   <div
-                    class="filters__item choose__phones-filter-item"
+                    class="filter__item choose__phones-filter-item"
                     data-filter="silver"
                     aria-hidden="true"
                   >
                     <div class="loader"></div>
                   </div>
                   <div
-                    class="filters__item choose__phones-filter-item"
+                    class="filter__item choose__phones-filter-item"
                     data-filter="gold"
                     aria-hidden="true"
                   >
@@ -1152,7 +1151,7 @@
                     </div>
                   </div>
                   <div
-                    class="filters__item choose__phones-filter-item"
+                    class="filter__item choose__phones-filter-item"
                     data-filter="vip"
                     aria-hidden="true"
                   >
