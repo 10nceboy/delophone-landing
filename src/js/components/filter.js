@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 activators.forEach((activator) => {
   activator.addEventListener('click', (event) => {
-    const { filterId, searchId } = event.currentTarget.dataset;
+    const filterId = event.currentTarget.dataset.filter;
+    const searchId = event.currentTarget.dataset.search;
     const topFilters = ['cities', 'mobiles', '8800'];
     const bottomFilters = ['usuals', 'bronze', 'silver', 'gold', 'vip'];
 
