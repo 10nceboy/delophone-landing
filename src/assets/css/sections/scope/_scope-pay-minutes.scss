@@ -1,0 +1,19 @@
+.scope-pay-minutes {
+  &__container {
+    background-color: $white;
+  }
+
+  &__content {
+    background-color: $light-gray;
+  }
+
+  &__button {
+    margin-top: 80px;
+  }
+
+  &__chip {
+    @include tablet {
+      border-color: $gray2;
+    }
+  }
+}

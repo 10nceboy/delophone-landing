@@ -1,5 +1,7 @@
 .results {
   background-color: $light-gray;
+  padding-bottom: $spacer * 16;
+
   @include tablet {
     padding: $spacer * 14 0px $spacer * 19 0px;
   }
@@ -10,8 +12,21 @@
 
   &__header {
     margin-bottom: $spacer * 4;
+
     h3 {
       font-size: 20px;
+    }
+
+    @include tablet {
+      h3 {
+        font-size: 22px;
+      }
+    }
+
+    @include laptop {
+      h3 {
+        font-size: 26px;
+      }
     }
   }
 
@@ -19,6 +34,7 @@
     @include tablet {
       column-count: 2;
       column-gap: 20px;
+      column-fill: balance;
     }
 
     @include laptop {
