@@ -288,3 +288,9 @@
     margin-bottom: 5px;
   }
 }
+
+.header__dropdown-possibles {
+  @include tablet {
+    margin-top: 0px;
+  }
+}
