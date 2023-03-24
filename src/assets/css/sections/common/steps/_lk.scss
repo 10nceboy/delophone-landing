@@ -160,10 +160,6 @@
     width: 100%;
 
     @include tablet {
-      display: none;
-    }
-
-    @include tablet {
       margin-top: $spacer * 4;
     }
 

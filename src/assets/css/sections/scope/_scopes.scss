@@ -1,0 +1,64 @@
+.scopes {
+  @include tablet {
+    padding-bottom: 150px;
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &__cards {
+    @include tablet {
+      @include flex-row;
+      padding-top: $spacer * 11;
+    }
+  }
+
+  &__card {
+    padding-top: $spacer * 4;
+    max-width: 255px;
+    min-width: 255px;
+    max-height: 250px;
+    margin-right: $spacer * 6;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  &__card-header {
+    padding: $spacer * 3 $spacer * 4 $spacer * 4;
+    box-sizing: border-box;
+  }
+
+  &__card-header-home {
+    padding-top: 0px;
+  }
+
+  &__card-icon {
+    max-width: 255px;
+    min-width: 255px;
+    max-height: 159px;
+    min-width: 211px;
+  }
+
+  &__card-away {
+    padding-top: $spacer;
+
+    img {
+      max-height: 154px;
+      min-height: 154px;
+      max-width: 211px;
+      margin-bottom: -3.1px;
+      padding-right: 20px;
+      padding-left: 20px;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__divider {
+    display: block;
+    position: relative;
+    z-index: 99;
+  }
+}
