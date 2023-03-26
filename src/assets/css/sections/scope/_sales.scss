@@ -1,7 +1,15 @@
 .sales {
+  &__hero {
+    margin-bottom: 80px;
+
+    @include tablet {
+      margin-bottom: 0px;
+    }
+  }
+
   &__graphic {
     position: relative;
-
+    display: none;
     top: 0;
     left: 0;
     &::before {
@@ -10,13 +18,48 @@
       top: -50px;
       left: 3%;
     }
+
+    @include tablet {
+      display: block;
+      &::before {
+        z-index: 1;
+      }
+    }
   }
 
   &__content {
-    margin-top: 55px;
+    margin-top: 0px;
+
+    @include tablet {
+      margin-top: $spacer * 11;
+    }
   }
 
   &__header {
-    text-align: center;
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__scheme-mobile {
+    display: block;
+    margin-top: $spacer * 8;
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__graphic-mobile {
+    display: block;
+    position: relative;
+    &::before {
+      content: url(/sales-graphic-mobile.svg);
+      position: absolute;
+      top: -525px;
+      left: 50%;
+    }
+    @include tablet {
+      display: none;
+    }
   }
 }

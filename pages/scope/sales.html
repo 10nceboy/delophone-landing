@@ -118,30 +118,42 @@
       </section>
       <section class="focus">
         <div class="container">
-          <div class="focus-header">
-            <h2>Телефония с фокусом на эффективные продажи</h2>
-            <div class="focus__caption">
-              Телефония Делофон поможет наладить телефонные продажи в компании,
-              повысить качество и скорость обзвона, а также контролировать
-              работу сотрудников.
+          <div class="focus__wrapper">
+            <div class="focus__textblock">
+              <div class="focus__header">
+                <h2>Телефония с фокусом на эффективные продажи</h2>
+              </div>
+              <div class="focus__caption">
+                Телефония Делофон поможет наладить телефонные продажи в
+                компании, повысить качество и скорость обзвона, а также
+                контролировать работу сотрудников.
+              </div>
+              <ul class="list focus__list">
+                <li class="list-item list-item_checked focus__caption">
+                  Сотрудникам работать, как им удобно
+                </li>
+                <li class="list-item list-item_checked focus__caption">
+                  Клиентам всегда дозваниваться до вас
+                </li>
+                <li class="list-item list-item_checked focus__caption">
+                  Руководителю контролировать процесс продаж
+                </li>
+              </ul>
             </div>
-            <ul class="list">
-              <li class="list-item list-item_checked">
-                Сотрудникам работать, как им удобно
-              </li>
-              <li class="list-item list-item_checked">
-                Клиентам всегда дозваниваться до вас
-              </li>
-              <li class="list-item list-item_checked">
-                Руководителю контролировать процесс продаж
-              </li>
-            </ul>
+
+            <div class="focus__imageblock">
+              <img
+                class="sales__scheme-mobile"
+                src="/sales-scheme-mobile.svg"
+                alt="Cхема работы отдела"
+              />
+            </div>
           </div>
         </div>
       </section>
       <section class="promophone">
         <div class="container">
-          <div class="card card_white card__rectangle promophone__content">
+          <div class="card card_white card_rectangle promophone__content">
             <div class="promophone__header">
               <h3>Больше, чем просто «звонилка» для менеджера</h3>
             </div>
@@ -593,6 +605,7 @@
               </div>
             </div>
           </div>
+          <div class="sales__graphic-mobile"></div>
           <div class="sales__graphic"></div>
           <div
             class="card card_rectangle card_white promophone__content sales__content"
@@ -601,22 +614,22 @@
               <h3>Улучшайте работу в отделе продаж</h3>
             </div>
             <ul class="promophone__list">
-              <li class="list-item list-item_checked promophone__list-item">
+              <li class="list-item_checked promophone__list-item">
                 Оптимизируйте скрипты продаж
               </li>
-              <li class="list-item list-item_checked promophone__list-item">
+              <li class="list-item_checked promophone__list-item">
                 Выявляйте недостатки вовремя
               </li>
-              <li class="list-item list-item_checked promophone__list-item">
+              <li class="list-item_checked promophone__list-item">
                 Упростите внедрение сотрудника
               </li>
-              <li class="list-item list-item_checked promophone__list-item">
+              <li class="list-item_checked promophone__list-item">
                 Распределяйте нагрузку
               </li>
-              <li class="list-item list-item_checked promophone__list-item">
+              <li class="list-item_checked promophone__list-item">
                 Повышайте активность работы
               </li>
-              <li class="list-item list-item_checked promophone__list-item">
+              <li class="list-item_checked promophone__list-item">
                 Адаптируйте систему мотивации
               </li>
             </ul>
@@ -1532,6 +1545,7 @@
             <div class="scope-steps__step scope-steps__second-step">
               <div class="scope-steps__upside-header">
                 <svg
+                  class="scope-steps__icon"
                   width="35"
                   height="35"
                   viewBox="0 0 35 35"
@@ -1565,6 +1579,7 @@
             <div class="scope-steps__step scope-steps__third-step">
               <div class="scope-steps__upside-header">
                 <svg
+                  class="scope-steps__icon"
                   width="35"
                   height="35"
                   viewBox="0 0 35 35"
@@ -1598,6 +1613,7 @@
             <div class="scope-steps__step scope-steps__forth-step">
               <div class="scope-steps__upside-header">
                 <svg
+                  class="scope-steps__icon"
                   width="35"
                   height="35"
                   viewBox="0 0 35 35"
@@ -2340,7 +2356,9 @@
             <h2>Другие сферы применения телефонии</h2>
           </div>
           <div class="scopes__cards">
-            <div class="card card_rectangle card_light-gray scopes__card">
+            <div
+              class="card card_hover card_rectangle card_light-gray scopes__card"
+            >
               <img
                 class="scopes__card-icon"
                 src="../../src/assets/images/sections/scope/scope-office.png"
@@ -2349,7 +2367,9 @@
                 <h4>Для небольшого офиса</h4>
               </div>
             </div>
-            <div class="card card_rectangle card_light-gray scopes__card">
+            <div
+              class="card card_hover card_rectangle card_light-gray scopes__card"
+            >
               <img
                 class="scopes__card-icon no-select"
                 src="../../src/assets/images/sections/scope/scope-home.png"
@@ -2360,40 +2380,28 @@
               </div>
             </div>
             <div
-              class="card card_rectangle card_light-gray scopes__card scopes__card-away"
+              class="card card_hover card_rectangle card_light-gray card_hover scopes__card scopes__card-away"
+            >
+              <a href="#">
+                <img
+                  class="scopes__card-icon no-select"
+                  src="../../src/assets/images/sections/scope/scope-away.png"
+                />
+
+                <div class="scopes__card-header scopes__card-header-away">
+                  <h4>Для сотрудников в разъездах</h4>
+                </div>
+              </a>
+            </div>
+            <div
+              class="card card_rectangle card_hover card_light-gray scopes__card scopes__card-away"
             >
               <img
                 class="scopes__card-icon no-select"
-                src="../../src/assets/images/sections/scope/scope-away.png"
-              />
-              <svg
-                class="scopes__divider"
-                width="255"
-                height="1"
-                viewBox="0 0 255 1"
-                fill="#55626F"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <line
-                  y1="0.75"
-                  x2="255"
-                  y2="0.75"
-                  stroke="#55626F"
-                  stroke-width="0.5"
-                />
-              </svg>
-
-              <div class="scopes__card-header">
-                <h4>Для сотрудников в разъездах</h4>
-              </div>
-            </div>
-            <div class="card card_rectangle card_light-gray scopes__card">
-              <img
-                class="scopes__card-icon no-select"
-                src="../../src/assets/images/sections/scope/scope-home.png"
+                src="../../src/assets/images/sections/scope/scope-phone.png"
               />
 
-              <div class="scopes__card-header scopes__card-header-home">
+              <div class="scopes__card-header scopes__card-header-away">
                 <h4>Вместо обычного телефона</h4>
               </div>
             </div>

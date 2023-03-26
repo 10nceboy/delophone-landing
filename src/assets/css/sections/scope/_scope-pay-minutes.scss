@@ -1,7 +1,11 @@
 .scope-pay-minutes {
   background-color: $light-gray;
   margin-top: 0px;
-  padding-top: 50px;
+  padding-top: $spacer * 9;
+
+  @include tablet {
+    padding-top: $spacer * 19;
+  }
 
   &__container {
     background-color: $white;
