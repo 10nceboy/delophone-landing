@@ -3,7 +3,7 @@
     margin-bottom: 80px;
 
     @include tablet {
-      margin-bottom: 0px;
+      margin-bottom: 150px;
     }
   }
 
@@ -29,6 +29,8 @@
 
   &__content {
     margin-top: 0px;
+    position: relative;
+    z-index: 2;
 
     @include tablet {
       margin-top: $spacer * 11;
@@ -52,12 +54,64 @@
   &__graphic-mobile {
     display: block;
     position: relative;
+    z-index: 1;
     &::before {
       content: url(/sales-graphic-mobile.svg);
       position: absolute;
       top: -525px;
       left: 50%;
     }
+
+    @include mobile-425 {
+      &::before {
+        left: 60%;
+      }
+    }
+
+    @include mobile-l {
+      &::before {
+        left: 65%;
+      }
+    }
+
+    @include mobile-s {
+      &::before {
+        left: 70%;
+      }
+    }
+
+    @include smartphone {
+      &::before {
+        left: 77%;
+      }
+    }
+
+    @include tablet-768 {
+      &::before {
+        left: 78%;
+      }
+    }
+
+    @include tablet-x {
+      &::before {
+        left: 79%;
+      }
+    }
+
+    @include tablet-m {
+      &::before {
+        left: 80%;
+        top: -512px;
+      }
+    }
+
+    @include tablet-l {
+      &::before {
+        left: 82%;
+        top: -508px;
+      }
+    }
+
     @include tablet {
       display: none;
     }
