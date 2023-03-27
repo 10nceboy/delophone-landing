@@ -12,17 +12,24 @@
     display: none;
     top: 0;
     left: 0;
-    &::before {
-      content: url(/sales-graphic.svg);
-      position: absolute;
-      top: -50px;
-      left: 3%;
-    }
 
     @include tablet {
       display: block;
       &::before {
         z-index: 1;
+        content: url(/public/sales-graphic-tablet.svg);
+        top: -39px;
+        left: 11%;
+        position: absolute;
+      }
+    }
+
+    @include laptop {
+      &::before {
+        content: url(/sales-graphic.svg);
+
+        top: -50px;
+        left: 3%;
       }
     }
   }

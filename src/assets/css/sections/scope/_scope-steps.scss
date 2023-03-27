@@ -18,6 +18,7 @@
 
     @include tablet {
       margin-bottom: 0px;
+      max-width: 330px;
     }
 
     @include laptop {
@@ -51,8 +52,20 @@
         content: url(/scope-steps-step2-arc.svg);
         position: absolute;
         top: -50px;
-        right: -125px;
+        right: -95px;
         z-index: 2;
+      }
+
+      @include laptop {
+        &::before {
+          right: -95px;
+        }
+      }
+
+      @include desktop {
+        &::before {
+          right: -125px;
+        }
       }
     }
   }
@@ -118,6 +131,7 @@
     font-weight: $medium;
     font-size: 16px;
     margin-top: $spacer * 2;
+    font-weight: 400;
 
     @include smartphone {
       font-size: 18px;
@@ -132,6 +146,7 @@
     @include laptop {
       font-size: 18px;
       max-width: 242px;
+      margin-top: $spacer * 4;
     }
   }
 
@@ -146,6 +161,7 @@
     line-height: 155%;
     display: block;
     margin-top: $spacer * 2;
+
     @include laptop {
       font-size: 16px;
       margin-top: $spacer * 4;

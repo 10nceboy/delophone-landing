@@ -72,6 +72,22 @@
     <div class="overlay"></div>
     {{> header }}
     <main>
+      <div class="container">
+        <nav>
+          <ul class="breadcrumbs price__breadcrumbs">
+            <li>
+              <a
+                class="link link_black breadcrumbs__link"
+                href="../"
+                aria-label="Главная"
+              >
+                Главная&nbsp;/</a
+              >
+            </li>
+            <li>Для отдела продаж</li>
+          </ul>
+        </nav>
+      </div>
       <section class="hero sales__hero" id="hero">
         <div class="container">
           <div class="hero__container">
@@ -2364,7 +2380,10 @@
                 src="../../src/assets/images/sections/scope/scope-office.png"
               />
               <div class="scopes__card-header">
-                <h4>Для небольшого офиса</h4>
+                <h4>
+                  Для небольшого <br class="scopes__break" />
+                  офиса
+                </h4>
               </div>
             </div>
             <div
@@ -2394,7 +2413,7 @@
               </a>
             </div>
             <div
-              class="card card_rectangle card_hover card_light-gray scopes__card scopes__card-away"
+              class="card card_rectangle card_hover card_light-gray scopes__card scopes__card-phone"
             >
               <img
                 class="scopes__card-icon no-select"
