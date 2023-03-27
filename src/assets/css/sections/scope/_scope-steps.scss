@@ -36,7 +36,19 @@
         content: url(/scope-steps-step1-arc.svg);
         position: absolute;
         top: -70px;
-        left: -132px;
+        left: -115px;
+      }
+
+      @include tablet-1024 {
+        &::before {
+          left: -141px;
+        }
+      }
+
+      @include laptop {
+        &::before {
+          left: -132px;
+        }
       }
     }
   }
@@ -52,8 +64,15 @@
         content: url(/scope-steps-step2-arc.svg);
         position: absolute;
         top: -50px;
-        right: -95px;
+        right: -55px;
         z-index: 2;
+      }
+
+      @include tablet-1024 {
+        &::before {
+          top: -50px;
+          right: -135px;
+        }
       }
 
       @include laptop {
@@ -79,11 +98,18 @@
     @include tablet {
       margin-top: -$spacer * 3;
       &::before {
-        content: url(/scope-steps-step3-arc.svg);
+        content: url(/scope-steps-step1-arc.svg);
         position: absolute;
         top: -50px;
-        left: -150px;
+        left: -120px;
         z-index: 2;
+      }
+
+      @include tablet-1024 {
+        &::before {
+          content: url(/scope-steps-step3-arc.svg);
+          left: -150px;
+        }
       }
     }
   }
@@ -107,6 +133,22 @@
       margin-left: $spacer * 2;
     }
 
+    @include smartphone {
+      h4 {
+        font-size: 19px;
+      }
+    }
+
+    @include tablet {
+      h4 {
+        font-size: 19px;
+      }
+    }
+
+    @include tablet-1024 {
+      font-size: 18px;
+    }
+
     @include laptop {
       margin-bottom: $spacer * 3;
       h4 {
@@ -119,6 +161,15 @@
   &__caption {
     @include font($normal, 15px, $gray);
     line-height: 155%;
+
+    @include smartphone {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      font-size: 15px;
+    }
+
     @include laptop {
       font-size: 16px;
       max-width: 430px;
@@ -133,12 +184,8 @@
     margin-top: $spacer * 2;
     font-weight: 400;
 
-    @include smartphone {
-      font-size: 18px;
-    }
-
     @include tablet {
-      font-size: 16px;
+      font-size: 15px;
       margin-top: $spacer * 5;
       max-width: 235px;
     }
@@ -161,6 +208,14 @@
     line-height: 155%;
     display: block;
     margin-top: $spacer * 2;
+
+    @include smartphone {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      font-size: 15px;
+    }
 
     @include laptop {
       font-size: 16px;

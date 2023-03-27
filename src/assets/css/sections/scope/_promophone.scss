@@ -318,7 +318,6 @@
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
       grid-row-gap: $spacer * 3;
-
       padding: $spacer * 3 0 $spacer * 4;
     }
 
@@ -337,6 +336,7 @@
     line-height: 155%;
     max-width: 220px;
     display: flex;
+
     @include tablet {
       margin-bottom: 0px;
     }
@@ -356,14 +356,26 @@
 
   &__feature-list-item {
     padding-bottom: $spacer * 3;
-    @include tablet {
+
+    @include smartphone {
       @include flex-row;
+    }
+
+    @include tablet {
       padding-bottom: $spacer * 5;
       white-space: nowrap;
     }
   }
 
   &__feature-text {
+    @include smartphone {
+      margin-left: $spacer * 3;
+    }
+
+    @include tablet {
+      margin-left: $spacer;
+    }
+
     @include laptop {
       margin-left: $spacer * 3;
     }
