@@ -18,12 +18,13 @@
   &__hero-imageblock {
     max-width: 543px;
     max-height: 309px;
-    margin-left: 0px;
+
     @include laptop {
       img {
         width: 543px;
         height: 309px;
       }
+      margin-left: 75px;
     }
   }
 
