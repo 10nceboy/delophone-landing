@@ -11,6 +11,18 @@
 
     @include tablet {
       margin-bottom: $spacer * 4;
+
+      h2 {
+        font-size: 24px;
+        line-height: 135%;
+        flex: 1 1;
+      }
+
+      @include laptop {
+        h2 {
+          font-size: 32px;
+        }
+      }
     }
   }
 
@@ -37,6 +49,20 @@
 
     @include tablet {
       @include flex-row;
+    }
+  }
+
+  &__imageblock {
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__textblock {
+    @include laptop {
+      min-width: 540px;
+      flex: 1;
+      box-sizing: border-box;
     }
   }
 }

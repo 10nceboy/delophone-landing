@@ -2,21 +2,51 @@
   background-color: $light-gray;
   margin-top: 0px;
   padding-top: $spacer * 9;
+  padding-bottom: 80px;
+  margin-bottom: 0px;
 
   @include tablet {
-    padding-top: $spacer * 19;
+    padding-top: $spacer * 10;
+    padding-bottom: $spacer * 30;
+    margin-bottom: 0px;
   }
 
   &__container {
-    background-color: $white;
+    background-color: $light-gray;
+
+    @include tablet {
+      background-color: $white;
+    }
   }
 
   &__content {
-    background-color: $light-gray;
+    background-color: $white;
+
+    @include tablet {
+      background-color: $light-gray;
+    }
   }
 
   &__button {
-    margin-top: 80px;
+    display: none;
+
+    @include tablet {
+      margin-top: 30px;
+      display: block;
+    }
+
+    @include laptop {
+      margin-top: 80px;
+    }
+  }
+
+  &__button-mobile {
+    width: 100%;
+    margin-top: $spacer * 3;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__chip {

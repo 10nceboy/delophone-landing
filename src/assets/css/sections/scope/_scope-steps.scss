@@ -3,7 +3,7 @@
   padding: $spacer * 16 0 $spacer * 4;
 
   @include tablet {
-    padding: 150px 0;
+    padding: 150px 0 70px;
   }
 
   &__header {
@@ -116,6 +116,7 @@
 
   &__upside {
     padding: $spacer * 4;
+    z-index: 2;
 
     @include tablet {
       padding: $spacer * 10;

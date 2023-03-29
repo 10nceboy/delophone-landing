@@ -9,3 +9,4 @@ import '~/js/components/city';
 import '~/js/components/menu';
 import '~/js/components/carousel';
 import '~/js/components/modal';
+import '~/js/components/scheme';
