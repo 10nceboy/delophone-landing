@@ -338,12 +338,22 @@
     max-width: 220px;
     display: flex;
 
+    @include mobile-s {
+      max-width: 100%;
+    }
+
+    @include smartphone {
+      max-width: 100%;
+      font-size: 16px;
+    }
+
     @include tablet {
       margin-bottom: 0px;
     }
 
     @include tablet {
       max-width: 100%;
+      font-size: 14px;
     }
 
     @include laptop {

@@ -1,6 +1,12 @@
 .scope-calculator {
-  margin-bottom: $spacer * 5;
+  padding-bottom: 80px;
+
+  @include tablet {
+    padding-bottom: 0px;
+  }
+
   &__header {
+    margin-bottom: $spacer * 5;
     @include tablet {
       margin-bottom: $spacer * 10;
     }
@@ -13,7 +19,7 @@
       position: relative;
 
       &::before {
-        content: url('/public/arc__scope-calc.svg');
+        content: url('/arc__scope-calc.svg');
         position: absolute;
         top: -264px;
         left: 96%;

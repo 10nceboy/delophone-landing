@@ -8,8 +8,11 @@
   &__header {
     margin-bottom: $spacer * 5;
 
-    @include tablet {
+    @include smartphone {
       text-align: center;
+    }
+
+    @include tablet {
       margin-bottom: 0;
     }
   }
@@ -251,6 +254,7 @@
   }
 
   &__card-phone {
+    padding-top: 20px;
     img {
       max-height: 136px;
       min-height: 136px;
@@ -317,6 +321,26 @@
 
     @include smartphone {
       display: none;
+    }
+  }
+
+  &__card-header-phone {
+    padding-top: 18px;
+
+    @include mobile-l {
+      padding-top: $spacer * 3;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    @include mobile-s {
+      padding-top: $spacer * 3;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    @include tablet {
+      padding-top: $spacer * 4;
     }
   }
 }

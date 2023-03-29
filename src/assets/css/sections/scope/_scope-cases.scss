@@ -1,0 +1,7 @@
+.scope-cases {
+  &__card {
+    @include smartphone {
+      cursor: default;
+    }
+  }
+}
