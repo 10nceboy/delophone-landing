@@ -1,0 +1,63 @@
+.results {
+  background-color: $light-gray;
+  padding-bottom: $spacer * 16;
+
+  @include tablet {
+    padding: $spacer * 14 0px $spacer * 19 0px;
+  }
+
+  &__subsection {
+    margin-bottom: $spacer * 11;
+  }
+
+  &__header {
+    margin-bottom: $spacer * 4;
+
+    h3 {
+      font-size: 20px;
+    }
+
+    @include tablet {
+      h3 {
+        font-size: 22px;
+      }
+    }
+
+    @include laptop {
+      h3 {
+        font-size: 26px;
+      }
+    }
+  }
+
+  &__article {
+    @include tablet {
+      column-count: 2;
+      column-gap: 20px;
+      column-fill: balance;
+    }
+
+    @include laptop {
+      column-gap: 30px;
+      min-height: 236px;
+    }
+  }
+
+  &__paragraph {
+    @include font($normal, 14px, $gray);
+    line-height: 150%;
+    margin-bottom: $spacer * 2;
+    @include tablet {
+      margin-bottom: $spacer * 2;
+    }
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+
+  &__paragraph_no-margin {
+    @include tablet {
+      margin-bottom: 0px;
+    }
+  }
+}

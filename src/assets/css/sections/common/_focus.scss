@@ -1,0 +1,68 @@
+.focus {
+  background-color: $light-gray;
+  padding-top: $spacer * 14;
+
+  @include tablet {
+    padding-top: 100px;
+  }
+
+  &__header {
+    margin-bottom: $spacer * 2;
+
+    @include tablet {
+      margin-bottom: $spacer * 4;
+
+      h2 {
+        font-size: 24px;
+        line-height: 135%;
+        flex: 1 1;
+      }
+
+      @include laptop {
+        h2 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+
+  &__caption {
+    @include font($normal, 15px, $gray);
+    line-height: 155%;
+
+    @include smartphone {
+      font-size: 15px;
+    }
+
+    @include laptop {
+      font-size: 20px;
+    }
+  }
+
+  &__list {
+    margin-top: $spacer * 2;
+  }
+
+  &__wrapper {
+    @include flex-col;
+    align-items: center;
+
+    @include tablet {
+      @include flex-row;
+    }
+  }
+
+  &__imageblock {
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__textblock {
+    @include laptop {
+      min-width: 540px;
+      flex: 1;
+      box-sizing: border-box;
+    }
+  }
+}
