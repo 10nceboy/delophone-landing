@@ -3,7 +3,7 @@
   padding-top: $spacer * 14;
 
   @include tablet {
-    padding-top: 100px;
+    padding-top: 150px;
   }
 
   &__header {
@@ -59,8 +59,13 @@
   }
 
   &__textblock {
+    @include tablet {
+      margin-right: 10px;
+    }
     @include laptop {
-      min-width: 540px;
+      min-width: 520px;
+      max-width: 520px;
+      margin-right: 38px;
       flex: 1;
       box-sizing: border-box;
     }

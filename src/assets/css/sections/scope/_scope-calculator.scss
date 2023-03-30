@@ -2,7 +2,8 @@
   padding-bottom: 80px;
 
   @include tablet {
-    padding-bottom: 0px;
+    padding-bottom: 150px;
+    margin-bottom: 50px;
   }
 
   &__header {
