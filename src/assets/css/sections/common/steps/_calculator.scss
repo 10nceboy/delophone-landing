@@ -827,3 +827,22 @@ $line-width: 140px;
     margin-bottom: $spacer * 3;
   }
 }
+
+.calculator__tooltip-in {
+  margin-top: -4px;
+  @include tablet {
+    margin-top: 0px;
+  }
+
+  @include smartphone {
+    .tooltip__content {
+      margin-left: 20px;
+    }
+  }
+
+  @include tablet {
+    .tooltip__content {
+      margin-left: 0px;
+    }
+  }
+}

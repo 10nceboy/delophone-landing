@@ -48,8 +48,11 @@
     @include tablet {
       margin-top: 0px;
     }
-    .tooltip__content {
-      margin-left: 20px;
+
+    @include smartphone {
+      .tooltip__content {
+        margin-left: 20px;
+      }
     }
 
     @include tablet {
