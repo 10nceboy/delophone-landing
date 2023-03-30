@@ -717,9 +717,11 @@ $line-width: 140px;
     @include flex-col;
 
     svg {
-      display: none;
-
       @include tablet {
+        display: block;
+      }
+
+      .tooltip__activator {
         display: block;
       }
     }
@@ -743,6 +745,7 @@ $line-width: 140px;
   }
 
   &__in-out-icon {
+    display: none;
     @include tablet {
       margin-right: $spacer * 2;
       width: 44px;

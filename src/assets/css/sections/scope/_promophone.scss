@@ -346,6 +346,14 @@
     max-width: 220px;
     display: flex;
 
+    @include mobile-425 {
+      max-width: 100%;
+    }
+
+    @include mobile-l {
+      max-width: 100%;
+    }
+
     @include mobile-s {
       max-width: 100%;
     }

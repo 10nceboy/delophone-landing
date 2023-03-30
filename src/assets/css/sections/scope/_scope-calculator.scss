@@ -42,4 +42,11 @@
       }
     }
   }
+
+  &__tooltip {
+    margin-top: -4px;
+    @include tablet {
+      margin-top: 0px;
+    }
+  }
 }
