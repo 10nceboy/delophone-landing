@@ -150,8 +150,8 @@
   }
 
   &__card-icon {
-    max-width: 255px;
-    min-width: 255px;
+    max-width: 254px;
+    min-width: 254px;
     max-height: 159px;
     min-width: 211px;
 
@@ -179,8 +179,8 @@
     }
 
     @include laptop {
-      max-width: 255px;
-      min-width: 255px;
+      max-width: 250px;
+      min-width: 230px;
       max-height: 159px;
       min-width: 211px;
     }
