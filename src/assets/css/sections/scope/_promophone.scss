@@ -137,7 +137,15 @@
     }
 
     @include tablet {
-      font-size: 18px;
+      h4 {
+        font-size: 17px;
+      }
+    }
+
+    @include laptop {
+      h4 {
+        font-size: 20px;
+      }
     }
   }
 
