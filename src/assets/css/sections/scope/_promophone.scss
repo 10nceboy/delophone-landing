@@ -29,6 +29,10 @@
     padding: $spacer * 4;
     padding-bottom: 0;
 
+    @include smartphone {
+      padding-top: $spacer * 10;
+    }
+
     @include laptop {
       padding: $spacer * 10;
       padding-bottom: 0;
@@ -45,9 +49,16 @@
       grid-gap: $spacer * 4;
     }
 
+    @include smartphone {
+      padding-bottom: $spacer * 7;
+    }
+
+    @include tablet {
+      padding-bottom: $spacer * 10;
+    }
+
     @include laptop {
       grid-gap: $spacer * 6;
-      padding-bottom: $spacer * 10;
     }
   }
 
@@ -67,7 +78,7 @@
 
     @include tablet {
       margin-bottom: 0px;
-      min-height: 229px;
+      min-height: 190px;
     }
 
     @include laptop {
@@ -110,6 +121,7 @@
     @include smartphone {
       min-width: 312px;
       max-width: 88%;
+      padding: $spacer * 4;
     }
 
     @include tablet-768 {
@@ -121,8 +133,9 @@
     @include tablet {
       max-width: 350px;
       max-height: 186px;
-      min-height: 186px;
+      min-height: 196px;
       min-width: 260px;
+      padding: $spacer * 4;
     }
   }
 

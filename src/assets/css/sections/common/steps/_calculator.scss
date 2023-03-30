@@ -702,11 +702,11 @@ $line-width: 140px;
   &__in-out {
     margin-top: $spacer * 4;
     margin-bottom: $spacer * 4;
-    padding: 0 $spacer * 4;
+    padding: 0 $spacer * 4 $spacer * 4;
 
     @include tablet {
-      padding: auto;
       max-width: -webkit-fill-available;
+      padding-bottom: 0px;
     }
 
     h5 {

@@ -22,6 +22,7 @@
     }
 
     @include tablet {
+      max-width: 509px;
       h3 {
         font-size: 22px;
       }
