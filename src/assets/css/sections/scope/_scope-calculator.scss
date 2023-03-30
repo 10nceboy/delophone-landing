@@ -18,13 +18,13 @@
     @include tablet {
       display: block;
       position: relative;
+      z-index: 1;
 
       &::before {
-        content: url('/arc__scope-calc.svg');
+        content: url(/public/arc-scope-calc.svg);
         position: absolute;
         top: -264px;
         left: 96%;
-        z-index: 1;
       }
 
       @include laptop {

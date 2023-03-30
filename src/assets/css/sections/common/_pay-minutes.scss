@@ -3,6 +3,12 @@
   background-color: $white;
   margin-bottom: $spacer * 12;
 
+  @include tablet {
+    margin-top: $spacer * 20;
+    background-color: $white;
+    margin-bottom: 100px;
+  }
+
   &__break {
     @include smartphone {
       display: none;
@@ -23,8 +29,7 @@
       align-items: flex-start;
       background-color: $light-gray;
       padding: $spacer * 6 $spacer * 4;
-      max-height: 250px;
-      min-height: 250px;
+
       box-sizing: border-box;
     }
 
@@ -33,12 +38,6 @@
       min-height: 343px;
       padding: $spacer * 10;
     }
-  }
-
-  @include tablet {
-    margin-top: $spacer * 20;
-    background-color: $white;
-    margin-bottom: 100px;
   }
 
   &__header {
