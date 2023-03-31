@@ -27,7 +27,8 @@ export default defineConfig({
         price: resolve(__dirname, 'pages/price.html'),
         numbers: resolve(__dirname, 'pages/numbers.html'),
         order: resolve(__dirname, 'pages/order.html'),
-        sales: resolve(__dirname, 'pages/scope/sales.html')
+        sales: resolve(__dirname, 'pages/scope/sales.html'),
+        sales: resolve(__dirname, 'pages/scope/remote.html')
       }
     }
   }
