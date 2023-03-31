@@ -45,7 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (state) {
         activator.classList.toggle('collapse__activator_active');
         transitionEnter(content, 'collapse__content');
-        starter.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
+        if (starter) {
+          starter.scrollIntoView({
+            block: 'start',
+            behavior: 'smooth',
+            inline: 'end'
+          });
+        }
       } else {
         transitionLeave(content, 'collapse__content');
         window.setTimeout(() => {
@@ -57,7 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (state && !isInViewport(content)) {
           scrolling = true;
           scrollToElement(collapse);
-          starter.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
+          starter.scrollIntoView({
+            block: 'start',
+            behavior: 'smooth',
+            inline: 'end'
+          });
 
           window.setTimeout(() => (scrolling = false), animationDruation);
         }
