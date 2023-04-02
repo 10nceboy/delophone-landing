@@ -361,6 +361,7 @@
   }
 
   &__card-sales {
+    display: block;
     @include tablet {
       padding: 5px;
       img {
