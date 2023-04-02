@@ -52,6 +52,7 @@
     @include font($normal, 14px, $gray);
     line-height: 150%;
     margin-bottom: $spacer * 2;
+    break-inside: avoid;
     @include tablet {
       margin-bottom: $spacer * 2;
     }

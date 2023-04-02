@@ -196,14 +196,27 @@
     box-sizing: border-box;
     margin-bottom: $spacer * 3;
 
+    @include laptop {
+      min-width: 316px;
+    }
+  }
+
+  &__feature-not {
     &::before {
       padding-top: $spacer;
       content: url(/icons/not.svg);
     }
+  }
 
-    @include laptop {
-      min-width: 316px;
+  &__feature-done {
+    &::before {
+      padding-top: $spacer;
+      content: url(/icons/done.svg);
     }
+  }
+
+  &__feature-no-margin {
+    margin-bottom: 0px;
   }
 
   &__feature-header {
@@ -250,9 +263,7 @@
   &__chips {
     box-sizing: border-box;
     @include tablet {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-gap: $spacer * 2;
+      @include flex-row;
       margin-left: auto;
     }
   }
@@ -264,12 +275,20 @@
     @include font($semi-bold, 14px, $black);
     line-height: 150%;
     display: none;
+    flex: 1;
+    flex-shrink: 0;
+    max-height: 51px;
 
     @include tablet {
       display: flex;
       padding: $spacer;
       line-height: 130%;
       font-size: 12px;
+      margin-right: 10px;
+
+      &:nth-child(3) {
+        margin-right: 0px;
+      }
     }
 
     @include tablet-1024 {
@@ -281,6 +300,7 @@
       padding: $spacer * 3;
       font-size: 14px;
       line-height: 150%;
+      max-width: fit-content;
     }
   }
 
