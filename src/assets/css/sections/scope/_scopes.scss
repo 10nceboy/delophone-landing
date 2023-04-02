@@ -372,6 +372,7 @@
     @include laptop {
       padding-top: $spacer * 2;
       overflow: hidden;
+
       img {
         max-width: 259px;
         max-height: 147px;
