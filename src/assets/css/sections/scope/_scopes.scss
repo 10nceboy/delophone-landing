@@ -363,7 +363,7 @@
   &__card-sales {
     display: block;
     @include tablet {
-      padding: 5px;
+      padding-top: $spacer;
       img {
         max-height: 190px;
       }
@@ -371,7 +371,7 @@
 
     @include laptop {
       padding-top: $spacer * 2;
-
+      overflow: hidden;
       img {
         max-width: 259px;
         max-height: 147px;
