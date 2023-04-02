@@ -90,20 +90,20 @@
       </div>
       <section class="hero remote__hero" id="hero">
         <div class="container">
-          <div class="hero__container">
+          <div class="hero__container remote__hero-container">
             <div class="hero__textblock">
               <h1>
                 Телефония с контролем<br />
                 <strong class="accent_orange">сотрудников на удалёнке</strong>
               </h1>
               <div class="container_adaptive">
-                <p class="text_regular hero__text">
+                <p class="text_regular hero__text remote__hero-textblock">
                   Сохраните качество и скорость коммуникаций при переводе
                   сотрудников на удалённую работу. Экономьте деньги на
                   обустройстве рабочих мест.
                 </p>
               </div>
-              <div class="hero__imageblock_mobile">
+              <div class="hero__imageblock_mobile remote__hero-imageblock">
                 <img
                   alt="Сотрудник на удаленке"
                   src="/src/assets/images/sections/scope/remote/hero/remote-hero.png"
@@ -124,7 +124,7 @@
             </div>
             <div class="hero__imageblock remote__hero-imageblock no-select">
               <img
-                alt="Довольные клиенты Делофона"
+                alt="Сотрудник на удаленке"
                 src="/src/assets/images/sections/scope/remote/hero/remote-hero.png"
                 class="no-select"
               />
@@ -145,21 +145,28 @@
                 звонки всех сотрудников.
               </div>
               <ul class="list focus__list">
-                <li class="list-item list-item_checked focus__caption">
-                  Сотрудникам работать, как им удобно
+                <li
+                  class="list-item list-item_checked focus__caption remote__focus-caption"
+                >
+                  Бесплатная связь между сотрудниками дома и в офисе
                 </li>
                 <li class="list-item list-item_checked focus__caption">
-                  Клиентам всегда дозваниваться до вас
+                  Продвинутый контроль продуктивности работы
                 </li>
                 <li class="list-item list-item_checked focus__caption">
-                  Руководителю контролировать процесс продаж
+                  Простой и быстрый перевод сотрудников на удалёнку
                 </li>
               </ul>
             </div>
             <div class="focus__imageblock"></div>
             <img
-              class="sales__scheme-mobile"
-              src="/sales-scheme-mobile.svg"
+              class="remote__scheme"
+              src="../../src/assets/images/sections/scope/remote/focus/remote-scheme.svg"
+              alt="Cхема работы отдела"
+            />
+            <img
+              class="remote__scheme-mobile"
+              src="../../src/assets/images/sections/scope/remote/focus/remote-scheme-mobile.svg"
               alt="Cхема работы отдела"
             />
           </div>
@@ -194,7 +201,7 @@
           </div>
           <div class="promophone__cards promophone__workcards">
             <div
-              class="card card_white card_rectangle promophone__card promophone__workcard"
+              class="card card_white card_rectangle promophone__card remote__card"
             >
               <svg
                 width="60"
@@ -242,13 +249,13 @@
               <div class="promophone__card-header">
                 <h4>Детализация звонков</h4>
               </div>
-              <div class="promophone__caption promophone__workcaption">
+              <div class="promophone__caption">
                 Статистика звонков в реальном времени и журнал звонков для
                 анализа работы.
               </div>
             </div>
             <div
-              class="card card_white card_rectangle promophone__card promophone__workcard"
+              class="card card_white card_rectangle promophone__card remote__card"
             >
               <svg
                 width="60"
@@ -271,7 +278,6 @@
                   stroke-linejoin="round"
                 />
               </svg>
-
               <div class="promophone__card-header">
                 <h4>Записи разговоров</h4>
               </div>
@@ -281,7 +287,7 @@
               </div>
             </div>
             <div
-              class="card card_white card_rectangle promophone__card promophone__workcard"
+              class="card card_white card_rectangle promophone__card remote__card"
             >
               <svg
                 width="60"
@@ -322,14 +328,18 @@
               <div class="promophone__card-header">
                 <h4>Голосовые меню</h4>
               </div>
-              <div class="promophone__caption promophone__workcaption">
+              <div class="promophone__caption">
                 Автоматически распределяйте клиентов по отделам, не отвлекаясь
                 от продаж.
               </div>
             </div>
           </div>
-          <div class="promophone__cards promophone__features">
-            <div class="card card_white promophone__feature">
+          <div
+            class="card_white card_rectangle promophone__features promophone__content remote__content"
+          >
+            <div
+              class="card card_white promophone__feature promophone__feature-not"
+            >
               <div class="promophone__feature-content">
                 <div class="promophone__feature-header">
                   <h4>Без снижения продуктивности</h4>
@@ -340,7 +350,9 @@
                 </div>
               </div>
             </div>
-            <div class="card card_white promophone__feature">
+            <div
+              class="card card_white promophone__feature promophone__feature-not"
+            >
               <div class="promophone__feature-content">
                 <div class="promophone__feature-header">
                   <h4>Без потери входящих звонков</h4>
@@ -351,7 +363,9 @@
                 </div>
               </div>
             </div>
-            <div class="card card_white promophone__feature">
+            <div
+              class="card card_white promophone__feature promophone__feature-no-margin promophone__feature-not"
+            >
               <div class="promophone__feature-content">
                 <div class="promophone__feature-header">
                   <h4>Без затрат на инфраструктуру</h4>
@@ -362,33 +376,93 @@
               </div>
             </div>
           </div>
-
-          <div
-            class="card card_rectangle card_white promophone__content sales__content"
-          >
-            <div class="promophone__header sales__header">
-              <h3>Улучшайте работу в отделе продаж</h3>
+        </div>
+      </section>
+      <section class="promophone">
+        <div class="container">
+          <div class="card card_white card_rectangle promophone__content">
+            <div class="promophone__header">
+              <h3>Позвольте каждому выбрать удобный способ связи</h3>
             </div>
-            <ul class="promophone__list">
-              <li class="list-item_checked promophone__list-item">
-                Оптимизируйте скрипты продаж
-              </li>
-              <li class="list-item_checked promophone__list-item">
-                Выявляйте недостатки вовремя
-              </li>
-              <li class="list-item_checked promophone__list-item">
-                Упростите внедрение сотрудника
-              </li>
-              <li class="list-item_checked promophone__list-item">
-                Распределяйте нагрузку
-              </li>
-              <li class="list-item_checked promophone__list-item">
-                Повышайте активность работы
-              </li>
-              <li class="list-item_checked promophone__list-item">
-                Адаптируйте систему мотивации
-              </li>
-            </ul>
+            <div class="promophone__cards promophone__features">
+              <div
+                class="card card_white promophone__feature promophone__feature-done"
+              >
+                <div class="promophone__feature-content">
+                  <div class="promophone__feature-header">
+                    <h4>Программа для ПК</h4>
+                  </div>
+                  <div class="promophone__caption">
+                    Для звонков достаточно гарнитуры, ноутбука и выхода в
+                    интернет.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card card_white promophone__feature promophone__feature-done"
+              >
+                <div class="promophone__feature-content">
+                  <div class="promophone__feature-header">
+                    <h4>Стационарный IP-телефон</h4>
+                  </div>
+                  <div class="promophone__caption">
+                    Используйте привычный телефонный аппарат, прямо как в офисе.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card card_white promophone__feature promophone__feature-done"
+              >
+                <div class="promophone__feature-content">
+                  <div class="promophone__feature-header">
+                    <h4>Программа для смартфона</h4>
+                  </div>
+                  <div class="promophone__caption">
+                    Будьте на связи в любой ситуации — в кровати, в дороге или в
+                    кафе.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card card_white promophone__feature promophone__feature-done"
+              >
+                <div class="promophone__feature-content">
+                  <div class="promophone__feature-header">
+                    <h4>Звонки в один клик из CRM</h4>
+                  </div>
+                  <div class="promophone__caption">
+                    Звоните клиентам прямо через их карточки в CRM со всей
+                    историей.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card card_white promophone__feature promophone__feature-done"
+              >
+                <div class="promophone__feature-content">
+                  <div class="promophone__feature-header">
+                    <h4>SIM-карта с телефонией</h4>
+                  </div>
+                  <div class="promophone__caption">
+                    Привычная сотовая связь со всеми возможностями виртуальной
+                    АТС.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card card_white promophone__feature promophone__feature-done"
+              >
+                <div class="promophone__feature-content">
+                  <div class="promophone__feature-header">
+                    <h4>API-интеграции</h4>
+                  </div>
+                  <div class="promophone__caption">
+                    Интегрируйте IP-телефонию в любые рабочие приложения и
+                    инструменты.
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -608,9 +682,6 @@
                   офисе, на удалёнке и в разъездах.
                 </div>
               </div>
-            </div>
-            <div class="promophone__header">
-              <h3>Без типичных недостатков офисной телефонии</h3>
             </div>
           </div>
         </div>
@@ -1285,30 +1356,29 @@
       </section>
       <section class="cases" id="cases">
         <div class="container carousel">
-          <h2 class="steps__header">Для отделов продаж любого масштаба</h2>
+          <h2 class="steps__header">Подходит бизнесу любого масштаба</h2>
           <div class="swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <article class="card cases__card scope-cases__card">
                   <figure class="cases__logo">
                     <img
-                      alt="Гудселлер"
-                      src="/src/assets/images/cases/goodseller.svg"
+                      alt="Кейс делофона"
+                      src="/src/assets/images/cases/delofon.svg"
                     />
                     <figcaption class="cases__caption">
-                      <span class="cases__chip"> 14 сотрудников </span>
+                      <span class="cases__chip"> 23 сотрудника </span>
                       <span class="cases__chip">
                         Офис и сотрудники на удалёнке
                       </span>
                     </figcaption>
                   </figure>
                   <h4 class="cases__title">
-                    Рекламное агентство. <br />
-                    Телефония для отдела продаж.
+                    Все наши сотрудники тоже используют Делофон&nbsp;:)
                   </h4>
                   <div class="cases__content">
-                    Повысили скорость холодного обзвона почти в 2 раза и стали
-                    намного реже терять клиентов.
+                    Мы сами используем Делофон в самых разных комбинациях
+                    устройств и отделов.
                   </div>
                   <a
                     class="link link_blue link_bottom"
@@ -1319,25 +1389,25 @@
                 </article>
               </div>
               <div class="swiper-slide">
-                <article class="card cases__card">
+                <article class="card cases__card scope-cases__card">
                   <figure class="cases__logo">
                     <img
-                      alt="Кейс Флоарт Сервис"
-                      src="/src/assets/images/cases/float.svg"
+                      alt="Кейс Эдука"
+                      src="/src/assets/images/cases/educa.svg"
                     />
                     <figcaption class="cases__caption">
-                      <span class="cases__chip"> 5 сотрудников </span>
+                      <span class="cases__chip"> 15 сотрудников </span>
                       <span class="cases__chip">
                         Офис и сотрудники на удалёнке
                       </span>
                     </figcaption>
                   </figure>
-                  <h4 class="cases__title">
-                    Сеть цветочных салонов с продажами онлайн и офлайн
-                  </h4>
+                  <span class="cases__title"
+                    >Онлайн-школа иностранных языков</span
+                  >
                   <div class="cases__content">
-                    Наладили систему быстрого заказа цветов по телефону прямо
-                    через смартфоны сотрудников.
+                    Повысили качество работы менеджеров на телефоне за счёт
+                    анализа звонков.
                   </div>
                   <a
                     class="link link_blue link_bottom"
@@ -1728,10 +1798,12 @@
             <div
               class="card card_hover card_rectangle card_light-gray scopes__card"
             >
-              <img
-                class="scopes__card-icon"
-                src="../../src/assets/images/sections/scope/scope-office.png"
-              />
+              <a href="#">
+                <img
+                  class="scopes__card-icon"
+                  src="../../src/assets/images/sections/scope/scope-office.png"
+                />
+              </a>
               <div class="scopes__card-header">
                 <h4>
                   Для небольшого <br class="scopes__break" />
@@ -1739,18 +1811,21 @@
                 </h4>
               </div>
             </div>
-            <div
-              class="card card_hover card_rectangle card_light-gray scopes__card"
+            <a
+              class="card card_hover card_rectangle card_light-gray scopes__card scopes__card-sales"
+              href="../scope/sales.html"
             >
               <img
                 class="scopes__card-icon no-select"
-                src="../../src/assets/images/sections/scope/scope-home.png"
+                src="../../src/assets/images/sections/scope/scope-sales.png"
               />
 
-              <div class="scopes__card-header scopes__card-header-home">
+              <div
+                class="scopes__card-header scopes__card-header scopes__card-header-sales"
+              >
                 <h4>Для сотрудников на удалёнке</h4>
               </div>
-            </div>
+            </a>
             <div
               class="card card_hover card_rectangle card_light-gray card_hover scopes__card scopes__card-away"
             >

@@ -231,8 +231,8 @@
       img {
         min-width: 190px;
         max-width: 190px;
-        max-height: 103px;
-        min-height: 103px;
+        max-height: 106px;
+        min-height: 106px;
       }
 
       @include laptop {
@@ -357,6 +357,30 @@
 
     @include tablet {
       padding-top: $spacer * 4;
+    }
+  }
+
+  &__card-sales {
+    @include tablet {
+      padding: 5px;
+      img {
+        max-height: 190px;
+      }
+    }
+
+    @include laptop {
+      padding-top: $spacer * 2;
+
+      img {
+        max-width: 259px;
+        max-height: 147px;
+      }
+    }
+  }
+
+  &__card-header-sales {
+    @include laptop {
+      padding-top: 20px;
     }
   }
 }
