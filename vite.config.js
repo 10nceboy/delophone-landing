@@ -28,7 +28,8 @@ export default defineConfig({
         numbers: resolve(__dirname, 'pages/numbers.html'),
         order: resolve(__dirname, 'pages/order.html'),
         sales: resolve(__dirname, 'pages/scope/sales.html'),
-        remote: resolve(__dirname, 'pages/scope/remote.html')
+        remote: resolve(__dirname, 'pages/scope/remote.html'),
+        office: resolve(__dirname, 'pages/scope/office.html')
       }
     }
   }

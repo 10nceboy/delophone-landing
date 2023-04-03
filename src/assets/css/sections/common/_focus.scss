@@ -11,6 +11,7 @@
 
     @include tablet {
       margin-bottom: $spacer * 4;
+      max-width: 410px;
 
       h2 {
         font-size: 24px;
