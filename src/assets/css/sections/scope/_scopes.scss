@@ -25,6 +25,7 @@
   }
 
   &__card {
+    display: block;
     padding-top: $spacer * 2;
     text-align: center;
     margin-bottom: $spacer * 3;

@@ -29,4 +29,10 @@
       font-size: 20px;
     }
   }
+
+  &__paragraph {
+    @include laptop {
+      max-width: 926px;
+    }
+  }
 }
