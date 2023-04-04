@@ -53,9 +53,11 @@
     line-height: 150%;
     margin-bottom: $spacer * 2;
     break-inside: avoid;
+
     @include tablet {
       margin-bottom: $spacer * 2;
     }
+
     @include laptop {
       font-size: 16px;
     }
@@ -65,5 +67,10 @@
     @include tablet {
       margin-bottom: 0px;
     }
+  }
+
+  &__list {
+    list-style: decimal outside;
+    margin-left: 10px;
   }
 }
