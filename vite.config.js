@@ -2,6 +2,15 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import handlebars from 'vite-plugin-handlebars';
 
+const pages = [
+  'price',
+  'numbers',
+  'order',
+  'scope/sales',
+  'scope/remote',
+  'scope/office, scope/phonereplace'
+];
+
 export default defineConfig({
   server: {
     port: 3000
@@ -23,13 +32,12 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        price: resolve(__dirname, 'pages/price.html'),
-        numbers: resolve(__dirname, 'pages/numbers.html'),
-        order: resolve(__dirname, 'pages/order.html'),
-        sales: resolve(__dirname, 'pages/scope/sales.html'),
-        remote: resolve(__dirname, 'pages/scope/remote.html'),
-        office: resolve(__dirname, 'pages/scope/office.html')
+        main: 'index.html',
+        ...pages.reduce((acc, page) =>
+          Object.assign(acc, {
+            [page]: resolve(__dirname, `/pages/${page}.html`)
+          })
+        )
       }
     }
   }
