@@ -11,7 +11,6 @@
 @import './components/cards';
 @import './components/footer';
 @import './components/chips';
-@import './components/arcs';
 @import './components/list';
 @import './components/list-item';
 @import './components/collapse';
@@ -19,15 +18,17 @@
 @import './components/modal';
 @import './components/overlay';
 @import './components/tabs';
+@import './components/breadcrumbs';
 @import './components/carousel';
 @import './components/tooltip';
 @import './components/icon';
 @import './long/header-long.scss';
 @import './long/footer-long.scss';
+@import './long/сards-long.scss';
 
 /**sections**/
 @import './sections/common/hero';
-@import './sections/main/phone-business';
+@import './sections/common/results';
 @import './sections/common/pay-minutes';
 @import './sections/common/startuse';
 @import './sections/main/features';
@@ -36,3 +37,14 @@
 @import './sections/common/faq';
 @import './sections/main/cases';
 @import './sections/common/cases-bot';
+@import './sections/scope/scope-pay-minutes';
+@import './sections/scope/promophone';
+@import './sections/scope/scopes';
+@import './sections/scope/sales';
+@import './sections/scope/scope-steps';
+@import './sections/scope/scope-calculator';
+@import './sections/scope/scope-faq';
+@import './sections/scope/scope-cases';
+@import './sections/common/focus';
+@import './sections/scope/remote';
+@import './sections/scope/office';

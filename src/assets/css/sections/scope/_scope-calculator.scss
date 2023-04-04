@@ -1,0 +1,64 @@
+.scope-calculator {
+  padding-bottom: 80px;
+
+  @include tablet {
+    padding-bottom: 150px;
+    margin-bottom: 50px;
+  }
+
+  &__header {
+    margin-bottom: $spacer * 5;
+    @include tablet {
+      margin-bottom: $spacer * 10;
+    }
+  }
+
+  &__arc {
+    display: none;
+    @include tablet {
+      display: block;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: url(/arc-scope-calc.svg);
+        position: absolute;
+        top: -264px;
+        left: 96%;
+      }
+
+      @include laptop {
+        &::before {
+          top: -270px;
+          left: 97%;
+        }
+      }
+
+      @include desktop {
+        &::before {
+          top: -260px;
+          left: 100%;
+        }
+      }
+    }
+  }
+
+  &__tooltip {
+    margin-top: -4px;
+    @include tablet {
+      margin-top: 0px;
+    }
+
+    @include smartphone {
+      .tooltip__content {
+        margin-left: 20px;
+      }
+    }
+
+    @include tablet {
+      .tooltip__content {
+        margin-left: 0px;
+      }
+    }
+  }
+}

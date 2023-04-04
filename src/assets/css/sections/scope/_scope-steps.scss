@@ -1,0 +1,234 @@
+.scope-steps {
+  background-color: $light-gray;
+  padding: $spacer * 16 0 $spacer * 4;
+
+  @include tablet {
+    padding: 150px 0 70px;
+  }
+
+  &__header {
+    margin-bottom: $spacer * 5;
+    @include tablet {
+      margin-bottom: $spacer * 11;
+    }
+  }
+
+  &__step {
+    margin-bottom: $spacer * 5;
+
+    @include tablet {
+      margin-bottom: 0px;
+      max-width: 330px;
+    }
+
+    @include laptop {
+      max-width: 430px;
+    }
+  }
+
+  &__second-step {
+    margin-left: auto;
+    position: relative;
+
+    @include tablet {
+      margin-top: -$spacer * 8;
+      &::before {
+        content: url(/scope-steps-step1-arc.svg);
+        position: absolute;
+        top: -70px;
+        left: -115px;
+      }
+
+      @include tablet-1024 {
+        &::before {
+          left: -141px;
+        }
+      }
+
+      @include laptop {
+        &::before {
+          left: -132px;
+        }
+      }
+    }
+  }
+
+  &__third-step {
+    position: relative;
+    z-index: 2;
+
+    @include tablet {
+      margin-top: -$spacer * 3;
+
+      &::before {
+        content: url(/scope-steps-step2-arc.svg);
+        position: absolute;
+        top: -50px;
+        right: -55px;
+        z-index: 2;
+      }
+
+      @include tablet-1024 {
+        &::before {
+          top: -50px;
+          right: -135px;
+        }
+      }
+
+      @include laptop {
+        &::before {
+          right: -95px;
+        }
+      }
+
+      @include desktop {
+        &::before {
+          right: -125px;
+        }
+      }
+    }
+  }
+
+  &__forth-step {
+    position: relative;
+    z-index: 2;
+
+    margin-left: auto;
+
+    @include tablet {
+      margin-top: -$spacer * 3;
+      &::before {
+        content: url(/scope-steps-step1-arc.svg);
+        position: absolute;
+        top: -50px;
+        left: -120px;
+        z-index: 2;
+      }
+
+      @include tablet-1024 {
+        &::before {
+          content: url(/scope-steps-step3-arc.svg);
+          left: -150px;
+        }
+      }
+    }
+  }
+
+  &__upside {
+    padding: $spacer * 4;
+    z-index: 2;
+
+    @include tablet {
+      padding: $spacer * 10;
+      position: relative;
+    }
+  }
+
+  &__upside-header {
+    @include flex-row;
+    margin-bottom: $spacer * 2;
+
+    h4 {
+      @include font($semi-bold, 18px, $black);
+      line-height: 155%;
+      margin-left: $spacer * 2;
+    }
+
+    @include smartphone {
+      h4 {
+        font-size: 19px;
+      }
+    }
+
+    @include tablet {
+      h4 {
+        font-size: 19px;
+      }
+    }
+
+    @include tablet-1024 {
+      font-size: 18px;
+    }
+
+    @include laptop {
+      margin-bottom: $spacer * 3;
+      h4 {
+        font-size: 20px;
+        margin-left: $spacer * 2;
+      }
+    }
+  }
+
+  &__caption {
+    @include font($normal, 15px, $gray);
+    line-height: 155%;
+
+    @include smartphone {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      font-size: 15px;
+    }
+
+    @include laptop {
+      font-size: 16px;
+      max-width: 430px;
+    }
+  }
+
+  &__link {
+    line-height: 155%;
+    display: flex;
+    font-weight: $medium;
+    font-size: 16px;
+    margin-top: $spacer * 2;
+    font-weight: 400;
+
+    @include tablet {
+      font-size: 15px;
+      margin-top: $spacer * 5;
+      max-width: 235px;
+    }
+
+    @include laptop {
+      font-size: 18px;
+      max-width: 242px;
+      margin-top: $spacer * 4;
+    }
+  }
+
+  &__arrow {
+    position: relative;
+    bottom: 0.2em;
+    margin-left: 3px;
+  }
+
+  &__accent {
+    @include font($semi-bold, 15px, $orange);
+    line-height: 155%;
+    display: block;
+    margin-top: $spacer * 2;
+
+    @include smartphone {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      font-size: 15px;
+    }
+
+    @include laptop {
+      font-size: 16px;
+      margin-top: $spacer * 4;
+    }
+  }
+
+  &__icon {
+    min-width: 35px;
+    max-width: 35px;
+    max-height: 35px;
+    min-height: 35px;
+    flex-shrink: 0;
+  }
+}

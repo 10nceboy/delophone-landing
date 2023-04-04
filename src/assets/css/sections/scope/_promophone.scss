@@ -1,0 +1,483 @@
+.promophone {
+  background-color: $light-gray;
+  padding-top: $spacer * 12;
+
+  @include tablet {
+    padding-top: 100px;
+  }
+
+  &__header {
+    user-select: none;
+    h3 {
+      font-size: 20px;
+    }
+
+    @include smartphone {
+      h3 {
+        font-size: 22px;
+      }
+    }
+
+    @include tablet {
+      h3 {
+        font-size: 26px;
+      }
+    }
+  }
+
+  &__content {
+    padding: $spacer * 4;
+    padding-bottom: 0;
+
+    @include smartphone {
+      padding-top: $spacer * 10;
+    }
+
+    @include laptop {
+      padding: $spacer * 10;
+      padding-bottom: 0;
+    }
+  }
+
+  &__cards {
+    padding: $spacer * 5 0;
+    box-sizing: border-box;
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding-top: $spacer * 5;
+      grid-gap: $spacer * 4;
+    }
+
+    @include smartphone {
+      padding-bottom: $spacer * 7;
+    }
+
+    @include tablet {
+      padding-bottom: $spacer * 10;
+    }
+
+    @include laptop {
+      grid-gap: $spacer * 6;
+    }
+  }
+
+  &__workcards {
+    position: relative;
+    z-index: 2;
+    padding-bottom: $spacer * 8;
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__card {
+    padding: $spacer * 3;
+    min-width: 250px;
+    margin-bottom: $spacer * 3;
+
+    @include tablet {
+      margin-bottom: 0px;
+      min-height: 190px;
+    }
+
+    @include laptop {
+      padding: $spacer * 4;
+      min-width: 490px;
+      max-height: 183px;
+      min-height: 183px;
+      box-sizing: border-box;
+    }
+  }
+
+  &__workcard {
+    max-width: 250px;
+    max-height: 186px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    @include mobile-425 {
+      min-width: 312px;
+      max-width: 90%;
+    }
+
+    @include mobile-l {
+      min-width: 312px;
+      max-width: 88%;
+    }
+
+    @include mobile-x {
+      min-width: 422px;
+      max-width: 93%;
+    }
+
+    @include mobile-s {
+      min-width: 422px;
+      max-width: 90%;
+    }
+
+    @include smartphone {
+      min-width: 312px;
+      max-width: 88%;
+      padding: $spacer * 4;
+    }
+
+    @include tablet-768 {
+      min-width: 312px;
+      max-width: 95%;
+      max-height: 500px;
+    }
+
+    @include tablet {
+      max-width: 350px;
+      max-height: 186px;
+      min-height: 196px;
+      min-width: 260px;
+      padding: $spacer * 4;
+    }
+  }
+
+  &__card-header {
+    margin-top: $spacer;
+    margin-bottom: $spacer;
+
+    @include smartphone {
+      h4 {
+        font-size: 20px;
+      }
+    }
+
+    @include tablet {
+      h4 {
+        font-size: 17px;
+      }
+    }
+
+    @include laptop {
+      h4 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__caption {
+    @include font($normal, 14px, $gray);
+    line-height: 150%;
+    @include laptop {
+      font-size: 14px;
+    }
+  }
+
+  &__workcaption {
+    @include tablet-768 {
+      font-size: 16px;
+      max-width: 90%;
+    }
+
+    @include tablet {
+      max-width: 100%;
+      font-size: 14px;
+    }
+  }
+
+  &__features {
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: $spacer * 6;
+    }
+  }
+
+  &__feature {
+    display: flex;
+    min-width: 0px;
+    box-sizing: border-box;
+    margin-bottom: $spacer * 3;
+
+    @include laptop {
+      min-width: 316px;
+    }
+  }
+
+  &__feature-not {
+    &::before {
+      padding-top: $spacer;
+      content: url(/icons/not.svg);
+    }
+  }
+
+  &__feature-done {
+    &::before {
+      padding-top: $spacer;
+      content: url(/icons/done.svg);
+    }
+  }
+
+  &__feature-no-margin {
+    margin-bottom: 0px;
+  }
+
+  &__feature-header {
+    margin-bottom: $spacer;
+
+    h4 {
+      font-size: 18px;
+      line-height: 130%;
+    }
+
+    @include tablet {
+      h4 {
+        font-size: 16px;
+      }
+    }
+    @include laptop {
+      h4 {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__feature-content {
+    margin-left: $spacer * 2;
+
+    @include tablet {
+      margin-left: $spacer * 3;
+    }
+  }
+
+  &__features-list-wrapper {
+    display: block;
+    margin-bottom: $spacer * 8;
+    flex: 1 1;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    @include laptop {
+      margin-right: $spacer * 7;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__header-with-chips {
+    @include tablet {
+      @include flex-row;
+    }
+
+    h3 {
+      max-width: 380px;
+    }
+  }
+
+  &__chips {
+    box-sizing: border-box;
+    @include tablet {
+      @include flex-row;
+      margin-left: auto;
+    }
+  }
+
+  &__chip {
+    border: $border-gray2;
+    padding: $spacer * 3;
+    @include center;
+    @include font($semi-bold, 14px, $black);
+    line-height: 150%;
+    display: none;
+    flex: 1;
+    flex-shrink: 0;
+    max-height: 51px;
+
+    @include tablet {
+      display: flex;
+      padding: $spacer;
+      line-height: 130%;
+      font-size: 12px;
+      margin-right: 10px;
+      white-space: nowrap;
+
+      &:nth-child(3) {
+        margin-right: 0px;
+      }
+    }
+
+    @include tablet-1024 {
+      padding: $spacer $spacer * 2;
+      font-size: 13px;
+    }
+
+    @include laptop {
+      padding: $spacer * 3;
+      font-size: 14px;
+      line-height: 150%;
+      max-width: fit-content;
+    }
+  }
+
+  &__chip-mobile {
+    display: flex;
+    min-width: 100%;
+    flex: 1 1;
+    border: none;
+    align-items: start;
+    padding: $spacer * 5 0 0 0;
+
+    @include mobile-s {
+      font-size: 16px;
+      text-align: left;
+      display: block;
+    }
+
+    @include smartphone {
+      font-size: 16px;
+      text-align: left;
+      display: block;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__chip-with-arrow {
+    &::before {
+      content: url(/icons/arrow-grow.svg);
+      margin-right: $spacer;
+      min-width: 20px;
+      max-width: 20px;
+      min-height: 20px;
+      max-height: 20px;
+      padding-top: $spacer;
+    }
+
+    @include tablet {
+      &::before {
+        margin-right: $spacer;
+        max-width: 15px;
+        min-width: 15px;
+        max-height: 15px;
+        min-height: 15px;
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__list {
+    padding: $spacer * 3 0 $spacer * 4;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-row-gap: $spacer * 3;
+      padding: $spacer * 3 0 $spacer * 4;
+    }
+
+    @include tablet-1024 {
+      padding-bottom: $spacer * 6;
+    }
+
+    @include laptop {
+      padding: $spacer * 5 0 $spacer * 10;
+    }
+  }
+
+  &__list-item {
+    @include font($normal, 15px, $gray);
+    margin-bottom: $spacer;
+    line-height: 155%;
+    max-width: 220px;
+    display: flex;
+
+    @include mobile-425 {
+      max-width: 100%;
+    }
+
+    @include mobile-l {
+      max-width: 100%;
+    }
+
+    @include mobile-s {
+      max-width: 100%;
+    }
+
+    @include smartphone {
+      max-width: 100%;
+      font-size: 16px;
+    }
+
+    @include tablet {
+      margin-bottom: 0px;
+    }
+
+    @include tablet {
+      max-width: 100%;
+      font-size: 14px;
+    }
+
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+
+  &__feature-list {
+    padding-top: $spacer * 5;
+  }
+
+  &__feature-list-item {
+    padding-bottom: $spacer * 3;
+
+    @include smartphone {
+      @include flex-row;
+    }
+
+    @include tablet {
+      padding-bottom: $spacer * 5;
+      white-space: nowrap;
+    }
+  }
+
+  &__feature-text {
+    @include smartphone {
+      margin-left: $spacer * 3;
+    }
+
+    @include tablet {
+      margin-left: $spacer;
+    }
+
+    @include laptop {
+      margin-left: $spacer * 3;
+    }
+  }
+
+  &__feature-caption {
+    font-size: 16px;
+
+    @include tablet {
+      font-size: 13px;
+    }
+
+    @include tablet-1024 {
+      font-size: 14px;
+    }
+
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+
+  &__feature-wrapper {
+    @include tablet {
+      display: grid;
+      grid-column-gap: $spacer * 4;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include laptop {
+      grid-column-gap: $spacer * 7;
+    }
+  }
+}
