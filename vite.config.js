@@ -14,10 +14,7 @@ export default defineConfig({
   },
   plugins: [
     handlebars({
-      partialDirectory: [
-        resolve(__dirname, 'src/html/components'),
-        resolve(__dirname, 'src/html/sections')
-      ]
+      partialDirectory: [resolve(__dirname, 'src/html/components'), resolve(__dirname, 'src/html/sections')]
     })
   ],
   build: {
@@ -26,10 +23,8 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         price: resolve(__dirname, 'pages/price.html'),
         numbers: resolve(__dirname, 'pages/numbers.html'),
-        order: resolve(__dirname, 'pages/order.html'),
-        sales: resolve(__dirname, 'pages/scope/sales.html'),
-        remote: resolve(__dirname, 'pages/scope/remote.html'),
-        office: resolve(__dirname, 'pages/scope/office.html')
+        order: resolve(__dirname, 'pages/order.html')
+
       }
     }
   }

@@ -2,7 +2,6 @@
   @include flex-row;
   margin-right: auto;
   margin-top: $spacer * 10;
-  font-size: 15px;
 
   @include laptop {
     font-size: 16px;
@@ -13,7 +12,6 @@
     margin-right: 5px;
     color: $gray;
   }
-
   &__link {
     font-weight: 400;
   }

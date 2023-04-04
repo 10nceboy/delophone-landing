@@ -3,41 +3,21 @@
   background-color: $white;
   margin-bottom: $spacer * 12;
 
-  @include tablet {
-    margin-top: $spacer * 20;
-    background-color: $white;
-    margin-bottom: 100px;
-  }
-
-  &__break {
-    @include smartphone {
-      display: none;
-    }
-
-    @include tablet {
-      display: block;
-    }
-  }
-
   &__container {
     border-radius: $border-radius-xl;
     align-items: stretch;
 
     @include tablet {
-      display: flex;
-      flex-direction: row;
       align-items: flex-start;
       background-color: $light-gray;
-      padding: $spacer * 6 $spacer * 4;
-
-      box-sizing: border-box;
-    }
-
-    @include laptop {
-      max-height: 343px;
-      min-height: 343px;
       padding: $spacer * 10;
     }
+  }
+
+  @include tablet {
+    margin-top: $spacer * 20;
+    background-color: $white;
+    margin-bottom: 100px;
   }
 
   &__header {
@@ -45,16 +25,18 @@
 
     @include tablet {
       display: block;
-      @include font(600, 22px, $black);
+      margin-right: 65px;
+      margin-bottom: auto;
+      margin-top: 10px;
+
+      @include font(600, 26px, $black);
       line-height: 33.8px;
-      margin-right: 30px;
+      margin-bottom: $spacer * 5;
     }
 
     @include laptop {
       max-width: 235px;
       margin-bottom: 0;
-      margin-right: 65px;
-      font-size: 26px;
     }
 
     &_mobile {
@@ -63,10 +45,6 @@
 
       @include font(600, 20px, $black);
       line-height: 26px;
-
-      @include smartphone {
-        font-size: 22px;
-      }
 
       @include tablet {
         display: none;
@@ -80,13 +58,13 @@
     max-width: 100%;
 
     @include tablet {
-      padding: $spacer * 3;
+      padding: $spacer * 6;
       background-color: $white;
+      height: 157px;
     }
 
     @include laptop {
       padding: $spacer * 6 38px $spacer * 6 $spacer * 6;
-      max-width: 100%;
     }
   }
 
@@ -101,13 +79,13 @@
     }
 
     @include tablet {
-      padding: $spacer * 3;
-      display: flex;
-      justify-content: space-between;
+      padding: $spacer * 6;
     }
 
     @include laptop {
       padding: $spacer * 4 $spacer * 11 $spacer * 4 $spacer * 6;
+      display: flex;
+      justify-content: space-between;
     }
 
     @include mobile-s {
@@ -131,12 +109,6 @@
     &_container {
       &:last-child {
         grid-column: 1 / span2;
-      }
-
-      @include tablet {
-        &:last-child {
-          display: flex;
-        }
       }
     }
 
@@ -164,20 +136,7 @@
       }
 
       @include tablet {
-        margin-right: 5px;
         margin-top: 0px;
-
-        &:last-child {
-          margin-right: 0;
-        }
-
-        svg {
-          width: 18px;
-          height: 18px;
-        }
-      }
-
-      @include laptop {
         margin-right: 10px;
 
         &:last-child {
@@ -204,16 +163,8 @@
   &__card-header {
     margin-bottom: $spacer * 3;
 
-    @include smartphone {
-      h4 {
-        font-size: 20px;
-        text-align: center;
-      }
-    }
-
     @include tablet {
       margin-bottom: $spacer * 4;
-      text-align: left;
     }
   }
 
@@ -227,65 +178,87 @@
     }
   }
 
-  &__list {
-    @include smartphone {
-      display: grid;
-      grid-template-columns: auto auto;
-      grid-template-rows: repeat(1, 1fr);
-      align-content: center;
-    }
-  }
-
   &__chip {
-    padding: $spacer * 2;
-    box-sizing: border-box;
+    padding: $spacer * 2 0;
     border-radius: $border-radius-xs;
+    margin-bottom: $spacer * 2;
     text-align: center;
-    @include font($medium, 14px, $black);
+    display: flex;
+    @include font(500, 14px, $black);
     line-height: 21px;
+    width: 250px;
+    justify-content: center;
     border: 1px solid $dim-gray;
-    display: none;
-    white-space: nowrap;
-
-    &:nth-child(4) {
-      margin-right: 0px;
-    }
 
     @include tablet {
-      display: block;
-      @include font(500, 12px, $black);
-      min-width: 90px;
-      max-width: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include font(600, 14px, $black);
       line-height: 21px;
       margin-right: $spacer;
-      font-weight: $semi-bold;
-    }
-
-    @include laptop {
-      font-size: 14px;
+      margin-bottom: 0px;
       min-width: 121px;
       max-width: 183px;
-      min-height: 51px;
-      max-height: 51px;
+      height: 51px;
+
       justify-content: initial;
       box-sizing: border-box;
-      padding: $spacer * 3;
+    }
 
-      &:first-child {
-        max-width: 121px;
+    &:nth-child(2) {
+      display: none;
+      @include tablet {
+        display: block;
+        width: 148px;
+        display: flex;
+        justify-content: center;
       }
+    }
 
-      &:nth-child(2) {
-        max-width: 148px;
+    &:first-child {
+      display: none;
+
+      @include tablet {
+        display: block;
+        width: 121px;
+        display: flex;
+        justify-content: center;
       }
+    }
 
-      &:nth-child(3) {
-        max-width: 175px;
+    &:last-child {
+      width: 100%;
+      @include tablet {
+        margin-right: 0;
+        font-weight: 400;
+        width: 183px;
+        display: flex;
+        justify-content: center;
       }
+    }
 
-      &:nth-child(4) {
-        min-width: 183px;
-        margin-right: 0px;
+    &:nth-child(4) {
+      width: 100%;
+      @include tablet {
+        font-weight: 400;
+        width: 175px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &_mobile {
+      @include font(600, 14px, $black);
+      margin-bottom: $spacer * 2;
+      padding: $spacer * 2;
+      text-align: center;
+      width: calc(100% - 20px);
+      border-radius: $border-radius-xs;
+      border: 1px solid $dim-gray;
+
+      @include tablet {
+        display: none;
       }
     }
   }
@@ -303,7 +276,7 @@
 
     @include smartphone {
       .text_semibold {
-        font-size: 15px;
+        font-size: 15p;
       }
     }
 
@@ -312,59 +285,12 @@
     }
 
     @include tablet {
-      margin-left: $spacer;
+      margin-left: $spacer * 2;
 
       .text_semibold {
-        font-size: 14px;
-        font-weight: $medium;
+        font-size: 16px;
       }
     }
-  }
-
-  &__list-item {
-    display: flex;
-    margin-bottom: $spacer * 2;
-    line-height: 150%;
-
-    @include smartphone {
-      &:first-child {
-        grid-row-start: 1;
-        grid-row-end: 3;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        justify-content: center;
-      }
-
-      &:nth-child(2) {
-        justify-content: flex-end;
-        margin-right: $spacer * 4;
-        margin-bottom: 0px;
-      }
-    }
-
-    &:last-child {
-      margin-bottom: 0px;
-    }
-
-    .tooltip__activator {
-      margin-left: $spacer;
-    }
-
-    @include mobile-s {
-      font-size: 16px;
-    }
-
-    @include smartphone {
-      font-size: 16px;
-    }
-
-    @include tablet {
-      display: none;
-    }
-  }
-
-  &__list-item-bold {
-    font-weight: $semi-bold;
   }
 
   &__tooltip-top-content {
@@ -439,12 +365,11 @@
     flex-direction: column;
 
     .text_semibold {
-      font-size: 13px;
-      font-weight: $medium;
+      font-size: 16px;
     }
 
     .text_caption {
-      font-size: 13px;
+      font-size: 15px;
     }
   }
 

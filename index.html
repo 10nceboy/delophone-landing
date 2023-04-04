@@ -306,6 +306,7 @@
           </div>
         </div>
       </section>
+
       <section class="phone-business" id="phone-business">
         <div class="container">
           <div class="phone-business__container">
@@ -628,60 +629,47 @@
       </section>
       <section class="pay-minutes">
         <div class="container">
-          <div class="pay-minutes__container">
+          <div class="container_adaptive_full pay-minutes__container">
             <div class="pay-minutes__header_mobile">
-              Платите только <br class="pay-minutes__break" />
+              Платите только <br />
               за подключение и минуты
             </div>
             <div class="pay-minutes__header">
               Платите только за подключение и минуты
             </div>
             <div class="pay-minutes__content">
-              <div class="card pay-minutes__card-top card_rounded-top">
+              <div
+                class="card pay-minutes__card-top card_white card_rounded-top"
+              >
                 <div class="pay-minutes__card-header">
                   <h4>Виртуальная АТС за 1 990 ₽</h4>
                 </div>
                 <div class="pay-minutes__chips">
-                  <div class="chip_white pay-minutes__chip">3 сотрудника</div>
-                  <div class="chip_white pay-minutes__chip">
+                  <div class="chip_light-gray pay-minutes__chip">
+                    3 сотрудника
+                  </div>
+                  <div class="chip_light-gray pay-minutes__chip">
                     1 номер на выбор
                   </div>
-                  <div class="chip_white pay-minutes__chip">
+                  <div class="chip_light-gray pay-minutes__chip_mobile">
+                    3 сотрудника и 1 номер на выбор
+                  </div>
+                  <div class="chip_light-gray pay-minutes__chip">
                     Исходящие 1.4 ₽ / мин
                   </div>
-
-                  <div class="chip_white pay-minutes__chip">
+                  <div class="container_flex"></div>
+                  <div class="chip_light-gray pay-minutes__chip">
                     <div class="container_flex chip-text__container">
                       <div class="chip-text">Входящие 0 ₽ / мин</div>
                       <div
-                        data-tooltip-width-laptop="483px"
-                        data-tooltip-width-tablet="483px"
-                        data-tooltip-width-smartphone="483px"
-                        data-tooltip="Входящие бесплатны при использовании мобильного или городского номера.<br/>Стоимость входящих на номер 8-800 &mdash; от 2 ₽ за минуту, в зависимости от региона звонящего абонента."
+                        data-tooltip-width-laptop="283px"
+                        data-tooltip-width-tablet="283px"
+                        data-tooltip-width-smartphone="283px"
+                        data-tooltip="На номерах 8-800 входящие оплачиваются из расчета 1.8 ₽/ мин."
                         class="tooltip pay-minutes__tooltip-top"
                       ></div>
                     </div>
                   </div>
-                  <ul class="pay-minutes__list">
-                    <li
-                      class="list-item_checked pay-minutes__list-item pay-minutes__list-item-bold mobile"
-                    >
-                      3 сотрудника и 1 номер на выбор
-                    </li>
-                    <li class="list-item_checked pay-minutes__list-item mobile">
-                      Исходящие 1.4 ₽ / мин
-                    </li>
-                    <li class="list-item_checked pay-minutes__list-item mobile">
-                      Входящие 0 ₽ / мин
-                      <div
-                        data-tooltip-width-laptop="483px"
-                        data-tooltip-width-tablet="483px"
-                        data-tooltip-width-smartphone="483px"
-                        data-tooltip="Входящие бесплатны при использовании мобильного или городского номера.<br/>Стоимость входящих на номер 8-800 &mdash; от 2 ₽ за минуту, в зависимости от региона звонящего абонента."
-                        class="tooltip pay-minutes__tooltip-top"
-                      ></div>
-                    </li>
-                  </ul>
                 </div>
               </div>
               <div
@@ -776,6 +764,7 @@
           </div>
         </div>
       </section>
+
       <section class="features" id="features">
         <div class="container">
           <section class="features__block">
@@ -2412,35 +2401,9 @@
               </div>
             </div>
             <div class="lk__whatsapp">
-              <button
-                class="button button_with-icon button_blue lk__whatsapp-button modal__activator tablet"
-                data-modal="whatsapp"
-              >
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="button__icon"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M16.5897 14.3622C16.08 14.0571 15.4159 13.7182 14.8166 13.9647C14.3563 14.1527 14.0628 14.8706 13.7632 15.2373C13.6087 15.4253 13.4265 15.4561 13.1917 15.3606C11.4618 14.6734 10.1397 13.524 9.18518 11.9371C9.02455 11.6906 9.05233 11.4964 9.24695 11.2684C9.53423 10.9294 9.89561 10.5443 9.97593 10.0882C10.0532 9.63215 9.84007 9.09904 9.65164 8.69229C9.41069 8.1746 9.13882 7.43199 8.61985 7.13925C8.14104 6.86808 7.51087 7.01907 7.08149 7.36728C6.34629 7.96508 5.98795 8.90185 6.00031 9.83246C6.00031 10.0975 6.0374 10.3594 6.09918 10.6151C6.24746 11.2283 6.53164 11.8015 6.8529 12.3438C7.09385 12.7537 7.35644 13.1512 7.63754 13.5364C8.56118 14.7905 9.71342 15.8783 11.0448 16.6918C11.709 17.0986 12.4256 17.456 13.1701 17.6994C14.001 17.9737 14.7424 18.2603 15.6444 18.0877C16.5866 17.909 17.5133 17.3297 17.8871 16.4237C17.9983 16.1556 18.054 15.8567 17.9922 15.5732C17.8655 14.9878 17.0716 14.6395 16.5959 14.3591L16.5897 14.3622Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M2.0884 18.1292L2.14196 17.929L2.03819 17.7496C1.06001 16.0587 0.5 14.0955 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C9.90452 23.5 7.94135 22.94 6.25036 21.9618L6.07097 21.858L5.87076 21.9116L0.706667 23.2933L2.0884 18.1292Z"
-                    stroke="white"
-                  />
-                </svg>
-                Написать в WhatsApp
-              </button>
-              <a class="mobile" target="_blank" href="https://wa.me/74952860111"
-                ><button
+              <a target="_blank" href="https://wa.me/74952860111">
+                <button
                   class="button button_with-icon button_blue lk__whatsapp-button"
-                  data-modal="whatsapp"
                 >
                   <svg
                     width="24"
@@ -2462,9 +2425,8 @@
                     />
                   </svg>
                   Написать в WhatsApp
-                </button></a
-              >
-
+                </button>
+              </a>
               <div class="text_caption lk__answer-time">
                 Среднее&nbsp;время ответа&nbsp;—&nbsp;5&nbsp;минут
               </div>
@@ -3041,15 +3003,7 @@
                 />
               </svg>
               <h5>Входящие 0 ₽</h5>
-              <div
-                data-tooltip-width-laptop="483px"
-                data-tooltip-width-tablet="483px"
-                data-tooltip-width-smartphone="483px"
-                data-tooltip="Входящие бесплатны при использовании мобильного или городского номера.<br/>Стоимость входящих на номер 8-800 &mdash; от 2 ₽ за минуту, в зависимости от региона звонящего абонента"
-                class="tooltip calculator__tooltip-in"
-              ></div>
             </div>
-
             <div class="container__flex">
               <svg
                 class="icon calculator__in-out-icon"
@@ -3159,7 +3113,7 @@
                       class="no-select"
                     />
                     <figcaption class="cases__caption">
-                      <span class="cases__chip"> 38 сотрудников </span>
+                      <span class="cases__chip"> 8 сотрудников </span>
                       <span class="cases__chip">
                         Офис и сотрудники на удалёнке
                       </span>
@@ -3189,7 +3143,7 @@
                       src="/src/assets/images/cases/goodseller.svg"
                     />
                     <figcaption class="cases__caption">
-                      <span class="cases__chip"> 14 сотрудников </span>
+                      <span class="cases__chip"> 8 сотрудников </span>
                       <span class="cases__chip">
                         Офис и сотрудники на удалёнке
                       </span>
@@ -3219,7 +3173,7 @@
                       src="/src/assets/images/cases/uni.svg"
                     />
                     <figcaption class="cases__caption">
-                      <span class="cases__chip"> 9 сотрудников </span>
+                      <span class="cases__chip"> 8 сотрудников </span>
                       <span class="cases__chip">
                         Офис и сотрудники на удалёнке
                       </span>
@@ -3248,7 +3202,7 @@
                       src="/src/assets/images/cases/delofon.svg"
                     />
                     <figcaption class="cases__caption">
-                      <span class="cases__chip"> 23 сотрудника </span>
+                      <span class="cases__chip"> 8 сотрудников </span>
                       <span class="cases__chip">
                         Офис и сотрудники на удалёнке
                       </span>
@@ -3273,11 +3227,11 @@
                 <article class="card cases__card">
                   <figure class="cases__logo">
                     <img
-                      alt="Кейс Флоарт Сервис"
+                      alt="Кейс Флоат Сервис"
                       src="/src/assets/images/cases/float.svg"
                     />
                     <figcaption class="cases__caption">
-                      <span class="cases__chip"> 5 сотрудников </span>
+                      <span class="cases__chip"> 8 сотрудников </span>
                       <span class="cases__chip">
                         Офис и сотрудники на удалёнке
                       </span>
@@ -3289,6 +3243,35 @@
                   <div class="cases__content">
                     Наладили систему быстрого заказа цветов по телефону прямо
                     через смартфоны сотрудников.
+                  </div>
+                  <a
+                    class="link link_blue link_bottom"
+                    href="/"
+                    aria-label="Посмотреть весь кейс"
+                    >Посмотреть весь кейс →</a
+                  >
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="card cases__card">
+                  <figure class="cases__logo">
+                    <img
+                      alt="Кейс Эдука"
+                      src="/src/assets/images/cases/educa.svg"
+                    />
+                    <figcaption class="cases__caption">
+                      <span class="cases__chip"> 8 сотрудников </span>
+                      <span class="cases__chip">
+                        Офис и сотрудники на удалёнке
+                      </span>
+                    </figcaption>
+                  </figure>
+                  <span class="cases__title"
+                    >Онлайн-школа иностранных языков</span
+                  >
+                  <div class="cases__content">
+                    Повысили качество работы менеджеров на телефоне за счёт
+                    анализа звонков.
                   </div>
                   <a
                     class="link link_blue link_bottom"

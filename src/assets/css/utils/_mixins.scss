@@ -99,12 +99,6 @@ $family: 'Manrope';
   }
 }
 
-@mixin mobile-x {
-  @media screen and (min-width: 480px) and (max-width: 550px) {
-    @content;
-  }
-}
-
 @mixin mobile-425 {
   @media screen and (min-width: 375px) and (max-width: 424px) {
     @content;
@@ -132,12 +126,6 @@ $family: 'Manrope';
   }
 }
 
-@mixin tablet-x {
-  @media screen and (min-width: 740px) and (max-width: 768px) {
-    @content;
-  }
-}
-
 @mixin tablet-m {
   @media screen and (min-width: 768px) and (max-width: 960px) {
     @content;
@@ -146,12 +134,6 @@ $family: 'Manrope';
 
 @mixin tablet-s {
   @media screen and (min-width: 680px) and (max-width: 767px) {
-    @content;
-  }
-}
-
-@mixin tablet-l {
-  @media screen and (min-width: 840px) and (max-width: 960px) {
     @content;
   }
 }
