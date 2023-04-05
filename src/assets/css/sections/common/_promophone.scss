@@ -90,6 +90,17 @@
     }
   }
 
+  &__card-no-margin {
+    margin-bottom: 0px;
+  }
+
+  &__feature-card {
+    @include laptop {
+      max-width: 350px;
+      min-width: 350px;
+    }
+  }
+
   &__workcard {
     max-width: 250px;
     max-height: 186px;
@@ -295,7 +306,7 @@
       padding: $spacer;
       line-height: 130%;
       font-size: 12px;
-      margin-right: 10px;
+      margin-right: $spacer * 2;
       white-space: nowrap;
 
       &:nth-child(3) {

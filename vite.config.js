@@ -32,12 +32,14 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: 'index.html',
-        ...pages.reduce((acc, page) =>
-          Object.assign(acc, {
-            [page]: resolve(__dirname, `/pages/${page}.html`)
-          })
-        )
+        main: resolve(__dirname, 'index.html'),
+        price: resolve(__dirname, 'pages/price.html'),
+        numbers: resolve(__dirname, 'pages/numbers.html'),
+        order: resolve(__dirname, 'pages/order.html'),
+        sales: resolve(__dirname, 'pages/scope/sales.html'),
+        remote: resolve(__dirname, 'pages/scope/remote.html'),
+        office: resolve(__dirname, 'pages/scope/office.html'),
+        phone: resolve(__dirname, 'pages/scope/phone-replace.html')
       }
     }
   }

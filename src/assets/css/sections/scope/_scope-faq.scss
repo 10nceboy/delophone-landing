@@ -35,4 +35,23 @@
       max-width: 926px;
     }
   }
+
+  &__break {
+    display: block;
+    @include mobile-425 {
+      display: none;
+    }
+
+    @include mobile-l {
+      display: none;
+    }
+
+    @include mobile-s {
+      display: none;
+    }
+
+    @include smartphone {
+      display: none;
+    }
+  }
 }
