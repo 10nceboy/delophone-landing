@@ -1,1 +1,0 @@
-.card_hover{border:1px solid transparent;cursor:pointer;transition:border .3s ease,box-shadow .3s ease,background-color .3s ease}.card_hover:focus,.card_hover :active{border-color:#f88c28;box-shadow:none}.card_hover:hover{border-color:#f88c28;box-shadow:0 0 28px #46627924}.card_hover.card-rounded:hover{box-shadow:none}
