@@ -1,3 +1,4 @@
+@import '../../utils/index';
 .office {
   &__scheme {
     display: none;
@@ -8,14 +9,14 @@
     }
 
     @include laptop {
-      margin-left: -70px;
+      margin-left: -$spacer * 14;
       max-width: 602px;
     }
   }
 
   &__scheme-mobile {
     display: block;
-    margin-top: 40px;
+    margin-top: $spacer * 8;
     max-height: 501px;
 
     @include tablet {
@@ -30,7 +31,7 @@
   }
 
   &__hero-imageblock {
-    margin-top: 10px;
+    margin-top: $spacer * 2;
     @include tablet {
       img {
         width: 326px;
@@ -52,8 +53,8 @@
       max-height: 300px;
       width: 548px;
       height: 300px;
-      margin-left: 27px;
-      margin-top: 10px;
+      margin-left: $spacer * 5;
+      margin-top: $spacer * 2;
 
       img {
         min-width: 548px;
@@ -66,7 +67,7 @@
     }
 
     @include desktop {
-      margin-left: 56px;
+      margin-left: $spacer * 11;
     }
   }
 }

@@ -65,8 +65,12 @@
       name="twitter:image"
       content="https://10nceboy.github.io/delophone-landing/cover.png"
     />
-    <link rel="stylesheet" href="../../src/assets/css/scope.scss" />
-    <script src="sales.js" type="module"></script>
+    <link rel="stylesheet" href="../../src/assets/css/pages/scope.scss" />
+    <link
+      rel="stylesheet"
+      href="../../src/assets/css/pages/scope/office.scss"
+    />
+    <script src="scope.js" type="module"></script>
   </head>
   <body>
     <div class="overlay"></div>
@@ -88,7 +92,7 @@
           </ul>
         </nav>
       </div>
-      <section class="hero sales__hero" id="hero">
+      <section class="hero scope__hero" id="hero">
         <div class="container">
           <div class="hero__container">
             <div class="hero__textblock">
@@ -503,7 +507,7 @@
           </div>
           <div class="promophone__cards promophone__workcards">
             <div
-              class="card card_white card_rectangle promophone__card remote__card"
+              class="card card_white card_rectangle promophone__card promophone__feature-card"
             >
               <svg
                 width="60"
@@ -557,7 +561,7 @@
               </div>
             </div>
             <div
-              class="card card_white card_rectangle promophone__card remote__card"
+              class="card card_white card_rectangle promophone__card promophone__feature-card"
             >
               <svg
                 width="60"
@@ -589,7 +593,7 @@
               </div>
             </div>
             <div
-              class="card card_white card_rectangle promophone__card remote__card"
+              class="card card_white card_rectangle promophone__card promophone__feature-card"
             >
               <svg
                 width="60"
@@ -1502,9 +1506,11 @@
             <a
               class="card card_hover card_rectangle card_light-gray scopes__card scopes__card-sales"
               href="../scope/sales.html"
+              aria-label="Для отдела продаж"
             >
               <img
                 class="scopes__card-icon no-select"
+                alt="Сотрудник отдела продаж"
                 src="../../src/assets/images/sections/scope/scope-sales.png"
               />
 
@@ -1517,42 +1523,48 @@
             <a
               href="../scope/remote.html"
               class="card card_hover card_rectangle card_light-gray scopes__card"
+              aria-label="Для сотрудников на удаленке"
             >
               <img
                 class="scopes__card-icon no-select"
-                src="../../src/assets/images/sections/scope/scope-home.png"
+                alt="Сотрудник на удаленке"
+                src="../../src/assets/images/sections/scope/scope-remote.png"
               />
 
-              <div class="scopes__card-header scopes__card-header-home">
+              <div class="scopes__card-header scopes__card-header-remote">
                 <h4>Для сотрудников на удалёнке</h4>
               </div>
             </a>
-            <div
+            <a
+              href="../scope/away.html"
+              aria-label="Для сотрудников в разъездах"
               class="card card_hover card_rectangle card_light-gray card_hover scopes__card scopes__card-away"
             >
-              <a href="#">
-                <img
-                  class="scopes__card-icon no-select"
-                  src="../../src/assets/images/sections/scope/scope-away.png"
-                />
+              <img
+                class="scopes__card-icon no-select"
+                alt="Сотрудник в разъедах"
+                src="../../src/assets/images/sections/scope/scope-away.png"
+              />
 
-                <div class="scopes__card-header scopes__card-header-away">
-                  <h4>Для сотрудников в разъездах</h4>
-                </div>
-              </a>
-            </div>
-            <div
+              <div class="scopes__card-header scopes__card-header-away">
+                <h4>Для сотрудников в разъездах</h4>
+              </div>
+            </a>
+            <a
+              href="../scope/phone-replace.html"
               class="card card_rectangle card_hover card_light-gray scopes__card scopes__card-phone"
+              aria-label="Вместо обычного телефона"
             >
               <img
                 class="scopes__card-icon no-select"
                 src="../../src/assets/images/sections/scope/scope-phone.png"
+                alt="Вместо обычного телефона"
               />
 
               <div class="scopes__card-header scopes__card-header-phone">
                 <h4>Вместо обычного телефона</h4>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
@@ -1566,7 +1578,7 @@
                 <div class="collapse__arrow"></div>
               </h4>
               <div class="faq__answer collapse__content">
-                <p class="faq__paragraph">
+                <p class="faq__paragraph scope-faq__paragraph">
                   Да, вы сможете зарегистрировать аккаунт WhatsApp Business и
                   использовать его для работы с клиентами.
                 </p>
@@ -1600,7 +1612,7 @@
                   красивый&nbsp;номер, который вам нравится. У нас есть тысячи
                   городских, мобильных и 8-800 номеров телефонов на выбор.
                 </p>
-                <p class="faq__paragraph">
+                <p class="faq__paragraph scope-faq__paragraph">
                   <a href="/pages/numbers.html" class="link link_blue"
                     >Посмотреть красивые номера</a
                   >
@@ -1613,10 +1625,10 @@
                 <div class="collapse__arrow"></div>
               </h4>
               <div class="faq__answer collapse__content">
-                <p class="faq__paragraph scope-faq__parapgraph">
+                <p class="faq__paragraph scope-faq__paragraph">
                   Да, вы можете использовать прежний номер двумя способами:
                 </p>
-                <ol class="faq__list faq__paragraph scope-faq__parapgraph">
+                <ol class="faq__list faq__paragraph scope-faq__paragraph">
                   <li>
                     Настроить сбор входящих звонков с другой АТС: направить
                     звонки с вашей прежней АТС на SIP-аккаунт этой АТС
@@ -1627,7 +1639,7 @@
                     звонков с прежнего номера на номер Делофона.
                   </li>
                 </ol>
-                <p class="faq__paragraph scope-faq__parapgraph">
+                <p class="faq__paragraph scope-faq__paragraph">
                   Если вам понадобится помощь в реализации любого из способов,
                   мы оперативно поможем всё настроить.
                 </p>
