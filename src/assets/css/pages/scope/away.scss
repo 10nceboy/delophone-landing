@@ -1,0 +1,286 @@
+@import '../../utils/index';
+@import '../../sections/price/fmc';
+
+.away {
+  &__hero-imageblock {
+    width: 227px;
+    height: 165px;
+    min-width: 227px;
+    min-height: 165px;
+    max-width: 227px;
+    max-height: 165px;
+
+    img {
+      width: 227px;
+      height: 165px;
+      min-width: 227px;
+      min-height: 165px;
+    }
+
+    @include tablet {
+      max-width: 295px;
+      width: 295px;
+      height: 326px;
+      min-width: 295px;
+      max-height: 326px;
+      min-height: 326px;
+      margin-top: 45px;
+      img {
+        max-width: 295px;
+        width: 295px;
+        height: 326px;
+        min-width: 295px;
+        max-height: 326px;
+        min-height: 326px;
+      }
+    }
+
+    @include tablet-1024 {
+      max-width: 355px;
+      width: 355px;
+      height: 326px;
+      min-width: 355px;
+      max-height: 326px;
+      min-height: 326px;
+      margin-top: 45px;
+      margin-top: 5px;
+      img {
+        max-width: 355px;
+        width: 355px;
+        height: 326px;
+        min-width: 355px;
+        max-height: 326px;
+        min-height: 326px;
+      }
+    }
+
+    @include laptop {
+      max-width: 490px;
+      width: 490px;
+      height: 356px;
+      min-width: 490px;
+      max-height: 356px;
+      min-height: 356px;
+      margin-left: 47px;
+      margin-top: -40px;
+      img {
+        width: 490px;
+        height: 356px;
+        max-width: 490px;
+        min-width: 490px;
+        max-height: 356px;
+        min-height: 356px;
+      }
+    }
+
+    @include desktop {
+      margin-left: 87px;
+    }
+  }
+
+  &__accent {
+    display: none;
+
+    @include mobile-380 {
+      display: inline-block;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    @include tablet-980 {
+      display: inline-block;
+    }
+  }
+
+  &__accent_mobile {
+    display: inline-block;
+
+    @include mobile-380 {
+      display: none;
+    }
+
+    @include tablet {
+      display: inline-block;
+    }
+
+    @include tablet-980 {
+      display: none;
+    }
+  }
+
+  &__hero-textblock {
+    position: relative;
+  }
+
+  &__tooltip {
+    @include font($normal, 15px, $blue);
+    line-height: 150%;
+    min-width: 20px;
+    min-height: 20px;
+    position: absolute;
+    left: 128px;
+    top: -10px;
+    text-decoration: underline;
+
+    @include mobile-425 {
+      min-width: 25px;
+    }
+
+    @include mobile-l {
+      min-width: 25px;
+    }
+
+    @include smartphone {
+      font-size: 16px;
+      left: 153px;
+      min-width: 25px;
+      max-height: 25px;
+    }
+
+    @include tablet {
+      font-size: 20px;
+      left: 213px;
+    }
+  }
+
+  &__focus-header {
+    @include laptop {
+      max-width: 553px;
+    }
+  }
+
+  &__scheme {
+    max-width: 323px;
+    max-height: 239px;
+    @include laptop {
+      margin-left: 110px;
+    }
+  }
+
+  &__list-item {
+    @include laptop {
+      &::before {
+        align-self: flex-start;
+      }
+    }
+  }
+
+  &__plus_mobile {
+    display: flex;
+    justify-content: center;
+    margin: $spacer * 3 0;
+    width: 100%;
+
+    @include laptop {
+      svg {
+        min-width: 15px;
+        max-width: 15px;
+        min-height: 34px;
+        max-width: 34px;
+      }
+    }
+  }
+
+  &__fmcblock {
+    padding: $spacer * 4;
+
+    .fmc-packages {
+      margin-top: $spacer * 3;
+    }
+
+    @include tablet {
+      background-color: $light-gray;
+      max-width: 567px;
+
+      .fmc-packages {
+        background-color: $white;
+        max-width: 527px;
+        min-width: 527px;
+        width: 527px;
+        margin-top: $spacer * 4;
+      }
+
+      .fmc-packages__header {
+        font-size: 16px;
+        margin-right: $spacer * 3;
+      }
+
+      .fmc-packages__giga {
+        font-size: 14px;
+      }
+
+      .fmc-packages__price {
+        font-size: 14px;
+      }
+    }
+
+    @include laptop {
+      background-color: $light-gray;
+      max-width: 710px;
+
+      .fmc-packages {
+        max-width: 650px;
+        min-width: 650px;
+        width: 650px;
+      }
+
+      .fmc-packages__header {
+        font-size: 18px;
+        margin-right: $spacer * 5;
+      }
+
+      .fmc-packages__giga {
+        font-size: 18px;
+      }
+
+      .fmc-packages__price {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__fmc-caption {
+    @include font($normal, 16px, $gray);
+    margin-bottom: $spacer * 2;
+    line-height: 155%;
+
+    @include mobile-380 {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+
+  &__fmc-caption_small {
+    font-size: 14px;
+    margin-bottom: 0px;
+    line-height: 155%;
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+
+  &__fmc-accent {
+    @include font($medium, 18px, $black);
+    line-height: 130%;
+
+    @include mobile-380 {
+      margin-right: 3px;
+    }
+
+    @include laptop {
+      font-size: 20px;
+    }
+  }
+
+  &__container {
+    @include laptop {
+      min-height: 638px;
+    }
+  }
+
+  &__cards {
+    padding-bottom: 0px;
+  }
+}
