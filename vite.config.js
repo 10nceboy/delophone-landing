@@ -39,7 +39,8 @@ export default defineConfig({
         sales: resolve(__dirname, 'pages/scope/sales.html'),
         remote: resolve(__dirname, 'pages/scope/remote.html'),
         office: resolve(__dirname, 'pages/scope/office.html'),
-        phone: resolve(__dirname, 'pages/scope/phone-replace.html')
+        phone: resolve(__dirname, 'pages/scope/phone-replace.html'),
+        away: resolve(__dirname, 'pages/scope/away.html')
       }
     }
   }
