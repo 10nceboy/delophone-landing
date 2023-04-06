@@ -111,6 +111,12 @@ $family: 'Manrope';
   }
 }
 
+@mixin mobile-380 {
+  @media screen and (min-width: 380px) {
+    @content;
+  }
+}
+
 /**only for 1024**/
 
 @mixin tablet-1024 {
@@ -152,6 +158,12 @@ $family: 'Manrope';
 
 @mixin tablet-l {
   @media screen and (min-width: 840px) and (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin tablet-980 {
+  @media screen and (min-width: 980px) {
     @content;
   }
 }

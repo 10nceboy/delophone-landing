@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Делофон - для сотрудников на удаленке</title>
+    <title>Делофон - для сотрудников в разъездах</title>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -66,10 +66,7 @@
       content="https://10nceboy.github.io/delophone-landing/cover.png"
     />
     <link rel="stylesheet" href="../../src/assets/css/pages/scope.scss" />
-    <link
-      rel="stylesheet"
-      href="../../src/assets/css/pages/scope/remote.scss"
-    />
+    <link rel="stylesheet" href="../../src/assets/css/pages/scope/away.scss" />
     <script src="scope.js" type="module"></script>
   </head>
   <body>
@@ -88,29 +85,49 @@
                 Главная&nbsp;/</a
               >
             </li>
-            <li>Для сотрудников на удаленке</li>
+            <li>Для сотрудников в разъездах</li>
           </ul>
         </nav>
       </div>
       <section class="hero scope__hero" id="hero">
         <div class="container">
           <div class="hero__container scope__hero-container">
-            <div class="hero__textblock">
+            <div class="hero__textblock away__hero-textblock">
+              <div
+                class="tooltip away__tooltip"
+                data-tooltip-width-laptop="480px"
+                data-tooltip-width-tablet="398px"
+                data-tooltip-width-smartphone="350px"
+                data-tooltip="FMC (Fixed Mobile Convergence)— SIM-карты с виртуальной АТС для мобильных телефонов. Идеальное решение для компаний, чьи сотрудники часто работают вне офиса: курьерам, прорабам, риелторам, продавцам и другим выездным специалистам."
+              >
+                <div class="tooltip__activator away__tooltip">FMC</div>
+              </div>
               <h1>
-                Телефония с контролем<br />
-                <strong class="accent_orange">сотрудников на удалёнке</strong>
+                SIM-карта с телефонией
+
+                <br />
+                <strong class="accent_orange away__accent_mobile"
+                  >для сотрудников</strong
+                >
+                <strong class="accent_orange away__accent_mobile"
+                  >в разъездах</strong
+                >
+
+                <strong class="accent_orange away__accent"
+                  >для сотрудников в разъездах</strong
+                >
               </h1>
               <div class="container_adaptive">
                 <p class="text_regular hero__text scope__hero-text">
-                  Сохраните качество и скорость коммуникаций при переводе
-                  сотрудников на удалённую работу. Экономьте деньги на
-                  обустройстве рабочих мест.
+                  Сотовая связь с записью разговоров, голосовыми меню,
+                  интеграцией с CRM, единой стоимостью звонков и опциональными
+                  интернет-пакетами.
                 </p>
               </div>
-              <div class="hero__imageblock_mobile remote__hero-imageblock">
+              <div class="hero__imageblock_mobile away__hero-imageblock">
                 <img
                   alt="Сотрудник на удаленке"
-                  src="/src/assets/images/sections/scope/remote/hero/remote-hero.png"
+                  src="/src/assets/images/sections/scope/away/hero/scope-away-hero.svg"
                   class="no-select"
                 />
               </div>
@@ -126,10 +143,10 @@
                 </div>
               </div>
             </div>
-            <div class="hero__imageblock remote__hero-imageblock no-select">
+            <div class="hero__imageblock away__hero-imageblock no-select">
               <img
                 alt="Сотрудник на удаленке"
-                src="/src/assets/images/sections/scope/remote/hero/remote-hero.png"
+                src="/src/assets/images/sections/scope/away/hero/scope-away-hero.svg"
                 class="no-select"
               />
             </div>
@@ -140,46 +157,134 @@
         <div class="container">
           <div class="focus__wrapper">
             <div class="focus__textblock">
-              <div class="focus__header">
-                <h2>Единая система связи для удалёнки и офиса</h2>
+              <div class="focus__header away__focus-header">
+                <h2>Корпоративный мобильник с полезными возможностями</h2>
               </div>
               <div class="focus__caption">
-                Виртуальная АТС наладит связь между сотрудниками на удалёнке и в
-                офисе, повысит качество коммуникаций и позволит контролировать
-                звонки всех сотрудников.
+                С FMC ваш мобильный превращается в полноценный корпоративный
+                телефон внутри единой сети компании:
               </div>
               <ul class="list focus__list">
                 <li
                   class="list-item list-item_checked focus__caption remote__focus-caption"
                 >
-                  Бесплатная связь между сотрудниками дома и в офисе
+                  С бесплатной связью между сотрудниками
                 </li>
                 <li class="list-item list-item_checked focus__caption">
-                  Продвинутый контроль продуктивности работы
+                  С быстрым доступом к записям всех звонков
                 </li>
-                <li class="list-item list-item_checked focus__caption">
-                  Простой и быстрый перевод сотрудников на удалёнку
+                <li
+                  class="list-item list-item_checked focus__caption away__list-item"
+                >
+                  Со звонками с единого номера или с уникальными номерами у
+                  каждого сотрудника
                 </li>
               </ul>
             </div>
             <div class="focus__imageblock"></div>
             <img
-              class="remote__scheme"
-              src="../../src/assets/images/sections/scope/remote/focus/remote-scheme.svg"
-              alt="Cхема работы отдела"
+              class="scope__scheme away__scheme"
+              src="../../src/assets/images/sections/scope/away/focus/away-scheme.svg"
+              alt="Cхема работы мобильника с FMC"
             />
             <img
-              class="remote__scheme-mobile"
-              src="../../src/assets/images/sections/scope/remote/focus/remote-scheme-mobile.svg"
-              alt="Cхема работы отдела"
+              class="scope__scheme-mobile away__scheme-mobile"
+              src="../../src/assets/images/sections/scope/away/focus/away-scheme-mobile.svg"
+              alt="Cхема работы мобильника с FMC"
             />
           </div>
         </div>
       </section>
       <section class="promophone">
         <div class="container">
+          <div class="card card_white card_rectangle promophone__content">
+            <div class="promophone__header">
+              <h3>Идеально для телефонной работы вне офиса</h3>
+            </div>
+            <div class="promophone__cards promophone__features">
+              <div
+                class="card card_white promophone__feature promophone__feature-done"
+              >
+                <div class="promophone__feature-content">
+                  <div class="promophone__feature-header">
+                    <h4>При частых командировках</h4>
+                  </div>
+                  <div class="promophone__caption">
+                    Сотрудники будут на связи и под полным контролем в любых
+                    поездках.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card card_white promophone__feature promophone__feature-done"
+              >
+                <div class="promophone__feature-content">
+                  <div class="promophone__feature-header">
+                    <h4>Как дополнительный телефон</h4>
+                  </div>
+                  <div class="promophone__caption">
+                    Оставайтесь на связи по работе, даже когда уехали из офиса.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card card_white promophone__feature promophone__feature-done"
+              >
+                <div class="promophone__feature-content">
+                  <div class="promophone__feature-header">
+                    <h4>Выездным специалистам</h4>
+                  </div>
+                  <div class="promophone__caption">
+                    Контролируйте звонки курьеров, водителей и продавцов на
+                    выезде.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card card_white promophone__feature promophone__feature-done"
+              >
+                <div class="promophone__feature-content">
+                  <div class="promophone__feature-header">
+                    <h4>Для удалённых сотрудников</h4>
+                  </div>
+                  <div class="promophone__caption">
+                    Для удобной работы из дома, кафе, коворкинга или в
+                    путешествии.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card card_white promophone__feature promophone__feature-done"
+              >
+                <div class="promophone__feature-content">
+                  <div class="promophone__feature-header">
+                    <h4>В местах без интернета</h4>
+                  </div>
+                  <div class="promophone__caption">
+                    Мобильная связь и телефония работает даже без интернета.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card card_white promophone__feature promophone__feature-done"
+              >
+                <div class="promophone__feature-content">
+                  <div class="promophone__feature-header">
+                    <h4>Вместо личного телефона</h4>
+                  </div>
+                  <div class="promophone__caption">
+                    Используйте удобные функции телефонии для личных звонков.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="promophone">
+        <div class="container">
           <div class="promophone__header promophone__header-with-chips">
-            <h3>Удалённая работа может быть эффективной</h3>
+            <h3>Контролируйте работу сотрудников на выезде</h3>
             <div class="promophone__chips">
               <div
                 class="chip chip_border-gray-2 chip_transparent promophone__chip promophone__chip-with-arrow"
@@ -203,7 +308,7 @@
               </div>
             </div>
           </div>
-          <div class="promophone__cards promophone__workcards">
+          <div class="promophone__cards promophone__workcards away__cards">
             <div
               class="card card_white card_rectangle promophone__card promophone__feature-card"
             >
@@ -291,7 +396,7 @@
               </div>
             </div>
             <div
-              class="card card_white card_rectangle promophone__card promophone__feature-card"
+              class="card card_white card_rectangle promophone__card promophone__feature-card promophone__feature-no-margin"
             >
               <svg
                 width="60"
@@ -338,143 +443,13 @@
               </div>
             </div>
           </div>
-          <div
-            class="card_white card_rectangle promophone__features promophone__content remote__content"
-          >
-            <div
-              class="card card_white promophone__feature promophone__feature-not"
-            >
-              <div class="promophone__feature-content">
-                <div class="promophone__feature-header">
-                  <h4>Без снижения продуктивности</h4>
-                </div>
-                <div class="promophone__caption">
-                  Сотрудники используют удобные способы связи и ощущают
-                  контроль.
-                </div>
-              </div>
-            </div>
-            <div
-              class="card card_white promophone__feature promophone__feature-not"
-            >
-              <div class="promophone__feature-content">
-                <div class="promophone__feature-header">
-                  <h4>Без потери входящих звонков</h4>
-                </div>
-                <div class="promophone__caption">
-                  Ни один клиент не услышит короткие гудки и дозвонится до вас
-                  легко.
-                </div>
-              </div>
-            </div>
-            <div
-              class="card card_white promophone__feature promophone__feature-no-margin promophone__feature-not"
-            >
-              <div class="promophone__feature-content">
-                <div class="promophone__feature-header">
-                  <h4>Без затрат на инфраструктуру</h4>
-                </div>
-                <div class="promophone__caption">
-                  Сохраните номера телефонов, работу с CRM и другие инструменты.
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
       <section class="promophone">
         <div class="container">
           <div class="card card_white card_rectangle promophone__content">
             <div class="promophone__header">
-              <h3>Позвольте каждому выбрать удобный способ связи</h3>
-            </div>
-            <div class="promophone__cards promophone__features">
-              <div
-                class="card card_white promophone__feature promophone__feature-done"
-              >
-                <div class="promophone__feature-content">
-                  <div class="promophone__feature-header">
-                    <h4>Программа для ПК</h4>
-                  </div>
-                  <div class="promophone__caption">
-                    Для звонков достаточно гарнитуры, ноутбука и выхода в
-                    интернет.
-                  </div>
-                </div>
-              </div>
-              <div
-                class="card card_white promophone__feature promophone__feature-done"
-              >
-                <div class="promophone__feature-content">
-                  <div class="promophone__feature-header">
-                    <h4>Стационарный IP-телефон</h4>
-                  </div>
-                  <div class="promophone__caption">
-                    Используйте привычный телефонный аппарат, прямо как в офисе.
-                  </div>
-                </div>
-              </div>
-              <div
-                class="card card_white promophone__feature promophone__feature-done"
-              >
-                <div class="promophone__feature-content">
-                  <div class="promophone__feature-header">
-                    <h4>Программа для смартфона</h4>
-                  </div>
-                  <div class="promophone__caption">
-                    Будьте на связи в любой ситуации — в кровати, в дороге или в
-                    кафе.
-                  </div>
-                </div>
-              </div>
-              <div
-                class="card card_white promophone__feature promophone__feature-done"
-              >
-                <div class="promophone__feature-content">
-                  <div class="promophone__feature-header">
-                    <h4>Звонки в один клик из CRM</h4>
-                  </div>
-                  <div class="promophone__caption">
-                    Звоните клиентам прямо через их карточки в CRM со всей
-                    историей.
-                  </div>
-                </div>
-              </div>
-              <div
-                class="card card_white promophone__feature promophone__feature-done"
-              >
-                <div class="promophone__feature-content">
-                  <div class="promophone__feature-header">
-                    <h4>SIM-карта с телефонией</h4>
-                  </div>
-                  <div class="promophone__caption">
-                    Привычная сотовая связь со всеми возможностями виртуальной
-                    АТС.
-                  </div>
-                </div>
-              </div>
-              <div
-                class="card card_white promophone__feature promophone__feature-done"
-              >
-                <div class="promophone__feature-content">
-                  <div class="promophone__feature-header">
-                    <h4>API-интеграции</h4>
-                  </div>
-                  <div class="promophone__caption">
-                    Интегрируйте IP-телефонию в любые рабочие приложения и
-                    инструменты.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="promophone">
-        <div class="container">
-          <div class="card card_white card_rectangle promophone__content">
-            <div class="promophone__header">
-              <h3>Больше, чем просто «звонилка» для менеджера</h3>
+              <h3>Все возможности телефонии в вашем мобильном</h3>
             </div>
             <div class="promophone__cards">
               <div class="card card_rectangle card_light-gray promophone__card">
@@ -721,7 +696,227 @@
           </div>
         </div>
       </section>
-      {{>scope-features}} {{>scope-pay-minutes}}
+      {{>scope-features}}
+      <section class="pay-minutes scope-pay-minutes">
+        <div class="container">
+          <div
+            class="container_adaptive_full pay-minutes__container scope-pay-minutes__container away__container"
+          >
+            <div class="pay-minutes__header_mobile">
+              Платите только <br class="pay-minutes__break" />
+              за подключение и минуты
+            </div>
+            <div class="pay-minutes__header">
+              Платите только за подключение и минуты
+              <button class="button button_blue scope-pay-minutes__button">
+                Начать бесплатно
+              </button>
+            </div>
+            <div class="pay-minutes__content">
+              <div
+                class="card pay-minutes__card-top card_rounded-top scope-pay-minutes__content"
+              >
+                <div class="pay-minutes__card-header">
+                  <h4>Виртуальная АТС за 1 990 ₽</h4>
+                </div>
+                <div class="pay-minutes__chips">
+                  <div
+                    class="chip_white pay-minutes__chip scope-pay-minutes__chip"
+                  >
+                    3 сотрудника
+                  </div>
+                  <div
+                    class="chip_white pay-minutes__chip scope-pay-minutes__chip"
+                  >
+                    1 номер на выбор
+                  </div>
+                  <div
+                    class="chip_white pay-minutes__chip scope-pay-minutes__chip"
+                  >
+                    Исходящие 1.4 ₽ / мин
+                  </div>
+
+                  <div
+                    class="chip_white pay-minutes__chip scope-pay-minutes__chip"
+                  >
+                    <div class="container_flex chip-text__container">
+                      <div class="chip-text">Входящие 0 ₽ / мин</div>
+                      <div
+                        data-tooltip-width-laptop="483px"
+                        data-tooltip-width-tablet="483px"
+                        data-tooltip-width-smartphone="483px"
+                        data-tooltip="Входящие бесплатны при использовании мобильного или городского номера.<br/>Стоимость входящих на номер 8-800 &mdash; от 2 ₽ за минуту, в зависимости от региона звонящего абонента."
+                        class="tooltip pay-minutes__tooltip-top"
+                      ></div>
+                    </div>
+                  </div>
+                  <ul class="pay-minutes__list">
+                    <li
+                      class="list-item_checked pay-minutes__list-item pay-minutes__list-item-bold mobile"
+                    >
+                      3 сотрудника и 1 номер на выбор
+                    </li>
+                    <li class="list-item_checked pay-minutes__list-item mobile">
+                      Исходящие 1.4 ₽ / мин
+                    </li>
+                    <li class="list-item_checked pay-minutes__list-item mobile">
+                      Входящие 0 ₽ / мин
+                      <div
+                        data-tooltip-width-laptop="353px"
+                        data-tooltip-width-tablet="283px"
+                        data-tooltip-width-smartphone="283px"
+                        data-tooltip="Входящие бесплатны при использовании мобильного или городского номера.<br/>Стоимость входящих на номер 8-800 &mdash; от 2 ₽ за минуту, в зависимости от региона звонящего абонента."
+                        class="tooltip pay-minutes__tooltip-top"
+                      ></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="card pay-minutes__card-bottom card_black card_rounded-bot"
+              >
+                <div
+                  class="container_flex-start pay-minutes__card-bottom_container"
+                >
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="14" cy="14" r="13.5" stroke="#F88C28" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.5005 8.5C14.5005 8.22386 14.2766 8 14.0005 8C13.7244 8 13.5005 8.22386 13.5005 8.5V13.5005H8.5C8.22386 13.5005 8 13.7243 8 14.0005C8 14.2766 8.22386 14.5005 8.5 14.5005H13.5005V19.5005C13.5005 19.7767 13.7244 20.0005 14.0005 20.0005C14.2766 20.0005 14.5005 19.7767 14.5005 19.5005V14.5005H19.5005C19.7767 14.5005 20.0005 14.2766 20.0005 14.0005C20.0005 13.7243 19.7767 13.5005 19.5005 13.5005H14.5005V8.5Z"
+                      fill="#F88C28"
+                    />
+                  </svg>
+                  <div
+                    class="container_adaptive-reverse pay-minutes__card-textblock"
+                  >
+                    <div class="text_caption text_light-gray text_visible">
+                      Ещё сотрудник:
+                    </div>
+                    <div class="text_caption text_light-gray text_mobile">
+                      сотрудник:&nbsp;
+                    </div>
+                    <div class="text_semibold text_white">990 ₽ разово</div>
+                  </div>
+                </div>
+                <div
+                  class="container_flex-start pay-minutes__card-bottom_container"
+                >
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="14" cy="14" r="13.5" stroke="#F88C28" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.5005 8.5C14.5005 8.22386 14.2766 8 14.0005 8C13.7244 8 13.5005 8.22386 13.5005 8.5V13.5005H8.5C8.22386 13.5005 8 13.7243 8 14.0005C8 14.2766 8.22386 14.5005 8.5 14.5005H13.5005V19.5005C13.5005 19.7767 13.7244 20.0005 14.0005 20.0005C14.2766 20.0005 14.5005 19.7767 14.5005 19.5005V14.5005H19.5005C19.7767 14.5005 20.0005 14.2766 20.0005 14.0005C20.0005 13.7243 19.7767 13.5005 19.5005 13.5005H14.5005V8.5Z"
+                      fill="#F88C28"
+                    />
+                  </svg>
+                  <div
+                    class="container_adaptive-reverse pay-minutes__card-textblock"
+                  >
+                    <div class="text_caption text_light-gray text_visible">
+                      Ещё номер телефона:
+                    </div>
+                    <div class="text_caption text_light-gray text_mobile">
+                      номер телефона:&nbsp;
+                    </div>
+                    <div class="text_semibold text_white">990 ₽ разово</div>
+                  </div>
+                </div>
+                <div
+                  class="container_flex-start pay-minutes__card-bottom_container"
+                >
+                  <div class="pay-minutes__card-textblock">
+                    <div class="mobile_flex">
+                      <div class="text_caption text_light-gray">
+                        Оплата только за подключение,&nbsp;
+                      </div>
+                      <div class="container_flex">
+                        <strong class="text_semibold text_white">
+                          без ежемесячных платежей
+                        </strong>
+                        <div
+                          data-tooltip-width-laptop="461px"
+                          data-tooltip-width-tablet="461px"
+                          data-tooltip-width-smartphone="361px"
+                          data-tooltip="Некоторые номера мы подключаем через партнёров, за&nbsp;них мы&nbsp;вынуждены взымать абонентскую плату (190 ₽ / месяц). 
+                            Абонплата за партнёрские номера и SIM-карты — единственные возможные ежемесячные платежи в Делофоне."
+                          class="tooltip pay-minutes__tooltip-bot"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="away__plus_mobile">
+                <svg
+                  width="10"
+                  height="10"
+                  viewBox="0 0 10 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.16758 9.33V5.63H0.467578V3.95H4.16758V0.269999H5.84758V3.95H9.53758V5.63H5.84758V9.33H4.16758Z"
+                    fill="#344351"
+                  />
+                </svg>
+              </div>
+              <div class="card card_rectangle card_white away__fmcblock">
+                <div class="away__fmc-caption">
+                  <b class="away__fmc-accent">FMC SIM-карта — 990 ₽,</b>
+                  <div>190₽/мес</div>
+                </div>
+                <div class="away__fmc-caption away__fmc-caption_small">
+                  Бесплатная доставка курьером в любой город РФ.
+                </div>
+                <div class="fmc-packages">
+                  <div class="fmc-packages__header">Интернет-пакеты:</div>
+                  <div class="fmc-packages__content">
+                    <div class="fmc-packages__cell">
+                      <div class="fmc-packages__giga">1 гб</div>
+                      <div class="fmc-packages__price">145 ₽</div>
+                    </div>
+                    <div class="fmc-packages__cell">
+                      <div class="fmc-packages__giga">2 гб</div>
+                      <div class="fmc-packages__price">280 ₽</div>
+                    </div>
+                    <div class="fmc-packages__cell">
+                      <div class="fmc-packages__giga">3 гб</div>
+                      <div class="fmc-packages__price">390 ₽</div>
+                    </div>
+                    <div class="fmc-packages__cell">
+                      <div class="fmc-packages__giga">5 гб</div>
+                      <div class="fmc-packages__price">630 ₽</div>
+                    </div>
+                    <div class="fmc-packages__cell">
+                      <div class="fmc-packages__giga">10 гб</div>
+                      <div class="fmc-packages__price">1200 ₽</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="button button_blue scope-pay-minutes__button-mobile"
+              >
+                Начать бесплатно
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="cases" id="cases">
         <div class="container carousel">
           <h2 class="steps__header">Подходит бизнесу любого масштаба</h2>
@@ -731,22 +926,22 @@
                 <article class="card cases__card scope-cases__card">
                   <figure class="cases__logo">
                     <img
-                      alt="Кейс делофона"
-                      src="/src/assets/images/cases/delofon.svg"
+                      alt="Кейс Унипицца"
+                      src="/src/assets/images/cases/uni.svg"
                     />
                     <figcaption class="cases__caption">
-                      <span class="cases__chip"> 23 сотрудника </span>
+                      <span class="cases__chip"> 9 сотрудников </span>
                       <span class="cases__chip">
                         Офис и сотрудники на удалёнке
                       </span>
                     </figcaption>
                   </figure>
                   <h4 class="cases__title">
-                    Все наши сотрудники тоже используют Делофон&nbsp;:)
+                    Сеть пиццерий с со своей службой&nbsp;доставки.
                   </h4>
                   <div class="cases__content">
-                    Мы сами используем Делофон в самых разных комбинациях
-                    устройств и отделов.
+                    Объединили в одном кабинете систему связи клиентов,
+                    приёмщиков заказов и курьеров.
                   </div>
                   <a
                     class="link link_blue link_bottom"
@@ -760,22 +955,22 @@
                 <article class="card cases__card scope-cases__card">
                   <figure class="cases__logo">
                     <img
-                      alt="Кейс Эдука"
-                      src="/src/assets/images/cases/educa.svg"
+                      alt="Кейс Флоарт Сервис"
+                      src="/src/assets/images/cases/float.svg"
                     />
                     <figcaption class="cases__caption">
-                      <span class="cases__chip"> 15 сотрудников </span>
+                      <span class="cases__chip"> 5 сотрудников </span>
                       <span class="cases__chip">
                         Офис и сотрудники на удалёнке
                       </span>
                     </figcaption>
                   </figure>
-                  <span class="cases__title"
-                    >Онлайн-школа иностранных языков</span
-                  >
+                  <h4 class="cases__title">
+                    Сеть цветочных салонов с продажами онлайн и офлайн
+                  </h4>
                   <div class="cases__content">
-                    Повысили качество работы менеджеров на телефоне за счёт
-                    анализа звонков.
+                    Наладили систему быстрого заказа цветов по телефону прямо
+                    через смартфоны сотрудников.
                   </div>
                   <a
                     class="link link_blue link_bottom"
@@ -861,18 +1056,18 @@
               </div>
             </a>
             <a
-              href="../scope/away.html"
-              aria-label="Для сотрудников в разъездах"
-              class="card card_hover card_rectangle card_light-gray card_hover scopes__card scopes__card-away"
+              href="../scope/remote.html"
+              class="card card_hover card_rectangle card_light-gray scopes__card"
+              aria-label="Для сотрудников на удаленке"
             >
               <img
                 class="scopes__card-icon no-select"
-                alt="Сотрудник в разъедах"
-                src="../../src/assets/images/sections/scope/scope-away.png"
+                alt="Сотрудник на удаленке"
+                src="../../src/assets/images/sections/scope/scope-remote.png"
               />
 
-              <div class="scopes__card-header scopes__card-header-away">
-                <h4>Для сотрудников в разъездах</h4>
+              <div class="scopes__card-header scopes__card-header-remote">
+                <h4>Для сотрудников на удалёнке</h4>
               </div>
             </a>
             <a
@@ -899,68 +1094,72 @@
           <div class="faq__cards">
             <article class="card_white faq__card collapse">
               <h4 class="faq__question collapse__activator scope-faq__question">
-                Какое приложение можно использовать для звонков?
+                Будет ли доступна запись вызовов при использовании SIM-карт
+                (FMC)?
                 <div class="collapse__arrow"></div>
               </h4>
               <div class="faq__answer collapse__content">
                 <p class="faq__paragraph scope-faq__paragraph">
-                  Вы можете сами выбрать удобное для вас приложение-софтфон для
-                  звонков. Единственное требования — поддержка работы по
-                  SIP-каналу. Просто скачайте приложение и введите адрес нашего
-                  сервера, логин и пароль (указаны в вашем личном кабинете),
-                  чтобы начать звонки.
+                  Да, при работе через симкарту вам будут доступна запись
+                  вызовов, а также все остальные функции виртуальной АТС
+                  Делофон, которые доступны и обычным пользователям,
+                  использующим другие способы связи.
+                </p>
+                <p class="faq__paragraph scope-faq__paragraph">
+                  Для записи вызовов вам не придётся каждый раз включать
+                  какое-либо приложение или нажимать кнопку записи на телефоне —
+                  все вызовы будут записаны по умолчанию, а аудиоролики с
+                  записями будут храниться в личном кабинете. Эта функция
+                  доступна бесплатно для всех пользователей телефонии независимо
+                  от их способа связи.
                 </p>
               </div>
             </article>
             <article class="card_white faq__card collapse">
               <h4 class="faq__question collapse__activator scope-faq__question">
-                Сколько стоит связь между сотрудниками?
+                Как и где я могу получить симкарты? Нужно ехать к вам в офис?
                 <div class="collapse__arrow"></div>
               </h4>
               <div class="faq__answer collapse__content">
                 <p class="faq__paragraph scope-faq__paragraph">
-                  Все сотрудники смогут звонить друг другу по коротким
-                  внутренним добавочным номерам — такие звонки будут
-                  бесплатными, независимо от продолжительности разговора.
+                  Вам не придётся никуда ехать, чтобы купить симкарты Делофон.
+                  При первом заказе мы бесплатно доставим симкарты к вам домой
+                  или в офис. Доставка по России займёт не более недели, в
+                  зависимости от региона и города.
                 </p>
               </div>
             </article>
             <article class="card_white faq__card collapse">
               <h4 class="faq__question collapse__activator scope-faq__question">
-                Можно ли испольовать IP-телефон, который у меня уже есть?
+                Будет ли работать интернет на этих симкартах?
                 <div class="collapse__arrow"></div>
               </h4>
 
               <div class="faq__answer collapse__content">
                 <p class="faq__paragraph scope-faq__paragraph">
-                  Да, вы можете использовать любые IP-телефоны. Для подключения
-                  не обязательно приобретать IP-телефоны Делофон. Единственное
-                  отличие — вам нужно будет настроить ваш аппарат для работы с
-                  нашей виртуальной АТС — ввести адрес нашего сервера, логин и
-                  пароль для входа. Здесь поможет инструкция к вашему аппарату,
-                  а также наша инструкция по настройке своего IP-телефона для
-                  работы в сети Делофон.
+                  Да, в личном кабинете вы сможете дополнительно приобрести
+                  интернет-пакеты от 1 до 10 гигабайт.
                 </p>
                 <p class="faq__paragraph scope-faq__paragraph">
-                  В случае затруднений мы всегда готовы оперативно ответить на
-                  любые вопросы в чате поддержки.
+                  <a
+                    href="/pages/price.html"
+                    class="link link_blue"
+                    aria-label="Посмотреть интернет-пакеты"
+                    >Посмотреть интернет пакеты</a
+                  >
                 </p>
               </div>
             </article>
             <article class="card_white faq__card collapse">
               <h4 class="faq__question collapse__activator scope-faq__question">
-                Можно ли звонить и принимать звонки с компьютера?
+                Будет ли работать связь и функции АТС, если интернета не будет?
                 <div class="collapse__arrow"></div>
               </h4>
               <div class="faq__answer collapse__content">
                 <p class="faq__paragraph scope-faq__paragraph">
-                  Да, вы можете использовать софтфон (программа для звонков по
-                  IP-сети с компьютера) от любой компании-разработчика,
-                  достаточно ввести в программе ваш личный логин и пароль
-                  Делофона, чтобы подключиться к нашей виртуальной АТС. Мы не
-                  привязываем работу Делофона к определенным программам и не
-                  навязываем свой софт. Попробуйте несколько разных программ и
-                  выберите ту, которая будет удобной именно для вас.
+                  Да, телефония на FMC-симкартах работает через сотовую связь.
+                  Все функции виртуальной АТС будут доступны там, где есть
+                  покрытие сотовой связью.
                 </p>
               </div>
             </article>
@@ -971,68 +1170,68 @@
         <div class="container">
           <div class="results__subsection">
             <div class="results__header">
-              <h3>Самый удобный телефон для ваших сотрудников на удалёнке</h3>
+              <h3>Ваши сотрудники всегда на связи</h3>
             </div>
             <article class="results__article">
               <p class="results__paragraph">
-                Телефония Делофон позволит подключать корпоративную связь любым
-                вашим удалённым сотрудникам без лишней траты времени и денег на
-                подключение, доставку и настройку связи.
+                Виртуальная АТС позволяет быть на связи сотрудникам, которые
+                часто находятся в поездках и разъездах. Независимо от региона
+                или города, в котором сегодня находится сотрудник — его
+                корпоративная связь будет работать прямо с мобильного телефона.
               </p>
               <p class="results__paragraph">
-                Просто добавьте любое количество сотрудников в личном кабинете —
-                каждый сотрудник получит логин и пароль для входа в виртуальную
-                АТС вашей компании.
+                SIM-карты FMC от Делофон — это идеальное решение, когда нужно
+                не просто обеспечить мобильных сотрудников связью,
+                но и контролировать их работу — записывать разговоры, в 2 клика
+                включать переадресацию, когда сотрудник не может брать трубку
+                (например, в самолёте) и распределять звонки между другими
+                сотрудниками и отделами.
               </p>
               <p class="results__paragraph">
-                С помощью этих данных сотрудники смогут подключаться к сети
-                и быть на связи с любого устройства, которое им удобно —
-                приложения на телефоне, планшете и компьютере, стационарного
-                телефона с поддержкой SIP или прямо из вашей внутренней
-                бизнес-системы, к которой можно подключить телефонию Делофон по
-                API.
+                Достаточно просто вставить симкарту в мобильный телефон
+                и использовать как привычный телефон — сотруднику не придётся
+                скачивать никаких сторонних приложений.
               </p>
               <p class="results__paragraph">
-                Управляйте параметрами работы телефонии прямо в личном кабинете
-                — настройте график работы сотрудников и целых отделов.
+                Это позволяет сотрудникам работать и получать звонки, независимо
+                от того, где они находятся и какое устройство используют.
+                Телефония будет работать даже на дешевом мобильном телефоне,
+                без зависимости от операционной системы и мощности процессора.
               </p>
               <p class="results__paragraph results__paragraph_no-margin">
-                Например, можно создать отдел, состоящий только из сотрудников,
-                работающих на удалёнке, и настроить для них особые правила
-                распределения звонков, свой график работы, отдельное сообщение
-                для клиентов в нерабочее время, переадресацию на личные
-                мобильные телефоны и добавочные короткие номера для бесплатной
-                связи внутри компании.
+                Достаточно один раз настроить симкарту в личном кабинете
+                и корпоративная связь будет работать сразу после вставки
+                симкарты в телефон.
               </p>
             </article>
           </div>
           <div class="results__header">
-            <h3>Работа из дома, контроль и порядок как при работе в офисе</h3>
+            <h3>Мобильный телефон, работающий как офисный</h3>
           </div>
           <article class="results__article">
             <p class="results__paragraph">
-              Переводите сотрудников на удалённую работу без рисков потери их
-              продуктивности, снижения продаж и потери лояльности клиентов.
+              На SIM-картах (FMC) доступны все функции телефонии, которые будут
+              работать и в вашем офисе.
             </p>
             <p class="results__paragraph">
-              В личном кабинете будет виден весь рабочий процесс удалённых
-              сотрудников — кто, кому, когда и сколько раз звонил, с какими
-              клиентами разговаривал и о чем (здесь помогут записи разговоров).
+              Например, ваши сотрудники смогут не только звонить и принимать
+              звони от клиентов, но и бесплатно общаться с коллегами внутри
+              единой виртуальной телефонной сети.
+            </p>
+
+            <p class="results__paragraph results__paragraph_no-margin">
+              Достаточно просто набрать короткий номер коллеги из офиса или из
+              филиала другом городе, чтобы соединиться с ним напрямую.
             </p>
             <p class="results__paragraph">
-              Вы сможете отслеживать буквально весь рабочий день специалиста,
-              работающего с телефона на дому.
+              Добавочные номера в связке с возможностью настроить интерактивные
+              голосовые меню помогут вашим клиентам всегда дозвониться до того
+              специалиста, который необходим им в данный момент времени.
             </p>
             <p class="results__paragraph">
-              Прослушивайте телефонные разговоры, отслеживайте соблюдение
-              сотрудниками скриптов при разных сценариях звонков, выявляйте
-              ошибки и недочёты в работе удалённых специалистов и в скриптах
-              телефонных разговоров.
-            </p>
-            <p class="results__paragraph">
-              Улучшайте коммуникации с клиентами и повышайте их лояльность
-              и продажи. Налаживайте процессы внутренней коммуникации и сделайте
-              работу офиса и домашних сотрудников единым целым!
+              Черный список номеров позволит сократить количество рекламного
+              спама до минимума и использовать телефон для рабочих целей, без
+              траты времени на лишние звонки.
             </p>
           </article>
         </div>
