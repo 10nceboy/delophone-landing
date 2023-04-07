@@ -242,7 +242,7 @@
   }
 
   &__fmc-caption {
-    @include font($normal, 16px, $gray);
+    @include font($normal, 16px, $gray2);
     margin-bottom: $spacer * 2;
     line-height: 155%;
 

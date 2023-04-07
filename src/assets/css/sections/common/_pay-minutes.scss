@@ -213,7 +213,9 @@
 
     @include tablet {
       margin-bottom: $spacer * 4;
-      text-align: left;
+      h4 {
+        text-align: left;
+      }
     }
   }
 
@@ -249,6 +251,7 @@
 
     &:nth-child(4) {
       margin-right: 0px;
+      font-weight: $normal;
     }
 
     @include tablet {
@@ -281,6 +284,7 @@
 
       &:nth-child(3) {
         max-width: 175px;
+        font-weight: $normal;
       }
 
       &:nth-child(4) {

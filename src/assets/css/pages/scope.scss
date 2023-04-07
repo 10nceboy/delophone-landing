@@ -51,6 +51,7 @@
     margin-bottom: 80px;
     margin-top: 0px;
     padding-top: 30px;
+    margin: 0px;
 
     @include tablet {
       margin-bottom: 150px;
@@ -66,6 +67,12 @@
   &__hero-container {
     @include tablet {
       justify-content: stretch;
+    }
+  }
+
+  &__hero-textblock {
+    @include tablet {
+      margin: 0;
     }
   }
 

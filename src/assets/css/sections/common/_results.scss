@@ -1,9 +1,9 @@
 .results {
   background-color: $light-gray;
-  padding-bottom: $spacer * 16;
+  padding-bottom: 150px;
 
   @include tablet {
-    padding: $spacer * 14 0px $spacer * 19 0px;
+    padding: $spacer * 14 0px 150px 0px;
   }
 
   @include laptop {

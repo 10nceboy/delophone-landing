@@ -165,12 +165,12 @@
     @include mobile-s {
       max-width: 65%;
       min-width: 65%;
-      max-height: 200px;
+      max-height: 170px;
     }
 
     @include smartphone {
       max-width: 55%;
-      min-width: 55%;
+      min-width: 48%;
       max-height: 190px;
     }
 
@@ -218,8 +218,8 @@
 
     @include smartphone {
       img {
-        max-width: 55%;
-        min-width: 55%;
+        max-width: 50%;
+        min-width: 48%;
         max-height: 180px;
         min-height: 175px;
       }
@@ -318,6 +318,14 @@
         min-height: 153px;
         max-height: 153px;
         max-width: 255px;
+      }
+    }
+  }
+
+  &__card-remote {
+    @include mobile-s {
+      img {
+        max-height: 185px;
       }
     }
   }

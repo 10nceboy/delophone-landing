@@ -130,4 +130,14 @@
       padding: 2px 14px;
     }
   }
+
+  &__caption {
+    @include tablet {
+      max-width: 440px;
+    }
+
+    @include laptop {
+      max-width: 540px;
+    }
+  }
 }
