@@ -203,10 +203,6 @@
     position: relative;
     bottom: 0.1em;
     margin-left: 3px;
-
-    @include tablet {
-      bottom: 0.2em;
-    }
   }
 
   &__accent {
