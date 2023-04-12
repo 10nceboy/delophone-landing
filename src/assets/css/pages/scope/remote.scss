@@ -63,11 +63,24 @@
 
   &__scheme {
     display: none;
+    @include tablet-s {
+      display: block;
+      max-width: 500px;
+      margin-top: $spacer * 8;
+    }
+
+    @include tablet-m {
+      display: block;
+      min-width: 500px;
+      max-width: 527px;
+      margin-top: $spacer * 8;
+    }
 
     @include tablet {
       display: block;
       min-width: 407px;
     }
+
     @include laptop {
       max-height: 363px;
       min-height: 363px;
@@ -79,6 +92,14 @@
   &__scheme-mobile {
     display: block;
     margin-top: $spacer * 8;
+
+    @include tablet-s {
+      display: none;
+    }
+
+    @include tablet-m {
+      display: none;
+    }
 
     @include tablet {
       display: none;

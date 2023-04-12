@@ -69,6 +69,10 @@
       display: flex;
     }
 
+    @include mobile-s {
+      display: flex;
+    }
+
     @include smartphone {
       display: flex;
       flex-direction: row;
@@ -79,6 +83,7 @@
     @include font($medium, 16px, $gray);
     border-right: 2px solid $cold-gray;
     line-height: 130%;
+    flex: 1;
 
     &:nth-child(3) {
       border-right: none;

@@ -3,9 +3,23 @@
   &__scheme {
     display: none;
 
+    @include tablet-s {
+      display: block;
+      max-width: 500px;
+      margin-top: $spacer * 8;
+    }
+
+    @include tablet-m {
+      display: block;
+      max-width: 580px;
+      min-width: 500px;
+      margin-top: $spacer * 8;
+    }
+
     @include tablet {
       display: block;
       max-width: 452px;
+      margin-top: 0px;
     }
 
     @include laptop {
@@ -18,6 +32,14 @@
     display: block;
     margin-top: $spacer * 8;
     max-height: 501px;
+
+    @include tablet-s {
+      display: none;
+    }
+
+    @include tablet-m {
+      display: none;
+    }
 
     @include tablet {
       display: none;

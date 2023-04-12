@@ -40,7 +40,7 @@
   }
 
   &__cards {
-    padding: $spacer * 5 0;
+    padding: $spacer * 5 0 $spacer * 4;
     box-sizing: border-box;
     @include tablet {
       display: grid;
@@ -197,6 +197,10 @@
     @include tablet {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      grid-gap: $spacer * 4;
+    }
+
+    @include laptop {
       grid-gap: $spacer * 6;
     }
   }
@@ -206,6 +210,10 @@
     min-width: 0px;
     box-sizing: border-box;
     margin-bottom: $spacer * 3;
+
+    @include tablet {
+      margin-bottom: 0px;
+    }
 
     @include laptop {
       min-width: 316px;
@@ -266,19 +274,23 @@
     &:last-child {
       margin-bottom: 0px;
     }
+
+    @include tablet {
+      margin-bottom: 0px;
+    }
+
     @include laptop {
       margin-right: $spacer * 7;
-      margin-bottom: 0px;
     }
   }
 
   &__header-with-chips {
     @include tablet {
       @include flex-row;
-    }
 
-    h3 {
-      max-width: 380px;
+      h3 {
+        max-width: 380px;
+      }
     }
   }
 
@@ -447,6 +459,16 @@
     @include tablet {
       padding-bottom: $spacer * 5;
       white-space: nowrap;
+
+      &:nth-child(4) {
+        padding-bottom: 0px;
+      }
+    }
+  }
+
+  &__feature-list-item_no-padding {
+    @include tablet {
+      padding-bottom: 0px;
     }
   }
 
@@ -485,6 +507,7 @@
       display: grid;
       grid-column-gap: $spacer * 4;
       grid-template-columns: repeat(2, 1fr);
+      box-sizing: border-box;
     }
 
     @include laptop {

@@ -121,8 +121,10 @@
     min-height: 20px;
     position: absolute;
     left: 128px;
-    top: -10px;
+    top: -13px;
+    margin-top: $spacer;
     text-decoration: underline;
+    margin-top: $spacer;
 
     @include mobile-425 {
       min-width: 25px;
@@ -142,6 +144,7 @@
     @include tablet {
       font-size: 20px;
       left: 213px;
+      margin-top: 0px;
     }
   }
 
