@@ -30,21 +30,21 @@
     text-align: center;
     margin-bottom: $spacer * 3;
     min-height: 238px;
-    max-height: 238px;
+    max-height: 265px;
 
     &:last-child {
       margin-bottom: 0px;
     }
 
     @include mobile-s {
-      max-height: 248px;
-      min-height: 248px;
+      max-height: 265px;
+      min-height: 245px;
       padding-top: 20px;
     }
 
     @include smartphone {
-      max-height: 248px;
-      min-height: 258px;
+      max-height: 290px;
+      min-height: 248px;
       padding-top: $spacer * 2;
     }
 
@@ -159,7 +159,7 @@
     @include mobile-l {
       max-width: 74%;
       min-width: 74%;
-      max-height: 170px;
+      max-height: 180px;
     }
 
     @include mobile-s {
@@ -171,7 +171,7 @@
     @include smartphone {
       max-width: 55%;
       min-width: 48%;
-      max-height: 190px;
+      max-height: 215px;
     }
 
     @include tablet {
@@ -193,7 +193,7 @@
     img {
       max-height: 146px;
       min-height: 146px;
-      max-width: 202px;
+      max-width: 250px;
       min-width: 202px;
     }
 
@@ -211,7 +211,7 @@
       img {
         max-width: 60%;
         min-width: 60%;
-        max-height: 165px;
+        max-height: 185px;
         min-height: 165px;
       }
     }
@@ -220,7 +220,7 @@
       img {
         max-width: 50%;
         min-width: 48%;
-        max-height: 180px;
+        max-height: 205px;
         min-height: 175px;
       }
     }
@@ -295,9 +295,9 @@
 
     @include smartphone {
       img {
-        max-width: 55%;
-        min-width: 55%;
-        max-height: 173px;
+        max-width: 50%;
+        min-width: 50%;
+        max-height: 205px;
         min-height: 173px;
       }
     }
@@ -325,7 +325,7 @@
   &__card-remote {
     @include mobile-s {
       img {
-        max-height: 185px;
+        max-height: 200px;
       }
     }
   }
@@ -390,6 +390,20 @@
   }
 
   &__card-header-sales {
+    max-width: 190px;
+
+    @include mobile-l {
+      max-width: unset;
+    }
+
+    @include mobile-s {
+      max-width: unset;
+    }
+
+    @include smartphone {
+      max-width: unset;
+    }
+
     @include laptop {
       padding-top: 20px;
       max-width: 188px;

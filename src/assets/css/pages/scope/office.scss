@@ -92,4 +92,15 @@
       margin-left: $spacer * 11;
     }
   }
+
+  &__cards {
+    margin-bottom: $spacer * 7;
+    @include tablet {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__workcards {
+    padding-bottom: 0px;
+  }
 }

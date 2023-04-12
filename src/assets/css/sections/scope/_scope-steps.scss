@@ -92,11 +92,12 @@
   &__forth-step {
     position: relative;
     z-index: 2;
-
     margin-left: auto;
+    margin-bottom: 0px;
 
     @include tablet {
       margin-top: -$spacer * 3;
+      margin-bottom: $spacer * 5;
       &::before {
         content: url(/scope-steps-step1-arc.svg);
         position: absolute;
@@ -200,8 +201,12 @@
 
   &__arrow {
     position: relative;
-    bottom: 0.2em;
+    bottom: 0.1em;
     margin-left: 3px;
+
+    @include tablet {
+      bottom: 0.2em;
+    }
   }
 
   &__accent {

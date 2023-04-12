@@ -50,6 +50,10 @@
   max-width: 100%;
   margin-bottom: $spacer * 4;
 
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
   @include tablet {
     margin-bottom: 0px;
   }
