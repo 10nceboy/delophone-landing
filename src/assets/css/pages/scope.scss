@@ -93,4 +93,21 @@
       padding: 2px 14px;
     }
   }
+
+  &__scheme {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__scheme-mobile {
+    display: block;
+    margin-top: $spacer * 8;
+
+    @include tablet {
+      display: none;
+    }
+  }
 }
