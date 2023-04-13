@@ -105,6 +105,9 @@
   }
 
   &__promophone {
-    padding-bottom: $spacer * 5;
+    @include tablet {
+      padding-bottom: $spacer * 5;
+      padding-top: 75px;
+    }
   }
 }
