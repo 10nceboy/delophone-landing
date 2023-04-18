@@ -3,7 +3,7 @@
   padding-top: $spacer * 12;
 
   @include tablet {
-    padding-top: 100px;
+    padding-top: $spacer * 20;
   }
 
   &__header {
@@ -19,8 +19,24 @@
     }
 
     @include tablet {
+      max-width: 665px;
       h3 {
         font-size: 26px;
+      }
+    }
+  }
+
+  &__subheader {
+    margin-top: $spacer * 2;
+
+    h4 {
+      font-size: 15px;
+      line-height: 126%;
+    }
+
+    @include smartphone {
+      h4 {
+        font-size: 20px;
       }
     }
   }
@@ -87,6 +103,22 @@
       max-height: 183px;
       min-height: 183px;
       box-sizing: border-box;
+    }
+  }
+
+  &__card_tablet {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__card_mobile {
+    display: block;
+
+    @include tablet {
+      display: none;
     }
   }
 
@@ -290,6 +322,44 @@
 
       h3 {
         max-width: 380px;
+      }
+    }
+  }
+
+  &__header-with-icon {
+    margin-bottom: $spacer * 2;
+    position: relative;
+    display: inline;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    @include smartphone {
+      font-size: 20px;
+    }
+
+    @include tablet {
+      display: inline;
+      position: relative;
+      margin-bottom: 0px;
+      max-width: 340px;
+      flex-shrink: 0;
+      margin-right: $spacer * 4;
+
+      h3 {
+        display: inline;
+        line-height: 130%;
+        font-size: 22px;
+      }
+    }
+
+    @include laptop {
+      margin-right: $spacer * 6;
+      min-width: 395px;
+
+      h3 {
+        font-size: 26px;
       }
     }
   }

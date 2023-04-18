@@ -1,0 +1,77 @@
+@import '../utils/index';
+@import './business/automatic';
+@import '../sections/business/business-steps';
+@import '../sections/business/linecalls';
+
+.business {
+  &__hero-textblock {
+    margin-left: 0px;
+  }
+
+  &__hero-caption {
+    @include font($normal, 14px, $new-gray);
+    line-height: 150%;
+    margin-top: $spacer * 2;
+    text-align: center;
+
+    @include tablet {
+      margin-top: $spacer * 3;
+      color: $gray;
+      text-align: left;
+    }
+  }
+
+  &__hero-text {
+    max-width: 570px;
+
+    @include laptop {
+      min-width: 570px;
+    }
+  }
+
+  &__steps {
+    @include tablet {
+      padding: $spacer * 21 0 $spacer * 10;
+    }
+  }
+
+  &__results {
+    @include laptop {
+      padding-top: 150px;
+    }
+  }
+
+  &__cards {
+    padding: $spacer * 5 0 0;
+
+    @include tablet {
+      padding: $spacer * 11 0 0;
+    }
+  }
+
+  &__collapse-activator {
+    text-align: center;
+    padding-top: $spacer * 5;
+
+    margin: 0 auto;
+
+    justify-content: center;
+    h5 {
+      text-align: center;
+      flex: 1 1;
+      color: $blue;
+    }
+
+    @include tablet {
+      padding-top: $spacer * 10;
+    }
+
+    @include laptop {
+      max-width: 236px;
+    }
+  }
+
+  &__virtue-telephone {
+    padding-bottom: 150px;
+  }
+}

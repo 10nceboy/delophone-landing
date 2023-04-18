@@ -95,6 +95,22 @@
   &_rounded-top {
     border-radius: $border-radius-xl $border-radius-xl 0px 0px;
   }
+
+  &__mobile {
+    display: block;
+
+    @include tablet {
+      display: none;
+    }
+
+    &__tablet {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+    }
+  }
 }
 
 .card__round_text {
