@@ -1,4 +1,10 @@
 .automatic {
+  &__hero {
+    @include tablet {
+      margin-bottom: 125px;
+    }
+  }
+
   &__hero-imageblock {
     max-width: 201px;
     max-height: 194px;
@@ -48,8 +54,10 @@
   }
 
   &__first-step {
+    margin-bottom: $spacer * 5;
     @include tablet {
       display: flex;
+      margin-bottom: $spacer * 10;
     }
   }
 
@@ -192,7 +200,7 @@
       &:nth-child(2) {
         padding-top: 46px;
         .automatic__second-step-subheader {
-          margin-top: 25px;
+          margin-top: 27px;
         }
       }
 
@@ -202,6 +210,14 @@
 
         .automatic__second-step-subheader {
           margin-top: 25px;
+        }
+      }
+    }
+
+    @include tablet-1024 {
+      &:nth-child(2) {
+        .automatic__second-step-subheader {
+          margin-top: 28px;
         }
       }
     }
@@ -218,7 +234,7 @@
 
       &:nth-child(2) {
         .automatic__second-step-subheader {
-          margin-top: 32px;
+          margin-top: 37px;
         }
       }
 
@@ -282,7 +298,7 @@
   }
 
   &__promophone {
-    padding-top: $spacer * 10;
+    padding-top: $spacer * 5;
 
     @include tablet {
       padding-top: 0px;
@@ -290,6 +306,12 @@
   }
 
   &__caption {
+    margin-top: $spacer * 2;
+
+    @include tablet {
+      margin-top: 0px;
+    }
+
     @include laptop {
       font-size: 16px;
       line-height: 155%;
@@ -298,5 +320,21 @@
 
   &__second-step-header {
     display: flex;
+  }
+
+  &__icon {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__icon-mobile {
+    display: block;
+
+    @include tablet {
+      display: none;
+    }
   }
 }

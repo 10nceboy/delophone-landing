@@ -335,6 +335,18 @@
       font-size: 18px;
     }
 
+    @include mobile-l {
+      h3 {
+        font-size: 20px;
+      }
+    }
+
+    @include mobile-s {
+      h3 {
+        font-size: 20px;
+      }
+    }
+
     @include smartphone {
       font-size: 20px;
     }

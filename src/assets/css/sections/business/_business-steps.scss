@@ -1,4 +1,6 @@
 .business-steps {
+  padding-top: $spacer * 12;
+
   @include tablet {
     padding: $spacer * 21 0 $spacer * 10;
   }
@@ -8,7 +10,6 @@
 
     @include tablet {
       padding: $spacer * 10;
-      margin-bottom: $spacer * 10;
     }
   }
 

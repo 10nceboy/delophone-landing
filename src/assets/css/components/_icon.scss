@@ -58,7 +58,16 @@
     display: none;
     position: absolute;
 
-    left: 30px;
+    left: 140px;
+    top: 18px;
+
+    @include mobile-l {
+      left: 155px;
+    }
+
+    @include mobile-s {
+      left: 155px;
+    }
 
     @include smartphone {
       position: relative;
@@ -74,6 +83,10 @@
 
   &__beeps_mobile {
     display: inline;
+
+    @include mobile-xx {
+      display: none;
+    }
 
     @include tablet {
       display: none;

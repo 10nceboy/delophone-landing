@@ -5,7 +5,7 @@
 
 .business {
   &__hero-textblock {
-    margin-left: 0px;
+    margin: 0px;
   }
 
   &__hero-caption {
@@ -36,8 +36,9 @@
   }
 
   &__results {
+    padding: $spacer * 14 0;
     @include laptop {
-      padding-top: 150px;
+      padding: 150px;
     }
   }
 
@@ -72,6 +73,9 @@
   }
 
   &__virtue-telephone {
-    padding-bottom: 150px;
+    padding-bottom: 80px;
+    @include laptop {
+      padding-bottom: 150px;
+    }
   }
 }
