@@ -1,0 +1,81 @@
+.business-steps {
+  padding-top: $spacer * 12;
+
+  @include tablet {
+    padding: $spacer * 21 0 $spacer * 10;
+  }
+
+  &__step {
+    padding: $spacer * 4;
+
+    @include tablet {
+      padding: $spacer * 10;
+    }
+  }
+
+  &__textblock {
+    @include tablet {
+      margin-right: $spacer * 4;
+    }
+
+    @include laptop {
+      margin-right: $spacer * 6;
+      max-width: 490px;
+    }
+  }
+
+  &__iconblock {
+    display: grid;
+
+    @include smartphone {
+      @include flex-row;
+    }
+  }
+
+  &__header {
+    @include flex-row;
+
+    h3 {
+      margin-left: $spacer * 2;
+    }
+
+    @include smartphone {
+      h3 {
+        font-size: 22px;
+      }
+    }
+
+    @include tablet {
+      h3 {
+        font-size: 17px;
+        margin-left: $spacer * 3;
+      }
+    }
+
+    @include laptop {
+      h3 {
+        font-size: 26px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__caption {
+    @include font($normal, 14px, $gray);
+    line-height: 155%;
+    margin: $spacer * 2 0 $spacer * 4;
+
+    @include smartphone {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      font-size: 14px;
+      margin: $spacer * 4 0 0;
+    }
+
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+}

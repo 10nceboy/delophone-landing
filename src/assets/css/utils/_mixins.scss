@@ -105,6 +105,18 @@ $family: 'Manrope';
   }
 }
 
+@mixin mobile-xx {
+  @media screen and (min-width: 500px) and (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin mobile-xxx {
+  @media screen and (min-width: 474px) and (max-width: 480px) {
+    @content;
+  }
+}
+
 @mixin mobile-425 {
   @media screen and (min-width: 375px) and (max-width: 424px) {
     @content;

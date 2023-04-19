@@ -1,6 +1,6 @@
 .focus {
   background-color: $light-gray;
-  padding-top: $spacer * 14;
+  padding-top: $spacer * 16;
 
   @include tablet {
     padding-top: 150px;
@@ -27,6 +27,12 @@
     }
   }
 
+  &__header_long {
+    @include tablet {
+      max-width: 540px;
+    }
+  }
+
   &__caption {
     @include font($normal, 15px, $gray);
     line-height: 155%;
@@ -37,6 +43,7 @@
 
     @include laptop {
       font-size: 20px;
+      margin-top: 0px;
     }
   }
 
@@ -69,6 +76,23 @@
       margin-right: 38px;
       flex: 1;
       box-sizing: border-box;
+    }
+  }
+
+  &__listblock {
+    align-self: flex-start;
+    @include tablet {
+      padding: $spacer * 5 $spacer * 5 $spacer * 7;
+      margin-left: -8px;
+      background-color: $white;
+      border-radius: $border-radius-xl;
+      flex: 1 1;
+      min-width: 50%;
+      margin-left: $spacer * 2;
+    }
+
+    @include laptop {
+      margin-left: -8px;
     }
   }
 }

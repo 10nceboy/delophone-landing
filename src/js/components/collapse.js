@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let state = false;
     const content = collapse.querySelector('.collapse__content');
     const activator = collapse.querySelector('.collapse__activator');
+    const business = collapse.querySelector('#business');
 
     collapse.addEventListener('click', () => {
       if (animated) {
@@ -52,7 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
             inline: 'end'
           });
         }
+        if (business) {
+          business.innerText = 'Скрыть все возможности';
+        }
       } else {
+        if (business) {
+          business.innerText = 'Показать все возможности';
+        }
         transitionLeave(content, 'collapse__content');
         window.setTimeout(() => {
           activator.classList.toggle('collapse__activator_active');
@@ -74,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }),
         animationDruation;
     });
+
     content.addEventListener('click', (event) => event.stopPropagation());
   });
 });

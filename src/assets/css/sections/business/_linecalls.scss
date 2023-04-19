@@ -1,0 +1,479 @@
+.linecalls {
+  padding: $spacer * 16 0;
+
+  @include tablet {
+    padding: 150px 0;
+  }
+
+  &__header {
+    @include tablet {
+      max-width: 475px;
+    }
+  }
+
+  &__cards {
+    @include tablet {
+      padding: $spacer * 11 0 $spacer * 6;
+    }
+  }
+
+  &__card {
+    padding: $spacer * 4;
+    margin-bottom: $spacer * 5;
+
+    @include tablet {
+      padding: $spacer * 10 $spacer * 8;
+      max-width: 410px;
+      margin-bottom: 0px;
+
+      @include tablet-1024 {
+        min-width: 440px;
+        max-width: 540px;
+      }
+
+      @include laptop {
+        max-width: 540px;
+      }
+    }
+  }
+
+  &__card-iconblock {
+    display: none;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__card-iconblock_mobile {
+    display: block;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__card-iconblock_forwarding {
+    display: flex;
+    margin-top: $spacer * 8;
+
+    @include mobile-l {
+      margin-top: 44px;
+    }
+
+    @include mobile-s {
+      margin-top: 44px;
+    }
+
+    @include smartphone {
+      margin-top: 51px;
+    }
+
+    @include tablet {
+      display: none;
+      margin-top: 0px;
+    }
+  }
+
+  &__iconcard {
+    border: $border-black;
+    padding: $spacer * 2;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: $spacer * 2;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    @include tablet {
+      padding: $spacer * 2 7px;
+      margin-right: $spacer;
+      max-width: 105px;
+      flex: 1 1;
+      margin-bottom: 0px;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    @include tablet-1024 {
+      max-width: 117px;
+    }
+
+    @include laptop {
+      max-width: 150px;
+      min-width: 150px;
+      max-height: 104px;
+      padding: $spacer * 4 7px;
+    }
+  }
+
+  &__iconcard-header {
+    position: relative;
+    z-index: 2;
+    line-height: 130%;
+    font-size: 14px;
+
+    @include tablet {
+      margin-top: 5px;
+      font-size: 13px;
+    }
+
+    @include laptop {
+      font-size: 14px;
+    }
+
+    @include laptop {
+      margin-top: 13px;
+    }
+
+    @include laptop {
+      h4 {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__card-busy-caption {
+    @include mobile-l {
+      font-size: 15px;
+    }
+
+    @include mobile-s {
+      font-size: 15px;
+    }
+
+    @include smartphone {
+      font-size: 15px;
+    }
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include laptop {
+      font-size: 16px;
+      line-height: 155%;
+    }
+  }
+
+  &__card-header {
+    margin-bottom: $spacer * 2;
+
+    @include tablet {
+      margin: $spacer * 5 0 $spacer * 3;
+      h4 {
+        font-size: 19px;
+      }
+    }
+  }
+
+  &__card-caption {
+    margin-bottom: $spacer * 4;
+    @include tablet {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__icon {
+    @include tablet {
+      max-width: 76px;
+    }
+
+    @include laptop {
+      max-width: 105px;
+    }
+  }
+
+  &__scheme {
+    @include tablet {
+      max-width: 330px;
+    }
+
+    @include laptop {
+      max-width: unset;
+    }
+  }
+
+  &__iconcard-header_no-margin {
+    margin: 0px;
+  }
+
+  &__card-busy {
+    max-width: 100%;
+    min-width: 100%;
+    position: relative;
+    border: none;
+    z-index: 1;
+    padding: $spacer * 2;
+    line-height: 150%;
+    font-size: 14px;
+    padding: $spacer * 2 $spacer * 2 23px;
+    background-image: url('/icons/note-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-origin: padding-box;
+    background-color: $light-gray;
+    min-height: 96px;
+    min-width: 100%;
+    text-align: center;
+    @include flex-col;
+    justify-content: center;
+
+    @include mobile-425 {
+      min-height: 126px;
+      padding-top: 0px;
+    }
+
+    @include mobile-l {
+      min-height: 170px;
+      padding: 20px;
+      padding-top: 0px;
+    }
+
+    @include mobile-s {
+      min-height: 170px;
+    }
+
+    @include mobile-xx {
+      min-height: 190px;
+      padding: 50px;
+      padding-top: 25px;
+    }
+
+    @include smartphone {
+      background-image: url('/icons/note.svg');
+      min-height: 170px;
+    }
+
+    @include tablet {
+      padding: 28px 45px 40px;
+      min-width: 100%;
+    }
+
+    @include tablet-1024 {
+    }
+
+    @include laptop {
+      max-width: 100%;
+      padding: 28px 45px 40px;
+      min-height: 118px;
+      min-width: 460px;
+
+      &::before {
+        content: '';
+        background-size: 460px 118px;
+        height: 118px;
+        width: 460px;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &__card-busy-mobile {
+    display: flex;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__card-busy-tablet {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__card-busy-header {
+    @include tablet {
+      margin-top: 55px;
+    }
+
+    @include laptop {
+      margin-top: $spacer * 5;
+    }
+  }
+
+  &__iconcard_forwarding {
+    margin-right: $spacer * 2;
+    max-height: 55px;
+    flex: 1;
+    svg {
+      max-width: 35px;
+      max-height: 35px;
+    }
+
+    @include smartphone {
+      max-height: 64px;
+
+      svg {
+        max-width: 60px;
+        max-height: 60px;
+      }
+    }
+
+    @include laptop {
+      margin-right: $spacer * 4;
+      max-width: 135px;
+      min-width: 140px;
+      max-height: 76px;
+      padding: 18px $spacer * 10;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+
+  &__card-forwarding {
+    @include tablet {
+      padding-top: 77px;
+    }
+  }
+
+  &__iconcard_with-arrow {
+    position: relative;
+    &::before {
+      content: url('/icons/busines-arrow-mobile.svg');
+      position: absolute;
+      bottom: 100%;
+      left: 60%;
+    }
+
+    @include mobile-l {
+      &::before {
+        content: url('/icons/business-arrow.svg');
+        transform: scale(0.8);
+        bottom: 90%;
+      }
+    }
+
+    @include mobile-s {
+      &::before {
+        content: url('/icons/business-arrow.svg');
+        transform: scale(0.95);
+        bottom: 95%;
+      }
+    }
+
+    @include smartphone {
+      &::before {
+        content: url('/icons/business-arrow.svg');
+        bottom: 100%;
+        transform: scale(1);
+      }
+    }
+
+    @include tablet-768 {
+      &::before {
+        transform: scale(1.3);
+      }
+    }
+
+    @include tablet {
+      &::before {
+        transform: scale(0.9);
+        left: 55%;
+        bottom: 95%;
+      }
+    }
+
+    @include laptop {
+      &::before {
+        transform: scale(1);
+        left: 75%;
+        bottom: 100%;
+      }
+    }
+  }
+
+  &__iconcard_devices {
+    padding: $spacer * 3;
+    max-width: 76%;
+    margin-bottom: $spacer * 3;
+    margin-right: 0px;
+    max-height: unset;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    @include mobile-s {
+      max-width: 80%;
+    }
+
+    @include tablet {
+      max-width: 105px;
+      padding: $spacer * 2 7px;
+      margin-bottom: 0px;
+    }
+
+    @include laptop {
+      min-width: 115px;
+      max-width: 120px;
+      padding: $spacer * 4 $spacer * 2;
+      margin-right: $spacer;
+    }
+  }
+
+  &__iconcard-client {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: url('/public/icons/business-many-arrows-mobile.svg');
+      left: 100%;
+      top: 40%;
+    }
+
+    @include smartphone {
+      &:before {
+        transform: scaleY(1.1);
+      }
+    }
+
+    @include tablet {
+      &::before {
+        position: absolute;
+        content: url('/public/icons/business-many-arrows.svg');
+        display: block;
+        top: initial;
+        bottom: 98%;
+        left: -35%;
+        transform: scaleX(0.7);
+      }
+    }
+
+    @include tablet-1024 {
+      &::before {
+        left: -10%;
+        transform: scaleX(0.78);
+      }
+    }
+
+    @include laptop {
+      max-width: 75px;
+      min-width: 75px;
+      padding: 18px;
+      margin-right: $spacer * 3;
+      &::before {
+        left: 50%;
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &__break {
+    display: none;
+
+    @include laptop {
+      display: block;
+    }
+  }
+}
