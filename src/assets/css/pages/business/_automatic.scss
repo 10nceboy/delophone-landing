@@ -215,6 +215,7 @@
     }
 
     @include tablet-1024 {
+      max-width: 310px;
       &:nth-child(2) {
         .automatic__second-step-subheader {
           margin-top: 28px;

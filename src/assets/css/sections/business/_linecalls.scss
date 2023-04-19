@@ -37,6 +37,10 @@
     }
   }
 
+  &__card-graphic {
+    padding-bottom: 5px;
+  }
+
   &__card-iconblock {
     display: none;
 
@@ -99,7 +103,7 @@
     }
 
     @include tablet-1024 {
-      max-width: 117px;
+      max-width: 130px;
     }
 
     @include laptop {
@@ -229,13 +233,13 @@
     }
 
     @include mobile-l {
-      min-height: 170px;
+      min-height: 150px;
       padding: 20px;
       padding-top: 0px;
     }
 
     @include mobile-s {
-      min-height: 170px;
+      min-height: 160px;
     }
 
     @include mobile-xx {
@@ -250,14 +254,27 @@
     }
 
     @include tablet {
-      padding: 28px 45px 40px;
+      @include flex-col;
+      background-image: url('/icons/note-mobile.svg');
+      justify-content: center;
+      padding: 22px 45px 32px;
       min-width: 100%;
+      min-height: 88px;
     }
 
     @include tablet-1024 {
+      padding: 22px 70px 32px;
+    }
+
+    @include laptop-s {
+      display: block;
+      background-image: url('/icons/note.svg');
+      padding: 28px 45px 27px;
     }
 
     @include laptop {
+      display: block;
+      background-image: url('/icons/note.svg');
       max-width: 100%;
       padding: 28px 45px 40px;
       min-height: 118px;
@@ -286,17 +303,21 @@
     display: none;
 
     @include tablet {
-      display: block;
+      display: flex;
     }
   }
 
   &__card-busy-header {
     @include tablet {
-      margin-top: 55px;
+      margin-top: 13px;
+    }
+
+    @include tablet-1024 {
+      margin-top: 13px;
     }
 
     @include laptop {
-      margin-top: $spacer * 5;
+      margin-top: 11px;
     }
   }
 
@@ -412,6 +433,11 @@
       max-width: 105px;
       padding: $spacer * 2 7px;
       margin-bottom: 0px;
+      margin-right: $spacer;
+
+      &:last-child {
+        margin-right: 0px;
+      }
     }
 
     @include laptop {
@@ -439,6 +465,7 @@
     }
 
     @include tablet {
+      margin-right: 10px;
       &::before {
         position: absolute;
         content: url('/public/icons/business-many-arrows.svg');
