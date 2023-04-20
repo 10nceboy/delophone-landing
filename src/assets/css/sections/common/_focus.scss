@@ -36,6 +36,7 @@
   &__caption {
     @include font($normal, 15px, $gray);
     line-height: 155%;
+    align-items: flex-start;
 
     @include smartphone {
       font-size: 15px;
@@ -87,7 +88,7 @@
       background-color: $white;
       border-radius: $border-radius-xl;
       flex: 1 1;
-      min-width: 50%;
+      min-width: 47%;
       margin-left: $spacer * 2;
     }
 

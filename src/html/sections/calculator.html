@@ -7,6 +7,7 @@
   <div class="container calculator">
     <div class="card card_white card_rounded-top calculator__card">
       <div class="step-upside_header multichannel__header calculator__header">
+        {{#unless hideNumber}}
         <div class="step-upside__header-image">
           <svg
             width="36"
@@ -30,9 +31,15 @@
             />
           </svg>
         </div>
+        {{/unless}} {{#with hideNumber}}
+        <div class="step-upside__header-text" style="margin-left: 0px">
+          <h3>Начните использовать Делофон</h3>
+        </div>
+        {{else}}
         <div class="step-upside__header-text">
           <h3>Начните использовать Делофон</h3>
         </div>
+        {{/with}}
       </div>
       <div class="card card_rounded-top card_light-gray calculator__table">
         <section class="calculator__section">
@@ -394,7 +401,7 @@
 
             <div class="calculator__col calculator__col_right">
               <h4
-                class="calculator__price calculator__price_disabled calculator__price_single"
+                class="calculator__price calculator__price_disabled calculator__price_single calculator__price_single-free"
               >
                 Бесплатно
               </h4>

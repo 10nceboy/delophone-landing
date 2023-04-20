@@ -342,4 +342,12 @@
       display: none;
     }
   }
+
+  &__accent {
+    padding: 0 9px 3px;
+
+    @include tablet {
+      padding: 0 17px $spacer;
+    }
+  }
 }
