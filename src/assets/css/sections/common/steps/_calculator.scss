@@ -479,6 +479,16 @@ $line-width: 140px;
         margin-left: 9px;
       }
 
+      &-free {
+        @include laptop {
+          margin-left: 5px;
+        }
+
+        @include desktop {
+          margin-left: 3px;
+        }
+      }
+
       &::before {
         max-width: none;
       }

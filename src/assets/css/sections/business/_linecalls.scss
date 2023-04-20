@@ -421,8 +421,12 @@
       margin-bottom: 0px;
     }
 
+    @include mobile-l {
+      max-width: 90%;
+    }
+
     @include mobile-s {
-      max-width: 80%;
+      max-width: 90%;
     }
 
     @include tablet {
@@ -464,7 +468,7 @@
       margin-right: 10px;
       &::before {
         position: absolute;
-        content: url('/public/icons/business-many-arrows.svg');
+        content: url('/icons/business-many-arrows.svg');
         display: block;
         top: initial;
         bottom: 98%;

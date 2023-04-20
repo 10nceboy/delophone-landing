@@ -91,6 +91,12 @@
   &__image_mobile {
     display: block;
     margin: $spacer * 5 0;
+    min-width: 320px;
+    max-width: 320px;
+
+    img {
+      max-width: 320px;
+    }
 
     @include smartphone {
       display: none;
