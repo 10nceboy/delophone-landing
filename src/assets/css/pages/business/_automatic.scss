@@ -197,6 +197,7 @@
       margin-right: $spacer * 2;
 
       svg {
+        min-height: 77px;
         max-height: 98px;
         min-width: 203px;
       }
@@ -239,13 +240,17 @@
 
       &:nth-child(2) {
         .automatic__second-step-subheader {
-          margin-top: 37px;
+          margin-top: 25px;
         }
       }
 
       &:last-child {
         margin-right: 0px;
         padding-top: 30px;
+
+        svg {
+          min-height: 87px;
+        }
 
         .automatic__second-step-subheader {
           margin-top: 31px;
