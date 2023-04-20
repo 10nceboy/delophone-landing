@@ -37,10 +37,6 @@
     }
   }
 
-  &__card-graphic {
-    padding-bottom: 5px;
-  }
-
   &__card-iconblock {
     display: none;
 
@@ -233,17 +229,17 @@
     }
 
     @include mobile-l {
-      min-height: 150px;
+      min-height: 140px;
       padding: 20px;
       padding-top: 0px;
     }
 
     @include mobile-s {
-      min-height: 160px;
+      min-height: 150px;
     }
 
     @include mobile-xx {
-      min-height: 190px;
+      min-height: 180px;
       padding: 50px;
       padding-top: 25px;
     }
@@ -453,7 +449,7 @@
 
     &::before {
       position: absolute;
-      content: url('/public/icons/business-many-arrows-mobile.svg');
+      content: url('/icons/business-many-arrows-mobile.svg');
       left: 100%;
       top: 40%;
     }
