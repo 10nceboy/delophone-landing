@@ -1,6 +1,10 @@
 <section class="cases" id="cases">
   <div class="container carousel">
-    <h3 class="steps__header">Подходит для любого бизнеса</h3>
+    {{#with techHeader}}
+    <h2 class="steps__header">Для бизнеса любого масштаба</h2>
+    {{else}}
+    <h2 class="steps__header">Подходит для любого бизнеса</h2>
+    {{/with}}
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">

@@ -76,7 +76,7 @@
   }
 
   &__iconcard {
-    border: $border-black;
+    border: 1.5px solid $black;
     padding: $spacer * 2;
     border-radius: 4px;
     text-align: center;
@@ -149,6 +149,10 @@
       font-size: 15px;
     }
 
+    @include tablet-s {
+      font-size: 16px;
+    }
+
     @include tablet {
       font-size: 14px;
     }
@@ -165,15 +169,21 @@
     @include tablet {
       margin: $spacer * 5 0 $spacer * 3;
       h4 {
-        font-size: 19px;
+        font-size: 18px;
       }
     }
   }
 
   &__card-caption {
     margin-bottom: $spacer * 4;
+
+    @include smartphone {
+      font-size: 16px;
+    }
+
     @include tablet {
       margin-bottom: 0px;
+      font-size: 14px;
     }
   }
 
@@ -218,7 +228,6 @@
     background-origin: padding-box;
     background-color: $light-gray;
     min-height: 96px;
-    min-width: 100%;
     text-align: center;
     @include flex-col;
     justify-content: center;
@@ -246,7 +255,8 @@
 
     @include smartphone {
       background-image: url('/icons/note.svg');
-      min-height: 170px;
+      min-height: 160px;
+      padding: $spacer * 2 120px 23px;
     }
 
     @include tablet {
@@ -265,7 +275,7 @@
     @include laptop-s {
       display: block;
       background-image: url('/icons/note.svg');
-      padding: 28px 45px 27px;
+      padding: 28px 50px 27px;
     }
 
     @include laptop {
@@ -327,12 +337,13 @@
     }
 
     @include smartphone {
-      max-height: 64px;
-
       svg {
         max-width: 60px;
-        max-height: 60px;
       }
+    }
+
+    @include tablet {
+      min-height: 59px;
     }
 
     @include laptop {
@@ -427,6 +438,10 @@
 
     @include mobile-s {
       max-width: 90%;
+    }
+
+    @include smartphone {
+      max-width: 93%;
     }
 
     @include tablet {
