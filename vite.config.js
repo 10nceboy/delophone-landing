@@ -41,8 +41,7 @@ export default defineConfig({
         office: resolve(__dirname, 'pages/scope/office.html'),
         phone: resolve(__dirname, 'pages/scope/phone-replace.html'),
         away: resolve(__dirname, 'pages/scope/away.html'),
-        automatic: resolve(__dirname, 'pages/business/automatic.html'),
-        voicemenu: resolve(__dirname, 'pages/business/voice-menu.html')
+        automatic: resolve(__dirname, 'pages/business/automatic.html')
       }
     }
   }
