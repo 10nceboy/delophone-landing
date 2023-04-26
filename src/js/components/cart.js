@@ -9,7 +9,6 @@ const summary = document.querySelector('.cart__summary');
 const buyButton = document.querySelector('.cart__button-buy');
 const cartHeader = document.querySelector('.cart__header');
 const cartMobile = document.querySelector('.cart__mobile-button');
-
 const mobileQuantity = document.querySelector('.cart__mobile-quantity');
 let cartArray = [];
 

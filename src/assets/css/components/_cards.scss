@@ -111,6 +111,10 @@
       }
     }
   }
+
+  &_border-gray-2 {
+    border: 1px solid $gray2;
+  }
 }
 
 .card__round_text {

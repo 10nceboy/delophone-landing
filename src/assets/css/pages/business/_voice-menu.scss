@@ -1,0 +1,110 @@
+@import '../../utils/index';
+
+.voice-menu {
+  &__breadcrumbs {
+    display: inline-block;
+
+    li {
+      display: inline;
+    }
+
+    @include mobile-s {
+      display: flex;
+    }
+  }
+
+  &__accent {
+    padding: 3px $spacer * 2;
+    margin-left: -$spacer * 2;
+
+    @include mobile-380 {
+      margin-left: 0px;
+    }
+
+    @include mobile-l {
+      margin-left: -$spacer * 2;
+    }
+
+    @include mobile-x {
+      margin-left: -$spacer * 2;
+    }
+
+    @include mobile-xxx {
+      margin-left: -$spacer * 2;
+    }
+
+    @include tablet {
+      margin-left: 0px;
+      padding: 0 $spacer * 2 $spacer;
+    }
+  }
+
+  &__hero-imageblock {
+    img {
+      max-width: 200px;
+      min-height: 170px;
+    }
+
+    @include tablet {
+      img {
+        min-width: 235px;
+      }
+    }
+
+    @include tablet-1024 {
+      img {
+        min-width: 327px;
+      }
+    }
+
+    @include laptop {
+      margin-left: 83px;
+      min-height: 401px;
+      max-height: 401px;
+      margin-top: -57px;
+
+      img {
+        min-height: 401px;
+        max-height: 401px;
+        min-width: 478px;
+        max-width: 478px;
+      }
+    }
+  }
+
+  &__break {
+    @include mobile-380 {
+      display: none;
+    }
+
+    @include mobile-l {
+      display: block;
+    }
+  }
+
+  &__card {
+    @include tablet {
+      padding: $spacer * 6 $spacer * 5;
+    }
+  }
+
+  &__stepcard {
+    border-radius: $border-radius-xl;
+    padding: $spacer * 4;
+    margin-bottom: $spacer * 3;
+
+    @include tablet {
+      padding: $spacer * 7 $spacer * 5;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__second-step {
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: $spacer * 6;
+      grid-row-gap: $spacer * 8;
+    }
+  }
+}

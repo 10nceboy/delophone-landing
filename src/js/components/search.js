@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const numbers = card.querySelectorAll('i');
       numbers.forEach((number) => {
         const text = number.textContent;
-
         const matches = text.matchAll(regexpFromSearch);
         if (matches) {
           const highlightedText = text.replace(

@@ -518,4 +518,71 @@
       display: block;
     }
   }
+
+  &__iconcard-client-triple {
+    position: relative;
+    padding: $spacer * 2 0;
+    max-width: 75px;
+
+    &::after {
+      position: absolute;
+      content: url('/icons/business-triple-client-mobile.svg');
+      left: 100%;
+      top: -55%;
+    }
+
+    @include smartphone {
+      &::after {
+        transform: scaleY(1);
+        content: url('/public/icons/business-triple-client.svg');
+        top: -85%;
+      }
+    }
+
+    @include tablet {
+      margin-right: 10px;
+      max-width: 120px;
+      min-width: 120px;
+
+      &::after {
+        position: absolute;
+        content: url('/public/icons/business-triple-client-mobile.svg');
+        display: block;
+        top: -60%;
+      }
+    }
+
+    @include laptop {
+      max-width: 120px;
+      min-width: 120px;
+      margin-right: $spacer * 3;
+      margin-bottom: 40px;
+
+      &::after {
+        top: -100%;
+        content: url('/public/icons/business-triple-client.svg');
+      }
+    }
+  }
+
+  &__card-autocall {
+    padding-top: $spacer * 8;
+
+    @include smartphone {
+      padding-top: $spacer * 10;
+    }
+
+    @include tablet {
+      padding-top: 90px;
+    }
+  }
+
+  &__card-header-autocall {
+    margin-top: $spacer * 9;
+    margin-bottom: 0px;
+
+    @include tablet {
+      margin-bottom: $spacer * 3;
+    }
+  }
 }
