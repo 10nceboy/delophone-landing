@@ -157,10 +157,9 @@
       }
 
       svg {
-        min-height: 15px;
+        max-height: 15px;
         height: 18px;
         width: 18px;
-        margin-right: 5px;
       }
 
       @include tablet {
