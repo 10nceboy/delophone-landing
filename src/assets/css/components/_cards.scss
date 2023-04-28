@@ -84,6 +84,14 @@
     }
   }
 
+  &_transparent {
+    background: transparent;
+  }
+
+  &_no-border {
+    border: none;
+  }
+
   &_rectangle {
     border-radius: $border-radius-xl;
   }

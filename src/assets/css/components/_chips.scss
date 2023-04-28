@@ -4,11 +4,12 @@
   box-sizing: border-box;
 
   &_light-gray {
+    background-color: $white;
+
     @include tablet {
       background-color: $light-gray;
       border: 1px solid $dim-gray;
     }
-    background-color: $white;
   }
 
   &_white {

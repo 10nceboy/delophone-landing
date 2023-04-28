@@ -185,7 +185,7 @@
           <div
             class="card card_white card_rounded-top business-steps__step business-steps__first-step"
           >
-            <div class="business-steps__textblock">
+            <div class="business-steps__ voice-menu__textblock">
               <div class="business-steps__header">
                 <svg
                   class="scope-steps__icon"
@@ -231,20 +231,367 @@
                 Не&nbsp;тратьте время на спам и тех, кто ошибся номером.
               </div>
             </div>
-            <div class="card card_light-gray card_rectangle voice-menu__card">
-              <div class="automatic__first-step-caption">
+            <div
+              class="card card_light-gray card_rectangle audioplayer__card voice-menu__card"
+            >
+              <div class="audioplayer__header audioplayer__text">
                 Стандартное фирменное приветствие
               </div>
-              <div class="card card_white player player_long">
+              <div class="card card_white audioplayer audioplayer_long">
+                <audio
+                  data-pause="true"
+                  src="../../src/assets/audio/standart-meeting.wav"
+                  class="audio audio_not_played"
+                ></audio>
                 <button
                   type="button"
-                  class="button button_white button_no-border player__button"
-                ></button>
-                <div class="player__timer">
-                  <span class="player__play-time"></span>
-                  <span class="player__total-time">1:23</span>
+                  data-play="false"
+                  class="button button_white button_no-border button_no-padding audioplayer__element audioplayer__play audioplayer__play_rectangle"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_5133_24349)">
+                      <path
+                        d="M7.53688 3.97801C6.87115 3.55437 6 4.03258 6 4.82167V15.1783C6 15.9674 6.87115 16.4456 7.53688 16.022L15.6742 10.8437C16.2917 10.4507 16.2917 9.54929 15.6742 9.15634L7.53688 3.97801Z"
+                        fill="#2B8FEB"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5133_24349">
+                        <rect width="20" height="20" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+                <div class="audioplayer__element audioplayer__timer">
+                  <span class="audioplayer__text audioplayer__play-time"
+                    >0:00/</span
+                  >
+                  <span class="audioplayer__text audioplayer__total-time"
+                    >0:08</span
+                  >
                 </div>
-                <div class="player__progress"></div>
+                <div
+                  class="audioplayer__element audioplayer__timer audioplayer__timer-mobile"
+                >
+                  <span
+                    class="audioplayer__text audioplayer__total-time audioplayer__total-time-mobile"
+                    >0:08</span
+                  >
+                </div>
+                <div
+                  class="audioplayer__bar-wrapper audioplayer__progress-wrapper audioplayer__element"
+                >
+                  <div class="audioplayer__bar audioplayer__progress"></div>
+                </div>
+                <button
+                  type="button"
+                  class="button button_no-padding button_no-border button_white audioplayer__element audioplayer__volume"
+                  data-volume="unmuted"
+                >
+                  <svg
+                    class="audioplayer__volume-icon"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_5133_24357)">
+                      <path
+                        d="M0 5.88615C0.0542862 5.7068 0.162718 5.55337 0.30731 5.45124C0.451902 5.3491 0.623931 5.30447 0.79477 5.3248C1.36161 5.34033 1.92641 5.3248 2.49325 5.3248C2.59547 5.32796 2.69504 5.2883 2.7717 5.21385L6.27158 2.01856C6.36664 1.90542 6.48898 1.82437 6.6244 1.78507C6.75982 1.74577 6.90259 1.74984 7.03602 1.79666C7.1606 1.83945 7.27108 1.92161 7.35357 2.03286C7.43606 2.14412 7.48698 2.27952 7.50004 2.42237C7.51318 2.53941 7.51922 2.65724 7.51816 2.77515C7.51816 5.97194 7.51816 9.16878 7.51816 12.3656C7.51787 12.4731 7.51246 12.5805 7.50201 12.6874C7.49381 12.8251 7.45137 12.9576 7.37928 13.0705C7.30718 13.1834 7.20821 13.2724 7.09324 13.3276C6.97828 13.3828 6.85173 13.4022 6.72743 13.3836C6.60313 13.365 6.48587 13.3091 6.3885 13.2221C6.0012 12.8959 5.63414 12.5431 5.25894 12.1991C4.43592 11.4521 3.61419 10.7021 2.79386 9.94908C2.70884 9.86889 2.5991 9.82759 2.48724 9.83369C1.93251 9.83369 1.37575 9.83369 0.819001 9.83369C0.7023 9.84523 0.58469 9.82925 0.474065 9.78678C0.36344 9.7443 0.262314 9.67634 0.177491 9.58742C0.1013 9.4894 0.0412529 9.37757 0 9.25685V5.88615Z"
+                        fill="#344351"
+                      />
+                      <path
+                        d="M14.9969 7.57707C15.0018 9.83546 14.2817 12.0233 12.9636 13.7547C12.9084 13.8355 12.8393 13.9033 12.7602 13.9545C12.681 14.0057 12.5934 14.0392 12.5025 14.053C12.4116 14.0668 12.319 14.0607 12.2302 14.035C12.1415 14.0094 12.0582 13.9646 11.9852 13.9034C11.5959 13.5772 11.5031 13.1267 11.7653 12.7406C12.1246 12.2403 12.4413 11.7048 12.7114 11.1407C13.0874 10.3138 13.3291 9.42088 13.4255 8.50236C13.6465 6.51569 13.1703 4.51114 12.0941 2.89731C11.9691 2.70648 11.8299 2.52447 11.6907 2.34473C11.5945 2.23964 11.5289 2.10557 11.502 1.95945C11.475 1.81332 11.488 1.66176 11.5394 1.52378C11.59 1.36865 11.679 1.23208 11.7962 1.1294C11.9134 1.02671 12.0543 0.961948 12.2031 0.942388C12.3199 0.927673 12.4383 0.946324 12.5467 0.996453C12.6552 1.04658 12.7502 1.12651 12.8224 1.22864C13.1839 1.6799 13.5054 2.16802 13.7826 2.68646C14.3773 3.79254 14.7642 5.0187 14.9203 6.29228C14.9812 6.7171 15.0068 7.14714 14.9969 7.57707Z"
+                        fill="#344351"
+                      />
+                      <path
+                        d="M11.7079 7.50148C11.7181 8.81277 11.3423 10.0925 10.6367 11.1494C10.5356 11.3137 10.3807 11.4286 10.2043 11.4699C10.028 11.5113 9.84389 11.476 9.69068 11.3713C9.51377 11.2717 9.37987 11.099 9.31826 10.8911C9.25666 10.6833 9.27237 10.4571 9.3619 10.2619C9.46074 10.0644 9.59183 9.88689 9.68664 9.68719C10.427 8.09841 10.3584 6.55616 9.45064 5.06723C9.40828 4.99623 9.35782 4.92745 9.31344 4.85866C9.0391 4.4415 9.11177 3.99112 9.5253 3.65828C9.60199 3.59463 9.68977 3.54897 9.78317 3.52425C9.87657 3.49953 9.9736 3.49629 10.0682 3.51461C10.1628 3.53292 10.253 3.57245 10.3331 3.63076C10.4132 3.68907 10.4816 3.7649 10.5339 3.85352C11.1795 4.74667 11.5785 5.82486 11.6837 6.96007C11.6978 7.16865 11.7018 7.37278 11.7079 7.50148Z"
+                        fill="#344351"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5133_24357">
+                        <rect width="15" height="15" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+              </div>
+              <div class="audioplayer__header audioplayer__text">
+                Уведомление оспециальной акции
+              </div>
+              <div class="card card_white audioplayer audioplayer_long">
+                <audio
+                  data-pause="true"
+                  src="../../src/assets/audio/promotion.wav"
+                  class="audio audio_not_played"
+                ></audio>
+                <button
+                  type="button"
+                  data-play="false"
+                  class="button button_white button_no-border button_no-padding audioplayer__element audioplayer__play audioplayer__play_rectangle"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_5133_24349)">
+                      <path
+                        d="M7.53688 3.97801C6.87115 3.55437 6 4.03258 6 4.82167V15.1783C6 15.9674 6.87115 16.4456 7.53688 16.022L15.6742 10.8437C16.2917 10.4507 16.2917 9.54929 15.6742 9.15634L7.53688 3.97801Z"
+                        fill="#2B8FEB"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5133_24349">
+                        <rect width="20" height="20" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+                <div class="audioplayer__element audioplayer__timer">
+                  <span class="audioplayer__text audioplayer__play-time"
+                    >0:00/</span
+                  >
+                  <span class="audioplayer__text audioplayer__total-time"
+                    >0:09</span
+                  >
+                </div>
+                <div
+                  class="audioplayer__element audioplayer__timer audioplayer__timer-mobile"
+                >
+                  <span
+                    class="audioplayer__text audioplayer__total-time audioplayer__total-time-mobile"
+                    >0:09</span
+                  >
+                </div>
+                <div
+                  class="audioplayer__bar-wrapper audioplayer__progress-wrapper audioplayer__element"
+                >
+                  <div class="audioplayer__bar audioplayer__progress"></div>
+                </div>
+                <button
+                  type="button"
+                  class="button button_no-padding button_no-border button_white audioplayer__element audioplayer__volume"
+                  data-volume="unmuted"
+                >
+                  <svg
+                    class="audioplayer__volume-icon"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_5133_24357)">
+                      <path
+                        d="M0 5.88615C0.0542862 5.7068 0.162718 5.55337 0.30731 5.45124C0.451902 5.3491 0.623931 5.30447 0.79477 5.3248C1.36161 5.34033 1.92641 5.3248 2.49325 5.3248C2.59547 5.32796 2.69504 5.2883 2.7717 5.21385L6.27158 2.01856C6.36664 1.90542 6.48898 1.82437 6.6244 1.78507C6.75982 1.74577 6.90259 1.74984 7.03602 1.79666C7.1606 1.83945 7.27108 1.92161 7.35357 2.03286C7.43606 2.14412 7.48698 2.27952 7.50004 2.42237C7.51318 2.53941 7.51922 2.65724 7.51816 2.77515C7.51816 5.97194 7.51816 9.16878 7.51816 12.3656C7.51787 12.4731 7.51246 12.5805 7.50201 12.6874C7.49381 12.8251 7.45137 12.9576 7.37928 13.0705C7.30718 13.1834 7.20821 13.2724 7.09324 13.3276C6.97828 13.3828 6.85173 13.4022 6.72743 13.3836C6.60313 13.365 6.48587 13.3091 6.3885 13.2221C6.0012 12.8959 5.63414 12.5431 5.25894 12.1991C4.43592 11.4521 3.61419 10.7021 2.79386 9.94908C2.70884 9.86889 2.5991 9.82759 2.48724 9.83369C1.93251 9.83369 1.37575 9.83369 0.819001 9.83369C0.7023 9.84523 0.58469 9.82925 0.474065 9.78678C0.36344 9.7443 0.262314 9.67634 0.177491 9.58742C0.1013 9.4894 0.0412529 9.37757 0 9.25685V5.88615Z"
+                        fill="#344351"
+                      />
+                      <path
+                        d="M14.9969 7.57707C15.0018 9.83546 14.2817 12.0233 12.9636 13.7547C12.9084 13.8355 12.8393 13.9033 12.7602 13.9545C12.681 14.0057 12.5934 14.0392 12.5025 14.053C12.4116 14.0668 12.319 14.0607 12.2302 14.035C12.1415 14.0094 12.0582 13.9646 11.9852 13.9034C11.5959 13.5772 11.5031 13.1267 11.7653 12.7406C12.1246 12.2403 12.4413 11.7048 12.7114 11.1407C13.0874 10.3138 13.3291 9.42088 13.4255 8.50236C13.6465 6.51569 13.1703 4.51114 12.0941 2.89731C11.9691 2.70648 11.8299 2.52447 11.6907 2.34473C11.5945 2.23964 11.5289 2.10557 11.502 1.95945C11.475 1.81332 11.488 1.66176 11.5394 1.52378C11.59 1.36865 11.679 1.23208 11.7962 1.1294C11.9134 1.02671 12.0543 0.961948 12.2031 0.942388C12.3199 0.927673 12.4383 0.946324 12.5467 0.996453C12.6552 1.04658 12.7502 1.12651 12.8224 1.22864C13.1839 1.6799 13.5054 2.16802 13.7826 2.68646C14.3773 3.79254 14.7642 5.0187 14.9203 6.29228C14.9812 6.7171 15.0068 7.14714 14.9969 7.57707Z"
+                        fill="#344351"
+                      />
+                      <path
+                        d="M11.7079 7.50148C11.7181 8.81277 11.3423 10.0925 10.6367 11.1494C10.5356 11.3137 10.3807 11.4286 10.2043 11.4699C10.028 11.5113 9.84389 11.476 9.69068 11.3713C9.51377 11.2717 9.37987 11.099 9.31826 10.8911C9.25666 10.6833 9.27237 10.4571 9.3619 10.2619C9.46074 10.0644 9.59183 9.88689 9.68664 9.68719C10.427 8.09841 10.3584 6.55616 9.45064 5.06723C9.40828 4.99623 9.35782 4.92745 9.31344 4.85866C9.0391 4.4415 9.11177 3.99112 9.5253 3.65828C9.60199 3.59463 9.68977 3.54897 9.78317 3.52425C9.87657 3.49953 9.9736 3.49629 10.0682 3.51461C10.1628 3.53292 10.253 3.57245 10.3331 3.63076C10.4132 3.68907 10.4816 3.7649 10.5339 3.85352C11.1795 4.74667 11.5785 5.82486 11.6837 6.96007C11.6978 7.16865 11.7018 7.37278 11.7079 7.50148Z"
+                        fill="#344351"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5133_24357">
+                        <rect width="15" height="15" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+              </div>
+              <div class="audioplayer__header audioplayer__text">
+                Приветствие регионального отдела
+              </div>
+              <div class="card card_white audioplayer audioplayer_long">
+                <audio
+                  data-pause="true"
+                  src="../../src/assets/audio/region-meeting.wav"
+                  class="audio audio_not_played"
+                ></audio>
+                <button
+                  type="button"
+                  data-play="false"
+                  class="button button_white button_no-border button_no-padding audioplayer__element audioplayer__play audioplayer__play_rectangle"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_5133_24349)">
+                      <path
+                        d="M7.53688 3.97801C6.87115 3.55437 6 4.03258 6 4.82167V15.1783C6 15.9674 6.87115 16.4456 7.53688 16.022L15.6742 10.8437C16.2917 10.4507 16.2917 9.54929 15.6742 9.15634L7.53688 3.97801Z"
+                        fill="#2B8FEB"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5133_24349">
+                        <rect width="20" height="20" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+                <div class="audioplayer__element audioplayer__timer">
+                  <span class="audioplayer__text audioplayer__play-time"
+                    >0:00/</span
+                  >
+                  <span class="audioplayer__text audioplayer__total-time"
+                    >0:10</span
+                  >
+                </div>
+                <div
+                  class="audioplayer__element audioplayer__timer audioplayer__timer-mobile"
+                >
+                  <span
+                    class="audioplayer__text audioplayer__total-time audioplayer__total-time-mobile"
+                    >0:10</span
+                  >
+                </div>
+                <div
+                  class="audioplayer__bar-wrapper audioplayer__progress-wrapper audioplayer__element"
+                >
+                  <div class="audioplayer__bar audioplayer__progress"></div>
+                </div>
+                <button
+                  type="button"
+                  class="button button_no-padding button_no-border button_white audioplayer__element audioplayer__volume"
+                  data-volume="unmuted"
+                >
+                  <svg
+                    class="audioplayer__volume-icon"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_5133_24357)">
+                      <path
+                        d="M0 5.88615C0.0542862 5.7068 0.162718 5.55337 0.30731 5.45124C0.451902 5.3491 0.623931 5.30447 0.79477 5.3248C1.36161 5.34033 1.92641 5.3248 2.49325 5.3248C2.59547 5.32796 2.69504 5.2883 2.7717 5.21385L6.27158 2.01856C6.36664 1.90542 6.48898 1.82437 6.6244 1.78507C6.75982 1.74577 6.90259 1.74984 7.03602 1.79666C7.1606 1.83945 7.27108 1.92161 7.35357 2.03286C7.43606 2.14412 7.48698 2.27952 7.50004 2.42237C7.51318 2.53941 7.51922 2.65724 7.51816 2.77515C7.51816 5.97194 7.51816 9.16878 7.51816 12.3656C7.51787 12.4731 7.51246 12.5805 7.50201 12.6874C7.49381 12.8251 7.45137 12.9576 7.37928 13.0705C7.30718 13.1834 7.20821 13.2724 7.09324 13.3276C6.97828 13.3828 6.85173 13.4022 6.72743 13.3836C6.60313 13.365 6.48587 13.3091 6.3885 13.2221C6.0012 12.8959 5.63414 12.5431 5.25894 12.1991C4.43592 11.4521 3.61419 10.7021 2.79386 9.94908C2.70884 9.86889 2.5991 9.82759 2.48724 9.83369C1.93251 9.83369 1.37575 9.83369 0.819001 9.83369C0.7023 9.84523 0.58469 9.82925 0.474065 9.78678C0.36344 9.7443 0.262314 9.67634 0.177491 9.58742C0.1013 9.4894 0.0412529 9.37757 0 9.25685V5.88615Z"
+                        fill="#344351"
+                      />
+                      <path
+                        d="M14.9969 7.57707C15.0018 9.83546 14.2817 12.0233 12.9636 13.7547C12.9084 13.8355 12.8393 13.9033 12.7602 13.9545C12.681 14.0057 12.5934 14.0392 12.5025 14.053C12.4116 14.0668 12.319 14.0607 12.2302 14.035C12.1415 14.0094 12.0582 13.9646 11.9852 13.9034C11.5959 13.5772 11.5031 13.1267 11.7653 12.7406C12.1246 12.2403 12.4413 11.7048 12.7114 11.1407C13.0874 10.3138 13.3291 9.42088 13.4255 8.50236C13.6465 6.51569 13.1703 4.51114 12.0941 2.89731C11.9691 2.70648 11.8299 2.52447 11.6907 2.34473C11.5945 2.23964 11.5289 2.10557 11.502 1.95945C11.475 1.81332 11.488 1.66176 11.5394 1.52378C11.59 1.36865 11.679 1.23208 11.7962 1.1294C11.9134 1.02671 12.0543 0.961948 12.2031 0.942388C12.3199 0.927673 12.4383 0.946324 12.5467 0.996453C12.6552 1.04658 12.7502 1.12651 12.8224 1.22864C13.1839 1.6799 13.5054 2.16802 13.7826 2.68646C14.3773 3.79254 14.7642 5.0187 14.9203 6.29228C14.9812 6.7171 15.0068 7.14714 14.9969 7.57707Z"
+                        fill="#344351"
+                      />
+                      <path
+                        d="M11.7079 7.50148C11.7181 8.81277 11.3423 10.0925 10.6367 11.1494C10.5356 11.3137 10.3807 11.4286 10.2043 11.4699C10.028 11.5113 9.84389 11.476 9.69068 11.3713C9.51377 11.2717 9.37987 11.099 9.31826 10.8911C9.25666 10.6833 9.27237 10.4571 9.3619 10.2619C9.46074 10.0644 9.59183 9.88689 9.68664 9.68719C10.427 8.09841 10.3584 6.55616 9.45064 5.06723C9.40828 4.99623 9.35782 4.92745 9.31344 4.85866C9.0391 4.4415 9.11177 3.99112 9.5253 3.65828C9.60199 3.59463 9.68977 3.54897 9.78317 3.52425C9.87657 3.49953 9.9736 3.49629 10.0682 3.51461C10.1628 3.53292 10.253 3.57245 10.3331 3.63076C10.4132 3.68907 10.4816 3.7649 10.5339 3.85352C11.1795 4.74667 11.5785 5.82486 11.6837 6.96007C11.6978 7.16865 11.7018 7.37278 11.7079 7.50148Z"
+                        fill="#344351"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5133_24357">
+                        <rect width="15" height="15" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+              </div>
+              <div class="audioplayer__header audioplayer__text">
+                Сообщение во внерабочее время
+              </div>
+              <div class="card card_white audioplayer audioplayer_long">
+                <audio
+                  data-pause="true"
+                  src="../../src/assets/audio/non-working-message.wav"
+                  class="audio audio_not_played"
+                ></audio>
+                <button
+                  type="button"
+                  data-play="false"
+                  class="button button_white button_no-border button_no-padding audioplayer__element audioplayer__play audioplayer__play_rectangle"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_5133_24349)">
+                      <path
+                        d="M7.53688 3.97801C6.87115 3.55437 6 4.03258 6 4.82167V15.1783C6 15.9674 6.87115 16.4456 7.53688 16.022L15.6742 10.8437C16.2917 10.4507 16.2917 9.54929 15.6742 9.15634L7.53688 3.97801Z"
+                        fill="#2B8FEB"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5133_24349">
+                        <rect width="20" height="20" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+                <div class="audioplayer__element audioplayer__timer">
+                  <span class="audioplayer__text audioplayer__play-time"
+                    >0:00/</span
+                  >
+                  <span class="audioplayer__text audioplayer__total-time"
+                    >0:16</span
+                  >
+                </div>
+                <div
+                  class="audioplayer__element audioplayer__timer audioplayer__timer-mobile"
+                >
+                  <span
+                    class="audioplayer__text audioplayer__total-time audioplayer__total-time-mobile"
+                    >0:16</span
+                  >
+                </div>
+                <div
+                  class="audioplayer__bar-wrapper audioplayer__progress-wrapper audioplayer__element"
+                >
+                  <div class="audioplayer__bar audioplayer__progress"></div>
+                </div>
+                <button
+                  class="button button_no-padding button_no-border button_white audioplayer__element audioplayer__volume"
+                  data-volume="unmuted"
+                >
+                  <svg
+                    class="audioplayer__volume-icon"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_5133_24357)">
+                      <path
+                        d="M0 5.88615C0.0542862 5.7068 0.162718 5.55337 0.30731 5.45124C0.451902 5.3491 0.623931 5.30447 0.79477 5.3248C1.36161 5.34033 1.92641 5.3248 2.49325 5.3248C2.59547 5.32796 2.69504 5.2883 2.7717 5.21385L6.27158 2.01856C6.36664 1.90542 6.48898 1.82437 6.6244 1.78507C6.75982 1.74577 6.90259 1.74984 7.03602 1.79666C7.1606 1.83945 7.27108 1.92161 7.35357 2.03286C7.43606 2.14412 7.48698 2.27952 7.50004 2.42237C7.51318 2.53941 7.51922 2.65724 7.51816 2.77515C7.51816 5.97194 7.51816 9.16878 7.51816 12.3656C7.51787 12.4731 7.51246 12.5805 7.50201 12.6874C7.49381 12.8251 7.45137 12.9576 7.37928 13.0705C7.30718 13.1834 7.20821 13.2724 7.09324 13.3276C6.97828 13.3828 6.85173 13.4022 6.72743 13.3836C6.60313 13.365 6.48587 13.3091 6.3885 13.2221C6.0012 12.8959 5.63414 12.5431 5.25894 12.1991C4.43592 11.4521 3.61419 10.7021 2.79386 9.94908C2.70884 9.86889 2.5991 9.82759 2.48724 9.83369C1.93251 9.83369 1.37575 9.83369 0.819001 9.83369C0.7023 9.84523 0.58469 9.82925 0.474065 9.78678C0.36344 9.7443 0.262314 9.67634 0.177491 9.58742C0.1013 9.4894 0.0412529 9.37757 0 9.25685V5.88615Z"
+                        fill="#344351"
+                      />
+                      <path
+                        d="M14.9969 7.57707C15.0018 9.83546 14.2817 12.0233 12.9636 13.7547C12.9084 13.8355 12.8393 13.9033 12.7602 13.9545C12.681 14.0057 12.5934 14.0392 12.5025 14.053C12.4116 14.0668 12.319 14.0607 12.2302 14.035C12.1415 14.0094 12.0582 13.9646 11.9852 13.9034C11.5959 13.5772 11.5031 13.1267 11.7653 12.7406C12.1246 12.2403 12.4413 11.7048 12.7114 11.1407C13.0874 10.3138 13.3291 9.42088 13.4255 8.50236C13.6465 6.51569 13.1703 4.51114 12.0941 2.89731C11.9691 2.70648 11.8299 2.52447 11.6907 2.34473C11.5945 2.23964 11.5289 2.10557 11.502 1.95945C11.475 1.81332 11.488 1.66176 11.5394 1.52378C11.59 1.36865 11.679 1.23208 11.7962 1.1294C11.9134 1.02671 12.0543 0.961948 12.2031 0.942388C12.3199 0.927673 12.4383 0.946324 12.5467 0.996453C12.6552 1.04658 12.7502 1.12651 12.8224 1.22864C13.1839 1.6799 13.5054 2.16802 13.7826 2.68646C14.3773 3.79254 14.7642 5.0187 14.9203 6.29228C14.9812 6.7171 15.0068 7.14714 14.9969 7.57707Z"
+                        fill="#344351"
+                      />
+                      <path
+                        d="M11.7079 7.50148C11.7181 8.81277 11.3423 10.0925 10.6367 11.1494C10.5356 11.3137 10.3807 11.4286 10.2043 11.4699C10.028 11.5113 9.84389 11.476 9.69068 11.3713C9.51377 11.2717 9.37987 11.099 9.31826 10.8911C9.25666 10.6833 9.27237 10.4571 9.3619 10.2619C9.46074 10.0644 9.59183 9.88689 9.68664 9.68719C10.427 8.09841 10.3584 6.55616 9.45064 5.06723C9.40828 4.99623 9.35782 4.92745 9.31344 4.85866C9.0391 4.4415 9.11177 3.99112 9.5253 3.65828C9.60199 3.59463 9.68977 3.54897 9.78317 3.52425C9.87657 3.49953 9.9736 3.49629 10.0682 3.51461C10.1628 3.53292 10.253 3.57245 10.3331 3.63076C10.4132 3.68907 10.4816 3.7649 10.5339 3.85352C11.1795 4.74667 11.5785 5.82486 11.6837 6.96007C11.6978 7.16865 11.7018 7.37278 11.7079 7.50148Z"
+                        fill="#344351"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5133_24357">
+                        <rect width="15" height="15" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
@@ -394,32 +741,35 @@
                 <h4>Автораспределение звонков</h4>
               </div>
               <div
-                class="promophone__caption automatic__caption linecalls__card-caption"
+                class="promophone__caption automatic__caption linecalls__card-caption linecalls__crm-caption"
               >
                 Настройте гибкие сценарии распределения звонков — распределяйте
                 нагрузку и&nbsp;повышайте эффективность.
               </div>
             </div>
             <div
-              class="card card_light-gray card_rectangle linecalls__card linecalls__card-graphic"
+              class="card card_light-gray card_rectangle linecalls__card linecalls__card-crm"
             >
-              <img src="/crm.svg" alt="Поддерживаемые CRM-системы" />
+              <img
+                class="linecalls__crm"
+                src="/crm.svg"
+                alt="Поддерживаемые CRM-системы"
+              />
 
-              <div
-                class="linecalls__card-header linecalls__card-note-header linecalls__card-busy-header"
-              >
-                <h4>График работы и автоуведомления</h4>
+              <img
+                class="linecalls__crm-mobile"
+                src="/crm-mobile.svg"
+                alt="Поддерживаемые CRM-системы"
+              />
+
+              <div class="linecalls__card-header linecalls__card-header-crm">
+                <h4>API-интеграция с&nbsp;CRM/BPM-системами</h4>
               </div>
               <div
-                class="promophone__caption automatic__caption linecalls__card-caption"
+                class="promophone__caption automatic__caption linecalls__card-caption linecalls__crm-caption"
               >
-                Настройте сообщение во внерабочее время или когда все операторы
-                заняты. Клиент будет в курсе, когда ему ответят.
-              </div>
-              <div
-                class="card card_white linecalls__iconcard linecalls__card-busy linecalls__card-busy-mobile"
-              >
-                <img src="/crm-mobile.svg" alt="Поддерживаемые CRM-системы" />
+                Настройте API-интеграцию, звоните клиентам прямо из&nbsp;вашей
+                CRM и&nbsp;стройте отчёты о&nbsp;работе автоматически.
               </div>
             </div>
             <div

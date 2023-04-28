@@ -83,6 +83,7 @@
   }
 
   &__card {
+    padding: $spacer * 3 $spacer * 2;
     @include tablet {
       padding: $spacer * 6 $spacer * 5;
     }
@@ -103,8 +104,15 @@
     @include tablet {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: $spacer * 6;
-      grid-row-gap: $spacer * 8;
+      grid-gap: $spacer * 6 $spacer * 8;
+    }
+  }
+
+  &__textblock {
+    margin-right: 0px;
+
+    @include tablet {
+      max-width: 50%;
     }
   }
 }

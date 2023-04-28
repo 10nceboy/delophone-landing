@@ -105,6 +105,10 @@
   &__subheader {
     @include tablet {
       margin-top: $spacer * 4;
+
+      h4 {
+        font-size: 16.5px;
+      }
     }
   }
 
