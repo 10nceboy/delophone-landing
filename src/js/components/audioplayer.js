@@ -3,55 +3,57 @@ import { mutedIcon, pause, play, unMutedIcon } from '../constants/audioplayer';
 const volumes = document.querySelectorAll('.audioplayer__volume');
 const playButtons = document.querySelectorAll('.audioplayer__play');
 
+const handlePlayPause = (button) => {
+  let isPlay = button.dataset.play;
+  const audio = button.closest('.audioplayer').querySelector('audio');
+  if (isPlay == 'false') {
+    button.innerHTML = pause;
+    button.dataset.play = 'true';
+    audio.play();
+  } else {
+    button.innerHTML = play;
+    button.dataset.play = 'false';
+    audio.pause();
+  }
+};
+
 playButtons.forEach((playPauseButton) => {
   const playingAudio = playPauseButton
     .closest('.audioplayer')
     .querySelector('audio');
 
   playingAudio.addEventListener('ended', () => {
-    playPauseButton.innerHTML = play;
-    playPauseButton.dataset.play = 'false';
+    handlePlayPause(playPauseButton);
   });
 
   playPauseButton.addEventListener('click', (event) => {
-    let isPlay = event.currentTarget.dataset;
+    handlePlayPause(playPauseButton);
     const toggledButtons = document.querySelectorAll(
       '.audioplayer__play[data-play="true"]'
     );
 
     toggledButtons.forEach((toggledButton) => {
       if (toggledButton !== event.currentTarget) {
-        toggledButton.innerHTML = play;
-        toggledButton.dataset.play = 'false';
-        toggledButton.closest(`.audioplayer`).querySelector('.audio').pause();
+        handlePlayPause(toggledButton);
       }
     });
-
-    if (isPlay.play == 'false') {
-      playingAudio.play();
-      playPauseButton.innerHTML = pause;
-      isPlay.play = 'true';
-    } else {
-      playingAudio.pause();
-      isPlay.play = 'false';
-      playPauseButton.innerHTML = play;
-    }
   });
 });
 
-volumes.forEach((volume) => {
-  const audio = volume.closest('.audioplayer').querySelector('audio');
-  volume.addEventListener('click', (event) => {
-    let isMuted = event.currentTarget.dataset;
+const handleMuteUnmute = (event) => {
+  let { target } = event;
+  const audio = target.closest('.audioplayer').querySelector('audio');
+  if (target.dataset.volume == 'unmuted') {
+    target.innerHTML = mutedIcon;
+    target.dataset.volume = 'muted';
+    audio.volume = 0;
+  } else {
+    target.innerHTML = unMutedIcon;
+    target.dataset.volume = 'unmuted';
+    audio.volume = 1;
+  }
+};
 
-    if (isMuted.volume == 'unmuted') {
-      event.currentTarget.innerHTML = mutedIcon;
-      isMuted.volume = 'muted';
-      audio.volume = 0;
-    } else {
-      event.currentTarget.innerHTML = unMutedIcon;
-      isMuted.volume = 'unmuted';
-      audio.volume = 1;
-    }
-  });
+volumes.forEach((volume) => {
+  volume.addEventListener('click', handleMuteUnmute);
 });
