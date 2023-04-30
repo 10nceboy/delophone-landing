@@ -1,5 +1,7 @@
 @import '../../utils/index';
-@import '../../components/audioplayer' .voice-menu {
+@import '../../components/audioplayer';
+
+.voice-menu {
   &__breadcrumbs {
     display: inline-block;
 
