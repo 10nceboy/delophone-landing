@@ -1,17 +1,5 @@
 .audioplayer {
-  &__card {
-    @include tablet {
-      flex: 1 1;
-      margin-left: $spacer * 3;
-    }
-
-    @include laptop {
-      margin-left: 67px;
-
-      min-width: 445px;
-    }
-  }
-
+  border-radius: 50px;
   &__element {
     flex-shrink: 0;
   }
@@ -34,8 +22,7 @@
   }
 
   &_long {
-    padding: 11px 15px;
-    border-radius: 50px;
+    padding: $spacer * 2 $spacer * 3;
     @include flex-row;
     max-height: 41px;
     margin-bottom: $spacer * 2;
@@ -46,6 +33,46 @@
 
     @include tablet {
       margin-bottom: $spacer * 3;
+    }
+  }
+
+  &_short {
+    padding: $spacer * 2;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    min-width: 202px;
+    margin-bottom: $spacer;
+    max-width: 81%;
+    border-radius: 12px;
+    max-height: 104px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    @include tablet {
+      max-width: 269px;
+      margin-bottom: 0px;
+      border-radius: 12px;
+      align-items: center;
+      min-width: 200px;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+
+    @include laptop {
+      max-height: 62px;
+      align-items: flex-start;
+      min-width: 269px;
+    }
+  }
+
+  &_no-margin {
+    @include tablet {
+      margin-bottom: 0px;
     }
   }
 
@@ -66,7 +93,7 @@
     }
   }
 
-  &__play_rectangle {
+  &__play {
     height: auto;
     margin-top: 1px;
 
@@ -89,6 +116,16 @@
     }
   }
 
+  &__play_round {
+    border-radius: 50%;
+    padding: 5px;
+    max-height: 30px;
+
+    &:hover {
+      background-color: $light-gray;
+    }
+  }
+
   &__bar-wrapper {
     background-color: $dim-gray;
     border-radius: 200px;
@@ -97,10 +134,24 @@
   &__progress-wrapper {
     min-height: 5px;
     flex-grow: 1;
+    cursor: pointer;
+
+    z-index: 1;
 
     @include laptop {
       min-width: 228px;
     }
+  }
+
+  &__progress {
+    background-color: $blue;
+    width: 0%;
+    min-width: 0%;
+    will-change: width;
+    transition: min-width 0.4s, width 0.4s;
+
+    min-height: 5px;
+    pointer-events: none;
   }
 
   &__bar {
@@ -131,6 +182,7 @@
       margin-left: 15px;
     }
   }
+
   &__volume-icon {
     pointer-events: none;
   }

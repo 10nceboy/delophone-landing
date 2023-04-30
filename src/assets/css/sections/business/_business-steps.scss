@@ -110,6 +110,12 @@
         font-size: 16.5px;
       }
     }
+
+    @include laptop {
+      h4 {
+        font-size: 18px;
+      }
+    }
   }
 
   &__downside-header {
