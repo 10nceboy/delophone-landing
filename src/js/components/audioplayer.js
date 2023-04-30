@@ -1,4 +1,5 @@
 import { mutedIcon, pause, play, unMutedIcon } from '../constants/audioplayer';
+import { resetTimer, startTimer } from '../utils/timer';
 
 const volumes = document.querySelectorAll('.audioplayer__volume');
 const playButtons = document.querySelectorAll('.audioplayer__play');
