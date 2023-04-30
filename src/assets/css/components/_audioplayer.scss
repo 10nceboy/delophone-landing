@@ -1,0 +1,193 @@
+.audioplayer {
+  border-radius: 50px;
+  &__element {
+    flex-shrink: 0;
+  }
+
+  &__header {
+    margin-bottom: $spacer;
+  }
+
+  &__text {
+    @include font($normal, 14px, $black);
+    line-height: 150%;
+
+    @include smartphone {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+
+  &_long {
+    padding: $spacer * 2 $spacer * 3;
+    @include flex-row;
+    max-height: 41px;
+    margin-bottom: $spacer * 2;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    @include tablet {
+      margin-bottom: $spacer * 3;
+    }
+  }
+
+  &_short {
+    padding: $spacer * 2;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    min-width: 202px;
+    margin-bottom: $spacer;
+    max-width: 81%;
+    border-radius: 12px;
+    max-height: 104px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    @include tablet {
+      max-width: 269px;
+      margin-bottom: 0px;
+      border-radius: 12px;
+      align-items: center;
+      min-width: 200px;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+
+    @include laptop {
+      max-height: 62px;
+      align-items: flex-start;
+      min-width: 269px;
+    }
+  }
+
+  &_no-margin {
+    @include tablet {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__timer {
+    display: none;
+    margin: 0 $spacer * 2 0 8px;
+    @include tablet {
+      display: block;
+      margin: 0 $spacer * 3 0 $spacer;
+    }
+  }
+
+  &__timer-mobile {
+    display: block;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__play {
+    height: auto;
+    margin-top: 1px;
+
+    &:hover {
+      transition: transform 0.2s;
+      background-color: $white;
+      svg {
+        transform: scale(1.1);
+        filter: drop-shadow(3px 3px 2px $gray);
+        path {
+          fill: $dark-blue;
+        }
+      }
+    }
+
+    &:active {
+      svg {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  &__play_round {
+    border-radius: 50%;
+    padding: 5px;
+    max-height: 30px;
+
+    &:hover {
+      background-color: $light-gray;
+    }
+  }
+
+  &__bar-wrapper {
+    background-color: $dim-gray;
+    border-radius: 200px;
+  }
+
+  &__progress-wrapper {
+    min-height: 5px;
+    flex-grow: 1;
+    cursor: pointer;
+
+    z-index: 1;
+
+    @include laptop {
+      min-width: 228px;
+    }
+  }
+
+  &__progress {
+    background-color: $blue;
+    width: 0%;
+    min-width: 0%;
+    will-change: width;
+    transition: min-width 0.4s, width 0.4s;
+
+    min-height: 5px;
+    pointer-events: none;
+  }
+
+  &__bar {
+    background-color: $blue;
+    border-radius: 200px;
+  }
+
+  &__volume {
+    display: none;
+    position: relative;
+    height: auto;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: $white;
+
+      svg {
+        filter: drop-shadow(3px 3px 2px $gray);
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+    @include tablet {
+      display: block;
+      margin-left: 15px;
+    }
+  }
+
+  &__volume-icon {
+    pointer-events: none;
+  }
+}
+
+.audio {
+  display: none;
+}

@@ -84,6 +84,14 @@
     }
   }
 
+  &_transparent {
+    background: transparent;
+  }
+
+  &_no-border {
+    border: none;
+  }
+
   &_rectangle {
     border-radius: $border-radius-xl;
   }
@@ -94,6 +102,30 @@
 
   &_rounded-top {
     border-radius: $border-radius-xl $border-radius-xl 0px 0px;
+  }
+
+  &__mobile {
+    display: block;
+
+    @include tablet {
+      display: none;
+    }
+
+    &__tablet {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+    }
+  }
+
+  &_border-gray-2 {
+    border: 1px solid $gray2;
+  }
+
+  &_border-black {
+    border: 1px solid $black;
   }
 }
 

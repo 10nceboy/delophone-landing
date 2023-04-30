@@ -13,6 +13,12 @@
     }
   }
 
+  &__first-step {
+    @include tablet {
+      display: flex;
+    }
+  }
+
   &__textblock {
     @include tablet {
       margin-right: $spacer * 4;
@@ -76,6 +82,83 @@
 
     @include laptop {
       font-size: 16px;
+    }
+  }
+
+  &__downside {
+    margin-bottom: $spacer * 5;
+    min-height: 226px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    @include tablet {
+      display: flex;
+      min-height: 135px;
+      max-height: 195px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      margin-bottom: $spacer * 11;
+    }
+  }
+
+  &__subheader {
+    @include tablet {
+      margin-top: $spacer * 4;
+
+      h4 {
+        font-size: 16.5px;
+      }
+    }
+
+    @include laptop {
+      h4 {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__downside-header {
+    margin-bottom: 10px;
+    color: $white;
+    @include tablet {
+      max-width: 235px;
+      min-width: 235px;
+      margin: 0 $spacer * 5 0 0;
+    }
+
+    @include laptop {
+      margin: 0 $spacer * 13 0 0;
+      max-width: 240px;
+      min-width: 240px;
+    }
+  }
+
+  &__downside-caption {
+    color: $light-gray;
+    line-height: 150%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    @include tablet {
+      line-height: 155%;
+    }
+  }
+
+  &__checklist {
+    @include tablet {
+      margin-top: $spacer * 2;
+    }
+  }
+
+  &__playerblock {
+    @include tablet {
+      grid-column-start: 1;
+      grid-column-end: 3;
     }
   }
 }

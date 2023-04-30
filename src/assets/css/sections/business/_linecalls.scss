@@ -169,7 +169,7 @@
     @include tablet {
       margin: $spacer * 5 0 $spacer * 3;
       h4 {
-        font-size: 18px;
+        font-size: 17px;
       }
     }
   }
@@ -217,7 +217,6 @@
     position: relative;
     border: none;
     z-index: 1;
-    padding: $spacer * 2;
     line-height: 150%;
     font-size: 14px;
     padding: $spacer * 2 $spacer * 2 23px;
@@ -517,5 +516,154 @@
     @include laptop {
       display: block;
     }
+  }
+
+  &__iconcard-client-triple {
+    position: relative;
+    padding: $spacer * 2 0;
+    max-width: 75px;
+
+    &::after {
+      position: absolute;
+      content: url('/icons/business-triple-client-mobile.svg');
+      left: 100%;
+      top: -60%;
+    }
+
+    @include smartphone {
+      &::after {
+        transform: scaleY(1);
+        content: url('/public/icons/business-triple-client.svg');
+        top: -85%;
+      }
+    }
+
+    @include tablet {
+      margin-right: 10px;
+      max-width: 120px;
+      min-width: 120px;
+      z-index: 2;
+
+      &::after {
+        position: absolute;
+        content: url('/public/icons/business-triple-client-mobile.svg');
+        display: block;
+        top: -60%;
+      }
+    }
+
+    @include laptop-s {
+      &::after {
+        top: -90%;
+        left: 77%;
+        content: url('/public/icons/business-triple-client.svg');
+        transform: scale(0.83);
+      }
+    }
+
+    @include laptop {
+      max-width: 120px;
+      min-width: 120px;
+      margin-right: $spacer * 3;
+      margin-bottom: 40px;
+
+      &::after {
+        top: -90%;
+        content: url('/public/icons/business-triple-client.svg');
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__card-autocall {
+    padding-top: $spacer * 8;
+
+    @include smartphone {
+      padding-top: $spacer * 10;
+    }
+
+    @include tablet {
+      padding-top: 80px;
+    }
+  }
+
+  &__card-header-autocall {
+    margin-top: $spacer * 8;
+    margin-bottom: 0px;
+
+    @include tablet {
+      margin-bottom: $spacer * 5;
+      margin-top: $spacer * 10;
+    }
+
+    @include laptop-s {
+      margin-top: $spacer * 12;
+    }
+
+    @include laptop {
+      margin-bottom: $spacer * 3;
+    }
+  }
+
+  &__crm {
+    display: none;
+
+    @include smartphone {
+      display: block;
+    }
+
+    @include tablet {
+      max-width: 100%;
+    }
+
+    @include tablet-1024 {
+      max-width: 100%;
+    }
+  }
+
+  &__crm-mobile {
+    display: block;
+
+    @include smartphone {
+      display: none;
+    }
+  }
+
+  &__card-crm {
+    @include tablet {
+      padding-top: $spacer * 12;
+    }
+  }
+
+  &__card-header-crm {
+    margin-top: 21px;
+
+    @include smartphone {
+      margin-top: 35px;
+    }
+
+    @include tablet {
+      margin-top: 50px;
+
+      h4 {
+        line-height: 130%;
+      }
+    }
+
+    @include tablet-1024 {
+      margin-top: 45px;
+    }
+
+    @include laptop {
+      margin-top: 31px;
+    }
+
+    @include desktop {
+      margin-top: 28px;
+    }
+  }
+
+  &__crm-caption {
+    margin-bottom: 0px;
   }
 }

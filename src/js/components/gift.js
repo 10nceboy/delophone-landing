@@ -1,5 +1,3 @@
-import { clickOutside } from '../utils/dom';
-
 document.addEventListener('DOMContentLoaded', () => {
   const gift = document.querySelector('.gift');
   const giftButton = document.querySelector('.gift__button');
