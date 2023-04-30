@@ -39,25 +39,32 @@ const handleMuteToggle = (event) => {
   }
 };
 
-playButtons.forEach((playPauseButton) => {
-  const playingAudio = playPauseButton
-    .closest('.audioplayer')
-    .querySelector('audio');
-
-  playingAudio.addEventListener('ended', () => {
-    handlePlayToggle(playPauseButton);
+document.addEventListener('DOMContentLoaded', () => {
+  const audios = document.querySelectorAll('audio');
+  audios.forEach((audio) => {
+    audio.load();
   });
 
-  playPauseButton.addEventListener('click', (event) => {
-    handlePlayToggle(playPauseButton);
-    const toggledButtons = document.querySelectorAll(
-      '.audioplayer__play[data-play="true"]'
-    );
+  playButtons.forEach((playPauseButton) => {
+    const playingAudio = playPauseButton
+      .closest('.audioplayer')
+      .querySelector('audio');
 
-    toggledButtons.forEach((toggledButton) => {
-      if (toggledButton !== event.currentTarget) {
-        handlePlayToggle(toggledButton);
-      }
+    playingAudio.addEventListener('ended', () => {
+      handlePlayToggle(playPauseButton);
+    });
+
+    playPauseButton.addEventListener('click', (event) => {
+      handlePlayToggle(playPauseButton);
+      const toggledButtons = document.querySelectorAll(
+        '.audioplayer__play[data-play="true"]'
+      );
+
+      toggledButtons.forEach((toggledButton) => {
+        if (toggledButton !== event.currentTarget) {
+          handlePlayToggle(toggledButton);
+        }
+      });
     });
   });
 });
