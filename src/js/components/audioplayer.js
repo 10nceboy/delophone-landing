@@ -2,7 +2,8 @@ import { mutedIcon, pause, play, unMutedIcon } from '../constants/audioplayer';
 import { resetTimer, startTimer } from '../utils/timer';
 
 var audio1 = new Audio();
-audio1.src = 'audio/IVR-2.mp3';
+audio1.src =
+  'https://10nceboy.github.io/delophone-landing/audio/standart-meeting.wav';
 
 var audioContext = new AudioContext();
 
