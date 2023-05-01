@@ -4,13 +4,6 @@ import { resetTimer, startTimer } from '../utils/timer';
 const volumes = document.querySelectorAll('.audioplayer__volume');
 const playButtons = document.querySelectorAll('.audioplayer__play');
 
-document.addEventListener('DOMContentLoaded', () => {
-  const audios = document.querySelectorAll('audio');
-  audios.forEach((audio) => {
-    audio.load();
-  });
-});
-
 const handlePlayToggle = (button) => {
   let isPlay = button.dataset.play;
   const audio = button.closest('.audioplayer').querySelector('audio');
