@@ -53,7 +53,7 @@ audio1.addEventListener('play', function () {
 audio1.addEventListener('pause', function () {
   // Останавливаем аудио и устанавливаем текущее время равным начальному времени
   sourceBuffer.stop(0);
-  audio.currentTime = 0;
+  audio1.currentTime = 0;
 });
 
 const handleMuteToggle = (event) => {
