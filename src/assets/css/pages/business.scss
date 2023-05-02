@@ -50,10 +50,24 @@
 
 .business {
   &__hero {
-    @include smartphone {
-      margin-bottom: 80px;
+    margin-bottom: 80px;
+    margin-top: 0px;
+    padding-top: 30px;
+    margin: 0px;
+    padding-bottom: 80px;
+
+    @include tablet {
+      margin-bottom: 150px;
+      box-sizing: border-box;
+      padding-top: 80px;
+      padding-bottom: 0px;
+
+      h1 {
+        margin-top: 0px;
+      }
     }
   }
+
   &__hero-textblock {
     margin: 0px;
   }
