@@ -235,13 +235,13 @@ $family: 'Manrope';
 }
 
 @mixin tablet-850 {
-  @media screen and (min-width: 820px) {
+  @media screen and (min-width: 850px) {
     @content;
   }
 }
 
 @mixin tablet-920 {
-  @media screen and (min-width: 820px) {
+  @media screen and (min-width: 920px) {
     @content;
   }
 }

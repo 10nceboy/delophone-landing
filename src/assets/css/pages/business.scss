@@ -72,6 +72,12 @@
     margin: 0px;
   }
 
+  &__hero-container {
+    @include tablet {
+      justify-content: stretch;
+    }
+  }
+
   &__hero-caption {
     @include font($normal, 14px, $new-gray);
     line-height: 150%;

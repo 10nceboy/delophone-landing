@@ -185,10 +185,6 @@
       z-index: 1;
     }
 
-    @include mobile-390 {
-      font-size: 15px;
-    }
-
     @include mobile-425 {
       &::before {
         transform: scaleY(0.92);
@@ -197,6 +193,7 @@
     }
 
     @include mobile-390 {
+      font-size: 15px;
       &::before {
         transform: scaleY(0.93);
         top: 0%;
@@ -280,11 +277,6 @@
       margin-left: -28px;
     }
 
-    @include tablet-m {
-      min-width: 75%;
-      margin-left: -28px;
-    }
-
     @include tablet-820 {
       min-width: 70%;
       max-width: 70%;
@@ -308,6 +300,7 @@
       margin-bottom: 0px;
       font-size: 13px;
       margin-right: 10px;
+      margin-left: 0px;
       align-self: center;
       min-width: unset;
 
@@ -320,14 +313,20 @@
 
       @include laptop {
         margin-right: 0px;
+        margin-left: 0px;
         font-size: 16px;
-        min-width: 126px;
+        min-width: 110px;
+        font-size: 15px;
         align-self: center;
         &::before {
           top: -125%;
           left: 102%;
           transform: scale(1);
         }
+      }
+
+      @include desktop {
+        min-width: 126px;
       }
     }
   }
@@ -342,8 +341,13 @@
     }
 
     @include laptop {
-      margin-left: $spacer * 6;
+      margin-left: $spacer * 5;
       grid-gap: $spacer * 2 $spacer * 6;
+      grid-template-columns: 269px 240px;
+    }
+
+    @include desktop {
+      margin-left: $spacer * 6;
     }
   }
 
@@ -453,17 +457,24 @@
         margin-left: 0px;
       }
     }
+
+    @include laptop {
+      min-width: 240px;
+      max-width: 240px;
+    }
   }
 
   &__playercard-client {
     padding: $spacer * 3 $spacer * 2;
     @include flex-col;
     align-items: center;
+
     @include tablet {
       padding: $spacer * 5 $spacer * 3;
       position: relative;
       @include flex-col;
       margin-left: $spacer * 5;
+      align-items: flex-start;
 
       &:before {
         content: url(../../../images/sections/business/voice-menu/steps/player/player-multilines.svg);
@@ -483,6 +494,9 @@
 
       @include laptop {
         margin-left: $spacer * 6;
+        align-items: flex-start;
+        flex-shrink: 1;
+        min-width: 225px;
         &::before {
           top: 10%;
           left: -30px;
@@ -493,10 +507,14 @@
 
     @include laptop {
       margin-left: $spacer * 6;
-      max-width: 235px;
+      max-width: 225px;
       flex-shrink: 0;
       justify-content: space-between;
       min-height: 100%;
+    }
+
+    @include desktop {
+      max-width: 235px;
     }
   }
 
@@ -526,8 +544,13 @@
       max-height: 40px;
     }
 
+    @include tablet-1024 {
+      max-height: 50px;
+    }
+
     @include laptop {
       min-height: 60px;
+      max-width: unset;
     }
   }
 }

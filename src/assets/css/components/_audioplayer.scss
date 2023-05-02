@@ -6,6 +6,11 @@
 
   &__header {
     margin-bottom: $spacer;
+    max-width: 215px;
+
+    @include mobile-380 {
+      max-width: unset;
+    }
   }
 
   &__text {

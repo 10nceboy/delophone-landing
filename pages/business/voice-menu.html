@@ -97,7 +97,7 @@
       </div>
       <section class="hero scope__hero business__hero" id="hero">
         <div class="container">
-          <div class="hero__container scope__hero-container">
+          <div class="hero__container business__hero-container">
             <div class="hero__textblock business__hero-textblock">
               <h1>
                 Голосовые меню (IVR) и&nbsp;приветствия
@@ -162,16 +162,24 @@
             </div>
             <div class="card focus__listblock">
               <ul class="list focus__list">
-                <li class="list-item list-item_checked focus__caption">
+                <li
+                  class="list-item list-item_checked focus__caption focus__list-item"
+                >
                   Фирменное приветствие
                 </li>
-                <li class="list-item list-item_checked focus__caption">
+                <li
+                  class="list-item list-item_checked focus__caption focus__list-item"
+                >
                   Уведомления и переадресация во внерабочее время
                 </li>
-                <li class="list-item list-item_checked focus__caption">
+                <li
+                  class="list-item list-item_checked focus__caption focus__list-item"
+                >
                   Распределение клиентов по отделам
                 </li>
-                <li class="list-item list-item_checked focus__caption">
+                <li
+                  class="list-item list-item_checked focus__caption focus__list-item"
+                >
                   Информирование об&nbsp;акциях и предложениях
                 </li>
               </ul>
@@ -1500,8 +1508,8 @@
           </div>
         </div>
       </section>
-      {{>virtue-telephone}} {{>cases}} {{>cases-bot}} {{>stats}} {{>calculator}}
-      {{>startuse}}
+      {{>virtue-telephone}} {{>cases techHeader = true}} {{>cases-bot}}
+      {{>stats}} {{>calculator}} {{>startuse}}
       <section class="results business__results">
         <div class="container">
           <div class="results__subsection">

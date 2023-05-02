@@ -606,4 +606,11 @@
       grid-column-gap: $spacer * 7;
     }
   }
+
+  &__break {
+    display: none;
+    @include laptop {
+      display: block;
+    }
+  }
 }

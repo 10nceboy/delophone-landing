@@ -172,6 +172,12 @@
         font-size: 17px;
       }
     }
+
+    @include laptop {
+      h4 {
+        font-size: 20px;
+      }
+    }
   }
 
   &__card-caption {
@@ -184,6 +190,10 @@
     @include tablet {
       margin-bottom: 0px;
       font-size: 14px;
+    }
+
+    @include laptop {
+      font-size: 16px;
     }
   }
 
@@ -351,6 +361,11 @@
       min-width: 140px;
       max-height: 76px;
       padding: 18px $spacer * 10;
+
+      svg {
+        max-width: 40px;
+        max-height: 40px;
+      }
 
       &:last-child {
         margin-right: 0px;
@@ -665,5 +680,6 @@
 
   &__crm-caption {
     margin-bottom: 0px;
+    margin-top: $spacer * 2;
   }
 }
