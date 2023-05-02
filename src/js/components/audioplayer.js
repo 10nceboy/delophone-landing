@@ -1,102 +1,83 @@
-import { mutedIcon, pause, play, unMutedIcon } from '../constants/audioplayer';
+import { icons } from '../constants/audioplayer';
 import { resetTimer, startTimer } from '../utils/timer';
-
-var audio1 = new Audio();
-audio1.src =
-  'https://10nceboy.github.io/delophone-landing/audio/standart-meeting.wav';
-
-var audioContext = new AudioContext();
-
-// Создаем новый объект SourceBuffer
-var sourceBuffer = audioContext.createBufferSource();
-
-// Создаем новый объект XMLHttpRequest для загрузки файла аудио
-var xhr = new XMLHttpRequest();
-xhr.open('GET', audio1.src, true);
-xhr.responseType = 'arraybuffer';
-
-xhr.onload = function () {
-  // Декодируем загруженный файл аудио и сохраняем его в объекте AudioBuffer
-  audioContext.decodeAudioData(xhr.response, function (buffer) {
-    // Устанавливаем буфер в SourceBuffer и начинаем воспроизведение
-    sourceBuffer.buffer = buffer;
-    sourceBuffer.connect(audioContext.destination);
-    sourceBuffer.start(0);
-  });
-};
-
-// Отправляем запрос на загрузку файла аудио
-xhr.send();
 
 const volumes = document.querySelectorAll('.audioplayer__volume');
 const playButtons = document.querySelectorAll('.audioplayer__play');
 
 const handlePlayToggle = (button) => {
   let isPlay = button.dataset.play;
-
+  const audio = button.closest('.audioplayer').querySelector('audio');
   if (isPlay == 'false') {
-    button.innerHTML = pause;
+    button.innerHTML = icons.pause;
     button.dataset.play = 'true';
-    audio1.play();
+    audio.play();
   } else {
-    button.innerHTML = play;
+    button.innerHTML = icons.play;
     button.dataset.play = 'false';
-    audio1.pause();
+    audio.pause();
   }
 };
 
-audio1.addEventListener('play', function () {
-  // Воспроизводим аудио из буфера
-  sourceBuffer.start(0);
-});
-
-audio1.addEventListener('pause', function () {
-  // Останавливаем аудио и устанавливаем текущее время равным начальному времени
-  sourceBuffer.stop(0);
-  audio1.currentTime = 0;
-});
-
 const handleMuteToggle = (event) => {
   let { target } = event;
-
   const audio = target.closest('.audioplayer').querySelector('audio');
   if (target.dataset.volume == 'unmuted') {
-    target.innerHTML = mutedIcon;
+    target.innerHTML = icons.muted;
     target.dataset.volume = 'muted';
     audio.volume = 0;
   } else {
-    target.innerHTML = unMutedIcon;
+    target.innerHTML = icons.umuted;
     target.dataset.volume = 'unmuted';
     audio.volume = 1;
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  const audios = document.querySelectorAll('audio');
-  audios.forEach((audio) => {
-    audio.load();
+const renderTimer = (event) => {
+  let { target } = event;
+  const timer = target
+    .closest('.audioplayer')
+    .querySelector('.audioplayer__play-time');
+  const mobileTimer = target
+    .closest('.audioplayer')
+    .querySelector('.audioplayer__total-time-mobile');
+
+  if (timer) {
+    const minutes = Math.floor(target.currentTime / 60, 10);
+    const seconds = Math.floor(target.currentTime % 60);
+    timer.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  }
+
+  if (mobileTimer) {
+    const minutes =
+      Math.floor(target.duration / 60) - Math.floor(target.currentTime / 60);
+    const seconds =
+      Math.floor(target.duration % 60) - Math.floor(target.currentTime % 60);
+    mobileTimer.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  }
+};
+
+playButtons.forEach((playPauseButton) => {
+  const playingAudio = playPauseButton
+    .closest('.audioplayer')
+    .querySelector('audio');
+
+  playingAudio.addEventListener('ended', () => {
+    handlePlayToggle(playPauseButton);
+    playingAudio.currentTime = 0;
   });
 
-  playButtons.forEach((playPauseButton) => {
-    const playingAudio = playPauseButton
-      .closest('.audioplayer')
-      .querySelector('audio');
+  playingAudio.addEventListener('timeupdate', renderTimer);
 
-    playingAudio.addEventListener('ended', () => {
-      handlePlayToggle(playPauseButton);
-    });
+  playPauseButton.addEventListener('click', (event) => {
+    handlePlayToggle(playPauseButton);
+    const toggledButtons = document.querySelectorAll(
+      '.audioplayer__play[data-play="true"]'
+    );
 
-    playPauseButton.addEventListener('click', (event) => {
-      handlePlayToggle(playPauseButton);
-      const toggledButtons = document.querySelectorAll(
-        '.audioplayer__play[data-play="true"]'
-      );
-
-      toggledButtons.forEach((toggledButton) => {
-        if (toggledButton !== event.currentTarget) {
-          handlePlayToggle(toggledButton);
-        }
-      });
+    toggledButtons.forEach((toggledButton) => {
+      if (toggledButton !== event.currentTarget) {
+        handlePlayToggle(toggledButton);
+      }
     });
   });
 });
@@ -135,7 +116,7 @@ document.querySelectorAll('.audio').forEach((audio) => {
       .closest('.audioplayer')
       ?.querySelector('.audioplayer__progress');
     if (!time) return;
-    let perzent = (audio.currentTime / audio.duration) * 100;
+    let perzent = Math.floor((audio.currentTime / audio.duration) * 100);
     time.style.width = `${perzent}%`;
 
     if (perzent == 100) {

@@ -49,6 +49,11 @@
 @import '../sections/business/linecalls';
 
 .business {
+  &__hero {
+    @include smartphone {
+      margin-bottom: 80px;
+    }
+  }
   &__hero-textblock {
     margin: 0px;
   }

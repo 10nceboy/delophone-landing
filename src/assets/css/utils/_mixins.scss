@@ -117,6 +117,12 @@ $family: 'Manrope';
   }
 }
 
+@mixin mobile-xl {
+  @media screen and (min-width: 589px) and (max-width: 640px) {
+    @content;
+  }
+}
+
 @mixin mobile-xxxx {
   @media screen and (min-width: 480px) and (max-width: 600px) {
     @content;
@@ -131,6 +137,36 @@ $family: 'Manrope';
 
 @mixin mobile-380 {
   @media screen and (min-width: 380px) {
+    @content;
+  }
+}
+
+@mixin mobile-390 {
+  @media screen and (min-width: 390px) {
+    @content;
+  }
+}
+
+@mixin mobile-414 {
+  @media screen and (min-width: 414px) {
+    @content;
+  }
+}
+
+@mixin mobile-477 {
+  @media screen and (min-width: 477px) {
+    @content;
+  }
+}
+
+@mixin mobile-520 {
+  @media screen and (min-width: 520px) {
+    @content;
+  }
+}
+
+@mixin mobile-660 {
+  @media screen and (min-width: 660px) {
     @content;
   }
 }
@@ -176,6 +212,36 @@ $family: 'Manrope';
 
 @mixin tablet-l {
   @media screen and (min-width: 840px) and (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin tablet-720 {
+  @media screen and (min-width: 720px) {
+    @content;
+  }
+}
+
+@mixin tablet-755 {
+  @media screen and (min-width: 755px) {
+    @content;
+  }
+}
+
+@mixin tablet-820 {
+  @media screen and (min-width: 820px) {
+    @content;
+  }
+}
+
+@mixin tablet-850 {
+  @media screen and (min-width: 820px) {
+    @content;
+  }
+}
+
+@mixin tablet-920 {
+  @media screen and (min-width: 820px) {
     @content;
   }
 }

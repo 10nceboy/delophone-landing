@@ -29,7 +29,7 @@
       margin-left: -$spacer * 2;
     }
 
-    @include mobile-xxx {
+    @include mobile-xx {
       margin-left: -$spacer * 2;
     }
 
@@ -97,6 +97,15 @@
     @include tablet {
       padding: $spacer * 7 $spacer * 5;
       margin-bottom: 0px;
+      max-height: 95%;
+    }
+
+    @include tablet-1024 {
+      max-height: 87%;
+    }
+
+    @include laptop {
+      max-height: unset;
     }
   }
 
@@ -135,6 +144,15 @@
     @include flex-col;
     align-items: center;
     padding-right: 13px;
+    border-radius: $border-radius-xl;
+
+    @include smartphone {
+      align-items: flex-start;
+    }
+
+    @include mobile-660 {
+      align-items: center;
+    }
 
     @include tablet {
       @include flex-row;
@@ -151,6 +169,7 @@
   &__card-meeting {
     padding: $spacer * 2;
     border-radius: $border-radius-xs;
+    font-size: 14px;
     text-align: center;
     position: relative;
     line-height: 130%;
@@ -161,20 +180,154 @@
     &:before {
       position: absolute;
       content: url(../../../images/sections/business/voice-menu/steps/player/player-multilines-mobile.svg);
-      left: 92%;
+      left: 100%;
       top: 50%;
       z-index: 1;
+    }
+
+    @include mobile-390 {
+      font-size: 15px;
+    }
+
+    @include mobile-425 {
+      &::before {
+        transform: scaleY(0.92);
+        top: 10%;
+      }
+    }
+
+    @include mobile-390 {
+      &::before {
+        transform: scaleY(0.93);
+        top: 0%;
+      }
+    }
+
+    @include mobile-414 {
+      &::before {
+        transform: scaleY(0.84);
+        top: -25%;
+      }
+    }
+
+    @include mobile-477 {
+      &::before {
+        transform: scaleY(0.81);
+        top: -92%;
+      }
+    }
+
+    @include mobile-520 {
+      margin-left: 38px;
+      &::before {
+        transform: scaleY(0.81);
+        top: -92%;
+      }
+    }
+
+    @include mobile-xx {
+      align-self: flex-start;
+      margin-left: 0px;
+      font-size: 16px;
+      min-width: 88%;
+    }
+
+    @include mobile-xxx {
+      min-width: 88%;
+      &::before {
+        top: -150%;
+        transform: scaleY(0.75);
+      }
+    }
+
+    @include mobile-xl {
+      min-width: 91%;
+
+      &::before {
+        top: -210%;
+        transform: scaleY(0.65);
+      }
+    }
+
+    @include smartphone {
+      align-self: flex-start;
+      margin-left: 0px;
+      font-size: 16px;
+      min-width: 92%;
+      font-size: 17px;
+
+      &::before {
+        top: -210%;
+        transform: scaleY(0.63);
+      }
+    }
+
+    @include mobile-660 {
+      align-self: center;
+      min-width: 81%;
+    }
+
+    @include tablet-720 {
+      margin-left: -30px;
+    }
+
+    @include tablet-755 {
+      min-width: 78%;
+    }
+
+    @include tablet-m {
+      min-width: 75%;
+      margin-left: -28px;
+    }
+
+    @include tablet-m {
+      min-width: 75%;
+      margin-left: -28px;
+    }
+
+    @include tablet-820 {
+      min-width: 70%;
+      max-width: 70%;
+      margin-left: -30px;
+    }
+
+    @include tablet-850 {
+      min-width: 68%;
+      max-width: 70%;
+      margin-left: -28px;
+    }
+
+    @include tablet-920 {
+      min-width: 63%;
+      max-width: 63%;
+      margin-left: -28px;
     }
 
     @include tablet {
       max-width: 126px;
       margin-bottom: 0px;
       font-size: 13px;
+      margin-right: 10px;
+      align-self: center;
+      min-width: unset;
 
       &:before {
         content: url(../../../images/sections/business/voice-menu/steps/player/player-multilines.svg);
-        top: -120%;
-        left: 102%;
+        top: -140%;
+        left: 100%;
+        transform: scaleY(1.56);
+      }
+
+      @include laptop {
+        margin-right: 0px;
+        font-size: 16px;
+        min-width: 126px;
+        align-self: center;
+        &::before {
+          top: -125%;
+          left: 102%;
+          transform: scale(1);
+        }
       }
     }
   }
@@ -198,6 +351,19 @@
     color: $gray;
     margin-left: $spacer * 2;
 
+    @include mobile-390 {
+      font-size: 14.5px;
+    }
+
+    @include mobile-xx {
+      max-width: 89%;
+      font-size: 16px;
+    }
+
+    @include smartphone {
+      font-size: 17px;
+    }
+
     @include tablet {
       font-size: 13px;
     }
@@ -215,6 +381,37 @@
     &:last-child {
       margin-bottom: $spacer * 3;
     }
+
+    @include mobile-425 {
+      max-width: 215px;
+    }
+
+    @include mobile-390 {
+      font-size: 15px;
+      max-width: 230px;
+    }
+
+    @include mobile-477 {
+      max-width: 250px;
+    }
+
+    @include mobile-s {
+      max-width: 300px;
+    }
+
+    @include mobile-xxx {
+      max-width: 89%;
+      font-size: 15.5px;
+    }
+    @include mobile-xl {
+      max-width: unset;
+    }
+
+    @include smartphone {
+      font-size: 17px;
+      max-width: unset;
+    }
+
     @include tablet {
       display: none;
     }
@@ -228,37 +425,69 @@
   &__playercad-line {
     @include tablet {
       position: relative;
-
       &::before {
         position: absolute;
         content: url(../../../images/sections/business/voice-menu/steps/player/player-line.svg);
         left: 100%;
-        top: 25%;
+        top: 40%;
+      }
+
+      @include laptop {
+        &::before {
+          top: 25%;
+        }
       }
     }
   }
 
   &__playercard {
-    max-width: 240px;
+    display: none;
 
-    .audioplayer__text {
-      margin-left: 0px;
+    @include tablet {
+      max-width: 240px;
+      @include flex-col;
+      align-items: center;
+      justify-content: center;
+
+      .audioplayer__text {
+        margin-left: 0px;
+      }
     }
   }
 
   &__playercard-client {
+    padding: $spacer * 3 $spacer * 2;
+    @include flex-col;
+    align-items: center;
     @include tablet {
       padding: $spacer * 5 $spacer * 3;
       position: relative;
       @include flex-col;
-      margin-left: $spacer * 3;
+      margin-left: $spacer * 5;
 
       &:before {
         content: url(../../../images/sections/business/voice-menu/steps/player/player-multilines.svg);
-        top: 10%;
-        left: -30px;
-        transform: rotate(180deg);
+        top: 5%;
+        left: -28px;
+        transform: rotate(180deg) scaleY(1.5);
+        max-width: 120px;
         position: absolute;
+      }
+
+      @include tablet-1024 {
+        &::before {
+          top: 0%;
+          left: -30px;
+        }
+      }
+
+      @include laptop {
+        margin-left: $spacer * 6;
+        &::before {
+          top: 10%;
+          left: -30px;
+          transform: rotate(180deg);
+        }
       }
     }
 
@@ -275,9 +504,15 @@
     font-size: 14px;
     margin-left: 0px;
     line-height: 150%;
+    margin-top: $spacer * 2;
+
+    @include smartphone {
+      font-size: 16px;
+    }
 
     @include tablet {
-      font-size: 13px;
+      font-size: 12.5px;
+      margin-top: $spacer * 2;
     }
 
     @include laptop {

@@ -55,6 +55,7 @@
       h3 {
         font-size: 17px;
         margin-left: $spacer * 3;
+        line-height: 150%;
       }
     }
 
@@ -88,6 +89,14 @@
   &__downside {
     margin-bottom: $spacer * 5;
     min-height: 226px;
+
+    @include mobile-s {
+      min-height: unset;
+    }
+
+    @include smartphone {
+      min-height: unset;
+    }
 
     &:last-child {
       margin-bottom: 0px;
@@ -152,6 +161,12 @@
   &__checklist {
     @include tablet {
       margin-top: $spacer * 2;
+    }
+  }
+
+  &__list-item {
+    @include tablet {
+      font-size: 14px;
     }
   }
 
