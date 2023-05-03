@@ -129,3 +129,124 @@ document
   .forEach((timeline) => {
     timeline.addEventListener('click', handleTimeLineClick);
   });
+
+(function () {
+  const audiosMap = new Map();
+  let isLoading = true;
+  let interval;
+
+  const isMobile = () => {
+    return /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+      navigator.userAgent
+    );
+  };
+
+  const isSLowConnection = () => {
+    const connection =
+      navigator.connection ||
+      navigator.mozConnection ||
+      navigator.webkitConnection;
+    return ['slow-2g', '2g', '3g'].includes(
+      connection && connection.effectiveType
+    );
+  };
+
+  const partialAudioPreload = (audio, firstPart = 12000) => {
+    if (!audio.src || !audio.src.includes('.mp3')) return;
+    const fileSrc = audio.src;
+    const mediaSource = new MediaSource();
+    audio.src = URL.createObjectURL(mediaSource);
+    mediaSource.addEventListener('sourceopen', handleSourceOpen, {
+      once: true
+    });
+    async function handleSourceOpen() {
+      URL.revokeObjectURL(audio.src);
+      const sourceBuffer = mediaSource.addSourceBuffer('audio/mpeg');
+      const response = await fetch(fileSrc, {
+        headers: { range: `bytes=0-${firstPart}` }
+      });
+      const data = await response.arrayBuffer();
+      sourceBuffer.appendBuffer(data);
+      sourceBuffer.addEventListener('updateend', handleSourceUpdate, {
+        once: true
+      });
+    }
+
+    function handleSourceUpdate() {
+      audio.addEventListener(
+        'playing',
+        () => {
+          fetch(fileSrc, { headers: { range: `bytes=${firstPart + 1}-` } })
+            .then((response) => response.arrayBuffer())
+            .then((data) => {
+              const sourceBuffer = mediaSource.sourceBuffers[0];
+              sourceBuffer.appendBuffer(data);
+              sourceBuffer.addEventListener('updateend', function () {
+                mediaSource.endOfStream();
+              });
+            })
+            .catch((error) => {
+              console.error(error);
+            });
+        },
+        { once: true }
+      );
+    }
+  };
+
+  const preloadAudio = (audio) => {
+    if (!isSLowConnection() && !isMobile()) {
+      audio.load();
+      audio.pause();
+    } else {
+      partialAudioPreload(audio);
+    }
+  };
+
+  const preloadAudios = () => {
+    document.querySelectorAll('audio[data-preload]').forEach((audio) => {
+      delete audio.dataset.preload;
+      audio.dataset.preloading = 'true';
+      audio.dataset.origin = audio.src;
+      if (!audiosMap.get(audio.src)) {
+        preloadAudio(audio);
+        audiosMap.set(audio.src.split('/').pop(), audio);
+      }
+    });
+  };
+
+  if (
+    window.scrollY >
+    screen.availHeight - Math.round(screen.availHeight / 10)
+  ) {
+    interval = setInterval(() => {
+      preloadAudios();
+    }, 300);
+  } else {
+    document.addEventListener(
+      'scroll',
+      () => {
+        if (isLoading) {
+          interval = setInterval(() => {
+            preloadAudios();
+          }, 300);
+        }
+      },
+      { passive: true, once: true }
+    );
+  }
+
+  window.addEventListener('load', () => {
+    isLoading = false;
+    clearInterval(interval);
+    preloadAudios();
+    document.querySelectorAll('[data-preloading="true"]').forEach((audio) =>
+      audio.addEventListener('canplay', (evt) => {
+        if (evt.target) {
+          delete evt.target.dataset.preloading;
+          evt.target.dataset.preloaded = 'true';
+        }
+      })
+    );
+  });
+})();
