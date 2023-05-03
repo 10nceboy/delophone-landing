@@ -518,6 +518,17 @@
       min-width: 75px;
       padding: 18px;
       margin-right: $spacer * 3;
+
+      max-width: 76px;
+      max-height: 76px;
+
+      svg {
+        min-width: 38px;
+        min-height: 38px;
+        margin-left: -1.6px;
+      }
+
+      align-items: center;
       &::before {
         left: 50%;
         transform: scaleX(1);
