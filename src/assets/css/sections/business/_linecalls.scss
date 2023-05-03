@@ -559,7 +559,7 @@
     @include smartphone {
       &::after {
         transform: scaleY(1);
-        content: url('/public/icons/business-triple-client.svg');
+        content: url('/icons/business-triple-client.svg');
         top: -85%;
       }
     }
@@ -572,7 +572,7 @@
 
       &::after {
         position: absolute;
-        content: url('/public/icons/business-triple-client-mobile.svg');
+        content: url('/icons/business-triple-client-mobile.svg');
         display: block;
         top: -60%;
       }
@@ -582,7 +582,7 @@
       &::after {
         top: -90%;
         left: 77%;
-        content: url('/public/icons/business-triple-client.svg');
+        content: url('/icons/business-triple-client.svg');
         transform: scale(0.83);
       }
     }
@@ -595,7 +595,7 @@
 
       &::after {
         top: -90%;
-        content: url('/public/icons/business-triple-client.svg');
+        content: url('/icons/business-triple-client.svg');
         transform: scale(1);
       }
     }

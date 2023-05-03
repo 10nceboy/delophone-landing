@@ -97,6 +97,7 @@
 
     @include laptop {
       max-height: 62px;
+      min-height: 62px;
       align-items: flex-start;
       min-width: 269px;
     }
