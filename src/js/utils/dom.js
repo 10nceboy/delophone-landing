@@ -140,3 +140,13 @@ export const isTouchDevice = () => {
     navigator.msMaxTouchPoints
   );
 };
+
+const isSLowConnection = () => {
+  const connection =
+    navigator.connection ||
+    navigator.mozConnection ||
+    navigator.webkitConnection;
+  return ['slow-2g', '2g', '3g'].includes(
+    connection && connection.effectiveType
+  );
+};
