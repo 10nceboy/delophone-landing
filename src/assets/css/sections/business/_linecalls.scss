@@ -618,7 +618,7 @@
     margin-bottom: 0px;
 
     @include tablet {
-      margin-bottom: $spacer * 5;
+      margin-bottom: $spacer * 3;
       margin-top: $spacer * 10;
     }
 
@@ -628,6 +628,7 @@
 
     @include laptop {
       margin-bottom: $spacer * 3;
+      margin-top: 53px;
     }
   }
 
@@ -692,5 +693,9 @@
   &__crm-caption {
     margin-bottom: 0px;
     margin-top: $spacer * 2;
+
+    @include tablet {
+      margin-top: 0px;
+    }
   }
 }
