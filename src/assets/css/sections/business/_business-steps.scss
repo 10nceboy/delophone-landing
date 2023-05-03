@@ -174,11 +174,19 @@
     @include tablet {
       margin-top: $spacer * 2;
     }
+
+    @include laptop {
+      margin-top: $spacer * 3;
+    }
   }
 
   &__list-item {
     @include tablet {
       font-size: 14px;
+
+      &:first-child {
+        margin-top: 0px;
+      }
     }
 
     @include laptop {
@@ -190,6 +198,25 @@
     @include tablet {
       grid-column-start: 1;
       grid-column-end: 3;
+    }
+  }
+
+  &__forget-header {
+    @include tablet {
+      margin-top: 0px;
+    }
+
+    @include laptop {
+      margin-top: 0px;
+    }
+  }
+
+  &__forget-caption {
+    @include tablet {
+      margin-top: $spacer * 3;
+    }
+    @include laptop {
+      font-size: 16px;
     }
   }
 }
