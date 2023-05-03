@@ -73,7 +73,6 @@ playButtons.forEach((playPauseButton) => {
     const toggledButtons = document.querySelectorAll(
       '.audioplayer__play[data-play="true"]'
     );
-
     toggledButtons.forEach((toggledButton) => {
       if (toggledButton !== event.currentTarget) {
         handlePlayToggle(toggledButton);
