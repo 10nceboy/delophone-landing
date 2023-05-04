@@ -39,6 +39,7 @@ const renderTimer = (event) => {
   const mobileTimer = target
     .closest('.audioplayer')
     .querySelector('.audioplayer__total-time-mobile');
+  let isDurationNaN = Number.isNaN(target.duration);
 
   if (timer) {
     const minutes = Math.floor(target.currentTime / 60, 10);
@@ -46,11 +47,12 @@ const renderTimer = (event) => {
     timer.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   }
 
-  if (mobileTimer) {
+  if (mobileTimer && !isDurationNaN) {
     const minutes =
       Math.floor(target.duration / 60) - Math.floor(target.currentTime / 60);
     const seconds =
-      Math.floor(target.duration % 60) - Math.floor(target.currentTime % 60);
+      Math.floor(target.duration % 60) - Math.floor(target.currentTime % 60) ||
+      1;
     mobileTimer.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   }
 };
@@ -240,7 +242,7 @@ document
     clearInterval(interval);
     preloadAudios();
     document.querySelectorAll('[data-preloading="true"]').forEach((audio) =>
-      audio.addEventListener('canplaytrough', (evt) => {
+      audio.addEventListener('canplay', (evt) => {
         if (evt.target) {
           delete evt.target.dataset.preloading;
           evt.target.dataset.preloaded = 'true';
