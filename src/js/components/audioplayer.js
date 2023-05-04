@@ -1,5 +1,4 @@
 import { icons } from '../constants/audioplayer';
-import { resetTimer, startTimer } from '../utils/timer';
 
 const volumes = document.querySelectorAll('.audioplayer__volume');
 const playButtons = document.querySelectorAll('.audioplayer__play');
@@ -241,7 +240,7 @@ document
     clearInterval(interval);
     preloadAudios();
     document.querySelectorAll('[data-preloading="true"]').forEach((audio) =>
-      audio.addEventListener('canplay', (evt) => {
+      audio.addEventListener('canplaytrough', (evt) => {
         if (evt.target) {
           delete evt.target.dataset.preloading;
           evt.target.dataset.preloaded = 'true';
