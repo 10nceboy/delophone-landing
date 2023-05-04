@@ -144,10 +144,11 @@
     }
 
     @include tablet {
+      margin-left: 0;
+      margin-right: 0;
       &:hover {
         transition: transform 0.2s;
-        margin-left: 0;
-        margin-right: 0;
+
         svg {
           transform: scale(1.1);
           transition: transform 0.2s;
