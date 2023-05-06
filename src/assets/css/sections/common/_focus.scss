@@ -62,6 +62,21 @@
     }
   }
 
+  &__list-item_large {
+    margin: 0 0 $spacer;
+    @include smartphone {
+      margin-bottom: $spacer * 2;
+    }
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include laptop {
+      margin-bottom: $spacer * 3;
+    }
+  }
+
   &__wrapper {
     @include flex-col;
     align-items: center;

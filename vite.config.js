@@ -42,7 +42,8 @@ export default defineConfig({
         phone: resolve(__dirname, 'pages/scope/phone-replace.html'),
         away: resolve(__dirname, 'pages/scope/away.html'),
         automatic: resolve(__dirname, 'pages/business/automatic.html'),
-        voice: resolve(__dirname, 'pages/business/voice-menu.html')
+        voice: resolve(__dirname, 'pages/business/voice-menu.html'),
+        voice: resolve(__dirname, 'pages/business/control.html')
       }
     }
   }

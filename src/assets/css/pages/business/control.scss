@@ -1,0 +1,108 @@
+@import '../../utils/index';
+
+.control {
+  &__hero-imageblock {
+    img {
+      max-width: 290px;
+      max-height: 153px;
+    }
+
+    @include laptop {
+      img {
+        max-width: 533px;
+        max-height: 282px;
+      }
+    }
+  }
+
+  &__accent {
+    display: none;
+
+    @include mobile-336 {
+      display: inline;
+      padding: 0 6px 3px 6px;
+      margin-left: -6px;
+      margin-right: 2px;
+    }
+
+    @include mobile-x {
+      display: none;
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+
+    @include mobile-xx {
+      display: inline;
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+
+    @include smartphone {
+      display: inline;
+      margin-left: -6px;
+    }
+
+    @include mobile-660 {
+      margin-left: 0px;
+    }
+
+    @include tablet {
+      display: inline;
+      margin-left: -6px;
+    }
+  }
+
+  &__accent-mobile {
+    display: inline;
+    padding: 0 6px 3px 6px;
+    margin-left: 0px;
+
+    &:nth-child(2) {
+      margin-left: -6px;
+    }
+
+    @include mobile-336 {
+      display: none;
+    }
+
+    @include mobile-x {
+      display: inline;
+    }
+
+    @include mobile-xx {
+      display: none;
+    }
+
+    @include smartphone {
+      display: none;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__focus-caption {
+    margin-top: $spacer;
+  }
+
+  &__focus-listblock {
+    margin-left: 0px;
+    @include tablet {
+      padding: $spacer * 5 $spacer * 9;
+    }
+  }
+
+  &__focus-textblock {
+    @include laptop {
+      margin-right: $spacer * 6;
+    }
+  }
+
+  &__focus-header {
+    margin-bottom: $spacer * 3;
+    @include tablet {
+      margin-bottom: $spacer * 4;
+    }
+  }
+}
