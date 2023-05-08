@@ -48,6 +48,10 @@
 
     @include laptop {
       margin-bottom: $spacer * 3;
+
+      h2 {
+        font-size: 32px;
+      }
     }
   }
 
