@@ -2,6 +2,7 @@
   .container {
     background: $light-gray;
     border-radius: $border-radius-xl;
+    margin-top: $spacer * 12;
   }
 
   &__block {
@@ -11,6 +12,10 @@
       margin-top: 20px;
       padding: $spacer * 8 $spacer * 6;
       padding-bottom: $spacer * 5;
+
+      .container {
+        margin-top: 0px;
+      }
     }
 
     @include laptop {

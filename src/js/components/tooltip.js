@@ -14,6 +14,11 @@ const svg = `
   fill="#F88C28"
 /></svg>`;
 
+const svgPlus = `<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="7.5" cy="7.5" r="7" stroke="#9CA5AC"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.99943 4.55347C7.99943 4.27732 7.77557 4.05347 7.49943 4.05347C7.22329 4.05347 6.99943 4.27732 6.99943 4.55347L6.99943 7.00016H4.55273C4.27659 7.00016 4.05273 7.22401 4.05273 7.50016C4.05273 7.7763 4.27659 8.00016 4.55273 8.00016H6.99943L6.99943 10.4466C6.99943 10.7228 7.22329 10.9466 7.49943 10.9466C7.77557 10.9466 7.99943 10.7228 7.99943 10.4466L7.99943 8.00016H10.4459C10.722 8.00016 10.9459 7.7763 10.9459 7.50016C10.9459 7.22401 10.722 7.00016 10.4459 7.00016H7.99943L7.99943 4.55347Z" fill="#9CA5AC"/>
+</svg>`;
+
 document.addEventListener('DOMContentLoaded', () => {
   const renderTooltip = (content) => {
     const popup = document.createElement('div');
@@ -30,7 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const activator = document.createElement('div');
     activator.classList.add('icon', 'tooltip__activator');
     element.appendChild(activator);
-    activator.innerHTML = svg;
+    if (activator.closest('.tooltip').classList.contains('tooltip__plus')) {
+      activator.innerHTML = svgPlus;
+    } else {
+      activator.innerHTML = svg;
+    }
     return activator;
   };
 
