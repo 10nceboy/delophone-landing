@@ -26,6 +26,8 @@
     }
 
     @include laptop {
+      width: 583px;
+      height: 346px;
       margin-left: 27px;
       margin-top: 0px;
 
@@ -74,6 +76,8 @@
   }
 
   &__steps-downside {
+    min-height: unset;
+
     @include tablet {
       min-height: 112px;
     }
@@ -150,6 +154,7 @@
   }
 
   &__steps-checklist {
+    margin-bottom: 0px;
     @include tablet {
       display: block;
       margin-right: $spacer * 3;
@@ -161,7 +166,6 @@
 
     @include laptop {
       margin-right: $spacer * 7;
-      min-width: 490px;
     }
   }
 
@@ -276,6 +280,7 @@
 
     @include tablet {
       margin-bottom: $spacer * 2;
+
       &:nth-child(9) {
         margin-bottom: 0px;
       }
@@ -332,6 +337,12 @@
     }
 
     @include laptop {
+      display: none;
+    }
+  }
+
+  &__break {
+    @include mobile-380 {
       display: none;
     }
   }

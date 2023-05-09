@@ -19,7 +19,7 @@
     &_active {
       opacity: 1;
       overflow: visible;
-      max-height: 2500px;
+      max-height: 3000px;
       display: block;
       transition: max-height linear 1s, opacity linear 0.5s;
       @include tablet {
@@ -27,7 +27,7 @@
         max-height: 1800px;
       }
       @include laptop {
-        max-height: 1000px;
+        max-height: 1300px;
       }
     }
   }
