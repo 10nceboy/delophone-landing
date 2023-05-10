@@ -139,6 +139,13 @@
   }
 
   &__promophone-imageblock {
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+      margin-left: $spacer * 4;
+    }
+
     @include laptop {
       margin-left: $spacer * 6;
     }
@@ -149,12 +156,23 @@
 
     @include tablet {
       display: block;
+      max-width: 400px;
+      min-width: 400px;
+    }
+
+    @include laptop {
+      max-width: 540px;
     }
   }
 
   &__promophone-image_mobile {
     display: block;
     margin-top: $spacer * 4;
+    max-width: 100%;
+
+    @include mobile-380 {
+      min-width: 70%;
+    }
 
     @include tablet {
       display: none;
