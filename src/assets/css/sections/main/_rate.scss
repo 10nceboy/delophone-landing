@@ -154,7 +154,7 @@
     min-height: 557px;
     height: 557px;
 
-    transform: translateX(5px) translateY(5px);
+    transform: translateX(5px) translateY(5px) translateZ(1px);
 
     @include tablet {
       max-width: 354px;
