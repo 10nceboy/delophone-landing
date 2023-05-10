@@ -214,7 +214,23 @@
     }
   }
 
+  &__focus {
+    @include tablet {
+      padding-bottom: 150px;
+    }
+  }
+
   &__focus-paragraph {
+    margin-bottom: 10px;
+
+    @include tablet {
+      margin-bottom: 10px;
+      line-height: 155%;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
     @include laptop {
       max-width: 518px;
     }
@@ -222,6 +238,11 @@
 
   &__minutes {
     background-color: $white;
+    padding-bottom: 20px;
+
+    @include tablet {
+      padding-bottom: 0px;
+    }
   }
 
   &__minutes-container {
@@ -334,6 +355,49 @@
 
   &__minutes-list-item {
     font-size: 14px;
+  }
+
+  &__autocall {
+    @include tablet {
+      margin-top: 62px;
+    }
+
+    @include tablet-1024 {
+      margin-top: 64px;
+    }
+
+    @include laptop {
+      margin-top: 68px;
+    }
+  }
+
+  &__crm {
+    @include tablet {
+      margin-top: 40px;
+    }
+
+    @include laptop {
+      margin-top: 38px;
+    }
+  }
+
+  &__linecalls {
+    padding-bottom: 15px;
+    @include tablet {
+      padding-bottom: 25px;
+    }
+  }
+
+  &__card-crm {
+    margin-bottom: 0px;
+  }
+
+  &__collapse-activator {
+    padding-top: 0px;
+
+    @include tablet {
+      padding-top: 25px;
+    }
   }
 }
 
