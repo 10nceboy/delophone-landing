@@ -72,5 +72,9 @@
   &__list {
     list-style: decimal outside;
     margin-left: 10px;
+
+    li {
+      line-height: 155%;
+    }
   }
 }

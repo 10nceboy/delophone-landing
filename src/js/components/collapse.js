@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const content = collapse.querySelector('.collapse__content');
     const activator = collapse.querySelector('.collapse__activator');
     const business = collapse.querySelector('#business');
+    const num8800 = collapse.querySelector('#num8800');
 
     collapse.addEventListener('click', () => {
       if (animated) {
@@ -56,9 +57,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (business) {
           business.innerText = 'Скрыть все возможности';
         }
+        if (num8800) {
+          num8800.innerHTML =
+            'Скрыть все возможности <span class="tablet-inline">телефонии</span>';
+        }
       } else {
         if (business) {
           business.innerText = 'Показать все возможности';
+        }
+        if (num8800) {
+          num8800.innerHTML =
+            'Показать все возможности <span class="tablet-inline">телефонии</span>';
         }
         transitionLeave(content, 'collapse__content');
         window.setTimeout(() => {

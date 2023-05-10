@@ -1,0 +1,346 @@
+@import '../../utils/index';
+
+.num8800 {
+  &__hero-imageblock {
+    img {
+      max-width: 290px;
+      max-height: 180px;
+    }
+
+    @include tablet {
+      margin-top: $spacer;
+      margin-left: $spacer;
+      img {
+        max-width: 300px;
+        max-height: 320px;
+      }
+    }
+
+    @include tablet-1024 {
+      max-width: 440px;
+      max-height: 339px;
+      width: 540px;
+      height: 339px;
+
+      img {
+        max-width: 440px;
+        width: 400px;
+        height: 339px;
+        max-height: 339px;
+      }
+    }
+
+    @include laptop {
+      width: 526px;
+      height: 329px;
+      max-width: 526px;
+      margin-top: -22px;
+      margin-left: 17px;
+      img {
+        max-width: 526px;
+        min-width: 526px;
+        max-height: 329px;
+        width: 526px;
+        height: 329px;
+      }
+    }
+
+    @include desktop {
+      margin-left: 27px;
+      width: 536px;
+      height: 329px;
+      max-width: 536px;
+      img {
+        max-width: 536px;
+        min-width: 536px;
+        width: 536px;
+      }
+    }
+  }
+
+  &__hero-button {
+    @include tablet {
+      width: 245px;
+    }
+    @include laptop {
+      width: 225px;
+    }
+  }
+
+  &__hero-label {
+    @include tablet {
+      width: 290px;
+    }
+    @include laptop {
+      width: 310px;
+    }
+  }
+
+  &__cards {
+    padding-bottom: 0px;
+  }
+
+  &__cards_short {
+    grid-column-gap: $spacer * 5;
+    padding-bottom: 0px;
+
+    @include tablet {
+      padding-bottom: 25px;
+    }
+
+    h4 {
+      @include laptop {
+        min-width: 281px;
+      }
+    }
+  }
+
+  &__feature-card {
+    max-height: unset;
+
+    @include laptop {
+      min-width: 320px;
+    }
+  }
+
+  &__feature-card_long {
+    @include tablet {
+      @include flex-row;
+      max-width: 100%;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      padding: $spacer * 6 $spacer * 10;
+      min-height: unset;
+
+      svg {
+        flex-shrink: 0;
+      }
+
+      .promophone__card-header {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  &__promophone-header {
+    h2 {
+      max-width: 518px;
+    }
+  }
+
+  &__promophone-card-header {
+    @include tablet {
+      margin-top: 0px;
+      margin: 0 $spacer * 5 0 $spacer * 7;
+    }
+
+    @include laptop {
+      margin: 0 $spacer * 6 0 $spacer * 8;
+    }
+  }
+
+  &__promophone-header {
+    @include tablet {
+      margin-bottom: $spacer * 3;
+    }
+  }
+
+  &__promophone-caption {
+    margin-top: $spacer * 2;
+    @include tablet {
+      max-width: 585px;
+      margin-bottom: $spacer * 3;
+    }
+
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+
+  &__promophone-content {
+    padding-bottom: $spacer * 4;
+    @include tablet {
+      padding-bottom: $spacer * 10;
+    }
+  }
+
+  &__hero-button-container {
+    .button__start {
+      padding: 15px 30px;
+    }
+
+    @include tablet {
+      margin-top: -$spacer * 4;
+    }
+  }
+
+  &__focus-card {
+    padding: $spacer * 4;
+
+    @include tablet {
+      padding: $spacer * 7 $spacer * 5;
+    }
+  }
+
+  &__list-item {
+    @include font($normal, 14px, $gray);
+    line-height: 150%;
+    margin-bottom: $spacer * 2;
+
+    @include laptop {
+      font-size: 16px;
+      line-height: 155%;
+    }
+  }
+
+  &__accent {
+    color: $black;
+    font-weight: $semi-bold;
+  }
+
+  &____focus-cardblock {
+    @include tablet {
+      margin-left: 52px;
+    }
+  }
+
+  &__downside-caption {
+    color: $white;
+    font-weight: $semi-bold;
+    font-size: 15px;
+
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+
+  &__focus-paragraph {
+    @include laptop {
+      max-width: 518px;
+    }
+  }
+
+  &__minutes {
+    background-color: $white;
+  }
+
+  &__minutes-container {
+    background-color: $white;
+    @include tablet {
+      background-color: $light-gray;
+    }
+
+    @include laptop {
+      max-height: 606px;
+    }
+  }
+
+  &__minutes-caption {
+    @include font($normal, 15px, $gray);
+    line-height: 155%;
+
+    @include tablet {
+      font-size: 14px;
+      margin-top: $spacer * 4;
+      margin-bottom: $spacer * 2;
+
+      &:nth-child(3) {
+        margin-bottom: 0px;
+        margin-top: 0px;
+      }
+    }
+    @include laptop {
+      font-size: 16px;
+      max-width: 255px;
+    }
+  }
+
+  &__minutes-button {
+    margin-top: $spacer * 5;
+
+    @include tablet {
+      margin-top: $spacer * 9;
+    }
+
+    @include tablet-1024 {
+      margin-top: $spacer * 6;
+    }
+  }
+
+  &__minutes-chip {
+    &:nth-child(2) {
+      font-weight: $normal;
+    }
+    @include tablet {
+      flex: 1;
+      max-width: 217px;
+      min-width: 175px;
+
+      &:first-child {
+        max-width: 217px;
+      }
+
+      &:nth-child(3) {
+        max-width: 209px;
+      }
+    }
+  }
+
+  &__minutes-price {
+    @include font($normal, 16px, $gray2);
+  }
+
+  &__plus_mobile {
+    @include flex-row;
+    justify-content: center;
+    padding: $spacer * 3 0;
+    width: 100%;
+    min-height: 26px;
+    background-color: $white;
+
+    @include tablet {
+      background-color: $light-gray;
+    }
+
+    @include laptop {
+      svg {
+        min-width: 15px;
+        max-width: 15px;
+        min-height: 34px;
+        max-width: 34px;
+      }
+    }
+  }
+
+  &__minutes-break {
+    @include mobile-380 {
+      display: none;
+    }
+  }
+
+  &__link {
+    margin-top: $spacer * 3;
+    display: block;
+
+    @include smartphone {
+      text-align: center;
+      margin-top: $spacer * 4;
+    }
+
+    @include tablet {
+      text-align: left;
+    }
+  }
+
+  &__minutes-list-item {
+    font-size: 14px;
+  }
+}
+
+.tablet-inline {
+  display: none;
+
+  @include tablet {
+    display: inline;
+  }
+}
