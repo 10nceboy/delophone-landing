@@ -76,6 +76,10 @@
     }
   }
 
+  &__cards {
+    padding-bottom: 0px;
+  }
+
   &__cards_short {
     grid-column-gap: $spacer * 5;
     padding-bottom: 0px;
@@ -179,7 +183,7 @@
   }
 
   &__list-item {
-    @include font($normal, 14p, $gray);
+    @include font($normal, 14px, $gray);
     line-height: 150%;
     margin-bottom: $spacer * 2;
 
