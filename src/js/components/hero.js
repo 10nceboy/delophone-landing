@@ -20,8 +20,12 @@ if (!isTouchDevice()) {
   const heroBtn8800 = document.querySelector('.hero__button8800 button');
   const label = document.querySelector('.hero__label span');
   const label2 = document.querySelector('.num8800__hero-label-2 span');
+
   const originalContent = label.textContent;
-  const originalContent2 = label2.textContent;
+  if (label2) {
+    const originalContent2 = label2.textContent;
+  }
+
   const newContent = '⚡️ Сразу после регистрации';
 
   heroBtn.addEventListener('mouseover', () => {
