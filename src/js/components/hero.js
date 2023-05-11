@@ -48,16 +48,6 @@ if (!isTouchDevice()) {
     }
   });
 
-  heroBtn8800.addEventListener('mouseover', () => {
-    clearTimeout(timeoutIdOut);
-
-    timeoutIdOver = setTimeout(() => {
-      over = true;
-
-      smoothContentSwitch(label2, newContent);
-    }, delayMS);
-  });
-
   if (heroBtn8800) {
     heroBtn8800?.addEventListener('mouseout', () => {
       clearTimeout(timeoutIdOver);

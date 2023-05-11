@@ -158,8 +158,18 @@
   &__promophone-header {
     margin-bottom: $spacer * 2;
 
+    h3 {
+      font-size: 18px;
+    }
+
     @include tablet {
       margin-bottom: $spacer * 3;
+    }
+
+    @include laptop {
+      h3 {
+        font-size: 26px;
+      }
     }
   }
 
@@ -239,7 +249,7 @@
   }
 
   &__promophone-feature-list {
-    margin-top: $spacer * 4;
+    margin: $spacer * 4 0;
 
     @include tablet {
       display: none;
@@ -248,7 +258,10 @@
 
   &__promophone-imageblock-lk {
     margin-left: 0px;
-    margin-bottom: $spacer * 10;
+
+    @include tablet {
+      margin-bottom: $spacer * 10;
+    }
   }
 
   &__promophone-image-lk {
@@ -322,8 +335,19 @@
     bottom: 13.5%;
     left: 32.3%;
   }
+
   &__tooltip_replay {
     bottom: 13.5%;
     right: 24.8%;
+  }
+
+  &__promophone-caption_short {
+    @include tablet {
+      max-width: 585px;
+    }
+
+    @include laptop {
+      font-size: 16px;
+    }
   }
 }
