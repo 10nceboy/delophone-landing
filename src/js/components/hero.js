@@ -54,15 +54,17 @@ if (!isTouchDevice()) {
     }, delayMS);
   });
 
-  heroBtn8800.addEventListener('mouseout', () => {
-    clearTimeout(timeoutIdOver);
-    if (over === true) {
-      timeoutIdOut = setTimeout(() => {
-        smoothContentSwitch(label2, originalContent2);
-        over = false;
-      }, delayMS);
-    }
-  });
+  if (heroBtn8800) {
+    heroBtn8800?.addEventListener('mouseout', () => {
+      clearTimeout(timeoutIdOver);
+      if (over === true) {
+        timeoutIdOut = setTimeout(() => {
+          smoothContentSwitch(label2, originalContent2);
+          over = false;
+        }, delayMS);
+      }
+    });
+  }
 }
 
 /**fix hero iamge drag */
@@ -76,8 +78,10 @@ hero.addEventListener('mousedown', (event) => {
   }
 });
 
-hero8800.addEventListener('mousedown', (event) => {
-  if (event.target === hero) {
-    event.preventDefault();
-  }
-});
+if (hero8800) {
+  hero8800.addEventListener('mousedown', (event) => {
+    if (event.target === hero) {
+      event.preventDefault();
+    }
+  });
+}
