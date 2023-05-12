@@ -280,16 +280,10 @@
           fill: $gray2;
         }
       }
-    }
 
-    &:hover {
-      svg {
+      &:hover {
         path {
           fill: $white;
-        }
-
-        circle {
-          stroke: none;
         }
       }
     }
