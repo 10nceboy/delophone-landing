@@ -174,4 +174,13 @@
       padding-top: 150px;
     }
   }
+
+  &__stats {
+    @include tablet {
+      padding-bottom: 100px;
+    }
+    @include laptop {
+      padding-bottom: 0px;
+    }
+  }
 }

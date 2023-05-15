@@ -9,6 +9,13 @@
     @include tablet {
       max-width: 475px;
     }
+
+    @include laptop {
+      h3 {
+        font-size: 32px;
+        line-height: 135%;
+      }
+    }
   }
 
   &__cards {
@@ -698,5 +705,9 @@
     @include tablet {
       margin-top: 0px;
     }
+  }
+
+  &__multicalls-mobile {
+    max-width: 250px;
   }
 }

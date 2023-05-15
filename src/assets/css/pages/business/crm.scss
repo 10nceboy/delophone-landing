@@ -16,12 +16,18 @@
     }
 
     @include tablet-1024 {
+      max-width: 360px;
+      max-height: 220px;
+      height: 220px;
+      width: 320px;
+      margin-top: 70px;
+
       img {
-        max-width: 380px;
-        max-height: 398px;
+        max-width: 420px;
+        max-height: 220px;
         margin-top: 0px;
-        height: 380px;
-        width: 398px;
+        height: 230px;
+        width: 370px;
       }
     }
 
@@ -266,7 +272,7 @@
     margin-bottom: 0px;
 
     @include tablet {
-      margin-top: 67px;
+      margin-top: 130px;
       margin-bottom: 0px;
     }
 
@@ -346,6 +352,25 @@
   &__break {
     @include mobile-380 {
       display: none;
+    }
+  }
+
+  &__linecalls {
+    padding-bottom: 60px;
+    @include tablet {
+      padding-bottom: 120px;
+    }
+  }
+
+  &__lk_bottom {
+    @include tablet {
+      grid-template-columns: 480px auto;
+    }
+  }
+
+  &__cases {
+    @include tablet {
+      padding-top: 150px;
     }
   }
 }

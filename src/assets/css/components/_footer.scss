@@ -6,6 +6,10 @@
     padding: $spacer * 9 0 $spacer * 7;
   }
 
+  &__city {
+    margin-left: -3px;
+  }
+
   &__divider {
     display: none;
     height: 1px;
@@ -272,9 +276,8 @@
   }
 
   .footer-case {
-    margin-top: $spacer * 4;
+    margin-top: $spacer * 4 $spacer * 3 0 0;
     text-align: center;
     font-size: 12px;
-    margin-right: 15px;
   }
 }

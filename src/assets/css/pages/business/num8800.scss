@@ -150,6 +150,18 @@
         min-width: 665px;
       }
     }
+
+    &_long {
+      h2 {
+        max-width: 665px;
+      }
+
+      @include tablet {
+        h2 {
+          min-width: 665px;
+        }
+      }
+    }
   }
 
   &__promophone-caption {
@@ -205,9 +217,10 @@
     font-weight: $semi-bold;
   }
 
-  &____focus-cardblock {
+  &__focus-cardblock {
     @include tablet {
-      margin-left: 52px;
+      margin-left: 4px;
+      flex-shrink: 0;
     }
   }
 
@@ -215,6 +228,7 @@
     color: $white;
     font-weight: $semi-bold;
     font-size: 15px;
+    line-height: 155%;
 
     @include laptop {
       font-size: 16px;
@@ -222,8 +236,30 @@
   }
 
   &__focus {
+    padding-bottom: 80px;
     @include tablet {
-      padding-bottom: 150px;
+      padding-bottom: 158px;
+      position: relative;
+      z-index: 2;
+
+      &::before {
+        content: url(/public/num8800__arc.svg);
+        position: absolute;
+        top: calc(100% - 158px);
+        left: 57%;
+      }
+
+      @include tablet-1024 {
+        &::before {
+          left: 55%;
+        }
+      }
+
+      @include laptop {
+        &::before {
+          left: 53%;
+        }
+      }
     }
   }
 
@@ -248,7 +284,7 @@
     padding-bottom: 20px;
 
     @include tablet {
-      padding-bottom: 0px;
+      padding-bottom: 150px;
     }
   }
 
@@ -260,6 +296,14 @@
 
     @include laptop {
       max-height: 606px;
+    }
+  }
+
+  &__minutes-header {
+    @include laptop {
+      margin-right: 45px;
+      max-width: 265px;
+      min-width: 265px;
     }
   }
 
@@ -310,6 +354,11 @@
 
       &:nth-child(3) {
         max-width: 209px;
+        display: flex;
+
+        .tooltip {
+          margin-top: -2px;
+        }
       }
     }
   }
@@ -405,6 +454,22 @@
     @include tablet {
       padding-top: 25px;
     }
+  }
+
+  &__cases {
+    background-color: $light-gray;
+
+    .cases__card {
+      background-color: $white;
+    }
+
+    .scope-cases__card-bottom {
+      background-color: $white;
+    }
+  }
+
+  &__result-list {
+    margin-left: 15px;
   }
 }
 

@@ -121,7 +121,7 @@
   &__focus-listblock {
     margin-left: 0px;
     @include tablet {
-      padding: $spacer * 5 $spacer * 9;
+      padding: $spacer * 9 $spacer * 5;
     }
   }
 
@@ -160,6 +160,7 @@
 
     h3 {
       font-size: 18px;
+      line-height: 130%;
     }
 
     @include tablet {
@@ -251,6 +252,10 @@
   &__promophone-feature-list {
     margin: $spacer * 4 0;
 
+    @include mobile-520 {
+      margin-bottom: $spacer * 10;
+    }
+
     @include tablet {
       display: none;
     }
@@ -270,6 +275,7 @@
 
   &__promophone-image_mobile-lk {
     min-width: 80%;
+    border: $border-dim-gray;
   }
 
   &__workcards {
