@@ -69,11 +69,11 @@
     
     
     <script type="module" crossorigin src="/delophone-landing/assets/menu-1e25bb88.js"></script>
-    <script type="module" crossorigin src="/delophone-landing/assets/audioplayer-fe0ab439.js"></script>
+    <script type="module" crossorigin src="/delophone-landing/assets/audioplayer-fd1b0db0.js"></script>
     <script type="module" crossorigin src="/delophone-landing/assets/modal-719e89bc.js"></script>
     <script type="module" crossorigin src="/delophone-landing/assets/carousel-c249b4fc.js"></script>
-    <link rel="stylesheet" href="/delophone-landing/assets/audioplayer-be5b1276.css">
-    <link rel="stylesheet" href="/delophone-landing/assets/num8800-8849acdc.css">
+    <link rel="stylesheet" href="/delophone-landing/assets/audioplayer-0983bbe2.css">
+    <link rel="stylesheet" href="/delophone-landing/assets/num8800-15603b18.css">
   </head>
   <body>
     <div class="overlay"></div>
@@ -1147,7 +1147,9 @@
       </section>
       <section class="linecalls num8800__linecalls">
         <div class="container">
-          <div class="promophone__header linecalls__header">
+          <div
+            class="promophone__header linecalls__header num8800__promophone-header_long"
+          >
             <h2>
               Номер 8-800 с&nbsp;телефонией — получите&nbsp;максимум от звонков
             </h2>
@@ -1166,8 +1168,8 @@
               />
 
               <img
-                class="linecalls__crm-mobile"
-                src="/delophone-landing/multicall-mobile.svg"
+                class="linecalls__crm-mobile linecalls__multicalls-mobile"
+                src="/delophone-landing/multicall-mobile.png"
                 alt="Поддерживаемые CRM-системы"
               />
 
@@ -1636,13 +1638,13 @@
             >
               <img
                 class="linecalls__crm"
-                src="/delophone-landing/crm.svg"
+                src="/delophone-landing/crm.png"
                 alt="Поддерживаемые CRM-системы"
               />
 
               <img
                 class="linecalls__crm-mobile"
-                src="/delophone-landing/crm-mobile.svg"
+                src="/delophone-landing/crm-mobile.png"
                 alt="Поддерживаемые CRM-системы"
               />
 
@@ -2608,7 +2610,7 @@
               <br class="pay-minutes__break" />
               и&nbsp;8-800 за&nbsp;15 минут
             </div>
-            <div class="pay-minutes__header">
+            <div class="pay-minutes__header num8800__minutes-header">
               Подключите телефонию <br />и 8-800 за 15 минут
               <div class="num8800__minutes-caption">
                 Подключите и&nbsp;попробуйте телефонию с&nbsp;бесплатным
@@ -2691,6 +2693,7 @@
                   class="container_flex-start pay-minutes__card-bottom_container"
                 >
                   <svg
+                    class="pay-minutes__icon-plus"
                     width="28"
                     height="28"
                     viewBox="0 0 28 28"
@@ -2721,6 +2724,7 @@
                   class="container_flex-start pay-minutes__card-bottom_container"
                 >
                   <svg
+                    class="pay-minutes__icon-plus"
                     width="28"
                     height="28"
                     viewBox="0 0 28 28"
@@ -2810,6 +2814,13 @@
                     class="chip_white pay-minutes__chip scope-pay-minutes__chip num8800__minutes-chip"
                   >
                     Входящие от 2.4 ₽ / мин
+                    <div
+                      data-tooltip-width-laptop="483px"
+                      data-tooltip-width-tablet="483px"
+                      data-tooltip-width-smartphone="483px"
+                      data-tooltip="Входящие бесплатны при использовании мобильного или городского номера.<br/>Стоимость входящих на номер 8-800 &mdash; от 2 ₽ за минуту, в зависимости от региона звонящего абонента."
+                      class="tooltip pay-minutes__tooltip-top"
+                    ></div>
                   </div>
                   <ul class="pay-minutes__list">
                     <li
@@ -2844,7 +2855,7 @@
           </div>
         </div>
       </section>
-      <section class="cases" id="cases">
+      <section class="cases num8800__cases crm__cases" id="cases">
   <div class="container carousel">
     <h2 class="steps__header">Для бизнеса любого масштаба</h2>
     <div class="swiper">
@@ -3016,7 +3027,7 @@
     </div>
   </div>
 </section>
- <section class="cases-bottom">
+ <section class="cases-bottom num8800__cases">
   <div class="container features">
     <div
       class="card card_light-gray card_rounded-top casess-bottom__card scope-cases__card-bottom"
@@ -3027,7 +3038,7 @@
         </div>
         <div class="cases-bottom__textblock-text text_regular_14">
           Подключение, настройка и запуск телефонии не потребует углубленных
-          знаний телефонии и программирования.
+          знаний телефонии и&nbsp;программирования.
         </div>
       </div>
       <div class="cases-bottom__textblock scope-cases__textblock">
@@ -3101,7 +3112,7 @@
     </div>
   </div>
 </section>
- <section class="stats">
+ <section class="stats business__stats">
   <div class="container">
     <div class="stats__articles">
       <article class="stats__item">
@@ -3861,14 +3872,15 @@
             <p class="results__paragraph">
               Федеральный номер 8-800 подходит для различных видов бизнеса:
             </p>
+
             <ol
-              class="results__paragraph results__paragraph_no-margin results__list"
+              class="results__paragraph results__paragraph_no-margin results__list num8800__result-list"
             >
               <li>
                 Интернет-магазины: 8-800 номер может быть использован
                 для&nbsp;того, чтобы предоставить бесплатную линию поддержки
                 для&nbsp;клиентов, которые нуждаются в помощи при оформлении
-                заказа или имеют вопросы по поводу товаров.
+                заказа&nbsp;или имеют вопросы по поводу товаров.
               </li>
               <li>
                 Крупные розничные сети: 8-800 номер может использоваться для
@@ -3897,6 +3909,7 @@
                 или имеют вопросы по поводу лекарств.
               </li>
             </ol>
+
             <p class="results__paragraph">
               Это лишь некоторые примеры того, каким бизнесам может быть полезен
               федеральный номер 8-800.
@@ -4063,7 +4076,10 @@
             class="dropdown dropdown_white footer-upside__dropdown dropdown_mobile city"
             data-value="Москва"
           >
-            <button type="button" class="footer__dropdown-button dropdown__button">
+            <button
+              type="button"
+              class="footer__dropdown-button dropdown__button footer__city"
+            >
               Москва
             </button>
             <div class="dropdown__menu">
