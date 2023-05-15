@@ -215,7 +215,15 @@
     max-width: 100%;
 
     @include mobile-380 {
-      min-width: 70%;
+      min-width: 100%;
+    }
+
+    @include mobile-s {
+      min-width: 85%;
+    }
+
+    @include smartphone {
+      min-width: 75%;
     }
 
     @include tablet {

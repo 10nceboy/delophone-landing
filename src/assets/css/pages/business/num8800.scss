@@ -243,7 +243,7 @@
       z-index: 2;
 
       &::before {
-        content: url(/public/num8800__arc.svg);
+        content: url(/num8800__arc.svg);
         position: absolute;
         top: calc(100% - 158px);
         left: 57%;
@@ -458,6 +458,7 @@
 
   &__cases {
     background-color: $light-gray;
+    margin-bottom: 0px;
 
     .cases__card {
       background-color: $white;
@@ -470,6 +471,19 @@
 
   &__result-list {
     margin-left: 15px;
+  }
+
+  &__stats {
+    background-color: $light-gray;
+    padding-top: 40px;
+
+    @include tablet {
+      padding-top: 70px;
+    }
+  }
+
+  &__stats-articles {
+    margin: 0;
   }
 }
 
