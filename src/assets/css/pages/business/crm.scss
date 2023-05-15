@@ -276,6 +276,10 @@
       margin-bottom: 0px;
     }
 
+    @include tablet-1024 {
+      margin-top: 150px;
+    }
+
     @include laptop {
       margin-top: 37px;
     }

@@ -218,9 +218,11 @@
   }
 
   &__focus-cardblock {
+    margin-top: $spacer * 3;
     @include tablet {
       margin-left: 4px;
       flex-shrink: 0;
+      margin-top: 0px;
     }
   }
 
@@ -327,6 +329,10 @@
     }
   }
 
+  &__minutes-caption_long {
+    margin: $spacer * 3 0 $spacer * 2;
+  }
+
   &__minutes-button {
     margin-top: $spacer * 5;
 
@@ -395,6 +401,16 @@
     }
   }
 
+  &__minutes-break_tablet {
+    @include tablet {
+      display: none;
+    }
+
+    @include tablet-1024 {
+      display: block;
+    }
+  }
+
   &__link {
     margin-top: $spacer * 3;
     display: block;
@@ -411,6 +427,10 @@
 
   &__minutes-list-item {
     font-size: 14px;
+
+    @include smartphone {
+      font-size: 16px;
+    }
   }
 
   &__autocall {
@@ -470,7 +490,7 @@
   }
 
   &__result-list {
-    margin-left: 15px;
+    margin-left: 20px;
   }
 
   &__stats {

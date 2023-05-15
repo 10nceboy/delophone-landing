@@ -658,6 +658,7 @@
 
   &__crm-mobile {
     display: block;
+    max-width: 250px;
 
     @include smartphone {
       display: none;
