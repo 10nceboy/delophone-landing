@@ -484,10 +484,6 @@
       background-color: $white;
     }
 
-    .scope-cases__card-bottom {
-      background-color: $white;
-    }
-
     @include tablet {
       padding-top: 150px;
     }
@@ -514,6 +510,17 @@
   &__cases-chip {
     @include tablet {
       background-color: $light-gray;
+    }
+  }
+
+  &__cases-bot {
+    background-color: $light-gray;
+    .scope-cases__card-bottom {
+      background-color: $white;
+    }
+    @include tablet {
+      padding-top: 0px;
+      margin-bottom: 0px;
     }
   }
 }
