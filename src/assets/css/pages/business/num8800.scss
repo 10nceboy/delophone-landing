@@ -487,6 +487,10 @@
     .scope-cases__card-bottom {
       background-color: $white;
     }
+
+    @include tablet {
+      padding-top: 150px;
+    }
   }
 
   &__result-list {
@@ -499,11 +503,18 @@
 
     @include tablet {
       padding-top: 70px;
+      padding-bottom: 0px;
     }
   }
 
   &__stats-articles {
     margin: 0;
+  }
+
+  &__cases-chip {
+    @include tablet {
+      background-color: $light-gray;
+    }
   }
 }
 

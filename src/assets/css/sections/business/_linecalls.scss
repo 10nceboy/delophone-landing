@@ -645,13 +645,6 @@
 
     @include smartphone {
       display: block;
-    }
-
-    @include tablet {
-      max-width: 100%;
-    }
-
-    @include tablet-1024 {
       max-width: 100%;
     }
   }
