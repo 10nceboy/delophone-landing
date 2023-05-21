@@ -120,19 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     incrementEl.addEventListener('click', () => {
       clearInterval(intervalIncrement);
       increment(input);
-    });
-
-    incrementEl.addEventListener('mousedown', () => {
-      intervalIncrement = setInterval(() => increment(input), 150);
       decrementEl.classList.remove('calculator__decrement_disabled');
-
-      incrementEl.addEventListener(
-        'mouseleave',
-        () => {
-          clearInterval(intervalIncrement);
-        },
-        { once: true }
-      );
     });
 
     incrementEl.addEventListener('mouseup', () => {
@@ -142,21 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
     decrementEl.addEventListener('click', () => {
       clearInterval(intervalDecrement);
       decrement(input, decrementEl);
-    });
-
-    decrementEl.addEventListener('mousedown', () => {
-      const inputValue = getInputValue(input);
-      if (inputValue <= 0) {
-        return;
-      }
-      intervalDecrement = setInterval(() => decrement(input, decrementEl), 150);
-      decrementEl.addEventListener(
-        'mouseleave',
-        () => {
-          clearInterval(intervalDecrement);
-        },
-        { once: true }
-      );
     });
 
     decrementEl.addEventListener('mouseup', () => {
