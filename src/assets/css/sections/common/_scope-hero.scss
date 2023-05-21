@@ -1,0 +1,38 @@
+.scope {
+  &__hero {
+    margin-bottom: 80px;
+    margin-top: 0px;
+    padding-top: 30px;
+    margin: 0px;
+    padding-bottom: 80px;
+
+    @include tablet {
+      margin-bottom: 150px;
+      box-sizing: border-box;
+      padding-top: 80px;
+      padding-bottom: 0px;
+
+      h1 {
+        margin-top: 0px;
+      }
+    }
+  }
+
+  &__hero-container {
+    @include tablet {
+      justify-content: stretch;
+    }
+  }
+
+  &__hero-textblock {
+    @include tablet {
+      margin: 0;
+    }
+  }
+
+  &__hero-text {
+    @include tablet {
+      max-width: 520px;
+    }
+  }
+}

@@ -2,15 +2,6 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import handlebars from 'vite-plugin-handlebars';
 
-const pages = [
-  'price',
-  'numbers',
-  'order',
-  'scope/sales',
-  'scope/remote',
-  'scope/office, scope/phonereplace'
-];
-
 export default defineConfig({
   server: {
     port: 3000
@@ -45,7 +36,9 @@ export default defineConfig({
         voice: resolve(__dirname, 'pages/business/voice-menu.html'),
         control: resolve(__dirname, 'pages/business/control.html'),
         num8800: resolve(__dirname, 'pages/business/num8800.html'),
-        crm: resolve(__dirname, 'pages/business/crm.html')
+        crm: resolve(__dirname, 'pages/business/crm.html'),
+        pcprogramm: resolve(__dirname, 'pages/using-methods/pc-programm.html'),
+        smartphone: resolve(__dirname, 'pages/using-methods/smartphone.html')
       }
     }
   }

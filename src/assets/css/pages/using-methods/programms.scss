@@ -1,0 +1,77 @@
+@import '../../utils/index';
+
+.programms {
+  &__scheme {
+    @include laptop {
+      margin-left: ;
+    }
+  }
+}
+
+.pc {
+  &__hero-imageblock {
+    max-width: 247px;
+    max-height: 199px;
+
+    img {
+      max-width: 247px;
+      max-height: 199px;
+    }
+
+    @include tablet {
+      margin: 100px 0 0 $spacer;
+      max-height: 284px;
+      max-width: 280px;
+
+      img {
+        max-height: 284px;
+
+        max-width: 280px;
+      }
+    }
+
+    @include tablet-1024 {
+      margin: 0px 0 0 $spacer;
+      max-height: 404px;
+      max-width: 350px;
+
+      img {
+        max-height: 414px;
+        max-width: 350px;
+        width: 350px;
+        height: 414px;
+      }
+    }
+
+    @include laptop {
+      max-width: 464px;
+      max-height: 436px;
+      margin-top: -$spacer * 6;
+
+      img {
+        max-width: 464px;
+        max-height: 436px;
+        width: 464px;
+        height: 436px;
+      }
+    }
+  }
+
+  &__accent {
+    display: none;
+
+    @include mobile-362 {
+      display: inline;
+    }
+  }
+
+  &__accent_mobile {
+    display: inline-block;
+    padding-left: 9px;
+    margin-left: -9px;
+
+    @include mobile-362 {
+      display: none;
+    }
+  }
+}
