@@ -60,6 +60,10 @@
       margin-bottom: 0px;
     }
 
+    @include smartphone {
+      align-items: center;
+    }
+
     @include laptop {
       margin-bottom: $spacer * 5;
       max-width: 540px;
