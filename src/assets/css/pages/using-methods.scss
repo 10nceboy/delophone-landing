@@ -19,7 +19,6 @@
 @import '../components/modal';
 @import '../components/overlay';
 @import '../components/breadcrumbs';
-
 @import '../components/carousel';
 @import '../components/tooltip';
 @import '../components/icon';
@@ -43,6 +42,9 @@
 @import '../sections/common/scope-calculator';
 @import '../sections/scope/scope-cases';
 @import '../sections/common/focus';
+@import '../sections/common/methods';
+@import '../sections/common/interface';
+@import '../sections/main/features';
 
 .business {
   &__hero {
