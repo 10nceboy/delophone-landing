@@ -122,7 +122,7 @@
     @include laptop {
       max-width: 464px;
       max-height: 436px;
-      margin-top: -$spacer * 6;
+      margin: -$spacer * 6 0 0 70px;
 
       img {
         max-width: 464px;
