@@ -81,12 +81,12 @@
     @include tablet {
       margin-right: 10px;
     }
+
     @include laptop {
       min-width: 540px;
       max-width: 540px;
       margin-right: 38px;
       flex: 1;
-      box-sizing: border-box;
     }
   }
 
@@ -105,5 +105,8 @@
 
   &__paragraph {
     margin-bottom: $spacer * 2;
+  }
+
+  &__cards {
   }
 }

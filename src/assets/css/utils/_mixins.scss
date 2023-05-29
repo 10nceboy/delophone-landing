@@ -323,7 +323,6 @@ $family: 'Manrope';
     opacity: 1;
     transition: max-height 0.5s, opacity 0.5s;
     max-height: 1400px;
-
     z-index: 6;
 
     @include smartphone {

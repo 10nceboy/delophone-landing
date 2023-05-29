@@ -10,40 +10,7 @@
       </div>
     </div>
     <div class="methods__cards">
-      {{#unless smartphone}}
-      <a
-        href="pages/using-methods/smartphone.html"
-        class="card card_white card_rectangle card_hover methods__card"
-        aria-label="Приложение для смартфона"
-      >
-        <svg
-          class="methods__icon"
-          width="60"
-          height="60"
-          viewBox="0 0 60 60"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            x="11.5"
-            y="10.5"
-            width="26"
-            height="42"
-            rx="0.5"
-            fill="white"
-            stroke="#F88C28"
-          />
-          <line x1="11" y1="45.5" x2="38" y2="45.5" stroke="#F88C28" />
-          <path d="M20 49H29" stroke="#F88C28" stroke-linecap="round" />
-          <path
-            d="M20.5 10.5H28.5V12C28.5 13.3807 27.3807 14.5 26 14.5H23C21.6193 14.5 20.5 13.3807 20.5 12V10.5Z"
-            fill="white"
-            stroke="#F88C28"
-          />
-        </svg>
-        <h4 class="methods__card-header">Приложение для&nbsp;смартфона</h4>
-      </a>
-      {{/unless}} {{#unless pc}}
+      {{#unless pc}}
       <a
         href="pages/using-methods/pc-programm.html"
         class="card card_white card_rectangle methods__card"
@@ -117,9 +84,42 @@
 
         <h4 class="methods__card-header">Программа для ПК</h4>
       </a>
+      {{/unless}} {{#unless smartphone}}
+      <a
+        href="pages/using-methods/smartphone.html"
+        class="card card_white card_rectangle card_hover methods__card"
+        aria-label="Приложение для смартфона"
+      >
+        <svg
+          class="methods__icon"
+          width="60"
+          height="60"
+          viewBox="0 0 60 60"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="11.5"
+            y="10.5"
+            width="26"
+            height="42"
+            rx="0.5"
+            fill="white"
+            stroke="#F88C28"
+          />
+          <line x1="11" y1="45.5" x2="38" y2="45.5" stroke="#F88C28" />
+          <path d="M20 49H29" stroke="#F88C28" stroke-linecap="round" />
+          <path
+            d="M20.5 10.5H28.5V12C28.5 13.3807 27.3807 14.5 26 14.5H23C21.6193 14.5 20.5 13.3807 20.5 12V10.5Z"
+            fill="white"
+            stroke="#F88C28"
+          />
+        </svg>
+        <h4 class="methods__card-header">Приложение для&nbsp;смартфона</h4>
+      </a>
       {{/unless}} {{#unless iptel}}
       <a
-        href="#"
+        href="pages/using-methods/ip-telephone.html"
         class="card card_white card_hover card_rectangle methods__card"
         aria-label="Свой IP-телефон"
       >
