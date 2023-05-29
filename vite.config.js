@@ -38,8 +38,7 @@ export default defineConfig({
         num8800: resolve(__dirname, 'pages/business/num8800.html'),
         crm: resolve(__dirname, 'pages/business/crm.html'),
         pcprogramm: resolve(__dirname, 'pages/using-methods/pc-programm.html'),
-        smartphone: resolve(__dirname, 'pages/using-methods/smartphone.html'),
-        iptelephone: resolve(__dirname, 'pages/using-methods/ip-telephone.html')
+        smartphone: resolve(__dirname, 'pages/using-methods/smartphone.html')
       }
     }
   }
