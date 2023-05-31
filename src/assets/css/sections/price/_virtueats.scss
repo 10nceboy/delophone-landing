@@ -1,4 +1,10 @@
 .virtueats {
+  padding-top: 45px;
+
+  @include tablet {
+    padding-top: 115px;
+  }
+
   &__collapse {
     background-color: $light-gray;
   }
