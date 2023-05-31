@@ -22,6 +22,7 @@
 @import '../components/carousel';
 @import '../components/tooltip';
 @import '../components/icon';
+@import '../components/scheme';
 @import '../components/audioplayer';
 @import '../long/header-long.scss';
 @import '../long/footer-long.scss';
@@ -74,25 +75,25 @@
     }
   }
 
-  &__results {
-    padding: $spacer * 14 0;
+  &__virtue-telephone {
+    padding-bottom: 80px;
+    padding-top: 80px;
+
     @include laptop {
-      padding: 150px;
+      padding-top: 150px;
+      padding-bottom: 150px;
     }
   }
 
-  &__cards {
-    padding: $spacer * 5 0 0;
-
+  &__calculator {
     @include tablet {
-      padding: $spacer * 11 0 0;
+      padding-top: 150px;
     }
   }
 
   &__collapse-activator {
     text-align: center;
     padding-top: $spacer * 5;
-
     margin: 0 auto;
 
     justify-content: center;
@@ -108,48 +109,6 @@
 
     @include laptop {
       max-width: 236px;
-    }
-  }
-
-  &__virtue-telephone {
-    padding-bottom: 80px;
-    padding-top: 80px;
-
-    @include laptop {
-      padding-top: 150px;
-      padding-bottom: 150px;
-    }
-  }
-
-  &__scheme {
-    display: none;
-
-    @include tablet {
-      display: block;
-    }
-  }
-
-  &__scheme-mobile {
-    display: block;
-    margin-top: $spacer * 8;
-
-    @include tablet {
-      display: none;
-    }
-  }
-
-  &__calculator {
-    @include tablet {
-      padding-top: 150px;
-    }
-  }
-
-  &__stats {
-    @include tablet {
-      padding-bottom: 100px;
-    }
-    @include laptop {
-      padding-bottom: 0px;
     }
   }
 }

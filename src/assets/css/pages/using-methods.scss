@@ -13,6 +13,7 @@
 @import '../components/footer';
 @import '../components/chips';
 @import '../components/list';
+@import '../components/scheme';
 @import '../components/list-item';
 @import '../components/collapse';
 @import '../components/whatsapp';
@@ -46,82 +47,66 @@
 @import '../sections/common/interface';
 @import '../sections/main/features';
 
-.business {
-  &__hero {
-    margin-bottom: 80px;
-    margin-top: 0px;
-    padding-top: 30px;
-    margin: 0px;
-    padding-bottom: 80px;
+.using-methods {
+  &__promophone-caption {
+    line-height: 150%;
 
     @include tablet {
-      margin-bottom: 150px;
-      box-sizing: border-box;
-      padding-top: 80px;
-      padding-bottom: 0px;
+      line-height: 155%;
+      margin-left: 30px;
+    }
 
-      h1 {
-        margin-top: 0px;
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+
+  &__promophone-caption_no-margin {
+    margin-left: 0px;
+  }
+
+  &__promophone-header {
+    margin-bottom: $spacer * 2;
+
+    h3 {
+      font-size: 18px;
+      line-height: 130%;
+    }
+
+    @include tablet {
+      margin: 0 0 $spacer * 2 0;
+      align-self: center;
+      h3,
+      h4 {
+        max-width: 395px;
+        min-width: 395px;
+      }
+
+      h3 {
+        font-size: 22px;
+      }
+
+      h4 {
+        font-size: 19px;
       }
     }
-  }
-
-  &__hero-textblock {
-    margin: 0px;
-  }
-
-  &__hero-container {
-    @include tablet {
-      justify-content: stretch;
-    }
-  }
-
-  &__hero-caption {
-    @include font($normal, 14px, $new-gray);
-    line-height: 150%;
-    margin-top: $spacer * 2;
-    text-align: center;
-
-    @include tablet {
-      margin-top: $spacer * 3;
-      color: $gray;
-      text-align: left;
-    }
-  }
-
-  &__hero-text {
-    max-width: 570px;
 
     @include laptop {
-      min-width: 570px;
-    }
-  }
+      align-self: flex-start;
 
-  &__steps {
-    @include tablet {
-      padding: $spacer * 21 0 $spacer * 10;
-    }
-  }
+      h3 {
+        font-size: 26px;
+      }
 
-  &__results {
-    padding: $spacer * 14 0;
-    @include laptop {
-      padding: 150px;
-    }
-  }
-
-  &__cards {
-    padding: $spacer * 5 0 0;
-
-    @include tablet {
-      padding: $spacer * 11 0 0;
+      h4 {
+        max-width: unset;
+      }
     }
   }
 
   &__collapse-activator {
     text-align: center;
     padding-top: $spacer * 5;
-
     margin: 0 auto;
 
     justify-content: center;
@@ -132,7 +117,7 @@
     }
 
     @include tablet {
-      padding-top: $spacer * 10;
+      padding-top: $spacer * 7;
     }
 
     @include laptop {
@@ -140,45 +125,9 @@
     }
   }
 
-  &__virtue-telephone {
-    padding-bottom: 80px;
-    padding-top: 80px;
-
-    @include laptop {
-      padding-top: 150px;
-      padding-bottom: 150px;
-    }
-  }
-
-  &__scheme {
-    display: none;
-
+  &__cards {
     @include tablet {
-      display: block;
-    }
-  }
-
-  &__scheme-mobile {
-    display: block;
-    margin-top: $spacer * 8;
-
-    @include tablet {
-      display: none;
-    }
-  }
-
-  &__calculator {
-    @include tablet {
-      padding-top: 150px;
-    }
-  }
-
-  &__stats {
-    @include tablet {
-      padding-bottom: 100px;
-    }
-    @include laptop {
-      padding-bottom: 0px;
+      padding: $spacer * 7 0 0;
     }
   }
 }
