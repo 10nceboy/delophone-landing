@@ -1,0 +1,16 @@
+.scheme {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.scheme_mobile {
+  display: block;
+  margin-top: $spacer * 8;
+
+  @include tablet {
+    display: none;
+  }
+}

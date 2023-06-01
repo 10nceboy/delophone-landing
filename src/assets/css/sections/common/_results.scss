@@ -10,6 +10,13 @@
     padding-top: 0px;
   }
 
+  &_with-padding {
+    padding: $spacer * 14 0;
+    @include laptop {
+      padding: 150px;
+    }
+  }
+
   &__subsection {
     margin-bottom: $spacer * 11;
   }

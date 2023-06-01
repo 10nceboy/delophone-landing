@@ -35,4 +35,17 @@
       max-width: 520px;
     }
   }
+
+  &__hero-caption {
+    @include font($normal, 14px, $new-gray);
+    line-height: 150%;
+    margin-top: $spacer * 2;
+    text-align: center;
+
+    @include tablet {
+      margin-top: $spacer * 3;
+      color: $gray;
+      text-align: left;
+    }
+  }
 }
