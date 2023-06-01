@@ -23,9 +23,11 @@
     }
 
     &_with-arc {
-      position: relative;
-      overflow: visible;
-      z-index: 1;
+      @include tablet {
+        position: relative;
+        overflow: visible;
+        z-index: 1;
+      }
 
       &::after {
         display: none;

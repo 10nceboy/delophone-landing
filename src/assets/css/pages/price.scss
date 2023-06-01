@@ -33,6 +33,7 @@
 @import '../sections/price/virtueats';
 @import '../sections/price/fmc';
 @import '../sections/price/phone-numbers';
+@import '../sections/main/rate';
 
 .price {
   &__header {
@@ -49,6 +50,14 @@
 
     @include tablet {
       margin-top: $spacer * 11;
+    }
+  }
+
+  &__rate {
+    background-color: $light-gray;
+    padding: 80px 0;
+    @include tablet {
+      padding: 150px 0;
     }
   }
 
