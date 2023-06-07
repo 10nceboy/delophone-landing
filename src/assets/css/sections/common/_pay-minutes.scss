@@ -414,6 +414,28 @@
       align-self: flex-start;
     }
   }
+
+  &__plus_big {
+    @include flex-row;
+    justify-content: center;
+    padding: $spacer * 3 0;
+    width: 100%;
+    min-height: 26px;
+    background-color: $white;
+
+    @include tablet {
+      background-color: $light-gray;
+    }
+
+    @include laptop {
+      svg {
+        min-width: 15px;
+        max-width: 15px;
+        min-height: 34px;
+        max-width: 34px;
+      }
+    }
+  }
 }
 
 .chip-text {

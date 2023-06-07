@@ -1,0 +1,477 @@
+.ip-delofon {
+  @import '../../utils/index';
+
+  &__hero {
+    @include tablet {
+      margin-bottom: 47px;
+    }
+  }
+
+  &__hero-imageblock {
+    img {
+      max-width: 270px;
+      max-height: 270px;
+    }
+
+    @include tablet {
+      margin-top: $spacer * 6;
+    }
+
+    @include tablet-1024 {
+      margin-top: 0px;
+
+      img {
+        max-width: 354px;
+        max-height: 354px;
+        width: 354px;
+        height: 354px;
+      }
+    }
+
+    @include laptop {
+      margin-left: 28px;
+      margin-top: -74px;
+      img {
+        max-width: 485px;
+        max-height: 485px;
+        width: 485px;
+        height: 485px;
+      }
+    }
+  }
+
+  &__hero-button {
+    padding: $spacer * 3 $spacer * 4;
+
+    @include laptop {
+      max-width: 305px;
+    }
+  }
+
+  &__hero-label {
+    @include tablet {
+      margin-top: 20px;
+    }
+
+    @include laptop {
+      margin-top: 40px;
+    }
+  }
+
+  &__focus-listblock {
+    @include tablet {
+      padding: 50px 25px;
+    }
+
+    @include laptop {
+      margin-left: 20px;
+    }
+  }
+
+  &__focus-header_long {
+    margin-bottom: $spacer * 3;
+  }
+
+  &__focus-wrapper {
+    @include smartphone {
+      align-items: start;
+    }
+  }
+
+  &__focus-card {
+    padding: $spacer * 4;
+    @include flex-col;
+    width: 100%;
+
+    &:last-child {
+      margin-top: $spacer * 3;
+    }
+
+    @include tablet {
+      padding: $spacer * 6 18px $spacer * 6 $spacer * 6;
+      flex-direction: row;
+      max-width: 50%;
+
+      &:last-child {
+        margin-top: 0px;
+        margin-left: $spacer * 3;
+      }
+    }
+
+    @include laptop {
+      max-width: 540px;
+      min-height: 289px;
+
+      &:last-child {
+        margin-left: $spacer * 6;
+      }
+    }
+  }
+
+  &__focus-header {
+    margin-bottom: $spacer * 5;
+
+    @include tablet {
+      margin-bottom: $spacer * 11;
+    }
+  }
+
+  &__focus-card-header {
+    @include smartphone {
+      h3 {
+        font-size: 20px;
+      }
+    }
+
+    @include tablet {
+      h3 {
+        font-size: 19px;
+        line-height: 130%;
+      }
+    }
+
+    @include laptop {
+      h3 {
+        font-size: 26px;
+      }
+    }
+  }
+
+  &__focus-card-caption {
+    margin-top: $spacer * 3;
+    font-size: 15px;
+
+    @include smartphone {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include laptop {
+      min-width: 247px;
+      max-width: 247px;
+      font-size: 16px;
+      margin-right: 45px;
+      margin-top: 20px;
+    }
+  }
+
+  &__focus-list {
+    margin-bottom: 0px;
+    @include tablet {
+      margin-top: $spacer * 7;
+      flex: 1 1;
+      &:first-child {
+        margin-right: $spacer * 6;
+      }
+
+      @include laptop {
+        min-width: 540px;
+      }
+    }
+  }
+
+  &__focus-list-item {
+    margin: $spacer 0 0;
+
+    &:first-child {
+      margin-top: 0px;
+    }
+
+    @include tablet {
+      margin: $spacer * 2 0 0;
+
+      &:last-child {
+        margin-top: $spacer * 2;
+      }
+    }
+
+    @include tablet-1024 {
+      margin: $spacer * 3 0 0;
+
+      &:last-child {
+        margin-top: $spacer * 3;
+      }
+    }
+  }
+
+  &__focus-list_small {
+    @include tablet {
+      margin-top: $spacer * 4;
+    }
+  }
+
+  &__focus-list-item_small {
+    margin: $spacer 0 0;
+    font-size: 15px;
+
+    &:first-child {
+      margin-top: 0px;
+    }
+
+    @include smartphone {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      margin: $spacer * 2 0 0;
+      font-size: 14px;
+
+      &:last-child {
+        margin-top: $spacer * 2;
+      }
+    }
+
+    @include laptop {
+      font-size: 16px;
+      line-height: 155%;
+    }
+  }
+
+  &__focus-card-textblock {
+    @include laptop {
+      white-space: nowrap;
+    }
+  }
+
+  &__focus-card-textblock_wrap {
+    @include tablet {
+      white-space: wrap;
+    }
+  }
+
+  &__focus-imageblock {
+    @include flex-col;
+    align-items: center;
+    order: -1;
+
+    @include tablet {
+      order: 2;
+      margin-left: $spacer * 3;
+    }
+  }
+
+  &__focus-image {
+    max-width: 221px;
+    @include mobile-390 {
+      min-width: 70%;
+      max-width: 60%;
+      min-height: 60%;
+      height: 50%;
+    }
+
+    @include tablet {
+      height: auto;
+      min-width: 130px;
+      max-width: 130px;
+    }
+
+    @include tablet {
+      min-width: 140px;
+      max-width: 140px;
+    }
+
+    @include laptop {
+      min-width: 185px;
+      max-width: 185px;
+      height: auto;
+    }
+  }
+
+  &__focus-image_sim {
+    @include tablet {
+      max-width: 154px;
+    }
+
+    @include laptop {
+      max-width: 181px;
+      margin-right: 5px;
+    }
+  }
+
+  &__focus-card-note {
+    @include font($normal, 12px, $gray2);
+    margin: $spacer * 3 0;
+
+    @include smartphone {
+      font-size: 14px;
+    }
+
+    @include tablet {
+      order: -1;
+      margin-top: 0px;
+      font-size: 12px;
+    }
+  }
+
+  &__focus-link {
+    display: block;
+    margin-top: $spacer * 3;
+
+    @include tablet {
+      margin-top: 88px;
+      margin-left: 0px;
+    }
+
+    @include laptop {
+      font-size: 18px;
+      margin-top: 52px;
+    }
+  }
+
+  &__focus-button {
+    margin-top: $spacer * 3;
+    width: 100%;
+
+    @include tablet {
+      margin-top: $spacer * 5;
+      max-width: 235px;
+      font-size: 14px;
+    }
+  }
+
+  &__interface {
+    padding-bottom: 0px;
+  }
+
+  &__interface-image {
+    opacity: 0;
+    display: none;
+    min-width: 221px;
+    max-width: 221px;
+    margin: 0 auto $spacer * 4;
+    max-height: 221px;
+    min-height: 221px;
+
+    @include smartphone {
+      min-width: 60%;
+      min-width: 60%;
+      max-height: unset;
+    }
+  }
+
+  &__first-step-image {
+    @include laptop {
+      min-width: 367px;
+      min-height: 365px;
+      max-width: 367px;
+      max-height: 365px;
+      margin: -$spacer * 6 0 0 125px;
+    }
+  }
+
+  &__second-step-image {
+    @include laptop {
+      min-width: 399px;
+      min-height: 341px;
+      max-width: 399px;
+      max-height: 341px;
+      margin: -$spacer * 6 0 0 109px;
+    }
+  }
+
+  &__third-step-image {
+    @include laptop {
+      min-width: 438px;
+      min-height: 370px;
+      max-width: 438px;
+      max-height: 370px;
+      margin: -$spacer * 6 0 0 50px;
+    }
+  }
+
+  &__interface-image_active {
+    opacity: 1;
+    animation: flash 0.5s;
+    display: block;
+  }
+
+  &__interface-header {
+    margin-bottom: $spacer * 5;
+
+    @include tablet {
+      margin-bottom: $spacer * 7;
+    }
+  }
+
+  &__interface-step {
+    cursor: pointer;
+
+    svg {
+      transition: stroke 0.7s;
+    }
+
+    .interface__step-number {
+      background-color: $white;
+      transition: background-color 0.7s;
+    }
+
+    @include tablet {
+      .interface__step-number {
+        background-color: $light-gray;
+      }
+    }
+
+    &:hover {
+      svg {
+        path {
+          stroke: $white;
+        }
+      }
+
+      .interface__step-number {
+        background-color: $blue;
+      }
+
+      .interface__step-number-header {
+        color: $white;
+        transition: color 0.7s;
+        h3 {
+          color: $white;
+          transition: color 0.5s;
+        }
+      }
+
+      .interface__step-number-textblock {
+        color: $blue;
+        transition: color 0.7s;
+        h4 {
+          color: $blue;
+        }
+      }
+      .interface__step-caption {
+        color: $blue;
+      }
+
+      .interface__step-number-caption {
+        color: $white;
+      }
+    }
+  }
+
+  &__methods {
+    padding-top: 60px;
+    @include tablet {
+      padding-top: 100px;
+    }
+  }
+
+  &__promophone {
+    padding-bottom: 80px;
+    @include tablet {
+      padding-bottom: 150px;
+    }
+  }
+
+  @keyframes flash {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}

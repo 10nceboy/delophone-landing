@@ -19,15 +19,15 @@
     &_active {
       opacity: 1;
       overflow: visible;
-      max-height: 3000px;
+      max-height: 4400px;
       display: block;
       transition: max-height linear 1s, opacity linear 0.5s;
       @include tablet {
         transition: $collapse-transition-height-reverse;
-        max-height: 1800px;
+        max-height: 3000px;
       }
       @include laptop {
-        max-height: 1300px;
+        max-height: 2400px;
       }
     }
   }

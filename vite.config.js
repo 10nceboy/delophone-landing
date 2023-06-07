@@ -39,7 +39,9 @@ export default defineConfig({
         crm: resolve(__dirname, 'pages/business/crm.html'),
         pcprogramm: resolve(__dirname, 'pages/using-methods/pc-programm.html'),
         smartphone: resolve(__dirname, 'pages/using-methods/smartphone.html'),
-        iptel: resolve(__dirname, 'pages/using-methods/ip-telephone.html')
+        iptel: resolve(__dirname, 'pages/using-methods/ip-telephone.html'),
+        ipdelofon: resolve(__dirname, 'pages/using-methods/ip-delofon.html'),
+        sim: resolve(__dirname, 'pages/using-methods/sim-fmc.html')
       }
     }
   }
