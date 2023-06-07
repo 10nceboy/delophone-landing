@@ -451,6 +451,42 @@
     }
   }
 
+  &__interface-step_active {
+    svg {
+      path {
+        stroke: $white;
+      }
+    }
+
+    .interface__step-number {
+      background-color: $blue;
+    }
+
+    .interface__step-number-header {
+      color: $white;
+      transition: color 0.7s;
+      h3 {
+        color: $white;
+        transition: color 0.5s;
+      }
+    }
+
+    .interface__step-number-textblock {
+      color: $blue;
+      transition: color 0.7s;
+      h4 {
+        color: $blue;
+      }
+    }
+    .interface__step-caption {
+      color: $blue;
+    }
+
+    .interface__step-number-caption {
+      color: $white;
+    }
+  }
+
   &__methods {
     padding-top: 60px;
     @include tablet {

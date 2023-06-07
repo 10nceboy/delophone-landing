@@ -18,6 +18,10 @@ steps.forEach((step) => {
   step.addEventListener('mouseenter', (event) => {
     let stepId = event.currentTarget.dataset.step;
 
+    steps.forEach((step) =>
+      step.classList.remove('ip-delofon__interface-step_active')
+    );
+
     images.forEach((image) => {
       image.classList.remove('ip-delofon__interface-image_active');
     });

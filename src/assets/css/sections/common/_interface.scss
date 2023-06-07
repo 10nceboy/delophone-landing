@@ -40,6 +40,24 @@
     }
   }
 
+  &__header_mobile {
+    display: block;
+    margin: 0 0 $spacer * 4 0;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__header_tablet {
+    display: none;
+
+    @include tablet {
+      display: block;
+      margin-bottom: 55px;
+    }
+  }
+
   &__content {
     @include tablet {
       display: flex;
@@ -221,6 +239,7 @@
 
     @include tablet {
       max-width: 426px;
+      margin-bottom: 0px;
     }
 
     @include tablet-1024 {
