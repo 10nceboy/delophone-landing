@@ -373,25 +373,11 @@
     @include font($normal, 16px, $gray2);
   }
 
-  &__plus_mobile {
-    @include flex-row;
-    justify-content: center;
-    padding: $spacer * 3 0;
-    width: 100%;
-    min-height: 26px;
+  &__plus_big {
     background-color: $white;
 
     @include tablet {
       background-color: $light-gray;
-    }
-
-    @include laptop {
-      svg {
-        min-width: 15px;
-        max-width: 15px;
-        min-height: 34px;
-        max-width: 34px;
-      }
     }
   }
 

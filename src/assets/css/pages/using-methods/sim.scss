@@ -1,0 +1,213 @@
+@import '../../utils/index';
+
+.sim {
+  &__hero {
+    @include tablet {
+      margin-bottom: $spacer * 10;
+    }
+  }
+
+  &__hero-imageblock {
+    img {
+      max-width: 237px;
+      max-height: 237px;
+    }
+
+    @include tablet {
+      margin-top: 40px;
+      margin-left: 25px;
+
+      img {
+        max-width: 294px;
+        max-height: 294px;
+        width: 294px;
+        height: 294px;
+      }
+    }
+
+    @include tablet-1024 {
+      margin-top: 20px;
+
+      img {
+        max-width: 334px;
+        max-height: 334px;
+        width: 334px;
+        height: 334px;
+      }
+    }
+
+    @include laptop {
+      max-width: 485px;
+      max-height: 485px;
+      margin-left: $spacer * 9;
+      width: 485px;
+      height: 485px;
+      margin: -74px 60px 0px;
+
+      img {
+        max-width: 485px;
+        max-height: 485px;
+        width: 485px;
+        height: 485px;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    line-height: 150%;
+    font-size: 14px;
+
+    @include smartphone {
+      font-size: 16px;
+      line-height: 155%;
+    }
+
+    @include tablet {
+      margin-top: $spacer;
+    }
+  }
+
+  &__card {
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    @include tablet {
+      max-height: 210px;
+    }
+
+    @include laptop {
+      max-height: 228px;
+    }
+  }
+
+  &__promophone {
+    padding-top: $spacer * 7;
+
+    @include tablet {
+      padding-top: $spacer * 10;
+    }
+  }
+
+  &__minutes-container {
+    @include laptop {
+      max-height: 638px;
+    }
+  }
+
+  &__plus_big {
+    background-color: $light-gray;
+
+    @include tablet {
+      background-color: $white;
+    }
+  }
+
+  &__minutes-card {
+    background-color: $white;
+
+    @include tablet {
+      background-color: $light-gray;
+    }
+  }
+
+  &__fmcblock {
+    padding: $spacer * 4;
+
+    .fmc-packages {
+      margin-top: $spacer * 3;
+    }
+
+    @include tablet {
+      background-color: $light-gray;
+      max-width: 567px;
+
+      .fmc-packages {
+        background-color: $white;
+        max-width: 527px;
+        min-width: 527px;
+        width: 527px;
+        margin-top: $spacer * 4;
+      }
+
+      .fmc-packages__header {
+        font-size: 16px;
+        margin-right: $spacer * 3;
+      }
+
+      .fmc-packages__giga {
+        font-size: 14px;
+      }
+
+      .fmc-packages__price {
+        font-size: 14px;
+      }
+    }
+
+    @include laptop {
+      background-color: $light-gray;
+      max-width: 710px;
+
+      .fmc-packages {
+        max-width: 650px;
+        min-width: 650px;
+        width: 650px;
+      }
+
+      .fmc-packages__header {
+        font-size: 18px;
+        margin-right: $spacer * 5;
+      }
+
+      .fmc-packages__giga {
+        font-size: 18px;
+      }
+
+      .fmc-packages__price {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__fmc-caption {
+    @include font($normal, 16px, $gray2);
+    margin-bottom: $spacer * 2;
+    line-height: 155%;
+
+    @include mobile-380 {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+
+  &__fmc-caption_small {
+    font-size: 14px;
+    margin-bottom: 0px;
+    line-height: 155%;
+    color: $gray;
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+
+  &__fmc-accent {
+    @include font($medium, 18px, $black);
+    line-height: 130%;
+
+    @include mobile-380 {
+      margin-right: 3px;
+    }
+
+    @include laptop {
+      font-size: 20px;
+    }
+  }
+
+  &__methods {
+    padding-top: 15px;
+    @include tablet {
+      padding-top: 25px;
+    }
+  }
+}

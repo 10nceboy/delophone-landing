@@ -1,0 +1,674 @@
+.device {
+  background-color: $white;
+  padding-bottom: 80px;
+
+  @include tablet {
+    padding-bottom: 150px;
+  }
+
+  &__name {
+    order: -1;
+
+    h4 {
+      font-size: 12px;
+    }
+
+    @include mobile-520 {
+      h4 {
+        font-size: 18px;
+      }
+    }
+
+    @include tablet {
+      h4 {
+        font-size: 14px;
+      }
+    }
+
+    @include laptop {
+      order: initial;
+      margin-top: -30px;
+
+      h4 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__circle {
+    border-radius: 50%;
+    @include flex-col;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    flex: 1 1;
+    position: relative;
+  }
+
+  &__circle_dashed {
+    border: 2px dashed #e9ebed;
+  }
+
+  &__circle_out {
+    padding: 10px;
+
+    @include tablet {
+      z-index: 1;
+    }
+
+    @include laptop {
+      padding: 26px;
+      max-width: 593px;
+      max-height: 593px;
+    }
+  }
+
+  &__circle_in {
+    padding: 10px;
+    @include laptop {
+      padding: 27px;
+      max-width: 540px;
+      max-height: 540px;
+    }
+  }
+
+  &__circle_inner {
+    background-color: $light-gray;
+    padding: 25px 25px 0px 25px;
+    min-width: 182px;
+    min-height: 182px;
+
+    @include laptop {
+      min-height: 488px;
+      min-width: 488px;
+      max-width: 488px;
+      max-height: 488px;
+      padding: 25px;
+    }
+  }
+
+  &__image {
+    display: none;
+    max-width: 182px;
+    max-height: 182px;
+
+    @include mobile-520 {
+      max-width: 100%;
+      max-height: 95%;
+    }
+
+    @include tablet {
+      max-width: 328px;
+      max-height: 328px;
+    }
+
+    @include tablet {
+      max-width: 360px;
+      max-height: 360px;
+    }
+
+    @include laptop {
+      max-width: 438px;
+      max-height: 438px;
+    }
+
+    &_active {
+      display: block;
+    }
+  }
+
+  &__pointer-circle {
+    border: 5px solid $gray2;
+    margin-top: 4px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    transition: border-color 0.7s;
+
+    @include tablet {
+      border-width: 6px;
+      margin-top: 0px;
+    }
+
+    @include laptop {
+      width: 30px;
+      height: 30px;
+      border-width: 9px;
+    }
+  }
+
+  &__pointers {
+    margin-top: $spacer * 3;
+
+    @include mobile-520 {
+      align-self: start;
+    }
+
+    @include tablet {
+      margin-left: -126px;
+      position: relative;
+      z-index: 2;
+    }
+
+    @include tablet-1024 {
+      align-items: center;
+      margin-left: -128px;
+    }
+
+    @include laptop {
+      margin-left: -220px;
+      margin-top: 0px;
+    }
+  }
+
+  &__pointer {
+    display: flex;
+    margin-bottom: $spacer * 2;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    @include mobile-520 {
+      align-items: center;
+    }
+
+    @include tablet {
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    @include tablet-1024 {
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    @include laptop {
+      margin-bottom: 35px;
+    }
+
+    @include desktop {
+      margin-bottom: 45px;
+    }
+
+    &_active {
+      .device__pointer-circle,
+      .device__pointer-divider {
+        border-color: $blue;
+      }
+
+      .device__pointer-caption {
+        color: $black;
+      }
+    }
+  }
+
+  &__pointer_second {
+    @include tablet {
+      margin-left: 65px;
+    }
+    @include laptop {
+      margin-left: 125px;
+    }
+  }
+
+  &__pointer_third {
+    @include tablet {
+      margin-left: 105px;
+    }
+
+    @include laptop {
+      margin-left: 185px;
+      min-height: 62px;
+    }
+  }
+
+  &__pointer_forth {
+    @include tablet {
+      margin-left: 118px;
+    }
+
+    @include laptop {
+      margin-left: 205px;
+      min-height: 62px;
+    }
+  }
+
+  &__pointer_fifth {
+    @include tablet {
+      margin-left: 110px;
+    }
+
+    @include laptop {
+      margin-left: 190px;
+    }
+  }
+
+  &__pointer_six {
+    @include tablet {
+      margin-left: 80px;
+    }
+
+    @include laptop {
+      margin-left: 142px;
+      min-height: 62px;
+    }
+  }
+
+  &__pointer_seven {
+    @include laptop {
+      margin-left: 0px;
+    }
+  }
+
+  &__pointer-caption {
+    line-height: 155%;
+    margin-left: $spacer * 2;
+    transition: color 0.3s;
+
+    @include mobile-520 {
+      font-size: 16px;
+    }
+
+    @include smartphone {
+      font-size: 18px;
+    }
+
+    @include tablet {
+      align-self: flex-start;
+      font-size: 17px;
+    }
+
+    @include tablet-1024 {
+      font-size: 18px;
+    }
+
+    @include laptop {
+      margin-left: $spacer * 4;
+      font-size: 20px;
+    }
+  }
+
+  &__pointer-divider {
+    border: 1px dashed $gray2;
+    display: none;
+    transition: border-color 0.7s;
+
+    @include tablet {
+      display: block;
+      min-width: 90px;
+    }
+
+    @include laptop {
+      min-width: 111px;
+    }
+  }
+
+  &__dot {
+    border-radius: 50%;
+    border: 2px solid $orange;
+    position: absolute;
+    @include flex-col;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-property: transform;
+    transform: scale(0.5);
+
+    &::after {
+      width: 4px;
+      height: 4px;
+      content: '';
+      display: block;
+      border-radius: 50%;
+      border: 1px solid $orange;
+      background-color: $orange;
+    }
+
+    @include laptop {
+      &::after {
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    &_active {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &__dot_big {
+    min-width: 42px;
+    min-height: 42px;
+
+    @include mobile-520 {
+      min-width: 75px;
+      min-height: 75px;
+    }
+    @include smartphone {
+      min-width: 100px;
+      min-height: 100px;
+    }
+
+    @include tablet {
+      min-width: 75px;
+      min-height: 75px;
+    }
+
+    @include laptop {
+      min-width: 100px;
+      min-height: 100px;
+    }
+  }
+
+  &__dot_small {
+    min-width: 17px;
+    min-height: 17px;
+
+    &::after {
+      width: 3px;
+      height: 3px;
+    }
+
+    @include mobile-520 {
+      min-width: 25px;
+      min-height: 25px;
+    }
+    @include smartphone {
+      min-width: 40px;
+      min-height: 40px;
+    }
+
+    @include tablet {
+      min-width: 25px;
+      min-height: 25px;
+    }
+
+    @include laptop {
+      min-width: 40px;
+      min-height: 40px;
+
+      &::after {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+
+  &__dot_first {
+    top: 51%;
+    left: 42%;
+
+    @include mobile-520 {
+      top: 50%;
+      left: 43%;
+    }
+
+    @include smartphone {
+      top: 48%;
+      left: 43%;
+    }
+
+    @include tablet {
+      top: 49%;
+    }
+
+    @include laptop {
+      top: 43%;
+      left: 42%;
+    }
+  }
+
+  &__dot_second {
+    top: 48%;
+    left: 56%;
+
+    @include mobile-520 {
+      top: 43%;
+      left: 58%;
+    }
+
+    @include smartphone {
+      top: 41.2%;
+      left: 57.5%;
+    }
+
+    @include tablet {
+      top: 43.5%;
+      left: 57.5%;
+    }
+
+    @include laptop {
+      top: 37%;
+      left: 57%;
+    }
+  }
+
+  &__dot_third {
+    top: 64%;
+    left: 60%;
+
+    @include mobile-520 {
+      top: 61%;
+      left: 63%;
+    }
+
+    @include smartphone {
+      top: 59.5%;
+      left: 62.5%;
+    }
+
+    @include tablet {
+      top: 61.5%;
+      left: 62.5%;
+    }
+
+    @include laptop {
+      top: 55%;
+      left: 62%;
+    }
+  }
+
+  &__dot_forth {
+    top: 65%;
+    left: 35%;
+
+    @include mobile-520 {
+      top: 63%;
+      left: 35%;
+    }
+
+    @include smartphone {
+      top: 62.5%;
+      left: 34.5%;
+    }
+
+    @include tablet {
+      top: 63.5%;
+    }
+
+    @include laptop {
+      top: 56.5%;
+      left: 33%;
+    }
+  }
+
+  &__dot_fifth {
+    top: 34%;
+    left: 48%;
+
+    @include mobile-520 {
+      top: 27%;
+      left: 50%;
+    }
+
+    @include smartphone {
+      top: 25%;
+    }
+
+    @include tablet {
+      top: 28%;
+    }
+
+    @include laptop {
+      top: 20%;
+      left: 48%;
+    }
+  }
+
+  &__dot_six {
+    top: 71%;
+    left: 64%;
+
+    @include mobile-520 {
+      top: 70%;
+      left: 68%;
+    }
+
+    @include smartphone {
+      top: 68.5%;
+    }
+
+    @include tablet {
+      top: 70%;
+      left: 67.5%;
+    }
+
+    @include laptop {
+      top: 64%;
+      left: 67%;
+    }
+  }
+
+  &__dot_seven {
+    top: 60%;
+    left: 34.5%;
+
+    @include mobile-520 {
+      top: 57%;
+      left: 34.5%;
+    }
+
+    @include smartphone {
+      top: 57%;
+      left: 33.5%;
+    }
+
+    @include tablet {
+      top: 58%;
+    }
+
+    @include laptop {
+      top: 51%;
+      left: 32.5%;
+    }
+  }
+
+  &__characteristics {
+    margin-top: $spacer * 7;
+    @include tablet {
+      margin-top: $spacer * 6;
+    }
+  }
+
+  &__collapse-activator {
+    h4 {
+      color: $blue;
+      margin-right: $spacer;
+    }
+
+    @include smartphone {
+      margin-right: $spacer * 2;
+    }
+
+    @include laptop {
+      max-width: 319px;
+    }
+  }
+
+  &__cards {
+    padding: $spacer * 7 0 0;
+
+    @include tablet {
+      padding: $spacer * 10 0 0;
+    }
+  }
+
+  &__cards_bottom {
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__cards_left {
+    @include tablet {
+      margin-right: $spacer * 4;
+    }
+
+    @include laptop {
+      margin-right: $spacer * 6;
+    }
+  }
+
+  &__card {
+    padding: $spacer * 4;
+    margin-bottom: $spacer * 6;
+    @include tablet {
+      padding: $spacer * 10;
+      margin-bottom: $spacer * 6;
+    }
+  }
+
+  &__card_no-margin {
+    margin-bottom: 0px;
+  }
+
+  &__card-content_big {
+    @include tablet {
+      @include flex-row;
+    }
+  }
+
+  &__list {
+    margin-top: $spacer * 3;
+
+    @include tablet {
+      margin-top: $spacer * 4;
+    }
+  }
+
+  &__list_big {
+    @include tablet {
+      margin-right: $spacer * 6;
+    }
+
+    @include laptop {
+      margin-right: $spacer * 6;
+    }
+  }
+
+  &__list-item {
+    @include font($normal, 15px, $gray);
+    margin: 0 0 $spacer;
+    align-items: start;
+
+    @include smartphone {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      font-size: 15px;
+      margin: 0 0 $spacer * 2;
+    }
+
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+}
