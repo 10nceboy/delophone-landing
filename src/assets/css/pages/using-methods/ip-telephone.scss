@@ -56,7 +56,7 @@
     @include laptop {
       max-width: 490px;
       max-height: 344px;
-      margin-left: $spacer * 12;
+      margin-left: $spacer * 16;
       width: 490px;
       height: 344px;
       margin-top: -12px;
@@ -106,6 +106,7 @@
 
     @include laptop {
       margin-left: 0px;
+      white-space: nowrap;
     }
   }
 
