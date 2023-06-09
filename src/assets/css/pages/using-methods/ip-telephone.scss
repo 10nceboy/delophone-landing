@@ -67,8 +67,13 @@
       display: inline;
     }
 
+    @include mobile-414 {
+      margin-left: -5px;
+    }
+
     @include tablet {
       display: none;
+      margin-left: 0px;
     }
 
     @include tablet-980 {
