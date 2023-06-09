@@ -697,6 +697,10 @@
       padding: $spacer * 10;
       margin-bottom: $spacer * 6;
     }
+
+    @include laptop {
+      min-width: 540px;
+    }
   }
 
   &__card_no-margin {
@@ -705,25 +709,35 @@
 
   &__card-content_big {
     @include tablet {
-      @include flex-row;
+      display: flex;
     }
   }
 
-  &__list {
-    margin-top: $spacer * 3;
+  &__card-header {
+    margin-bottom: $spacer * 3;
 
     @include tablet {
-      margin-top: $spacer * 4;
+      margin-bottom: $spacer * 4;
     }
   }
 
   &__list_big {
+    box-sizing: border-box;
+
     @include tablet {
-      margin-right: $spacer * 6;
+      min-width: 50%;
+      &:first-child {
+        margin-right: 20px;
+      }
     }
 
     @include laptop {
-      margin-right: $spacer * 6;
+      &:first-child {
+        margin-right: 30px;
+      }
+
+      min-width: 490px;
+      max-width: 490px;
     }
   }
 
@@ -739,13 +753,15 @@
     @include tablet {
       font-size: 15px;
       margin: 0 0 $spacer * 2;
+      line-height: 155%;
     }
 
     @include laptop {
       font-size: 16px;
+      max-width: 460px;
 
       &:before {
-        margin-right: $spacer * 3;
+        margin-right: 13px;
       }
     }
   }

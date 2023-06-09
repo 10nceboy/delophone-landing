@@ -60,6 +60,16 @@
     }
   }
 
+  &__focus_short {
+    @include tablet {
+      padding-top: 80px;
+    }
+
+    @include laptop {
+      padding-top: 150px;
+    }
+  }
+
   &__focus-listblock {
     @include tablet {
       padding: 50px 25px;
