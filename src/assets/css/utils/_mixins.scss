@@ -40,6 +40,12 @@ $family: 'Manrope';
   }
 }
 
+@mixin laptop-1194 {
+  @media screen and (min-width: 1194px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
 @mixin laptop {
   @media screen and (min-width: 1200px) {
     @content;
