@@ -89,6 +89,18 @@
 
     @include laptop {
       max-height: 228px;
+      min-height: 228px;
+
+      &:nth-child(3) {
+        max-height: 228px;
+      }
+    }
+  }
+
+  &__card-header {
+    @include laptop {
+      margin-bottom: 10px;
+      margin-top: $spacer * 3;
     }
   }
 
