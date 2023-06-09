@@ -54,10 +54,10 @@
     }
 
     @include laptop {
-      max-width: 510px;
+      max-width: 500px;
       max-height: 344px;
-      margin-left: $spacer * 10;
-      width: 510px;
+      margin-left: $spacer * 12;
+      width: 500px;
       height: 344px;
       margin-top: -12px;
 
