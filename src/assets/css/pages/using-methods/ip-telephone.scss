@@ -12,18 +12,30 @@
       max-width: 272px;
       max-height: 147px;
     }
+
     @include tablet {
       margin-top: 135px;
       margin-left: 5px;
       width: 324px;
       height: 205px;
+      max-width: 324px;
+      max-height: 205px;
+      margin-left: 15px;
 
       img {
         width: 324px;
         height: 205px;
-        max-width: 394px;
+        max-width: 324px;
         max-height: 205px;
       }
+    }
+
+    @include tablet-980 {
+      margin-top: 120px;
+      width: 266px;
+      height: 285px;
+      max-width: 285px;
+      max-height: 285px;
     }
 
     @include tablet-1024 {
@@ -44,7 +56,7 @@
     @include laptop {
       max-width: 510px;
       max-height: 344px;
-      margin-left: $spacer * 9;
+      margin-left: $spacer * 10;
       width: 510px;
       height: 344px;
       margin-top: -12px;
