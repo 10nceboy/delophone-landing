@@ -8,17 +8,32 @@
   }
 
   &__hero-imageblock {
+    img {
+      max-width: 272px;
+      max-height: 147px;
+    }
     @include tablet {
-      margin-top: 75px;
+      margin-top: 135px;
       margin-left: 5px;
+
+      img {
+        width: 324px;
+        height: 205px;
+        max-width: 394px;
+        max-height: 205px;
+      }
     }
 
     @include tablet-1024 {
       margin-top: 70px;
+      max-width: 405px;
+      max-height: 305px;
 
       img {
-        width: 394px;
-        height: 320px;
+        width: 405px;
+        height: 285px;
+        max-width: 405px;
+        max-height: 285px;
       }
     }
 
@@ -41,7 +56,7 @@
 
   &__accent {
     display: none;
-    padding: 0 6px 5px 6px;
+    padding: 0 6px 5px;
     margin-left: 0px;
 
     @include tablet {
@@ -58,6 +73,11 @@
 
     @include tablet-980 {
       display: inline;
+      margin-left: -5px;
+    }
+
+    @include laptop {
+      margin-left: 0px;
     }
   }
 
@@ -88,6 +108,10 @@
 
     @include tablet {
       margin-bottom: $spacer * 11;
+
+      h2 {
+        font-size: 26px;
+      }
     }
   }
 
@@ -127,6 +151,12 @@
     }
   }
 
+  &__card_short {
+    @include tablet {
+      padding-bottom: 30px;
+    }
+  }
+
   &__brands {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -141,10 +171,12 @@
       grid-template-rows: repeat(2, 1fr);
       grid-row-gap: 20px;
       grid-column-gap: 42px;
+      margin-top: $spacer * 6;
 
       @include tablet {
         margin-left: 30px;
         padding: 0px;
+        margin-top: 0px;
       }
     }
   }
@@ -182,5 +214,25 @@
   &__link {
     margin-top: $spacer * 3;
     display: block;
+  }
+
+  &__interface {
+    @include tablet-1024 {
+      padding-bottom: 100px;
+    }
+
+    @include laptop {
+      padding-bottom: 150px;
+    }
+  }
+
+  &__methods {
+    @include tablet-1024 {
+      padding-top: 100px;
+    }
+
+    @include laptop {
+      padding-bottom: 150px;
+    }
   }
 }

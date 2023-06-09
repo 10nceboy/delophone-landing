@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (inputValue > 0) {
       const formattedPrice = formatNumber(price * inputValue);
       const formattedmonthlyPrice = formatNumber(monthlyPrice * inputValue);
-      priceEl.textContent = `${formattedPrice}₽ разово${
+      priceEl.textContent = `${formattedPrice} ₽ разово${
         monthlyPriceEL ? ',' : ''
       }`;
       priceParenEl.classList.remove('calculator__price_disabled');

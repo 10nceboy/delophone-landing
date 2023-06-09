@@ -1,6 +1,11 @@
 .methods {
   padding: 80px 0 80px;
   background-color: $light-gray;
+
+  @include smartphone {
+    padding-top: 100px;
+  }
+
   @include tablet {
     padding: 150px 0 150px;
   }

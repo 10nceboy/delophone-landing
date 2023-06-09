@@ -31,6 +31,8 @@
     @include laptop {
       margin-left: 28px;
       margin-top: -74px;
+      max-width: 485px;
+      max-height: 485px;
       img {
         max-width: 485px;
         max-height: 485px;
@@ -73,7 +75,7 @@
   }
 
   &__focus-wrapper {
-    @include smartphone {
+    @include mobile-520 {
       align-items: start;
     }
   }
@@ -238,7 +240,7 @@
 
   &__focus-card-textblock_wrap {
     @include tablet {
-      white-space: wrap;
+      white-space: normal;
     }
   }
 
@@ -256,9 +258,9 @@
   &__focus-image {
     max-width: 221px;
     @include mobile-390 {
-      min-width: 70%;
-      max-width: 60%;
-      min-height: 60%;
+      min-width: 50%;
+      max-width: 50%;
+      min-height: 50%;
       height: 50%;
     }
 
@@ -394,6 +396,12 @@
     @include tablet {
       margin-bottom: $spacer * 7;
     }
+
+    @include laptop {
+      h2 {
+        font-size: 26px;
+      }
+    }
   }
 
   &__interface-step {
@@ -489,6 +497,11 @@
 
   &__methods {
     padding-top: 60px;
+
+    @include smartphone {
+      padding-top: 100px;
+    }
+
     @include tablet {
       padding-top: 100px;
     }
@@ -498,6 +511,12 @@
     padding-bottom: 80px;
     @include tablet {
       padding-bottom: 150px;
+    }
+  }
+
+  &__cases {
+    @include tablet-1024 {
+      padding-top: 150px;
     }
   }
 

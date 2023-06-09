@@ -12,8 +12,8 @@
 
   &_with-padding {
     padding: $spacer * 14 0;
-    @include laptop {
-      padding: 150px;
+    @include tablet {
+      padding: 150px 0;
     }
   }
 

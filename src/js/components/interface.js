@@ -3,15 +3,24 @@ import { getDeviceType } from '../utils/dom';
 const steps = document.querySelectorAll('.ip-delofon__interface-step');
 const images = document.querySelectorAll('.ip-delofon__interface-image');
 let deviceType = getDeviceType();
+const step1 = document.querySelector(
+  `.ip-delofon__interface-image[data-step="1"]`
+);
+
+const step4 = document.querySelector(
+  `.ip-delofon__interface-image[data-step="4"]`
+);
+
+const card = document.querySelector(`.ipnterfac__card`);
 
 if (['tablet', 'laptop'].includes(deviceType)) {
-  document
-    .querySelector(`.ip-delofon__interface-image[data-step="1"]`)
-    .classList.add('ip-delofon__interface-image_active');
+  if (step1) {
+    document
+      .querySelector(`.ip-delofon__interface-image[data-step="1"]`)
+      .classList.add('ip-delofon__interface-image_active');
+  }
 } else {
-  document
-    .querySelector(`.ip-delofon__interface-image[data-step="4"]`)
-    .classList.add('ip-delofon__interface-image_active');
+  step4?.classList.add('ip-delofon__interface-image_active');
 }
 
 steps.forEach((step) => {
@@ -37,9 +46,8 @@ steps.forEach((step) => {
   });
 });
 
-document
-  .querySelector('.interface__card')
-  .addEventListener('mouseleave', () => {
+if (card) {
+  card.addEventListener('mouseleave', () => {
     images.forEach((image) =>
       image.classList.remove('ip-delofon__interface-image_active')
     );
@@ -47,3 +55,4 @@ document
       .querySelector(`.ip-delofon__interface-image[data-step="1"`)
       .classList.add('ip-delofon__interface-image_active');
   });
+}
