@@ -315,58 +315,74 @@
     border-radius: 50%;
     border: 2px solid $orange;
     position: absolute;
-    @include flex-col;
-    align-items: center;
+    @include flex-row;
     justify-content: center;
+    box-sizing: border-box;
+    transition: transform 0.5s, opacity 0.6s;
+    transform: scale(0);
     opacity: 0;
-    transition-duration: 0.5s;
-    transition-property: transform;
-    transform: scale(0.5);
 
-    &::after {
+    &::before {
       width: 4px;
       height: 4px;
       content: '';
-      display: block;
       border-radius: 50%;
-      border: 1px solid $orange;
+      box-sizing: border-box;
       background-color: $orange;
+      flex-shrink: 0;
     }
 
-    @include laptop {
-      &::after {
+    @include mobile-620 {
+      &::before {
         width: 8px;
         height: 8px;
       }
     }
 
     &_active {
-      opacity: 1;
       transform: scale(1);
+      opacity: 1;
     }
   }
 
   &__dot_big {
     min-width: 42px;
     min-height: 42px;
+    max-width: 42px;
+    max-height: 42px;
 
     @include mobile-520 {
       min-width: 75px;
       min-height: 75px;
+      max-width: 75px;
+      max-height: 75px;
     }
     @include smartphone {
+      min-width: 80px;
+      min-height: 80px;
+      max-width: 80px;
+      max-height: 80px;
+    }
+
+    @include tablet-720 {
       min-width: 100px;
       min-height: 100px;
+      max-width: 100px;
+      max-height: 100px;
     }
 
     @include tablet {
-      min-width: 75px;
-      min-height: 75px;
+      min-width: 90px;
+      min-height: 90px;
+      max-width: 90px;
+      max-height: 90px;
     }
 
     @include laptop {
       min-width: 100px;
       min-height: 100px;
+      max-width: 100px;
+      max-height: 100px;
     }
   }
 
@@ -374,7 +390,7 @@
     min-width: 17px;
     min-height: 17px;
 
-    &::after {
+    &::before {
       width: 3px;
       height: 3px;
     }
@@ -382,25 +398,28 @@
     @include mobile-520 {
       min-width: 25px;
       min-height: 25px;
+      max-width: 25px;
+      max-height: 25px;
     }
     @include smartphone {
-      min-width: 40px;
-      min-height: 40px;
+      min-width: 50px;
+      min-height: 50px;
+      max-width: 50px;
+      max-height: 50px;
     }
 
     @include tablet {
       min-width: 25px;
       min-height: 25px;
+      max-width: 25px;
+      max-height: 25px;
     }
 
     @include laptop {
       min-width: 40px;
       min-height: 40px;
-
-      &::after {
-        width: 8px;
-        height: 8px;
-      }
+      max-width: 40px;
+      max-height: 40px;
     }
   }
 
@@ -413,17 +432,25 @@
       left: 43%;
     }
 
-    @include smartphone {
-      top: 48%;
-      left: 43%;
+    @include mobile-620 {
+      left: 45%;
     }
 
-    @include tablet {
+    @include smartphone {
+      top: 50%;
+    }
+
+    @include tablet-720 {
       top: 49%;
     }
 
+    @include tablet {
+      top: 46%;
+      left: 41%;
+    }
+
     @include laptop {
-      top: 43%;
+      top: 43.5%;
       left: 42%;
     }
   }
@@ -437,19 +464,27 @@
       left: 58%;
     }
 
+    @include mobile-620 {
+      left: 59%;
+    }
+
     @include smartphone {
-      top: 41.2%;
-      left: 57.5%;
+      top: 40.8%;
+      left: 57%;
+    }
+
+    @include tablet-720 {
+      left: 57.8%;
     }
 
     @include tablet {
-      top: 43.5%;
-      left: 57.5%;
+      top: 43%;
+      left: 58%;
     }
 
     @include laptop {
-      top: 37%;
-      left: 57%;
+      top: 38.5%;
+      left: 57.1%;
     }
   }
 
@@ -462,18 +497,25 @@
       left: 63%;
     }
 
+    @include mobile-620 {
+      left: 64%;
+    }
+
     @include smartphone {
-      top: 59.5%;
-      left: 62.5%;
+      top: 59%;
+      left: 62%;
+    }
+
+    @include tablet-720 {
+      left: 63%;
     }
 
     @include tablet {
-      top: 61.5%;
-      left: 62.5%;
+      top: 61%;
     }
 
     @include laptop {
-      top: 55%;
+      top: 56.5%;
       left: 62%;
     }
   }
@@ -489,11 +531,12 @@
 
     @include smartphone {
       top: 62.5%;
-      left: 34.5%;
+      left: 36.5%;
     }
 
     @include tablet {
-      top: 63.5%;
+      top: 60.5%;
+      left: 32%;
     }
 
     @include laptop {
@@ -511,16 +554,26 @@
       left: 50%;
     }
 
+    @include mobile-620 {
+      left: 51%;
+    }
+
     @include smartphone {
+      top: 28%;
+      left: 52%;
+    }
+
+    @include tablet-720 {
       top: 25%;
+      left: 51%;
     }
 
     @include tablet {
-      top: 28%;
+      left: 47%;
     }
 
     @include laptop {
-      top: 20%;
+      top: 22%;
       left: 48%;
     }
   }
@@ -534,18 +587,27 @@
       left: 68%;
     }
 
+    @include mobile-520 {
+      left: 69%;
+    }
+
     @include smartphone {
-      top: 68.5%;
+      top: 68%;
+      left: 67%;
+    }
+
+    @include tablet-720 {
+      top: 68%;
+      left: 68%;
     }
 
     @include tablet {
-      top: 70%;
-      left: 67.5%;
+      top: 69.5%;
     }
 
     @include laptop {
-      top: 64%;
-      left: 67%;
+      top: 64.8%;
+      left: 67.5%;
     }
   }
 
@@ -558,17 +620,26 @@
       left: 34.5%;
     }
 
-    @include smartphone {
-      top: 57%;
-      left: 33.5%;
+    @include mobile-620 {
+      left: 36%;
     }
 
-    @include tablet {
+    @include smartphone {
       top: 58%;
     }
 
+    @include tablet-720 {
+      top: 58%;
+      left: 35%;
+    }
+
+    @include tablet {
+      top: 55%;
+      left: 32.7%;
+    }
+
     @include laptop {
-      top: 51%;
+      top: 52%;
       left: 32.5%;
     }
   }

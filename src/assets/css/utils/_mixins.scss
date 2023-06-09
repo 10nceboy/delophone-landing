@@ -183,6 +183,12 @@ $family: 'Manrope';
   }
 }
 
+@mixin mobile-620 {
+  @media screen and (min-width: 620px) {
+    @content;
+  }
+}
+
 @mixin mobile-660 {
   @media screen and (min-width: 660px) {
     @content;
@@ -200,6 +206,12 @@ $family: 'Manrope';
 /**only for tablets**/
 @mixin tablet-only {
   @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet-720 {
+  @media screen and (min-width: 720px) and (max-width: 960px) {
     @content;
   }
 }
