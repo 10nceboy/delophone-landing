@@ -118,6 +118,12 @@
         font-size: 26px;
       }
     }
+
+    @include laptop {
+      h2 {
+        font-size: 32px;
+      }
+    }
   }
 
   &__cards {
