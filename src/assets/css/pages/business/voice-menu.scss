@@ -1,18 +1,6 @@
 @import '../../utils/index';
 
 .voice-menu {
-  &__breadcrumbs {
-    display: inline-block;
-
-    li {
-      display: inline;
-    }
-
-    @include mobile-s {
-      display: flex;
-    }
-  }
-
   &__accent {
     padding: 3px $spacer * 2;
     margin-left: -$spacer * 2;

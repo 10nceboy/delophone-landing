@@ -172,6 +172,7 @@
 
     @include tablet {
       margin-bottom: 0px;
+      max-width: 410px;
 
       &:first-child,
       &:last-child {
@@ -180,15 +181,24 @@
       }
     }
 
+    @include tablet-1024 {
+      max-width: 100%;
+    }
+
     @include laptop {
       min-width: 540px;
       max-width: 100%;
     }
   }
 
-  &__card_short {
+  &__card_long {
     @include tablet {
       padding-bottom: 30px;
+      max-width: 840px;
+    }
+
+    @include tablet-1024 {
+      max-width: 100%;
     }
   }
 

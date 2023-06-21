@@ -76,9 +76,15 @@
       line-height: 130%;
     }
 
+    @include smartphone {
+      h3 {
+        font-size: 22px;
+      }
+    }
+
     @include tablet {
       margin: 0 0 $spacer * 2 0;
-      align-self: center;
+
       h3,
       h4 {
         max-width: 395px;
@@ -90,13 +96,11 @@
       }
 
       h4 {
-        font-size: 19px;
+        font-size: 18px;
       }
     }
 
     @include laptop {
-      align-self: flex-start;
-
       h3 {
         font-size: 26px;
       }
@@ -104,6 +108,18 @@
       h4 {
         max-width: unset;
       }
+    }
+  }
+
+  &__focus-texblock {
+    @include laptop {
+      margin-right: $spacer * 6;
+    }
+  }
+
+  &__focus-listblock {
+    @include tablet {
+      margin-left: 0px;
     }
   }
 
@@ -135,8 +151,24 @@
   }
 
   &__calculator {
-    @include laptop {
+    @include tablet {
       padding-top: 150px;
     }
+  }
+
+  &__scheme {
+    @include tablet {
+      max-width: 435px;
+      max-height: 208px;
+    }
+
+    @include laptop {
+      max-width: 535px;
+      max-height: 238px;
+    }
+  }
+
+  &__scheme_mobile {
+    margin-top: $spacer * 5;
   }
 }

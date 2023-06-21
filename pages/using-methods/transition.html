@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Делофон - SIM-карта с телефонией</title>
+    <title>Делофон - переход со своим номером</title>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -72,7 +72,7 @@
     />
     <link
       rel="stylesheet"
-      href="../../src/assets/css/pages/using-methods/sim.scss"
+      href="../../src/assets/css/pages/using-methods/forwardings.scss"
     />
     <script src="using-methods.js" type="module"></script>
   </head>
@@ -82,7 +82,7 @@
     <main>
       <div class="container">
         <nav>
-          <ul class="breadcrumbs">
+          <ul class="breadcrumbs breadcrumbs_inline">
             <li>
               <a
                 class="link link_black breadcrumbs__link"
@@ -92,38 +92,32 @@
                 Главная&nbsp;/</a
               >
             </li>
-            <li>SIM-карта с&nbsp;телефонией</li>
+            <li>Переход со&nbsp;своим номером</li>
           </ul>
         </nav>
       </div>
-      <section class="hero scope__hero sim__hero" id="hero">
+      <section class="hero scope__hero transition__hero" id="hero">
         <div class="container">
           <div class="hero__container scope__hero-container">
-            <div class="hero__textblock scope__hero-textblock">
+            <div
+              class="hero__textblock scope__hero-textblock transition__hero-textblock"
+            >
               <h1>
-                SIM-карта(FMC)
+                <strong class="accent_orange">Сохраните ваш номер</strong>
                 <br />
-                <strong class="accent_orange sim__hero-accent">
-                  со&nbsp;встроенной телефонией
-                </strong>
-                <strong class="accent_orange sim__hero-accent-mobile">
-                  со&nbsp;встроенной
-                </strong>
-                <strong class="accent_orange sim__hero-accent-mobile">
-                  телефонией
-                </strong>
+                при&nbsp;подключении к&nbsp;телефонии
               </h1>
               <div class="container_adaptive">
                 <p class="text_regular hero__text">
-                  Используйте SIM-карту Делофон, которая работает в&nbsp;любом
-                  мобильном устройстве и&nbsp;поддерживает все функции
-                  телефонии.
+                  Подключайтесь к телефонии, не меняя привычный
+                  для&nbsp;клиентов номер телефона. Перейти на Делофон можно как
+                  с городским, так&nbsp;и с&nbsp;мобильным номером телефона.
                 </p>
               </div>
-              <div class="hero__imageblock_mobile sim__hero-imageblock">
+              <div class="hero__imageblock_mobile transition__hero-imageblock">
                 <img
-                  alt="Монитор с программой для ПК"
-                  src="/src/assets/images/sections/using-methods/programms/hero/fmc-hero.png"
+                  alt="Свой IP-телефон"
+                  src="/src/assets/images/sections/using-methods/transition/hero/transition-hero.png"
                   class="no-select"
                 />
               </div>
@@ -132,351 +126,266 @@
                   type="button"
                   class="button button__start hero__button_small hero__button button_blue"
                 >
-                  Купить SIM-карту
+                  Начать бесплатно
                 </button>
                 <div class="hero__label text_regular">
                   <span>1 номер, 3 сотрудника, 100 ₽ на балансе</span>
                 </div>
               </div>
             </div>
-            <div class="hero__imageblock sim__hero-imageblock no-select">
+            <div class="hero__imageblock transition__hero-imageblock no-select">
               <img
-                alt="Монитор с программой для ПК"
-                src="/src/assets/images/sections/using-methods/programms/hero/fmc-hero.png"
+                alt="Свой IP-телефон"
+                src="/src/assets/images/sections/using-methods/transition/hero/transition-hero.png"
                 class="no-select"
               />
             </div>
           </div>
         </div>
       </section>
-      <section class="focus sim__focus">
+      <section class="focus">
         <div class="container">
           <div class="focus__wrapper">
-            <div class="focus__textblock programms__focus-textblock">
-              <div
-                class="focus__header focus__header_long programms__focus-header"
-              >
-                <h2>Повысьте мобильность вашего бизнеса</h2>
+            <div class="focus__textblock using-methods__focus-listblock">
+              <div class="focus__header focus__header_long">
+                <h2>Пусть клиенты звонят на&nbsp;привычный им&nbsp;номер</h2>
               </div>
               <div class="focus__caption focus__paragraph">
-                FMC(Fixed Mobile Convergence) — это&nbsp;технология, которая
-                объединяет телефонию, мобильную связь и&nbsp;интернет
-                в&nbsp;единую инфраструктуру.
+                Просто подключите ваш текущий номер телефона к&nbsp;телефонии
+                Делофон в личном кабинете.
               </div>
               <div class="focus__caption">
-                SIM-карта Делофон работает от&nbsp;сотовой связи. Вы&nbsp;можете
-                совершать звонки в&nbsp;любое время и&nbsp;в&nbsp;любом месте,
-                даже если нет интернета. При&nbsp;этом вам будут доступны все
-                функции телефонии.
+                Клиенты будут звонить как и&nbsp;раньше, а&nbsp;вы будете
+                звонить им по&nbsp;выгодным ценам нашей телефонии
+                и&nbsp;использовать все преимущества виртуальной АТС.
               </div>
             </div>
-            <img
-              class="scheme using-methods__scheme"
-              src="../../src/assets/images/sections/using-methods/programms/focus/fmc-sheme.svg"
-              alt="Схема работы Сим-карты FMC"
-            />
-            <img
-              class="scheme_mobile programms__scheme-mobile"
-              src="../../src/assets/images/sections/using-methods/programms/focus/fmc-sheme-mobile.svg"
-              alt="Схема работы Сим-карты FMC"
-            />
+            <div
+              class="card focus__listblock using-methods__focus-listblock forwarding-transition__listblock"
+            >
+              <ul class="list focus__list">
+                <li
+                  class="list-item list-item_checked promophone__caption forwarding-transition__list-item"
+                >
+                  Клиенты не&nbsp;потеряются и&nbsp;дозвонятся до&nbsp;вас
+                </li>
+                <li
+                  class="list-item list-item_checked promophone__caption forwarding-transition__list-item"
+                >
+                  Не придётся приучать их к&nbsp;новому номеру телефона
+                </li>
+                <li
+                  class="list-item list-item_checked promophone__caption forwarding-transition__list-item"
+                >
+                  Звоните выгоднее, чем на&nbsp;другом операторе ВАТС
+                </li>
+                <li
+                  class="list-item list-item_checked promophone__caption forwarding-transition__list-item"
+                >
+                  Больше настроек телефонной сети вашего бизнеса
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="forwarding-transition__scheme-wrapper">
+            <div class="forwarding-transition__schemeblock">
+              <img
+                class="scheme_mobile using-methods__scheme_mobile forwarding-transition__scheme_mobile"
+                src="../../src/assets/images/sections/using-methods/transition/focus/scheme-mobile.svg"
+                alt="Схема переадресации"
+              />
+              <img
+                class="scheme using-methods__scheme forwarding-transition__scheme"
+                src="../../src/assets/images/sections/using-methods/transition/focus/scheme.svg"
+                alt="Схема перехода на свой номер"
+              />
+              <div
+                class="tooltip forwarding-transition__tooltip transition__tooltip"
+                data-tooltip-width-laptop="458px"
+                data-tooltip-width-tablet="458px"
+                data-tooltip-width-smartphone="445px"
+                data-tooltip="Технически ваш текущий номер продолжить работать на&nbsp;том провайдере, у&nbsp;которого вы подключали номер, поэтому мы&nbsp;не&nbsp;сможем инициировать исходящие звонки с&nbsp;него. Вы сможете совершать исходящие с&nbsp;вашего номера Делофон"
+              ></div>
+            </div>
           </div>
         </div>
       </section>
-      <section class="promophone intouch">
+      <section
+        class="interface interface_gray forwarding-transition__interface"
+      >
         <div class="container">
-          <div class="card card_white card_rectangle promophone__content">
-            <div class="promophone__header">
-              <h3>
-                Будьте на&nbsp;связи в&nbsp;офисе, в&nbsp;поездке и&nbsp;дома
-              </h3>
+          <div class="interface__header_mobile">
+            <h2>Простая настройка, понятный интерфейс</h2>
+          </div>
+          <div class="interface__content forwarding__interface-content">
+            <div class="interface__rightside">
+              <img
+                class="interface__image"
+                src="/transition-interface.svg"
+                alt="Простой понятный интерфейс"
+              />
             </div>
-            <div class="promophone__cards sim__cards">
+            <div class="interface__leftside">
               <div
-                class="card card_rectangle card_light-gray promophone__card sim__card"
+                class="interface__header_tablet forwarding-transition__interface-header"
               >
-                <svg
-                  class="promophone__icon"
-                  width="60"
-                  height="60"
-                  viewBox="0 0 60 60"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="27.8513"
-                    cy="32.9255"
-                    r="22.6481"
-                    fill="white"
-                    stroke="#F88C28"
-                  />
-                  <path
-                    d="M50.0739 35.7031C48.222 36.629 47.9441 38.6661 44.9811 35.7031C43.1293 33.8513 42.6663 35.7031 40.3515 35.7031C38.0367 35.7031 37.5737 32.4624 35.2589 32.4624C32.9441 32.4624 32.4811 33.8512 32.9441 35.7031C33.4071 37.555 33.4071 38.9439 32.0183 39.4068C30.6294 39.8698 28.7775 41.7217 29.2405 42.6476C29.7034 43.5735 30.6293 44.9624 32.9441 44.4994C35.2589 44.0365 35.2591 42.6476 37.1109 43.5735C38.9628 44.4994 39.4259 45.8883 42.2035 45.8883C44.4256 45.8883 46.0615 45.271 46.8331 44.9624"
-                    stroke="#F88C28"
-                    stroke-linecap="round"
-                  />
-                  <circle
-                    cx="40.8152"
-                    cy="23.6663"
-                    r="4.12963"
-                    stroke="#F88C28"
-                  />
-                  <path
-                    d="M40.8149 23.6662C35.7223 17.0304 28.5927 3.75879 40.8149 3.75879C52.3889 3.75879 45.9075 17.0304 40.8149 23.6662Z"
-                    fill="white"
-                    stroke="#F88C28"
-                  />
-                  <circle
-                    cx="40.8149"
-                    cy="9.77729"
-                    r="2.27778"
-                    stroke="#F88C28"
-                  />
-                  <rect
-                    x="1.5"
-                    y="41.7588"
-                    width="23.0741"
-                    height="14.7407"
-                    rx="0.5"
-                    fill="white"
-                    stroke="#F88C28"
-                  />
-                  <path
-                    d="M8.9082 37.6294C8.9082 37.3533 9.13206 37.1294 9.4082 37.1294H16.6675C16.9436 37.1294 17.1675 37.3533 17.1675 37.6294V41.6849H8.9082V37.6294Z"
-                    fill="white"
-                    stroke="#F88C28"
-                  />
-                  <path
-                    d="M1.46289 46.3516C5.47524 47.7405 15.7221 49.6849 24.611 46.3516"
-                    stroke="#F88C28"
-                  />
-                  <line
-                    x1="13.1113"
-                    y1="46.8882"
-                    x2="13.1113"
-                    y2="49.5178"
-                    stroke="#F88C28"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-                  <path
-                    d="M25.0749 10.7031C23.5317 11.7834 20.7231 14.4068 23.6861 16.2587C27.3898 18.5735 32.0193 17.1846 31.5564 20.8883C31.1813 23.8888 29.5908 25.3701 27.7695 25.332C27.1005 25.3181 26.3985 25.7254 26.2676 26.3817C25.9181 28.1351 25.1309 30.3216 23.6861 30.6105C21.3712 31.0735 19.0564 31.0735 18.1304 27.3698C17.2045 23.6661 11.6489 25.055 10.723 24.592C9.79709 24.1291 8.4082 22.7402 8.4082 21.8142"
-                    stroke="#F88C28"
-                    stroke-linecap="round"
-                  />
-                </svg>
-                <div class="promophone__card-header sim__card-header">
-                  <h4>Для сотрудников в&nbsp;разъездах</h4>
-                </div>
-                <div class="promophone__caption promophone__paragraph">
-                  Установите Делофон SIM на мобильные устройства сотрудников,
-                  которые часто бывают в командировках.
-                </div>
-                <a href="../price.html" class="link link_blue sim__link">
-                  Посмотреть все цены →.
-                </a>
+                <h2>Простая настройка, понятный интерфейс</h2>
               </div>
-              <div
-                class="card card_rectangle card_light-gray promophone__card sim__card"
-              >
-                <svg
-                  width="60"
-                  height="60"
-                  viewBox="0 0 60 60"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11 50.1176H20.5356V41.7353H26.6037V50.1176H35.7059V6H11V50.1176Z"
-                    fill="white"
-                    stroke="#F88C28"
-                  />
-                  <rect
-                    x="15.9102"
-                    y="10.9116"
-                    width="5.17647"
-                    height="5.17647"
-                    stroke="#F88C28"
-                  />
-                  <rect
-                    x="15.9102"
-                    y="19.7354"
-                    width="5.17647"
-                    height="5.17647"
-                    stroke="#F88C28"
-                  />
-                  <rect
-                    x="15.9102"
-                    y="28.5586"
-                    width="5.17647"
-                    height="5.17647"
-                    stroke="#F88C28"
-                  />
-                  <rect
-                    x="25.6172"
-                    y="10.9116"
-                    width="5.17647"
-                    height="5.17647"
-                    stroke="#F88C28"
-                  />
-                  <rect
-                    x="25.6172"
-                    y="19.7354"
-                    width="5.17647"
-                    height="5.17647"
-                    stroke="#F88C28"
-                  />
-                  <rect
-                    x="25.6172"
-                    y="28.5586"
-                    width="5.17647"
-                    height="5.17647"
-                    stroke="#F88C28"
-                  />
-                  <path
-                    d="M48.4991 42.6177C48.4991 47.8519 43.6982 53.9957 40.7711 56.974C40.4064 57.3451 39.8194 57.3536 39.4461 56.9912C36.5176 54.1477 31.7344 48.1687 31.7344 42.6177C31.7344 35.1177 38.352 34.2354 40.1167 34.2354C41.8814 34.2354 48.4991 35.5589 48.4991 42.6177Z"
-                    fill="white"
-                    stroke="#F88C28"
-                  />
-                  <circle
-                    cx="40.1193"
-                    cy="42.1764"
-                    r="3.02941"
-                    stroke="#F88C28"
-                  />
-                </svg>
-                <div class="promophone__card-header sim__card-header">
-                  <h4>Для сотрудников в&nbsp;офисе</h4>
+              <div class="interface__steps">
+                <div class="interface__step interface__step_start">
+                  <div
+                    class="card card_white card_rectangle interface__step-number interface__step-number_white"
+                  >
+                    <div class="interface__step-number-header">
+                      <h3>1</h3>
+                    </div>
+                    <div
+                      class="promophone__caption interface__step-number-caption"
+                    >
+                      5 минут
+                    </div>
+                  </div>
+                  <div class="interface__step-number-textblock">
+                    <div class="interface__step-header">
+                      <h4>Получите SIP-доступы у&nbsp;вашего провайдера</h4>
+                    </div>
+                    <div class="interface__step-caption">
+                      Запросите логин, пароль и&nbsp;сервер у&nbsp;вашего
+                      провайдера. SIP-доступы предоставляют не&nbsp;только
+                      другие сервисы ВАТС, но и&nbsp;некоторые мобильные
+                      операторы.
+                    </div>
+                  </div>
                 </div>
-                <div class="promophone__caption">
-                  Приобретите Делофон SIM для&nbsp;личных мобильных устройств
-                  ваших сотрудников. Сэкономьте на покупке стационарных
-                  телефонов.
+                <div class="interface__step interface__step_start">
+                  <div
+                    class="card card_white card_rectangle interface__step-number"
+                  >
+                    <div
+                      class="promophone__caption interface__step-number-header"
+                    >
+                      <h3>2</h3>
+                    </div>
+                    <div
+                      class="promophone__caption interface__step-number-caption"
+                    >
+                      5-7 минут
+                    </div>
+                  </div>
+                  <div class="interface__step-number-textblock">
+                    <div class="interface__step-header">
+                      <h4>Добавьте номер в личном кабинете Делофон</h4>
+                    </div>
+                    <div class="interface__step-caption">
+                      Просто добавьте ваш&nbsp;номер и SIP-доступы в&nbsp;личном
+                      кабинете и&nbsp;настройте необходимые функции телефонии.
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div
-                class="card card_rectangle card_light-gray promophone__card sim__card"
-              >
-                <svg
-                  width="60"
-                  height="60"
-                  viewBox="0 0 60 60"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="25.1481"
-                    cy="27.1481"
-                    r="22.6481"
-                    fill="white"
-                    stroke="#F88C28"
-                  />
-                  <path d="M25 50V4.5" stroke="#F88C28" />
-                  <path
-                    d="M25 4.5C20.6667 7.5 12 15.7 12 26.5C12 37.3 20.6667 46.5 25 49.5"
-                    stroke="#F88C28"
-                  />
-                  <path
-                    d="M25 4.5C29.3333 7.5 38 15.7 38 26.5C38 37.3 29.3333 46.5 25 49.5"
-                    stroke="#F88C28"
-                  />
-                  <path d="M3.5 20L46.5 20" stroke="#F88C28" />
-                  <path d="M3.72363 35L46.5 35" stroke="#F88C28" />
-                  <path
-                    d="M55.3099 52.6756H37.3657C36.6895 52.6756 36.214 52.0204 36.4922 51.4041C37.8392 48.4202 41.0432 44.1621 46.3378 44.1621C51.6325 44.1621 54.8365 48.4202 56.1834 51.4041C56.4617 52.0204 55.9862 52.6756 55.3099 52.6756Z"
-                    fill="white"
-                    stroke="#F88C28"
-                  />
-                  <circle
-                    cx="46.3402"
-                    cy="37.473"
-                    r="4.97297"
-                    fill="white"
-                    stroke="#F88C28"
-                  />
-                </svg>
-                <div class="promophone__card-header sim__card-header">
-                  <h4>Для сотрудников на&nbsp;удалёнке</h4>
-                </div>
-                <div class="promophone__caption">
-                  Приобретите Делофон SIM для своего виртуального офиса:
-                  с&nbsp;бесплатной связью между&nbsp;сотрудниками
-                  и&nbsp;быстрым доступом к&nbsp;записям всех звонков.
-                </div>
-              </div>
-              <div
-                class="card card_rectangle card_light-gray promophone__card sim__card"
-              >
-                <svg
-                  width="60"
-                  height="60"
-                  viewBox="0 0 60 60"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    x="3.5"
-                    y="7.5"
-                    width="26"
-                    height="42"
-                    rx="0.5"
-                    fill="white"
-                    stroke="#F88C28"
-                  />
-                  <line x1="3" y1="42.5" x2="30" y2="42.5" stroke="#F88C28" />
-                  <path d="M12 46H21" stroke="#F88C28" stroke-linecap="round" />
-                  <path
-                    d="M12.5 7.5H20.5V9C20.5 10.3807 19.3807 11.5 18 11.5H15C13.6193 11.5 12.5 10.3807 12.5 9V7.5Z"
-                    fill="white"
-                    stroke="#F88C28"
-                  />
-                  <path
-                    d="M41.4104 54.2263L29.4658 58.8204C29.1725 58.9332 28.8433 58.9016 28.5768 58.7351L17.1826 51.6142C17.0623 51.539 16.9593 51.439 16.8805 51.3209L13.4548 46.1824C13.1903 45.7858 13.24 45.2513 13.6336 44.9825C14.4765 44.4067 15.7772 43.8889 17 44.5003C18.3952 45.1979 19.3849 46.7066 19.8364 47.634C19.9492 47.8657 20.131 48.0598 20.3655 48.1665L23.271 49.4871C24.0864 49.8577 24.9404 49.0518 24.6176 48.2163L17 28.5003C16.5 27.5 17.2 26.4003 18 26.0003C19 25.5003 20.5 25.5 21 26.5C21.2659 27.0319 22.7254 30.835 24.1147 34.5C24.0765 33.8333 24.4 32.5 26 32.5C26.3333 32.5 27.3675 32.2351 28 33.5C28.1234 33.7468 28.2874 34.0952 28.4695 34.5C28.313 33.5 28.4 31.5 30 31.5C31.6 31.5 32.6667 33.1667 33 34.0001C32.7244 32.5006 33 31.5 34.5 31.5C36.0811 31.5 37.1667 32.9996 37.5 33.9996L42.4239 47.2941C42.474 47.4295 42.4943 47.5741 42.4832 47.7181L42.0485 53.3697C42.0189 53.7544 41.7705 54.0878 41.4104 54.2263Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M33 34.0001C32.7244 32.5006 33 31.5 34.5 31.5C36.0811 31.5 37.1667 32.9996 37.5 33.9996L42.4239 47.2941C42.474 47.4295 42.4943 47.5741 42.4832 47.7181L42.0485 53.3697C42.0189 53.7544 41.7705 54.0878 41.4104 54.2263L29.4658 58.8204C29.1725 58.9332 28.8433 58.9016 28.5768 58.7351L17.1826 51.6142C17.0623 51.539 16.9593 51.439 16.8805 51.3209L13.4548 46.1824C13.1903 45.7858 13.24 45.2513 13.6336 44.9825C14.4765 44.4067 15.7772 43.8889 17 44.5003C18.3952 45.1979 19.3849 46.7066 19.8364 47.634C19.9492 47.8657 20.131 48.0598 20.3655 48.1665L23.271 49.4871C24.0864 49.8577 24.9404 49.0518 24.6176 48.2163L17 28.5003C16.5 27.5 17.2 26.4003 18 26.0003C19 25.5003 20.5 25.5 21 26.5C21.2659 27.0319 22.7254 30.835 24.1147 34.5M33 34.0001L34 36.5001M33 34.0001C32.6667 33.1667 31.6 31.5 30 31.5C28.4 31.5 28.313 33.5 28.4695 34.5M26 39.5C25.4973 38.1595 24.8149 36.3473 24.1147 34.5M24.1147 34.5C24.0765 33.8333 24.4 32.5 26 32.5C26.3333 32.5 27.3675 32.2351 28 33.5C28.1234 33.7468 28.2874 34.0952 28.4695 34.5M30 38.5C29.7489 37.4958 29.0252 35.7352 28.4695 34.5"
-                    stroke="#F88C28"
-                    stroke-linecap="round"
-                  />
-                </svg>
-                <div class="promophone__card-header sim__card-header">
-                  <h4>Для личного пользования</h4>
-                </div>
-                <div class="promophone__caption">
-                  Делофон SIM подходит не&nbsp;только для&nbsp;работы.
-                  Используйте удобные функции телефонии для&nbsp;личных звонков:
-                  голосовые меню, записи разговоров, чёрный список и т.д.
+                <div class="interface__step">
+                  <div
+                    class="card card_white card_rectangle interface__step-number"
+                  >
+                    <div class="interface__step-number-header">
+                      <svg
+                        class="interface__step-icon"
+                        width="35"
+                        height="35"
+                        viewBox="0 0 35 35"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M29.3996 9.80005L13.5329 25.2L5.59961 17.5004"
+                          stroke="#F88C28"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="promophone__caption interface__step-number-caption"
+                    >
+                      Готово!
+                    </div>
+                  </div>
+                  <div class="interface__step-number-textblock">
+                    <div class="interface__step-header">
+                      <h4>
+                        Используйте телефонию с&nbsp;привычным для&nbsp;клиентов
+                        номером
+                      </h4>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="promophone sim__promophone">
+      <section class="promophone forwarding-transition__promophone_top">
         <div class="container">
           <div
-            class="card card_white card_rectangle promophone__content promophone__content_flex promophone__content_with-padding sim__promophone-card"
+            class="card card_white card_rectangle promophone__content promophone__content_flex promophone__content_with-padding forwarding-transition__promophone-card"
           >
             <div class="promophone__header using-methods__promophone-header">
-              <h3>Пользуйтесь привычной сотовой связью и&nbsp;интернетом</h3>
+              <h3>
+                Что если мой оператор не&nbsp;даёт
+                <br class="transition__break" />
+                SIP-доступы?
+              </h3>
             </div>
             <div class="promophone__caption using-methods__promophone-caption">
-              Делофон SIM — полноценная SIM&#8209;карта, с&nbsp;которой
-              вы&nbsp;можете не&nbsp;только&nbsp;звонить, но и пользоваться
-              интернетом. При желании можно подключить пакеты мобильного
-              интернета.
+              Вы можете настроить простую переадресацию с&nbsp;вашего номера
+              на&nbsp;телефонию Делофон. Все входящие звонки будут попадать в
+              Делофон, а&nbsp;исходящие сможете совершать с&nbsp;красивого
+              номера Делофон.
+              <a
+                href="/pages/using-methods/forwarding.html"
+                class="link link_blue forwarding-transition__link"
+                aria-label="Перейти в Делофон со своим номером"
+                >Настроить переадресацию звонков в&nbsp;Делофон
+                <div class="forwarding-transition__arrow">&rarr;</div></a
+              >
             </div>
           </div>
         </div>
       </section>
-      <section class="promophone">
+      <section class="promophone forwarding-transition__promophone_bottom">
+        <div class="container">
+          <div
+            class="card card_black card_rectangle promophone__content promophone__content_flex promophone__content_with-padding forwarding-transition__promophone-card"
+          >
+            <div
+              class="promophone__header using-methods__promophone-header text_white"
+            >
+              <h3>Получите номер для&nbsp;исходящих бесплатно</h3>
+            </div>
+            <div
+              class="promophone__caption using-methods__promophone-caption text_white"
+            >
+              При&nbsp;подключении вашего текущего номера к&nbsp;телефонии все
+              исходящие звонки будут производиться с&nbsp;номера Делофон.
+              <span
+                class="tooltip forwarding-transition__promophone-tooltip"
+                data-tooltip-width-laptop="458px"
+                data-tooltip-width-tablet="458px"
+                data-tooltip-width-smartphone="445px"
+                data-tooltip="Технически ваш текущий номер продолжить работать на&nbsp;том провайдере, у&nbsp;которого вы подключали номер, поэтому мы&nbsp;не&nbsp;сможем инициировать исходящие звонки с&nbsp;него. Вы сможете совершать исходящие с&nbsp;вашего номера Делофон"
+              ></span>
+              <br />Вы&nbsp;сможете выбрать этот номер бесплатно в&nbsp;личном
+              кабинете.
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="promophone forwarding-transition__virtue-telephone">
         <div class="container">
           <div
             class="card card_white card_rectangle promophone__content promophone__content_with-padding"
           >
             <div class="promophone__header">
-              <h3>С&nbsp;Делофон SIM работают все функции телефонии</h3>
+              <h3>Доступны все функции телефонии</h3>
             </div>
             <div
               class="promophone__cards promophone__workcards promophone__cards_no-padding-bottom"
@@ -524,7 +433,7 @@
                   <h4>Многоканальный номер</h4>
                 </div>
                 <div class="promophone__caption">
-                  Звоните и принимайте все звонки одновременно.
+                  Звоните и&nbsp;принимайте все звонки одновременно.
                 </div>
               </div>
               <div
@@ -789,9 +698,7 @@
               >
                 <h5 id="business">Показать все возможности</h5>
               </button>
-              <div
-                class="collapse__content bussines__collapse-content programms__collapse-content"
-              >
+              <div class="collapse__content bussines__collapse-content">
                 <div
                   class="promophone__cards promophone__workcards promophone__cards_no-padding-bottom using-methods__cards"
                 >
@@ -1145,268 +1052,47 @@
           </div>
         </div>
       </section>
-      <section class="pay-minutes scope-pay-minutes sim__minutes">
-        <div class="container">
-          <div
-            class="container_adaptive_full pay-minutes__container scope-pay-minutes__container sim__minutes-container"
-          >
-            <div class="pay-minutes__header_mobile">
-              Подключите телефонию<br class="pay-minutes__break" />
-              и&nbsp;FMC за&nbsp;15&nbsp;минут
-            </div>
-            <div class="pay-minutes__header">
-              Подключите телефонию&nbsp;и&nbsp;FMC за&nbsp;15&nbsp;минут
-              <button class="button button_blue scope-pay-minutes__button">
-                Начать бесплатно
-              </button>
-            </div>
-            <div class="pay-minutes__content">
-              <div
-                class="card pay-minutes__card-top card_rounded-top scope-pay-minutes__content"
-              >
-                <div class="pay-minutes__card-header">
-                  <h4>Виртуальная АТС за 1 990 ₽</h4>
-                </div>
-                <div class="pay-minutes__chips">
-                  <div
-                    class="chip_white pay-minutes__chip scope-pay-minutes__chip"
-                  >
-                    3 сотрудника
-                  </div>
-                  <div
-                    class="chip_white pay-minutes__chip scope-pay-minutes__chip"
-                  >
-                    1 номер на выбор
-                  </div>
-                  <div
-                    class="chip_white pay-minutes__chip scope-pay-minutes__chip"
-                  >
-                    Исходящие 1.4 ₽ / мин
-                  </div>
-
-                  <div
-                    class="chip_white pay-minutes__chip scope-pay-minutes__chip"
-                  >
-                    <div class="container_flex chip-text__container">
-                      <div class="chip-text">Входящие 0 ₽ / мин</div>
-                      <div
-                        data-tooltip-width-laptop="483px"
-                        data-tooltip-width-tablet="483px"
-                        data-tooltip-width-smartphone="483px"
-                        data-tooltip="Входящие бесплатны при использовании мобильного или городского номера.<br/>Стоимость входящих на номер 8-800 &mdash; от 2.4 ₽ за минуту, в зависимости от региона звонящего абонента."
-                        class="tooltip pay-minutes__tooltip-top"
-                      ></div>
-                    </div>
-                  </div>
-                  <ul class="pay-minutes__list">
-                    <li
-                      class="list-item_checked pay-minutes__list-item pay-minutes__list-item-bold mobile"
-                    >
-                      3 сотрудника и 1 номер на выбор
-                    </li>
-                    <li class="list-item_checked pay-minutes__list-item mobile">
-                      Исходящие 1.4 ₽ / мин
-                    </li>
-                    <li class="list-item_checked pay-minutes__list-item mobile">
-                      Входящие 0 ₽ / мин
-                      <div
-                        data-tooltip-width-laptop="353px"
-                        data-tooltip-width-tablet="283px"
-                        data-tooltip-width-smartphone="283px"
-                        data-tooltip="Входящие бесплатны при использовании мобильного или городского номера.<br/>Стоимость входящих на номер 8-800 &mdash; от 2.4 ₽ за минуту, в зависимости от региона звонящего абонента."
-                        class="tooltip pay-minutes__tooltip-top"
-                      ></div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                class="card pay-minutes__card-bottom card_black card_rounded-bot"
-              >
-                <div
-                  class="container_flex-start pay-minutes__card-bottom_container"
-                >
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 28 28"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="14" cy="14" r="13.5" stroke="#F88C28" />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M14.5005 8.5C14.5005 8.22386 14.2766 8 14.0005 8C13.7244 8 13.5005 8.22386 13.5005 8.5V13.5005H8.5C8.22386 13.5005 8 13.7243 8 14.0005C8 14.2766 8.22386 14.5005 8.5 14.5005H13.5005V19.5005C13.5005 19.7767 13.7244 20.0005 14.0005 20.0005C14.2766 20.0005 14.5005 19.7767 14.5005 19.5005V14.5005H19.5005C19.7767 14.5005 20.0005 14.2766 20.0005 14.0005C20.0005 13.7243 19.7767 13.5005 19.5005 13.5005H14.5005V8.5Z"
-                      fill="#F88C28"
-                    />
-                  </svg>
-                  <div
-                    class="container_adaptive-reverse pay-minutes__card-textblock"
-                  >
-                    <div class="text_caption text_light-gray text_visible">
-                      Ещё сотрудник:
-                    </div>
-                    <div class="text_caption text_light-gray text_mobile">
-                      сотрудник:&nbsp;
-                    </div>
-                    <div class="text_semibold text_white">990 ₽ разово</div>
-                  </div>
-                </div>
-                <div
-                  class="container_flex-start pay-minutes__card-bottom_container"
-                >
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 28 28"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="14" cy="14" r="13.5" stroke="#F88C28" />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M14.5005 8.5C14.5005 8.22386 14.2766 8 14.0005 8C13.7244 8 13.5005 8.22386 13.5005 8.5V13.5005H8.5C8.22386 13.5005 8 13.7243 8 14.0005C8 14.2766 8.22386 14.5005 8.5 14.5005H13.5005V19.5005C13.5005 19.7767 13.7244 20.0005 14.0005 20.0005C14.2766 20.0005 14.5005 19.7767 14.5005 19.5005V14.5005H19.5005C19.7767 14.5005 20.0005 14.2766 20.0005 14.0005C20.0005 13.7243 19.7767 13.5005 19.5005 13.5005H14.5005V8.5Z"
-                      fill="#F88C28"
-                    />
-                  </svg>
-                  <div
-                    class="container_adaptive-reverse pay-minutes__card-textblock"
-                  >
-                    <div class="text_caption text_light-gray text_visible">
-                      Ещё номер телефона:
-                    </div>
-                    <div class="text_caption text_light-gray text_mobile">
-                      номер телефона:&nbsp;
-                    </div>
-                    <div class="text_semibold text_white">990 ₽ разово</div>
-                  </div>
-                </div>
-                <div
-                  class="container_flex-start pay-minutes__card-bottom_container"
-                >
-                  <div class="pay-minutes__card-textblock">
-                    <div class="mobile_flex">
-                      <div class="text_caption text_light-gray">
-                        Оплата только за подключение,&nbsp;
-                      </div>
-                      <div class="container_flex">
-                        <strong class="text_semibold text_white">
-                          без ежемесячных платежей
-                        </strong>
-                        <div
-                          data-tooltip-width-laptop="461px"
-                          data-tooltip-width-tablet="461px"
-                          data-tooltip-width-smartphone="361px"
-                          data-tooltip="Некоторые номера мы подключаем через партнёров, за&nbsp;них мы&nbsp;вынуждены взымать абонентскую плату (190 ₽ / месяц). 
-                            Абонплата за партнёрские номера и SIM-карты — единственные возможные ежемесячные платежи в Делофоне."
-                          class="tooltip pay-minutes__tooltip-bot"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="pay-minutes__plus_big sim__plus_big">
-                <svg
-                  width="10"
-                  height="10"
-                  viewBox="0 0 10 10"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4.16758 9.33V5.63H0.467578V3.95H4.16758V0.269999H5.84758V3.95H9.53758V5.63H5.84758V9.33H4.16758Z"
-                    fill="#344351"
-                  />
-                </svg>
-              </div>
-              <div
-                class="card card_rectangle pay-minutes__card-top sim__minutes-card sim__fmcblock"
-              >
-                <div class="sim__fmc-caption">
-                  <b class="sim__fmc-accent">FMC SIM-карта — 990 ₽,</b>
-                  <div>190₽/мес</div>
-                </div>
-                <div class="sim__fmc-caption sim__fmc-caption_small">
-                  Бесплатная доставка курьером в&nbsp;любой город РФ.
-                </div>
-                <div class="fmc-packages">
-                  <div class="fmc-packages__header">Интернет-пакеты:</div>
-                  <div class="fmc-packages__content">
-                    <div class="fmc-packages__cell">
-                      <div class="fmc-packages__giga">1 гб</div>
-                      <div class="fmc-packages__price">145 ₽</div>
-                    </div>
-                    <div class="fmc-packages__cell">
-                      <div class="fmc-packages__giga">2 гб</div>
-                      <div class="fmc-packages__price">280 ₽</div>
-                    </div>
-                    <div class="fmc-packages__cell">
-                      <div class="fmc-packages__giga">3 гб</div>
-                      <div class="fmc-packages__price">390 ₽</div>
-                    </div>
-                    <div class="fmc-packages__cell">
-                      <div class="fmc-packages__giga">5 гб</div>
-                      <div class="fmc-packages__price">630 ₽</div>
-                    </div>
-                    <div class="fmc-packages__cell">
-                      <div class="fmc-packages__giga">10 гб</div>
-                      <div class="fmc-packages__price">1200 ₽</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button
-                class="button button_blue scope-pay-minutes__button-mobile"
-              >
-                Начать бесплатно
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      {{>methods sim=true}} {{>cases techHeader = true}} {{>cases-bot}}
-      {{>stats}} {{>calculator hideNumber = true}} {{>startuse}}
+      {{>scope-pay-minutes}} {{>methods transition=true}} {{>cases techHeader =
+      true}} {{>cases-bot}} {{>stats}} {{>calculator hideNumber = true}}
+      {{>startuse}}
       <section class="results results_with-padding">
         <div class="container">
           <div class="results__header">
             <h3>
-              FMC — сотовая связь, интернет и&nbsp;телефония в&nbsp;одной
-              SIM-карте
+              Новые функции на&nbsp;привычном для&nbsp;клиентов номере телефона
             </h3>
           </div>
           <article class="results__article">
             <p class="results__paragraph">
-              SIM-карта с&nbsp;поддержкой FMC является специальной SIM-картой,
-              которая&nbsp;позволяет пользователям использовать различные
-              средства связи на&nbsp;одном устройстве, например,
-              на&nbsp;мобильном телефоне.
+              Переход на новый сервис телефонии со&nbsp;своим номером телефона
+              —это прекрасная возможность улучшить качество связи
+              и&nbsp;повысить удобство коммуникаций бизнеса. Новые технологии
+              позволяют обеспечить кристально чистое звучание, а&nbsp;ещё дают
+              эффективные функции по&nbsp;управлению и&nbsp;контролю
+              над&nbsp;звонками.
             </p>
             <p class="results__paragraph results__paragraph_no-margin">
-              Она работает путем объединения различных типов связи, таких
-              как&nbsp;голосовые звонки, SMS&#8209;сообщения, мобильный интернет
-              и&nbsp;телефонию через Интернет (VoIP), в&nbsp;единую
-              инфраструктуру. Таким&nbsp;образом, пользователи могут
-              использовать различные каналы связи без&nbsp;необходимости
-              переключаться между разными устройствами или SIM&#8209;картами.
+              Кроме того, переход на&nbsp;новый сервис телефонии со&nbsp;своим
+              номером телефона позволяет существенно сократить затраты
+              на&nbsp;связь. Благодаря использованию современных технологий
+              связи, можно значительно снизить стоимость исходящих звонков,
+              а&nbsp;внутренние звонки между сотрудниками будут и&nbsp;вовсе
+              бесплатны!
             </p>
             <p class="results__paragraph">
-              Такой вид связи будет полезен для&nbsp;людей,
-              которые&nbsp;работают вне офиса, включая руководителей,
-              менеджеров, продавцов и&nbsp;технических специалистов.
-              FMC&#8209;телефония может также быть полезна для&nbsp;предприятий
-              и&nbsp;организаций, которые имеют сотрудников, работающих удалённо
-              или&nbsp;находящихся в&nbsp;разных локациях.
+              Ещё одним преимуществом перехода на&nbsp;новый сервис телефонии
+              со&nbsp;своим текущим номером телефона является возможность
+              использовать один номер для&nbsp;всех ваших устройств. Это
+              позволит вам всегда оставаться на&nbsp;связи, независимо
+              от&nbsp;того, где&nbsp;вы&nbsp;находитесь и&nbsp;какое устройство
+              вы&nbsp;используете.
             </p>
             <p class="results__paragraph results__paragraph_no-margin">
-              SIM&#8209;карта с&nbsp;FMC&#8209;телефонией может быть настроена
-              под конкретные потребности пользователя, что&nbsp;обеспечивает
-              большую гибкость и&nbsp;удобство. Пользователь может выбрать,
-              какой канал связи использовать для каждого контакта
-              в&nbsp;зависимости от&nbsp;их&nbsp;предпочтений
-              и&nbsp;доступности.
+              В&nbsp;целом, переход на&nbsp;новый сервис телефонии со&nbsp;своим
+              номером телефона — это шаг вперед в&nbsp;современном мире
+              коммуникаций. Телефония Делофон поможет вам улучшить качество
+              связи, сократить затраты на&nbsp;связь и&nbsp;расширить
+              возможности по&nbsp;работе с&nbsp;клиентами через&nbsp;телефон.
             </p>
           </article>
         </div>

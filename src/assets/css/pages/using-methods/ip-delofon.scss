@@ -74,10 +74,6 @@
     @include tablet {
       padding: 50px 25px;
     }
-
-    @include laptop {
-      margin-left: 20px;
-    }
   }
 
   &__focus-header_long {
