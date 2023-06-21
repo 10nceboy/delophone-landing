@@ -1,18 +1,6 @@
 @import '../../utils/index';
 
 .programms {
-  &__scheme {
-    @include tablet {
-      max-width: 435px;
-      max-height: 208px;
-    }
-
-    @include laptop {
-      max-width: 535px;
-      max-height: 238px;
-    }
-  }
-
   &__focus-header {
     @include laptop {
       max-width: 503px;

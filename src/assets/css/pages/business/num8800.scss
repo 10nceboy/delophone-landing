@@ -465,27 +465,25 @@
   &__cases {
     background-color: $light-gray;
     margin-bottom: 0px;
+    @include tablet {
+      padding-top: 150px;
+    }
 
     .cases__card {
       background-color: $white;
     }
-
-    @include tablet {
-      padding-top: 150px;
-    }
   }
 
   &__result-list {
-    margin-left: 20px;
+    margin-left: $spacer * 4;
   }
 
   &__stats {
     background-color: $light-gray;
-    padding-top: 40px;
+    padding-top: $spacer * 8;
 
     @include tablet {
-      padding-top: 70px;
-      padding-bottom: 0px;
+      padding-top: 70px 0 0;
     }
   }
 

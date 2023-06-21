@@ -41,7 +41,9 @@ export default defineConfig({
         smartphone: resolve(__dirname, 'pages/using-methods/smartphone.html'),
         iptel: resolve(__dirname, 'pages/using-methods/ip-telephone.html'),
         ipdelofon: resolve(__dirname, 'pages/using-methods/ip-delofon.html'),
-        sim: resolve(__dirname, 'pages/using-methods/sim-fmc.html')
+        sim: resolve(__dirname, 'pages/using-methods/sim-fmc.html'),
+        forwarding: resolve(__dirname, 'pages/using-methods/forwarding.html'),
+        transition: resolve(__dirname, 'pages/using-methods/transition.html')
       }
     }
   }

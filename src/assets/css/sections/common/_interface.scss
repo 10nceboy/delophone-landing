@@ -59,8 +59,13 @@
   }
 
   &__content {
+    @include smartphone {
+      @include flex-col;
+      align-items: center;
+    }
+
     @include tablet {
-      display: flex;
+      flex-direction: row;
     }
   }
 
@@ -96,6 +101,10 @@
     @include laptop {
       margin-bottom: $spacer * 5;
       max-width: 540px;
+    }
+
+    &_start {
+      align-items: flex-start;
     }
   }
 
@@ -171,6 +180,7 @@
     h4 {
       transition: color 0.7s;
     }
+
     @include smartphone {
       h4 {
         font-size: 22px;
