@@ -362,9 +362,10 @@
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  ::i-block-chrome,
-  .forwarding-transition__arrow {
-    bottom: 0;
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    .forwarding-transition__arrow {
+      bottom: 0;
+    }
   }
 }
