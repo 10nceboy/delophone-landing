@@ -365,7 +365,7 @@
 @media not all and (min-resolution: 0.001dpcm) {
   @supports (-webkit-appearance: none) and (stroke-color: transparent) {
     .forwarding-transition__arrow {
-      bottom: 0;
+      bottom: -1px;
     }
   }
 }
