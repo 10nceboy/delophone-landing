@@ -148,15 +148,6 @@
   &__arrow {
     position: relative;
     display: inline;
-    bottom: 0.1em;
-
-    @include tablet {
-      bottom: 0.05em;
-    }
-
-    @include laptop {
-      bottom: 0.1em;
-    }
   }
 
   &__virtue-telephone {
@@ -367,5 +358,11 @@
     .forwarding-transition__arrow {
       bottom: -1px;
     }
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .forwarding-transition__arrow {
+    bottom: 0.1em;
   }
 }
