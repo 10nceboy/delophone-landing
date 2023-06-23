@@ -89,13 +89,9 @@
   &__tabs-items {
     @include laptop {
       img {
-        max-width: 1000px;
+        min-width: 100%;
       }
       margin-top: $spacer * 5;
-    }
-
-    @include laptop {
-      width: 900px;
     }
   }
 

@@ -54,9 +54,14 @@
   &__promophone-caption {
     line-height: 150%;
 
+    @include smartphone {
+      font-size: 16px;
+    }
+
     @include tablet {
       line-height: 155%;
       margin-left: 30px;
+      font-size: 14px;
     }
 
     @include laptop {
@@ -148,6 +153,11 @@
     @include tablet {
       padding: $spacer * 7 0 0;
     }
+  }
+
+  &__cards-top {
+    padding-top: $spacer * 5;
+    padding-bottom: 0px;
   }
 
   &__calculator {

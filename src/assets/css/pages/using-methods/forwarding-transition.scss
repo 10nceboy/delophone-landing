@@ -89,6 +89,18 @@
     }
   }
 
+  &__interface-rightside {
+    @include tablet-s {
+      align-self: flex-start;
+    }
+  }
+
+  &__interface-image {
+    @include tablet-s {
+      max-width: 80%;
+    }
+  }
+
   &__promophone_top {
     padding: $spacer * 8 0 0;
     @include tablet {
@@ -137,11 +149,9 @@
     position: relative;
     display: inline;
     bottom: 0.1em;
-    font-size: 16px;
 
     @include laptop {
       bottom: 0.1em;
-      font-size: 20px;
     }
   }
 
