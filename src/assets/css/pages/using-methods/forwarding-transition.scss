@@ -150,6 +150,10 @@
     display: inline;
     bottom: 0.1em;
 
+    @include tablet {
+      bottom: 0.05em;
+    }
+
     @include laptop {
       bottom: 0.1em;
     }
@@ -355,5 +359,12 @@
     @include laptop {
       display: none;
     }
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  ::i-block-chrome,
+  .forwarding-transition__arrow {
+    bottom: 0;
   }
 }
