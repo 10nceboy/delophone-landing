@@ -28,6 +28,10 @@
   }
 
   &__header_long {
+    @include smartphone {
+      margin-bottom: $spacer * 2;
+    }
+
     @include tablet {
       max-width: 540px;
     }
