@@ -528,6 +528,19 @@
     }
   }
 
+  &__startuse-header {
+    @include tablet {
+      h2 {
+        font-size: 26px;
+      }
+    }
+    @include laptop {
+      h2 {
+        font-size: 32px;
+      }
+    }
+  }
+
   &__startuse-button {
     @include tablet {
       margin-top: $spacer * 7;
