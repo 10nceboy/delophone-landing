@@ -1,0 +1,522 @@
+/* base */
+@import '../base/layout';
+@import '../base/reset';
+@import '../utils/index';
+
+/* components */
+@import '../components/button';
+@import '../components/header';
+@import '../components/dropdown';
+@import '../components/login';
+@import '../components/link';
+@import '../components/cards';
+@import '../components/footer';
+@import '../components/chips';
+@import '../components/list';
+@import '../components/list-item';
+@import '../components/collapse';
+@import '../components/whatsapp';
+@import '../components/modal';
+@import '../components/overlay';
+@import '../components/breadcrumbs';
+@import '../components/icon';
+
+@import '../long/header-long.scss';
+@import '../long/footer-long.scss';
+@import '../long/сards-long.scss';
+
+/**sections**/
+@import '../sections/common/hero';
+@import '../sections/common/results';
+@import '../sections/common/startuse';
+@import '../sections/common/scope-hero';
+@import '../sections/common/steps/steps'; /* <= imports all step sections */
+@import '../sections/common/promophone';
+@import '../sections/scope/scopes';
+@import '../sections/common/focus';
+
+.seo {
+  &__hero-textblock {
+    @include smartphone {
+      h1 {
+        max-width: 70%;
+      }
+    }
+
+    @include tablet {
+      h1 {
+        font-size: 28px;
+        line-height: 140%;
+        max-width: unset;
+      }
+    }
+
+    @include laptop {
+      h1 {
+        font-size: 36px;
+      }
+    }
+  }
+
+  &__hero-text {
+    @include tablet {
+      font-size: 16px;
+      line-height: 155%;
+    }
+
+    @include laptop {
+      font-size: 20px;
+    }
+  }
+
+  &__hero-caption {
+    text-align: left;
+    margin-top: $spacer * 6;
+
+    @include tablet-1024 {
+      margin-top: $spacer * 13;
+    }
+
+    @include laptop {
+      margin-top: $spacer * 8;
+    }
+  }
+
+  &__hero-listblock {
+    margin: $spacer * 10 0 0 0;
+    padding: $spacer * 4;
+
+    @include smartphone {
+      max-width: 70%;
+    }
+
+    @include tablet {
+      padding: $spacer * 11 $spacer * 5;
+      margin: 0 0 0 $spacer * 2;
+      min-width: 50%;
+      max-width: unset;
+    }
+
+    @include tablet-1024 {
+      margin: 0 0 0 $spacer * 6;
+    }
+
+    @include laptop {
+      min-width: 475px;
+      margin: 0 0 0 $spacer * 10;
+      padding: 61px $spacer * 9;
+    }
+  }
+
+  &__hero-list {
+    list-style: disc inside;
+    color: $blue;
+
+    a {
+      margin-left: -8px;
+    }
+  }
+
+  &__hero-list-item {
+    margin: $spacer * 2 0 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+
+    @include smartphone {
+      margin: $spacer * 3 0 0;
+    }
+
+    @include tablet {
+      font-size: 16px;
+      margin: $spacer * 4 0 0;
+    }
+
+    @include tablet-1024 {
+      font-size: 17px;
+    }
+
+    @include laptop {
+      margin: $spacer * 4 0 0;
+      white-space: nowrap;
+      font-size: 18px;
+
+      &:first-child {
+        margin-top: 0px;
+      }
+    }
+  }
+
+  &__focus-header {
+    margin-bottom: $spacer * 3;
+
+    @include tablet {
+      margin-bottom: $spacer * 4;
+      max-width: unset;
+      h2 {
+        font-size: 32px;
+      }
+    }
+  }
+
+  &__focus-paragraph {
+    line-height: 150%;
+    &:not(:last-child) {
+      margin-bottom: $spacer * 2;
+    }
+
+    @include tablet {
+      line-height: 155%;
+    }
+
+    @include laptop {
+      max-width: 825px;
+    }
+  }
+
+  &__focus-paragraph_small {
+    @include tablet {
+      max-width: 80%;
+    }
+
+    @include laptop {
+      max-width: 825px;
+    }
+  }
+
+  &__focus-paragraph_wide {
+    @include tablet {
+      max-width: 85%;
+    }
+
+    @include laptop {
+      max-width: 855px;
+    }
+  }
+
+  &__focus-cards {
+    margin: $spacer * 5 0 $spacer * 7;
+    @include tablet {
+      display: flex;
+    }
+
+    @include laptop {
+      margin: $spacer * 7 0 $spacer * 10;
+    }
+  }
+
+  &__focus-card {
+    @include flex-row;
+    padding: $spacer * 4;
+
+    &:not(:last-child) {
+      margin-bottom: $spacer * 3;
+    }
+
+    h4 {
+      @include font($normal, 15px, $gray);
+      line-height: 155%;
+    }
+
+    svg {
+      margin-right: $spacer * 2;
+      flex-shrink: 0;
+    }
+
+    @include smartphone {
+      h4 {
+        font-size: 18px;
+      }
+    }
+
+    @include tablet {
+      min-width: 270px;
+      max-width: 270px;
+      max-height: 107px;
+      min-height: 107px;
+      flex-shrink: 0;
+      margin-bottom: 0px;
+
+      h4 {
+        font-size: 15px;
+        line-height: 140%;
+      }
+
+      &:not(:last-child) {
+        margin-right: $spacer * 3;
+      }
+    }
+
+    @include tablet-1024 {
+      max-width: 290px;
+    }
+
+    @include laptop {
+      padding: $spacer * 4 $spacer * 5;
+      max-width: 340px;
+      min-height: 90px;
+      max-height: 90px;
+
+      &:not(:last-child) {
+        margin-right: $spacer * 6;
+      }
+
+      h4 {
+        font-size: 17px;
+      }
+    }
+
+    @include desktop {
+      max-width: 350px;
+
+      h4 {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__start-card {
+    margin-top: $spacer * 7;
+    padding: $spacer * 4;
+
+    @include tablet {
+      margin-top: $spacer * 10;
+      justify-content: space-between;
+      align-items: center;
+      padding: $spacer * 10;
+    }
+  }
+
+  &__start-card-header {
+    h3 {
+      font-size: 18px;
+      line-height: 130%;
+    }
+
+    @include laptop {
+      h3 {
+        font-size: 26px;
+      }
+    }
+  }
+
+  &__start-button {
+    margin: $spacer * 3 0 0 0;
+    min-width: 100%;
+    @include tablet {
+      min-width: 231px;
+      margin: 0px;
+    }
+
+    @include laptop {
+      min-width: 231px;
+    }
+  }
+
+  &__star-card-caption {
+    line-height: 150%;
+    margin-top: $spacer * 2;
+
+    @include tablet {
+      line-height: 155%;
+      max-width: 85%;
+    }
+
+    @include laptop {
+      max-width: 652px;
+      font-size: 16px;
+    }
+  }
+
+  &__promophone {
+    padding-bottom: 80px;
+
+    @include tablet {
+      padding-bottom: 150px;
+    }
+  }
+
+  &__promophone-white {
+    background-color: $white;
+    padding-top: 80px;
+
+    @include tablet {
+      padding-top: 150px;
+    }
+  }
+
+  &__promophone-articles {
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1f);
+      grid-column-gap: $spacer * 4;
+    }
+
+    @include laptop {
+      grid-column-gap: $spacer * 6;
+    }
+  }
+
+  &__promophone-arcticle_big {
+    margin-bottom: $spacer * 2;
+
+    @include tablet {
+      margin-bottom: $spacer * 10;
+    }
+  }
+
+  &__promophone-article {
+    margin-top: $spacer * 4;
+
+    @include tablet {
+      margin: 0 0 $spacer * 7;
+    }
+  }
+
+  &__promophone-article_first {
+    margin-top: $spacer * 5;
+
+    @include tablet {
+      margin: 0px;
+    }
+  }
+
+  &__promophone-article_no-margin {
+    @include tablet {
+      margin: 0px;
+    }
+  }
+
+  &__promophone-article-header {
+    margin-bottom: $spacer * 2;
+
+    @include tablet {
+      margin-bottom: $spacer * 3;
+    }
+  }
+
+  &__promophone-paragraph {
+    @include font($normal, 15px, $gray);
+    line-height: 150%;
+
+    @include smartphone {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      font-size: 15px;
+      line-height: 155%;
+    }
+
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+
+  &__promophone-card {
+    padding: $spacer * 4;
+    @include laptop {
+      max-height: unset;
+    }
+  }
+
+  &__promophone-icon {
+    margin-bottom: $spacer;
+  }
+
+  &__promophone-caption {
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+
+  &__promophone-imageblock-lk {
+    @include flex-col;
+    align-items: center;
+  }
+
+  &__promophone-image-lk {
+    margin: $spacer * 5 0 $spacer * 7;
+
+    @include tablet {
+      margin: $spacer * 11 0 $spacer * 10;
+    }
+  }
+
+  &__promophone-image_mobile-lk {
+    display: block;
+    min-width: 80%;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__promophone-image_desktop-lk {
+    display: none;
+
+    @include tablet {
+      display: block;
+      max-width: 100%;
+      min-width: 100%;
+      border: $border-gray2;
+      border-radius: $border-radius-xs;
+    }
+  }
+
+  &__virtue-telephone {
+    padding: 80px 0;
+    @include tablet {
+      padding: 150px 0;
+    }
+  }
+
+  &__promophome-card-header {
+    @include tablet {
+      font-size: 18px;
+    }
+
+    @include laptop {
+      font-size: 20px;
+    }
+  }
+}
+
+.detalization {
+  &__hero-caption {
+    text-align: left;
+    margin-top: $spacer * 6;
+
+    @include tablet {
+      margin-top: $spacer * 4;
+    }
+
+    @include tablet-1024 {
+      margin-top: $spacer * 5;
+    }
+
+    @include laptop {
+      margin-top: $spacer * 8;
+    }
+  }
+}
+
+.record {
+  &__hero-caption {
+    text-align: left;
+    margin-top: $spacer * 6;
+
+    @include tablet {
+      margin-top: $spacer * 12;
+    }
+
+    @include tablet-1024 {
+      margin-top: $spacer * 18;
+    }
+
+    @include laptop {
+      margin-top: $spacer * 8;
+    }
+  }
+}
