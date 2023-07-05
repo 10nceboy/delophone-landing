@@ -36,6 +36,16 @@
 @import '../sections/common/focus';
 
 .seo {
+  &__hero {
+    @include tablet {
+      margin-bottom: 100px;
+    }
+
+    @include laptop {
+      margin-bottom: 150px;
+    }
+  }
+
   &__hero-textblock {
     @include smartphone {
       h1 {
@@ -123,6 +133,10 @@
     font-size: 18px;
     line-height: 130%;
 
+    &:first-child {
+      margin-top: 0px;
+    }
+
     @include smartphone {
       margin: $spacer * 3 0 0;
     }
@@ -147,6 +161,16 @@
     }
   }
 
+  &__focus {
+    @include tablet {
+      padding-top: 100px;
+
+      @include laptop {
+        padding-top: 150px;
+      }
+    }
+  }
+
   &__focus-header {
     margin-bottom: $spacer * 3;
 
@@ -154,7 +178,7 @@
       margin-bottom: $spacer * 4;
       max-width: unset;
       h2 {
-        font-size: 32px;
+        font-size: 26px;
       }
     }
   }
@@ -237,6 +261,10 @@
       flex-shrink: 0;
       margin-bottom: 0px;
 
+      &:not(:last-child) {
+        margin-bottom: 0px;
+      }
+
       h4 {
         font-size: 15px;
         line-height: 140%;
@@ -287,6 +315,12 @@
     }
   }
 
+  &__start-card-second {
+    @include tablet {
+      margin-top: $spacer * 6;
+    }
+  }
+
   &__start-card-header {
     h3 {
       font-size: 18px;
@@ -332,6 +366,10 @@
     padding-bottom: 80px;
 
     @include tablet {
+      padding-bottom: 100px;
+    }
+
+    @include laptop {
       padding-bottom: 150px;
     }
   }
@@ -341,6 +379,10 @@
     padding-top: 80px;
 
     @include tablet {
+      padding-top: 100px;
+    }
+
+    @include laptop {
       padding-top: 150px;
     }
   }
@@ -468,6 +510,10 @@
   &__virtue-telephone {
     padding: 80px 0;
     @include tablet {
+      padding: 100px 0;
+    }
+
+    @include laptop {
       padding: 150px 0;
     }
   }
@@ -479,6 +525,12 @@
 
     @include laptop {
       font-size: 20px;
+    }
+  }
+
+  &__startuse-button {
+    @include tablet {
+      margin-top: $spacer * 7;
     }
   }
 }
@@ -517,6 +569,20 @@
 
     @include laptop {
       margin-top: $spacer * 8;
+    }
+  }
+
+  &__virtue-header {
+    @include tablet {
+      h2 {
+        font-size: 26px;
+      }
+    }
+
+    @include laptop {
+      h2 {
+        font-size: 32px;
+      }
     }
   }
 }

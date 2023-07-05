@@ -45,8 +45,11 @@
     order: 2;
     line-height: normal;
 
-    @include laptop {
+    @include tablet {
       display: block;
+    }
+
+    @include laptop {
       margin-top: $spacer * 7;
     }
 
