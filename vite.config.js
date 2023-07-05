@@ -43,7 +43,9 @@ export default defineConfig({
         ipdelofon: resolve(__dirname, 'pages/using-methods/ip-delofon.html'),
         sim: resolve(__dirname, 'pages/using-methods/sim-fmc.html'),
         forwarding: resolve(__dirname, 'pages/using-methods/forwarding.html'),
-        transition: resolve(__dirname, 'pages/using-methods/transition.html')
+        transition: resolve(__dirname, 'pages/using-methods/transition.html'),
+        detalization: resolve(__dirname, 'pages/seo/detalization.html'),
+        record: resolve(__dirname, 'pages/seo/record.html')
       }
     }
   }
