@@ -533,6 +533,20 @@
       margin-top: $spacer * 7;
     }
   }
+
+  &__virtue-header {
+    @include tablet {
+      h2 {
+        font-size: 26px;
+      }
+    }
+
+    @include laptop {
+      h2 {
+        font-size: 32px;
+      }
+    }
+  }
 }
 
 .detalization {
@@ -569,20 +583,6 @@
 
     @include laptop {
       margin-top: $spacer * 8;
-    }
-  }
-
-  &__virtue-header {
-    @include tablet {
-      h2 {
-        font-size: 26px;
-      }
-    }
-
-    @include laptop {
-      h2 {
-        font-size: 32px;
-      }
     }
   }
 }
