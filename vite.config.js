@@ -46,7 +46,9 @@ export default defineConfig({
         transition: resolve(__dirname, 'pages/using-methods/transition.html'),
         detalization: resolve(__dirname, 'pages/seo/detalization.html'),
         record: resolve(__dirname, 'pages/seo/record.html'),
-        blacklist: resolve(__dirname, 'pages/seo/blacklist.html')
+        blacklist: resolve(__dirname, 'pages/seo/blacklist.html'),
+        ip: resolve(__dirname, 'pages/seo/ip.html'),
+        sip: resolve(__dirname, 'pages/seo/sip.html')
       }
     }
   }
