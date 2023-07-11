@@ -23,6 +23,11 @@ $family: 'Manrope';
   justify-content: center;
 }
 
+@mixin grid-col-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 @mixin fullscreen() {
   height: 100%;
   width: 100%;

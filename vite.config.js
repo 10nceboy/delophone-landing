@@ -45,7 +45,8 @@ export default defineConfig({
         forwarding: resolve(__dirname, 'pages/using-methods/forwarding.html'),
         transition: resolve(__dirname, 'pages/using-methods/transition.html'),
         detalization: resolve(__dirname, 'pages/seo/detalization.html'),
-        record: resolve(__dirname, 'pages/seo/record.html')
+        record: resolve(__dirname, 'pages/seo/record.html'),
+        blacklist: resolve(__dirname, 'pages/seo/blacklist.html')
       }
     }
   }
