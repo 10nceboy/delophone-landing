@@ -710,14 +710,6 @@
   &__hero-listblock {
     @include tablet {
       padding: 52px $spacer * 7;
-
-      @include laptop {
-        padding: 72px $spacer * 7;
-      }
-
-      @include desktop {
-        padding: 52px $spacer * 7;
-      }
     }
   }
 
