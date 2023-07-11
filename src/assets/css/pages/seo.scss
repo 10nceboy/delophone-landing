@@ -11,9 +11,6 @@
 @import '../components/link';
 @import '../components/cards';
 @import '../components/footer';
-@import '../components/chips';
-@import '../components/list';
-@import '../components/list-item';
 @import '../components/collapse';
 @import '../components/whatsapp';
 @import '../components/modal';
@@ -131,7 +128,7 @@
   &__hero-list-item {
     margin: $spacer * 2 0 0;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 130%;
 
     &:first-child {
@@ -140,6 +137,7 @@
 
     @include smartphone {
       margin: $spacer * 3 0 0;
+      font-size: 18px;
     }
 
     @include tablet {
@@ -708,6 +706,12 @@
 
 .sip {
   &__hero-listblock {
+    padding: $spacer * 4 $spacer * 3;
+
+    @include smartphone {
+      padding: $spacer * 4;
+    }
+
     @include tablet {
       padding: 52px $spacer * 7;
     }

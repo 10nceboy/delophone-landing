@@ -272,8 +272,13 @@
   }
 
   .footer-case {
-    margin-top: $spacer * 4 $spacer * 3 0 0;
+    margin: $spacer * 4 $spacer * 3 0 0;
     text-align: center;
     font-size: 12px;
+    margin-top: 15px;
+
+    @include tablet {
+      margin-top: 0px;
+    }
   }
 }
