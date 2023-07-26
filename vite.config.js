@@ -48,7 +48,9 @@ export default defineConfig({
         record: resolve(__dirname, 'pages/seo/record.html'),
         blacklist: resolve(__dirname, 'pages/seo/blacklist.html'),
         ip: resolve(__dirname, 'pages/seo/ip.html'),
-        sip: resolve(__dirname, 'pages/seo/sip.html')
+        sip: resolve(__dirname, 'pages/seo/sip.html'),
+        multinumber: resolve(__dirname, 'pages/seo/multinumber.html'),
+        additional: resolve(__dirname, 'pages/seo/additional.html')
       }
     }
   }

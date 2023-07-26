@@ -40,12 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
       animated = true;
       window.setTimeout(() => (animated = false), 320);
 
+      if (activator.classList.contains('united-lk__collapse-activator')) {
+        activator.classList.remove('united-lk__collapse-activator_active');
+      }
+
       if (arrow) {
         arrow.classList.toggle('collapse__arrow_active');
       }
 
       if (state) {
         activator.classList.toggle('collapse__activator_active');
+        if (activator.classList.contains('united-lk__collapse-activator')) {
+          activator.classList.add('united-lk__collapse-activator_active');
+        }
         transitionEnter(content, 'collapse__content');
         if (starter) {
           starter.scrollIntoView({

@@ -11,7 +11,7 @@ const step4 = document.querySelector(
   `.ip-delofon__interface-image[data-step="4"]`
 );
 
-const card = document.querySelector(`.ipnterfac__card`);
+const card = document.querySelector(`.ip-delofon__interface-card`);
 
 if (['tablet', 'laptop'].includes(deviceType)) {
   if (step1) {
