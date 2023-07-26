@@ -17,6 +17,9 @@
 @import '../components/overlay';
 @import '../components/breadcrumbs';
 @import '../components/icon';
+@import '../components/scheme';
+@import '../components/divider';
+@import '../components/tooltip';
 
 @import '../long/header-long.scss';
 @import '../long/footer-long.scss';
@@ -119,10 +122,6 @@
   &__hero-list {
     list-style: disc inside;
     color: $blue;
-
-    a {
-      margin-left: -8px;
-    }
   }
 
   &__hero-list-item {
@@ -160,6 +159,12 @@
     }
   }
 
+  &__hero-list-item_short {
+    @include laptop {
+      white-space: normal;
+    }
+  }
+
   &__focus {
     @include tablet {
       padding-top: 100px;
@@ -180,6 +185,12 @@
 
     @include laptop {
       padding-bottom: 150px;
+    }
+  }
+
+  &__focus-wrapper {
+    @include tablet {
+      align-items: flex-start;
     }
   }
 
@@ -216,13 +227,29 @@
     }
   }
 
-  &__focus-paragraph_small {
+  &__focus-paragraph_medium {
     @include tablet {
       max-width: 80%;
     }
 
     @include laptop {
+      max-width: 920px;
+    }
+  }
+
+  &__focus-paragraph_small {
+    @include tablet {
+      max-width: 90%;
+    }
+
+    @include laptop {
       max-width: 825px;
+    }
+  }
+
+  &__focus-paragraph_smaller {
+    @include laptop {
+      max-width: 730px;
     }
   }
 
@@ -314,6 +341,7 @@
 
     @include desktop {
       max-width: 350px;
+      min-width: 350px;
 
       h4 {
         font-size: 18px;
@@ -525,7 +553,7 @@
       display: block;
       max-width: 100%;
       min-width: 100%;
-      border: $border-gray2;
+      border: none;
       border-radius: $border-radius-xs;
     }
   }
@@ -588,6 +616,16 @@
     @include tablet {
       display: flex;
       margin-bottom: $spacer * 10;
+    }
+  }
+
+  &__multichannel {
+    @include tablet {
+      margin-top: $spacer * 6;
+    }
+
+    .step-upside__header-text {
+      margin-left: 0px;
     }
   }
 }
@@ -738,6 +776,162 @@
 
     @include tablet {
       margin-top: $spacer * 10;
+    }
+  }
+}
+
+.multinumber {
+  &__hero-listblock {
+    padding: $spacer * 4 $spacer * 3;
+
+    @include smartphone {
+      padding: $spacer * 4;
+    }
+
+    @include tablet {
+      padding: 62px $spacer * 5;
+    }
+
+    @include tablet-1024 {
+      padding: 62px $spacer * 6;
+    }
+
+    @include laptop {
+      padding: 50px $spacer * 7 50px 31px;
+    }
+  }
+
+  &__hero-list {
+    list-style: disc outside;
+    margin-left: 20px;
+  }
+
+  &__scheme {
+    margin: $spacer * 5 0 0;
+
+    @include tablet {
+      margin: 0;
+      transform: scale(0.95);
+    }
+
+    @include desktop {
+      margin: 0 0 0 $spacer * 6;
+    }
+  }
+}
+
+.additional {
+  &__hero-listblock {
+    padding: $spacer * 4 $spacer * 3;
+
+    @include smartphone {
+      padding: $spacer * 4;
+    }
+
+    @include tablet {
+      padding: 62px $spacer * 5;
+    }
+
+    @include tablet-1024 {
+      padding: 62px $spacer * 6;
+    }
+
+    @include laptop {
+      padding: 50px $spacer * 7 50px 31px;
+    }
+  }
+
+  &__hero-list {
+    list-style: disc outside;
+    margin-left: 20px;
+  }
+
+  &__hero-caption {
+    text-align: left;
+    margin-top: $spacer * 6;
+
+    @include tablet {
+      margin-top: $spacer * 3;
+    }
+
+    @include tablet-1024 {
+      margin-top: $spacer * 16;
+    }
+
+    @include laptop {
+      margin-top: $spacer * 8;
+    }
+  }
+
+  &__card-caption {
+    color: $black;
+    font-weight: $medium;
+    max-width: unset;
+    margin-top: 0px;
+
+    @include laptop {
+      font-size: 18px;
+    }
+  }
+
+  &__number-cards {
+    margin: $spacer * 4 0 $spacer * 2;
+    @include flex-col;
+    align-items: center;
+
+    @include laptop {
+      margin: 0 0 0 24px;
+      align-self: flex-start;
+    }
+
+    @include desktop {
+      margin: 0 0 0 $spacer * 6;
+    }
+  }
+
+  &__number-card {
+    @include flex-col;
+    @include center;
+    @include font($semi-bold, 26px, $orange);
+    border-radius: 50px;
+    border: $border-black;
+    min-height: 74px;
+    min-width: 118px;
+    line-height: 130%;
+
+    @include tablet {
+      min-width: 130px;
+    }
+
+    @include laptop {
+      font-size: 36px;
+      min-width: 153px;
+      line-height: 140%;
+      min-height: 98px;
+    }
+  }
+
+  &__number-card-125 {
+    transform: rotate(-14.73deg);
+  }
+
+  &__number-card-505 {
+    transform: rotate(8.98deg);
+    margin-left: 5px;
+    margin-top: 15px;
+
+    @include tablet {
+      margin-left: $spacer * 4;
+      margin-top: 15px;
+    }
+  }
+
+  &__number-card-777 {
+    transform: rotate(30.24deg);
+    margin-top: 10px;
+
+    @include tablet {
+      margin-top: 20px;
     }
   }
 }
