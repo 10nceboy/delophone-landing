@@ -51,7 +51,7 @@ export default defineConfig({
         sip: resolve(__dirname, 'pages/seo/sip.html'),
         multinumber: resolve(__dirname, 'pages/seo/multinumber.html'),
         additional: resolve(__dirname, 'pages/seo/additional.html'),
-        additional: resolve(__dirname, 'pages/seo/united-lk.html')
+        ulk: resolve(__dirname, 'pages/seo/united-lk.html')
       }
     }
   }
