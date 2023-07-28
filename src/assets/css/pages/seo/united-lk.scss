@@ -163,20 +163,24 @@
     }
   }
 
-  &__tab-items {
-    flex-shrink: 0;
-    flex-grow: 1;
-  }
-
   &__tab-item {
     display: none;
     opacity: 0;
     transition: opacity 0.3s ease-in;
-    min-width: 60%;
+    min-width: 100%;
+    max-height: 350px;
 
     img {
-      min-height: 350px;
-      min-width: 100%;
+      min-height: 100%;
+      width: 100%;
+    }
+
+    @include tablet {
+      min-width: 510px;
+    }
+
+    @include tablet-1024 {
+      min-width: 564px;
     }
 
     @include laptop {
@@ -328,6 +332,10 @@
     display: block;
     transition: $collapse-transition-height;
     opacity: 0;
+  }
+
+  &__collapse-image {
+    max-width: 100%;
   }
 
   @keyframes flash {

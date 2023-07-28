@@ -20,6 +20,8 @@
 @import '../components/scheme';
 @import '../components/divider';
 @import '../components/tooltip';
+@import '../components/list';
+@import '../components/list-item';
 
 @import '../long/header-long.scss';
 @import '../long/footer-long.scss';
@@ -139,6 +141,10 @@
       font-size: 18px;
     }
 
+    @include tablet-768 {
+      font-size: 16px;
+    }
+
     @include tablet {
       font-size: 16px;
       margin: $spacer * 4 0 0;
@@ -209,6 +215,15 @@
       h2 {
         font-size: 32px;
       }
+    }
+  }
+
+  &__focus-header_short {
+    @include tablet {
+      max-width: 70%;
+    }
+    @include laptop {
+      max-width: 825px;
     }
   }
 
@@ -396,6 +411,7 @@
   &__star-card-caption {
     line-height: 150%;
     margin-top: $spacer * 2;
+    font-weight: 500;
 
     @include tablet {
       line-height: 155%;
@@ -818,6 +834,17 @@
       margin: 0 0 0 $spacer * 6;
     }
   }
+
+  &__break {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+
+    @include laptop {
+      display: none;
+    }
+  }
 }
 
 .additional {
@@ -932,6 +959,18 @@
 
     @include tablet {
       margin-top: 20px;
+    }
+  }
+
+  &__break {
+    display: block;
+
+    @include smartphone {
+      display: none;
+    }
+
+    @include tablet {
+      display: block;
     }
   }
 }
