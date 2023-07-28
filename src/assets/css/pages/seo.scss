@@ -412,6 +412,7 @@
     line-height: 150%;
     margin-top: $spacer * 2;
     font-weight: 500;
+    color: $light-gray;
 
     @include tablet {
       line-height: 155%;
