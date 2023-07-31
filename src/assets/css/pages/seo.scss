@@ -254,7 +254,7 @@
 
   &__focus-paragraph_small {
     @include tablet {
-      max-width: 90%;
+      max-width: 70%;
     }
 
     @include laptop {
@@ -836,6 +836,14 @@
     }
   }
 
+  &__hero-break {
+    display: none;
+
+    @include mobile-m {
+      display: block;
+    }
+  }
+
   &__break {
     display: none;
     @include tablet {
@@ -893,9 +901,13 @@
 
   &__card-caption {
     color: $black;
-    font-weight: $medium;
+    font-weight: $semi-bold;
     max-width: unset;
     margin-top: 0px;
+
+    @include tablet {
+      font-weight: $medium;
+    }
 
     @include laptop {
       font-size: 18px;
@@ -966,7 +978,7 @@
   &__break {
     display: block;
 
-    @include smartphone {
+    @include mobile-520 {
       display: none;
     }
 
