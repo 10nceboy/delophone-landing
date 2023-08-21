@@ -53,7 +53,10 @@ export default defineConfig({
         additional: resolve(__dirname, 'pages/seo/additional.html'),
         ulk: resolve(__dirname, 'pages/seo/united-lk.html'),
         docs: resolve(__dirname, 'pages/services/docs.html'),
-        contacts: resolve(__dirname, 'pages/services/contacts.html')
+        contacts: resolve(__dirname, 'pages/services/contacts.html'),
+        login: resolve(__dirname, 'pages/login/login.html'),
+        loginbase: resolve(__dirname, 'pages/login/login-base.html'),
+        loginoutbase: resolve(__dirname, 'pages/login/login-out-base.html')
       }
     }
   }
