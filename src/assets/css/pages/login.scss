@@ -1,0 +1,496 @@
+/* base */
+@import '../base/layout';
+@import '../base/reset';
+@import '../utils/index';
+
+/* components */
+@import '../components/button';
+@import '../components/header';
+@import '../components/dropdown';
+@import '../components/login';
+@import '../components/link';
+@import '../components/cards';
+@import '../components/footer';
+@import '../components/input';
+@import '../components/whatsapp';
+@import '../components/modal';
+@import '../components/overlay';
+@import '../components/breadcrumbs';
+@import '../components/icon';
+@import '../components/list';
+@import '../components/list-item';
+@import '../components/loader';
+
+@import '../long/header-long.scss';
+@import '../long/footer-long.scss';
+@import '../long/сards-long.scss';
+
+.login {
+  &__container {
+    margin: 0 auto;
+    @include flex-col;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__hero {
+    padding: 40px 0;
+
+    @include tablet {
+      padding: 80px 0;
+    }
+
+    @include laptop {
+      padding: 120px 0;
+    }
+  }
+
+  &__hero-header {
+    @include flex-row;
+    margin-bottom: 17px;
+
+    @include tablet {
+      margin-bottom: $spacer * 6;
+    }
+  }
+
+  &__logo {
+    margin-right: $spacer * 2;
+    max-width: 34px;
+    max-height: 34px;
+
+    @include smartphone {
+      max-width: 42px;
+      max-height: 42px;
+      min-height: 42px;
+      min-width: 42px;
+    }
+
+    @include tablet {
+      margin-right: $spacer * 3;
+    }
+  }
+
+  &__card {
+    padding: $spacer * 2 $spacer * 3 $spacer * 8;
+    min-width: 80%;
+
+    @include mobile-520 {
+      min-width: 85%;
+    }
+
+    @include tablet {
+      @include flex-col;
+      max-width: 745px;
+      min-width: 745px;
+      padding: $spacer * 4 $spacer * 4 $spacer * 8;
+    }
+  }
+
+  &__card_step-two {
+    @include flex-col;
+  }
+
+  &__card_step-two-out-base {
+    padding: $spacer * 2 $spacer * 2 3px $spacer * 3;
+    @include tablet {
+      padding: $spacer * 4 $spacer * 4 11px $spacer * 8;
+    }
+  }
+
+  &__step {
+    @include font($normal, 12px, $gray);
+    line-height: 155%;
+    margin-bottom: $spacer * 2;
+    text-align: right;
+
+    @include smartphone {
+      font-size: 14px;
+    }
+
+    @include tablet {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__label {
+    text-align: center;
+    margin-bottom: $spacer * 4;
+
+    @include tablet {
+      margin-bottom: $spacer * 5;
+    }
+  }
+
+  &__label-out-base {
+    text-align: left;
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__lable-in-base {
+    margin-bottom: $spacer * 2;
+  }
+
+  &__input {
+    @include flex-col;
+    width: 100%;
+    height: 55px;
+    padding: $spacer * 3;
+    font-size: 16px;
+    text-align: center;
+    caret-color: $blue;
+    border-radius: 5px;
+
+    &::placeholder {
+      color: $gray2;
+    }
+  }
+
+  &__submit-button {
+    width: 100%;
+    font-size: 16px;
+    line-height: 155%;
+  }
+
+  &__caption {
+    margin-top: $spacer * 4;
+
+    line-height: 155%;
+    @include font($normal, 15px, $gray);
+
+    @include smartphone {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      margin-top: $spacer * 3;
+      text-align: center;
+      align-self: center;
+    }
+  }
+
+  &__out-base-caption {
+    margin: $spacer 0 $spacer * 4;
+    color: $gray2;
+    font-size: 13px;
+
+    @include mobile-520 {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
+  &__feature-list {
+    align-self: flex-start;
+    margin-top: $spacer * 6;
+
+    @include tablet-768 {
+      display: flex;
+      align-self: center;
+    }
+
+    @include tablet {
+      display: flex;
+      align-self: center;
+    }
+  }
+
+  &__feature {
+    @include font($normal, 14px, $gray);
+    line-height: 140%;
+    margin: 0 0 $spacer * 3;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    @include tablet-768 {
+      line-height: 140%;
+      font-size: 14px;
+      margin: 0 10px 0 0;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    @include tablet {
+      line-height: 140%;
+      margin: 0 50px 0 0;
+      font-size: 16px;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    @include laptop {
+      margin: 0 66px 0 0;
+      font-size: 18px;
+    }
+  }
+
+  &__error {
+    @include font($normal, 11px, $red);
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+
+    @include mobile-520 {
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @include tablet {
+      font-size: 12px;
+    }
+  }
+
+  &__error_show {
+    opacity: 100%;
+  }
+
+  &__error_animated {
+    @keyframes drag {
+      0% {
+        transform: translateX(-10px);
+      }
+      25% {
+        transform: translateX(10px);
+      }
+
+      100% {
+        transform: translateX(00px);
+      }
+    }
+    animation: drag 0.5s linear;
+  }
+
+  &__card-out-base {
+    padding: $spacer * 4 $spacer * 3;
+    @include flex-col;
+
+    @include tablet {
+      padding: $spacer * 4 $spacer * 6;
+    }
+
+    @include laptop {
+      min-width: 577px;
+    }
+  }
+
+  &__card-out-base-header {
+    @include font($normal, 15px, $gray);
+    line-height: 155%;
+
+    @include mobile-520 {
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+
+  &__form_phone {
+    @include tablet {
+      min-width: 73%;
+      max-width: 73%;
+      align-self: center;
+    }
+
+    @include laptop {
+      min-width: 545px;
+      max-width: 545px;
+    }
+  }
+
+  &__number {
+    @include font($semi-bold, 15px, $black);
+
+    @include mobile-520 {
+      font-size: 16px;
+    }
+  }
+
+  &__break {
+    @include smartphone {
+      display: none;
+    }
+  }
+
+  &__our-number {
+    text-align: left;
+    margin-top: $spacer * 4;
+    h3 {
+      line-height: 130%;
+    }
+
+    @include mobile-520 {
+      text-align: center;
+    }
+
+    @include tablet {
+      text-align: center;
+      margin-top: $spacer * 6;
+    }
+  }
+
+  &__waiting {
+    @include flex-col;
+    align-items: center;
+    @include tablet {
+      @include flex-row;
+      align-self: center;
+    }
+  }
+
+  &__registration {
+    @include tablet {
+      min-width: 460px;
+      max-width: 460px;
+      text-align: center;
+    }
+  }
+
+  &__waiting-caption {
+    margin-top: 0px;
+    flex-shrink: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+    @include tablet {
+      margin: 0 $spacer * 4 0 $spacer * 2;
+    }
+
+    @include laptop {
+      margin: 0 $spacer * 6 0 $spacer * 2;
+      min-width: 106px;
+    }
+  }
+
+  &__waiting-error {
+    color: $red;
+    animation: flash 0.7s;
+
+    @include tablet {
+      margin-right: 74px;
+    }
+
+    @include laptop {
+      margin-right: 84px;
+    }
+
+    @keyframes flash {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__loader-wrapper {
+    display: flex;
+  }
+
+  &__loader {
+    flex-shrink: 0;
+  }
+
+  &__link-number-change {
+    @include font($normal, 15px, $blue);
+    align-self: center;
+    line-height: 155%;
+    text-decoration-line: underline;
+    display: block;
+
+    @include smartphone {
+      font-size: 16px;
+    }
+  }
+
+  &__error-phone-submit {
+    margin-top: $spacer * 2;
+    padding: 0 35px;
+    text-align: center;
+  }
+
+  &__code-form {
+    display: flex;
+    align-self: center;
+    margin-top: 15px;
+
+    @include tablet {
+      margin-top: 25px;
+    }
+  }
+
+  &__input-code {
+    margin-right: 12px;
+    border-radius: 5px;
+    max-width: 55px;
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  &__input-code_error {
+    box-shadow: 0 0 0 1px $red;
+    -webkit-box-shadow: 0 0 0 1px $red;
+  }
+
+  &__timer {
+    align-self: center;
+    @include font($normal, 13px, $gray);
+    line-height: 155%;
+
+    @include mobile-520 {
+      font-size: 14px;
+    }
+
+    @include tablet {
+      margin-bottom: $spacer * 4;
+    }
+
+    @include laptop {
+      margin-bottom: $spacer * 6;
+    }
+  }
+
+  &__buttonblock {
+    align-self: center;
+    @include flex-col;
+
+    @include tablet {
+      @include flex-row;
+    }
+  }
+
+  &__resend-code {
+    @include font($normal, 15px, $gray);
+    text-decoration: underline;
+    align-self: center;
+    margin: $spacer * 4 0 $spacer * 2;
+    line-height: 155%;
+
+    @include smartphone {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      margin: 0 $spacer * 6 0 0;
+    }
+  }
+
+  &__number-break {
+    display: none;
+
+    @include mobile-390 {
+      display: block;
+    }
+
+    @include mobile-520 {
+      display: none;
+    }
+  }
+}
