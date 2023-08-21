@@ -469,6 +469,8 @@
   &__resend-code {
     @include font($normal, 15px, $gray);
     text-decoration: underline;
+    border-radius: 0;
+    text-decoration-skip-ink: none;
     align-self: center;
     margin: $spacer * 4 0 $spacer * 2;
     line-height: 155%;
