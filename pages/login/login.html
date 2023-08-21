@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Делофон &ndash; Контакты</title>
+    <title>Делофон &ndash; Вход</title>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -73,9 +73,11 @@
     
     
     <script type="module" crossorigin src="/delophone-landing/assets/menu-a519aacc.js"></script>
-    <script type="module" crossorigin src="/delophone-landing/assets/tooltip-ec1d4e2e.js"></script>
+    <script type="module" crossorigin src="/delophone-landing/assets/index-98ae7fd2.js"></script>
+    <script type="module" crossorigin src="/delophone-landing/assets/login-c9fac22d.js"></script>
+    <script type="module" crossorigin src="/delophone-landing/assets/collapse-babc6f0a.js"></script>
     <script type="module" crossorigin src="/delophone-landing/assets/modal-6180ef38.js"></script>
-    <link rel="stylesheet" href="/delophone-landing/assets/services-dd414db8.css">
+    <link rel="stylesheet" href="/delophone-landing/assets/login-ac7c7ce1.css">
     <link rel="stylesheet" href="/delophone-landing/assets/сards-long-7e08b833.css">
   </head>
   <body>
@@ -588,195 +590,76 @@
                 Главная&nbsp;/</a
               >
             </li>
-            <li>Контакты</li>
+            <li>Вход в Делофон</li>
           </ul>
         </nav>
       </div>
-      <section class="services__hero">
+      <section class="login__hero">
         <div class="container">
-          <div class="contacts__container">
-            <div class="contacts__leftside">
-              <div class="services__hero-header">
-                <h1>Свяжитесь с&nbsp;нами</h1>
-              </div>
-              <div class="contacts__contact contacts__cities">
-                <svg
-                  class="contacts__contact-icon"
-                  width="44"
-                  height="44"
-                  viewBox="0 0 44 44"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M22 43C33.598 43 43 33.598 43 22C43 10.402 33.598 1 22 1C10.402 1 1 10.402 1 22C1 33.598 10.402 43 22 43Z"
-                    fill="white"
-                    stroke="#F88C28"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M17.2854 22.0783C18.2793 24.1103 19.9265 25.75 21.963 26.7347C22.112 26.8053 22.2768 26.8359 22.4413 26.8234C22.6057 26.811 22.764 26.756 22.9007 26.6637L25.8994 24.6642C26.032 24.5757 26.1846 24.5218 26.3433 24.5072C26.502 24.4926 26.6619 24.5179 26.8084 24.5806L32.4184 26.9849C32.6089 27.0659 32.768 27.2065 32.8717 27.3858C32.9754 27.565 33.018 27.7731 32.9931 27.9786C32.8158 29.3661 32.1388 30.6414 31.0889 31.5657C30.039 32.49 28.6883 32.9999 27.2895 33C22.9692 33 18.826 31.2838 15.7711 28.2289C12.7162 25.174 11 21.0308 11 16.7105C11.0001 15.3117 11.51 13.961 12.4343 12.9111C13.3586 11.8612 14.6339 11.1842 16.0214 11.0069C16.2269 10.982 16.435 11.0246 16.6142 11.1283C16.7934 11.232 16.9341 11.3911 17.0151 11.5816L19.4214 17.1965C19.4837 17.3417 19.5091 17.5001 19.4953 17.6575C19.4815 17.8149 19.429 17.9664 19.3425 18.0986L17.3498 21.1433C17.2592 21.2803 17.2055 21.4384 17.1942 21.6023C17.1829 21.7662 17.2143 21.9302 17.2854 22.0783Z"
-                    fill="white"
-                    stroke="#F88C28"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <ul>
-                  <li class="contacts__list-item contacts__city">
-                    <span>Москва:</span
-                    ><span class="contacts__phone-number"
-                      >+7 (495) 286-01-11</span
-                    >
-                  </li>
-                  <li class="contacts__list-item contacts__city">
-                    <span>Санкт-Петербург: </span
-                    ><span class="contacts__phone-number"
-                      >+7 (812) 409-05-00</span
-                    >
-                  </li>
-                  <li class="contacts__list-item">
-                    <span>Сочи:</span
-                    ><span class="contacts__phone-number"
-                      >+7 (862) 225-75-32</span
-                    >
-                  </li>
-                </ul>
-              </div>
-              <div class="contacts__contact contacts__email">
-                <svg
-                  class="contacts__contact-icon"
-                  width="44"
-                  height="44"
-                  viewBox="0 0 44 44"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M22 43C33.598 43 43 33.598 43 22C43 10.402 33.598 1 22 1C10.402 1 1 10.402 1 22C1 33.598 10.402 43 22 43Z"
-                    fill="white"
-                    stroke="#F88C28"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M11.4783 14.4848L21.3943 22.7097C21.7466 23.002 22.2534 23.002 22.6057 22.7097L32.5217 14.4848M11.9565 14H32.0435C32.5718 14 33 14.4341 33 14.9697V29.0303C33 29.5659 32.5718 30 32.0435 30H11.9565C11.4282 30 11 29.5659 11 29.0303V14.9697C11 14.4341 11.4282 14 11.9565 14Z"
-                    stroke="#F88C28"
-                  />
-                </svg>
-                <ul>
-                  <li class="contacts__list-item contacts__email">
-                    <a
-                      class="link"
-                      aria-label="help@delofon.ru"
-                      href="mailto:help@delofon.ru"
-                      >help@delofon.ru</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <div class="contacts__contact contacts__adress">
-                <svg
-                  class="contacts__contact-icon"
-                  width="44"
-                  height="44"
-                  viewBox="0 0 44 44"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M22 43C33.598 43 43 33.598 43 22C43 10.402 33.598 1 22 1C10.402 1 1 10.402 1 22C1 33.598 10.402 43 22 43Z"
-                    fill="white"
-                    stroke="#F88C28"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M18.2884 11.6626L18.5621 11.54C20.7493 10.5603 23.2507 10.5602 25.4379 11.54L25.7116 11.6626C27.0871 12.2788 28.2432 13.298 29.027 14.5854C30.2665 16.6213 30.4531 19.1349 29.5342 21.3342C28.0489 24.8891 26.1522 28.2711 23.8912 31.3906L22.5618 33.2249C22.2848 33.6071 21.7152 33.6071 21.4382 33.2249L20.1088 31.3906C17.8478 28.2712 15.9511 24.8891 14.4658 21.3342C13.5469 19.1349 13.7335 16.6213 14.973 14.5854C15.7568 13.298 16.9129 12.2788 18.2884 11.6626Z"
-                    stroke="#F88C28"
-                  />
-                  <path
-                    d="M23.6436 21.4907C22.6383 22.1211 21.3611 22.1211 20.3558 21.4907C18.4222 20.2781 18.4222 17.4608 20.3558 16.2482C21.3611 15.6178 22.6383 15.6178 23.6436 16.2482C25.5771 17.4608 25.5771 20.2781 23.6436 21.4907Z"
-                    stroke="#F88C28"
-                  />
-                </svg>
-                <ul>
-                  <li class="contacts__list-item">
-                    г. Москва, проезд Бумажный, д. 14, стр. 1, офис 805
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab9ed47f1aead501c3d9d08d3376aacda1aadefe8503d060b282e8cb27420531b&amp;source=constructor"
-              width="100%"
-              height="619"
-              class="contacts__map"
-              frameborder="0"
-            ></iframe>
-          </div>
-        </div>
-      </section>
-      <section class="startuse startuse_gray services__startuse">
-        <div class="container">
-          <div class="startuse__container">
-            <div class="startuse__textblock">
-              <div class="startuse__header">
-                <h2>Начните использовать сразу после регистрации</h2>
-              </div>
-              <div class="text_regular startuse__text">
-                Получите доступ ко всем возможностям виртуальной АТС
-              </div>
-              <ul class="list">
-                <li
-                  class="startuse__list-item list-item list-item_checked text_small"
-                >
-                  Без навязчивых звонков после регистрации
-                </li>
-                <li
-                  class="startuse__list-item list-item list-item_checked text_small"
-                >
-                  Настройте самостоятельно или с нашим менеджером
-                </li>
-                <li
-                  class="startuse__list-item list-item list-item_checked text_small"
-                >
-                  3 сотрудника, 1 номер, 100 ₽ на балансе
-                </li>
-                <li
-                  class="startuse__list-item list-item list-item_checked text_small"
-                >
-                  Протестируйте АТС сразу после регистрации
-                </li>
-              </ul>
-              <a
-                class="button button_blue button__start startuse__button"
-                href="https://delofon.ru/cabinet/login"
+          <div class="login__container">
+            <div class="login__hero-header">
+              <svg
+                class="login__logo"
+                width="42"
+                height="42"
+                viewBox="0 0 42 42"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                Начать бесплатно
-              </a>
+                <path
+                  d="M26.0381 0.632812V10.6737C28.3785 11.8126 30.2635 13.711 31.3854 16.0588C32.5073 18.4067 32.7997 21.0653 32.2151 23.6007C31.6304 26.1361 30.2031 28.3985 28.1662 30.0185C26.1293 31.6386 23.6031 32.5206 21 32.5206C18.3969 32.5206 15.8707 31.6386 13.8338 30.0185C11.7969 28.3985 10.3696 26.1361 9.78494 23.6007C9.20025 21.0653 9.49271 18.4067 10.6146 16.0588C11.7364 13.711 13.6215 11.8126 15.9619 10.6737V0.632812C10.9816 1.86301 6.62415 4.87283 3.71189 9.0942C0.799621 13.3156 -0.465983 18.4565 0.153943 23.5466C0.773868 28.6367 3.23644 33.324 7.07688 36.7237C10.9173 40.1234 15.8699 42.0004 21 42.0004C26.1301 42.0004 31.0827 40.1234 34.9231 36.7237C38.7636 33.324 41.2261 28.6367 41.8461 23.5466C42.466 18.4565 41.2004 13.3156 38.2881 9.0942C35.3758 4.87283 31.0184 1.86301 26.0381 0.632812Z"
+                  fill="#2B8FEB"
+                />
+                <path
+                  d="M14.608 22.0991C14.8255 23.2818 15.3589 24.3838 16.1517 25.2882C16.9446 26.1927 17.9674 26.866 19.1118 27.2369C20.2563 27.6078 21.4797 27.6625 22.6527 27.3951C23.8257 27.1278 24.9045 26.5483 25.7749 25.7181C26.6453 24.888 27.2749 23.838 27.5971 22.6794C27.9192 21.5207 27.9219 20.2966 27.6049 19.1366C27.2879 17.9765 26.6629 16.9238 25.7961 16.0898C24.9294 15.2558 23.8531 14.6716 22.6814 14.3991V0H19.5999V14.3375C17.9371 14.7351 16.4905 15.7557 15.5588 17.1886C14.627 18.6214 14.2811 20.3572 14.5926 22.0375L14.608 22.0991Z"
+                  fill="#2B8FEB"
+                />
+              </svg>
+              <h1>Вход в Делофон</h1>
             </div>
-            <div class="startuse__image">
-              <img
-                alt="Шаги для использования"
-                src="/delophone-landing/startuse__price.svg"
-                class="no-select"
-              />
-            </div>
-            <div class="startuse__image_mobile">
-              <img
-                alt="Шаги для использования"
-                src="/delophone-landing/stepsuse.mobile.svg"
-                class="no-select"
-              />
-            </div>
-            <button
-              type="button"
-              class="button button_blue button__start startuse__button_mobile"
+            <div
+              class="card card_light-gray card_rectangle login__card login__card_step-one"
             >
-              Начать бесплатно
-            </button>
+              <div class="login__step">Шаг 1/2</div>
+              <div class="login__label"><h4>Введите номер телефона</h4></div>
+              <form
+                class="login__form login__form_phone"
+                action="login-out-base.html"
+              >
+                <input
+                  type="text"
+                  name="phone"
+                  minlength="11"
+                  maxlength="20"
+                  placeholder="+7 (___) ___-__-__"
+                  class="input input_white login__input login__input-number"
+                />
+                <div class="login__error login__error-no-tel">
+                  Введите номер телефона
+                </div>
+                <button
+                  type="submit"
+                  class="button button_blue login__submit-button login__phone-number-submit"
+                >
+                  Далее
+                </button>
+              </form>
+              <div class="login__caption login__registration">
+                Регистрация не&nbsp;требуется. Личный кабинет создаётся
+                автоматически при&nbsp;первом входе.
+              </div>
+            </div>
+            <ul class="login__feature-list">
+              <li class="list-item list-item_checked login__feature">
+                Всегда свободный телефон
+              </li>
+              <li class="list-item list-item_checked login__feature">
+                Звонки с&nbsp;любых устройств
+              </li>
+              <li class="list-item list-item_checked login__feature">
+                Сохраните прежний&nbsp;номер
+              </li>
+            </ul>
           </div>
         </div>
       </section>
