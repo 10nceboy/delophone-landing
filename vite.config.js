@@ -59,7 +59,7 @@ export default defineConfig({
         loginoutbase: resolve(__dirname, 'pages/login/login-out-base.html'),
         zvonokcase: resolve(__dirname, 'pages/cases/zvonok.html'),
         unipizzacase: resolve(__dirname, 'pages/cases/unipizza.html'),
-        goodsellercase: resolve(__dirname, 'pages/cases/unipizza.html'),
+        goodsellercase: resolve(__dirname, 'pages/cases/goodseller.html'),
         floartcase: resolve(__dirname, 'pages/cases/floart.html'),
         sputnikcase: resolve(__dirname, 'pages/cases/sputnik.html'),
         educacase: resolve(__dirname, 'pages/cases/educa.html')
