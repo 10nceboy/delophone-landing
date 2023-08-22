@@ -14,7 +14,7 @@
   }
 
   @include tablet {
-    margin-top: $spacer * 9;
+    margin-top: 95px;
     margin-bottom: 100px;
   }
 
@@ -130,6 +130,7 @@
 
   &__imageblock {
     display: none;
+    position: relative;
 
     @include tablet {
       display: block;
@@ -146,6 +147,7 @@
       @include tablet {
         width: 313px;
         height: 315px;
+        z-index: -1;
 
         @include laptop {
           width: 522px;
@@ -158,6 +160,7 @@
   &__imageblock_mobile {
     display: block;
     margin: $spacer * 4 auto 0;
+    position: relative;
 
     @include tablet {
       display: none;
@@ -277,4 +280,96 @@
   @include tablet {
     width: 100%;
   }
+}
+
+.hero__circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid $black;
+  @include font($semi-bold, 14px, $orange);
+  @include flex-col;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: -1;
+  background-color: $white;
+  min-width: 108px;
+  min-height: 108px;
+
+  @include laptop {
+    min-width: 158px;
+    min-height: 158px;
+    font-size: 18px;
+  }
+
+  &_price {
+    @include tablet {
+      top: -8%;
+      left: -15%;
+    }
+
+    @include laptop {
+      top: -4%;
+      left: -11%;
+    }
+  }
+
+  &_out {
+    @include tablet {
+      top: 0%;
+      left: 87%;
+      z-index: 1;
+      min-width: 98px;
+      min-height: 98px;
+    }
+
+    @include laptop {
+      top: 2%;
+      left: 84%;
+      min-width: 138px;
+      min-height: 138px;
+    }
+
+    @include desktop {
+      top: 2%;
+      left: 88%;
+      min-width: 158px;
+      min-height: 158px;
+    }
+  }
+
+  &_abon {
+    @include tablet {
+      bottom: -5.8%;
+      left: 80%;
+      z-index: 1;
+      min-width: 98px;
+      min-height: 98px;
+    }
+
+    @include laptop {
+      bottom: -4.2%;
+      left: 78%;
+      min-width: 136px;
+      min-height: 136px;
+    }
+
+    @include desktop {
+      left: 78%;
+    }
+  }
+}
+
+.hero__list {
+  display: block;
+  margin-top: $spacer * 3;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.hero__list-item {
+  @include font($normal, 15px, $gray);
+  margin: 0 0 $spacer * 2 0;
 }
