@@ -286,7 +286,7 @@
   position: absolute;
   border-radius: 50%;
   border: 1px solid $black;
-  @include font($semi-bold, 14px, $orange);
+  @include font($medium, 14px, $orange);
   @include flex-col;
   align-items: center;
   justify-content: center;
