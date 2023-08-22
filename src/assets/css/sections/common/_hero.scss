@@ -39,6 +39,8 @@
 
   &__card {
     padding: $spacer * 4;
+    cursor: default;
+    user-select: none;
 
     margin: 0 0 $spacer * 3 0;
     height: 33.3%;
