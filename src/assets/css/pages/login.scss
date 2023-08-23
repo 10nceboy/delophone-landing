@@ -236,6 +236,8 @@
     @include font($normal, 11px, $red);
     opacity: 0;
     transition: opacity 0.3s ease-in;
+    text-align: center;
+    align-self: center;
 
     @include mobile-520 {
       font-size: 12px;

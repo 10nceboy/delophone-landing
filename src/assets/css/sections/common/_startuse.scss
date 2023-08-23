@@ -96,15 +96,21 @@
   &__image_mobile {
     display: block;
     margin: $spacer * 5 0;
-    min-width: 320px;
-    max-width: 320px;
+    min-width: 290px;
+    max-width: 290px;
 
     img {
-      max-width: 320px;
+      max-width: 290px;
     }
 
     @include smartphone {
       display: none;
+      min-width: 320px;
+      max-width: 320px;
+
+      img {
+        max-width: 320px;
+      }
     }
   }
 
