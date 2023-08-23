@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const dropdowns = document.querySelector('.header__dropdown');
   const overlay = document.querySelector('.overlay');
 
-  burgerButton.addEventListener('click', () => {
+  burgerButton?.addEventListener('click', () => {
     burgerButton.classList.toggle('header__burger_hidden');
     changeButtonColor.classList.add('active');
     document.querySelector('.header').classList.add('header_active');
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleOverflow(true);
   });
 
-  burgerCloseButton.addEventListener('click', () => {
+  burgerCloseButton?.addEventListener('click', () => {
     burgerButton.classList.remove('header__burger_hidden');
     changeButtonColor.classList.remove('active');
     document.querySelector('.header').classList.remove('header_active');

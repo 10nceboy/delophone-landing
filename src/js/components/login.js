@@ -32,7 +32,7 @@ const renderTimer = (timerTime) => {
     wrongCode.classList.add('login__error_show');
     wrongCode.innerText = errorMessages.connectionCode;
     inputCodes.forEach((e) => {
-      e.classList.add('login__input-code_error');
+      e.classList.add('login__input_error');
       e.setAttribute('disabled', '');
     });
   }
@@ -61,6 +61,7 @@ phoneNumberSumbit?.addEventListener('click', (event) => {
   if (inputNumber.value.trim() === '') {
     event.preventDefault();
     telError.classList.add('login__error_show');
+    inputNumber.classList.add('login__input_error');
     telError.innerText = errorMessages.nullNumber;
     clickCount++;
     if (clickCount > 1) {
@@ -72,6 +73,7 @@ phoneNumberSumbit?.addEventListener('click', (event) => {
   } else if (inputNumber.value.trim().length < 18) {
     event.preventDefault();
     telError.classList.add('login__error_show');
+    inputNumber.classList.add('login__input_error');
     telError.innerText = errorMessages.wrongNumber;
     clickCount++;
     if (clickCount > 1) {
@@ -82,6 +84,7 @@ phoneNumberSumbit?.addEventListener('click', (event) => {
     }
   } else if (inputNumber.value.trim().length === 18) {
     telError.classList.remove('login__error_show');
+    inputNumber.classList.remove('login__input_error');
     sessionStorage.setItem('phone', inputNumber.value.trim());
   }
 });
@@ -189,15 +192,13 @@ inputCodes.forEach((input, index) =>
         document
           .querySelector('.login__error-wrong-code')
           .classList.add('login__error_show');
-        inputCodes.forEach((e) => e.classList.add('login__input-code_error'));
+        inputCodes.forEach((e) => e.classList.add('login__input_error'));
       } else {
         document
           .querySelector('.login__error-wrong-code')
           .classList.remove('login__error_show');
         resetTimer();
-        inputCodes.forEach((e) =>
-          e.classList.remove('login__input-code_error')
-        );
+        inputCodes.forEach((e) => e.classList.remove('login__input_error'));
       }
     }
   })
