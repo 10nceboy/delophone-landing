@@ -4,6 +4,7 @@ import {
   timerTime,
   errorMessages
 } from '../constants/login';
+import { formatPhoneNumber } from '../utils/common';
 import { resetTimer, startTimer } from '../utils/timer';
 import IMask from 'imask';
 
@@ -16,6 +17,8 @@ const resendCodeButton = document.querySelector('.login__resend-code');
 const timer = document.querySelector('.login__timer');
 const waiting = document.querySelector('.login__waiting-caption');
 const wrongCode = document.querySelector('.login__error-wrong-code');
+
+console.log(numberInBaseMock);
 
 const renderTimer = (timerTime) => {
   const minutes = Math.floor(timerTime / 60);
@@ -51,7 +54,7 @@ const maskOptions = {
   commit: (value) => value === inputNumber.value
 };
 
-inputNumber?.addEventListener('focus', () => {
+inputNumber?.addEventListener('input', () => {
   const phoneMask = IMask(inputNumber, maskOptions);
 });
 
@@ -90,7 +93,8 @@ phoneNumberSumbit?.addEventListener('click', (event) => {
 });
 
 inputNumber?.addEventListener('input', () => {
-  if (inputNumber.value.trim() === numberInBaseMock) {
+  console.log(inputNumber.value);
+  if (inputNumber.value.trim() == numberInBaseMock) {
     document.querySelector('.login__form_phone').action = 'login-base.html';
   } else
     document.querySelector('.login__form_phone').action = 'login-out-base.html';
