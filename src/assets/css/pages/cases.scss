@@ -1,0 +1,36 @@
+@import '../utils/index';
+
+@import '../components/carousel';
+
+@import '../sections/common/cases';
+
+.cases {
+  &__hero-list {
+    margin-top: $spacer * 3;
+
+    @include laptop {
+      margin-top: $spacer * 7;
+    }
+  }
+
+  &__hero-text {
+    @include laptop {
+      max-width: 570px;
+    }
+  }
+}
+
+.zvonok {
+  &__hero-imageblock {
+    @include laptop {
+      max-height: 444px;
+      border-radius: 5px;
+
+      img {
+        max-width: 510px;
+        border-radius: 12px;
+        max-height: 431px;
+      }
+    }
+  }
+}
