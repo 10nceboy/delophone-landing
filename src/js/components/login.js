@@ -203,6 +203,7 @@ inputCodes.forEach((input, index) =>
          </div>`;
         } else {
           wrongCode.innerText = errorMessages.noAttempts;
+          resetTimer();
         }
 
         inputCodes.forEach((e) => {
