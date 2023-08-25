@@ -41,7 +41,7 @@ if (inputNumber) {
   const maskOptions = {
     mask: '',
     lazy: true,
-    overwrite: true,
+    overwrite: false,
     prepare: (value) => value,
     commit: (value) => value === inputNumber.value
   };
@@ -49,11 +49,8 @@ if (inputNumber) {
   const phoneMask = IMask(inputNumber, maskOptions);
 
   inputNumber?.addEventListener('focus', () => {
-    console.log(inputNumber.value);
-
     phoneMask.updateOptions({
       mask: '+{7} (000) 000-00-00',
-      maxLength: 18,
       lazy: false
     });
   });
@@ -73,6 +70,7 @@ if (inputNumber) {
       }, 10);
     } else {
       phoneMask.value = paste;
+      inputNumber.value = paste;
     }
   });
 
@@ -93,7 +91,6 @@ if (inputNumber) {
         }, 150);
       }
     } else if (formatValue.length < 10) {
-      console.log(formatValue.length);
       event.preventDefault();
       telError.classList.add('login__error_show');
       inputNumber.classList.add('login__input_error');
@@ -113,7 +110,9 @@ if (inputNumber) {
   });
 
   inputNumber?.addEventListener('input', () => {
+    phoneMask.updateValue();
     let formatValue = phoneNumberToString(inputNumber.value).trim();
+
     if (formatValue !== '' && formatValue.length < 1) {
       telError.classList.remove('login__error_show');
       inputNumber.classList.remove('login__input_error');
@@ -123,7 +122,7 @@ if (inputNumber) {
       telError.classList.remove('login__error_show');
       inputNumber.classList.remove('login__input_error');
     }
-    if (formatValue === phoneNumberToString(numberInBaseMock)) {
+    if (inputNumber.value.trim() === numberInBaseMock) {
       document.querySelector('.login__form_phone').action = 'login-base.html';
     } else
       document.querySelector('.login__form_phone').action =
