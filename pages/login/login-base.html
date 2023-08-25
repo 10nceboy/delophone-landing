@@ -73,10 +73,10 @@
     
     <script type="module" crossorigin src="/delophone-landing/assets/menu-8e4a8b92.js"></script>
     <script type="module" crossorigin src="/delophone-landing/assets/index-98ae7fd2.js"></script>
-    <script type="module" crossorigin src="/delophone-landing/assets/login-cbe10b1a.js"></script>
+    <script type="module" crossorigin src="/delophone-landing/assets/login-33b56691.js"></script>
     <script type="module" crossorigin src="/delophone-landing/assets/collapse-ee18f853.js"></script>
     <script type="module" crossorigin src="/delophone-landing/assets/modal-12866326.js"></script>
-    <link rel="stylesheet" href="/delophone-landing/assets/login-14169d3e.css">
+    <link rel="stylesheet" href="/delophone-landing/assets/login-5c8109e5.css">
     <link rel="stylesheet" href="/delophone-landing/assets/сards-long-7e08b833.css">
   </head>
   <body>
@@ -123,6 +123,7 @@
                   data-code="1"
                   type="text"
                   maxlength="1"
+                  autofocus
                 />
                 <input
                   class="input input_white login__input login__input-code"
@@ -149,7 +150,8 @@
                 />
               </form>
               <div class="login__error login__error-wrong-code">
-                Вы ввели неверный код, попробуйте ещё раз
+                Вы ввели неверный код, осталось попыток:
+                <span class="login__сode-attepmts">2</span>
               </div>
               <div class="login__timer">
                 Код действителен ещё&nbsp;<span class="timer">
