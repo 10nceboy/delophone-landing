@@ -239,6 +239,7 @@
     transition: opacity 0.3s ease-in;
     text-align: center;
     align-self: center;
+    margin: $spacer * 2 0;
 
     @include mobile-520 {
       font-size: 12px;

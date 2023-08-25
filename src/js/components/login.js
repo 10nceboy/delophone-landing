@@ -4,7 +4,6 @@ import {
   timerTime,
   errorMessages
 } from '../constants/login';
-import { formatPhoneNumber } from '../utils/common';
 import { resetTimer, startTimer } from '../utils/timer';
 import IMask from 'imask';
 
@@ -17,8 +16,7 @@ const resendCodeButton = document.querySelector('.login__resend-code');
 const timer = document.querySelector('.login__timer');
 const waiting = document.querySelector('.login__waiting-caption');
 const wrongCode = document.querySelector('.login__error-wrong-code');
-
-console.log(numberInBaseMock);
+const attemptsSpan = document.querySelector('.login__сode-attepmts');
 
 const renderTimer = (timerTime) => {
   const minutes = Math.floor(timerTime / 60);
@@ -26,18 +24,11 @@ const renderTimer = (timerTime) => {
   const timerMinutes = document.querySelector('.minutes');
   const timerSeconds = document.querySelector('.seconds');
 
-  timerMinutes.textContent = `${minutes} мин`;
-  timerSeconds.textContent =
-    seconds < 10 ? `0${seconds} сек` : `${seconds} сек`;
+  timerMinutes.textContent = minutes !== 0 ? `${minutes} мин` : '';
+  timerSeconds.textContent = `${seconds} сек`;
 
   if (timerTime <= 0) {
     resetTimer();
-    wrongCode.classList.add('login__error_show');
-    wrongCode.innerText = errorMessages.connectionCode;
-    inputCodes.forEach((e) => {
-      e.classList.add('login__input_error');
-      e.setAttribute('disabled', '');
-    });
   }
 };
 
@@ -93,7 +84,10 @@ phoneNumberSumbit?.addEventListener('click', (event) => {
 });
 
 inputNumber?.addEventListener('input', () => {
-  console.log(inputNumber.value);
+  if (inputNumber.value.trim().length === 18) {
+    telError.classList.remove('login__error_show');
+    inputNumber.classList.remove('login__input_error');
+  }
   if (inputNumber.value.trim() == numberInBaseMock) {
     document.querySelector('.login__form_phone').action = 'login-base.html';
   } else
@@ -132,7 +126,6 @@ inputCodes?.forEach((input) =>
   input.addEventListener('keydown', (event) => {
     const allowedKeys = [
       'Enter',
-      'Tab',
       'Backspace',
       'Delete',
       'ArrowUp',
@@ -183,7 +176,8 @@ inputCodes.forEach((input, index) =>
   })
 );
 
-const concatArr = [];
+let concatArr = [];
+let attepmts = 3;
 
 inputCodes.forEach((input, index) =>
   input.addEventListener('input', (event) => {
@@ -192,17 +186,34 @@ inputCodes.forEach((input, index) =>
     }
 
     if (concatArr.length == 4) {
+      const currentTimerTime = parseInt(
+        document.querySelector('.seconds').innerText
+      );
       if (concatArr.join('') !== validationCodeMock) {
-        document
-          .querySelector('.login__error-wrong-code')
-          .classList.add('login__error_show');
-        inputCodes.forEach((e) => e.classList.add('login__input_error'));
-      } else {
+        wrongCode.classList.add('login__error_show');
+        if (attepmts > 1) {
+          attepmts--;
+          attemptsSpan.innerText = attepmts;
+        } else {
+          wrongCode.innerText = errorMessages.noAttempts;
+        }
+
+        inputCodes.forEach((e) => {
+          e.classList.add('login__input_error');
+          e.value = '';
+          inputCodes[0].focus();
+          concatArr = [];
+        });
+      } else if (currentTimerTime > 0) {
         document
           .querySelector('.login__error-wrong-code')
           .classList.remove('login__error_show');
         resetTimer();
         inputCodes.forEach((e) => e.classList.remove('login__input_error'));
+      } else if (currentTimerTime <= 0) {
+        wrongCode.classList.add('login__error_show');
+        inputCodes.forEach((e) => e.classList.add('login__input_error'));
+        wrongCode.innerText = errorMessages.oldCode;
       }
     }
   })
@@ -214,8 +225,9 @@ resendCodeButton?.addEventListener('click', () => {
   startTimer(renderTimer);
   wrongCode.classList.remove('login__error_show');
   inputCodes.forEach((e) => {
-    e.classList.remove('login__input-code_error');
-    e.removeAttribute('disabled');
+    e.classList.remove('login__input_error');
+    e.value = null;
+    inputCodes[0].focus();
   });
 
   setTimeout(() => {

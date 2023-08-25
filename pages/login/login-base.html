@@ -116,6 +116,7 @@
                   data-code="1"
                   type="text"
                   maxlength="1"
+                  autofocus
                 />
                 <input
                   class="input input_white login__input login__input-code"
@@ -142,7 +143,8 @@
                 />
               </form>
               <div class="login__error login__error-wrong-code">
-                Вы ввели неверный код, попробуйте ещё раз
+                Вы ввели неверный код, осталось попыток:
+                <span class="login__сode-attepmts">2</span>
               </div>
               <div class="login__timer">
                 Код действителен ещё&nbsp;<span class="timer">
