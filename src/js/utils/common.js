@@ -41,6 +41,14 @@ export const formatPhoneNumber = (str) => {
   }
 };
 
+export const phoneNumberToString = (inputString) => {
+  const modifiedString = inputString
+    .replace(/[()_-]/g, '')
+    .replace('+7', '')
+    .replace(/\s+/g, '');
+  return modifiedString;
+};
+
 export const declination = (number, txt, cases = [2, 0, 1, 1, 1, 2]) =>
   txt[
     number % 100 > 4 && number % 100 < 20

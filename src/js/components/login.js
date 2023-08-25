@@ -4,6 +4,7 @@ import {
   timerTime,
   errorMessages
 } from '../constants/login';
+import { phoneNumberToString } from '../utils/common';
 import { resetTimer, startTimer } from '../utils/timer';
 import IMask from 'imask';
 
@@ -36,95 +37,133 @@ if (timer) {
   startTimer(renderTimer);
 }
 
-const maskOptions = {
-  mask: '+{7} (000) 000-00-00',
-  lazy: true,
-  overwrite: true,
-  prepare: (value) => value,
-  commit: (value) => value === inputNumber.value
-};
+if (inputNumber) {
+  const maskOptions = {
+    mask: '',
+    lazy: true,
+    overwrite: true,
+    prepare: (value) => value,
+    commit: (value) => value === inputNumber.value
+  };
 
-inputNumber?.addEventListener('input', () => {
   const phoneMask = IMask(inputNumber, maskOptions);
-});
 
-let clickCount = 0;
+  inputNumber?.addEventListener('focus', () => {
+    console.log(inputNumber.value);
 
-phoneNumberSumbit?.addEventListener('click', (event) => {
-  if (inputNumber.value.trim() === '') {
-    event.preventDefault();
-    telError.classList.add('login__error_show');
-    inputNumber.classList.add('login__input_error');
-    telError.innerText = errorMessages.nullNumber;
-    clickCount++;
-    if (clickCount > 1) {
-      telError.classList.add('login__error_animated');
+    phoneMask.updateOptions({
+      mask: '+{7} (000) 000-00-00',
+      maxLength: 18,
+      lazy: false
+    });
+  });
+
+  inputNumber?.addEventListener('paste', (event) => {
+    let paste = event.clipboardData.getData('text');
+
+    if (paste.length < 18) {
+      phoneMask.updateOptions({
+        lazy: true
+      });
+
       window.setTimeout(() => {
-        telError.classList.remove('login__error_animated');
-      }, 150);
+        phoneMask.updateOptions({
+          lazy: false
+        });
+      }, 10);
+    } else {
+      phoneMask.value = paste;
     }
-  } else if (inputNumber.value.trim().length < 18) {
+  });
+
+  let clickCount = 0;
+
+  phoneNumberSumbit?.addEventListener('click', (event) => {
+    let formatValue = phoneNumberToString(inputNumber.value).trim();
+    if (formatValue === '') {
+      event.preventDefault();
+      telError.classList.add('login__error_show');
+      inputNumber.classList.add('login__input_error');
+      telError.innerText = errorMessages.nullNumber;
+      clickCount++;
+      if (clickCount > 1) {
+        telError.classList.add('login__error_animated');
+        window.setTimeout(() => {
+          telError.classList.remove('login__error_animated');
+        }, 150);
+      }
+    } else if (formatValue.length < 10) {
+      console.log(formatValue.length);
+      event.preventDefault();
+      telError.classList.add('login__error_show');
+      inputNumber.classList.add('login__input_error');
+      telError.innerText = errorMessages.wrongNumber;
+      clickCount++;
+      if (clickCount > 1) {
+        telError.classList.add('login__error_animated');
+        window.setTimeout(() => {
+          telError.classList.remove('login__error_animated');
+        }, 150);
+      }
+    } else if (formatValue.length === 10) {
+      telError.classList.remove('login__error_show');
+      inputNumber.classList.remove('login__input_error');
+      sessionStorage.setItem('phone', inputNumber.value.trim());
+    }
+  });
+
+  inputNumber?.addEventListener('input', () => {
+    let formatValue = phoneNumberToString(inputNumber.value).trim();
+    if (formatValue !== '' && formatValue.length < 1) {
+      telError.classList.remove('login__error_show');
+      inputNumber.classList.remove('login__input_error');
+    }
+
+    if (inputNumber.value.trim().length === 10) {
+      telError.classList.remove('login__error_show');
+      inputNumber.classList.remove('login__input_error');
+    }
+    if (formatValue === phoneNumberToString(numberInBaseMock)) {
+      document.querySelector('.login__form_phone').action = 'login-base.html';
+    } else
+      document.querySelector('.login__form_phone').action =
+        'login-out-base.html';
+  });
+
+  inputNumber?.addEventListener('keydown', (event) => {
+    let allowedKeys = [];
+
+    if (event.ctrlKey) {
+      allowedKeys = ['a', 'x', 'v', 'z', 'c'];
+    } else
+      allowedKeys = [
+        'Enter',
+        'Tab',
+        'Backspace',
+        'Delete',
+        'Ctrl',
+        'ArrowUp',
+        'ArrowDown',
+        'ArrowLeft',
+        'ArrowRight',
+        '0',
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9'
+      ];
+
+    if (allowedKeys.includes(event.key)) {
+      return true;
+    }
     event.preventDefault();
-    telError.classList.add('login__error_show');
-    inputNumber.classList.add('login__input_error');
-    telError.innerText = errorMessages.wrongNumber;
-    clickCount++;
-    if (clickCount > 1) {
-      telError.classList.add('login__error_animated');
-      window.setTimeout(() => {
-        telError.classList.remove('login__error_animated');
-      }, 150);
-    }
-  } else if (inputNumber.value.trim().length === 18) {
-    telError.classList.remove('login__error_show');
-    inputNumber.classList.remove('login__input_error');
-    sessionStorage.setItem('phone', inputNumber.value.trim());
-  }
-});
-
-inputNumber?.addEventListener('input', () => {
-  if (inputNumber.value.trim() !== '' && inputNumber.value.trim().length < 6) {
-    telError.classList.remove('login__error_show');
-    inputNumber.classList.remove('login__input_error');
-  }
-
-  if (inputNumber.value.trim().length === 18) {
-    telError.classList.remove('login__error_show');
-    inputNumber.classList.remove('login__input_error');
-  }
-  if (inputNumber.value.trim() == numberInBaseMock) {
-    document.querySelector('.login__form_phone').action = 'login-base.html';
-  } else
-    document.querySelector('.login__form_phone').action = 'login-out-base.html';
-});
-
-inputNumber?.addEventListener('keydown', (event) => {
-  const allowedKeys = [
-    'Enter',
-    'Tab',
-    'Backspace',
-    'Delete',
-    'ArrowUp',
-    'ArrowDown',
-    'ArrowLeft',
-    'ArrowRight',
-    '0',
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9'
-  ];
-
-  if (allowedKeys.includes(event.key)) {
-    return true;
-  }
-  event.preventDefault();
-});
+  });
+}
 
 inputCodes?.forEach((input) =>
   input.addEventListener('keydown', (event) => {
@@ -154,13 +193,6 @@ inputCodes?.forEach((input) =>
     event.preventDefault();
   })
 );
-
-document.addEventListener('DOMContentLoaded', () => {
-  if (location.pathname.includes('base')) {
-    document.querySelector('.login__number').innerText =
-      sessionStorage.getItem('phone');
-  }
-});
 
 inputCodes.forEach((input, index) =>
   input.addEventListener('keydown', (event) => {
@@ -226,6 +258,13 @@ inputCodes.forEach((input, index) =>
     }
   })
 );
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (location.pathname.includes('base')) {
+    document.querySelector('.login__number').innerText =
+      sessionStorage.getItem('phone');
+  }
+});
 
 resendCodeButton?.addEventListener('click', () => {
   resetTimer();
