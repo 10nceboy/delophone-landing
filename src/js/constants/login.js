@@ -2,7 +2,7 @@ export const numberInBaseMock = '+7 (999) 999-99-99';
 
 export const validationCodeMock = '1234';
 
-export const timerTime = 20;
+export const timerTime = 120;
 
 export const errorMessages = {
   connectionCode: 'Ошибка связи, отправьте код повторно',

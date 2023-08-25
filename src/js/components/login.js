@@ -16,7 +16,6 @@ const resendCodeButton = document.querySelector('.login__resend-code');
 const timer = document.querySelector('.login__timer');
 const waiting = document.querySelector('.login__waiting-caption');
 const wrongCode = document.querySelector('.login__error-wrong-code');
-const attemptsSpan = document.querySelector('.login__сode-attepmts');
 
 const renderTimer = (timerTime) => {
   const minutes = Math.floor(timerTime / 60);
@@ -84,6 +83,11 @@ phoneNumberSumbit?.addEventListener('click', (event) => {
 });
 
 inputNumber?.addEventListener('input', () => {
+  if (inputNumber.value.trim() !== '' && inputNumber.value.trim().length < 6) {
+    telError.classList.remove('login__error_show');
+    inputNumber.classList.remove('login__input_error');
+  }
+
   if (inputNumber.value.trim().length === 18) {
     telError.classList.remove('login__error_show');
     inputNumber.classList.remove('login__input_error');
@@ -177,7 +181,7 @@ inputCodes.forEach((input, index) =>
 );
 
 let concatArr = [];
-let attepmts = 3;
+let attempts = 3;
 
 inputCodes.forEach((input, index) =>
   input.addEventListener('input', (event) => {
@@ -191,9 +195,12 @@ inputCodes.forEach((input, index) =>
       );
       if (concatArr.join('') !== validationCodeMock) {
         wrongCode.classList.add('login__error_show');
-        if (attepmts > 1) {
-          attepmts--;
-          attemptsSpan.innerText = attepmts;
+        if (attempts > 1) {
+          attempts--;
+          wrongCode.innerHTML = `
+          Вы ввели неверный код, осталось попыток:
+         <span class="login__сode-attepmts">${attempts}</span>
+         </div>`;
         } else {
           wrongCode.innerText = errorMessages.noAttempts;
         }
@@ -229,10 +236,7 @@ resendCodeButton?.addEventListener('click', () => {
     e.value = null;
     inputCodes[0].focus();
   });
-
-  setTimeout(() => {
-    wrongCode.innerText = errorMessages.wrongCode;
-  }, 400);
+  attempts = 3;
 });
 
 if (loader) {

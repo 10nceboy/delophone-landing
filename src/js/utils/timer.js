@@ -1,5 +1,5 @@
 let timerInterval = null;
-let timerTime = 20;
+let timerTime = 120;
 
 export const startTimer = (callback) => {
   timerInterval = setInterval(() => {
@@ -10,5 +10,5 @@ export const startTimer = (callback) => {
 
 export const resetTimer = () => {
   clearInterval(timerInterval);
-  timerTime = 20;
+  timerTime = 120;
 };
