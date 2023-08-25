@@ -56,21 +56,15 @@ if (inputNumber) {
   });
 
   inputNumber?.addEventListener('paste', (event) => {
+    event.preventDefault();
     let paste = event.clipboardData.getData('text');
-
-    if (paste.length < 18) {
-      phoneMask.updateOptions({
-        lazy: true
-      });
-
-      window.setTimeout(() => {
-        phoneMask.updateOptions({
-          lazy: false
-        });
-      }, 10);
+    inputNumber.value = paste;
+    phoneMask.updateValue();
+    if (inputNumber.value.trim() == numberInBaseMock) {
+      document.querySelector('.login__form_phone').action = 'login-base.html';
     } else {
-      phoneMask.value = paste;
-      inputNumber.value = paste;
+      document.querySelector('.login__form_phone').action =
+        'login-out-base.html';
     }
   });
 
@@ -122,7 +116,7 @@ if (inputNumber) {
       telError.classList.remove('login__error_show');
       inputNumber.classList.remove('login__input_error');
     }
-    if (inputNumber.value.trim() === numberInBaseMock) {
+    if (inputNumber.value.trim() == numberInBaseMock) {
       document.querySelector('.login__form_phone').action = 'login-base.html';
     } else
       document.querySelector('.login__form_phone').action =
