@@ -57,6 +57,7 @@ if (inputNumber) {
 
   inputNumber?.addEventListener('paste', (event) => {
     event.preventDefault();
+    event.stopPropagation();
     let paste = event.clipboardData.getData('text');
     inputNumber.value = paste;
     phoneMask.value = paste;
@@ -127,7 +128,7 @@ if (inputNumber) {
   inputNumber?.addEventListener('keydown', (event) => {
     let allowedKeys = [];
 
-    if (event.ctrlKey) {
+    if (event.ctrlKey || event.metaKey) {
       allowedKeys = ['a', 'x', 'v', 'z', 'c'];
     } else
       allowedKeys = [
