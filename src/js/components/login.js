@@ -74,11 +74,13 @@ if (inputNumber) {
 
   phoneNumberSumbit?.addEventListener('click', (event) => {
     let formatValue = phoneNumberToString(inputNumber.value).trim();
+
     if (formatValue === '') {
       event.preventDefault();
       telError.classList.add('login__error_show');
       inputNumber.classList.add('login__input_error');
       telError.innerText = errorMessages.nullNumber;
+      inputNumber.setAttribute('aria-invalid', 'true');
       clickCount++;
       if (clickCount > 1) {
         telError.classList.add('login__error_animated');
@@ -91,6 +93,7 @@ if (inputNumber) {
       telError.classList.add('login__error_show');
       inputNumber.classList.add('login__input_error');
       telError.innerText = errorMessages.wrongNumber;
+      inputNumber.setAttribute('aria-invalid', 'true');
       clickCount++;
       if (clickCount > 1) {
         telError.classList.add('login__error_animated');
@@ -100,21 +103,22 @@ if (inputNumber) {
       }
     } else if (formatValue.length === 10) {
       telError.classList.remove('login__error_show');
+      inputNumber.setAttribute('aria-invalid', 'false');
       inputNumber.classList.remove('login__input_error');
       sessionStorage.setItem('phone', inputNumber.value.trim());
     }
   });
 
   inputNumber?.addEventListener('input', () => {
-    phoneMask.updateValue();
     let formatValue = phoneNumberToString(inputNumber.value).trim();
+    console.log(formatValue.length);
 
     if (formatValue !== '' && formatValue.length < 1) {
       telError.classList.remove('login__error_show');
       inputNumber.classList.remove('login__input_error');
     }
 
-    if (inputNumber.value.trim().length === 10) {
+    if (formatValue.trim().length === 10) {
       telError.classList.remove('login__error_show');
       inputNumber.classList.remove('login__input_error');
     }
