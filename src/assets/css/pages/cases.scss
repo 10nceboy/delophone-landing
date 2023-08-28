@@ -18,6 +18,12 @@
       max-width: 570px;
     }
   }
+
+  &__focus-header {
+    @include laptop {
+      max-width: 730px;
+    }
+  }
 }
 
 .zvonok {
