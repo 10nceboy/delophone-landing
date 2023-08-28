@@ -59,7 +59,8 @@ if (inputNumber) {
     event.preventDefault();
     let paste = event.clipboardData.getData('text');
     inputNumber.value = paste;
-    phoneMask.updateValue();
+    phoneMask.value = paste;
+
     if (inputNumber.value.trim() == numberInBaseMock) {
       document.querySelector('.login__form_phone').action = 'login-base.html';
     } else {
