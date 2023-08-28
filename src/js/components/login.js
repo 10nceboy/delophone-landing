@@ -130,7 +130,7 @@ if (inputNumber) {
 
     if (event.ctrlKey || event.metaKey) {
       allowedKeys = ['a', 'x', 'v', 'z', 'c'];
-    } else
+    } else {
       allowedKeys = [
         'Enter',
         'Tab',
@@ -152,6 +152,7 @@ if (inputNumber) {
         '8',
         '9'
       ];
+    }
 
     if (allowedKeys.includes(event.key)) {
       return true;
