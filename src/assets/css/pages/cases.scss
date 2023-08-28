@@ -19,9 +19,227 @@
     }
   }
 
+  &__focus {
+    padding-bottom: 80px;
+
+    @include tablet {
+      padding-bottom: 100px;
+    }
+  }
+
   &__focus-header {
+    @include tablet {
+      max-width: unset;
+    }
     @include laptop {
       max-width: 730px;
+    }
+  }
+
+  &__cases {
+    background-color: $light-gray;
+
+    .cases__card {
+      background-color: $white;
+    }
+
+    .cases__chip {
+      @include tablet {
+        background-color: $light-gray;
+      }
+    }
+  }
+
+  &__focus-container {
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__focus-card {
+    padding: $spacer * 4 $spacer * 3;
+    border-radius: 4px;
+    position: relative;
+
+    margin-bottom: $spacer * 4;
+
+    @include tablet {
+      margin-bottom: 0px;
+
+      padding: $spacer * 5;
+    }
+  }
+
+  &__focus-card-graphic {
+    @include flex-col;
+    margin-top: $spacer * 7;
+
+    &::before {
+      content: url(/cases-graphic-mobile.svg);
+      position: absolute;
+      left: 1%;
+      bottom: -315%;
+    }
+
+    @include mobile-400 {
+      &::before
+      transform: scale(0.8);
+    }
+
+    @include tablet {
+      margin-bottom: $spacer * 6;
+      margin-top: 0;
+
+      &::before {
+        content: url(/cases-graphic.svg);
+        left: -175%;
+        bottom: -16%;
+      }
+
+      @include laptop {
+        &::before {
+          left: -175%;
+          bottom: -16%;
+        }
+      }
+    }
+  }
+
+  &__card-logo {
+    max-width: 88px;
+    max-height: 16px;
+    align-self: center;
+
+    @include mobile-520 {
+      max-width: 129px;
+      max-height: 24px;
+    }
+
+    @include tablet {
+      max-width: 88px;
+      max-height: 16px;
+    }
+
+    @include laptop {
+      max-width: 129px;
+      max-height: 24px;
+    }
+  }
+
+  &__focus-card-small {
+    max-width: calc(100% - 15px);
+    margin-left: auto;
+    padding: $spacer * 4;
+  }
+
+  &__focus-card-arrow {
+    &::before {
+      content: url(/cases-arrow-mobile.svg);
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+    }
+
+    @include tablet {
+      margin-right: $spacer * 4;
+
+      &::before {
+        content: url(/cases-arrow.svg);
+        top: 50%;
+        right: -26.5px;
+      }
+
+      @include laptop {
+        min-width: 350px;
+
+        &::before {
+          top: 50%;
+          right: -26.5px;
+        }
+      }
+    }
+
+    @include laptop {
+      margin-right: $spacer * 6;
+    }
+  }
+
+  &__focus-card-line {
+    @include tablet {
+      position: relative;
+      &::before {
+        content: url(/cases-line.svg);
+        position: absolute;
+        top: -30px;
+        left: 50%;
+      }
+    }
+  }
+
+  &__textblock {
+    @include tablet {
+      max-width: 515px;
+      margin-right: $spacer * 3;
+    }
+
+    @include laptop {
+      max-width: 700px;
+      margin-right: $spacer * 6;
+    }
+
+    @include desktop {
+      max-width: 730px;
+    }
+  }
+
+  &__card-list {
+    margin-top: $spacer * 2;
+    list-style: disc inside;
+
+    @include laptop {
+      margin-top: $spacer * 3;
+    }
+  }
+
+  &__card-list-item {
+    @include font($normal, 14px, $gray);
+    line-height: 150%;
+    &::marker {
+      color: $gray;
+      font-size: 12px;
+    }
+
+    @include mobile-520 {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      line-height: 155%;
+      font-size: 14px;
+    }
+
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+
+  &__focus-card-header {
+    margin-bottom: $spacer;
+  }
+
+  &__focus-card-caption {
+    @include font($normal, 15px, $gray);
+
+    @include mobile-520 {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include laptop {
+      font-size: 16px;
     }
   }
 }
