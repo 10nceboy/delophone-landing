@@ -212,9 +212,15 @@
 
       @include laptop {
         &::before {
-          left: -172%;
+          left: -170%;
           bottom: -16%;
           transform: scale(1);
+        }
+      }
+
+      @include desktop {
+        &::before {
+          left: -172%;
         }
       }
     }
