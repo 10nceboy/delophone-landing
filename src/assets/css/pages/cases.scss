@@ -1,0 +1,653 @@
+@import '../utils/index';
+
+@import '../components/carousel';
+
+@import '../sections/common/cases';
+
+.cases {
+  &__imageblock {
+    img {
+      border-radius: 12px;
+      max-width: 290px;
+      max-height: 265px;
+    }
+
+    @include mobile-520 {
+      img {
+        max-height: 305px;
+        max-width: 330px;
+      }
+    }
+
+    @include tablet {
+      max-height: 405px;
+      max-width: 430px;
+      img {
+        height: 290px;
+
+        width: 320px;
+      }
+    }
+
+    @include tablet-1024 {
+      max-height: 405px;
+      max-width: 430px;
+      img {
+        height: 320px;
+        width: 350px;
+      }
+    }
+
+    @include laptop {
+    }
+  }
+
+  &__hero-list {
+    margin-top: $spacer * 3;
+    list-style: disc outside;
+    margin-left: 20px;
+
+    @include mobile-400 {
+      max-width: unset;
+      margin-top: 25px;
+    }
+
+    @include laptop {
+      margin-top: $spacer * 7;
+    }
+  }
+
+  &__hero-list-item {
+    line-height: 130%;
+
+    @include tablet {
+      margin: 0 0 $spacer * 2 0;
+
+      &:last-child {
+        margin-top: 0px;
+      }
+    }
+
+    @include laptop {
+      margin: 0 0 $spacer * 4 0;
+    }
+  }
+
+  &__hero-text {
+    @include laptop {
+      max-width: 570px;
+    }
+  }
+
+  &__focus {
+    padding-bottom: 20px;
+
+    @include tablet {
+      padding-bottom: 0px;
+    }
+  }
+
+  &__focus-header {
+    @include tablet {
+      max-width: 515px;
+      margin-bottom: 10px;
+    }
+    @include laptop {
+      max-width: 730px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__cases {
+    background-color: $light-gray;
+
+    @include tablet {
+      padding: 100px 0;
+    }
+
+    @include laptop {
+      padding: 150px 0;
+    }
+
+    .cases__card {
+      background-color: $white;
+    }
+
+    .cases__chip {
+      @include tablet {
+        background-color: $light-gray;
+      }
+    }
+  }
+
+  &__focus-container {
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__focus-card {
+    padding: $spacer * 4 $spacer * 3;
+    border-radius: 4px;
+    position: relative;
+
+    margin-bottom: $spacer * 4;
+
+    @include tablet {
+      margin-bottom: 0px;
+      padding: $spacer * 5;
+    }
+
+    @include desktop {
+      max-width: 350px;
+      min-width: 350px;
+    }
+  }
+
+  &__card_medium {
+    @include tablet {
+      padding-right: 10px;
+    }
+
+    @include laptop {
+      padding-right: 25px;
+    }
+  }
+
+  &__focus-card-graphic {
+    @include flex-col;
+    margin-top: $spacer * 7;
+
+    &::before {
+      content: url(/cases-graphic-mobile.svg);
+      position: absolute;
+      left: 1%;
+      bottom: -315%;
+    }
+
+    @include mobile-400 {
+      &::before {
+        bottom: -300%;
+        transform: scaleY(0.9);
+      }
+    }
+
+    @include mobile-477 {
+      &::before {
+        transform: scaleY(0.88);
+        bottom: -295%;
+      }
+    }
+
+    @include mobile-520 {
+      &::before {
+        bottom: -242.8%;
+        transform: scaleY(0.8);
+      }
+    }
+
+    @include tablet-870 {
+      &::before {
+        bottom: -238.8%;
+        left: 0.5%;
+        transform: scaleY(0.75);
+      }
+    }
+
+    @include tablet {
+      margin-bottom: $spacer * 6;
+      margin-top: 0;
+      min-height: 194px;
+
+      &::before {
+        content: url(/cases-graphic.svg);
+        left: -166%;
+        bottom: -18%;
+        transform: scale(0.8);
+      }
+
+      @include tablet-1024 {
+        min-height: unset;
+      }
+
+      @include laptop {
+        &::before {
+          left: -172%;
+          bottom: -16%;
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  &__card-logo {
+    max-width: 88px;
+    max-height: 16px;
+    align-self: center;
+
+    @include mobile-520 {
+      max-width: 129px;
+      max-height: 24px;
+    }
+
+    @include tablet {
+      max-width: 88px;
+      max-height: 24px;
+    }
+
+    @include laptop {
+      max-width: 129px;
+      max-height: 24px;
+    }
+  }
+
+  &__focus-card-small {
+    max-width: calc(100% - 15px);
+    margin-left: auto;
+    padding: $spacer * 4;
+
+    @include tablet {
+      padding: $spacer * 3;
+    }
+
+    @include laptop {
+      padding: $spacer * 5;
+      max-height: 181px;
+    }
+  }
+
+  &__focus-card-arrow {
+    &::before {
+      content: url(/cases-arrow-mobile.svg);
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+    }
+
+    @include tablet {
+      margin-right: $spacer * 4;
+
+      &::before {
+        content: url(/cases-arrow.svg);
+        top: 40%;
+        right: -21.5px;
+        left: initial;
+        transform: scale(0.75);
+      }
+
+      @include laptop {
+        min-width: 350px;
+
+        &::before {
+          top: 50%;
+          right: -26.5px;
+          transform: scale(1);
+        }
+      }
+    }
+
+    @include laptop {
+      margin-right: $spacer * 6;
+    }
+  }
+
+  &__focus-card-line {
+    @include tablet {
+      &::before {
+        content: url(/cases-line.svg);
+        position: absolute;
+        top: -30px;
+        left: 50%;
+      }
+    }
+  }
+
+  &__hero {
+    @include tablet {
+      padding-bottom: 100px;
+      margin: 0;
+    }
+
+    @include laptop {
+      padding-bottom: 150px;
+    }
+  }
+
+  &__hero-textblock {
+    @include laptop {
+      max-width: 570px;
+      margin-right: 30px;
+    }
+  }
+
+  &__textblock {
+    @include tablet {
+      max-width: 500px;
+      margin-right: $spacer * 3;
+    }
+
+    @include tablet-1024 {
+      max-width: 559px;
+    }
+
+    @include laptop {
+      max-width: 708px;
+      margin-right: $spacer * 6;
+    }
+
+    @include desktop {
+      max-width: 730px;
+    }
+  }
+
+  &__card-list {
+    margin-top: $spacer * 2;
+    list-style: disc inside;
+
+    @include tablet {
+      flex: 1 1;
+    }
+
+    @include laptop {
+      margin-top: $spacer * 3;
+    }
+  }
+
+  &__card-list-item {
+    @include font($normal, 14px, $gray);
+    line-height: 150%;
+
+    &::marker {
+      color: $gray;
+      font-size: 12px;
+    }
+
+    @include mobile-520 {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      line-height: 155%;
+      font-size: 15px;
+    }
+
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+
+  &__focus-card-header {
+    margin-bottom: $spacer;
+
+    @include tablet {
+      font-size: 17px;
+    }
+
+    @include tablet-1024 {
+      font-size: 18px;
+    }
+
+    @include laptop {
+      font-size: 20px;
+    }
+  }
+
+  &__focus-card-caption {
+    @include font($normal, 15px, $gray);
+    line-height: 155%;
+
+    @include mobile-520 {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include laptop {
+      font-size: 15px;
+    }
+
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+
+  &__promophone {
+    padding: 80px 0;
+
+    @include tablet {
+      padding: 100px 0;
+    }
+
+    @include laptop {
+      padding: 150px 0;
+    }
+  }
+
+  &__promophone-card {
+    @include laptop {
+      padding-right: $spacer * 3;
+    }
+
+    @include desktop {
+      padding-right: $spacer * 4;
+    }
+  }
+
+  &__header-long {
+    max-width: unset;
+  }
+
+  &__cases-header {
+    @include tablet {
+      font-size: 26px;
+    }
+
+    @include laptop {
+      font-size: 32px;
+    }
+  }
+}
+
+.zvonok {
+  &__hero-imageblock {
+    @include laptop {
+      max-height: 431px;
+      border-radius: 5px;
+      margin-left: 0px;
+
+      img {
+        max-width: 510px;
+        height: 431px;
+        border-radius: 12px;
+        max-height: 431px;
+        width: 510px;
+      }
+    }
+  }
+}
+
+.uni {
+  &__hero-imageblock {
+    @include laptop {
+      max-height: 400px;
+      border-radius: 5px;
+      margin-left: 0px;
+
+      img {
+        max-width: 510px;
+        height: 400px;
+        border-radius: 12px;
+        max-height: 400px;
+        min-height: 400px;
+        width: 510px;
+      }
+    }
+  }
+
+  &__card-graphic {
+    @include tablet {
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      &::before {
+        bottom: -14%;
+      }
+    }
+
+    @include laptop {
+      padding-top: 36px;
+      padding-bottom: 36px;
+    }
+  }
+}
+
+.sputnik {
+  &__hero-imageblock {
+    @include laptop {
+      max-height: 431px;
+      border-radius: 5px;
+      margin-left: 0px;
+
+      img {
+        max-width: 510px;
+        height: 431px;
+        border-radius: 12px;
+        max-height: 431px;
+        width: 510px;
+      }
+
+      @include desktop {
+        img {
+          height: 400px;
+        }
+      }
+    }
+  }
+
+  &__card-graphic {
+    @include tablet {
+      padding-top: 95px;
+      padding-bottom: 95px;
+
+      &::before {
+        bottom: -10%;
+      }
+
+      @include laptop {
+        &::before {
+          left: -175%;
+        }
+      }
+      @include desktop {
+        &::before {
+          left: -172%;
+        }
+      }
+    }
+  }
+}
+
+.good {
+  &__card-graphic {
+    @include tablet {
+      padding-bottom: 68px;
+      padding-top: 68px;
+
+      &::before {
+        bottom: -11%;
+      }
+    }
+
+    @include laptop {
+      padding-bottom: 58px;
+      padding-top: 58px;
+
+      &::before {
+        bottom: -12%;
+        left: -175.5%;
+      }
+    }
+
+    @include desktop {
+      &::before {
+        left: -172%;
+      }
+    }
+  }
+}
+
+.floart {
+  &__card-graphic {
+    @include tablet {
+      padding-bottom: 58px;
+      padding-top: 58px;
+
+      &::before {
+        bottom: -14%;
+      }
+    }
+
+    @include laptop {
+      padding-bottom: 72px;
+      padding-top: 72px;
+
+      &::before {
+        bottom: -12%;
+        left: -175.5%;
+      }
+    }
+
+    @include desktop {
+      &::before {
+        left: -172%;
+      }
+    }
+  }
+}
+
+.educa {
+  &__card-graphic {
+    @include tablet {
+      padding-bottom: 103px;
+      padding-top: 103px;
+
+      &::before {
+        bottom: -11%;
+      }
+    }
+
+    @include laptop {
+      padding-bottom: 103px;
+      padding-top: 103px;
+
+      &::before {
+        bottom: -10%;
+        left: -175.5%;
+      }
+    }
+
+    @include desktop {
+      padding-bottom: 93px;
+      padding-top: 93px;
+      &::before {
+        left: -172%;
+      }
+    }
+  }
+
+  &__hero-imageblock {
+    @include laptop {
+      img {
+        height: 450px;
+      }
+    }
+
+    @include desktop {
+      img {
+        height: 400px;
+      }
+    }
+  }
+}

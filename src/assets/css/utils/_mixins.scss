@@ -110,6 +110,12 @@ $family: 'Manrope';
   }
 }
 
+@mixin mobile-400 {
+  @media screen and (min-width: 400) {
+    @content;
+  }
+}
+
 @mixin mobile-x {
   @media screen and (min-width: 480px) and (max-width: 550px) {
     @content;
@@ -176,6 +182,12 @@ $family: 'Manrope';
   }
 }
 
+@mixin mobile-400 {
+  @media screen and (min-width: 400px) {
+    @content;
+  }
+}
+
 @mixin mobile-414 {
   @media screen and (min-width: 414px) {
     @content;
@@ -202,6 +214,12 @@ $family: 'Manrope';
 
 @mixin mobile-660 {
   @media screen and (min-width: 660px) {
+    @content;
+  }
+}
+
+@mixin tablet-870 {
+  @media screen and (min-width: 870px) {
     @content;
   }
 }
