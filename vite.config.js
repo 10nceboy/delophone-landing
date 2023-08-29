@@ -56,7 +56,13 @@ export default defineConfig({
         contacts: resolve(__dirname, 'pages/services/contacts.html'),
         login: resolve(__dirname, 'pages/login/login.html'),
         loginbase: resolve(__dirname, 'pages/login/login-base.html'),
-        loginoutbase: resolve(__dirname, 'pages/login/login-out-base.html')
+        loginoutbase: resolve(__dirname, 'pages/login/login-out-base.html'),
+        uni: resolve(__dirname, 'pages/cases/unipizza.html'),
+        zvonok: resolve(__dirname, 'pages/cases/zvonok.html'),
+        goodseller: resolve(__dirname, 'pages/cases/goodseller.html'),
+        educa: resolve(__dirname, 'pages/cases/educa.html'),
+        floart: resolve(__dirname, 'pages/cases/floart.html'),
+        sputnik: resolve(__dirname, 'pages/cases/sputnik.html')
       }
     }
   }
