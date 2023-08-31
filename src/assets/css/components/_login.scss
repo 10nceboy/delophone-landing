@@ -145,8 +145,3 @@
     }
   }
 }
-
-.login__text {
-  transition: color 0.1s ease;
-  @include font(400, 16px, $black);
-}

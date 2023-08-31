@@ -36,6 +36,7 @@
 @import '../sections/common/promophone';
 @import '../sections/scope/scopes';
 @import '../sections/common/focus';
+@import '../sections/main/features';
 
 .seo {
   &__hero {
@@ -411,7 +412,7 @@
   &__star-card-caption {
     line-height: 150%;
     margin-top: $spacer * 2;
-    font-weight: 500;
+    font-weight: 400;
     color: $light-gray;
 
     @include tablet {
@@ -557,6 +558,11 @@
   &__promophone-image_mobile-lk {
     display: block;
     min-width: 80%;
+    max-width: 100%;
+
+    @include mobile-400 {
+      max-width: 80%;
+    }
 
     @include tablet {
       display: none;

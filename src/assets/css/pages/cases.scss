@@ -8,14 +8,14 @@
   &__imageblock {
     img {
       border-radius: 12px;
-      max-width: 290px;
-      max-height: 265px;
+      max-width: 100%;
+      max-height: 100%;
     }
 
     @include mobile-520 {
       img {
-        max-height: 305px;
-        max-width: 330px;
+        max-height: 100%;
+        max-width: 100%;
       }
     }
 
@@ -24,7 +24,8 @@
       max-width: 430px;
       img {
         height: 290px;
-
+        max-height: 305px;
+        max-width: 330px;
         width: 320px;
       }
     }
@@ -46,6 +47,7 @@
     margin-top: $spacer * 3;
     list-style: disc outside;
     margin-left: 20px;
+    max-width: 250px;
 
     @include mobile-400 {
       max-width: unset;
@@ -103,6 +105,7 @@
 
     @include tablet {
       padding: 100px 0;
+      display: block;
     }
 
     @include laptop {
@@ -157,12 +160,22 @@
   &__focus-card-graphic {
     @include flex-col;
     margin-top: $spacer * 7;
+    z-index: 0;
+    transform-style: preserve-3d;
 
     &::before {
       content: url(/cases-graphic-mobile.svg);
       position: absolute;
       left: 1%;
-      bottom: -315%;
+      bottom: -300%;
+      transform: translateZ(-1px);
+    }
+
+    @include mobile-390 {
+      &::before {
+        bottom: -300%;
+        transform: scaleY(0.9);
+      }
     }
 
     @include mobile-400 {
@@ -181,7 +194,7 @@
 
     @include mobile-520 {
       &::before {
-        bottom: -242.8%;
+        bottom: -246.8%;
         transform: scaleY(0.8);
       }
     }
@@ -454,6 +467,57 @@
       font-size: 32px;
     }
   }
+
+  &__focus-cards {
+    margin-bottom: 0px;
+  }
+
+  &__feature-card {
+    margin-top: $spacer * 7;
+
+    @include tablet {
+      margin-top: $spacer * 6;
+    }
+  }
+
+  &__feature-list {
+    @include mobile-s {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      column-gap: 0;
+      row-gap: $spacer * 2;
+      white-space: nowrap;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    @include smartphone {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      column-gap: 0;
+      row-gap: $spacer * 2;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    @include tablet {
+      grid-template-columns: min(50%, 160px) min(50%, 160px);
+      grid-template-rows: 25px 25px;
+      row-gap: 0px;
+    }
+
+    @include tablet-1024 {
+      row-gap: $spacer;
+      column-gap: 10px;
+    }
+
+    @include laptop {
+      width: unset;
+      grid-template-columns: 160px 160px;
+      column-gap: $spacer * 7;
+      row-gap: 10px;
+    }
+  }
 }
 
 .zvonok {
@@ -585,6 +649,14 @@
 }
 
 .floart {
+  &__hero-list {
+    max-width: 237px;
+
+    @include mobile-400 {
+      max-width: unset;
+    }
+  }
+
   &__card-graphic {
     @include tablet {
       padding-bottom: 58px;

@@ -110,6 +110,12 @@ $family: 'Manrope';
   }
 }
 
+@mixin mobile-390 {
+  @media screen and (min-width: 390) {
+    @content;
+  }
+}
+
 @mixin mobile-400 {
   @media screen and (min-width: 400) {
     @content;
