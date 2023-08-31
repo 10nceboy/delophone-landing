@@ -174,20 +174,20 @@
     @include mobile-390 {
       &::before {
         bottom: -300%;
-        transform: scaleY(0.9);
+        transform: translateZ(-1px) scaleY(0.9);
       }
     }
 
     @include mobile-400 {
       &::before {
         bottom: -300%;
-        transform: scaleY(0.9);
+        transform: translateZ(-1px) scaleY(0.9);
       }
     }
 
     @include mobile-477 {
       &::before {
-        transform: scaleY(0.88);
+        transform: translateZ(-1px) scaleY(0.88);
         bottom: -295%;
       }
     }
@@ -195,7 +195,7 @@
     @include mobile-520 {
       &::before {
         bottom: -246.8%;
-        transform: scaleY(0.8);
+        transform: translateZ(-1px) scaleY(0.8);
       }
     }
 
@@ -203,7 +203,7 @@
       &::before {
         bottom: -238.8%;
         left: 0.5%;
-        transform: scaleY(0.75);
+        transform: translateZ(-1px) scaleY(0.75);
       }
     }
 
