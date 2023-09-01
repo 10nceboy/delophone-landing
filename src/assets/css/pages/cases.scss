@@ -769,15 +769,22 @@
   }
 
   &__hero-imageblock {
-    @include laptop {
+    @include tablet-1024 {
+      margin-left: $spacer * 2;
+
       img {
-        height: 450px;
+        max-width: 370px;
+        width: 370px;
       }
     }
 
-    @include desktop {
+    @include laptop {
+      margin-left: 0px;
       img {
         height: 400px;
+        max-height: 400px;
+        width: 510px;
+        max-width: 510px;
       }
     }
   }
