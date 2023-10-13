@@ -240,7 +240,7 @@ $family: 'Manrope';
 
 /**only for tablets**/
 @mixin tablet-only {
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1200px) {
     @content;
   }
 }
