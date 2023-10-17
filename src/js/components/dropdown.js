@@ -83,10 +83,7 @@ dropdowns.forEach((dropdown) => {
 
     const deviceType = getDeviceType();
 
-    if (
-      dropdown.classList.contains('footer-downside__menu') &&
-      ['laptop', 'desktop', 'tablet'].includes(deviceType)
-    ) {
+    if (['mobile', 'smartphone', 'tablet'].includes(deviceType)) {
       return;
     }
 
@@ -123,7 +120,7 @@ dropdowns.forEach((dropdown) => {
 
   const deviceType = getDeviceType();
 
-  if (isTouchDevice()) {
+  if (!['laptop'].includes(deviceType) || isTouchDevice()) {
     dropdown.addEventListener('click', () => {
       state = !state;
       if (state) {
