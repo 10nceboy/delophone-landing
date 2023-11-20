@@ -1,6 +1,6 @@
-.ip-delofon {
-  @import '../../utils/index';
+@import '../../utils/index';
 
+.ip-delofon {
   &__hero {
     @include tablet {
       margin-bottom: 47px;
@@ -254,6 +254,7 @@
     @include flex-col;
     align-items: center;
     order: -1;
+    position: relative;
 
     @include tablet {
       order: 2;
@@ -263,6 +264,8 @@
 
   &__focus-image {
     max-width: 221px;
+    min-width: 221px;
+    min-height: 221px;
     @include mobile-390 {
       min-width: 50%;
       max-width: 50%;
@@ -534,5 +537,56 @@
     100% {
       opacity: 1;
     }
+  }
+}
+
+.ip-delofon-price {
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  border-radius: 50%;
+  max-width: 74px;
+  max-height: 74px;
+  min-width: 74px;
+  min-height: 74px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  @include flex-col;
+  @include center;
+  background-color: $orange;
+
+  @include mobile-390 {
+    font-size: 14px;
+    min-height: 50px;
+    min-width: 50px;
+    left: 60%;
+  }
+
+  @include mobile-520 {
+    font-size: 18px;
+    min-width: 74px;
+    min-height: 74px;
+  }
+
+  @include mobile-620 {
+    font-size: 22px;
+    min-width: 84px;
+    min-height: 84px;
+    left: 63%;
+  }
+
+  @include tablet {
+    font-size: 16px;
+    min-width: 64px;
+    min-height: 64px;
+  }
+
+  @include laptop {
+    font-size: 18px;
+    min-width: 74px;
+    min-height: 74px;
+    top: 66%;
+    left: 61%;
   }
 }

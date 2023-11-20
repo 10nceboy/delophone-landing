@@ -53,6 +53,14 @@ dropdowns.forEach((dropdown) => {
       content
         .querySelector('.dropdown__close')
         .addEventListener('click', () => {
+          if (
+            ['mobile', 'smartphone', 'tablet'].includes(deviceType) ||
+            (dropdown.classList.contains('footer-downside__menu') &&
+              ['laptop', 'desktop', 'tablet'].includes(deviceType))
+          ) {
+            return;
+          }
+
           state = !state;
           transitionLeave(content, 'dropdown__content');
         });
@@ -83,7 +91,11 @@ dropdowns.forEach((dropdown) => {
 
     const deviceType = getDeviceType();
 
-    if (['mobile', 'smartphone', 'tablet'].includes(deviceType)) {
+    if (
+      ['mobile', 'smartphone', 'tablet'].includes(deviceType) ||
+      (dropdown.classList.contains('footer-downside__menu') &&
+        ['laptop', 'desktop', 'tablet'].includes(deviceType))
+    ) {
       return;
     }
 
@@ -122,6 +134,7 @@ dropdowns.forEach((dropdown) => {
 
   if (!['laptop'].includes(deviceType) || isTouchDevice()) {
     dropdown.addEventListener('click', () => {
+      if (dropdown.classList.contains('footer-downside__menu')) return;
       state = !state;
       if (state) {
         transitionEnter(dropdown, 'dropdown');

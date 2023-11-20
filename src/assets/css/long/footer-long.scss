@@ -75,6 +75,10 @@
     }
     @include tablet {
       margin-bottom: 20px;
+
+      &:hover {
+        color: $white !important;
+      }
     }
   }
 

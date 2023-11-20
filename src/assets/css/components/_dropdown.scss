@@ -144,11 +144,11 @@
       overflow: visible;
     }
 
-    @include desktop {
+    @include tablet {
       display: block;
     }
 
-    @include tablet {
+    @include desktop {
       display: block;
     }
   }
