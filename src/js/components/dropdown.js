@@ -132,14 +132,20 @@ dropdowns.forEach((dropdown) => {
 
   const deviceType = getDeviceType();
 
-  if (!['laptop'].includes(deviceType) || isTouchDevice()) {
+  if (isTouchDevice()) {
     dropdown.addEventListener('click', () => {
-      if (dropdown.classList.contains('footer-downside__menu')) return;
-      state = !state;
-      if (state) {
-        transitionEnter(dropdown, 'dropdown');
+      if (
+        dropdown.classList.contains('footer-downside__menu') &&
+        ['laptop', 'desktop', 'tablet'].includes(deviceType)
+      ) {
+        return;
       } else {
-        transitionLeave(dropdown, 'dropdown');
+        state = !state;
+        if (state) {
+          transitionEnter(dropdown, 'dropdown');
+        } else {
+          transitionLeave(dropdown, 'dropdown');
+        }
       }
     });
   }
